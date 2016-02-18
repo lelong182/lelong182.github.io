@@ -1368,21 +1368,7 @@
             }
         });
 
-        function removeElements(text, selector) {
-            var wrapped = $("<div>" + text + "</div>");
-            wrapped.find(selector).remove();
-            return wrapped.html();
-        }
-
-        function addElements(text, selector, text_add, inner) {
-            var wrapped = $("<div>" + text + "</div>");
-            if (inner) {
-                wrapped.find(selector).html(text_add);
-            } else {
-                wrapped.find(selector).after(text_add);
-            }
-            return wrapped.html();
-        }
+        
          $('.main').on('click', '.wrap-of-manual .add-manual', function(event) {
             var classes = $(this).closest('.of-manual').attr('class');
             var str = $(this).closest('.of-manual').html();
@@ -1400,14 +1386,36 @@
         });
 
 
+        /* =================================
+        ===  Account Linking                 ====
+        =================================== */
+        $(this).on('click', '.linking-now a', function() {
+            $(this).parent().hide();
+            $(this).parent().next().show();
+            return false;
+        });
+
+
     });
 
 })(window.jQuery);
 
+function removeElements(text, selector) {
+    var wrapped = $("<div>" + text + "</div>");
+    wrapped.find(selector).remove();
+    return wrapped.html();
+}
 
-/* =================================
- ===  Highcharts                 ====
- =================================== */
+function addElements(text, selector, text_add, inner) {
+    var wrapped = $("<div>" + text + "</div>");
+    if (inner) {
+        wrapped.find(selector).html(text_add);
+    } else {
+        wrapped.find(selector).after(text_add);
+    }
+    return wrapped.html();
+}
+
 function myLineCharts(selector, categories, data, yaxis, tooltip_formatter) {
     if (typeof yaxis == 'undefined' || yaxis == false) {
         yaxis = {

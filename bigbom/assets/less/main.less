@@ -1488,10 +1488,9 @@ WRAPPER
     .green-btn {
         background-color: #54b14c;
         border-radius: 3px;
-        box-shadow: 1px 5px 0 -1px #447a43;
+        box-shadow: 0 3px 0 0 #447a43;
         color: #fff;
         font-size: 16px;
-        padding: 8px 15px 7px;
         position: relative;
         text-transform: uppercase;
         top: 0;
@@ -1499,18 +1498,17 @@ WRAPPER
 
         &:focus {
             box-shadow: none;
-            top: 5px;
+            top: 3px;
         }
     }
     .drak-green-btn {
         background-color: #569454;
         border-radius: 3px;
         bottom: 85px;
-        box-shadow: 1px 5px 0 -1px #447a43;
+        box-shadow: 0 3px 0 0 #447a43;
         color: #fff;
         font-size: 16px;
         left: 50%;
-        padding: 11px 25px 10px;
         position: absolute;
         text-transform: uppercase;
         transform: translateX(-50%);
@@ -1518,7 +1516,39 @@ WRAPPER
 
         &:focus {
             box-shadow: none;
-            bottom: 80px;
+            bottom: 82px;
+        }
+    }
+    .blue-btn {
+        background-color: @main-color;
+        border-radius: 3px;
+        box-shadow: 0 3px 0 0 #126072;
+        color: #fff;
+        font-size: 16px;
+        position: relative;
+        text-transform: uppercase;
+        top: 0;
+        transition: all 0.2s ease;
+
+        &:focus {
+            box-shadow: none;
+            top: 3px;
+        }
+    }
+    .red-btn {
+        background-color: #d42525;
+        border-radius: 3px;
+        box-shadow: 0 3px 0 0 #840202;
+        color: #fff;
+        font-size: 16px;
+        position: relative;
+        text-transform: uppercase;
+        top: 0;
+        transition: all 0.2s ease;
+
+        &:focus {
+            box-shadow: none;
+            top: 3px;
         }
     }
 }
@@ -1643,6 +1673,7 @@ header.header {
     }
     .green-btn {
         margin: 10px 0 0 40px;
+        padding: 8px 15px;
         float: left;
     }
 }
@@ -2899,7 +2930,7 @@ MAIN
         }
 
         /* ---------------------------------------
-        HOMEPAGE
+        HOME PAGE
         ----------------------------------------- */
         .wrap-home {
             background: url("../images/home-bg.png") no-repeat center;
@@ -2916,7 +2947,14 @@ MAIN
                 transform: translateX(-50%);
                 bottom: 130px;
             }
+            .drak-green-btn {
+                padding: 11px 25px 10px;
+            }
         }
+
+        /* ---------------------------------------
+        NOTIFICATION PAGE
+        ----------------------------------------- */
         .wrap-notification {
             background: url("../images/building-bg.png") no-repeat center;
             margin-top: 35px;
@@ -2958,6 +2996,148 @@ MAIN
 
                     &:hover {
                         color: #333;
+                    }
+                }
+            }
+        }
+
+        /* ---------------------------------------
+        ACCOUNT LINKING PAGE
+        ----------------------------------------- */
+        .wrap-account-linking {
+            margin: 20px auto 0;
+            overflow: hidden;
+            width: 920px;
+
+            .header {
+                background-color: #ddd;
+                border: 1px solid #bbb;
+                color: #333;
+                font-size: 20px;
+                height: 50px;
+                margin: 0;
+                padding: 12px 0 0 15px;
+                text-transform: uppercase;
+            }
+            .blue-btn {
+                padding: 8px 15px 7px;
+            }
+            .left-side {
+                border-bottom: 1px solid #bbb;
+                border-left: 1px solid #bbb;
+                border-right: 1px solid #bbb;
+                display: table-cell;
+                padding-bottom: 15px;
+                vertical-align: top;
+                width: 190px;
+
+                h4 {
+                    color: #333;
+                    font-size: 15px;
+                    margin: 0;
+                    padding: 15px;
+                }
+                .nav-tabs {
+                    border-bottom: none;
+
+                    li {
+                        float: initial;
+                        margin-bottom: 0;
+
+                        &.active {
+                            a {
+                                background: #e7e7e7;
+
+                                i {
+                                    color: #fff;
+                                    background-color: #39a9c1;
+                                }
+                            }
+                        }
+                        a {
+                            background: none;
+                            border: none;
+                            border-radius: 0;
+                            color: #333;
+                            font-size: 15px;
+                            margin-right: 0;
+                            padding: 8px 15px;
+
+                            img {
+                                float: left;
+                                margin-right: 7px;
+                                width: 20px;
+                            }
+                            i {
+                                border: 1px solid #39a9c1;
+                                border-radius: 50%;
+                                color: #39a9c1;
+                                float: right;
+                                font-size: 13px;
+                                margin-top: -3px;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right-side {
+                border-bottom: 1px solid #bbb;
+                border-right: 1px solid #bbb;
+                display: table-cell;
+                vertical-align: top;
+                width: 730px;
+
+                h5 {
+                    font-size: 16px;
+                    margin: 60px 0 25px;
+                }
+                .linking-now {
+                    text-align: center;
+                }
+                .list-accounts {
+                    display: none;
+                    padding: 20px 30px;
+
+                    h3 {
+                        font-size: 16px;
+                        margin: 0 0 10px;
+                        text-transform: uppercase;
+                    }
+                    .glyphicon-play {
+                        color: #54b14c;
+                        font-size: 11px;
+                    }
+                    .green-btn {
+                        float: right;
+                        font-size: 14px;
+                        padding: 6px 12px 4px;
+                    }
+                    .red-btn {
+                        float: left;
+                        font-size: 12px;
+                        padding: 7px 13px 6px;
+                    }
+                    table {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 15px;
+
+                        tr {
+                            border-bottom: 1px solid #bbb;
+
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            th {
+                                font-weight: normal;
+                                padding: 7px 10px;
+                                text-align: center;
+                            }
+                            td {
+                                padding: 20px 10px;
+                            }
+                        }
                     }
                 }
             }
