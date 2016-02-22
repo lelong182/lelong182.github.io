@@ -106,57 +106,6 @@
                     return html;
                 }
             });
-            $('.wrap-ads-info').on('click', '.wrap-connect-list .hover', function() {
-                var li = $(this).parent().find('li');
-                var current_li = $(this);
-                var arr_li = [];
-                var type = $(this).closest('ul').data('type');
-                var html_input = "";
-                switch (type) {
-                    case 'page':
-                        html_input = '<input class="connect-input" type="text" name="connect-page" placeholder="Thêm một Trang" />';
-                        break;
-                    case 'app':
-                        html_input = '<input class="connect-input" type="text" name="connect-app" placeholder="Thêm một Ứng dụng" />';
-                        break;
-                    case 'event':
-                        html_input = '<input class="connect-input" type="text" name="connect-event" placeholder="Thêm một Sự kiện" />';
-                        break;
-                }
-                $('.connect-input').remove();
-                $(this).closest('.row').addClass('mgb-10');
-                li.each(function() {
-                    var obj_li = {
-                        id: $(this).data('id'),
-                        val: $(this).text(),
-                        is_current: false
-                    };
-                    if ($(this).text() === current_li.text()) {
-                        obj_li.is_current = true;
-                    }
-                    arr_li.push(obj_li);
-                });
-                var html_select = '<select class=\"connect-children-select\">';
-                $.each(arr_li, function(index, value) {
-                    var is_current = "";
-                    if (value.is_current) {
-                        is_current = "selected";
-                    }
-                    html_select += '<option value="' + value.id + '" ' + is_current + '>' + value.val + '</option>';
-                });
-                html_select += '</select>';
-                $('.wrap-connect-children').html(html_select);
-                $('.connect-children-select').fancySelect();
-                $('.wrap-connect-children').closest('.row').addClass('mgb-10').after(html_input);
-                $(this).closest('.fancy-select').after('<span class="connect-close-icon"><i class="fa fa-times"></i></span>');
-            });
-            $('.wrap-ads-info').on('click', '.connect-close-icon', function() {
-                $('.connect-input').remove();
-                $('.wrap-connect-children').html("");
-                $(this).closest('.row').removeClass('mgb-10');
-                $(this).closest('.row').next().removeClass('mgb-10');
-                $(this).remove();
-            });
         }
 
         /* =================================
@@ -168,52 +117,9 @@
         $(".res-table .wrap-thead").sticky({
             topSpacing: 0
         });
-        $(".floating-create-group-campaign .floating-inner").sticky({
+        $(".main-content .selected-box").sticky({
             topSpacing: 0
         });
-        $(".floating-create-campaign .floating-inner").sticky({
-            topSpacing: 0
-        });
-        $(".floating-auto-optimize .floating-inner").sticky({
-            topSpacing: 0
-        });
-        $(".floating-compare-campaign .floating-inner").sticky({
-            topSpacing: 0
-        });
-        $(".floating-change-link .floating-inner").sticky({
-            topSpacing: 0
-        });
-
-        var tmp = null;
-        $('.floating-change-link').on({
-            mouseover: function() {
-                if (typeof tmp !== "undefined") {
-                    clearTimeout(tmp);
-                }
-                var top_li = $(this).position().top + 125 + parseInt($('.list-ads .mCSB_container').css('top'), 10);;
-                var left_li = $(this).position().left - 420;
-                $('.wrap-data-hover').html($(this).find('.data-hover').html());
-                $('.wrap-data-hover').css({
-                    'top': top_li,
-                    'left': left_li,
-                    'display': 'block'
-                });
-                $('.wrap-data-hover').addClass('fadeIn animated');
-            },
-            mouseleave: function() {
-                tmp = setTimeout(function() {
-                    $('.wrap-data-hover').html('').removeClass('fadeIn animated').removeAttr('style');
-                }, 100);
-            }
-        }, '.list-ads .ads-item');
-        $('.floating-change-link').on({
-            mouseover: function() {
-                clearTimeout(tmp);
-            },
-            mouseleave: function() {
-                $('.wrap-data-hover').html('').removeClass('fadeIn animated').removeAttr('style');
-            }
-        }, '.wrap-data-hover');
 
 
         /* =================================
@@ -263,24 +169,6 @@
 
 
         /* =================================
-         ===  Ads Info - Connect                 ====
-         =================================== */
-        $('.wrap-ads-info').on({
-            mouseover: function() {
-                $(this).addClass('hover');
-            },
-            mouseleave: function() {
-                $(this).removeClass('hover');
-            }
-        }, '.wrap-connect-list');
-
-
-        if ($(".wrap-device-checkbox #mobile").is(':checked') || $('.wrap-device-checkbox input[type="checkbox"]:checked').length === 2) {
-            $('.wrap-device').addClass('visible');
-        }
-
-
-        /* =================================
          ===  Count Character                 ====
          =================================== */
         if ($('.has-count').length) {
@@ -325,7 +213,7 @@
         /* =================================
          ===  Checkall                 ====
          =================================== */
-        $('.main').on('click', '.res-table #checkbox-all', function(event) {
+        $(this).on('click', '.res-table #checkbox-all', function(event) {
             if (this.checked) {
                 $('.res-table .toolbar').show();
                 $('.res-table td .css-checkbox').each(function() {
@@ -343,7 +231,7 @@
         /* =================================
          ===  Table Checkbox                 ====
          =================================== */
-        $('.main').on('click', '.res-table td .css-checkbox', function() {
+        $(this).on('click', '.res-table td .css-checkbox', function() {
             if (this.checked) {
                 $(this).closest('tr').addClass("flash_current")
                     .delay(2000)
@@ -380,6 +268,42 @@
                 $('.res-table .toolbar .compare-link').addClass('visible');
             } else {
                 $('.res-table .toolbar .compare-link').removeClass('visible');
+            }
+        });
+
+
+        /* =================================
+         ===  List multi level                 ====
+         =================================== */
+        $(this).on('click', '.list-multi-level .has-child .glyphicon-triangle-right', function() {
+            $(this).removeClass().addClass('glyphicon glyphicon-triangle-bottom');
+            $(this).closest('.has-child').addClass('open');
+        });
+        $(this).on('click', '.list-multi-level .has-child .glyphicon-triangle-bottom', function() {
+            $(this).removeClass().addClass('glyphicon glyphicon-triangle-right');
+            $(this).closest('.has-child').removeClass('open');
+        });
+        $(this).on('click', '.list-multi-level .has-child input[type="checkbox"]', function() {
+            var parent_li = $(this).parent('li');
+            var closest_child = $(this).closest('.has-child');
+            var checkbox_all = closest_child.children('input[type="checkbox"]');
+            if (this.checked) {
+                if (parent_li.hasClass('has-child')) {
+                    parent_li.find('input[type="checkbox"]').each(function() {
+                        this.checked = true;
+                    });
+                }
+            } else {
+                if (parent_li.hasClass('has-child')) {
+                    parent_li.find('input[type="checkbox"]').each(function() {
+                        this.checked = false;
+                    });
+                }
+            }
+            if (closest_child.find('ul input[type="checkbox"]:checked').length === closest_child.find('li').length) {
+                checkbox_all.prop('checked', true);
+            } else {
+                checkbox_all.prop('checked', false);
             }
         });
 
@@ -479,7 +403,7 @@
         /* =================================
          ===  Table Group                 ====
          =================================== */
-        $('.main').on('click', '.res-table .group-parent .glyphicon-plus-sign', function() {
+        $(this).on('click', '.res-table .group-parent .glyphicon-plus-sign', function() {
             $(this).removeClass().addClass('glyphicon glyphicon-minus-sign');
             var group_parent = $(this).closest('.group-parent');
             var group_parent_id = group_parent.data('group-id');
@@ -489,7 +413,7 @@
             });
             fixed_scrollbar();
         });
-        $('.main').on('click', '.res-table .group-parent .glyphicon-minus-sign', function() {
+        $(this).on('click', '.res-table .group-parent .glyphicon-minus-sign', function() {
             $(this).removeClass().addClass('glyphicon glyphicon-plus-sign');
             var group_parent = $(this).closest('.group-parent');
             var group_parent_id = group_parent.data('group-id');
@@ -499,7 +423,7 @@
             });
             fixed_scrollbar();
         });
-        $('.main').on('click', '.res-table .group-parent .css-checkbox', function(event) {
+        $(this).on('click', '.res-table .group-parent .css-checkbox', function(event) {
             var group_parent = $(this).closest('.group-parent');
             var group_parent_id = group_parent.data('group-id');
             if (this.checked) {
@@ -520,55 +444,20 @@
         /* =================================
          ===  Table Status                 ====
          =================================== */
-        $('.main').on('click', '.res-table .glyphicon-play', function() {
+        $(this).on('click', '.res-table .glyphicon-play', function() {
             $(this).removeClass().addClass('glyphicon glyphicon-pause');
             $(this).closest('tr').addClass('pause');
         });
-        $('.main').on('click', '.res-table .glyphicon-pause', function() {
+        $(this).on('click', '.res-table .glyphicon-pause', function() {
             $(this).removeClass().addClass('glyphicon glyphicon-play');
             $(this).closest('tr').removeClass('pause');
         });
 
 
         /* =================================
-         ===  Ads Info - Device                 ====
-         =================================== */
-        $('.main').on('click', '.wrap-device-checkbox input[type = "checkbox"]', function() {
-            var checkbox_id = $(this).attr('id');
-            var count_checked = $('.wrap-device-checkbox input[type="checkbox"]:checked').length;
-            if (this.checked) {
-                if (checkbox_id === 'mobile' || count_checked === 2) {
-                    $('.wrap-device').addClass('visible');
-                }
-            } else {
-                if (checkbox_id === 'mobile') {
-                    $('.wrap-device').removeClass('visible');
-                }
-            }
-        });
-
-
-        /* =================================
-         ===  Ads Info - Advanced options                 ====
-         =================================== */
-        $('.main').on('click', '.wrap-ads-info .advanced-options-btn', function() {
-            if ($(this).hasClass('open')) {
-                $(this).removeClass('open');
-                $(this).find('span').text('Hiện');
-                $('.advanced-options').addClass('hidden');
-            } else {
-                $(this).addClass('open');
-                $(this).find('span').text('Ẩn');
-                $('.advanced-options').removeClass('hidden');
-            }
-            return false;
-        });
-
-
-        /* =================================
          ===  List Selected                 ====
          =================================== */
-        $('.main').on('click', '.list-selected .selected-item .close-icon', function() {
+        $(this).on('click', '.list-selected .selected-item .close-icon', function() {
             var list_selected = $(this).closest('.list-selected');
             var list_all = list_selected.parent().children('.list-all');
             if (list_selected.find('.selected-item').length === 1) {
@@ -591,7 +480,7 @@
                 width: $('.create-ads-content .wrap-preview .carousel .owl-item').width(),
             });
         });
-        $('.main').on('click', '.create-ads-btn', function() {
+        $(this).on('click', '.create-ads-btn', function() {
             $('.ads-banners').addClass('hidden');
             $('.ads-toolbar').removeClass('hidden');
             $('.list-created-ads').removeClass('hidden');
@@ -614,7 +503,7 @@
                 $(this).find('i').removeClass().addClass('glyphicon glyphicon-play');
             }
         });
-        $('.main').on('click', '.message i', function() {
+        $(this).on('click', '.message i', function() {
             $(this).parent().adtop_animation('fadeOutUp', function() {
                 $(this).hide();
             });
@@ -625,7 +514,7 @@
          ===  Custom Scrollbar                 ====
          =================================== */
         $(".created-ads-inner ul").mCustomScrollbar();
-        $(".floating-change-link .list-ads").mCustomScrollbar();
+        $(".wrap-create-camp .list-multi-level").mCustomScrollbar();
 
 
         /* =================================
@@ -698,7 +587,7 @@
         myHighChartsCheckbox('input[id$="checkbox-2"]', [data1_default, data2_default], [data12, data22]);
         myHighChartsCheckbox('input[id$="checkbox-3"]', [data1_default, data2_default], [data13, data23]);
         myHighChartsCheckbox('input[id$="checkbox-4"]', [data1_default, data2_default], [data14, data24]);
-        $('.wrap-create-ads').on('click', '.report-link', function() {
+        $(this).on('click', '.wrap-create-ads .report-link', function() {
             $('.ads-report').removeClass('hidden');
             $('.report-tabs').responsiveTabs({
                 activate: function(event, tab) {
@@ -1330,7 +1219,7 @@
                 updateOnBrowserResize: true
             }
         });
-        $('.main').on('click', '.wrap-config-type input[type="radio"]', function(event) {
+        $(this).on('click', '.wrap-config-type input[type="radio"]', function(event) {
             if (this.checked) {
                 if ($(this).attr('id') == 'auto') {
                     $('.of-manual').addClass('hidden');
@@ -1339,7 +1228,7 @@
                 }
             }
         });
-        $('.main').on('click', '.wrap-kpi-type input[type="radio"]', function(event) {
+        $(this).on('click', '.wrap-kpi-type input[type="radio"]', function(event) {
             var end_date = $('.wrap-daterange .end-date').val();
             if (this.checked) {
                 if ($(this).attr('id') == 'lifetime') {
@@ -1369,7 +1258,7 @@
         });
 
         
-         $('.main').on('click', '.wrap-of-manual .add-manual', function(event) {
+         $(this).on('click', '.wrap-of-manual .add-manual', function(event) {
             var classes = $(this).closest('.of-manual').attr('class');
             var str = $(this).closest('.of-manual').html();
             str = removeElements(str, '.fancy-select');
@@ -1380,7 +1269,7 @@
             $('.custom-select').fancySelect();
             return false;
         });
-        $('.main').on('click', '.wrap-of-manual .remove-manual', function(event) {
+        $(this).on('click', '.wrap-of-manual .remove-manual', function(event) {
             $(this).closest('.of-manual').remove();
             return false;
         });
@@ -1395,6 +1284,98 @@
             return false;
         });
 
+
+        /* =================================
+        ===  Create Campaign                 ====
+        =================================== */
+        if ($('.wrap-create-camp').length) {
+            myBloodhound('language');
+            myBloodhound('location', false);
+            myListAll('language');            
+        }
+        $(this).on('click', '.location-section .btn-group a', function() {
+            if(!$(this).hasClass('active')) {
+                $('.location-section .btn-group a').removeClass('active');
+                $(this).addClass('active');
+            } 
+            return false;
+        });
+        $(this).on('click', '.target-section input[type="radio"]', function() {
+            var id = $(this).attr('id');
+            if (this.checked) {
+                if(id === 'target-1') {
+                    $('.device-section').addClass('hidden');
+                    $('.os-section').removeClass('hidden');
+                } else {
+                    $('.os-section').addClass('hidden');
+                    $('.device-section').removeClass('hidden');
+                }
+            } 
+        });
+        $(this).on('click', '.device-section .link', function() {
+            $(this).parent().addClass('hidden');
+            $('.device-type').removeClass('hidden');
+            return false;
+        });
+        $(this).on('click', '.device-section .device-type input[type="checkbox"]', function() {
+            if($('.device-section .device-type input[type="checkbox"]:checked').length == 0) {
+                $('.device-box').addClass('hidden');
+            }
+            var id = $(this).attr('id');
+            if(id === 'computer') {
+                if (this.checked) {
+                    $('.device-box').addClass('hidden');
+                } else {
+                    $('.device-box').removeClass('hidden');
+                }
+            } 
+        });
+        $(this).on('click', '.os-section .btn-group a', function() {
+            var type = $(this).data('type');
+            var this_parent = $(this).parent();
+            var all_android_devices = '<div class="form-group"><input type="checkbox" id="all-android-mobile" class="css-checkbox" /><label for="all-android-mobile" class="css-label">Tất cả điện thoại Android</label></div><div class="form-group"><input type="checkbox" id="all-android-tablet" class="css-checkbox" /><label for="all-android-tablet" class="css-label">Tất cả máy tính bảng Android</label></div>';
+            var all_ios_devices = '<div class="form-group"><input type="checkbox" id="all-iphone" class="css-checkbox" /><label for="all-iphone" class="css-label">Tất cả điện thoại iPhone</label></div><div class="form-group"><input type="checkbox" id="all-ipad" class="css-checkbox" /><label for="all-ipad" class="css-label">Tất cả Máy tính bảng iPad</label></div><div class="form-group"><input type="checkbox" id="all-ipod" class="css-checkbox" /><label for="all-ipod" class="css-label">Tất cả iPod</label></div>';
+            var list_android_version = '<select class="custom-select"><option value="">Tất cả phiên bản</option><option value="2.0">2.0</option><option value="2.1">2.1</option><option value="2.2">2.2</option><option value="2.3">2.3</option><option value="3.0">3.0</option><option value="3.1">3.1</option><option value="3.2">3.2</option><option value="4.0">4.0</option><option value="4.1">4.1</option><option value="4.2">4.2</option><option value="4.3">4.3</option><option value="4.4">4.4</option><option value="5.0">5.0</option><option value="5.1">5.1</option><option value="6.0">6.0</option></select>';
+            var list_ios_version = '<select class="custom-select"><option value="">Tất cả phiên bản</option><option value="2.0">2.0</option><option value="3.0">3.0</option><option value="4.0">4.0</option><option value="4.3">4.3</option><option value="5.0">5.0</option><option value="6.0">6.0</option><option value="7.0">7.0</option><option value="7.1">7.1</option><option value="8.0">8.0</option><option value="8.1">8.1</option><option value="8.2">8.2</option><option value="8.3">8.3</option><option value="8.4">8.4</option><option value="9.0">9.0</option><option value="9.1">9.1</option></select>';
+            if(!$(this).hasClass('active')) {
+                $('.os-section .btn-group a').removeClass('active');
+                $(this).addClass('active');
+                if (type == 'android') {
+                    $('.wrap-os-versions').html(list_android_version);
+                    $('.all-devices').html(all_android_devices);
+                } else if (type == 'ios') {
+                    $('.wrap-os-versions').html(list_ios_version);
+                    $('.all-devices').html(all_ios_devices);
+                }
+                $('#option-chk').attr('checked', false);
+                $('.option-devices .search-device-form').addClass('hidden');
+                $('.option-devices .list-multi-level').addClass('hidden');
+                $('.custom-select').fancySelect();
+            } 
+            return false;
+        });
+        $(this).on('click', '.os-section .option-devices #option-chk', function() {
+            if (this.checked) {
+                $('.all-devices input[type="checkbox"]').prop('disabled', true);
+                $('.option-devices .search-device-form').removeClass('hidden');
+                $('.option-devices .list-multi-level').removeClass('hidden');
+            } else {
+                $('.all-devices input[type="checkbox"]').prop('disabled', false);
+                $('.option-devices .search-device-form').addClass('hidden');
+                $('.option-devices .list-multi-level').addClass('hidden');
+            }
+        });
+        $(this).on('click', '.network-section .link', function() {
+            if($(this).hasClass('opened')) {
+                $(this).removeClass('opened');
+                $('.network-section .list-multi-level').addClass('hidden');
+            } else {
+                $(this).addClass('opened');
+                $('.network-section .list-multi-level').removeClass('hidden');
+            }
+            return false;
+        });
+        
 
     });
 
@@ -1558,9 +1539,6 @@ function myHighChartsCheckbox(selector, data_checked, data_unchecked) {
     });
 }
 
-/* =================================
- ===  OwlCarousel                 ====
- =================================== */
 function initialize_owl(el) {
     el.owlCarousel({
         loop: true,
@@ -1578,9 +1556,6 @@ function initialize_owl(el) {
     el.trigger('refresh.owl.carousel');
 }
 
-/* =================================
- ===  Fixed Scrollbar                 ====
- =================================== */
 function height_calculate() {
     var h_arr = [];
     h_arr['h1'] = $(window).height() - ($('.wrap-res-table').offset().top - $(window).scrollTop());
@@ -1610,34 +1585,6 @@ function fixed_scrollbar(more) {
     }
 }
 
-function floatingClick(floating_name) {
-    if ($('.floating-' + floating_name).css('visibility') == 'hidden') {
-        $('.floating-' + floating_name).css({
-            'opacity': 1,
-            'visibility': 'visible'
-        }).find('.floating-inner').adtop_animation('fadeInRight');
-        $('.black-overlay').addClass('visible');
-    } else {
-        $('.floating-' + floating_name).adtop_animation('fadeOutRight', function() {
-            $(this).removeAttr('style');
-        });
-        $('.black-overlay').removeClass('visible');
-    }
-}
-
-function floatingClickOutside(floating_name, event) {
-    var container;
-    if ($('.floating-' + floating_name).css('visibility') == 'visible') {
-        container = $(".floating-" + floating_name);
-        if (!container.is(event.target) && container.has(event.target).length === 0) {
-            container.find('.floating-inner').adtop_animation('fadeOutRight', function() {
-                $(this).closest('.floating-area').removeAttr('style');
-            });
-            $('.black-overlay').removeClass('visible');
-        }
-    }
-}
-
 function addSuccessMessage(msg) {
     $('.main-content').append('<div class="message success-message"><span>' + msg + '</span><i class="fa fa-times"></i></div>');
     $('.main-content').find('.success-message').adtop_animation('fadeInDown');
@@ -1656,4 +1603,115 @@ function addErrorMessage(msg) {
             $(this).hide();
         });
     }, 3000);
+}
+
+function myBloodhound(type, isRemote) {
+    var url = '',
+        typeahead_elem = null,
+        list_suggestion = null,
+        empty_str = '',
+        obj_return = null,
+        bh_params = {};
+    switch (type) {
+        case 'language':
+            typeahead_elem = $('#language-search');
+            empty_str = 'Không tìm thấy ngôn ngữ nào.';
+            obj_return = function(item) {
+                return {
+                    id: item.key,
+                    name: item.name
+                }
+            };
+            break;
+        case 'location':
+            typeahead_elem = $('#location-search');
+            empty_str = 'Không tìm thấy vị trí nào.';
+            obj_return = function(item) {
+                return {
+                    id: item.key,
+                    name: item.name,
+                    country: item.country_name
+                }
+            };
+            break;
+    }
+    url = params.campaignJsonURL + '?type=' + type;
+    bh_params = {
+        datumTokenizer: function(datum) {
+            return Bloodhound.tokenizers.whitespace(datum.name);
+        },
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+    }
+
+    if (isRemote) {
+        bh_params.remote = {
+            url: url,
+            prepare: function(query, settings) {
+                settings.type = "POST";
+                settings.data = {
+                    name: query
+                };
+                return settings;
+            },
+            filter: function(res) {
+                return $.map(res.data, function(item) {
+                    return obj_return(item);
+                });
+            }
+        }
+    } else {
+        bh_params.prefetch = {
+            url: url,
+            cache: false,
+            filter: function(res) {
+                var tmp;
+                return $.map(res.data, function(item) {
+                    return obj_return(item);
+                });
+            }
+        }
+    }
+    list_suggestion = new Bloodhound(bh_params);
+    list_suggestion.initialize();
+    typeahead_elem.typeahead('destroy');
+    typeahead_elem.typeahead({
+        hint: false,
+        highlight: true,
+        minLength: 3
+    }, {
+        name: 'name',
+        display: 'name',
+        source: list_suggestion,
+        limit: 100,
+        templates: {
+            empty: '<div class="noitems">' + empty_str + '</div>',
+            suggestion: Handlebars.compile('<div class="' + type + '" {{#if platform}} data-platform="{{platform}}" {{/if}} data-id="{{id}}">{{name}}</div>')
+        }
+    });
+    typeahead_elem.bind('typeahead:render ', function() {
+        $('.list-all-' + type).removeClass('visible');
+    });
+}
+
+function myListAll(type, hasParent) {
+    $("#" + type + "-search").focus(function() {
+        if ($(this).parent().find('.tt-menu').is(':hidden')) {
+            if ($('.list-all-' + type + ' ul').length == 0) {
+                $.post(params.campaignJsonURL + '?html=1&type=' + type, {}, function(res) {
+                    $('.list-all-' + type).html(res.data);
+                }, 'json').done(function() {
+                    $('.list-all-' + type).addClass('visible');
+                });
+            } else {
+                $('.list-all-' + type).addClass('visible');
+            }
+        }
+    });
+    $('body').mouseup(function(e) {
+        if ($('.list-all-' + type).is(":visible")) {
+            if (!$('.list-all-' + type).is(e.target) && $('.list-all-' + type).has(e.target).length === 0 && e.target.id !== type + '-search') {
+                $('.list-all-' + type).removeClass('visible');
+            }
+        }
+    });
 }

@@ -93,7 +93,7 @@ body {
 					background-color: #3291A7;
 
 					&:before {
-						background-color: #126072;
+						background-color: @dark-main-color;
 						content: "";
 						height: 3px;
 						left: 0;
@@ -154,7 +154,7 @@ body {
 			background-color: @main-color;
 			border: none;
 			border-radius: 3px;
-			box-shadow: 1px 5px 0 -1px #126072;
+			box-shadow: 0 3px 0 0 @dark-main-color;
 			color: #fff;
 			font-size: 16px;
 			margin-bottom: 5px;
@@ -165,9 +165,9 @@ body {
 			transition: all 0.2s ease;
 
 			&:focus {
-				box-shadow: none;
-				top: 5px;
-			}
+	            box-shadow: none;
+	            top: 3px;
+	        }
 		}
 		#login {
 			.socials-login {
