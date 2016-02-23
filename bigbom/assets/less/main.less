@@ -473,6 +473,7 @@ CUSTOM DATEPICKER
     height: auto;
     width: 240px !important;
     z-index: 30 !important;
+    font-family: 'Roboto', sans-serif;
 
     .ui-datepicker-group {
         float: left;
@@ -1009,6 +1010,10 @@ WRAPPER
     .highlight {
         color: @second-color;
     }
+
+    /* ---------------------------------------
+    CUSTOM BUTTON
+    ----------------------------------------- */
     .green-btn {
         background-color: @active-color;
         border-radius: 3px;
@@ -1220,91 +1225,59 @@ MAIN
     }
 
     /* ---------------------------------------
-    INPUT GROUP
+    CUSTOM INPUT
     ----------------------------------------- */
-    .input-group {
-        padding-right: 60px;
+    .custom-input {
+        border: 1px solid #bbb;
+        color: #999;
+        font-size: 15px;
+        height: 40px;
+        padding: 0 12px;
+        transition: all 0.3s ease 0s;
+        width: 100%;
+
+        &:focus {
+            border: 1px solid @main-color;
+            color: #333;
+        }
+    }
+    .input-has-addon {
         position: relative;
 
-        &.small-group {
-            padding-right: 25px;
+        .custom-input {
+            padding-right: 30px;
         }
-        &.input-group-left {
-            padding-left: 60px;
-            padding-right: 0;
-
-            input[type="text"] {
-                border-left: none !important;
-                border-right: 1px solid #aaa !important;
-                text-align: right;
-            }
-            .input-group-addon {
-                left: 0;
-                right: initial;
-
-                .fancy-select {
-                    .trigger {
-                        border-left: 1px solid #aaa;
-                        border-right: none;
-
-                        &:before {
-                            left: initial;
-                            right: 0;
-                        }
-                    }
-                }
-            }
-        }
-        input[type="text"] {
-            border-right: none !important;
-        }
-        .input-group-addon {
+        span {
+            color: #999;
+            font-size: 15px;
             position: absolute;
-            right: 0;
-            top: 0;
-            width: 60px;
+            right: 8px;
+            top: 8px;
+        }
+    }
+    .input-has-icon {
+        position: relative;
 
-            &.small-addon {
-                > span {
-                    width: 25px;
-                }
-            }
-            > span {
-                background-color: #fff;
-                border-bottom: 1px solid #aaa;
-                border-right: 1px solid #aaa;
-                border-top: 1px solid #aaa;
-                color: #999;
-                display: inline-block;
-                font-size: 11px;
-                height: 32px;
-                padding: 7px 7px 0 0;
-                position: absolute;
-                right: 0;
-                text-align: right;
-                top: 0;
-                width: 76px;
-            }
-            .fancy-select {
-                .trigger {
-                    border-left: none;
-
-                    &.open {
-                        &:before {
-                            content: none;
-                        }
-                    }
-                    &:before {
-                        background-color: #bbb;
-                        content: "";
-                        height: 24px;
-                        left: 0;
-                        position: absolute;
-                        top: 3px;
-                        width: 1px;
-                    }
-                }
-            }
+        .custom-input {
+            padding-right: 42px;
+        }
+        i {
+            color: #999;
+            font-size: 22px;
+            position: absolute;
+            right: 10px;
+            top: 9px;
+        }
+    }
+    .input-has-box {
+        .box {
+            float: left;
+            margin-right: 10px;
+            width: 150px;
+        }
+        .custom-input {
+            float: left;
+            width: ~"calc(100% - 160px)";
         }
     }
 
@@ -1550,6 +1523,36 @@ MAIN
         }
 
         /* ---------------------------------------
+        FORM GROUP
+        ----------------------------------------- */
+        .form-group {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .left-form-group {
+            color: #555;
+            float: left;
+            font-size: 15px;
+            height: 40px;
+            margin-bottom: 0;
+            padding-top: 10px;
+            text-align: right;
+            width: 18%;
+
+            &.small-group {
+                height: 25px;
+                padding-top: 2px;
+            }
+        }
+        .right-form-group {
+            float: left;
+            margin-left: 15px;
+            width: ~"calc(82% - 15px)";
+            position: relative;
+        }
+
+        /* ---------------------------------------
         CUSTOM MESSAGE
         ----------------------------------------- */
         .message {
@@ -1645,20 +1648,6 @@ MAIN
         /* ---------------------------------------
         CUSTOM CAPTION
         ----------------------------------------- */
-        .wrap-border-caption {
-            position: relative;
-
-            .custom-link {
-                color: @main-color;
-                position: absolute;
-                right: 0;
-                top: -3px;
-
-                i {
-                    margin-right: 3px;
-                }
-            }
-        }
         .border-caption {
             border-bottom: 1px solid #999;
             font-size: 20px;
@@ -1669,21 +1658,19 @@ MAIN
         }
 
         /* ---------------------------------------
-        CUSTOM BUTTON
+        CUSTOM LINK
         ----------------------------------------- */
-        .submit-btn {
-            background-color: @main-color;
-            border: none;
-            color: #fff;
-            font-size: 14px;
-            padding: 5px 20px 6px;
-        }
-        .cancel-btn {
-            background-color: #ddd;
-            border: none;
-            color: #919090;
-            font-size: 14px;
-            padding: 5px 20px 6px;
+        .link {
+            color: #38a9c1;
+            display: inline-block;
+            font-size: 15px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+            i {
+                font-size: 14px;
+            }
         }
 
         /* ---------------------------------------
@@ -1792,181 +1779,6 @@ MAIN
         }
 
         /* ---------------------------------------
-        ADS TARGET
-        ----------------------------------------- */
-        .wrap-ads-target {
-            border: 1px solid #999;
-            margin: auto;
-            width: 780px;
-
-            h3 {
-                background-color: #cdcdcd;
-                color: #000;
-                font-size: 14px;
-                font-weight: normal;
-                height: 40px;
-                margin: 0;
-                padding-top: 12px;
-                text-align: center;
-                text-transform: uppercase;
-            }
-            .main-ads-target {
-                padding: 20px;
-
-                .list-targets {
-                    margin-bottom: 20px;
-                    display: inline-block;
-                    width: 100%;
-
-                    li {
-                        border: 2px solid #b1b0b0;
-                        float: left;
-                        height: 150px;
-                        list-style: outside none none;
-                        margin-right: 20px;
-                        padding-top: 25px;
-                        text-align: center;
-                        width: ~"calc(25% - 15px)";
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-
-                        &.active, &:hover {
-                            border: 2px solid @main-color;
-                        }
-                        &:last-child {
-                            margin-right: 0;
-                        }
-                        h4 {
-                            color: #59595b;
-                            font-size: 13px;
-                            font-weight: normal;
-                            line-height: 1.4;
-                            margin: 10px 0 0;
-                        }
-                    }
-                }
-                .form-target {
-                    .form-group {
-                        display: inline-block;
-                        width: 100%;
-                    }
-                    label {
-                        float: left;
-                        font-weight: normal;
-                        margin: 6px 20px 0 0;
-                        text-align: right;
-                        width: ~"calc(25% - 15px)";
-                    }
-                    input[type="text"] {
-                        border: 1px solid #bbb;
-                        float: left;
-                        height: 30px;
-                        padding: 0 8px;
-                        width: ~"calc(50% - 10px)";
-                        transition: all 0.3s ease;
-
-                        &:focus {
-                            color: #333;
-                            border: 1px solid @main-color;
-                        }
-                    }
-                    button[type="button"] {
-                        background-color: @main-color;
-                        border: medium none;
-                        color: #fff;
-                        font-size: 14px;
-                        padding: 5px 10px 6px;
-                    }
-                    .wrap-select {
-                        float: left;
-                        width: ~"calc(50% - 10px)";
-
-                        .fancy-select {
-                            .options {
-                                li {
-                                    padding: 10px 20px;
-                                    position: relative;
-
-                                    &:after {
-                                        content: "";
-                                        height: 100%;
-                                        position: absolute;
-                                        right: -21px;
-                                        top: 0;
-                                        width: 21px;
-                                    }
-                                    &.selected, &.hover {
-                                        background-color: #f2f2f2;
-                                        color: #333;
-                                    }
-                                    .wrap-content {
-                                        position: relative;
-
-                                        &.enable {
-                                            &:after {
-                                                color: #5fae01;
-                                            }
-                                        }
-                                        &:after {
-                                            content: "•";
-                                            font-size: 20px;
-                                            left: -13px;
-                                            position: absolute;
-                                            top: -7px;
-                                        }
-                                        h5 {
-                                            font-size: 13px;
-                                            margin: 0 0 3px;
-                                        }
-                                        p {
-                                            color: #999;
-                                            font-size: 13px;
-                                            margin-bottom: 0;
-                                        }
-                                        .hover-content {
-                                            background-color: #fff;
-                                            border: 1px solid #999;
-                                            left: ~"calc(100% + 51px)";
-                                            opacity: 0;
-                                            padding: 10px;
-                                            position: absolute;
-                                            top: -9px;
-                                            transition: all 0.3s ease 0s;
-                                            visibility: hidden;
-                                            z-index: 10;
-
-                                            &:before {
-                                                content: "";
-                                                background: url("../images/left-arrow.png") no-repeat;
-                                                top: 7px;
-                                                left: -15px;
-                                                position: absolute;
-                                                width: 16px;
-                                                height: 14px;
-                                            }
-                                            &.visible {
-                                                left: ~"calc(100% + 41px)";
-                                                opacity: 1;
-                                                visibility: visible;
-                                            }
-                                            a {
-                                                color: @main-color;
-
-                                                &:hover {
-                                                    text-decoration: underline;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        /* ---------------------------------------
         CREATE CAMPAIGN
         ----------------------------------------- */
         .wrap-create-camp {
@@ -1978,32 +1790,6 @@ MAIN
             .green-btn {
                 padding: 11px 12px 10px;
                 display: inline-block;
-            }
-            .form-group {
-                display: inline-block;
-                width: 100%;
-                margin-bottom: 20px;
-            }
-            .left-form-group {
-                color: #555;
-                float: left;
-                font-size: 15px;
-                height: 40px;
-                margin-bottom: 0;
-                padding-top: 10px;
-                text-align: right;
-                width: 18%;
-
-                &.small-group {
-                    height: 25px;
-                    padding-top: 2px;
-                }
-            }
-            .right-form-group {
-                float: left;
-                margin-left: 15px;
-                width: ~"calc(82% - 15px)";
-                position: relative;
             }
             .wrap-age-select {
                 float: left;
@@ -2020,20 +1806,6 @@ MAIN
                         right: -12px;
                         top: 2px;
                     }
-                }
-            }
-            input[type="text"] {
-                border: 1px solid #bbb;
-                color: #999;
-                font-size: 15px;
-                height: 40px;
-                padding: 0 12px;
-                transition: all 0.3s ease;
-                width: 100%;
-
-                &:focus {
-                    color: #333;
-                    border: 1px solid @main-color;
                 }
             }
             .css-label, .css-label-radio {
@@ -2190,62 +1962,8 @@ MAIN
                     }
                 }
             }
-            .connect-close-icon {
-                color: #888;
-                left: ~"calc(100% - 7px)";
-                position: absolute;
-                top: 7px;
-                cursor: pointer;
-            }
-            .wrap-bid {
-                input[type="text"] {
-                    margin: 0 5px 0 25px;
-                    width: 150px;
-                }
-            }
-            .wrap-daterange {
-                background-color: #f2f2f2;
-                border: 1px solid #aaa;
-                margin: 10px 0 20px;
-                padding: 15px 15px 5px;
-                width: 340px;
-
-                > div {
-                    margin-bottom: 10px;
-                    overflow: hidden;
-                    position: relative;
-
-                    label {
-                        color: #59595b;
-                        float: left;
-                        font-weight: normal;
-                        margin: 5px 0 0;
-                    }
-                    input[type="text"] {
-                        float: right;
-                        width: ~"calc(100% - 90px)" !important;
-                    }
-                    i {
-                        color: @main-color;
-                        cursor: pointer;
-                        font-size: 20px;
-                        position: absolute;
-                        right: 6px;
-                        top: 6px;
-                    }
-                }
-            }
             .advanced-options-btn {
                 color: @main-color;
-            }
-            .link {
-                color: #38a9c1;
-                display: inline-block;
-                font-size: 15px;
-
-                &:hover {
-                    text-decoration: underline;
-                }
             }
             .btn-group {
                 margin-bottom: 10px;
@@ -2393,444 +2111,117 @@ MAIN
         }
 
         /* ---------------------------------------
-        CREATE ADS
+        CREATE RULES
         ----------------------------------------- */
-        .wrap-create-ads {
-            padding-bottom: 100px;
+        .wrap-create-rules {
+            hr {
+                border-color: #999;
+                display: inline-block;
+                width: 100%;
+            }
+            .green-btn {
+                padding: 11px 12px 10px;
+                display: inline-block;
+            }
+            .css-label, .css-label-radio {
+                margin: 0 40px 0 0;
 
-            .wrap-ads-type {
-                text-align: center;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+            .btn-group {
+                margin-bottom: 10px;
+                overflow: hidden;
 
-                .css-label-radio {
-                    margin-bottom: 0;
+                a {
+                    background-color: #ececec;
+                    color: #999;
+                    display: inline-block;
+                    float: left;
+                    font-size: 15px;
+                    padding: 9px 0 11px;
+                    text-align: center;
+                    width: 85px;
 
-                    &:first-of-type {
-                        margin-right: 20px;
+                    &.active {
+                        background-color: @main-color;
+                        color: #fff;
+                        cursor: default;
                     }
                 }
             }
-            .wrap-create-ads-content {
-                border-bottom: 1px solid #d1d1d1;
-                margin-bottom: 20px;
-                margin-top: 20px;
-                padding-bottom: 20px;
+            .rules-type {
+                display: inline-block;
+                margin: 25px auto 40px;
                 text-align: center;
+                width: 100%;
 
-                .create-ads-content {
-                    border: 1px solid #aaa;
+                .type-item {
+                    border: 3px solid #bbb;
+                    color: #bbb;
+                    cursor: pointer;
                     display: inline-block;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    margin: 0 15px;
+                    padding: 10px;
+                    width: 400px;
                     text-align: left;
-                    width: 890px;
+                    transition: all 0.2s ease;
 
-                    input[type="text"] {
-                        border: 1px solid #aaa;
-                        color: #999;
-                        height: 30px;
-                        padding: 0 10px;
-                        width: 100%;
-                        transition: all 0.3s ease;
-
-                        &:focus {
-                            color: #333;
-                            border: 1px solid @main-color;
-                        }
-                    }
-                    .fancy-select {
-                        .options {
-                            li {
-                                font-size: 13px;
-                                padding: 5px 10px;
-
-                                &.selected, &.hover {
-                                    background-color: #f2f2f2;
-                                    color: #333;
-                                }
-                            }
-                        }
-                    }
-                    .left-content {
-                        border-right: 1px solid #aaa;
-                        float: left;
-                        padding: 20px;
-                        width: 350px;
-
-                        .form-group {
-                            margin-bottom: 25px;
-
-                            &.has-count {
-                                .count-desc {
-                                    color: #666;
-                                    float: right;
-                                }
-                            }
-                        }
-                    }
-                    .right-content {
-                        background-color: #eee;
-                        float: left;
-                        padding: 20px;
-                        width: 538px;
-                        position: relative;
-
-                        .fancy-select {
-                            z-index: 1;
-                        }
-                        .wrap-upload {
-                            label {
-                                bottom: 0;
-                                color: #666;
-                                cursor: pointer;
-                                font-weight: normal;
-                                left: 0;
-                                padding-top: 250px;
-                                position: absolute;
-                                right: 0;
-                                text-align: center;
-                                top: 0;
-
-                                strong {
-                                    display: block;
-                                    margin: 10px 0 30px;
-                                }
-                                ul {
-                                    li {
-                                        list-style: none;
-                                        margin-bottom: 5px;
-
-                                        &:before {
-                                            content: "- ";
-                                        }
-                                    }
-                                }
-                            }
-                            input[type="file"] {
-                                opacity: 0;
-                                visibility: hidden;
-                            }
-                        }
-                        .wrap-preview {
-                            margin-top: 10px;
-
-                            .ads-preview {
-                                margin-bottom: 20px;
-                            }
-                            .ads-banners {
-                                position: relative;
-
-                                .wrap-add-banner {
-                                    left: 46px;
-                                    position: absolute;
-                                    top: 0;
-                                    z-index: 10;
-                                    height: 54px;
-
-                                    label {
-                                        border: 1px dashed #888;
-                                        bottom: 0;
-                                        color: #888;
-                                        cursor: pointer;
-                                        font-size: 18px;
-                                        left: 0;
-                                        position: absolute;
-                                        right: 0;
-                                        text-align: center;
-                                        top: 0;
-
-                                        &:before {
-                                            content: "\f067";
-                                            font-family: FontAwesome;
-                                            font-size: 22px;
-                                            position: absolute;
-                                            transform: translate(-44%, 30%);
-                                        }
-                                    }
-                                    input[type="file"] {
-                                        opacity: 0;
-                                        visibility: hidden;
-                                    }
-                                }
-                                .carousel {
-                                    padding: 0 50px 0 150px;
-
-                                    .wrap-media {
-                                        height: 50px;
-                                    }
-                                }
-                            }
-                            .ads-toolbar {
-                                text-align: center;
-
-                                span {
-                                    cursor: pointer;
-                                    display: inline-block;
-                                    margin-right: 20px;
-
-                                    i {
-                                        font-size: 18px;
-                                        margin-right: 5px;
-                                        transform: translateY(1px);
-
-                                        &.glyphicon-pause {
-                                            margin-right: 0;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                .list-created-ads {
-                    display: inline-block;
-                    margin-left: 25px;
-                    vertical-align: top;
-                    width: 260px;
-
-                    .created-ads-inner {
-                        border: 1px solid #aaa;
-                        padding: 20px 20px 0;
-                    }
-                    .recreate-ads-btn {
-                        .rectangle-out(#e6e6e6, @main-color, #fff, 0);
-                        background-color: #e6e6e6;
-                        border: none;
+                    &.active {
+                        border-color: #39a9c1;
+                        box-shadow: 6px 6px 0 1px rgba(0, 0, 0, 0.15);
                         color: #666;
-                        margin-bottom: 20px;
-                        padding: 13px 0;
-                        width: 100%;
-                    }
-                    ul {
-                        display: inline-block;
-                        margin-bottom: 0;
-                        margin-right: -18px;
-                        width: ~"calc(100% + 18px)";
+                        cursor: default;
 
-                        .created-ads {
-                            border: 1px solid #aaa;
-                            float: left;
-                            list-style: outside none none;
-                            margin: 0 10px 20px 0;
-                            width: ~"calc(50% - 5px)";
-                            height: 103px;
-                            overflow: hidden;
-
-                            &:nth-child(2n) {
-                                margin-right: 0;
-                            }
-                            &.active {
-                                .toolbar {
-                                    span {
-                                        background-color: @main-color;
-                                        color: #fff;
-                                        transition: all 0.3s ease;
-
-                                        &:hover {
-                                            background-color: #1B2E8D;
-                                        }
-                                    }
-                                }
-                            }
-                            &.disable {
-                                .wrap-media {
-                                    filter: grayscale(100%);
-                                    -webkit-filter: grayscale(100%);
-                                }
-                            }
-                            .wrap-media {
-                                height: 50px;
-
-                                &:hover {
-                                    .action-label {
-                                        top: 0;
-                                        bottom: 0;
-                                    }
-                                }
-                                .count-ads {
-                                    background-color: @main-color;
-                                    color: #fff;
-                                    font-size: 12px;
-                                    left: 0;
-                                    padding: 0 5px;
-                                    position: absolute;
-                                    top: 0;
-                                    z-index: 10;
-
-                                    span {
-                                        font-weight: bold;
-                                    }
-                                }
-                                .action-label {
-                                    background-color: rgba(0, 0, 0, 0.8);
-                                    bottom: 100%;
-                                    color: #fff;
-                                    left: 0;
-                                    padding-top: 5px;
-                                    position: absolute;
-                                    right: 0;
-                                    text-align: center;
-                                    top: -100%;
-                                    transition: all 0.3s ease 0s;
-                                    z-index: 10;
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 18px;
-                                    }
-                                    span {
-                                        display: block;
-                                    }
-                                }
-                            }
-                            a {
-                                display: inline-block;
-                                font-size: 12px;
-                                margin: 6px 0;
-                            }
-                            .toolbar {
-                                border-top: 1px solid #aaa;
-                                overflow: hidden;
-
-                                span {
-                                    border-right: 1px solid #aaa;
-                                    float: left;
-                                    height: 22px;
-                                    padding-top: 3px;
-                                    text-align: center;
-                                    width: ~"calc(100% / 3)";
-                                    color: #999;
-                                    cursor: pointer;
-
-                                    &:last-child {
-                                        border-right: none;
-                                    }
-                                }
-                            }
+                        i {
+                            background-position: 0 0 !important;
+                        }
+                        h4 {
+                            color: #333;
                         }
                     }
-                }
-                .ads-report {
-                    border: 1px solid #aaa;
-                    display: inline-block;
-                    margin-right: 289px;
-                    margin-top: 5px;
-                    width: 890px;
-                    position: relative;
-
-                    .wrap-date-view {
-                        position: absolute;
-                        right: 12px;
-                        top: 4px;
-
-                        .comiseo-daterangepicker-triggerbutton {
-                            background-color: #fff;
-                            border: 1px solid #aaa;
-                            color: #59595b;
-                            padding: 3px 8px 3px 30px;
-                            position: relative;
-
-                            &:before {
-                                background: rgba(0, 0, 0, 0) url("../images/glyphicons-46-calendar.png") no-repeat;
-                                content: "";
-                                height: 15px;
-                                left: 8px;
-                                position: absolute;
-                                top: 4px;
-                                width: 15px;
-                            }
+                    &.rules-auto {
+                        i {
+                            background: url("../images/sight-persons-icon.png") no-repeat 0 -60px;
+                            width: 60px;
+                            height: 60px;
                         }
                     }
-                    .report-tabs {
-                        text-align: left;
-
-                        .r-tabs-nav {
-                            background-color: #eee;
-                            height: 35px;
-                            padding: 0 10px;
-
-                            .r-tabs-tab {
-                                &.r-tabs-state-active {
-                                    .r-tabs-anchor {
-                                        background-color: @main-color;
-                                        color: #fff;
-                                    }
-                                }
-                                .r-tabs-anchor {
-                                    color: #666;
-                                    display: inline-block;
-                                    padding: 8px 15px;
-
-                                    &:hover {
-                                        background-color: @main-color;
-                                        color: #fff;
-                                    }
-                                }
-                            }
+                    &.rules-manual {
+                        i {
+                            background: url("../images/paper-person-icon.png") no-repeat 0 -64px;
+                            width: 60px;
+                            height: 60px;
                         }
                     }
-                    .wrap-chart-toolbar {
-                        margin-bottom: 5px;
-                        overflow: hidden;
-
-                        .wrap-checkbox {
-                            float: left;
-
-                            label {
-                                margin: 0 15px 0 0;
-                            }
-                        }
-                        .series-label {
-                            float: right;
-
-                            p {
-                                float: right;
-                                font-size: 12px;
-                                margin: 0 0 0 30px;
-                                position: relative;
-
-                                &:before {
-                                    content: "";
-                                    height: 12px;
-                                    left: -15px;
-                                    position: absolute;
-                                    top: 1px;
-                                    width: 12px;
-                                }
-                            }
-                            .series-0 {
-                                &:before {
-                                    background-color: @main-color;
-                                }
-                            }
-                            .series-1 {
-                                &:before {
-                                    background-color: #999;
-                                }
-                            }
-                        }
+                    i {
+                        float: left;
+                        margin: 18px 10px 0 0;
                     }
-                    .chart {
-                        height: 150px;
+                    h4 {
+                        font-size: 15px;
+                        font-weight: bold;
+                        margin: 15px 0 6px;
+                        text-transform: uppercase;
                     }
                 }
             }
-        }
+            .budget-section {
+                .wrap-daterange {
+                    background-color: #efefef;
+                    border: 1px solid #bbb;
+                    padding: 10px 23px 16px;
+                    margin-bottom: 15px;
 
-        /* ---------------------------------------
-        CREATE COMPLETE
-        ----------------------------------------- */
-        .wrap-create-complete {
-            padding: 50px 0;
-            text-align: center;
-
-            h3 {
-                font-size: 16px;
-                font-weight: bold;
-                margin: 0 0 10px;
-                text-transform: uppercase;
-            }
-            h4 {
-                font-size: 16px;
-                font-weight: normal;
-                margin: 0;
+                    label {
+                        font-weight: normal;
+                        font-size: 15px;
+                        display: block;
+                    }
+                }
             }
         }
 

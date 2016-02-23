@@ -1206,76 +1206,6 @@
 
 
         /* =================================
-        ===  Auto Optimize                 ====
-        =================================== */
-        $('.optimize-tabs').responsiveTabs();
-        $(".wrap-of-manual").mCustomScrollbar({
-            horizontalScroll: false,
-            autoDraggerLength: true,
-            autoHideScrollbar: true,
-            advanced: {
-                autoScrollOnFocus: false,
-                updateOnContentResize: true,
-                updateOnBrowserResize: true
-            }
-        });
-        $(this).on('click', '.wrap-config-type input[type="radio"]', function(event) {
-            if (this.checked) {
-                if ($(this).attr('id') == 'auto') {
-                    $('.of-manual').addClass('hidden');
-                } else {
-                    $('.of-manual').removeClass('hidden');
-                }
-            }
-        });
-        $(this).on('click', '.wrap-kpi-type input[type="radio"]', function(event) {
-            var end_date = $('.wrap-daterange .end-date').val();
-            if (this.checked) {
-                if ($(this).attr('id') == 'lifetime') {
-                    $('.wrap-daterange .end-date').prop('disabled', true);
-                    $('.wrap-daterange .end-date').parent().addClass('disable');
-                    $(".wrap-daterange .start-date").datepicker('destroy');
-                    $(".wrap-daterange .start-date").datepicker({
-                        defaultDate: "today",
-                        changeMonth: true
-                    });
-                    $('.kpi-type-text').text('Trọn đời');
-                } else {
-                    $('.wrap-daterange .end-date').prop('disabled', false);
-                    $('.wrap-daterange .end-date').parent().removeClass('disable');
-                    $(".wrap-daterange .start-date").datepicker('destroy');
-                    $(".wrap-daterange .start-date").datepicker({
-                        maxDate: end_date,
-                        defaultDate: "today",
-                        changeMonth: true,
-                        onClose: function(selectedDate) {
-                            $(".wrap-daterange .end-date").datepicker("option", "minDate", selectedDate);
-                        }
-                    });
-                    $('.kpi-type-text').text('Ngày');
-                }
-            }
-        });
-
-        
-         $(this).on('click', '.wrap-of-manual .add-manual', function(event) {
-            var classes = $(this).closest('.of-manual').attr('class');
-            var str = $(this).closest('.of-manual').html();
-            str = removeElements(str, '.fancy-select');
-            str = addElements(str, '.wrap-select', '<select class="custom-select"><option value="1"> < </option><option value="2"> > </option><option value="3"> = </option></select>', true);
-            str = removeElements(str, '.add-manual');
-            str = addElements(str, '.input-group-left', '<a href="#" class="remove-manual manual-btn"><i class="glyphicon glyphicon-minus"></i></a>');
-            $(this).closest('.of-manual').after('<div class="' + classes + '">' + str + '</div>');
-            $('.custom-select').fancySelect();
-            return false;
-        });
-        $(this).on('click', '.wrap-of-manual .remove-manual', function(event) {
-            $(this).closest('.of-manual').remove();
-            return false;
-        });
-
-
-        /* =================================
         ===  Account Linking                 ====
         =================================== */
         $(this).on('click', '.linking-now a', function() {
@@ -1372,6 +1302,55 @@
             } else {
                 $(this).addClass('opened');
                 $('.network-section .list-multi-level').removeClass('hidden');
+            }
+            return false;
+        });
+
+
+        /* =================================
+        ===  Create Rules                 ====
+        =================================== */
+        $(this).on('click', '.rules-type .type-item', function() {
+            if(!$(this).hasClass('active')) {
+                $('.rules-type .type-item').removeClass('active');
+                $(this).addClass('active');
+            } 
+        });
+        $(this).on('click', '.budget-section .btn-group a', function() {
+            var end_date = $('.budget-section .wrap-daterange .end-date').val();
+            if(!$(this).hasClass('active')) {
+                $('.budget-section .btn-group a').removeClass('active');
+                $(this).addClass('active');
+                if ($(this).attr('id') == 'spread') {
+                    $('.budget-section .wrap-daterange .end-date').prop('disabled', true).val('');
+                    $('.budget-section .wrap-daterange .start-date').datepicker('destroy');
+                    $('.budget-section .wrap-daterange .start-date').datepicker({
+                        defaultDate: 'today',
+                        changeMonth: true
+                    });
+                } else {
+                    $('.budget-section .wrap-daterange .end-date').prop('disabled', false);
+                    $('.budget-section .wrap-daterange .start-date').datepicker('destroy');
+                    $('.budget-section .wrap-daterange .start-date').datepicker({
+                        maxDate: end_date,
+                        defaultDate: 'today',
+                        changeMonth: true,
+                        onClose: function(selectedDate) {
+                            $('.budget-section .wrap-daterange .end-date').datepicker("option", "minDate", selectedDate);
+                        }
+                    });
+                }
+            } 
+            return false;
+        });
+        $(this).on('click', '.budget-section .scheduled-link', function() {
+            if($(this).hasClass('opened')) {
+                $(this).removeClass('opened');
+                $('.schedule-section').addClass('hidden');
+            } else {
+                $(this).addClass('opened');
+                $('.schedule-section').removeClass('hidden');
+                $('html, body').animate({scrollTop: $('.schedule-section').offset().top}, 1000);
             }
             return false;
         });
