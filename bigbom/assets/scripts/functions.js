@@ -503,10 +503,15 @@
                 $(this).find('i').removeClass().addClass('glyphicon glyphicon-play');
             }
         });
+
+        /* =================================
+         ===  Close Message                 ====
+         =================================== */
         $(this).on('click', '.message i', function() {
             $(this).parent().adtop_animation('fadeOutUp', function() {
                 $(this).hide();
             });
+            $('.main').removeClass('has-message');
         });
 
 
@@ -1263,8 +1268,8 @@
         $(this).on('click', '.os-section .btn-group a', function() {
             var type = $(this).data('type');
             var this_parent = $(this).parent();
-            var all_android_devices = '<div class="form-group"><input type="checkbox" id="all-android-mobile" class="css-checkbox" /><label for="all-android-mobile" class="css-label">Tất cả điện thoại Android</label></div><div class="form-group"><input type="checkbox" id="all-android-tablet" class="css-checkbox" /><label for="all-android-tablet" class="css-label">Tất cả máy tính bảng Android</label></div>';
-            var all_ios_devices = '<div class="form-group"><input type="checkbox" id="all-iphone" class="css-checkbox" /><label for="all-iphone" class="css-label">Tất cả điện thoại iPhone</label></div><div class="form-group"><input type="checkbox" id="all-ipad" class="css-checkbox" /><label for="all-ipad" class="css-label">Tất cả Máy tính bảng iPad</label></div><div class="form-group"><input type="checkbox" id="all-ipod" class="css-checkbox" /><label for="all-ipod" class="css-label">Tất cả iPod</label></div>';
+            var all_android_devices = '<div class="form-group"><input type="checkbox" id="all-android-mobile" checked class="css-checkbox" /><label for="all-android-mobile" class="css-label">Tất cả điện thoại Android</label></div><div class="form-group"><input type="checkbox" id="all-android-tablet" checked class="css-checkbox" /><label for="all-android-tablet" class="css-label">Tất cả máy tính bảng Android</label></div>';
+            var all_ios_devices = '<div class="form-group"><input type="checkbox" id="all-iphone" checked class="css-checkbox" /><label for="all-iphone" class="css-label">Tất cả điện thoại iPhone</label></div><div class="form-group"><input type="checkbox" id="all-ipad" checked class="css-checkbox" /><label for="all-ipad" class="css-label">Tất cả Máy tính bảng iPad</label></div><div class="form-group"><input type="checkbox" id="all-ipod" checked class="css-checkbox" /><label for="all-ipod" class="css-label">Tất cả iPod</label></div>';
             var list_android_version = '<select class="custom-select"><option value="">Tất cả phiên bản</option><option value="2.0">2.0</option><option value="2.1">2.1</option><option value="2.2">2.2</option><option value="2.3">2.3</option><option value="3.0">3.0</option><option value="3.1">3.1</option><option value="3.2">3.2</option><option value="4.0">4.0</option><option value="4.1">4.1</option><option value="4.2">4.2</option><option value="4.3">4.3</option><option value="4.4">4.4</option><option value="5.0">5.0</option><option value="5.1">5.1</option><option value="6.0">6.0</option></select>';
             var list_ios_version = '<select class="custom-select"><option value="">Tất cả phiên bản</option><option value="2.0">2.0</option><option value="3.0">3.0</option><option value="4.0">4.0</option><option value="4.3">4.3</option><option value="5.0">5.0</option><option value="6.0">6.0</option><option value="7.0">7.0</option><option value="7.1">7.1</option><option value="8.0">8.0</option><option value="8.1">8.1</option><option value="8.2">8.2</option><option value="8.3">8.3</option><option value="8.4">8.4</option><option value="9.0">9.0</option><option value="9.1">9.1</option></select>';
             if(!$(this).hasClass('active')) {
@@ -1565,22 +1570,32 @@ function fixed_scrollbar(more) {
 }
 
 function addSuccessMessage(msg) {
-    $('.main-content').append('<div class="message success-message"><span>' + msg + '</span><i class="fa fa-times"></i></div>');
-    $('.main-content').find('.success-message').adtop_animation('fadeInDown');
+    $('.main').addClass('has-message');
+    $('.main').append('<div class="message success-message"><span>' + msg + '</span><i class="fa fa-times"></i></div>');
+    $('.main').find('.success-message').adtop_animation('fadeInDown');
+    $(".main .message").sticky({
+        topSpacing: 0
+    });
     setTimeout(function() {
-        $('.main-content').find('.success-message').adtop_animation('fadeOutUp', function() {
+        $('.main').find('.success-message').adtop_animation('fadeOutUp', function() {
             $(this).hide();
         });
+        $('.main').removeClass('has-message');
     }, 3000);
 }
 
 function addErrorMessage(msg) {
-    $('.main-content').append('<div class="message error-message"><span>' + msg + '</span><i class="fa fa-times"></i></div>');
-    $('.main-content').find('.error-message').adtop_animation('fadeInDown');
+    $('.main').addClass('has-message');
+    $('.main').append('<div class="message error-message"><span>' + msg + '</span><i class="fa fa-times"></i></div>');
+    $('.main').find('.error-message').adtop_animation('fadeInDown');
+    $(".main .message").sticky({
+        topSpacing: 0
+    });
     setTimeout(function() {
-        $('.main-content').find('.error-message').adtop_animation('fadeOutUp', function() {
+        $('.main').find('.error-message').adtop_animation('fadeOutUp', function() {
             $(this).hide();
         });
+        $('.main').removeClass('has-message');
     }, 3000);
 }
 

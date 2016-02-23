@@ -1015,15 +1015,16 @@ WRAPPER
     CUSTOM BUTTON
     ----------------------------------------- */
     .green-btn {
-        background-color: @active-color;
+        background-color: @active-color !important;
         border-radius: 3px;
         box-shadow: 0 3px 0 0 @dark-active-color;
-        color: #fff;
+        color: #fff !important;
         font-size: 16px;
         position: relative;
         text-transform: uppercase;
         top: 0;
         transition: all 0.2s ease;
+        cursor: pointer !important;
 
         &:focus {
             box-shadow: none;
@@ -1031,15 +1032,33 @@ WRAPPER
         }
     }
     .blue-btn {
-        background-color: @main-color;
+        background-color: @main-color !important;
         border-radius: 3px;
         box-shadow: 0 3px 0 0 @dark-main-color;
-        color: #fff;
+        color: #fff !important;
         font-size: 16px;
         position: relative;
         text-transform: uppercase;
         top: 0;
         transition: all 0.2s ease;
+        cursor: pointer !important;
+
+        &:focus {
+            box-shadow: none;
+            top: 3px;
+        }
+    }
+    .blue2-btn {
+        background-color: #3b5998 !important;
+        border-radius: 3px;
+        box-shadow: 0 3px 0 0 #152f66;
+        color: #fff !important;
+        font-size: 16px;
+        position: relative;
+        text-transform: uppercase;
+        top: 0;
+        transition: all 0.2s ease;
+        cursor: pointer !important;
 
         &:focus {
             box-shadow: none;
@@ -1047,15 +1066,33 @@ WRAPPER
         }
     }
     .red-btn {
-        background-color: #d42525;
+        background-color: #d42525 !important;
         border-radius: 3px;
         box-shadow: 0 3px 0 0 #840202;
-        color: #fff;
+        color: #fff !important;
         font-size: 16px;
         position: relative;
         text-transform: uppercase;
         top: 0;
         transition: all 0.2s ease;
+        cursor: pointer !important;
+
+        &:focus {
+            box-shadow: none;
+            top: 3px;
+        }
+    }
+    .gray-btn {
+        background-color: #bbb !important;
+        border-radius: 3px;
+        box-shadow: 0 3px 0 0 #929292;
+        color: #fff !important;
+        font-size: 16px;
+        position: relative;
+        text-transform: uppercase;
+        top: 0;
+        transition: all 0.2s ease;
+        cursor: pointer !important;
 
         &:focus {
             box-shadow: none;
@@ -1195,6 +1232,66 @@ MAIN
 .main {
     padding: 40px 50px 30px;
     position: relative;
+
+    &.has-message {
+        padding-top: 4px;
+    }
+
+    /* ---------------------------------------
+    CUSTOM MESSAGE
+    ----------------------------------------- */
+    .message {
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 0 8px 85px;
+        width: 100% !important;
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        i {
+            cursor: pointer;
+            font-size: 15px;
+            position: absolute;
+            right: 50px;
+            top: 11px;
+        }
+        &.error-message {
+            background-color: @error-color;
+
+            span {
+                &:before {
+                    background: url("../images/error-icon.png") no-repeat;
+                    height: 22px;
+                    left: -35px;
+                    top: -2px;
+                    width: 25px;
+                }
+            }
+        }
+        &.success-message {
+            background-color: @active-color;
+
+            span {
+                &:before {
+                    background: url("../images/success-icon.png") no-repeat;
+                    height: 24px;
+                    left: -35px;
+                    top: -3px;
+                    width: 24px;
+                }
+            }
+        }
+        span {
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+            }
+        }
+    }
 
     /* ---------------------------------------
     BLACK OVERLAY
@@ -1553,65 +1650,6 @@ MAIN
         }
 
         /* ---------------------------------------
-        CUSTOM MESSAGE
-        ----------------------------------------- */
-        .message {
-            color: #f4f4f4;
-            font-size: 16px;
-            font-weight: bold;
-            left: 0;
-            padding: 8px 0;
-            position: fixed;
-            text-align: center;
-            text-transform: uppercase;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-
-            i {
-                cursor: pointer;
-                font-size: 18px;
-                position: absolute;
-                right: 14px;
-                top: 8px;
-            }
-            &.error-message {
-                background-color: #d00000;
-
-                span {
-                    &:before {
-                        background: url("../images/error-icon.png") no-repeat;
-                        height: 22px;
-                        left: -34px;
-                        top: -2px;
-                        width: 25px;
-                    }
-                }
-            }
-            &.success-message {
-                background-color: #6daa27;
-
-                span {
-                    &:before {
-                        background: url("../images/success-icon.png") no-repeat;
-                        height: 24px;
-                        left: -35px;
-                        top: -3px;
-                        width: 24px;
-                    }
-                }
-            }
-            span {
-                position: relative;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                }
-            }
-        }
-
-        /* ---------------------------------------
         AUTOCOMPLETE SEARCH
         ----------------------------------------- */
         .twitter-typeahead {
@@ -1652,7 +1690,7 @@ MAIN
             border-bottom: 1px solid #999;
             font-size: 20px;
             font-weight: normal;
-            margin: 0 0 15px;
+            margin: 0 0 20px;
             padding-bottom: 5px;
             text-transform: uppercase;
         }
@@ -2153,7 +2191,7 @@ MAIN
             }
             .rules-type {
                 display: inline-block;
-                margin: 25px auto 40px;
+                margin: 15px auto 40px;
                 text-align: center;
                 width: 100%;
 
@@ -2171,7 +2209,7 @@ MAIN
                     transition: all 0.2s ease;
 
                     &.active {
-                        border-color: #39a9c1;
+                        border-color: @main-color;
                         box-shadow: 6px 6px 0 1px rgba(0, 0, 0, 0.15);
                         color: #666;
                         cursor: default;
@@ -2222,6 +2260,69 @@ MAIN
                         display: block;
                     }
                 }
+            }
+        }
+
+        /* ---------------------------------------
+        CREATE CHANNELS
+        ----------------------------------------- */
+        .wrap-create-channels {
+            border: 3px solid #39a9c1;
+            margin: 40px auto 10px;
+            padding: 35px 40px 20px;
+            width: 800px;
+
+            .nav-tabs {
+                border-bottom: none;
+                margin-bottom: 10px;
+
+                li {
+                    display: inline-block;
+                    float: initial;
+                    margin-bottom: 0;
+
+                    &.active {
+                        a {
+                            cursor: default !important;
+                            box-shadow: none;
+                            top: 3px;
+
+                            &:after {
+                                opacity: 1;
+                                visibility: visible;
+                                top: -15px;
+                            }
+                        }
+                    }
+                    a {
+                        border: medium none;
+                        font-size: 16px;
+                        margin-right: 10px;
+                        padding: 10px 10px 11px;
+
+                        &:after {
+                            background: url("../images/check-icon.png") no-repeat;
+                            content: "";
+                            height: 25px;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            width: 25px;
+                            transition: all 0.2s ease;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                        img {
+                            float: left;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+            .gray-btn {
+                color: #888 !important;
+                display: inline-block;
+                padding: 12px 15px;
             }
         }
 
