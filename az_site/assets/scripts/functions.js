@@ -100,7 +100,7 @@
             css3: false,
             scrollingSpeed: 1000,
             fitToSection: false,
-            responsiveWidth: 1140
+            responsiveWidth: 858
         });
 
 

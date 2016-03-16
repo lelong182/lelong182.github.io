@@ -50,7 +50,7 @@ MINIMAL CSS3 MENU
 
 /* RESPONSIVE
 ================================================== */
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:858px) {
     .minimal-menu-button {
         display: none;
     }
@@ -188,7 +188,7 @@ MINIMAL CSS3 MENU
         display: none;
     }
 }
-@media only screen and (max-width:767px) {
+@media only screen and (max-width:857px) {
 
     /* Blue
     ---------------- */

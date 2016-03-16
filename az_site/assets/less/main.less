@@ -196,25 +196,41 @@ CUSTOM CAPTION
 ----------------------------------------- */
 .big-caption {
     font-family: "SFUFuturaBold", sans-serif;
-    font-size: 64px;
-    margin: 0 0 90px;
     position: relative;
+    margin: 0 0 60px;
+    font-size: 58px;
 
+    @media (min-width:@screen-lg) {
+        font-size: 64px;
+        margin-bottom: 90px;
+    }
     &:before {
         background-color: #000;
-        bottom: -40px;
         content: "";
-        height: 17px;
         left: 0;
         position: absolute;
         width: 10%;
+        bottom: -25px;
+        height: 14px;
+
+        @media (min-width:@screen-lg) {
+            bottom: -40px;
+            height: 17px;
+        }
     }
     &.format-2 {
-        font-size: 32px;
+        font-size: 28px;
 
+        @media (min-width:@screen-lg) {
+            font-size: 32px;
+        }
         &:before {
             width: 15%;
-            height: 12px;
+            height: 10px;
+
+            @media (min-width:@screen-lg) {
+                height: 12px;
+            }
         }
     }
 }
@@ -239,7 +255,11 @@ ABOUT US
     background: #e4e7f2 url("../images/about-us-bg.png") no-repeat center;
 
     .container {
-        padding-top: 10%;
+        padding-top: 120px;
+
+        @media (min-width:@screen-lg) {
+            padding-top: 10%;
+        }
     }
 }
 
@@ -259,7 +279,11 @@ FEATURED PROJECTS
         height: 800px !important;
     }
     .container-fluid {
-        padding-top: 10%;
+        padding-top: 120px;
+
+        @media (min-width:@screen-lg) {
+            padding-top: 10%;
+        }
     }
     .big-caption {
         color: #FFF;
@@ -270,13 +294,21 @@ FEATURED PROJECTS
     }
     .project-item {
         .img-container {
-            height: 600px;
+            height: 400px;
+            margin-bottom: 10px;
             position: relative;
+
+            @media (min-width:@screen-lg) {
+                height: 600px;
+            }
         }
         h3 {
             font-size: 16px;
-            margin: 0 20px 15px;
+            margin: 0 0 15px;
 
+            @media (min-width:@screen-lg) {
+                margin: 0 20px 15px;
+            }
             span {
                 display: block;
                 margin-top: 7px;
@@ -285,7 +317,11 @@ FEATURED PROJECTS
         .more-link {
             border-bottom: 1px solid #ff7e00;
             color: #ff7e00;
-            margin-left: 20px;
+            margin-left: 0;
+
+            @media (min-width:@screen-lg) {
+                margin-left: 20px;
+            }
         }
     }
 }
@@ -297,7 +333,21 @@ CONTACT US
     background-color: #e4e7f2;
 
     .container-fluid {
-        padding-top: 10%;
+        padding-top: 120px;
+
+        @media (min-width:@screen-lg) {
+            padding-top: 10%;
+        }
+    }
+    .pdl-50 {
+        @media (max-width:@screen-md-max) {
+            padding-left: 15px;
+        }
+    }
+    .pdr-50 {
+        @media (max-width:@screen-md-max) {
+            padding-right: 15px;
+        }
     }
     .contact-info {
         margin-bottom: 55px;
@@ -387,7 +437,11 @@ BOTTOM INFO
         height: 800px !important;
     }
     .container {
-        padding-top: 10%;
+        padding-top: 120px;
+
+        @media (min-width:@screen-lg) {
+            padding-top: 10%;
+        }
     }
     .info {
         h3 {
