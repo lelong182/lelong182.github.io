@@ -89,6 +89,9 @@ HEADER
         .main-nav {
             top: 28px;
         }
+        .header-socials {
+            top: 26px;
+        }
     }
 }
 .header {
@@ -112,7 +115,7 @@ HEADER
     ----------------------------------------- */
     .main-nav {
         position: absolute;
-        right: 30px;
+        right: 200px;
         top: 45px;
 
         @media (min-width:@screen-sm-min) and (max-width:@screen-sm-max) {
@@ -152,6 +155,45 @@ HEADER
         .current-menu-item {
             > a {
                 border-bottom: 1px solid #fff;
+            }
+        }
+    }
+
+    /* ---------------------------------------
+    MAIN NAVIGAION
+    ----------------------------------------- */
+    .header-socials {
+        position: absolute;
+        right: 40px;
+        top: 43px;
+
+        &:before {
+            color: #fff;
+            content: "|";
+            font-size: 16px;
+            left: -40px;
+            position: absolute;
+            top: 6px;
+        }
+        li {
+            display: inline-block;
+            margin: 0 10px;
+
+            a {
+                display: inline-block;
+                text-indent: -9999px;
+                width: 32px;
+                height: 31px;
+
+                &:hover {
+                    background-position: 0 -31px !important;
+                }
+                &.flickr {
+                    background: url("../images/flickr-icon.png") no-repeat;
+                }
+                &.facebook {
+                    background: url("../images/facebook-icon.png") no-repeat;
+                }
             }
         }
     }
@@ -246,6 +288,19 @@ CUSTOM BORDER
 HERO
 ----------------------------------------- */
 .hero {
+    .ms-slide-layers {
+        max-width: initial !important;
+        left: 0 !important;
+
+        .big-text {
+            font-family: "SFUFuturaBold", sans-serif;
+            font-size: 65px !important;
+            left: 50px !important;
+            margin: 0;
+            top: 40% !important;
+            color: #fff;
+        }
+    }
 }
 
 /* ---------------------------------------
@@ -295,7 +350,6 @@ FEATURED PROJECTS
     .project-item {
         .img-container {
             height: 400px;
-            margin-bottom: 10px;
             position: relative;
 
             @media (min-width:@screen-lg) {
@@ -305,6 +359,7 @@ FEATURED PROJECTS
         h3 {
             font-size: 16px;
             margin: 0 0 15px;
+            line-height: 1.3;
 
             @media (min-width:@screen-lg) {
                 margin: 0 20px 15px;
@@ -354,8 +409,11 @@ CONTACT US
         position: relative;
 
         &:first-of-type {
-            margin-top: -38px;
+            margin-top: -23px;
 
+            @media (min-width:@screen-lg) {
+                margin-top: -38px;
+            }
             &:before {
                 content: none;
             }
@@ -363,11 +421,16 @@ CONTACT US
         &:before {
             background-color: #000;
             content: "";
-            height: 12px;
+            height: 10px;
             left: 0;
             position: absolute;
-            top: -25px;
+            top: -22px;
             width: 15%;
+
+            @media (min-width:@screen-lg) {
+                height: 12px;
+                top: -25px;
+            }
         }
         h4 {
             font-family: "SFUFuturaBold", sans-serif;
@@ -379,7 +442,11 @@ CONTACT US
         }
     }
     .message-info {
-        margin: -40px 0 20px;
+        margin: -28px 0 20px;
+
+        @media (min-width:@screen-lg) {
+            margin-top: -40px;
+        }
     }
     .message-form {
         display: inline-block;

@@ -73,7 +73,7 @@ MINIMAL CSS3 MENU
     }
     .minimal-menu > ul > li {
         border-top: 5px solid transparent;
-        padding: 0 20px;
+        padding: 0 25px;
         transition: all 0.3s ease 0s;
     }
     .minimal-menu > .menu > .submenu:hover > a {
@@ -118,12 +118,12 @@ MINIMAL CSS3 MENU
         display: block;
         height: auto;
         overflow: hidden;
-        padding: 10px 20px;
+        padding: 10px 25px;
         transition: all 0.3s ease 0s;
     }
     .minimal-menu ul li:hover ul li {
         overflow: visible;
-        padding: 6px 20px;
+        padding: 7px 25px;
     }
     .minimal-menu ul ul li.submenu > a:before, .minimal-menu ul ul li.submenu > a:after {
         left: auto;
