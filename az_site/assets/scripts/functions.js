@@ -72,9 +72,12 @@
             width:1024,
             height:768,
             space:5,
+            overPause:false,
             view:'basic',
             layout:'fullscreen',
-            speed:20,
+            loop:true,
+            speed:15,
+            view:"fade",
             controls : {
                 bullets : {
                     autohide: false
@@ -109,6 +112,7 @@
         ===  ScrollMagic with GSAP                 ====
         =================================== */
         var wh = window.innerHeight,
+            $header = $('header.header'),
             $aboutus_title = $('.about-us .big-caption'),
             $aboutus_p = $('.about-us p'),
             $featuredprojects_title = $('.featured-projects .big-caption'),
@@ -126,11 +130,19 @@
 
         var ctrl = new ScrollMagic.Controller();
 
-        var aboutusTL = new TimelineMax(),
+        var headerTL = new TimelineMax(),
+            aboutusTL = new TimelineMax(),
             featuredprojectsTL = new TimelineMax(),
             contactusTL = new TimelineMax(),
             bottominfoTL = new TimelineMax();
-      
+        
+        headerTL
+            .fromTo($header, 0.7, {
+                top: -200
+            }, {
+                top: 0,
+                ease: Power2.easeOut
+            }, 0.8);
         aboutusTL
             .fromTo($aboutus_title, 0.7, {
                 rotationX: -90,
@@ -243,10 +255,23 @@
                 bottom: 0,
                 ease: Power2.easeOut
             }, '-=0.3');
-
+        
+        new ScrollMagic.Scene({
+            triggerElement: $('.hero')[0]
+        })  
+            .setTween(headerTL)
+            .addTo(ctrl);
         new ScrollMagic.Scene({
             triggerElement: $('.about-us')[0]
-        })
+        })      
+            .on("enter", function() {
+                $('header.header').addClass('sticky');
+                $('header.header').adtop_animation('fadeInDownBig');
+            })
+            .on("leave", function() {
+                $('header.header').removeClass('sticky');
+                $('header.header').adtop_animation('fadeInDownBig');
+            })
             .setTween(aboutusTL)
             .addTo(ctrl);
         new ScrollMagic.Scene({
@@ -264,6 +289,7 @@
         })
             .setTween(bottominfoTL)
             .addTo(ctrl);
+
 
 
 

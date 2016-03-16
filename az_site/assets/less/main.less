@@ -75,9 +75,16 @@ PAGINATION
 /* ---------------------------------------
 HEADER
 ----------------------------------------- */
-.pg-loaded:not(.fp-viewing-0) {
-    .header {
+.header {
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.3s ease;
+
+    &.sticky {
         background-color: #000;
+        transition: all 0.3s ease;
 
         .logo {
             top: 10px;
@@ -93,12 +100,6 @@ HEADER
             top: 26px;
         }
     }
-}
-.header {
-    height: 80px;
-    position: absolute;
-    width: 100%;
-    z-index: 999;
 
     /* ---------------------------------------
     LOGO
