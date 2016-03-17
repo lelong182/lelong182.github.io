@@ -21,11 +21,6 @@ PARALLAX
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
-
-    @media (max-width:@screen-xs-max) {
-        background-size: auto;
-        background-attachment: scroll;
-    }
 }
 
 /* ---------------------------------------
@@ -86,6 +81,9 @@ HEADER
         background-color: #000;
         transition: all 0.3s ease;
 
+        @media (max-width:@screen-xs-max) {
+            position: fixed;
+        }
         .logo {
             top: 10px;
 
@@ -231,7 +229,7 @@ HEADER
 FULLPAGE JS
 ----------------------------------------- */
 #fullpage {
-    @media (max-width:@screen-sm-max) {
+    @media (max-width:@screen-xs-max) {
         overflow: hidden;
     }
 }
@@ -309,7 +307,9 @@ CUSTOM CAPTION
 CUSTOM BORDER
 ----------------------------------------- */
 .border-right {
-    border-right: 1px solid #000;
+    @media (min-width:@screen-sm-min) {
+        border-right: 1px solid #000;
+    }
 }
 
 /* ---------------------------------------
@@ -342,11 +342,17 @@ ABOUT US
 .about-us {
     background: #e4e7f2 url("../images/about-us-bg.png") no-repeat center;
 
+    @media (max-width:@screen-xs-max) {
+        height: auto !important;
+    }
     .container {
         padding-top: 120px;
 
         @media (min-width:@screen-lg) {
             padding-top: 10%;
+        }
+        @media (max-width:@screen-xs-max) {
+            padding-bottom: 120px;
         }
     }
 }
@@ -358,19 +364,17 @@ FEATURED PROJECTS
     background-image: url("../images/project-bg.jpg");
     color: #FFF;
 
-    @media (max-width:@screen-sm-max) {
-        background-position: center top;
-        background-size: auto auto;
-        height: 700px !important;
-    }
     @media (max-width:@screen-xs-max) {
-        height: 800px !important;
+        height: auto !important;
     }
     .container-fluid {
         padding-top: 120px;
 
         @media (min-width:@screen-lg) {
             padding-top: 10%;
+        }
+        @media (max-width:@screen-xs-max) {
+            padding-bottom: 120px;
         }
     }
     .big-caption {
@@ -381,6 +385,10 @@ FEATURED PROJECTS
         }
     }
     .project-item {
+        @media (max-width:@screen-xs-max) {
+            text-align: center;
+            margin-bottom: 30px;
+        }
         .img-container {
             height: 400px;
             position: relative;
@@ -396,6 +404,9 @@ FEATURED PROJECTS
 
             @media (min-width:@screen-lg) {
                 margin: 0 20px 15px;
+            }
+            @media (max-width:@screen-xs-max) {
+                margin-top: 15px;
             }
             span {
                 display: block;
@@ -420,11 +431,17 @@ CONTACT US
 .contact-us {
     background-color: #e4e7f2;
 
+    @media (max-width:@screen-xs-max) {
+        height: auto !important;
+    }
     .container-fluid {
         padding-top: 120px;
 
         @media (min-width:@screen-lg) {
             padding-top: 10%;
+        }
+        @media (max-width:@screen-xs-max) {
+            padding-bottom: 120px;
         }
     }
     .pdl-50 {
@@ -519,6 +536,11 @@ CONTACT US
             text-transform: uppercase;
         }
     }
+    .wrap-map {
+        @media (max-width:@screen-xs-max) {
+            margin-top: 40px;
+        }
+    }
 }
 
 /* ---------------------------------------
@@ -528,19 +550,17 @@ BOTTOM INFO
     background-image: url("../images/hero-bg.jpg");
     color: #FFF;
 
-    @media (max-width:@screen-sm-max) {
-        background-position: center top;
-        background-size: auto auto;
-        height: 700px !important;
-    }
     @media (max-width:@screen-xs-max) {
-        height: 800px !important;
+        height: auto !important;
     }
     .container {
         padding-top: 120px;
 
         @media (min-width:@screen-lg) {
             padding-top: 10%;
+        }
+        @media (max-width:@screen-xs-max) {
+            padding-bottom: 120px;
         }
     }
     .info {
@@ -588,21 +608,10 @@ FOOTER
     }
     .left-footer {
         float: left;
-
-        @media (max-width:@screen-xs-max) {
-            float: none;
-            text-align: center;
-            margin-bottom: 5px;
-        }
     }
     .right-footer {
         float: right;
         text-align: right;
-
-        @media (max-width:@screen-xs-max) {
-            float: none;
-            text-align: center;
-        }
     }
 }
 

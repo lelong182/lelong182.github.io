@@ -103,6 +103,7 @@
             verticalCentered: false,
             css3: false,
             scrollingSpeed: 1000,
+            fitToSection: false,
             responsiveWidth: 858
         });
 
@@ -288,8 +289,6 @@
         })
             .setTween(bottominfoTL)
             .addTo(ctrl);
-
-
 
 
     });

@@ -238,11 +238,22 @@ MINIMAL CSS3 MENU
     .minimal-menu {
         border-color: rgba(100%, 100%, 100%, 0.3);
     }
-    .minimal-menu-button, .minimal-menu {
+    .minimal-menu {
         position: fixed;
+        right: 15px;
+        z-index: 9999;
+    }
+    .minimal-menu-button {
+        position: absolute;
         right: 15px;
         top: 38px;
         z-index: 9999;
+    }
+    header.sticky .minimal-menu-button {
+        top: -4px;
+    }
+    header.sticky .minimal-menu {
+        top: 80px;
     }
     .minimal-menu ul li {
         padding-bottom: 15px;
