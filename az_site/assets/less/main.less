@@ -105,10 +105,15 @@ HEADER
     LOGO
     ----------------------------------------- */
     .logo {
-        left: 50px;
+        left: 15px;
         margin: 0;
         position: absolute;
-        top: 25px;
+        top: 10px;
+
+        @media (min-width:@screen-sm-min) {
+            left: 50px;
+            top: 25px;
+        }
     }
 
     /* ---------------------------------------
@@ -119,11 +124,6 @@ HEADER
         right: 200px;
         top: 45px;
 
-        @media (min-width:@screen-sm-min) and (max-width:@screen-sm-max) {
-            left: 0;
-            right: auto;
-            top: 95px;
-        }
         @media (max-width:@screen-xs-max) {
             position: relative;
             top: auto;
@@ -134,10 +134,16 @@ HEADER
             ul.sub-menu {
                 li {
                     a {
-                        border-bottom: 1px solid transparent;
-
+                        @media (min-width:@screen-sm-min) {
+                            border-bottom: 1px solid transparent;
+                        }
                         &:hover, &:focus {
-                            border-bottom: 1px solid #fff;
+                            background-color: rgba(255, 255, 255, 0.15);
+
+                            @media (min-width:@screen-sm-min) {
+                                border-bottom: 1px solid #fff;
+                                background-color: transparent;
+                            }
                         }
                     }
                 }
@@ -148,14 +154,28 @@ HEADER
             font-size: 16px;
             text-transform: uppercase;
             border-bottom: 1px solid transparent;
+            padding: 12px 12px 10px;
 
+            @media (min-width:@screen-sm-min) {
+                padding: 0;
+            }
             &:hover, &:focus {
-                border-bottom: 1px solid #fff;
+                background-color: rgba(255, 255, 255, 0.2);
+
+                @media (min-width:@screen-sm-min) {
+                    border-bottom: 1px solid #fff;
+                    background-color: transparent;
+                }
             }
         }
         .current-menu-item {
             > a {
-                border-bottom: 1px solid #fff;
+                background-color: rgba(255, 255, 255, 0.2);
+
+                @media (min-width:@screen-sm-min) {
+                    border-bottom: 1px solid #fff;
+                    background-color: transparent;
+                }
             }
         }
     }
@@ -165,16 +185,23 @@ HEADER
     ----------------------------------------- */
     .header-socials {
         position: absolute;
-        right: 40px;
+        right: 74px;
         top: 43px;
 
+        @media (min-width:@screen-sm-min) {
+            right: 40px;
+        }
         &:before {
             color: #fff;
-            content: "|";
+            content: none;
             font-size: 16px;
             left: -40px;
             position: absolute;
             top: 6px;
+
+            @media (min-width:@screen-sm-min) {
+                content: "|";
+            }
         }
         li {
             display: inline-block;
@@ -295,11 +322,16 @@ HERO
 
         .big-text {
             font-family: "SFUFuturaBold", sans-serif;
-            font-size: 65px !important;
-            left: 50px !important;
+            font-size: 48px !important;
+            left: 15px !important;
             margin: 0;
             top: 40% !important;
             color: #fff;
+
+            @media (min-width:@screen-sm-min) {
+                font-size: 65px !important;
+                left: 50px !important;
+            }
         }
     }
 }
