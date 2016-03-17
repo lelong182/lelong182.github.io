@@ -8,6 +8,11 @@
   margin-left: auto;
   padding-left: 50px;
   padding-right: 50px;
+
+  @media (max-width:@screen-xs-max) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   &:extend(.clearfix all);
 }
 // Creates a wrapper for a series of columns

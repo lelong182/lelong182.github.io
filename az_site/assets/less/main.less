@@ -329,7 +329,7 @@ HERO
 
         .big-text {
             font-family: "SFUFuturaBold", sans-serif;
-            font-size: 32px;
+            font-size: 46px;
             line-height: 1.3 !important;
             left: 15px !important;
             margin: 0;
@@ -338,12 +338,11 @@ HERO
             padding-right: 15px;
 
             @media (min-width:@screen-sm-min) {
-                font-size: 65px;
                 left: 50px !important;
                 padding-right: 50px;
             }
-            @media (min-width:@screen-xs-min) {
-                font-size: 48px;
+            @media (max-width:@screen-xs-max) {
+                font-size: 48px !important;
             }
         }
     }
@@ -610,10 +609,13 @@ BOTTOM INFO
             }
             .img-container {
                 height: 180px;
+                margin: auto;
                 position: relative;
+                width: 80%;
 
                 @media (min-width:@screen-xs-min) {
                     border-left: 1px solid #fff;
+                    width: 100%;
                 }
                 &.first {
                     border-left: none;
