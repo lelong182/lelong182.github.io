@@ -657,7 +657,7 @@ WRAPPER
     background-color: #e4e7f2;
 
     .main {
-        .wrap-about {
+        .about-us {
             background: url("../images/big-about-us-bg.png") no-repeat center -61px;
 
             .container {
@@ -724,15 +724,135 @@ WRAPPER
                 }
             }
         }
-        .wrap-contact {
-            .contact-us {
-                .container-fluid {
-                    padding-top: 60px;
+        .contact-us {
+            .container-fluid {
+                padding-top: 60px;
 
-                    @media (max-width:@screen-xs-max) {
-                        padding-top: 40px;
-                        padding-bottom: 60px;
+                @media (max-width:@screen-xs-max) {
+                    padding-top: 40px;
+                    padding-bottom: 60px;
+                }
+            }
+        }
+        .news-bg {
+            background-image: url("../images/news-bg.jpg");
+            color: #FFF;
+            padding: 60px 0;
+            margin-bottom: 40px;
+
+            .black-overlay {
+                background-color: rgba(0, 0, 0, 0.6);
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 0;
+            }
+            .container {
+                position: relative;
+            }
+            h2 {
+                font-family: "SFUFuturaBold", sans-serif;
+                font-size: 40px;
+                margin: 0 0 50px;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 24px;
+                margin-bottom: 0;
+            }
+        }
+        .news {
+            padding-bottom: 30px;
+
+            .news-category {
+                @media (max-width:@screen-sm-max) {
+                    margin-bottom: 40px;
+                }
+                h3 {
+                    border-bottom: 1px solid #000;
+                    border-top: 1px solid #000;
+                    font-family: "SFUFuturaBold", sans-serif;
+                    font-size: 20px;
+                    margin: 0;
+                    padding: 15px 0 11px;
+                }
+                ul {
+                    border-bottom: 1px solid #000;
+                    padding: 15px 0 10px;
+
+                    li {
+                        list-style: none;
+                        margin-bottom: 3px;
+
+                        a {
+                            color: #000;
+                            font-size: 18px;
+                            border-bottom: 1px solid transparent;
+
+                            &:hover {
+                                border-bottom: 1px solid #000;
+                            }
+                        }
                     }
+                }
+            }
+            .news-item {
+                border: 1px solid #000;
+                margin-bottom: 30px;
+                padding: 15px 20px;
+                height: 600px;
+                position: relative;
+
+                @media (max-width:@screen-md-max) {
+                    height: 560px;
+                }
+                @media (max-width:@screen-sm-max) {
+                    height: 540px;
+                }
+                @media (max-width:@screen-xs-max) {
+                    height: auto;
+                    padding-bottom: 30px;
+                }
+                h4 {
+                    font-family: "SFUFuturaBold", sans-serif;
+                    line-height: 1.3;
+                    margin: 15px 15px 5px;
+
+                    a {
+                        color: #000;
+                        border-bottom: 1px solid transparent;
+
+                        &:hover {
+                            border-bottom: 1px solid #000;
+                        }
+                    }
+                }
+                > div {
+                    font-size: 14px;
+                    padding: 0 15px;
+                }
+                .flip-container, .front, .back {
+                    height: 360px;
+                    padding: 0;
+
+                    @media (max-width:@screen-md-max) {
+                        height: 300px;
+                    }
+                    @media (max-width:@screen-sm-max) {
+                        height: 260px;
+                    }
+                    @media (max-width:@screen-xs-max) {
+                        height: 320px;
+                    }
+                }
+                .more-link {
+                    border-bottom: 1px solid #000;
+                    bottom: 15px;
+                    color: #000;
+                    position: absolute;
+                    right: 20px;
                 }
             }
         }
