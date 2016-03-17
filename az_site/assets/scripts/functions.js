@@ -91,7 +91,7 @@
          =================================== */
         if($('#carousel-1').length) {
             $('#carousel-1').carousel({
-                interval: 3000
+                interval: false
             });
         }
 

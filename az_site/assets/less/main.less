@@ -335,10 +335,12 @@ HERO
             margin: 0;
             top: 40% !important;
             color: #fff;
+            padding-right: 15px;
 
             @media (min-width:@screen-sm-min) {
                 font-size: 65px;
                 left: 50px !important;
+                padding-right: 50px;
             }
             @media (min-width:@screen-xs-min) {
                 font-size: 48px;
@@ -602,14 +604,17 @@ BOTTOM INFO
             margin-top: 30px;
         }
         .item {
-            border-left: 1px solid #fff;
-            border-right: 1px solid #fff;
-
-            .img-container {
+            @media (min-width:@screen-xs-min) {
                 border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+            }
+            .img-container {
                 height: 180px;
                 position: relative;
 
+                @media (min-width:@screen-xs-min) {
+                    border-left: 1px solid #fff;
+                }
                 &.first {
                     border-left: none;
                 }
