@@ -109,6 +109,16 @@
 
 
         /* =================================
+         ===  StickyJS                 ====
+         =================================== */
+        if($('.wrapper')) {
+            $("header.header").sticky({
+                topSpacing: 0
+            });
+        }
+
+
+        /* =================================
         ===  ScrollMagic with GSAP                 ====
         =================================== */
         var wh = window.innerHeight,
@@ -142,7 +152,7 @@
             }, {
                 top: 0,
                 ease: Power2.easeOut
-            }, 0.8);
+            }, 0.5);
         aboutusTL
             .fromTo($aboutus_title, 0.7, {
                 rotationX: -90,

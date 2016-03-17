@@ -651,6 +651,130 @@ FOOTER
 }
 
 /* ---------------------------------------
+WRAPPER
+----------------------------------------- */
+.wrapper {
+    background-color: #e4e7f2;
+
+    .main {
+        .wrap-about {
+            background: url("../images/big-about-us-bg.png") no-repeat center -61px;
+
+            .container {
+                padding-top: 120px;
+
+                @media (max-width:@screen-xs-max) {
+                    padding-top: 40px;
+                }
+            }
+            .meet-persons {
+                margin: 250px 0 50px;
+
+                @media (max-width:@screen-xs-max) {
+                    margin-top: 100px;
+                }
+                h3 {
+                    font-family: "SFUFuturaBold", sans-serif;
+                    font-size: 64px;
+                    margin: 0 0 50px;
+                    position: relative;
+
+                    @media (max-width:@screen-md-max) {
+                        font-size: 58px;
+                    }
+                    @media (max-width:@screen-xs-min) {
+                        margin-bottom: 30px;
+                    }
+                    &:before {
+                        background-color: #000;
+                        content: "";
+                        height: 17px;
+                        left: 0;
+                        position: absolute;
+                        top: -45px;
+                        width: 10%;
+
+                        @media (max-width:@screen-md-max) {
+                            width: 15%;
+                        }
+                    }
+                }
+                .person {
+                    text-align: center;
+                    margin-bottom: 50px;
+
+                    @media (max-width:@screen-xs-max) {
+                        margin-bottom: 40px;
+                    }
+                    h4 {
+                        font-family: "SFUFuturaBold", sans-serif;
+                        margin: 15px 0 3px;
+                    }
+                    h5 {
+                        font-size: 18px;
+                        margin: 0;
+                    }
+                    .flip-container, .front, .back {
+                        height: 310px;
+
+                        @media (max-width:@screen-xs-max) {
+                            height: 220px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-info {
+        height: 500px;
+        overflow: hidden;
+
+        .container {
+            padding-top: 90px;
+
+            @media (max-width:@screen-xs-max) {
+                padding-top: 50px;
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+FLIP IMAGES
+----------------------------------------- */
+.flip-container {
+    perspective: 1000;
+
+    &:hover, &.hover {
+        .flipper {
+            transform: rotateY(180deg);
+        }
+    }
+    .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+
+        .front, .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .front {
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+        .back {
+            transform: rotateY(180deg);
+        }
+    }
+}
+.flip-container, .front, .back {
+    width: 100%;
+}
+
+/* ---------------------------------------
 SPINNER
 ----------------------------------------- */
 .spinner {
