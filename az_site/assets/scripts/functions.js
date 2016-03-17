@@ -111,7 +111,7 @@
         /* =================================
          ===  StickyJS                 ====
          =================================== */
-        if($('.wrapper')) {
+        if($('.wrapper').length) {
             $("header.header").sticky({
                 topSpacing: 0
             });
