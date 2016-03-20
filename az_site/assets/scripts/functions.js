@@ -105,7 +105,7 @@
             }
         });
         $('#portfolio-details-slideshow').masterslider({
-            autoplay:false,
+            autoplay:true,
             width:1920,
             height:1080,
             space:5,
