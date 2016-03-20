@@ -249,7 +249,7 @@ MINIMAL CSS3 MENU
         top: 38px;
         z-index: 9999;
     }
-    header.sticky .minimal-menu-button {
+    header.sticky .minimal-menu-button, .sticky-wrapper .minimal-menu-button {
         top: -4px;
     }
     header.sticky .minimal-menu {
