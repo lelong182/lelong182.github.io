@@ -67,10 +67,10 @@
         /* =================================
         ===  Slideshow                 ====
         =================================== */
-        $('#masterslider').masterslider({
+        $('#home-slideshow').masterslider({
             autoplay:true,
-            width:1024,
-            height:768,
+            width:1920,
+            height:1080,
             space:5,
             overPause:false,
             view:'basic',
@@ -81,6 +81,47 @@
             controls : {
                 bullets : {
                     autohide: false
+                }
+            }
+        });
+        $('#portfolio-slideshow').masterslider({
+            autoplay:true,
+            width:1920,
+            height:1080,
+            space:5,
+            overPause:false,
+            view:'basic',
+            layout:'fullscreen',
+            loop:true,
+            speed:15,
+            view:"fade",
+            controls : {
+                bullets : {
+                    autohide: true
+                },
+                arrows : {
+                    autohide: true
+                }
+            }
+        });
+        $('#portfolio-details-slideshow').masterslider({
+            autoplay:false,
+            width:1920,
+            height:1080,
+            space:5,
+            overPause:false,
+            view:'basic',
+            layout:'fullscreen',
+            fullscreenMargin:49,
+            loop:true,
+            speed:15,
+            view:"fade",
+            controls : {
+                bullets : {
+                    autohide: true
+                },
+                arrows : {
+                    autohide: true
                 }
             }
         });
@@ -136,7 +177,8 @@
             $bottominfo_title = $('.bottom-info h3'),
             $bottominfo_p = $('.bottom-info p'),
             $bottominfo_carousel = $('.bottom-info .carousel'),
-            $bottominfo_footer = $('.bottom-info .footer');
+            $bottominfo_footer = $('.bottom-info .footer'),
+            $portfolio_footer = $('.list-portfolio .footer');
 
         var ctrl = new ScrollMagic.Controller();
 
@@ -144,7 +186,8 @@
             aboutusTL = new TimelineMax(),
             featuredprojectsTL = new TimelineMax(),
             contactusTL = new TimelineMax(),
-            bottominfoTL = new TimelineMax();
+            bottominfoTL = new TimelineMax(),
+            portfolioTL = new TimelineMax();
         
         headerTL
             .fromTo($header, 0.7, {
@@ -275,12 +318,16 @@
             triggerElement: $('.about-us')[0]
         })      
             .on("enter", function() {
-                $('header.header').addClass('sticky');
-                $('header.header').adtop_animation('fadeInDownBig');
+                if($('.about-us').length) {
+                    $('header.header').addClass('sticky');
+                    $('header.header').adtop_animation('fadeInDownBig');
+                }
             })
             .on("leave", function() {
-                $('header.header').removeClass('sticky');
-                $('header.header').adtop_animation('fadeInDownBig');
+                if($('.about-us').length) {
+                    $('header.header').removeClass('sticky');
+                    $('header.header').adtop_animation('fadeInDownBig');
+                }
             })
             .setTween(aboutusTL)
             .addTo(ctrl);
@@ -298,6 +345,27 @@
             triggerElement: $('.bottom-info')[0]
         })
             .setTween(bottominfoTL)
+            .addTo(ctrl);
+        new ScrollMagic.Scene({
+                triggerElement: $('.list-portfolio')[0]
+            })      
+            .on("update", function() {
+                if($('.portfolio').length) {
+                    if($(window).scrollTop() > $('.portfolio-slideshow').height() - 80) {
+                        $('header.header').addClass('sticky');
+                        if(!$('header.header').hasClass('active')) {
+                            $('header.header').addClass('active');
+                            $('header.header').adtop_animation('fadeInDownBig');
+                        } 
+                    } else {
+                        $('header.header').removeClass('sticky active');
+                        if($(window).scrollTop() == 0) {
+                            $('header.header').adtop_animation('fadeInDownBig');
+                        }
+                    }
+                }
+                
+            })
             .addTo(ctrl);
 
 
