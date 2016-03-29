@@ -160,6 +160,21 @@
 
 
         /* =================================
+         ===  Megafolio                 ====
+         =================================== */
+        $('.megafolio-container').megafoliopro({
+            filterChangeAnimation:"rotatescale",
+            filterChangeSpeed:800,
+            filterChangeRotate:99,
+            filterChangeScale:0.6,
+            delay:20,
+            paddingHorizontal:20,
+            paddingVertical:20,
+            layoutarray:[0]
+        });
+
+
+        /* =================================
         ===  ScrollMagic with GSAP                 ====
         =================================== */
         var wh = window.innerHeight,
