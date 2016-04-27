@@ -12,7 +12,7 @@
     };
 
     window.loading_screen = window.pleaseWait({
-        logo: "assets/images/logo.png",
+        logo: "images/logo.png",
         backgroundColor: '#00A7E6',
         loadingHtml: '<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>'
     });
@@ -20,6 +20,11 @@
     $(window).on('load', function() {
         window.loading_screen.finish();
         $('body').css('opacity', 1);
+        if ($('.error-modal').length) {
+            setTimeout(function() {
+                $(".error-modal").modal('show');
+            }, 1500);
+        }
     });
 
     $(document).ready(function() {
@@ -52,6 +57,17 @@
                 topSpacing: 0
             });
         }
+
+
+        /* =================================
+         ===  Preferred Item                 ====
+         =================================== */
+        $(this).on('mouseover', '.preferred-item', function() {
+            $(this).find('.info-item').addClass('open');
+        });
+        $(this).on('mouseout', '.preferred-item', function() {
+            $('.preferred-item .info-item').removeClass('open');
+        });
 
 
     });

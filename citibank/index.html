@@ -15,27 +15,56 @@
         <meta name="keywords" content="keywords" />
         <meta name="description" content="description" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
-		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-        <link rel="stylesheet" type="text/css" href="assets/styles/minimal-menu.css" />
-        <!--[if LTE IE 8]>
-        <link rel="stylesheet" type="text/css" href="assets/styles/minimal-menu-ie.css" />
-        <![endif]-->
-        <link rel="stylesheet" type="text/css" href="assets/styles/please-wait.css" />
-        <link rel="stylesheet" type="text/css" href="assets/styles/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/styles/animate.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/styles/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/please-wait.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
-        <script src="assets/scripts/libs/prefixfree.min.js"></script>
-        <script src="assets/scripts/libs/modernizr.js"></script>
+        <script src="js/libs/prefixfree.min.js"></script>
+        <script src="js/libs/modernizr.js"></script>
         <!--[if lt IE 9]>
-        <script src="assets/scripts/libs/html5shiv.js"></script>
-        <script src="assets/scripts/libs/respond.js"></script>
+        <script src="js/libs/html5shiv.js"></script>
+        <script src="js/libs/respond.js"></script>
         <![endif]-->
         
     </head>
     <body>
+
+        <div class="modal fade welcome-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <button class="close-link" data-dismiss="modal"><img src="images/close-icon.png" alt="img" /></button>
+                <div class="wrap-welcome">
+                    <h3>Welcome to Citibank!</h3>
+                    <p>Please enter your company name to proceed:</p>
+                    <form>
+                        <input type="text" placeholder="Company name" />
+                        <button><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <!-- /.wrap-welcome -->
+            </div>
+        </div>
+
+        <div class="modal fade error-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <button class="close-link" data-dismiss="modal"><img src="images/close-icon.png" alt="img" /></button>
+                <div class="wrap-error">
+                    <h3>Sorry, company not found.</h3>
+                    <p>Please click here to try again, and ensure the spelling is correct.</p>
+                    <p class="or">OR</p>
+                    <p>If your organisation is not a part of Citibank’s corporate employee benefits program,<br />fill in your details below and a Citibank officer will get in touch to assist you.</p>
+                    <form>
+                        <input type="text" placeholder="Name" />
+                        <input type="email" placeholder="Email address" />
+                        <button>Submit<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <!-- /.wrap-error -->
+            </div>
+        </div>
 
         <div class="topbar">
             <div class="container">
@@ -53,7 +82,7 @@
             <div class="container">
                 <h1 class="logo">
                     <a title="Citibank">
-                        <img src="assets/images/logo.png" alt="img" />
+                        <img src="images/logo.png" alt="img" />
                     </a>
                 </h1>
             </div>
@@ -64,15 +93,15 @@
             <div class="container">
                 <h3>Apply today and get<br /><span>both these gifts!</span></h3>
                 <div class="gift-1">
-                    <img src="assets/images/headline-img-1.png" alt="img" />
+                    <img src="images/headline-img-1.png" alt="img" />
                     <p>20” Limited Edition<br/ >Condotti Trolley Bag with<br/ >Swarovski Crystals</p>
-                    <img class="shadow" src="assets/images/shadow-1.png" alt="img" />
+                    <img class="shadow" src="images/shadow-1.png" alt="img" />
                 </div>
                 <span class="and">and</span>
                 <div class="gift-2">
-                    <img src="assets/images/headline-img-2.png" alt="img" />
+                    <img src="images/headline-img-2.png" alt="img" />
                     <p>Car Digital Video Recorder</p>
-                    <img class="shadow" src="assets/images/shadow-2.png" alt="img" />
+                    <img class="shadow" src="images/shadow-2.png" alt="img" />
                 </div>
             </div>
         </div>
@@ -85,25 +114,25 @@
                     <ul class="nav nav-tabs row">
                         <li class="active col-md-3 col-sm-6 no-pd-xs">
                             <a href="#rewards-points-tab" data-toggle="tab">
-                                <img src="assets/images/rewards-points-icon.png" alt="img" />
+                                <img src="images/rewards-points-icon.png" alt="img" />
                                 Rewards Points
                             </a>
                         </li>
                         <li class="col-md-3 col-sm-6 no-pd-xs">
                             <a href="#travel-tab" data-toggle="tab">
-                                <img src="assets/images/travel-icon.png" alt="img" />
+                                <img src="images/travel-icon.png" alt="img" />
                                 Travel
                             </a>
                         </li>
                         <li class="col-md-3 col-sm-6 no-pd-xs">
                             <a href="#cash-back-tab" data-toggle="tab">
-                                <img src="assets/images/cash-back-icon.png" alt="img" />
+                                <img src="images/cash-back-icon.png" alt="img" />
                                 Cash back
                             </a>
                         </li>
                         <li class="col-md-3 col-sm-6 no-pd-xs">
                             <a href="#business-tab" data-toggle="tab">
-                                <img src="assets/images/business-icon.png" alt="img" />
+                                <img src="images/business-icon.png" alt="img" />
                                 Business
                             </a>
                         </li>
@@ -113,32 +142,72 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item active">
-                                        <img src="assets/images/card-1.png" alt="img" />
+                                        <img src="images/card-1.png" alt="img" />
                                         <h4>Citi Rewards Platinum Visa Card</h4>
+                                        <div class="info-item">
+                                            <ul>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Choose as many rewards categories as you like</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Earn 5X Rewards points all year round</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Use your Citi Rewards points like cash in stores</li>
+                                            </ul>
+                                            <a class="choose-link">Choose card</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-2.png" alt="img" />
+                                        <img src="images/card-2.png" alt="img" />
                                         <h4>Citi Prestige MasterCard World Elite</h4>
+                                        <div class="info-item">
+                                            <ul>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Get expert concierge service and access to exclusive events</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Enjoy unlimited airport lounge access and complimentary 4th night stay at any hotels worldwide</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Receive annual Relationship Bonus Points that corresponds with your length &amp; depth of relationship with Citibank</li>
+                                            </ul>
+                                            <a class="choose-link">Choose card</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-3.png" alt="img" />
+                                        <img src="images/card-3.png" alt="img" />
                                         <h4>Citi Platinum Visa Card</h4>
+                                        <div class="info-item">
+                                            <ul>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>5X Citi Rewards points at major departmental stores/ hypermarkets</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Offset any purchase with your Citi Rewards points</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Evergreen Citi Rewards points</li>
+                                            </ul>
+                                            <a class="choose-link">Choose card</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-4.png" alt="img" />
+                                        <img src="images/card-4.png" alt="img" />
                                         <h4>Citi Clear Visa Card</h4>
+                                        <div class="info-item">
+                                            <ul>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Friday 1-for-1 movie tickets at GSC and TGV</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Mon-Fri 1-for-1 drinks at The Coffee Bean &amp; Tea Leaf outlets</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>3X Citi Rewards points at popular hangouts.</li>
+                                            </ul>
+                                            <a class="choose-link">Choose card</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-5.png" alt="img" />
+                                        <img src="images/card-5.png" alt="img" />
                                         <h4>Citi Choice Visa Card</h4>
+                                        <div class="info-item">
+                                            <ul>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>No annual fees for life</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Evergreen Citi Reward Points</li>
+                                                <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Accepted in over 120 countries</li>
+                                            </ul>
+                                            <a class="choose-link">Choose card</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -147,31 +216,31 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item active">
-                                        <img src="assets/images/card-1.png" alt="img" />
+                                        <img src="images/card-1.png" alt="img" />
                                         <h4>Citi Rewards Platinum Visa Card</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-2.png" alt="img" />
+                                        <img src="images/card-2.png" alt="img" />
                                         <h4>Citi Prestige MasterCard World Elite</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-3.png" alt="img" />
+                                        <img src="images/card-3.png" alt="img" />
                                         <h4>Citi Platinum Visa Card</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-4.png" alt="img" />
+                                        <img src="images/card-4.png" alt="img" />
                                         <h4>Citi Clear Visa Card</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-5.png" alt="img" />
+                                        <img src="images/card-5.png" alt="img" />
                                         <h4>Citi Choice Visa Card</h4>
                                     </div>
                                 </div>
@@ -181,31 +250,31 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item active">
-                                        <img src="assets/images/card-1.png" alt="img" />
+                                        <img src="images/card-1.png" alt="img" />
                                         <h4>Citi Rewards Platinum Visa Card</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-2.png" alt="img" />
+                                        <img src="images/card-2.png" alt="img" />
                                         <h4>Citi Prestige MasterCard World Elite</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-3.png" alt="img" />
+                                        <img src="images/card-3.png" alt="img" />
                                         <h4>Citi Platinum Visa Card</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-4.png" alt="img" />
+                                        <img src="images/card-4.png" alt="img" />
                                         <h4>Citi Clear Visa Card</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-5.png" alt="img" />
+                                        <img src="images/card-5.png" alt="img" />
                                         <h4>Citi Choice Visa Card</h4>
                                     </div>
                                 </div>
@@ -215,31 +284,31 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item active">
-                                        <img src="assets/images/card-1.png" alt="img" />
+                                        <img src="images/card-1.png" alt="img" />
                                         <h4>Citi Rewards Platinum Visa Card</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-2.png" alt="img" />
+                                        <img src="images/card-2.png" alt="img" />
                                         <h4>Citi Prestige MasterCard World Elite</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-3.png" alt="img" />
+                                        <img src="images/card-3.png" alt="img" />
                                         <h4>Citi Platinum Visa Card</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-4.png" alt="img" />
+                                        <img src="images/card-4.png" alt="img" />
                                         <h4>Citi Clear Visa Card</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 no-pd-xs">
                                     <div class="preferred-item">
-                                        <img src="assets/images/card-5.png" alt="img" />
+                                        <img src="images/card-5.png" alt="img" />
                                         <h4>Citi Choice Visa Card</h4>
                                     </div>
                                 </div>
@@ -263,33 +332,27 @@
                             <div class="col-sm-4">
                                 <ul>
                                     <li>
-                                        <a>
-                                            <span class="wrap-img">
-                                                <img src="assets/images/clock-icon.png" alt="img" />
-                                            </span>
-                                            Around 5 minutes to<br />complete the application
-                                        </a>
+                                        <span class="wrap-img">
+                                            <img src="images/clock-icon.png" alt="img" />
+                                        </span>
+                                        Around 5 minutes to<br />complete the application
                                     </li>
                                     <li>
-                                        <a>
-                                            <span class="wrap-img">
-                                                <img src="assets/images/money-icon.png" alt="img" />
-                                            </span>
-                                            Earn more than<br />RM36K a year
-                                        </a>
+                                        <span class="wrap-img">
+                                            <img src="images/money-icon.png" alt="img" />
+                                        </span>
+                                        Earn more than<br />RM36K a year
                                     </li>
                                     <li>
-                                        <a>
-                                            <span class="wrap-img">
-                                                <img src="assets/images/person-icon.png" alt="img" />
-                                            </span>
-                                            Be 21 years or older
-                                        </a>
+                                        <span class="wrap-img">
+                                            <img src="images/person-icon.png" alt="img" />
+                                        </span>
+                                        <div class="mgt-10">Be 21 years or older</div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-sm-4">
-                                <h4>Please tick your Rewards categories: <img src="assets/images/mark-icon.png" alt="img" /></h4>
+                                <h4>Please tick your Rewards categories: <img src="images/mark-icon.png" alt="img" /></h4>
                                 <div class="row">
                                     <div class="col-xs-6">
                                         <input type="checkbox" id="rewards-cat-1" class="css-checkbox" checked /><label for="rewards-cat-1" class="css-label mgb-10">Shopping</label>
@@ -324,7 +387,7 @@
                 <div class="footer-1">
                     <ul>
                         <li><a>CITIGROUP.COM</a></li>
-                        <li><a><img width="18" src="assets/images/facebook-icon.png" alt="img" /></a></li>
+                        <li><a><img width="18" src="images/facebook-icon.png" alt="img" /></a></li>
                     </ul>
                     <ul>
                         <li><a>Terms & Conditions</a></li>
@@ -336,7 +399,7 @@
                 <div class="footer-2">
                     <h3 class="logo">
                         <a title="Citibank">
-                            <img src="assets/images/footer-logo.png" alt="img" />
+                            <img src="images/footer-logo.png" alt="img" />
                         </a>
                     </h3>
                     <div class="copyright">
@@ -347,12 +410,12 @@
         </footer>
         <!-- /.footer -->
 
-        <script src="assets/scripts/libs/please-wait.min.js"></script>
-        <script src="assets/scripts/libs/jquery-1.11.3.min.js"></script>
-        <script src="assets/scripts/libs/jquery.easing.1.3.js"></script>
-        <script src="assets/scripts/libs/bootstrap.min.js"></script>
-        <script src="assets/scripts/libs/jquery.sticky.js"></script>
-        <script src="assets/scripts/functions.js"></script>
+        <script src="js/libs/please-wait.min.js"></script>
+        <script src="js/libs/jquery-1.11.3.min.js"></script>
+        <script src="js/libs/jquery.easing.1.3.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/jquery.sticky.js"></script>
+        <script src="js/functions.js"></script>
 
     </body>
 </html>
