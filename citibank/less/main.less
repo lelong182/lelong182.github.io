@@ -401,6 +401,9 @@ HEADLINE
 .headline {
     background: url("../images/headline-bg.png") no-repeat center top;
 
+    @media (min-width:@screen-md-min) {
+        background-size: cover;
+    }
     .container {
         position: relative;
         min-height: 412px;
@@ -475,7 +478,15 @@ HEADLINE
             float: left;
 
             @media (max-width:@screen-xs-max) {
-                display: none;
+                left: 50%;
+                position: absolute;
+                top: -6px;
+                transform: translateX(-150px);
+                width: 50px;
+            }
+            @media (max-width:@screen-xs-min) {
+                left: 7px;
+                transform: translateX(0);
             }
         }
         p {
@@ -484,13 +495,25 @@ HEADLINE
 
             @media (max-width:@screen-xs-max) {
                 float: initial;
-                margin: 0;
+                margin: 0 0 0 10px;
             }
         }
         .shadow {
             bottom: -11px;
             left: -18px;
             position: absolute;
+
+            @media (max-width:@screen-xs-max) {
+                bottom: -9px;
+                left: 50%;
+                top: initial;
+                transform: translateX(-154px);
+                width: 65px;
+            }
+            @media (max-width:@screen-xs-min) {
+                left: 1px;
+                transform: translateX(0);
+            }
         }
     }
     .gift-2 {
@@ -514,7 +537,15 @@ HEADLINE
             float: right;
 
             @media (max-width:@screen-xs-max) {
-                display: none;
+                left: 50%;
+                position: absolute;
+                top: -46px;
+                transform: translateX(-150px);
+                width: 50px;
+            }
+            @media (max-width:@screen-xs-min) {
+                left: 7px;
+                transform: translateX(0);
             }
         }
         p {
@@ -523,13 +554,24 @@ HEADLINE
 
             @media (max-width:@screen-xs-max) {
                 float: initial;
-                margin: 0;
+                margin: 0 0 0 15px;
             }
         }
         .shadow {
             bottom: -23px;
             position: absolute;
             right: -23px;
+
+            @media (max-width:@screen-xs-max) {
+                bottom: -51px;
+                left: 50%;
+                right: initial;
+                top: initial;
+                width: 65px;
+            }
+            @media (max-width:@screen-xs-min) {
+                left: 6px;
+            }
         }
     }
 }
@@ -540,6 +582,9 @@ HEADLINE COMPLETE
 .headline-complete {
     background: url("../images/headline-bg.png") no-repeat center -60px;
 
+    @media (min-width:@screen-md-min) {
+        background-size: cover;
+    }
     .container {
         min-height: 225px;
     }
