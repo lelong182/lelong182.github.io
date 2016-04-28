@@ -41,7 +41,7 @@
                 <div class="wrap-welcome">
                     <h3>Welcome to Citibank!</h3>
                     <p>Please enter your company name to proceed:</p>
-                    <form>
+                    <form class="welcome-form">
                         <div class="wrap-input">
                             <div id="scrollable-dropdown-menu">
                                 <input type="text" name="keyword" id="search-company" data-provide="typeahead" placeholder="Company name" />
@@ -59,7 +59,7 @@
                 <button class="close-link" data-dismiss="modal"><img src="images/close-icon.png" alt="img" /></button>
                 <div class="wrap-error">
                     <h3>Sorry, company not found.</h3>
-                    <p>Please click here to try again, and ensure the spelling is correct.</p>
+                    <p>Please click <a class="back-welcome">here</a> to try again, and ensure the spelling is correct.</p>
                     <p class="or">OR</p>
                     <p>If your organisation is not a part of Citibank’s corporate employee benefits program,<br />fill in your details below and a Citibank officer will get in touch to assist you.</p>
                     <form>
@@ -368,7 +368,7 @@
                                 <h4>Please tick your Rewards categories: <img src="images/mark-icon.png" alt="img" /></h4>
                                 <ul class="list-rewards-cat">
                                     <li>
-                                        <input type="checkbox" id="rewards-cat-1" class="css-checkbox" checked /><label for="rewards-cat-1" class="css-label mgb-10">Shopping</label>
+                                        <input type="checkbox" id="rewards-cat-1" class="css-checkbox" /><label for="rewards-cat-1" class="css-label mgb-10">Shopping</label>
                                         <input type="checkbox" id="rewards-cat-2" class="css-checkbox" /><label for="rewards-cat-2" class="css-label mgb-10">Home</label>
                                         <input type="checkbox" id="rewards-cat-3" class="css-checkbox" /><label for="rewards-cat-3" class="css-label mgb-10">Entertainment</label>
                                     </li>
@@ -379,7 +379,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-4 col-sm-12">
-                                <a href="complete.htm" class="started-btn">Let’s get started</a>
+                                <a class="started-btn">Let’s get started</a>
                             </div>
                         </div>
                     </div>
