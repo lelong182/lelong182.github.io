@@ -20,9 +20,9 @@
     $(window).on('load', function() {
         window.loading_screen.finish();
         $('body').css('opacity', 1);
-        if ($('.error-modal').length) {
+        if ($('.welcome-modal').length) {
             setTimeout(function() {
-                $(".error-modal").modal('show');
+                $(".welcome-modal").modal('show');
             }, 1500);
         }
     });
@@ -68,6 +68,25 @@
         $(this).on('mouseout', '.preferred-item', function() {
             $('.preferred-item .info-item').removeClass('open');
         });
+        $(this).on('click', '.info-item .choose-link', function() {
+            $(this).closest('.preferred-item').addClass('active');
+            $(this).removeClass().addClass('remove-link').text('Remove card');
+        });
+        $(this).on('click', '.info-item .remove-link', function() {
+            $(this).closest('.preferred-item').removeClass('active');
+            $(this).removeClass().addClass('choose-link').text('Choose card');
+        });
+
+
+        /* =================================
+         ===  Popup                 ====
+         =================================== */
+        $(this).on('click', '.welcome-modal .submit-btn', function() {
+            $(".welcome-modal").modal('hide');
+            $(".error-modal").modal('show');
+            return false;
+        });
+        
 
 
     });

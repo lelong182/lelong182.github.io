@@ -337,6 +337,12 @@ HEADLINE
         position: absolute;
         top: 115px;
 
+        @media (max-width:@screen-md-max) {
+            left: 14%;
+        }
+        @media (max-width:@screen-sm-max) {
+            left: 23px;
+        }
         img {
             float: left;
         }
@@ -355,6 +361,12 @@ HEADLINE
         right: 320px;
         top: 115px;
 
+        @media (max-width:@screen-md-max) {
+            right: 17%;
+        }
+        @media (max-width:@screen-sm-max) {
+            right: 23px;
+        }
         img {
             float: right;
         }
@@ -542,6 +554,14 @@ MAIN
                 }
                 .choose-link {
                     background-color: #1cc444;
+                    border-radius: 2px;
+                    color: #fff;
+                    font-size: 13px;
+                    font-weight: 300;
+                    padding: 10px 20px;
+                }
+                .remove-link {
+                    background-color: #e74c3c;
                     border-radius: 2px;
                     color: #fff;
                     font-size: 13px;
