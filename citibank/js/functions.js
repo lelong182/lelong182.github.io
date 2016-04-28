@@ -20,11 +20,11 @@
     $(window).on('load', function() {
         window.loading_screen.finish();
         $('body').css('opacity', 1);
-        // if ($('.welcome-modal').length) {
-        //     setTimeout(function() {
-        //         $(".welcome-modal").modal('show');
-        //     }, 1500);
-        // }
+        if ($('.welcome-modal').length) {
+            setTimeout(function() {
+                $(".welcome-modal").modal('show');
+            }, 1500);
+        }
     });
 
     $(document).ready(function() {
