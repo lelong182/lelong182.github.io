@@ -210,6 +210,41 @@ label.css-label-radio {
 }
 
 /* ---------------------------------------
+AUTOCOMPLETE SEARCH
+----------------------------------------- */
+.twitter-typeahead {
+    width: 100%;
+}
+.tt-menu {
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 2px;
+    padding: 5px;
+    width: 100%;
+
+    .tt-dataset {
+        .tt-suggestion {
+            color: #333;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 300;
+            margin: 0;
+            padding: 5px 10px;
+            text-align: left;
+            transition: all 0.3s ease 0s;
+
+            &:hover {
+                background-color: #f2f2f2;
+            }
+        }
+    }
+}
+#scrollable-dropdown-menu .tt-menu {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* ---------------------------------------
 WELCOME MODAL
 ----------------------------------------- */
 .modal {
@@ -271,7 +306,7 @@ WELCOME MODAL
             @media (max-width:@screen-xs-max) {
                 width: 100%;
             }
-            input[type="text"] {
+            .wrap-input {
                 float: left;
 
                 @media (max-width:@screen-xs-max) {
@@ -831,6 +866,9 @@ MAIN
                     a {
                         padding-right: 65px;
 
+                        @media (max-width:@screen-lg) {
+                            padding-right: 45px;
+                        }
                         @media (max-width:@screen-xs-max) {
                             padding-right: 0;
                             padding-left: 75px;
@@ -841,6 +879,9 @@ MAIN
                     a {
                         padding-right: 105px;
 
+                        @media (max-width:@screen-lg) {
+                            padding-right: 85px;
+                        }
                         @media (max-width:@screen-xs-max) {
                             padding-right: 0;
                             padding-left: 75px;
@@ -851,6 +892,9 @@ MAIN
                     a {
                         padding-right: 80px;
 
+                        @media (max-width:@screen-lg) {
+                            padding-right: 60px;
+                        }
                         @media (max-width:@screen-xs-max) {
                             padding-right: 0;
                             padding-left: 75px;
@@ -861,6 +905,9 @@ MAIN
                     a {
                         padding-right: 85px;
 
+                        @media (max-width:@screen-lg) {
+                            padding-right: 65px;
+                        }
                         @media (max-width:@screen-xs-max) {
                             padding-right: 0;
                             padding-left: 75px;
@@ -890,6 +937,9 @@ MAIN
                         position: absolute;
                         top: 30px;
 
+                        @media (max-width:@screen-lg) {
+                            left: 35px;
+                        }
                         @media (max-width:@screen-xs-max) {
                             left: 20px;
                         }
