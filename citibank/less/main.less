@@ -395,6 +395,13 @@ HEADLINE
         text-align: center;
         transform: translateX(-50%);
 
+        @media (max-width:@screen-xs-max) {
+            font-size: 30px;
+            left: 0;
+            right: 0;
+            top: 10px;
+            transform: translateX(0px);
+        }
         span {
             font-weight: normal;
         }
@@ -438,8 +445,18 @@ HEADLINE
         @media (max-width:@screen-sm-max) {
             left: 23px;
         }
+        @media (max-width:@screen-xs-max) {
+            left: 50%;
+            text-align: center;
+            top: 20px;
+            transform: translateX(-50%);
+        }
         img {
             float: left;
+
+            @media (max-width:@screen-xs-max) {
+                display: none;
+            }
         }
         p {
             float: left;
@@ -462,8 +479,18 @@ HEADLINE
         @media (max-width:@screen-sm-max) {
             right: 23px;
         }
+        @media (max-width:@screen-xs-max) {
+            left: 50%;
+            right: initial;
+            top: 171px;
+            transform: translateX(-50%);
+        }
         img {
             float: right;
+
+            @media (max-width:@screen-xs-max) {
+                display: none;
+            }
         }
         p {
             float: right;
@@ -1089,6 +1116,9 @@ FOOTER INFO
             margin-top: 0;
             overflow: hidden;
 
+            @media (max-width:@screen-xs-min) {
+                font-size: 0;
+            }
             li {
                 float: left;
                 margin-bottom: 0;
@@ -1097,7 +1127,7 @@ FOOTER INFO
                 @media (max-width:@screen-xs-max) {
                     display: inline-block;
                     float: initial;
-                    width: auto;
+                    width: 100%;
                 }
                 &:nth-child(2) {
                     padding-left: 20px;
@@ -1109,6 +1139,10 @@ FOOTER INFO
                 .css-label {
                     @media (max-width:@screen-xs-max) {
                         margin-right: 30px;
+                    }
+                    @media (max-width:@screen-xs-min) {
+                        margin-right: 0;
+                        display: block;
                     }
                 }
             }
