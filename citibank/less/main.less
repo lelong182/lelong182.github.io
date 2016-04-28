@@ -675,17 +675,40 @@ MAIN
         .complete-label-inner {
             display: flex;
             justify-content: space-between;
+
+            @media (max-width:@screen-xs-max) {
+                display: block;
+                text-align: center;
+            }
         }
         h4 {
             font-size: 24px;
             margin: 0;
+
+            @media (max-width:@screen-sm-max) {
+                font-size: 20px;
+            }
         }
         .secure {
             font-size: 16px;
 
+            @media (max-width:@screen-sm-max) {
+                font-size: 14px;
+            }
+            @media (max-width:@screen-xs-max) {
+                margin-top: 5px;
+                padding-top: 10px;
+            }
             img {
                 float: left;
                 margin-right: 14px;
+
+                @media (max-width:@screen-xs-max) {
+                    float: initial;
+                    position: relative;
+                    top: -3px;
+                    vertical-align: top;
+                }
             }
         }
     }
@@ -705,21 +728,41 @@ MAIN
                 &:nth-child(1) {
                     a {
                         padding-right: 65px;
+
+                        @media (max-width:@screen-xs-max) {
+                            padding-right: 0;
+                            padding-left: 75px;
+                        }
                     }
                 }
                 &:nth-child(2) {
                     a {
                         padding-right: 105px;
+
+                        @media (max-width:@screen-xs-max) {
+                            padding-right: 0;
+                            padding-left: 75px;
+                        }
                     }
                 }
                 &:nth-child(3) {
                     a {
                         padding-right: 80px;
+
+                        @media (max-width:@screen-xs-max) {
+                            padding-right: 0;
+                            padding-left: 75px;
+                        }
                     }
                 }
                 &:nth-child(4) {
                     a {
                         padding-right: 85px;
+
+                        @media (max-width:@screen-xs-max) {
+                            padding-right: 0;
+                            padding-left: 75px;
+                        }
                     }
                 }
                 a {
@@ -734,6 +777,9 @@ MAIN
                     text-transform: uppercase;
                     height: 98px;
 
+                    @media (max-width:@screen-xs-max) {
+                        text-align: left;
+                    }
                     &:hover {
                         background: url("../images/hover-tab-bg.png") no-repeat center center / cover;
                     }
@@ -741,6 +787,10 @@ MAIN
                         left: 50px;
                         position: absolute;
                         top: 30px;
+
+                        @media (max-width:@screen-xs-max) {
+                            left: 20px;
+                        }
                     }
                 }
             }
@@ -888,7 +938,7 @@ MAIN
                     font-size: 13px;
                     font-weight: 300;
                     height: 83px;
-                    margin-right: 2px;
+                    margin: 0 2px 2px 0;
                     text-align: center;
                     text-transform: uppercase;
                     width: 162px;
@@ -960,6 +1010,9 @@ MAIN
                 padding: 15px 20px;
                 margin-bottom: 20px;
 
+                @media (max-width:@screen-xs-max) {
+                    height: 240px;
+                }
                 h4 {
                     font-size: 14px;
                     margin: 0 0 10px;
@@ -996,29 +1049,70 @@ FOOTER INFO
     min-height: 227px;
     color: #FFF;
 
+    @media (max-width:@screen-sm-max) {
+        padding-bottom: 35px;
+    }
     a {
         color: #FFF;
     }
     h3 {
         font-size: 22px;
         margin: 70px 0 20px;
+
+        @media (max-width:@screen-sm-max) {
+            margin-top: 35px;
+        }
     }
     h4 {
         font-size: 14px;
         font-weight: 300;
         margin: 38px 0 15px;
 
+        @media (max-width:@screen-sm-max) {
+            margin-top: 28px;
+        }
         img {
             vertical-align: top;
         }
     }
-    .apply-link {
+    .apply-label {
         font-size: 16px;
         font-weight: 300;
     }
     ul {
         margin: 35px 0 0;
 
+        @media (max-width:@screen-sm-max) {
+            margin-top: 25px;
+        }
+        &.list-rewards-cat {
+            margin-top: 0;
+            overflow: hidden;
+
+            li {
+                float: left;
+                margin-bottom: 0;
+                width: 50%;
+
+                @media (max-width:@screen-xs-max) {
+                    display: inline-block;
+                    float: initial;
+                    width: auto;
+                }
+                &:nth-child(2) {
+                    padding-left: 20px;
+
+                    @media (max-width:@screen-xs-max) {
+                        padding-left: 0;
+                    }
+                }
+                .css-label {
+                    @media (max-width:@screen-xs-max) {
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
         li {
             list-style: none;
             margin-bottom: 15px;
@@ -1046,6 +1140,11 @@ FOOTER INFO
         padding-top: 18px;
         text-align: center;
         width: 216px;
+
+        @media (max-width:@screen-sm-max) {
+            margin-top: 20px;
+            float: left;
+        }
     }
 }
 
@@ -1072,6 +1171,10 @@ FOOTER
         justify-content: space-between;
         margin-bottom: 12px;
 
+        @media (max-width:@screen-xs-max) {
+            display: block;
+            text-align: center;
+        }
         ul {
             margin-bottom: 5px;
 
@@ -1113,13 +1216,25 @@ FOOTER
         display: flex;
         justify-content: space-between;
 
+        @media (max-width:@screen-xs-max) {
+            display: block;
+            text-align: center;
+        }
         .logo {
             margin: 0;
+
+            @media (max-width:@screen-xs-max) {
+                margin-bottom: 10px;
+            }
         }
         .copyright {
             color: #999;
             font-size: 11px;
             text-align: right;
+
+            @media (max-width:@screen-xs-max) {
+                text-align: center;
+            }
         }
     }
 }
