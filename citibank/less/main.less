@@ -258,6 +258,9 @@ WELCOME MODAL
         padding-top: 50px;
         text-align: center;
 
+        @media (max-width:@screen-xs-max) {
+            padding: 50px 20px 0;
+        }
         h3 {
             margin: 0 0 10px;
         }
@@ -265,8 +268,15 @@ WELCOME MODAL
             margin: 20px auto 0;
             width: 329px;
 
+            @media (max-width:@screen-xs-max) {
+                width: 100%;
+            }
             input[type="text"] {
                 float: left;
+
+                @media (max-width:@screen-xs-max) {
+                    width: ~"calc(100% - 39px)";
+                }
             }
             button {
                 background-color: #d6d6d6;
@@ -292,6 +302,9 @@ WELCOME MODAL
         padding-top: 50px;
         text-align: center;
 
+        @media (max-width:@screen-xs-max) {
+            padding: 50px 20px 30px;
+        }
         h3 {
             margin: 0 0 20px;
         }
@@ -302,8 +315,15 @@ WELCOME MODAL
             margin: 20px auto 0;
             width: 290px;
 
+            @media (max-width:@screen-xs-max) {
+                width: 100%;
+            }
             input[type="text"], input[type="email"] {
                 margin-bottom: 5px;
+
+                @media (max-width:@screen-xs-max) {
+                    width: 100%;
+                }
             }
             button {
                 background-color: transparent;
