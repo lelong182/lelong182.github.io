@@ -23,7 +23,7 @@
         <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
         <link rel="stylesheet" type="text/css" href="css/fancySelect.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.2.2" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.2.3" />
         <script src="js/commonkana.js"></script>
         <script src="js/libs/prefixfree.min.js"></script>
         <script src="js/libs/modernizr.js"></script>
@@ -69,8 +69,8 @@
                         <input name="contact" value="" type="hidden">
                         <input type="hidden" id="_paramOrder" name="_paramOrder" value="fname,contact,email,location,code,icid,ecid,lid,media">
                         <input type="hidden" id="_paramAlias" name="_paramAlias" value="Full Name,Contact Number,E mail,Location, eOfferCode,icid,ecid,lid,media">
-                        <input type="text" placeholder="Name" />
-                        <input type="text" placeholder="Phone number" />
+                        <input class="required" type="text" data-message="Please indicate your name." placeholder="Name" />
+                        <input class="onlynumber" type="text" placeholder="Phone number" />
                         <button onclick="javascript=validateform(this.form);return false;" class="submit-btn">Submit<i class="fa fa-caret-right" aria-hidden="true"></i></button>
                     </form>
                 </div>
@@ -156,7 +156,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-1.png" alt="img" />
                                         <h4 class="item-name">Citi Rewards Platinum Visa Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="36">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Choose as many rewards categories as you like</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Earn 5X Rewards points all year round</li>
@@ -170,7 +170,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-2.png" alt="img" />
                                         <h4 class="item-name">Citi Prestige MasterCard World Elite</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="200">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Get expert concierge service and access to exclusive events</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Enjoy unlimited airport lounge access and complimentary 4th night stay at any hotels worldwide</li>
@@ -184,7 +184,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-3.png" alt="img" />
                                         <h4 class="item-name">Citi Platinum Visa Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="60">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>5X Citi Rewards points at major departmental stores/ hypermarkets</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Offset any purchase with your Citi Rewards points</li>
@@ -198,7 +198,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-4.png" alt="img" />
                                         <h4 class="item-name">Citi Clear Visa Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="24">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Friday 1-for-1 movie tickets at GSC and TGV</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Mon-Fri 1-for-1 drinks at The Coffee Bean &amp; Tea Leaf outlets</li>
@@ -212,7 +212,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-5.png" alt="img" />
                                         <h4 class="item-name">Citi Choice Visa Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="24">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>No annual fees for life</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Evergreen Citi Reward Points</li>
@@ -230,7 +230,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-6.png" alt="img" />
                                         <h4 class="item-name">Citi PremierMiles Visa Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="100">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Earn 1 PremierMile for every RM3 spent locally and redeem complimentary flights from over 90 airlines</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Unlimited access to selected Plaza Premium Lounges nationwide and abroad</li>
@@ -244,7 +244,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-7.png" alt="img" />
                                         <h4 class="item-name">AirAsia-Citi Gold Visa Credit Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="24">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Receive up to 3X complimentary In Flight Meals annually</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Receive 1X complimentary Pick a Seat annually</li>
@@ -258,7 +258,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-8.png" alt="img" />
                                         <h4 class="item-name">AirAsia-Citi Platinum Visa Credit Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="36">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Get RM200 OFF one AirAsia X Premium Flatbed Upgrade per year</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Receive up to 6X complimentary In Flight Meals and 2X Pick a Seat annually</li>
@@ -276,7 +276,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-9.png" alt="img" />
                                         <h4 class="item-name">Citi Cash Back Platinum Visa Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="60">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Up to 5% cash back on everyday purchase</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>No minimum spend required</li>
@@ -290,7 +290,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-10.png" alt="img" />
                                         <h4 class="item-name">Citi Cash Back Visa Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="36">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Up to 5% cash back on everyday purchase</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>No minimum spend required</li>
@@ -304,7 +304,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-11.png" alt="img" />
                                         <h4 class="item-name">Shell Gold Visa Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="24">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Most rebate on Shell fuel up to 8%. Everyday!</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Up to 50% discount with Citibank World Privileges</li>
@@ -321,7 +321,7 @@
                                     <div class="preferred-item">
                                         <img class="item-img" src="images/card-12.png" alt="img" />
                                         <h4 class="item-name">Citi Business Platinum Visa Card</h4>
-                                        <div class="info-item">
+                                        <div class="info-item" data-earn="48">
                                             <ul>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Unlimited 1.2% cash back on overseas spend</li>
                                                 <li><span class="wrap-icon"><img src="images/right-icon.png" alt="img" /></span>Unlimited 0.5% cash back on local spend</li>
@@ -339,11 +339,11 @@
         </div>
         <!-- /.main -->
 
-        <div class="footer-info">
+        <div class="footer-info hidden">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <h3>You are applying for -<br />Citi Rewards Platinum Visa Card</h3>
+                        <h3>You are applying for -<br /><span class="wrap-text"></span></h3>
                         <span class="apply-label">Here is what you need to apply ></span>
                     </div>
                     <div class="col-md-8">
@@ -360,7 +360,7 @@
                                         <span class="wrap-img">
                                             <img src="images/money-icon.png" alt="img" />
                                         </span>
-                                        Earn more than<br />RM36K a year
+                                        Earn more than<br />RM<span class="earn"></span>K a year
                                     </li>
                                     <li>
                                         <span class="wrap-img">
@@ -442,7 +442,7 @@
         <script src="js/libs/bloodhound.min.js"></script>
         <script src="js/libs/jquery.mask.min.js"></script>
         <script src="js/validation.js"></script>
-        <script src="js/functions.js?v=1.2.2"></script>
+        <script src="js/functions.js?v=1.2.3"></script>
 
     </body>
 </html>

@@ -158,6 +158,14 @@
             $(".welcome-modal").modal('show');
             return false;
         });
+        $('.error-form .required').blur(function() {
+            if (!this.value || this.value.charAt(0) == " ") {
+                alert($(this).data('message'));
+                setTimeout(function() {
+                    $('.error-form .required').focus();
+                }, 50);
+            }
+        });
         // $(this).on('click', '.error-form .submit-btn', function() {
         //     $(".error-modal").modal('hide');
         //     return false;
@@ -209,9 +217,9 @@
                     return false;
                 }
             });
-            if(pass) {
+            if (pass) {
                 this_tab.find('.credit-card').each(function() {
-                    if (!this.value || this.value == '0000') {
+                    if (this.value == '0000') {
                         pass = false;
                         $(this).focus();
                         message = $(this).data('message');
@@ -219,7 +227,7 @@
                     }
                 });
             }
-            if(pass) {
+            if (pass) {
                 this_tab.find('.email').each(function() {
                     if (!this.value || !validateEmail(this.value) || this.value.charAt(0) == " ") {
                         pass = false;
@@ -254,13 +262,22 @@
             Cookies.remove('data');
             var arr_name = [];
             var arr_img = [];
+            var arr_earn = [];
             $(this).on('click', '.info-item .choose-link', function() {
-                var this_item = $(this).closest('.preferred-item');
-                this_item.addClass('active');
-                $(this).removeClass().addClass('remove-link').text('Remove card');
-                $(this).closest('.info-item').removeClass('open');
-                arr_name.push(this_item.find('.item-name').text());
-                arr_img.push(this_item.find('.item-img').attr('src'));
+                if($('.preferred-item.active').length >= 3) {
+                    alert('You can apply for 3 cards at max!');
+                } else {
+                    var this_item = $(this).closest('.preferred-item');
+                    this_item.addClass('active');
+                    $(this).removeClass().addClass('remove-link').text('Remove card');
+                    $(this).closest('.info-item').removeClass('open');
+                    arr_name.push(this_item.find('.item-name').text());
+                    arr_img.push(this_item.find('.item-img').attr('src'));
+                    arr_earn.push($(this).parent('.info-item').data('earn'));
+                    $('.footer-info .wrap-text').text(arr_name.join(", "));
+                    $('.footer-info').removeClass('hidden');
+                    $('.footer-info .earn').text(Math.max(...arr_earn));
+                }
             });
             $(this).on('click', '.info-item .remove-link', function() {
                 var this_item = $(this).closest('.preferred-item');
@@ -268,7 +285,13 @@
                 $(this).removeClass().addClass('choose-link').text('Choose card');
                 $(this).closest('.info-item').removeClass('open');
                 arr_name.splice(arr_name.indexOf(this_item.find('.item-name').text()), 1);
-                arr_img.splice(arr_img.indexOf(this_item.find('.item-img').text()), 1);
+                arr_img.splice(arr_img.indexOf(this_item.find('.item-img').attr('src')), 1);
+                arr_earn.splice(arr_earn.indexOf($(this).parent('.info-item').data('earn')), 1);
+                $('.footer-info .wrap-text').text(arr_name.join(", "));
+                if (arr_name.length == 0) {
+                    $('.footer-info').addClass('hidden');
+                }
+                $('.footer-info .earn').text(Math.max(...arr_earn));
             });
             $(this).on('click', '.footer-info .started-btn', function() {
                 var has_card = false;
