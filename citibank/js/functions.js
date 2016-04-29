@@ -202,7 +202,7 @@
          =================================== */
         var path = window.location.href;
         var loc = path.substring(path.lastIndexOf('/') + 1);
-        if(loc == 'index.htm') {
+        if(loc == 'index.htm' || loc == '') {
             Cookies.remove('data');
             var arr_name = [];
             var arr_img = [];
