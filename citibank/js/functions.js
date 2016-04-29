@@ -22,7 +22,11 @@
         $('body').css('opacity', 1);
         if ($('.welcome-modal').length) {
             setTimeout(function() {
-                $(".welcome-modal").modal('show');
+                $(".welcome-modal").modal({
+                    show: true,
+                    backdrop: 'static',
+                    keyboard: false
+                });
             }, 1500);
         }
     });
@@ -202,7 +206,7 @@
          =================================== */
         var path = window.location.href;
         var loc = path.substring(path.lastIndexOf('/') + 1);
-        if(loc == 'index.htm' || loc == '') {
+        if (loc == 'index.htm' || loc == '') {
             Cookies.remove('data');
             var arr_name = [];
             var arr_img = [];
@@ -249,7 +253,7 @@
                 return false;
             });
         }
-        if(loc == 'complete.htm') {
+        if (loc == 'complete.htm') {
             var data = Cookies.getJSON('data');
             if (typeof data == 'undefined' || data == null) {
                 window.location.href = "index.htm";
