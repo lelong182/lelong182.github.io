@@ -204,7 +204,7 @@
         /* =================================
          ===  Cookies                 ====
          =================================== */
-        var path = window.location.href;
+        var path = window.location.href.split("?")[0];
         var loc = path.substring(path.lastIndexOf('/') + 1);
         if (loc == 'index.htm' || loc == '') {
             Cookies.remove('data');
