@@ -140,12 +140,17 @@
          =================================== */
         $(this).on('click', '.welcome-form .submit-btn', function() {
             var data_form = $('.welcome-form').serializeArray();
-            var in_list = $.inArray(data_form[0].value, list_country);
-            $(".welcome-modal").modal('hide');
-            if (in_list < 0) {
-                $(".error-modal").modal('show');
+            var val = data_form[0].value;
+            if (val == "" || val == null) {
+                alert('Please enter company name.');
+            } else {
+                var in_list = $.inArray(val, list_country);
+                $(".welcome-modal").modal('hide');
+                if (in_list < 0) {
+                    $(".error-modal").modal('show');
+                }
+                $('.welcome-form #search-company').val('');
             }
-            $('.welcome-form #search-company').val('');
             return false;
         });
         $(this).on('click', '.error-modal .back-welcome', function() {
@@ -153,10 +158,10 @@
             $(".welcome-modal").modal('show');
             return false;
         });
-        $(this).on('click', '.error-form .submit-btn', function() {
-            $(".error-modal").modal('hide');
-            return false;
-        });
+        // $(this).on('click', '.error-form .submit-btn', function() {
+        //     $(".error-modal").modal('hide');
+        //     return false;
+        // });
 
 
         /* =================================
@@ -188,11 +193,50 @@
                 return;
             }
         };
+        var validateEmail = function(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
         $(this).on('click', '.complete-content .continue-btn', function() {
-            checkHasHidden($(this).closest('.tab-pane').index() + 1);
-            $('html, body').stop().animate({
-                'scrollTop': $('.complete-content .nav-tabs').offset().top
-            }, 900, 'swing');
+            var pass = true;
+            var this_tab = $(this).closest('.complete-tab-details');
+            var message = "";
+            this_tab.find('.required').each(function() {
+                if (!this.value || this.value.charAt(0) == " ") {
+                    pass = false;
+                    $(this).focus();
+                    message = $(this).data('message');
+                    return false;
+                }
+            });
+            if(pass) {
+                this_tab.find('.credit-card').each(function() {
+                    if (!this.value || this.value == '0000') {
+                        pass = false;
+                        $(this).focus();
+                        message = $(this).data('message');
+                        return false;
+                    }
+                });
+            }
+            if(pass) {
+                this_tab.find('.email').each(function() {
+                    if (!this.value || !validateEmail(this.value) || this.value.charAt(0) == " ") {
+                        pass = false;
+                        $(this).focus();
+                        message = $(this).data('message');
+                        return false;
+                    }
+                });
+            }
+            if (pass) {
+                checkHasHidden($(this).closest('.tab-pane').index() + 1);
+                $('html, body').stop().animate({
+                    'scrollTop': $('.complete-content .nav-tabs').offset().top
+                }, 900, 'swing');
+            } else {
+                alert(message);
+            }
             return false;
         });
         $(this).on('click', '.complete-content .submit-btn', function() {

@@ -23,8 +23,8 @@
         <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
         <link rel="stylesheet" type="text/css" href="css/fancySelect.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.2.1" />
-
+        <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.2.2" />
+        <script src="js/commonkana.js"></script>
         <script src="js/libs/prefixfree.min.js"></script>
         <script src="js/libs/modernizr.js"></script>
         <!--[if lt IE 9]>
@@ -61,10 +61,17 @@
                     <p>Please click <a class="back-welcome">here</a> to try again, and ensure the spelling is correct.</p>
                     <p class="or">OR</p>
                     <p>If your organisation is not a part of Citibank’s corporate employee benefits program,<br />fill in your details below and a Citibank officer will get in touch to assist you.</p>
-                    <form class="error-form">
+                    <form name="CC_newcorppartners_I01"  id="CC_newcorppartners_I01" autocomplete="off" class="error-form" method="post">
+                        <input type="hidden" id="isFullScreen" name="isFullScreen" value="true">
+                        <input type="hidden" id="hasRecap" name="hasRecap" value="false">
+                        <input type="hidden" id="subject" name="subject" value="">
+                        <input type="hidden" id="fname" name="fname" value="">
+                        <input name="contact" value="" type="hidden">
+                        <input type="hidden" id="_paramOrder" name="_paramOrder" value="fname,contact,email,location,code,icid,ecid,lid,media">
+                        <input type="hidden" id="_paramAlias" name="_paramAlias" value="Full Name,Contact Number,E mail,Location, eOfferCode,icid,ecid,lid,media">
                         <input type="text" placeholder="Name" />
                         <input type="text" placeholder="Phone number" />
-                        <button class="submit-btn">Submit<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                        <button onclick="javascript=validateform(this.form);return false;" class="submit-btn">Submit<i class="fa fa-caret-right" aria-hidden="true"></i></button>
                     </form>
                 </div>
                 <!-- /.wrap-error -->
@@ -434,7 +441,8 @@
         <script src="js/libs/typeahead.bundle.min.js"></script>
         <script src="js/libs/bloodhound.min.js"></script>
         <script src="js/libs/jquery.mask.min.js"></script>
-        <script src="js/functions.js?v=1.2.1"></script>
+        <script src="js/validation.js"></script>
+        <script src="js/functions.js?v=1.2.2"></script>
 
     </body>
 </html>
