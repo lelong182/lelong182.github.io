@@ -14,26 +14,26 @@ gulp.task('js', function() {
     gulp.src([
         'assets/js/libs/jquery-1.11.3.min.js',
         'assets/js/libs/TweenMax.min.js',
-        'assets/js/728x90.js'
+        'assets/js/160x600.js'
     ])
         .pipe(concat('scripts.js'))
     .pipe(stripDebug())
     .pipe(uglify())
-    .pipe(gulp.dest('728x90/js/'));
+    .pipe(gulp.dest('160x600/js/'));
 });
 
 // CSS concat, autoprefix, minify
 gulp.task('css', function() {
     gulp.src([
         'assets/css/animate.min.css',
-        'assets/css/728x90.css'
+        'assets/css/160x600.css'
     ])
         .pipe(concatCss('styles.css'))
         .pipe(autoprefix('last 2 versions'))
         .pipe(minifyCss({
             compatibility: 'ie8'
         }))
-        .pipe(gulp.dest('728x90/css/'));
+        .pipe(gulp.dest('160x600/css/'));
 });
 
 // watch for JS/CSS changes
