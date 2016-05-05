@@ -39,17 +39,39 @@
             <div class="modal-dialog modal-lg">
                 <div class="wrap-welcome">
                     <h3>Welcome to Citibank!</h3>
-                    <p>Please enter your company name to proceed:</p>
+                    <p>Please enter your details to proceed:</p>
                     <form class="welcome-form">
-                        <div class="wrap-input">
-                            <div id="scrollable-dropdown-menu">
-                                <input type="text" name="keyword" id="search-company" data-provide="typeahead" placeholder="Company name" />
-                            </div>
+                        <input class="required" type="text" data-message="Please indicate your name." placeholder="Name" />
+                        <input class="onlynumber required" type="text" data-message="Please indicate your contact number." placeholder="Contact number" />
+                        <div id="scrollable-dropdown-menu">
+                            <input type="text" name="keyword" id="search-company" data-provide="typeahead" placeholder="Company name" />
                         </div>
-                        <button class="submit-btn"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                        <button class="submit-btn">Next<i class="fa fa-caret-right" aria-hidden="true"></i></button>
                     </form>
                 </div>
                 <!-- /.wrap-welcome -->
+            </div>
+        </div>
+
+        <div class="modal fade more-efficient-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="wrap-more-efficient">
+                    <p>Would you like to continue filling the form for a more efficient application process?</p>
+                    <form class="more-efficient-form">
+                        <button class="yes-btn">Yes, I do</button>
+                        <button class="no-btn">No, I don’t</button>
+                    </form>
+                </div>
+                <!-- /.wrap-more-efficient -->
+            </div>
+        </div>
+
+        <div class="modal fade no-more-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="wrap-no-more">
+                    <p>Not a problem if you are busy now, we will contact you within one business day to complete the final step!</p>
+                </div>
+                <!-- /.wrap-no-more -->
             </div>
         </div>
 
@@ -60,19 +82,7 @@
                     <h3>Sorry, company not found.</h3>
                     <p>Please click <a class="back-welcome">here</a> to try again, and ensure the spelling is correct.</p>
                     <p class="or">OR</p>
-                    <p>If your organisation is not a part of Citibank’s corporate employee benefits program,<br />fill in your details below and a Citibank officer will get in touch to assist you.</p>
-                    <form name="CC_newcorppartners_I01"  id="CC_newcorppartners_I01" autocomplete="off" class="error-form" method="post">
-                        <input type="hidden" id="isFullScreen" name="isFullScreen" value="true">
-                        <input type="hidden" id="hasRecap" name="hasRecap" value="false">
-                        <input type="hidden" id="subject" name="subject" value="">
-                        <input type="hidden" id="fname" name="fname" value="">
-                        <input name="contact" value="" type="hidden">
-                        <input type="hidden" id="_paramOrder" name="_paramOrder" value="fname,contact,email,location,code,icid,ecid,lid,media">
-                        <input type="hidden" id="_paramAlias" name="_paramAlias" value="Full Name,Contact Number,E mail,Location, eOfferCode,icid,ecid,lid,media">
-                        <input class="required" type="text" data-message="Please indicate your name." placeholder="Name" />
-                        <input class="onlynumber" type="text" placeholder="Phone number" />
-                        <button onclick="javascript=validateform(this.form);return false;" class="submit-btn">Submit<i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                    </form>
+                    <p>If your organisation is not a part of Citibank’s corporate employee benefits program, a Citibank officer will get in touch to assist you within one business day.</p>
                 </div>
                 <!-- /.wrap-error -->
             </div>

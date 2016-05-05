@@ -139,18 +139,43 @@
          ===  Popup                 ====
          =================================== */
         $(this).on('click', '.welcome-form .submit-btn', function() {
-            var data_form = $('.welcome-form').serializeArray();
-            var val = data_form[0].value;
-            if (val == "" || val == null) {
-                alert('Please enter company name.');
-            } else {
-                var in_list = $.inArray(val, list_country);
-                $(".welcome-modal").modal('hide');
-                if (in_list < 0) {
-                    $(".error-modal").modal('show');
+            var pass = true;
+            var message = "";
+            var val = $('#search-company').val();
+            $('.welcome-form').find('.required').each(function() {
+                if (!this.value || this.value.charAt(0) == " ") {
+                    pass = false;
+                    message = $(this).data('message');
+                    return false;
                 }
-                $('.welcome-form #search-company').val('');
+            });
+            if (pass) {
+                if (val == "" || val == null) {
+                    pass = false;
+                    message = 'Please enter company name.';
+                } else {
+                    var in_list = $.inArray(val, list_country);
+                    $(".welcome-modal").modal('hide');
+                    if (in_list < 0) {
+                        $(".error-modal").modal('show');
+                    } else {
+                        $(".more-efficient-modal").modal('show');
+                    }
+                    $('.welcome-form #search-company').val('');
+                }
             }
+            if (!pass) {
+                alert(message);
+            }
+            return false;
+        });
+        $(this).on('click', '.more-efficient-modal .yes-btn', function() {
+            $(".more-efficient-modal").modal('hide');
+            return false;
+        });
+        $(this).on('click', '.more-efficient-modal .no-btn', function() {
+            $(".more-efficient-modal").modal('hide');
+            $(".no-more-modal").modal('show');
             return false;
         });
         $(this).on('click', '.error-modal .back-welcome', function() {
@@ -158,14 +183,7 @@
             $(".welcome-modal").modal('show');
             return false;
         });
-        $('.error-form .required').blur(function() {
-            if (!this.value || this.value.charAt(0) == " ") {
-                alert($(this).data('message'));
-                setTimeout(function() {
-                    $('.error-form .required').focus();
-                }, 50);
-            }
-        });
+
         // $(this).on('click', '.error-form .submit-btn', function() {
         //     $(".error-modal").modal('hide');
         //     return false;
@@ -264,7 +282,7 @@
             var arr_img = [];
             var arr_earn = [];
             $(this).on('click', '.info-item .choose-link', function() {
-                if($('.preferred-item.active').length >= 3) {
+                if ($('.preferred-item.active').length >= 3) {
                     alert('You can apply for 3 cards at max!');
                 } else {
                     var this_item = $(this).closest('.preferred-item');
