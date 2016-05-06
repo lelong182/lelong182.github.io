@@ -94,7 +94,7 @@
         $(".wrap-general-declaration").mCustomScrollbar({
             callbacks: {
                 whileScrolling: function() {
-                    if(this.mcs.topPct == 100) {
+                    if (this.mcs.topPct == 100) {
                         $('.complete-content .submit-btn').removeClass('unread');
                     }
                 },
@@ -140,6 +140,22 @@
         }, {
             name: 'country',
             source: country,
+            limit: 1000
+        });
+
+        var list_current_bank = ["AFFIN BANK BERHAD", "ALLIANCE BANK", "AL-RAJHI", "AMBANK BERHAD", "AMEX", "BANK ISLAM BERHAD", "BANK KERJASAMA BERHAD", "BANK MUAMALAT", "BANK OF AMERICA", "BANK OF TOKYO-MITSUBISHI", "BANK PERTANIAN MALAYSIA AGROBA", "BANK SIMPANAN NASIONAL BE", "BNPP(BNP PARIBAS MALAYSIA", "CIMB BANK BERHAD", "CITIBANK BERHAD", "DEUTSCHE BANK", "EON BANK", "HONG LEONG BANK", "HSBC BANK BERHAD", "INDUSTRIAL &amp; COMMERCIAL BA", "JP MORGAN CHASE", "KUWAIT FINANCE HOUSE", "MAYBANK BERHAD", "MBF", "MIZUHO CORPORATE BANK", "OCBC BANK", "PUBLIC BANK", "RBS BANK", "RHB", "STANDARD CHARTERED BERHAD", "SUMITOMO MITSUI BANKING CORPOR", "UNITED OVERSEAS BERHAD"];
+        var current_bank = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.whitespace,
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            local: list_current_bank
+        });
+        $('#search-current-bank').typeahead({
+            hint: true,
+            highlight: true,
+            minLength: 1
+        }, {
+            name: 'current-bank',
+            source: current_bank,
             limit: 1000
         });
 
@@ -255,6 +271,16 @@
                 });
             }
             if (pass) {
+                this_tab.find('.tt-input').each(function() {
+                    if (!this.value || this.value.charAt(0) == " ") {
+                        pass = false;
+                        $(this).focus();
+                        message = $(this).data('message');
+                        return false;
+                    }
+                });
+            }
+            if (pass) {
                 this_tab.find('.email').each(function() {
                     if (!this.value || !validateEmail(this.value) || this.value.charAt(0) == " ") {
                         pass = false;
@@ -283,7 +309,7 @@
             });
         });
         $(this).on('click', '.complete-content .submit-btn', function() {
-            if($(this).hasClass('unread')) {
+            if ($(this).hasClass('unread')) {
                 alert('Please read the full terms and conditions.');
             } else {
                 alert('Complete.');
@@ -353,11 +379,15 @@
                         has_card = true;
                     }
                 });
-                $('.list-rewards-cat .css-checkbox').each(function() {
-                    if (this.checked) {
-                        has_cat = true;
-                    }
-                });
+                if (!$('.rewards-section').hasClass('hidden')) {
+                    $('.list-rewards-cat .css-checkbox').each(function() {
+                        if (this.checked) {
+                            has_cat = true;
+                        }
+                    });
+                } else {
+                    has_cat = true;
+                }
                 if (!has_card) {
                     alert('Please select your card.');
                 } else if (!has_cat) {
