@@ -320,7 +320,7 @@
         /* =================================
          ===  Cookies                 ====
          =================================== */
-        var path = document.location.href.split("?")[0];
+        var path = window.location.pathname.split("?")[0];
         var loc = path.substring(path.lastIndexOf('/') + 1);
         alert(loc);
         if (loc == 'index.htm' || loc == '') {
