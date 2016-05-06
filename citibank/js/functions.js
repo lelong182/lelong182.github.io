@@ -322,6 +322,7 @@
          =================================== */
         var path = window.location.href.split("?")[0];
         var loc = path.substring(path.lastIndexOf('/') + 1);
+        alert(loc);
         if (loc == 'index.htm' || loc == '') {
             Cookies.remove('data');
             var arr_name = [];
