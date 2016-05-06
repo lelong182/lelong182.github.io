@@ -139,8 +139,7 @@
             minLength: 1
         }, {
             name: 'country',
-            source: country,
-            limit: 1000
+            source: country
         });
 
         var list_current_bank = ["AFFIN BANK BERHAD", "ALLIANCE BANK", "AL-RAJHI", "AMBANK BERHAD", "AMEX", "BANK ISLAM BERHAD", "BANK KERJASAMA BERHAD", "BANK MUAMALAT", "BANK OF AMERICA", "BANK OF TOKYO-MITSUBISHI", "BANK PERTANIAN MALAYSIA AGROBA", "BANK SIMPANAN NASIONAL BE", "BNPP(BNP PARIBAS MALAYSIA", "CIMB BANK BERHAD", "CITIBANK BERHAD", "DEUTSCHE BANK", "EON BANK", "HONG LEONG BANK", "HSBC BANK BERHAD", "INDUSTRIAL &amp; COMMERCIAL BA", "JP MORGAN CHASE", "KUWAIT FINANCE HOUSE", "MAYBANK BERHAD", "MBF", "MIZUHO CORPORATE BANK", "OCBC BANK", "PUBLIC BANK", "RBS BANK", "RHB", "STANDARD CHARTERED BERHAD", "SUMITOMO MITSUI BANKING CORPOR", "UNITED OVERSEAS BERHAD"];
@@ -155,8 +154,7 @@
             minLength: 1
         }, {
             name: 'current-bank',
-            source: current_bank,
-            limit: 1000
+            source: current_bank
         });
 
 
