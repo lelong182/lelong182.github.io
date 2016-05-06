@@ -34,16 +34,6 @@
     $(document).ready(function() {
 
         /* =================================
-        ===  Minimal Menu                 ====
-        =================================== */
-        $('.minimal-menu').before('<label class=\"minimal-menu-button\" for=\"mobile-nav\"><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></label><input class=\"minimal-menu-button\" type=\"checkbox\" id=\"mobile-nav\" name=\"mobile-nav\" />');
-        $('.minimal-menu').find('ul.sub-menu').parent().addClass('submenu');
-        $('.minimal-menu').find('div.menu-wrapper').parent().addClass('megamenu submenu');
-        $('.minimal-menu').find('ul.sub-menu').before('<input class=\"show-submenu\" type=\"checkbox\" />');
-        $('.minimal-menu').find('div.menu-wrapper').before('<input class=\"show-submenu\" type=\"checkbox\" />');
-
-
-        /* =================================
         ===  Tooltip                 ====
         =================================== */
         if ($('[data-toggle="tooltip"]').length) {
