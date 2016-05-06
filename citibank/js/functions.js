@@ -320,7 +320,7 @@
         /* =================================
          ===  Cookies                 ====
          =================================== */
-        var path = window.location.href.split("?")[0];
+        var path = document.location.href.split("?")[0];
         var loc = path.substring(path.lastIndexOf('/') + 1);
         alert(loc);
         if (loc == 'index.htm' || loc == '') {
@@ -346,7 +346,6 @@
                     if ($('.preferred-item.active').length == 1) {
                         $('.footer-info').removeClass('hidden hidden2').adtop_animation('fadeInUp');
                     }
-                    $('.footer-info .earn').text(Math.max(...arr_earn));
                 }
             });
             $(this).on('click', '.info-item .remove-link', function() {
@@ -369,7 +368,6 @@
                         }, 400);
                     });
                 }
-                $('.footer-info .earn').text(Math.max(...arr_earn));
             });
             $(this).on('click', '.footer-info .started-btn', function() {
                 var has_card = false;
