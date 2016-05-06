@@ -11,6 +11,10 @@
         });
     };
 
+    Array.prototype.max = function() {
+        return Math.max.apply(Math, this);
+    };
+
     window.loading_screen = window.pleaseWait({
         logo: "images/logo.png",
         backgroundColor: '#00A7E6',
@@ -136,7 +140,7 @@
         $('#search-company').bind('typeahead:render ', function(e) {
             var input_val = e.currentTarget.value;
             $('.tt-dataset .tt-suggestion').each(function() {
-                if(!eval('/^' + input_val + '/gi.test($(this).text())')) {
+                if (!eval('/^' + input_val + '/gi.test($(this).text())')) {
                     $(this).hide();
                 }
             });
@@ -320,9 +324,8 @@
         /* =================================
          ===  Cookies                 ====
          =================================== */
-        var path = window.location.pathname.split("?")[0];
+        var path = window.location.href.split("?")[0];
         var loc = path.substring(path.lastIndexOf('/') + 1);
-        alert(loc);
         if (loc == 'index.htm' || loc == '') {
             Cookies.remove('data');
             var arr_name = [];
@@ -346,6 +349,8 @@
                     if ($('.preferred-item.active').length == 1) {
                         $('.footer-info').removeClass('hidden hidden2').adtop_animation('fadeInUp');
                     }
+                    var max_earn = arr_earn.max();
+                    $('.footer-info .earn').text(max_earn);
                 }
             });
             $(this).on('click', '.info-item .remove-link', function() {
@@ -368,6 +373,8 @@
                         }, 400);
                     });
                 }
+                var max_earn = arr_earn.max();
+                $('.footer-info .earn').text(max_earn);
             });
             $(this).on('click', '.footer-info .started-btn', function() {
                 var has_card = false;
