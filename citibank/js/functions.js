@@ -207,7 +207,11 @@
         });
         $(this).on('click', '.more-efficient-modal .no-btn', function() {
             $(".more-efficient-modal").modal('hide');
-            $(".no-more-modal").modal('show');
+            $(".no-more-modal").modal({
+                show: true,
+                backdrop: 'static',
+                keyboard: false
+            });
             return false;
         });
         $(this).on('click', '.error-modal .back-welcome', function() {
