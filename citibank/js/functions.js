@@ -524,7 +524,9 @@
                     var this_item = $(this).closest('.preferred-item');
                     this_item.addClass('active');
                     $(this).removeClass().addClass('remove-link').text('Remove card');
-                    $(this).closest('.info-item').removeClass('open');
+                    $(this).closest('.info-item').removeClass().addClass('hidden').delay(1000).queue(function() {
+                        $(this).removeClass('hidden').addClass('info-item').dequeue();
+                    });
                     arr_name.push(this_item.find('.item-name').text());
                     arr_img.push(this_item.find('.item-img').attr('src'));
                     arr_earn.push($(this).parent('.info-item').data('earn'));
@@ -543,10 +545,13 @@
                 }
             });
             $(this).on('click', '.info-item .remove-link', function() {
+
                 var this_item = $(this).closest('.preferred-item');
                 this_item.removeClass('active');
                 $(this).removeClass().addClass('choose-link').text('Choose card');
-                $(this).closest('.info-item').removeClass('open');
+                $(this).closest('.info-item').removeClass().addClass('hidden').delay(1000).queue(function() {
+                    $(this).removeClass('hidden').addClass('info-item').dequeue();
+                });
                 arr_name.splice(arr_name.indexOf(this_item.find('.item-name').text()), 1);
                 arr_img.splice(arr_img.indexOf(this_item.find('.item-img').attr('src')), 1);
                 arr_earn.splice(arr_earn.indexOf($(this).parent('.info-item').data('earn')), 1);
