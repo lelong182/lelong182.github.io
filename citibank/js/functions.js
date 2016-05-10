@@ -517,16 +517,13 @@
             var arr_name = [];
             var arr_img = [];
             var arr_earn = [];
-            $(this).on('click', '.info-item .choose-link', function() {
+            $(this).on('click', '.preferred-item .choose-link', function() {
                 if ($('.preferred-item.active').length >= 3) {
                     alert('You can apply for 3 cards at max!');
                 } else {
                     var this_item = $(this).closest('.preferred-item');
                     this_item.addClass('active');
                     $(this).removeClass().addClass('remove-link').text('Remove card');
-                    $(this).closest('.info-item').removeClass().addClass('hidden').delay(1000).queue(function() {
-                        $(this).removeClass('hidden').addClass('info-item').dequeue();
-                    });
                     arr_name.push(this_item.find('.item-name').text());
                     arr_img.push(this_item.find('.item-img').attr('src'));
                     arr_earn.push($(this).parent('.info-item').data('earn'));
@@ -535,7 +532,6 @@
                     }
                     $('.footer-info .wrap-text').text(arr_name.join(", "));
                     if ($('.preferred-item.active').length == 1) {
-                        $('.footer-info').removeClass('hidden hidden2').adtop_animation('fadeInUp');
                         $('html, body').stop().animate({
                             'scrollTop': $('.footer-info').offset().top
                         }, 2000, 'swing');
@@ -544,14 +540,10 @@
                     $('.footer-info .earn').text(max_earn);
                 }
             });
-            $(this).on('click', '.info-item .remove-link', function() {
-
+            $(this).on('click', '.preferred-item.active .remove-link', function() {
                 var this_item = $(this).closest('.preferred-item');
                 this_item.removeClass('active');
                 $(this).removeClass().addClass('choose-link').text('Choose card');
-                $(this).closest('.info-item').removeClass().addClass('hidden').delay(1000).queue(function() {
-                    $(this).removeClass('hidden').addClass('info-item').dequeue();
-                });
                 arr_name.splice(arr_name.indexOf(this_item.find('.item-name').text()), 1);
                 arr_img.splice(arr_img.indexOf(this_item.find('.item-img').attr('src')), 1);
                 arr_earn.splice(arr_earn.indexOf($(this).parent('.info-item').data('earn')), 1);
@@ -559,14 +551,6 @@
                     $('.footer-info .rewards-section').addClass('hidden');
                 }
                 $('.footer-info .wrap-text').text(arr_name.join(", "));
-                if (arr_name.length == 0) {
-                    $('.footer-info').adtop_animation('fadeOutDown', function() {
-                        $('.footer-info').addClass('hidden2');
-                        setTimeout(function() {
-                            $('.footer-info').addClass('hidden');
-                        }, 400);
-                    });
-                }
                 var max_earn = arr_earn.max();
                 $('.footer-info .earn').text(max_earn);
             });
