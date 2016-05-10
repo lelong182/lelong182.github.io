@@ -532,9 +532,9 @@
                     }
                     $('.footer-info .wrap-text').text(arr_name.join(", "));
                     if ($('.preferred-item.active').length == 1) {
-                        $('html, body').stop().animate({
-                            'scrollTop': $('.footer-info').offset().top
-                        }, 2000, 'swing');
+                        $('.footer-info').css({
+                            bottom: 0
+                        });
                     }
                     var max_earn = arr_earn.max();
                     $('.footer-info .earn').text(max_earn);
@@ -551,6 +551,11 @@
                     $('.footer-info .rewards-section').addClass('hidden');
                 }
                 $('.footer-info .wrap-text').text(arr_name.join(", "));
+                if ($('.preferred-item.active').length == 0) {
+                        $('.footer-info').css({
+                            bottom: '-100%'
+                        });
+                    }
                 var max_earn = arr_earn.max();
                 $('.footer-info .earn').text(max_earn);
             });
