@@ -41,12 +41,25 @@
                     <h3>Welcome to Citibank!</h3>
                     <p>Please enter your details to proceed:</p>
                     <form class="welcome-form">
-                        <input class="required" type="text" data-message="Please indicate your name." placeholder="Name" />
-                        <input class="onlynumber required" type="text" data-message="Please indicate your contact number." placeholder="Contact number" />
-                        <div class="scrollable-dropdown-menu">
-                            <input type="text" name="keyword" id="search-company" class="mgb-0" data-provide="typeahead" placeholder="Company name" />
+                        <div class="form-group">
+                            <input class="required" type="text" data-message="Please indicate your name." placeholder="Name" />
                         </div>
-                        <button class="submit-btn">Next<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-4 pdr-5 pdr-5-xs">
+                                    <input class="onlynumber next-input required" data-message="Please indicate your mobile number." maxlength="3" type="text" />
+                                </div>
+                                <div class="col-xs-8 pdl-0 pdl-0-xs">
+                                    <input class="onlynumber required" data-message="Please indicate your mobile number." placeholder="Mobile no." maxlength="8" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="scrollable-dropdown-menu">
+                                <input type="text" name="keyword" id="search-company" class="mgb-0" data-provide="typeahead" placeholder="Company name" />
+                            </div>
+                        </div>
+                        <button class="submit-btn check-length">Next<i class="fa fa-caret-right" aria-hidden="true"></i></button>
                     </form>
                 </div>
                 <!-- /.wrap-welcome -->
@@ -77,12 +90,11 @@
 
         <div class="modal fade error-modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg">
-                <button class="close-link" data-dismiss="modal"><img src="images/close-icon.png" alt="img" /></button>
                 <div class="wrap-error">
                     <h3>Sorry, company not found.</h3>
                     <p>Please click <a class="back-welcome">here</a> to try again, and ensure the spelling is correct.</p>
                     <p class="or">OR</p>
-                    <p>If your organisation is not a part of Citibank’s corporate employee benefits program, a Citibank officer will get in touch to assist you within one business day.</p>
+                    <p>If your organisation is not a part of Citibank’s corporate employee benefits program,<br />a Citibank officer will get in touch to assist you within one business day.</p>
                 </div>
                 <!-- /.wrap-error -->
             </div>
@@ -92,9 +104,9 @@
             <div class="container">
                 <span>CITIBANK MALAYSIA</span>
                 <ul>
-                    <li><a href="https://www.citibank.com.my/english/common/contact-us-faq.htm?lid=MYENCBLMQHETLContactUsMOI">CONTACT US</a></li>
-                    <li><a href="https://www.citibank.com.my/english/citi-online/security-tips/index.htm?lid=MYENCBLMQHETLSecurityMOI">SECURITY</a></li>
-                    <li><a href="http://www.findmyciti.com/?lid=MYENCBLMQHETLFindMyCitiMOI">FIND MY CITI</a></li>
+                    <li><a href="https://www.citibank.com.my/english/common/contact-us-faq.htm?lid=MYENCBLMQHETLContactUsMOI" target="_blank">CONTACT US</a></li>
+                    <li><a href="https://www.citibank.com.my/english/citi-online/security-tips/index.htm?lid=MYENCBLMQHETLSecurityMOI" target="_blank">SECURITY</a></li>
+                    <li><a href="http://www.findmyciti.com/?lid=MYENCBLMQHETLFindMyCitiMOI" target="_blank">FIND MY CITI</a></li>
                 </ul>
             </div>
         </div>
@@ -308,16 +320,6 @@
                                                         </div>
                                                         <div class="media-body">
                                                             Monday-Friday 1-for-1 drinks at The Coffee Bean &amp; Tea Leaf outlets
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="media">
-                                                        <div class="media-left">
-                                                            <img src="images/right-icon.png" alt="img" />
-                                                        </div>
-                                                        <div class="media-body">
-                                                            3X Citi Rewards points at popular places in town.
                                                         </div>
                                                     </div>
                                                 </li>
@@ -596,6 +598,16 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li>
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <img src="images/right-icon.png" alt="img" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            Up to 50% discounts with Citi World Privileges
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                             <a class="choose-link">Choose card</a>
                                         </div>
@@ -720,14 +732,14 @@
             <div class="container">
                 <div class="footer-1">
                     <ul>
-                        <li><a href="http://www.citigroup.com/citi/?lid=MYENCBLMQFOTLCitigroupMOI">CITIGROUP.COM</a></li>
-                        <li><a href="https://www.citibank.com.my/english/promo/facebook-disclaimer.htm?icid=MYQMUKQENMOIFO01"><img width="18" src="images/facebook-icon.png" alt="img" /></a></li>
+                        <li><a href="http://www.citigroup.com/citi/?lid=MYENCBLMQFOTLCitigroupMOI" target="_blank">CITIGROUP.COM</a></li>
+                        <li><a href="https://www.citibank.com.my/english/promo/facebook-disclaimer.htm?icid=MYQMUKQENMOIFO01" target="_blank"><img width="18" src="images/facebook-icon.png" alt="img" /></a></li>
                     </ul>
                     <ul>
-                        <li><a href="https://www.citibank.com.my/english/docs/global-disclaimer.htm?lid=MYENCBLMQFOTLTermsAndConditionsMOI">Terms & Conditions</a></li>
-                        <li><a href="https://www.citibank.com.my/english/docs/privacy-policy.htm?lid=MYENCBLMQFOTLPrivacyMOI">Privacy</a></li>
-                        <li><a href="https://www.citibank.com.my/careers/index.htm">Careers</a></li>
-                        <li><a href="https://www.citibank.com.my/english/docs/sitemap.htm?lid=MYENCBLMQFOTLSitemapMOI">Sitemap</a></li>
+                        <li><a href="https://www.citibank.com.my/english/docs/global-disclaimer.htm?lid=MYENCBLMQFOTLTermsAndConditionsMOI" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="https://www.citibank.com.my/english/docs/privacy-policy.htm?lid=MYENCBLMQFOTLPrivacyMOI" target="_blank">Privacy</a></li>
+                        <li><a href="https://www.citibank.com.my/careers/index.htm" target="_blank">Careers</a></li>
+                        <li><a href="https://www.citibank.com.my/english/docs/sitemap.htm?lid=MYENCBLMQFOTLSitemapMOI" target="_blank">Sitemap</a></li>
                     </ul>
                 </div>
                 <div class="footer-2">
@@ -747,7 +759,6 @@
         <script src="js/libs/js.cookie.js"></script>
         <script src="js/libs/jquery.easing.1.3.js"></script>
         <script src="js/libs/bootstrap.min.js"></script>
-        <script src="js/libs/jquery.sticky.js"></script>
         <script src="js/libs/onlynumber.js"></script>
         <script src="js/libs/fancySelect.js"></script>
         <script src="js/libs/jquery.mCustomScrollbar.concat.min.js"></script>

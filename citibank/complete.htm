@@ -39,9 +39,9 @@
             <div class="container">
                 <span>CITIBANK MALAYSIA</span>
                 <ul>
-                    <li><a href="https://www.citibank.com.my/english/common/contact-us-faq.htm?lid=MYENCBLMQHETLContactUsMOI">CONTACT US</a></li>
-                    <li><a href="https://www.citibank.com.my/english/citi-online/security-tips/index.htm?lid=MYENCBLMQHETLSecurityMOI">SECURITY</a></li>
-                    <li><a href="http://www.findmyciti.com/?lid=MYENCBLMQHETLFindMyCitiMOI">FIND MY CITI</a></li>
+                    <li><a href="https://www.citibank.com.my/english/common/contact-us-faq.htm?lid=MYENCBLMQHETLContactUsMOI" target="_blank">CONTACT US</a></li>
+                    <li><a href="https://www.citibank.com.my/english/citi-online/security-tips/index.htm?lid=MYENCBLMQHETLSecurityMOI" target="_blank">SECURITY</a></li>
+                    <li><a href="http://www.findmyciti.com/?lid=MYENCBLMQHETLFindMyCitiMOI" target="_blank">FIND MY CITI</a></li>
                 </ul>
             </div>
         </div>
@@ -548,11 +548,11 @@
                                         <div class="row">
                                             <div class="col-sm-6 pdr-10 mgb-30-xs">
                                                 <label>New NRIC No. or Passport No.</label>
-                                                <input class="custom-input required" maxlength="12" data-message="Please enter New NRIC No. or Passport No." type="text" />
+                                                <input class="custom-input onlynumber required" maxlength="12" data-message="Please enter New NRIC No. or Passport No." type="text" />
                                             </div>
                                             <div class="col-sm-6 pdl-10">
                                                 <label>Old NRIC No. (Optional)</label>
-                                                <input class="custom-input" maxlength="8" type="text" />
+                                                <input class="custom-input onlynumber" maxlength="8" type="text" />
                                             </div>
                                         </div>
                                     </div>
@@ -601,24 +601,24 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-sm-6 pdr-10 mgb-30-xs">
-                                                <label>Home No. <a data-toggle="tooltip" data-placement="top" title="If you don’t have a home number, please enter your mobile number"><img src="images/mark-icon-2.png" alt="img" /></a></label>
-                                                <div class="row">
+                                                <label>Home no. <a data-toggle="tooltip" data-placement="top" title="If you don’t have a home number, please enter your mobile number"><img src="images/mark-icon-2.png" alt="img" /></a></label>
+                                                <div class="row wrap-nummber" data-message="Please enter home number at least 10 digits total.">
                                                     <div class="col-xs-3 pdr-5 pdr-5-xs">
-                                                        <input class="custom-input onlynumber next-input required" data-message="Please indicate your home telephone." maxlength="3" type="text" />
+                                                        <input class="custom-input onlynumber next-input required first-zero" data-message="Please indicate your home number." maxlength="2" type="text" />
                                                     </div>
                                                     <div class="col-xs-9 pdl-5 pdl-5-xs">
-                                                        <input class="custom-input onlynumber required" data-message="Please indicate your home telephone." maxlength="8" type="text" />
+                                                        <input class="custom-input onlynumber required" data-message="Please indicate your home number." maxlength="8" type="text" />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 pdl-10">
-                                                <label>Mobile No.</label>
-                                                <div class="row">
+                                                <label>Mobile no.</label>
+                                                <div class="row wrap-nummber" data-message="Please enter mobile number at least 10 digits total.">
                                                     <div class="col-xs-3 pdr-5 pdr-5-xs">
-                                                        <input class="custom-input onlynumber next-input required" data-message="Please indicate your contact number." maxlength="3" type="text" />
+                                                        <input class="custom-input onlynumber next-input required" data-message="Please indicate your mobile number." maxlength="3" type="text" />
                                                     </div>
                                                     <div class="col-xs-9 pdl-5 pdl-5-xs">
-                                                        <input class="custom-input onlynumber required" data-message="Please indicate your contact number." maxlength="8" type="text" />
+                                                        <input class="custom-input onlynumber required" data-message="Please indicate your mobile number." maxlength="8" type="text" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -636,7 +636,7 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-sm-6 pdr-10 mgb-30-xs">
-                                                <label>Address 1 (Unit No.)</label>
+                                                <label>Address 1 (Unit no.)</label>
                                                 <input class="custom-input required" data-message="Please indicate your address." type="text" />
                                             </div>
                                             <div class="col-sm-6 pdl-10">
@@ -673,7 +673,7 @@
                                             </div>
                                             <div class="col-sm-3 pdl-10">
                                                 <label>Postcode</label>
-                                                <input class="custom-input onlynumber required" data-message="Please enter postcode." type="text" />
+                                                <input class="custom-input onlynumber required" maxlength="5" data-message="Please enter postcode." type="text" />
                                             </div>
                                         </div>
                                     </div>
@@ -692,7 +692,7 @@
                                             </div>
                                             <div class="col-sm-3 pdl-10">
                                                 <label>Number of years in residence</label>
-                                                <input class="custom-input onlynumber required" data-message="Please enter years in residence." type="text" />
+                                                <input class="custom-input onlynumber required" maxlength="2" data-message="Please enter years in residence." type="text" />
                                             </div>
                                         </div>
                                     </div>
@@ -833,13 +833,13 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-sm-6 pdr-10 mgb-30-xs">
-                                                <label>Mobile No.</label>
-                                                <div class="row">
+                                                <label>Mobile no.</label>
+                                                <div class="row wrap-nummber" data-message="Please enter mobile number at least 10 digits total.">
                                                     <div class="col-xs-3 pdr-5 pdr-5-xs">
-                                                        <input class="custom-input onlynumber required next-input" data-message="Please indicate your contact number." maxlength="3" type="text" />
+                                                        <input class="custom-input onlynumber required next-input" data-message="Please indicate your mobile number." maxlength="3" type="text" />
                                                     </div>
                                                     <div class="col-xs-9 pdl-5 pdl-5-xs">
-                                                        <input class="custom-input onlynumber required" data-message="Please indicate your contact number." maxlength="8" type="text" />
+                                                        <input class="custom-input onlynumber required" data-message="Please indicate your mobile number." maxlength="8" type="text" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -862,10 +862,10 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="mgb-0">Transaction notifications</label>
-                                        <div class="small-note mgb-15">For your security, Citibank will notify you via SMS of certain transactions made on your Citi credit card(s). You can choose to set your preferred SMS notifications threshold amount by logging on to <a href="https://www.citibank.com.my">www.citibank.com.my</a></div>
+                                        <div class="small-note mgb-15">For your security, Citibank will notify you via SMS of certain transactions made on your Citi credit card(s). You can choose to set your preferred SMS notifications threshold amount by logging on to <a href="https://www.citibank.com.my" target="_blank">www.citibank.com.my</a></div>
                                         <p><input type="radio" name="notifications" id="notifications-chk-1" class="css-radio" /><label for="notifications-chk-1" class="css-label-radio">Yes, I want to receive SMS notifications.</label></p>
                                         <p><input type="radio" name="notifications" id="notifications-chk-2" class="css-radio" /><label for="notifications-chk-2" class="css-label-radio">Yes, I want to receive notifications, but please notify me via email instead.</label></p>
-                                        <p><input type="radio" name="notifications" id="notifications-chk-3" class="css-radio" /><label for="notifications-chk-3" class="css-label-radio">No, I do not want to receive any notifications… may not be as effective and timely.</label></p>
+                                        <p><input type="radio" name="notifications" id="notifications-chk-3" class="css-radio" /><label for="notifications-chk-3" class="css-label-radio">No, I do not want to receive any notifications and I understand that detection of potential unauthorized transactions may not be as effective and timely.</label></p>
                                         <div class="small-note highlight mgb-25 mgt-20">Note: Option selected above will apply to all credit card(s) applied for and any existing credit card(s) you may have with Citibank.</div>
                                         <div class="small-note mgb-15">Citibank has strategic alliance partner(s) who have a range of products, services and offers which you may find useful.</div>
                                         <p><input type="radio" name="strategic" id="strategic-chk-1" class="css-radio" /><label for="strategic-chk-1" class="css-label-radio">Yes, I want to know more. Please share my personal data or information with your strategic alliance partner(s).</label></p>
@@ -882,16 +882,66 @@
                                         <input type="radio" name="debt-obligation" id="debt-obligation-chk-2" class="css-radio" value="0" /><label for="debt-obligation-chk-2" class="css-label-radio">No</label>
                                         <div class="small-note highlight mgt-10">Note: Any non-disclosure of complete and accurate information may impact the Bank's decision on your application. The approval of your application is at the Bank’s discretion.</div>
                                     </div>
+                                    <div class="yes-obligation hidden">
+                                        <div class="form-group">
+                                            <div class="row mgb-10">
+                                                <div class="col-sm-6 pdr-10 mgb-30-xs">
+                                                    <label>Type of debt obligations <a data-toggle="tooltip" data-placement="top" title="Monthly loan repayment obligations from non-banks, i.e. PTPTN"><img src="images/mark-icon-2.png" alt="img" /></a></label>
+                                                    <input class="custom-input required" data-message="Type of debt obligations is required" type="text" />
+                                                </div>
+                                                <div class="col-sm-6 pdl-10">
+                                                    <label>Amount of each monthly installment/payment (RM)</label>
+                                                    <input class="custom-input onlynumber required" type="text" maxlength="10" data-message="Amount of each monthly instalment is required." />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4 pdr-10 mgb-30-xs">
+                                                    <label>Outstanding balance (RM)</label>
+                                                    <input class="custom-input required" data-message="Outstanding balance is required." type="text" />
+                                                </div>
+                                                <div class="col-sm-4 pdr-10 pdl-10 mgb-30-xs">
+                                                    <label>Type of guarantee</label>
+                                                    <select class="custom-select required" data-message="Please choose type of guarantee.">
+                                                        <option value="">Please select</option>
+                                                        <option value="Self">Self</option>
+                                                        <option value="Joint">Joint</option>
+                                                        <option value="Guarantor">Guarantor</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4 pdl-10">
+                                                    <label>Name of non-bank</label>
+                                                    <input class="custom-input required" type="text" data-message="Name of non-bank is required." />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
-                                        <label class="mgb-0">Public figure declaration for Primary card (e.g. Ministerial/diplomatic positions)</label>
+                                        <label class="mgb-0">Public figure declaration for Primary card</label>
                                         <div class="small-note mgb-15">Are you or your family members holding or have held senior public office? <a data-toggle="tooltip" data-placement="top" title="e.g. Heads of states or of government, senior politicians, senior government, judicial or military officials, senior executives of state-owned corporations and important political party officials"><img src="images/mark-icon-2.png" alt="img" /></a></div>
-                                        <p><input type="radio" name="public-figure" id="public-figure-chk-1" class="css-radio" /><label for="public-figure-chk-1" class="css-label-radio">Currently holding/seeking</label></p>
-                                        <p><input type="radio" name="public-figure" id="public-figure-chk-2" class="css-radio" /><label for="public-figure-chk-2" class="css-label-radio">Have held</label></p>
-                                        <p><input type="radio" name="public-figure" id="public-figure-chk-3" class="css-radio" /><label for="public-figure-chk-3" class="css-label-radio">No, I/my family members do not hold, have never held, are not actively seeking and are not being considered for senior public office.</label></p>
+                                        <p><input type="radio" name="public-figure" id="public-figure-chk-1" class="css-radio" value="1" /><label for="public-figure-chk-1" class="css-label-radio">Currently holding/seeking</label></p>
+                                        <p><input type="radio" name="public-figure" id="public-figure-chk-2" class="css-radio" value="2" /><label for="public-figure-chk-2" class="css-label-radio">Have held</label></p>
+                                        <p><input type="radio" name="public-figure" id="public-figure-chk-3" class="css-radio" value="3" /><label for="public-figure-chk-3" class="css-label-radio">No, I/my family members do not hold, have never held, are not actively seeking and are not being considered for senior public office.</label></p>
+                                    </div>
+                                    <div class="yes-public hidden">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-4 pdr-10 mgb-30-xs">
+                                                    <label>Senior public office</label>
+                                                    <input class="custom-input required" data-message="Senior public office is required." type="text" />
+                                                </div>
+                                                <div class="col-sm-4 pdr-10 pdl-10 mgb-30-xs">
+                                                    <label>Position held</label>
+                                                    <input class="custom-input required" data-message="Position held is required." type="text" />
+                                                </div>
+                                                <div class="col-sm-4 pdl-10">
+                                                    <label>Position held from (MM/YYYY)</label>
+                                                    <input class="custom-input required month-format" data-message="Enter valid MM/YYYY." type="text" placeholder="MM/YYYY" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="wrap-general-declaration">
                                         <h4>GENERAL DECLARATION FOR CITIBANK CREDIT CARD</h4>
-                                        <h5>Please read the full terms and conditions by scrolling down till the end of the document.</h5>
                                         <p>I/We hereby declare, acknowledge, agree and confirm as follows:</p>
                                         <ol>
                                             <li>I/We warrant that all information furnished here is true, accurate and not misleading and I/We shall promptly notify the Bank if it ceases to be so and/or if there is any change to the information. I/We also understand that any non-disclosure of complete and accurate information may impact the Bank's decision on my/our application including the financing rate.</li>
@@ -931,6 +981,7 @@
                                         <h4>Citibank's Privacy Notice</h4>
                                         <p>Keeping personal data of individuals secure is a top priority for all of us at Citibank. Please visit us at www.citibank.com.my/privacyENG to view our Notice and Choice Principle Statement where we seek to outline how we intend to deliver all the rights and protections that you are entitled to in respect of your personal data. In addition, in the course of your banking relationships with Citibank, personal data of individual third parties such as your mandates, authorised signatories, shareholders, directors, guarantors and parties that have provided security to secure your obligations to Citibank, may have been provided to us as well. Please inform all such third parties to visit us at the above web link to view our Notice and Choice Principle Statement.</p>
                                     </div>
+                                    <div class="small-note mgb-15">Please read the full terms and conditions by scrolling down till the end of the document.</div>
                                     <div class="form-group">
                                         <input type="radio" id="terms-rd" class="css-radio-2" value="1" /><label for="terms-rd" class="css-label-radio-2">By clicking the SUBMIT button, you agree to be borne by the <span class="highlight has-border">Declarations and Terms</span> of this online application.</label>
                                     </div>
@@ -948,14 +999,14 @@
             <div class="container">
                 <div class="footer-1">
                     <ul>
-                        <li><a href="http://www.citigroup.com/citi/?lid=MYENCBLMQFOTLCitigroupMOI">CITIGROUP.COM</a></li>
-                        <li><a href="https://www.citibank.com.my/english/promo/facebook-disclaimer.htm?icid=MYQMUKQENMOIFO01"><img width="18" src="images/facebook-icon.png" alt="img" /></a></li>
+                        <li><a href="http://www.citigroup.com/citi/?lid=MYENCBLMQFOTLCitigroupMOI" target="_blank">CITIGROUP.COM</a></li>
+                        <li><a href="https://www.citibank.com.my/english/promo/facebook-disclaimer.htm?icid=MYQMUKQENMOIFO01" target="_blank"><img width="18" src="images/facebook-icon.png" alt="img" /></a></li>
                     </ul>
                     <ul>
-                        <li><a href="https://www.citibank.com.my/english/docs/global-disclaimer.htm?lid=MYENCBLMQFOTLTermsAndConditionsMOI">Terms & Conditions</a></li>
-                        <li><a href="https://www.citibank.com.my/english/docs/privacy-policy.htm?lid=MYENCBLMQFOTLPrivacyMOI">Privacy</a></li>
-                        <li><a href="https://www.citibank.com.my/careers/index.htm">Careers</a></li>
-                        <li><a href="https://www.citibank.com.my/english/docs/sitemap.htm?lid=MYENCBLMQFOTLSitemapMOI">Sitemap</a></li>
+                        <li><a href="https://www.citibank.com.my/english/docs/global-disclaimer.htm?lid=MYENCBLMQFOTLTermsAndConditionsMOI" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="https://www.citibank.com.my/english/docs/privacy-policy.htm?lid=MYENCBLMQFOTLPrivacyMOI" target="_blank">Privacy</a></li>
+                        <li><a href="https://www.citibank.com.my/careers/index.htm" target="_blank">Careers</a></li>
+                        <li><a href="https://www.citibank.com.my/english/docs/sitemap.htm?lid=MYENCBLMQFOTLSitemapMOI" target="_blank">Sitemap</a></li>
                     </ul>
                 </div>
                 <div class="footer-2">
@@ -975,7 +1026,6 @@
         <script src="js/libs/js.cookie.js"></script>
         <script src="js/libs/jquery.easing.1.3.js"></script>
         <script src="js/libs/bootstrap.min.js"></script>
-        <script src="js/libs/jquery.sticky.js"></script>
         <script src="js/libs/onlynumber.js"></script>
         <script src="js/libs/fancySelect.js"></script>
         <script src="js/libs/jquery.mCustomScrollbar.concat.min.js"></script>

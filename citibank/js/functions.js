@@ -98,16 +98,6 @@
 
 
         /* =================================
-         ===  StickyJS                 ====
-         =================================== */
-        if ($('.wrapper').length) {
-            $("header.header").sticky({
-                topSpacing: 0
-            });
-        }
-
-
-        /* =================================
          ===  Preferred Item                 ====
          =================================== */
         $(this).on('mouseover', '.preferred-item', function() {
@@ -178,6 +168,12 @@
                 }
             });
             if (pass) {
+                if ($(this).hasClass('check-length')) {
+                    pass = false;
+                    message = 'Please enter mobile number at least 10 digits total.';
+                }
+            }
+            if (pass) {
                 if (val == "" || val == null) {
                     pass = false;
                     message = 'Please enter company name.';
@@ -185,9 +181,17 @@
                     var in_list = $.inArray(val, list_country);
                     $(".welcome-modal").modal('hide');
                     if (in_list < 0) {
-                        $(".error-modal").modal('show');
+                        $(".error-modal").modal({
+                            show: true,
+                            backdrop: 'static',
+                            keyboard: false
+                        });
                     } else {
-                        $(".more-efficient-modal").modal('show');
+                        $(".more-efficient-modal").modal({
+                            show: true,
+                            backdrop: 'static',
+                            keyboard: false
+                        });
                     }
                     $('.welcome-form #search-company').val('');
                 }
@@ -211,11 +215,17 @@
             $(".welcome-modal").modal('show');
             return false;
         });
-
-        // $(this).on('click', '.error-form .submit-btn', function() {
-        //     $(".error-modal").modal('hide');
-        //     return false;
-        // });
+        $(this).on('keyup', '.welcome-form .onlynumber', function() {
+            var total_length = 0;
+            $('.welcome-form .onlynumber').each(function() {
+                total_length += $(this).val().length;
+            });
+            if (total_length >= 10) {
+                $('.welcome-form .submit-btn').removeClass('check-length');
+            } else {
+                $('.welcome-form .submit-btn').addClass('check-length');
+            }
+        });
 
 
         /* =================================
@@ -264,6 +274,13 @@
                 }
             });
             if (pass) {
+                var wrap_number = this_tab.find('.wrap-nummber');
+                if (wrap_number.hasClass('check-length')) {
+                    pass = false;
+                    message = wrap_number.data('message');
+                }
+            }
+            if (pass) {
                 this_tab.find('.credit-card').each(function() {
                     if (this.value == '0000') {
                         pass = false;
@@ -303,7 +320,7 @@
             }
             return false;
         });
-        $('.complete-content .next-input').each(function() {
+        $('.next-input').each(function() {
             var this_input = $(this);
             this_input.keyup(function() {
                 if (this_input.val().length >= this_input.attr('maxlength')) {
@@ -311,13 +328,178 @@
                 }
             });
         });
+        $(this).on('keyup', '.first-zero', function() {
+            if ($(this).val().charAt(0) != 0 || $(this).val().charAt(0) != '0') {
+                $(this).val('');
+                $(this).focus();
+                alert('First box allows two digits only (must start with 0).');
+            }
+        });
         $(this).on('click', '.complete-content .submit-btn', function() {
-            if ($(this).hasClass('unread')) {
-                alert('Please read the full terms and conditions.');
+            if (!$('.yes-obligation').hasClass('hidden')) {
+                var this_section1 = $('.yes-obligation');
+                var pass1 = true;
+                var message1 = "";
+                this_section1.find('.required').each(function() {
+                    if (!this.value || this.value.charAt(0) == " ") {
+                        pass1 = false;
+                        $(this).focus();
+                        message1 = $(this).data('message');
+                        return false;
+                    }
+                });
+                if (pass1) {
+                    var wrap_number = this_section1.find('.wrap-nummber');
+                    if (wrap_number.hasClass('check-length')) {
+                        pass1 = false;
+                        message1 = wrap_number.data('message');
+                    }
+                }
+                if (pass1) {
+                    this_section1.find('.credit-card').each(function() {
+                        if (this.value == '0000') {
+                            pass1 = false;
+                            $(this).focus();
+                            message1 = $(this).data('message');
+                            return false;
+                        }
+                    });
+                }
+                if (pass1) {
+                    this_section1.find('.tt-input').each(function() {
+                        if (!this.value || this.value.charAt(0) == " ") {
+                            pass1 = false;
+                            $(this).focus();
+                            message1 = $(this).data('message');
+                            return false;
+                        }
+                    });
+                }
+                if (pass1) {
+                    this_section1.find('.email').each(function() {
+                        if (!this.value || !validateEmail(this.value) || this.value.charAt(0) == " ") {
+                            pass1 = false;
+                            $(this).focus();
+                            message1 = $(this).data('message');
+                            return false;
+                        }
+                    });
+                }
+                if (pass1) {
+                    if ($(this).hasClass('unread')) {
+                        pass1 = false;
+                        message1 = 'Please read the full terms and conditions by scrolling down till the end of the document.';
+                    }
+                }
+                if (pass1) {
+                    alert('Complete!');
+                } else {
+                    alert(message1);
+                }
+            } else if (!$('.yes-public').hasClass('hidden')) {
+                var this_section2 = $('.yes-public');
+                var pass2 = true;
+                var message2 = "";
+                this_section2.find('.required').each(function() {
+                    if (!this.value || this.value.charAt(0) == " ") {
+                        pass2 = false;
+                        $(this).focus();
+                        message2 = $(this).data('message');
+                        return false;
+                    }
+                });
+                if (pass2) {
+                    var wrap_number = this_section2.find('.wrap-nummber');
+                    if (wrap_number.hasClass('check-length')) {
+                        pass2 = false;
+                        message2 = wrap_number.data('message');
+                    }
+                }
+                if (pass2) {
+                    this_section2.find('.credit-card').each(function() {
+                        if (this.value == '0000') {
+                            pass2 = false;
+                            $(this).focus();
+                            message2 = $(this).data('message');
+                            return false;
+                        }
+                    });
+                }
+                if (pass2) {
+                    this_section2.find('.tt-input').each(function() {
+                        if (!this.value || this.value.charAt(0) == " ") {
+                            pass2 = false;
+                            $(this).focus();
+                            message2 = $(this).data('message');
+                            return false;
+                        }
+                    });
+                }
+                if (pass2) {
+                    this_section2.find('.email').each(function() {
+                        if (!this.value || !validateEmail(this.value) || this.value.charAt(0) == " ") {
+                            pass2 = false;
+                            $(this).focus();
+                            message2 = $(this).data('message');
+                            return false;
+                        }
+                    });
+                }
+                if (pass2) {
+                    if ($(this).hasClass('unread')) {
+                        pass2 = false;
+                        message2 = 'Please read the full terms and conditions by scrolling down till the end of the document.';
+                    }
+                }
+                if (pass2) {
+                    alert('Complete!');
+                } else {
+                    alert(message2);
+                }
             } else {
-                alert('Complete.');
+                var pass = true;
+                var message = "";
+                if (pass) {
+                    if ($(this).hasClass('unread')) {
+                        pass = false;
+                        message = 'Please read the full terms and conditions by scrolling down till the end of the document.';
+                    }
+                }
+                if (pass) {
+                    alert('Complete!');
+                } else {
+                    alert(message);
+                }
             }
             return false;
+        });
+        $(this).on('keyup', '.wrap-nummber .onlynumber', function() {
+            var total_length = 0;
+            var this_wrap = $(this).closest('.wrap-nummber');
+            this_wrap.find('.onlynumber').each(function() {
+                total_length += $(this).val().length;
+            });
+            if (total_length >= 10) {
+                this_wrap.removeClass('check-length');
+            } else {
+                this_wrap.addClass('check-length');
+            }
+        });
+        $(this).on('click', '.complete-tab-details input[name="debt-obligation"]', function() {
+            var val = $(this).val();
+            if (this.checked && val == 1) {
+                $('.complete-tab-details .yes-obligation').removeClass('hidden');
+            } else {
+                $('.complete-tab-details .yes-obligation').addClass('hidden');
+            }
+        });
+        $(this).on('click', '.complete-tab-details input[name="public-figure"]', function() {
+            var val = $(this).val();
+            if (this.checked && (val == 1 || val == 2)) {
+                $('.complete-tab-details .yes-public').removeClass('hidden');
+            } else {
+                $('.complete-tab-details .yes-public').addClass('hidden');
+            }
         });
 
 
@@ -348,6 +530,9 @@
                     $('.footer-info .wrap-text').text(arr_name.join(", "));
                     if ($('.preferred-item.active').length == 1) {
                         $('.footer-info').removeClass('hidden hidden2').adtop_animation('fadeInUp');
+                        $('html, body').stop().animate({
+                            'scrollTop': $('.footer-info').offset().top
+                        }, 2000, 'swing');
                     }
                     var max_earn = arr_earn.max();
                     $('.footer-info .earn').text(max_earn);
