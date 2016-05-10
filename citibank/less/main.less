@@ -1261,10 +1261,14 @@ FOOTER INFO
 ----------------------------------------- */
 .footer-info {
     background: #004786 url("../images/footer-info-bg.png") repeat-x center top;
+    bottom: 0;
+    color: #fff;
     min-height: 227px;
     padding-bottom: 30px;
-    color: #FFF;
-    transition: all 0.3s ease;
+    position: fixed;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    z-index: 100;
 
     @media (max-width:@screen-sm-max) {
         padding-bottom: 35px;
