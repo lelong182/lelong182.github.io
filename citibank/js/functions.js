@@ -37,6 +37,8 @@
 
     $(document).ready(function() {
 
+        vex.defaultOptions.className = 'vex-theme-plain';
+
         /* =================================
         ===  Tooltip                 ====
         =================================== */
@@ -197,7 +199,7 @@
                 }
             }
             if (!pass) {
-                alert(message);
+                vex.dialog.alert(message);
             }
             return false;
         });
@@ -316,7 +318,7 @@
                     'scrollTop': $('.complete-content .nav-tabs').offset().top
                 }, 900, 'swing');
             } else {
-                alert(message);
+                vex.dialog.alert(message);
             }
             return false;
         });
@@ -332,7 +334,7 @@
             var that = this;
             if ($(that).val().charAt(0) != 0 || $(that).val().charAt(0) != '0') {
                 $(that).val('');
-                alert('Include area code e.g. 03 23838888');
+                vex.dialog.alert('Include area code e.g. 03 23838888');
                 setTimeout(function() {
                     $(that).focus();
                 }, 0);
@@ -395,9 +397,9 @@
                     }
                 }
                 if (pass1) {
-                    alert('Complete!');
+                    vex.dialog.alert('Complete!');
                 } else {
-                    alert(message1);
+                    vex.dialog.alert(message1);
                 }
             } else if (!$('.yes-public').hasClass('hidden')) {
                 var this_section2 = $('.yes-public');
@@ -455,9 +457,9 @@
                     }
                 }
                 if (pass2) {
-                    alert('Complete!');
+                    vex.dialog.alert('Complete!');
                 } else {
-                    alert(message2);
+                    vex.dialog.alert(message2);
                 }
             } else {
                 var pass = true;
@@ -469,9 +471,9 @@
                     }
                 }
                 if (pass) {
-                    alert('Complete!');
+                    vex.dialog.alert('Complete!');
                 } else {
-                    alert(message);
+                    vex.dialog.alert(message);
                 }
             }
             return false;
@@ -533,7 +535,7 @@
             });
             $(this).on('click', '.preferred-item .choose-link', function() {
                 if ($('.preferred-item.active').length >= 3) {
-                    alert('You can apply for 3 cards at max!');
+                    vex.dialog.alert('You can apply for 3 cards at max!');
                 } else {
                     var this_item = $(this).closest('.preferred-item');
                     this_item.addClass('active');
@@ -593,9 +595,9 @@
                     has_cat = true;
                 }
                 if (!has_card) {
-                    alert('Please select your card.');
+                    vex.dialog.alert('Please select your card.');
                 } else if (!has_cat) {
-                    alert('Please select Rewards Categories.');
+                    vex.dialog.alert('Please select Rewards Categories.');
                 } else {
                     Cookies.set('data', {
                         name: arr_name,
