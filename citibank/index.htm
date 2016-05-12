@@ -23,7 +23,7 @@
         <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
         <link rel="stylesheet" type="text/css" href="css/fancySelect.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.2.11" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.2.12" />
         <script src="js/commonkana.js"></script>
         <script src="js/libs/prefixfree.min.js"></script>
         <script src="js/libs/modernizr.js"></script>
@@ -45,14 +45,7 @@
                             <input class="required" type="text" data-message="Please indicate your name." placeholder="Name" />
                         </div>
                         <div class="form-group">
-                            <div class="row">
-                                <div class="col-xs-4 pdr-5 pdr-5-xs">
-                                    <input class="onlynumber next-input required" data-message="Please indicate your mobile number." maxlength="3" type="text" />
-                                </div>
-                                <div class="col-xs-8 pdl-0 pdl-0-xs">
-                                    <input class="onlynumber required" data-message="Please indicate your mobile number." placeholder="Mobile no." maxlength="8" type="text" />
-                                </div>
-                            </div>
+                            <input class="onlynumber required" data-message="Please indicate your mobile number." placeholder="Mobile no." maxlength="11" type="text" />
                         </div>
                         <div class="form-group">
                             <div class="scrollable-dropdown-menu">
@@ -320,6 +313,16 @@
                                                         </div>
                                                         <div class="media-body">
                                                             Monday-Friday 1-for-1 drinks at The Coffee Bean &amp; Tea Leaf outlets
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <img src="images/right-icon.png" alt="img" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            3X Citi Rewards points at popular places in town
                                                         </div>
                                                     </div>
                                                 </li>
@@ -665,62 +668,64 @@
             </div>
         </div>
         <!-- /.main -->
-
-        <div class="footer-info">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>You are applying for -<br /><span class="wrap-text"></span></h3>
-                        <span class="apply-label">Here is what you need to apply ></span>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <span class="wrap-img">
-                                            <img src="images/clock-icon.png" alt="img" />
-                                        </span>
-                                        Around 5 minutes to<br />complete the application
-                                    </li>
-                                    <li>
-                                        <span class="wrap-img">
-                                            <img src="images/money-icon.png" alt="img" />
-                                        </span>
-                                        Earn more than<br />RM<span class="earn"></span>K a year
-                                    </li>
-                                    <li>
-                                        <span class="wrap-img">
-                                            <img src="images/person-icon.png" alt="img" />
-                                        </span>
-                                        <div class="mgt-10">Be 21 years or older</div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="rewards-section hidden col-md-4 col-sm-6">
-                                <h4>Please tick two preferred rewards categories: <a data-toggle="tooltip" data-placement="top" title="Pick your two preferred rewards categories, which will be complimentary in the first year for new customers. The third category onwards is subject to a fee charge."><img src="images/mark-icon.png" alt="img" /></a></h4>
-                                <ul class="list-rewards-cat">
-                                    <li>
-                                        <input type="checkbox" id="rewards-cat-1" class="css-checkbox" /><label for="rewards-cat-1" class="css-label mgb-10">Shopping</label>
-                                        <input type="checkbox" id="rewards-cat-2" class="css-checkbox" /><label for="rewards-cat-2" class="css-label mgb-10">Home</label>
-                                        <input type="checkbox" id="rewards-cat-3" class="css-checkbox" /><label for="rewards-cat-3" class="css-label mgb-10">Entertainment</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="rewards-cat-4" class="css-checkbox" /><label for="rewards-cat-4" class="css-label mgb-10">Driving</label>
-                                        <input type="checkbox" id="rewards-cat-5" class="css-checkbox" /><label for="rewards-cat-5" class="css-label mgb-10">Travel</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-sm-12">
-                                <a class="started-btn">Let’s get started</a>
+        
+        <div class="wrap-footer-info">
+            <div class="footer-info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>You are applying for -<br /><span class="wrap-text"></span></h3>
+                            <span class="apply-label">Here is what you need to apply ></span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6">
+                                    <ul>
+                                        <li>
+                                            <span class="wrap-img">
+                                                <img src="images/clock-icon.png" alt="img" />
+                                            </span>
+                                            Around 5 minutes to<br />complete the application
+                                        </li>
+                                        <li>
+                                            <span class="wrap-img">
+                                                <img src="images/money-icon.png" alt="img" />
+                                            </span>
+                                            Earn more than<br />RM<span class="earn"></span>K a year
+                                        </li>
+                                        <li>
+                                            <span class="wrap-img">
+                                                <img src="images/person-icon.png" alt="img" />
+                                            </span>
+                                            <div class="mgt-10">Be 21 years or older</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="rewards-section hidden col-md-4 col-sm-6">
+                                    <h4>Please tick two preferred rewards categories: <a data-toggle="tooltip" data-placement="top" title="Pick your two preferred rewards categories, which will be complimentary in the first year for new customers. The third category onwards is subject to a fee charge."><img src="images/mark-icon.png" alt="img" /></a></h4>
+                                    <ul class="list-rewards-cat">
+                                        <li>
+                                            <input type="checkbox" id="rewards-cat-1" class="css-checkbox" /><label for="rewards-cat-1" class="css-label mgb-10">Shopping</label>
+                                            <input type="checkbox" id="rewards-cat-2" class="css-checkbox" /><label for="rewards-cat-2" class="css-label mgb-10">Home</label>
+                                            <input type="checkbox" id="rewards-cat-3" class="css-checkbox" /><label for="rewards-cat-3" class="css-label mgb-10">Entertainment</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="rewards-cat-4" class="css-checkbox" /><label for="rewards-cat-4" class="css-label mgb-10">Driving</label>
+                                            <input type="checkbox" id="rewards-cat-5" class="css-checkbox" /><label for="rewards-cat-5" class="css-label mgb-10">Travel</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <a class="started-btn">Let’s get started</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- /.footer-info -->
         </div>
-        <!-- /.footer-info -->
-
+            
         <div class="note">
             <div class="container">
                 Note: In accordance with our privacy policy, any details that you submit for the purpose mentioned above will not be shared with third parties.
@@ -766,7 +771,7 @@
         <script src="js/libs/bloodhound.min.js"></script>
         <script src="js/libs/jquery.mask.min.js"></script>
         <script src="js/validation.js"></script>
-        <script src="js/functions.js?v=1.2.11"></script>
+        <script src="js/functions.js?v=1.2.12"></script>
 
     </body>
 </html>

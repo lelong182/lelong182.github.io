@@ -23,7 +23,7 @@
         <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
         <link rel="stylesheet" type="text/css" href="css/fancySelect.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.2.11" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.2.12" />
         <script src="js/commonkana.js"></script>
         <script src="js/libs/prefixfree.min.js"></script>
         <script src="js/libs/modernizr.js"></script>
@@ -208,7 +208,7 @@
                                                 <input class="custom-input required" data-message="Please enter your full name." type="text" />
                                             </div>
                                             <div class="col-sm-6 pdl-10">
-                                                <label>Name to appear on card <a data-toggle="tooltip" data-placement="top" title="The card can only fit max. 19 letters. If your name on card is different from your NRIC, we might take a little longer to verify your application."><img src="images/mark-icon-2.png" alt="img" /></a></label>
+                                                <label>Name to appear on card <a data-toggle="tooltip" data-placement="top" title="The card can only fit max. 19 letters. If your name on card is different from your NRIC, we might take a little longer to verify your application"><img src="images/mark-icon-2.png" alt="img" /></a></label>
                                                 <input class="custom-input required" data-message="Please enter name card." type="text" />
                                             </div>
                                         </div>
@@ -706,19 +706,19 @@
                                             <div class="col-sm-6 pdr-10 mgb-30-xs">
                                                 <div class="row">
                                                     <div class="col-sm-7 pdr-10 mgb-30-xs">
-                                                        <label>Work No.</label>
-                                                        <div class="row">
-                                                            <div class="col-xs-5 pdr-5 pdr-5-xs">
-                                                                <input class="custom-input onlynumber required" data-message="Please indicate your work telephone." maxlength="3" type="text" />
+                                                        <label>Work no.</label>
+                                                        <div class="row wrap-nummber" data-message="Please enter work number at least 10 digits total.">
+                                                            <div class="col-xs-3 pdr-5 pdr-5-xs">
+                                                                <input class="custom-input onlynumber next-input required first-zero" data-message="Please indicate your work number." maxlength="2" type="text" />
                                                             </div>
-                                                            <div class="col-xs-7 pdl-5 pdl-5-xs">
-                                                                <input class="custom-input onlynumber required" data-message="Please indicate your work telephone." type="text" />
+                                                            <div class="col-xs-9 pdl-5 pdl-5-xs">
+                                                                <input class="custom-input onlynumber required" data-message="Please indicate your work number." maxlength="8" type="text" />
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-5 pdl-10">
-                                                        <label>Extension No. (Optional)</label>
-                                                        <input class="custom-input" type="text" />
+                                                        <label>Extension no. (Optional)</label>
+                                                        <input class="custom-input onlynumber" maxlength="6" type="text" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -756,7 +756,7 @@
                                             </div>
                                             <div class="col-sm-3 pdl-10">
                                                 <label>Postcode</label>
-                                                <input class="custom-input onlynumber required" data-message="Please enter postcode." type="text" />
+                                                <input class="custom-input onlynumber required" maxlength="5" data-message="Please enter postcode." type="text" />
                                             </div>
                                         </div>
                                     </div>
@@ -920,7 +920,7 @@
                                         <div class="small-note mgb-15">Are you or your family members holding or have held senior public office? <a data-toggle="tooltip" data-placement="top" title="e.g. Heads of states or of government, senior politicians, senior government, judicial or military officials, senior executives of state-owned corporations and important political party officials"><img src="images/mark-icon-2.png" alt="img" /></a></div>
                                         <p><input type="radio" name="public-figure" id="public-figure-chk-1" class="css-radio" value="1" /><label for="public-figure-chk-1" class="css-label-radio">Currently holding/seeking</label></p>
                                         <p><input type="radio" name="public-figure" id="public-figure-chk-2" class="css-radio" value="2" /><label for="public-figure-chk-2" class="css-label-radio">Have held</label></p>
-                                        <p><input type="radio" name="public-figure" id="public-figure-chk-3" class="css-radio" value="3" /><label for="public-figure-chk-3" class="css-label-radio">No, I/my family members do not hold, have never held, are not actively seeking and are not being considered for senior public office.</label></p>
+                                        <p><input type="radio" name="public-figure" id="public-figure-chk-3" class="css-radio" value="3" /><label for="public-figure-chk-3" class="css-label-radio">No, I/my immediate family members do not hold, have never held, are not actively seeking and are not being considered for senior public office.</label></p>
                                     </div>
                                     <div class="yes-public hidden">
                                         <div class="form-group">
@@ -1033,7 +1033,7 @@
         <script src="js/libs/bloodhound.min.js"></script>
         <script src="js/libs/jquery.mask.min.js"></script>
         <script src="js/validation.js"></script>
-        <script src="js/functions.js?v=1.2.11"></script>
+        <script src="js/functions.js?v=1.2.12"></script>
 
     </body>
 </html>

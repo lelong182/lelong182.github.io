@@ -220,11 +220,7 @@
             return false;
         });
         $(this).on('keyup', '.welcome-form .onlynumber', function() {
-            var total_length = 0;
-            $('.welcome-form .onlynumber').each(function() {
-                total_length += $(this).val().length;
-            });
-            if (total_length >= 10) {
+            if ($(this).val().length >= 10) {
                 $('.welcome-form .submit-btn').removeClass('check-length');
             } else {
                 $('.welcome-form .submit-btn').addClass('check-length');
@@ -332,11 +328,14 @@
                 }
             });
         });
-        $(this).on('keyup', '.first-zero', function() {
-            if ($(this).val().charAt(0) != 0 || $(this).val().charAt(0) != '0') {
-                $(this).val('');
-                $(this).focus();
-                alert('First box allows two digits only (must start with 0).');
+        $(this).on('blur', '.first-zero', function() {
+            var that = this;
+            if ($(that).val().charAt(0) != 0 || $(that).val().charAt(0) != '0') {
+                $(that).val('');
+                alert('Include area code e.g. 03 23838888');
+                setTimeout(function() {
+                    $(that).focus();
+                }, 0);
             }
         });
         $(this).on('click', '.complete-content .submit-btn', function() {
@@ -517,6 +516,22 @@
             var arr_name = [];
             var arr_img = [];
             var arr_earn = [];
+            $(window).scroll(function() {
+                var scroll_bottom_height = $(window).scrollTop() + $(window).height();
+                var note_top_offset = $('.wrap-footer-info').offset().top + $('.wrap-footer-info').height();
+                console.log('1: ' + scroll_bottom_height);
+                console.log('2: ' + note_top_offset);
+                console.log('---*******************---');
+                if (scroll_bottom_height > note_top_offset) {
+                    $('.footer-info').css({
+                        position: 'absolute'
+                    });
+                } else {
+                    $('.footer-info').css({
+                        position: 'fixed'
+                    });
+                }
+            });
             $(this).on('click', '.preferred-item .choose-link', function() {
                 if ($('.preferred-item.active').length >= 3) {
                     alert('You can apply for 3 cards at max!');
@@ -552,10 +567,10 @@
                 }
                 $('.footer-info .wrap-text').text(arr_name.join(", "));
                 if ($('.preferred-item.active').length == 0) {
-                        $('.footer-info').css({
-                            bottom: '-100%'
-                        });
-                    }
+                    $('.footer-info').css({
+                        bottom: '-100%'
+                    });
+                }
                 var max_earn = arr_earn.max();
                 $('.footer-info .earn').text(max_earn);
             });
