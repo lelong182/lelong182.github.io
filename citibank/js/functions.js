@@ -518,10 +518,7 @@
             var arr_earn = [];
             $(window).scroll(function() {
                 var scroll_bottom_height = $(window).scrollTop() + $(window).height();
-                var note_top_offset = $('.wrap-footer-info').offset().top + $('.wrap-footer-info').height();
-                console.log('1: ' + scroll_bottom_height);
-                console.log('2: ' + note_top_offset);
-                console.log('---*******************---');
+                var note_top_offset = $('.wrap-footer-info.open').offset().top + $('.wrap-footer-info').height();
                 if (scroll_bottom_height > note_top_offset) {
                     $('.footer-info').css({
                         position: 'absolute'
@@ -545,6 +542,7 @@
                     if ($(this).parent('.info-item').data('type') == 'rewards') {
                         $('.footer-info .rewards-section').removeClass('hidden');
                     }
+                    $('.wrap-footer-info').addClass('open');
                     $('.footer-info .wrap-text').text(arr_name.join(", "));
                     if ($('.preferred-item.active').length == 1) {
                         $('.footer-info').css({
@@ -567,6 +565,7 @@
                 }
                 $('.footer-info .wrap-text').text(arr_name.join(", "));
                 if ($('.preferred-item.active').length == 0) {
+                    $('.wrap-footer-info').removeClass('open');
                     $('.footer-info').css({
                         bottom: '-100%'
                     });
