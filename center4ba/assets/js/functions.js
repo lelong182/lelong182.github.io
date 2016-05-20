@@ -232,8 +232,8 @@ function myChart(chartId, opts) {
         chartCursor.pan = true;
         chartCursor.categoryBalloonColor = '#3498db';
         chartCursor.cursorColor = '#3498db';
-        chartCursor.valueLineEnabled = true;
-        chartCursor.valueLineBalloonEnabled = true;
+        // chartCursor.valueLineEnabled = true;
+        // chartCursor.valueLineBalloonEnabled = true;
         chart.addChartCursor(chartCursor);
 
         var chartScrollbar = new AmCharts.ChartScrollbar();
