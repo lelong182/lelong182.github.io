@@ -61,9 +61,11 @@ TOPBAR
                 display: inline-block;
                 line-height: 1;
                 padding-right: 5px;
+                margin-right: 5px;
 
                 &:last-child {
                     border-right: none;
+                    padding-right: 0;
                 }
             }
             &.current-menu-item {
@@ -130,12 +132,37 @@ TOPBAR
         @media (max-width:@screen-xs-max) {
             right: 60px;
         }
-        li {
-            list-style: none;
+        > li {
+            border-right: 2px solid #333;
+            display: inline-block;
+            line-height: 1;
+            padding-right: 5px;
 
+            &:nth-child(2) {
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+        li {
+            &.user-menu {
+                border-right: none;
+                padding-right: 0;
+
+                a {
+                    padding: 0;
+
+                    &:hover {
+                        color: #333;
+                    }
+                }
+            }
             a {
                 color: #333;
+                padding: 0 6px;
 
+                &:hover {
+                    color: @second-color;
+                }
                 i {
                     margin-right: 5px;
                 }
@@ -302,6 +329,127 @@ CAROUSEL
         &:before {
             color: #2c3e50;
             font-size: 22px;
+        }
+    }
+}
+
+/* ---------------------------------------
+BOXES
+----------------------------------------- */
+.boxes {
+    padding: 40px 0 50px;
+
+    @media (max-width:@screen-sm-max) {
+        padding: 30px 0 0;
+    }
+    .box {
+        text-align: center;
+
+        @media (max-width:@screen-sm-max) {
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 26px;
+            margin: 0 0 20px;
+        }
+        .box-inner {
+            border: 2px solid #bbb;
+            box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.5);
+            height: 300px;
+            padding: 15px;
+            position: relative;
+            text-align: left;
+
+            @media (max-width:@screen-sm-max) {
+                height: auto;
+            }
+            .create-btn {
+                background-color: #2980b9;
+                border: medium none;
+                bottom: 20px;
+                color: #fff;
+                font-size: 15px;
+                left: 50%;
+                padding: 9px 24px;
+                position: absolute;
+                transform: translateX(-50%);
+
+                @media (max-width:@screen-sm-max) {
+                    display: block;
+                    margin: auto;
+                    position: static;
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+DASHBOARD
+----------------------------------------- */
+.dashboard {
+    padding: 20px 0;
+
+    .mgt-20 {
+        @media (max-width:@screen-sm-max) {
+            margin-top: 0 !important;
+            margin-bottom: 20px !important;
+        }
+    }
+    h2 {
+        font-size: 20px;
+        margin: 0 0 10px;
+    }
+    .board {
+        border: 2px solid #bbb;
+        box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.5);
+        padding: 15px 20px;
+        margin-bottom: 30px;
+
+        h4 {
+            font-size: 16px;
+            margin: 0;
+        }
+        strong {
+            display: inline-block;
+            font-size: 28px;
+            font-weight: normal;
+            padding: 10px 0;
+            width: 240px;
+
+            @media (max-width:@screen-sm-max) {
+                text-align: right;
+            }
+        }
+        .media-right {
+            img {
+                width: 60px;
+            }
+        }
+        .chart {
+            height: 250px;
+
+            @media (max-width:@screen-sm-max) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .list-actions {
+        h6 {
+            font-size: 14px;
+            margin: 20px 0 0;
+        }
+        .media {
+            background-color: #ecf0f1;
+            padding: 6px 0;
+
+            .media-left {
+                img {
+                    margin: 0 10px;
+                    width: 50px;
+                }
+            }
         }
     }
 }
