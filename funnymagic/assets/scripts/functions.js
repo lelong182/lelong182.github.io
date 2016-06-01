@@ -121,6 +121,9 @@
             $creationsection_txt1 = $('.creation-section .txt-1'),
             $creationsection_txt2 = $('.creation-section .txt-2'),
             $creationsection_btn1 = $('.creation-section .btn-1'),
+            $productsection_txt1 = $('.product-section .txt-1'),
+            $productsection_wrapproducts = $('.product-section .wrap-products'),
+            $productsection_wrapcontact = $('.product-section .wrap-contact'),
             $footer = $('.footer');
 
         var ctrl = new ScrollMagic.Controller();
@@ -128,7 +131,8 @@
         var magicpensectionTL = new TimelineMax({
                 paused: true
             }),
-            creationsectionTL = new TimelineMax();
+            creationsectionTL = new TimelineMax(),
+            productsectionTL = new TimelineMax();
 
         magicpensectionTL
             .fromTo($magicpensection_pen1, 0.5, {
@@ -270,7 +274,7 @@
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeIn
-            }, '-=0.5')
+            }, '-=2')
             .fromTo($creationsection_pic2, 1, {
                 autoAlpha: 0
             }, {
@@ -295,11 +299,46 @@
                 autoAlpha: 1,
                 ease: Power2.easeOut
             }, '-=0.3');
+        productsectionTL
+            .fromTo($productsection_txt1, 0.7, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            })
+            .fromTo($productsection_wrapproducts, 0.8, {
+                scale: 0,
+                autoAlpha: 0
+            }, {
+                scale: 1,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1)
+            }, '-=0.2')
+            .fromTo($productsection_wrapcontact, 0.8, {
+                scale: 0,
+                autoAlpha: 0
+            }, {
+                scale: 1,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1)
+            }, '-=0.3')
+            .fromTo($footer, 1, {
+                rotationX: -90,
+                transformPerspective: 400
+            }, {
+                rotationX: 0,
+                ease: Back.easeOut.config(2)
+            }, '-=0.3');
 
         new ScrollMagic.Scene({
             triggerElement: $('.creation-section')[0]
         })
             .setTween(creationsectionTL)
+            .addTo(ctrl);
+        new ScrollMagic.Scene({
+            triggerElement: $('.product-section')[0]
+        })
+            .setTween(productsectionTL)
             .addTo(ctrl);
 
         $(window).on('load', function() {
