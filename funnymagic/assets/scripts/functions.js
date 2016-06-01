@@ -120,7 +120,7 @@
         });
 
         magicpensectionTL
-            .fromTo($magicpensection_pen1, 0.4, {
+            .fromTo($magicpensection_pen1, 0.5, {
                 x: 300,
                 y: -200,
                 autoAlpha: 0
@@ -130,7 +130,7 @@
                 autoAlpha: 1,
                 ease: Back.easeOut.config(1.7)
             }, '+=0.7')
-            .fromTo($magicpensection_pen2, 0.4, {
+            .fromTo($magicpensection_pen2, 0.5, {
                 x: 300,
                 y: -200,
                 autoAlpha: 0
@@ -139,8 +139,8 @@
                 y: 0,
                 autoAlpha: 1,
                 ease: Back.easeOut.config(1.7)
-            }, '-=0.1')
-            .fromTo($magicpensection_pen3, 0.4, {
+            })
+            .fromTo($magicpensection_pen3, 0.5, {
                 x: 300,
                 y: -200,
                 autoAlpha: 0
@@ -149,8 +149,8 @@
                 y: 0,
                 autoAlpha: 1,
                 ease: Back.easeOut.config(1.7)
-            }, '-=0.1')
-            .fromTo($magicpensection_pen4, 0.4, {
+            })
+            .fromTo($magicpensection_pen4, 0.5, {
                 x: 300,
                 y: -200,
                 autoAlpha: 0
@@ -159,8 +159,8 @@
                 y: 0,
                 autoAlpha: 1,
                 ease: Back.easeOut.config(1.7)
-            }, '-=0.1')
-            .fromTo($magicpensection_pen5, 0.4, {
+            })
+            .fromTo($magicpensection_pen5, 0.5, {
                 x: 300,
                 y: -200,
                 autoAlpha: 0
@@ -169,7 +169,7 @@
                 y: 0,
                 autoAlpha: 1,
                 ease: Back.easeOut.config(1.7)
-            }, '-=0.1')
+            })
             .fromTo($magicpensection_txt1, 0.8, {
                 autoAlpha: 0
             }, {
