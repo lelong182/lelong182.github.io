@@ -192,8 +192,8 @@
                 ease: Power2.easeOut
             }, '-=0.3')
             .to($magicpensection_pen21, 0.4, {
-                x: -246,
-                y: 42,
+                x: '-' + percentToPixel($magicpensection_pen21, 22.5) + 'px',
+                y: percentToPixel($magicpensection_pen21, 3.8) + 'px',
                 ease: Elastic.easeIn.config(0.5, 1)
             }, '+=0.5');
         creationsectionTL
@@ -368,3 +368,7 @@
 
     });
 })(window.jQuery);
+
+function percentToPixel(_elem, _perc) {
+    return (_elem.parent().outerWidth() / 100) * parseFloat(_perc);
+}
