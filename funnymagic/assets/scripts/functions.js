@@ -101,7 +101,109 @@
         /* =================================
         ===  ScrollMagic with GSAP                 ====
         =================================== */
-        
+        var wh = window.innerHeight,
+            $magicpensection_pen1 = $('.magic-pen-section .pen-1'),
+            $magicpensection_pen2 = $('.magic-pen-section .pen-2'),
+            $magicpensection_pen21 = $('.magic-pen-section .pen-21'),
+            $magicpensection_pen3 = $('.magic-pen-section .pen-3'),
+            $magicpensection_pen4 = $('.magic-pen-section .pen-4'),
+            $magicpensection_pen5 = $('.magic-pen-section .pen-5'),
+            $magicpensection_txt1 = $('.magic-pen-section .txt-1'),
+            $magicpensection_txt2 = $('.magic-pen-section .txt-2'),
+            $magicpensection_btn1 = $('.magic-pen-section .btn-1'),
+            $footer = $('.footer');
+
+        var ctrl = new ScrollMagic.Controller();
+
+        var magicpensectionTL = new TimelineMax({
+            paused: true
+        });
+
+        magicpensectionTL
+            .fromTo($magicpensection_pen1, 0.4, {
+                x: 300,
+                y: -200,
+                autoAlpha: 0
+            }, {
+                x: 0,
+                y: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1.7)
+            }, '+=0.7')
+            .fromTo($magicpensection_pen2, 0.4, {
+                x: 300,
+                y: -200,
+                autoAlpha: 0
+            }, {
+                x: 0,
+                y: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1.7)
+            }, '-=0.1')
+            .fromTo($magicpensection_pen3, 0.4, {
+                x: 300,
+                y: -200,
+                autoAlpha: 0
+            }, {
+                x: 0,
+                y: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1.7)
+            }, '-=0.1')
+            .fromTo($magicpensection_pen4, 0.4, {
+                x: 300,
+                y: -200,
+                autoAlpha: 0
+            }, {
+                x: 0,
+                y: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1.7)
+            }, '-=0.1')
+            .fromTo($magicpensection_pen5, 0.4, {
+                x: 300,
+                y: -200,
+                autoAlpha: 0
+            }, {
+                x: 0,
+                y: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1.7)
+            }, '-=0.1')
+            .fromTo($magicpensection_txt1, 0.8, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.5')
+            .fromTo($magicpensection_txt2, 0.8, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.3')
+            .fromTo($magicpensection_btn1, 0.8, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.3')
+            .to($magicpensection_pen21, 0.4, {
+                x: -246,
+                y: 42,
+                ease: Elastic.easeIn.config(0.5, 1)
+            }, '+=0.5');
+
+
+        // new ScrollMagic.Scene({
+        //     triggerElement: $('.utility')[0]
+        // })
+        //     .setTween(utilityTL)
+        //     .addTo(ctrl);
+
+        $(window).on('load', function() {
+            magicpensectionTL.play();
+        });
 
 
     });
