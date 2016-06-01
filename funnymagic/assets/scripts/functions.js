@@ -121,6 +121,7 @@
             $creationsection_txt1 = $('.creation-section .txt-1'),
             $creationsection_txt2 = $('.creation-section .txt-2'),
             $creationsection_btn1 = $('.creation-section .btn-1'),
+            $collectionsection_bottombg = $('.collection-section .bottom-bg'),
             $productsection_txt1 = $('.product-section .txt-1'),
             $productsection_wrapproducts = $('.product-section .wrap-products'),
             $productsection_wrapcontact = $('.product-section .wrap-contact'),
@@ -132,6 +133,7 @@
                 paused: true
             }),
             creationsectionTL = new TimelineMax(),
+            collectionsectionTL = new TimelineMax(),
             productsectionTL = new TimelineMax();
 
         magicpensectionTL
@@ -274,7 +276,7 @@
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeIn
-            }, '-=2')
+            }, '-=2.3')
             .fromTo($creationsection_pic2, 1, {
                 autoAlpha: 0
             }, {
@@ -299,6 +301,13 @@
                 autoAlpha: 1,
                 ease: Power2.easeOut
             }, '-=0.3');
+        collectionsectionTL
+            .fromTo($collectionsection_bottombg, 0.7, {
+                y: -200,
+            }, {
+                y: 0,
+                ease: Back.easeOut.config(1.3)
+            }, '+=0.5');
         productsectionTL
             .fromTo($productsection_txt1, 0.7, {
                 autoAlpha: 0
@@ -323,11 +332,12 @@
                 ease: Back.easeOut.config(1)
             }, '-=0.3')
             .fromTo($footer, 1, {
-                rotationX: -90,
-                transformPerspective: 400
+                x: -300,
+                autoAlpha: 0
             }, {
-                rotationX: 0,
-                ease: Back.easeOut.config(2)
+                x: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(0.6)
             }, '-=0.3');
 
         new ScrollMagic.Scene({
@@ -336,10 +346,16 @@
             .setTween(creationsectionTL)
             .addTo(ctrl);
         new ScrollMagic.Scene({
+            triggerElement: $('.collection-section')[0]
+        })
+            .setTween(collectionsectionTL)
+            .addTo(ctrl);
+        new ScrollMagic.Scene({
             triggerElement: $('.product-section')[0]
         })
             .setTween(productsectionTL)
             .addTo(ctrl);
+
 
         $(window).on('load', function() {
             magicpensectionTL.play();
