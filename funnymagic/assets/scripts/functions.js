@@ -111,13 +111,24 @@
             $magicpensection_txt1 = $('.magic-pen-section .txt-1'),
             $magicpensection_txt2 = $('.magic-pen-section .txt-2'),
             $magicpensection_btn1 = $('.magic-pen-section .btn-1'),
+            $creationsection_paper1 = $('.creation-section .paper-1'),
+            $creationsection_paper2 = $('.creation-section .paper-2'),
+            $creationsection_paper3 = $('.creation-section .paper-3'),
+            $creationsection_paper4 = $('.creation-section .paper-4'),
+            $creationsection_pen1 = $('.creation-section .pen-1'),
+            $creationsection_pic1 = $('.creation-section .pic-1'),
+            $creationsection_pic2 = $('.creation-section .pic-2'),
+            $creationsection_txt1 = $('.creation-section .txt-1'),
+            $creationsection_txt2 = $('.creation-section .txt-2'),
+            $creationsection_btn1 = $('.creation-section .btn-1'),
             $footer = $('.footer');
 
         var ctrl = new ScrollMagic.Controller();
 
         var magicpensectionTL = new TimelineMax({
-            paused: true
-        });
+                paused: true
+            }),
+            creationsectionTL = new TimelineMax();
 
         magicpensectionTL
             .fromTo($magicpensection_pen1, 0.5, {
@@ -170,19 +181,19 @@
                 autoAlpha: 1,
                 ease: Back.easeOut.config(1.7)
             })
-            .fromTo($magicpensection_txt1, 0.8, {
+            .fromTo($magicpensection_txt1, 0.7, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeOut
             }, '-=0.5')
-            .fromTo($magicpensection_txt2, 0.8, {
+            .fromTo($magicpensection_txt2, 0.7, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeOut
             }, '-=0.3')
-            .fromTo($magicpensection_btn1, 0.8, {
+            .fromTo($magicpensection_btn1, 0.7, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
@@ -193,18 +204,107 @@
                 y: 42,
                 ease: Elastic.easeIn.config(0.5, 1)
             }, '+=0.5');
+        creationsectionTL
+            .fromTo($creationsection_paper1, 0.5, {
+                x: -200,
+                autoAlpha: 0
+            }, {
+                x: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1.2)
+            })
+            .fromTo($creationsection_paper2, 0.5, {
+                x: -200,
+                autoAlpha: 0
+            }, {
+                x: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1.2)
+            }, '-=0.1')
+            .fromTo($creationsection_paper3, 0.5, {
+                x: -200,
+                autoAlpha: 0
+            }, {
+                x: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1.2)
+            }, '-=0.1')
+            .fromTo($creationsection_paper4, 0.5, {
+                x: -200,
+                autoAlpha: 0
+            }, {
+                x: 0,
+                autoAlpha: 1,
+                ease: Back.easeOut.config(1.2)
+            }, '-=0.1')
+            .fromTo($creationsection_pen1, 4, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                bezier: {
+                    type: "soft",
+                    values: [{
+                        x: -300,
+                        y: 100
+                    }, {
+                        x: -200,
+                        y: -150
+                    }, {
+                        x: -300,
+                        y: -100
+                    }, {
+                        x: -180,
+                        y: -10
+                    }, {
+                        x: -130,
+                        y: -20
+                    }, {
+                        x: 0,
+                        y: 0
+                    }]
+                },
+                ease: Power2.easeInOut
+            }, '-=0.8')
+            .fromTo($creationsection_pic1, 1, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeIn
+            }, '-=0.5')
+            .fromTo($creationsection_pic2, 1, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeIn
+            }, '-=0.3')
+            .fromTo($creationsection_txt1, 0.7, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.7')
+            .fromTo($creationsection_txt2, 0.7, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.3')
+            .fromTo($creationsection_btn1, 0.7, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.3');
 
-
-        // new ScrollMagic.Scene({
-        //     triggerElement: $('.utility')[0]
-        // })
-        //     .setTween(utilityTL)
-        //     .addTo(ctrl);
+        new ScrollMagic.Scene({
+            triggerElement: $('.creation-section')[0]
+        })
+            .setTween(creationsectionTL)
+            .addTo(ctrl);
 
         $(window).on('load', function() {
             magicpensectionTL.play();
         });
-
 
     });
 })(window.jQuery);
