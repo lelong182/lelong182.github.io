@@ -45,20 +45,6 @@
 
 
         /* =================================
-        ===  FullPage                 ====
-        =================================== */
-        $('#fullpage').fullpage({
-            anchors: ['magic-pen-section', 'creation-section', 'create-magic-section', 'collection-section', 'product-section'],
-            menu: '.main-nav .menu',
-            verticalCentered: false,
-            css3: false,
-            scrollingSpeed: 1000,
-            fitToSection: false,
-            responsiveWidth: 858
-        });
-
-
-        /* =================================
          ===  StickyJS                 ====
          =================================== */
         $("header.header").sticky({
@@ -356,10 +342,29 @@
             .setTween(productsectionTL)
             .addTo(ctrl);
 
-
         $(window).on('load', function() {
             magicpensectionTL.play();
         });
+
+
+        /* =================================
+        ===  FullPage                 ====
+        =================================== */
+        $('#fullpage').fullpage({
+            anchors: ['magic-pen-section', 'creation-section', 'create-magic-section', 'collection-section', 'product-section'],
+            menu: '.main-nav .menu',
+            verticalCentered: false,
+            css3: false,
+            scrollingSpeed: 1000,
+            fitToSection: false,
+            responsiveWidth: 858,
+            afterLoad: function(anchorLink, index) {
+                if (index === 1) {
+                    magicpensectionTL.restart();
+                }
+            }
+        });
+
 
     });
 })(window.jQuery);
