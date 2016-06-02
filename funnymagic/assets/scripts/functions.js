@@ -107,6 +107,7 @@
             $creationsection_txt1 = $('.creation-section .txt-1'),
             $creationsection_txt2 = $('.creation-section .txt-2'),
             $creationsection_btn1 = $('.creation-section .btn-1'),
+            $createmagicsection_wraplastpaper = $('.create-magic-section .wrap-last-paper'),
             $createmagicsection_paper1 = $('.create-magic-section .paper-1'),
             $createmagicsection_iron = $('.create-magic-section .iron'),
             $createmagicsection_shirt3_shirt = $('.create-magic-section .shirt-3 .shirt'),
@@ -299,13 +300,13 @@
                 ease: Power2.easeOut
             }, '-=0.3');
         createmagicsectionTL
-            .fromTo($createmagicsection_paper1, 1.3, {
-                y: -800,
-                x: 400,
-                autoAlpha: 0,
-            }, {
-                y: -200,
+            .fromTo($createmagicsection_wraplastpaper, 1.3, {
+                y: -600,
                 x: 200,
+                autoAlpha: 0
+            }, {
+                y: 0,
+                x: 0,
                 autoAlpha: 1,
                 ease: Back.easeIn.config(0.8)
             })
@@ -343,10 +344,19 @@
                 },
                 ease: Power2.easeInOut
             }, '-=0.8')
-            .to($createmagicsection_paper1, 1.3, {
-                y: 0,
-                x: 0,
+            .fromTo($createmagicsection_wraplastpaper, 1, {
+                autoAlpha: 1
+            }, {
+                autoAlpha: 0,
+                x: -200,
+                y: 200,
                 ease: Back.easeIn.config(0.8)
+            })
+            .fromTo($createmagicsection_paper1, 0.8, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
             })
             .fromTo($createmagicsection_shirt3_pic, 0.8, {
                 autoAlpha: 0
