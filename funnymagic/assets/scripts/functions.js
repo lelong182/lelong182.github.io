@@ -107,6 +107,16 @@
             $creationsection_txt1 = $('.creation-section .txt-1'),
             $creationsection_txt2 = $('.creation-section .txt-2'),
             $creationsection_btn1 = $('.creation-section .btn-1'),
+            $createmagicsection_paper1 = $('.create-magic-section .paper-1'),
+            $createmagicsection_iron = $('.create-magic-section .iron'),
+            $createmagicsection_shirt3_shirt = $('.create-magic-section .shirt-3 .shirt'),
+            $createmagicsection_shirt3_pic = $('.create-magic-section .shirt-3 .pic'),
+            $createmagicsection_shirt1 = $('.create-magic-section .shirt-1'),
+            $createmagicsection_shirt2 = $('.create-magic-section .shirt-2'),
+            $createmagicsection_txt1 = $('.create-magic-section .txt-1'),
+            $createmagicsection_txt2 = $('.create-magic-section .txt-2'),
+            $createmagicsection_txt3 = $('.create-magic-section .txt-3'),
+            $createmagicsection_btn1 = $('.create-magic-section .btn-1'),
             $collectionsection_bottombg = $('.collection-section .bottom-bg'),
             $productsection_txt1 = $('.product-section .txt-1'),
             $productsection_wrapproducts = $('.product-section .wrap-products'),
@@ -119,6 +129,7 @@
                 paused: true
             }),
             creationsectionTL = new TimelineMax(),
+            createmagicsectionTL = new TimelineMax(),
             collectionsectionTL = new TimelineMax(),
             productsectionTL = new TimelineMax();
 
@@ -268,25 +279,117 @@
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeIn
-            }, '-=0.3')
+            }, '-=1.3')
             .fromTo($creationsection_txt1, 0.7, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeOut
-            }, '-=0.7')
+            }, '-=1.7')
             .fromTo($creationsection_txt2, 0.7, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeOut
-            }, '-=0.3')
+            }, '-=0.8')
             .fromTo($creationsection_btn1, 0.7, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeOut
             }, '-=0.3');
+        createmagicsectionTL
+            .fromTo($createmagicsection_paper1, 1.3, {
+                y: -800,
+                x: 400,
+                autoAlpha: 0
+            }, {
+                y: 0,
+                x: 0,
+                autoAlpha: 1,
+                ease: Back.easeIn.config(0.8)
+            })
+            .fromTo($createmagicsection_shirt3_shirt, 0.8, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            })
+            .fromTo($createmagicsection_iron, 3.5, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                bezier: {
+                    type: "soft",
+                    values: [{
+                        x: -300,
+                        y: 150
+                    }, {
+                        x: -200,
+                        y: 0
+                    }, {
+                        x: -100,
+                        y: -100
+                    }, {
+                        x: 100,
+                        y: -80
+                    }, {
+                        x: 50,
+                        y: 0
+                    }, {
+                        x: 0,
+                        y: 0
+                    }]
+                },
+                ease: Power2.easeInOut
+            }, '-=0.8')
+            .fromTo($createmagicsection_shirt3_pic, 0.8, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=1.2')
+            .fromTo($createmagicsection_shirt1, 0.8, {
+                autoAlpha: 0,
+                scale: 0
+            }, {
+                autoAlpha: 1,
+                scale: 1,
+                ease: Power2.easeOut
+            }, '-=0.3')
+            .fromTo($createmagicsection_shirt2, 0.8, {
+                autoAlpha: 0,
+                scale: 0
+            }, {
+                autoAlpha: 1,
+                scale: 1,
+                ease: Power2.easeOut
+            }, '-=0.3')
+            .fromTo($createmagicsection_txt1, 0.7, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.5')
+            .fromTo($createmagicsection_txt2, 0.7, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.3')
+            .fromTo($createmagicsection_txt3, 0.7, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.3')
+            .fromTo($createmagicsection_btn1, 0.7, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.3');
+            
         collectionsectionTL
             .fromTo($collectionsection_bottombg, 0.7, {
                 y: -200,
@@ -330,6 +433,11 @@
             triggerElement: $('.creation-section')[0]
         })
             .setTween(creationsectionTL)
+            .addTo(ctrl);
+        new ScrollMagic.Scene({
+            triggerElement: $('.create-magic-section')[0]
+        })
+            .setTween(createmagicsectionTL)
             .addTo(ctrl);
         new ScrollMagic.Scene({
             triggerElement: $('.collection-section')[0]
