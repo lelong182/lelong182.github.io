@@ -389,7 +389,6 @@
                 autoAlpha: 1,
                 ease: Power2.easeOut
             }, '-=0.3');
-            
         collectionsectionTL
             .fromTo($collectionsection_bottombg, 0.7, {
                 y: -200,
