@@ -396,19 +396,34 @@ CREATE MAGIC
     .wrap-last-paper {
         left: 803px;
         position: absolute;
-        top: 337px;
+        top: 350px;
+        width: 170px;
         z-index: 4;
 
+        @media (max-width:@screen-md-max) {
+            left: 503px;
+            top: 283px;
+        }
         .pic-2 {
             left: 58px;
             position: absolute;
             top: 99px;
             z-index: 1;
+
+            @media (max-width:@screen-md-max) {
+                left: 47px;
+                top: 74px;
+                width: 147px;
+            }
         }
         .paper-4 {
             left: 0;
             position: absolute;
             top: 0;
+
+            @media (max-width:@screen-md-max) {
+                width: 279px;
+            }
         }
     }
     .txt-1 {

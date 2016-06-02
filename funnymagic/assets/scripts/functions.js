@@ -87,6 +87,7 @@
         /* =================================
         ===  ScrollMagic with GSAP                 ====
         =================================== */
+        CSSPlugin.defaultTransformPerspective = 800;
         var wh = window.innerHeight,
             $magicpensection_pen1 = $('.magic-pen-section .pen-1'),
             $magicpensection_pen2 = $('.magic-pen-section .pen-2'),
@@ -108,6 +109,7 @@
             $creationsection_txt2 = $('.creation-section .txt-2'),
             $creationsection_btn1 = $('.creation-section .btn-1'),
             $createmagicsection_wraplastpaper = $('.create-magic-section .wrap-last-paper'),
+            $createmagicsection_wraplastpaper_pic2 = $('.create-magic-section .wrap-last-paper .pic-2'),
             $createmagicsection_paper1 = $('.create-magic-section .paper-1'),
             $createmagicsection_iron = $('.create-magic-section .iron'),
             $createmagicsection_shirt3_shirt = $('.create-magic-section .shirt-3 .shirt'),
@@ -306,12 +308,6 @@
                 autoAlpha: 1,
                 ease: Power2.easeOut
             }, '+=0.2')
-            .fromTo($createmagicsection_iron, 0.8, {
-                autoAlpha: 0
-            }, {
-                autoAlpha: 1,
-                ease: Power2.easeOut
-            }, '-=0.3')
             .fromTo($createmagicsection_wraplastpaper, 1.3, {
                 y: -600,
                 x: 200,
@@ -321,7 +317,21 @@
                 x: 0,
                 autoAlpha: 1,
                 ease: Back.easeIn.config(0.8)
-            }, '-=1.3')
+            }, '-=0.3')
+            .fromTo($createmagicsection_iron, 0.8, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.3')
+            .to($createmagicsection_wraplastpaper, 1, {
+                rotationY: 180,
+                transformOrigin: "100% 0%",
+                ease: Linear.easeNone
+            })
+            .set($createmagicsection_wraplastpaper_pic2, {
+                autoAlpha: 0
+            }, "-=0.5")
             .to($createmagicsection_iron, 3.5, {
                 bezier: {
                     type: "soft",
@@ -347,27 +357,24 @@
                 },
                 ease: Power2.easeInOut
             })
-            .fromTo($createmagicsection_wraplastpaper, 1.5, {
-                autoAlpha: 1,
-                rotationY:0, 
-                transformPerspective: 2000
-            }, {
+            .to($createmagicsection_wraplastpaper, 1, {
                 autoAlpha: 0,
-                rotationY: -90, 
+                y: 150,
+                x: -50,
                 ease: Power4.easeOut
-            })
+            }, '-=0.2')
             .fromTo($createmagicsection_shirt3_pic, 0.8, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeOut
-            }, '-=1')
+            }, '-=0.7')
             .fromTo($createmagicsection_paper1, 0.8, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeOut
-            }, '-=0.2')
+            }, '-=0.4')
             .fromTo($createmagicsection_shirt1, 0.8, {
                 autoAlpha: 0,
                 scale: 0
