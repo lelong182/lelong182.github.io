@@ -302,10 +302,10 @@
             .fromTo($createmagicsection_paper1, 1.3, {
                 y: -800,
                 x: 400,
-                autoAlpha: 0
+                autoAlpha: 0,
             }, {
-                y: 0,
-                x: 0,
+                y: -200,
+                x: 200,
                 autoAlpha: 1,
                 ease: Back.easeIn.config(0.8)
             })
@@ -343,12 +343,17 @@
                 },
                 ease: Power2.easeInOut
             }, '-=0.8')
+            .to($createmagicsection_paper1, 1.3, {
+                y: 0,
+                x: 0,
+                ease: Back.easeIn.config(0.8)
+            })
             .fromTo($createmagicsection_shirt3_pic, 0.8, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeOut
-            }, '-=1.2')
+            })
             .fromTo($createmagicsection_shirt1, 0.8, {
                 autoAlpha: 0,
                 scale: 0
@@ -470,6 +475,15 @@
                     magicpensectionTL.restart();
                 }
             }
+        });
+        $('.magic-pen-section .btn-1').click(function() {
+            $.fn.fullpage.moveTo('creation-section', 0);
+        });
+        $('.creation-section .btn-1').click(function() {
+            $.fn.fullpage.moveTo('create-magic-section', 0);
+        });
+        $('.create-magic-section .btn-1').click(function() {
+            $.fn.fullpage.moveTo('collection-section', 0);
         });
 
 
