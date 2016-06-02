@@ -317,18 +317,18 @@
                 x: 0,
                 autoAlpha: 1,
                 ease: Back.easeIn.config(0.8)
-            }, '-=0.3')
-            .fromTo($createmagicsection_iron, 0.8, {
+            }, '-=1')
+            .fromTo($createmagicsection_iron, 1, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 ease: Power2.easeOut
-            }, '-=0.3')
+            }, '+=0.2')
             .to($createmagicsection_wraplastpaper, 1, {
                 rotationY: 180,
                 transformOrigin: "100% 0%",
                 ease: Linear.easeNone
-            })
+            }, '-=0.2')
             .set($createmagicsection_wraplastpaper_pic2, {
                 autoAlpha: 0
             }, "-=0.5")
