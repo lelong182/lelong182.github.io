@@ -300,6 +300,18 @@
                 ease: Power2.easeOut
             }, '-=0.3');
         createmagicsectionTL
+            .fromTo($createmagicsection_shirt3_shirt, 0.8, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '+=0.2')
+            .fromTo($createmagicsection_iron, 0.8, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                ease: Power2.easeOut
+            }, '-=0.3')
             .fromTo($createmagicsection_wraplastpaper, 1.3, {
                 y: -600,
                 x: 200,
@@ -309,13 +321,7 @@
                 x: 0,
                 autoAlpha: 1,
                 ease: Back.easeIn.config(0.8)
-            })
-            .fromTo($createmagicsection_shirt3_shirt, 0.8, {
-                autoAlpha: 0
-            }, {
-                autoAlpha: 1,
-                ease: Power2.easeOut
-            })
+            }, '-=1.3')
             .to($createmagicsection_iron, 3.5, {
                 bezier: {
                     type: "soft",
@@ -340,7 +346,7 @@
                     }]
                 },
                 ease: Power2.easeInOut
-            }, '-=0.8')
+            })
             .fromTo($createmagicsection_wraplastpaper, 1.5, {
                 autoAlpha: 1,
                 rotationY:0, 
