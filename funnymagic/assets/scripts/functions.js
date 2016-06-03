@@ -126,6 +126,45 @@
             $productsection_wrapcontact = $('.product-section .wrap-contact'),
             $footer = $('.footer');
 
+        var arr_selectors = [
+            $magicpensection_pen1,
+            $magicpensection_pen2,
+            $magicpensection_pen21,
+            $magicpensection_pen3,
+            $magicpensection_pen4,
+            $magicpensection_pen5,
+            $magicpensection_txt1,
+            $magicpensection_txt2,
+            $magicpensection_btn1,
+            $creationsection_paper1,
+            $creationsection_paper2,
+            $creationsection_paper3,
+            $creationsection_paper4,
+            $creationsection_pen1,
+            $creationsection_pic1,
+            $creationsection_pic2,
+            $creationsection_txt1,
+            $creationsection_txt2,
+            $creationsection_btn1,
+            $createmagicsection_wraplastpaper,
+            $createmagicsection_wraplastpaper_pic2,
+            $createmagicsection_paper1,
+            $createmagicsection_iron,
+            $createmagicsection_shirt3_shirt,
+            $createmagicsection_shirt3_pic,
+            $createmagicsection_shirt1,
+            $createmagicsection_shirt2,
+            $createmagicsection_txt1,
+            $createmagicsection_txt2,
+            $createmagicsection_txt3,
+            $createmagicsection_btn1,
+            $collectionsection_bottombg,
+            $productsection_txt1,
+            $productsection_wrapproducts,
+            $productsection_wrapcontact,
+            $footer
+        ];
+
         var ctrl = new ScrollMagic.Controller();
 
         var magicpensectionTL = new TimelineMax({
@@ -334,7 +373,7 @@
             }, "-=0.5")
             .to($createmagicsection_wraplastpaper, 1, {
                 rotation: -15,
-                x: -60,
+                x: -50,
                 ease: Power2.easeOut
             })
             .to($createmagicsection_iron, 3, {
@@ -461,7 +500,6 @@
                 autoAlpha: 1,
                 ease: Back.easeOut.config(0.6)
             }, '-=0.3');
-
         new ScrollMagic.Scene({
             triggerElement: $('.creation-section')[0]
         })
@@ -482,9 +520,27 @@
         })
             .setTween(productsectionTL)
             .addTo(ctrl);
-
         $(window).on('load', function() {
             magicpensectionTL.play();
+        });
+        $(window).on('load resize', function() {
+            if (Modernizr.mq('(max-width: 1199px)')) {
+                magicpensectionTL.remove();
+                magicpensectionTL.clear();
+                creationsectionTL.remove();
+                creationsectionTL.clear();
+                createmagicsectionTL.remove();
+                createmagicsectionTL.clear();
+                collectionsectionTL.remove();
+                collectionsectionTL.clear();
+                productsectionTL.remove();
+                productsectionTL.clear();
+                $.each(arr_selectors, function(index, val) {
+                    TweenLite.set(val, {
+                        clearProps: "all"
+                    });
+                });
+            }
         });
 
 
