@@ -188,36 +188,6 @@ MINIMAL CSS3 MENU
     }
 }
 @media only screen and (max-width:857px) {
-
-    /* Blue
-    ---------------- */
-    .minimal-menu.clr-blue {
-        background: #5bc7fd;
-    }
-
-    /* Green
-    ---------------- */
-    .minimal-menu.clr-green {
-        background: #65e7a2;
-    }
-
-    /* Orange
-    ---------------- */
-    .minimal-menu.clr-orange {
-        background: #e1c75f;
-    }
-
-    /* Black
-    ---------------- */
-    .minimal-menu.clr-black {
-        background: #000;
-    }
-
-    /* White
-    ---------------- */
-    .minimal-menu.clr-white {
-        background: #fff;
-    }
     .minimal-menu.clr-white h3, .minimal-menu.clr-white ul li a {
         color: #000;
         border-bottom-color: rgba(0, 0, 0, 0.08);
