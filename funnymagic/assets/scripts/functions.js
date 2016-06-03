@@ -332,18 +332,26 @@
             .set($createmagicsection_wraplastpaper_pic2, {
                 autoAlpha: 0
             }, "-=0.5")
-            .to($createmagicsection_iron, 3.5, {
+            .to($createmagicsection_wraplastpaper, 1, {
+                rotation: -15,
+                x: -60,
+                ease: Power2.easeOut
+            })
+            .to($createmagicsection_iron, 3, {
                 bezier: {
                     type: "soft",
                     values: [{
                         x: -300,
                         y: 150
                     }, {
-                        x: -200,
-                        y: 0
-                    }, {
-                        x: -100,
+                        x: -300,
                         y: -100
+                    }, {
+                        x: -200,
+                        y: -150
+                    }, {
+                        x: -50,
+                        y: -150
                     }, {
                         x: 100,
                         y: -80
@@ -356,11 +364,11 @@
                     }]
                 },
                 ease: Power2.easeInOut
-            })
+            }, '-=1')
             .to($createmagicsection_wraplastpaper, 1, {
                 autoAlpha: 0,
-                y: 150,
-                x: -50,
+                y: 200,
+                x: -200,
                 ease: Power4.easeOut
             }, '-=0.2')
             .fromTo($createmagicsection_shirt3_pic, 0.8, {
