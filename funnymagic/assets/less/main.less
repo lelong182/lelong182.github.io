@@ -28,6 +28,7 @@ HEADER
 ----------------------------------------- */
 .header {
     position: relative;
+    z-index: 100;
 
     /* ---------------------------------------
     LOGO
@@ -45,6 +46,10 @@ HEADER
         @media (max-width:@screen-md-max) {
             left: 50px;
         }
+        @media (max-width:@screen-xs-max) {
+            left: 10px;
+            top: 5px;
+        }
     }
 
     /* ---------------------------------------
@@ -57,7 +62,7 @@ HEADER
         position: absolute;
         right: 0;
         top: 0;
-        z-index: 10;
+        z-index: 100;
 
         @media (max-width:@screen-xs-max) {
             position: relative;
@@ -65,20 +70,30 @@ HEADER
             left: auto;
         }
         .minimal-menu {
-            right: 250px;
-            position: absolute;
-            top: 28px;
-
+            @media (min-width:@screen-sm-min) {
+                right: 250px;
+                position: absolute;
+                top: 28px;
+            }
             @media (max-width:1500px) {
                 right: 100px;
             }
             @media (max-width:@screen-md-max) {
                 right: 50px;
             }
+            @media (max-width:@screen-xs-max) {
+                width: 50%;
+            }
+            @media (max-width:@screen-xs-min) {
+                width: 70%;
+            }
             > ul {
                 > li {
                     @media (max-width:@screen-sm-max) {
                         padding: 0 10px;
+                    }
+                    @media (max-width:@screen-xs-max) {
+                        padding: 0;
                     }
                 }
             }
@@ -94,6 +109,11 @@ HEADER
             }
             @media (max-width:@screen-sm-max) {
                 font-size: 17px;
+            }
+            @media (max-width:@screen-xs-max) {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                font-style: normal;
+                padding: 8px 17px 10px;
             }
         }
         .active {
@@ -113,6 +133,10 @@ FULLPAGE JS
     }
     .fp-section {
         padding-top: 130px;
+
+        @media (max-width:@screen-xs-max) {
+            padding-top: 0;
+        }
     }
 }
 
@@ -147,6 +171,9 @@ MAGIC PEN
 .magic-pen-section {
     background: linear-gradient(#f7ede9, #faddd6);
 
+    @media (max-width:@screen-xs-max) {
+        height: 620px !important;
+    }
     .txt-1 {
         color: #373737;
         font-size: 60px;
@@ -170,7 +197,13 @@ MAGIC PEN
             left: 48px;
         }
         @media (max-width:@screen-xs-max) {
+            display: inline-block;
             font-size: 35px;
+            line-height: 1;
+            padding: 0 13px;
+            position: static;
+            text-align: center;
+            width: 100%;
         }
         .highlight {
             color: @main-color;
@@ -195,7 +228,19 @@ MAGIC PEN
         }
         @media (max-width:@screen-sm-max) {
             font-size: 16px;
-            top: 250px;
+        }
+        @media (max-width:@screen-xs-max) {
+            display: inline-block;
+            padding: 0 15px;
+            margin-bottom: 10px;
+            position: static;
+            text-align: center;
+            width: 100%;
+        }
+        br {
+            @media (max-width:@screen-xs-max) {
+                display: none;
+            }
         }
     }
     .btn-1 {
@@ -223,6 +268,12 @@ MAGIC PEN
             padding-top: 8px;
             top: 440px;
         }
+        @media (max-width:@screen-xs-max) {
+            background-position: center top;
+            display: block;
+            margin: auto;
+            position: static;
+        }
     }
     .pen-1 {
         position: absolute;
@@ -241,8 +292,11 @@ MAGIC PEN
         }
         @media (max-width:@screen-sm-max) {
             width: 687px;
+            top: 62px;
         }
         @media (max-width:@screen-xs-max) {
+            float: right;
+            position: static;
             width: 458px;
         }
     }
@@ -259,6 +313,13 @@ MAGIC PEN
         @media (max-width:@screen-md-max) {
             right: 46px;
             top: 142px;
+        }
+        @media (max-width:@screen-xs-max) {
+            float: right;
+            margin-top: -39px;
+            position: relative;
+            right: initial;
+            top: initial;
         }
         .pen-21 {
             left: -48px;
@@ -281,6 +342,8 @@ MAGIC PEN
                 width: 177px;
             }
             @media (max-width:@screen-xs-max) {
+                left: -19px;
+                top: 51px;
                 width: 118px;
             }
         }
@@ -317,8 +380,12 @@ MAGIC PEN
         }
         @media (max-width:@screen-sm-max) {
             width: 673px;
+            top: 165px;
         }
         @media (max-width:@screen-xs-max) {
+            float: right;
+            margin-top: -62px;
+            position: static;
             width: 449px;
         }
     }
@@ -340,8 +407,12 @@ MAGIC PEN
         }
         @media (max-width:@screen-sm-max) {
             width: 659px;
+            top: 220px;
         }
         @media (max-width:@screen-xs-max) {
+            float: right;
+            margin-top: -107px;
+            position: static;
             width: 439px;
         }
     }
@@ -362,9 +433,15 @@ MAGIC PEN
             width: 747px;
         }
         @media (max-width:@screen-sm-max) {
+            right: -240px;
+            top: 255px;
             width: 640px;
         }
         @media (max-width:@screen-xs-max) {
+            float: right;
+            margin-bottom: 20px;
+            margin-top: -140px;
+            position: static;
             width: 427px;
         }
     }
@@ -374,8 +451,11 @@ MAGIC PEN
 CREATION
 ----------------------------------------- */
 .creation-section {
-    background: linear-gradient(#ece2d8, #dfdedc);
+    background: linear-gradient(#faddd6, #dfdedc);
 
+    @media (max-width:@screen-xs-max) {
+        height: 690px !important;
+    }
     .txt-1 {
         color: #373737;
         font-size: 60px;
@@ -398,7 +478,13 @@ CREATION
             font-size: 45px;
         }
         @media (max-width:@screen-xs-max) {
+            display: inline-block;
             font-size: 35px;
+            line-height: 1;
+            padding: 0 15px;
+            position: static;
+            text-align: center;
+            width: 100%;
         }
     }
     .txt-2 {
@@ -421,7 +507,13 @@ CREATION
         }
         @media (max-width:@screen-sm-max) {
             font-size: 16px;
-            top: 160px;
+        }
+        @media (max-width:@screen-xs-max) {
+            display: inline-block;
+            padding: 5px 15px;
+            position: static;
+            text-align: center;
+            width: 100%;
         }
     }
     .btn-1 {
@@ -442,6 +534,12 @@ CREATION
         @media (max-width:@screen-sm-max) {
             top: 240px;
         }
+        @media (max-width:@screen-xs-max) {
+            display: block;
+            margin: auto;
+            position: static;
+            width: 54px;
+        }
     }
     .paper-1 {
         left: 0;
@@ -459,8 +557,12 @@ CREATION
         }
         @media (max-width:@screen-sm-max) {
             width: 151px;
+            top: 100px;
         }
         @media (max-width:@screen-xs-max) {
+            float: left;
+            margin-top: 50px;
+            position: static;
             width: 101px;
         }
     }
@@ -480,9 +582,11 @@ CREATION
         }
         @media (max-width:@screen-sm-max) {
             width: 394px;
-            left: 200px;
+            left: 135px;
         }
         @media (max-width:@screen-xs-max) {
+            float: left;
+            position: static;
             width: 262px;
         }
     }
@@ -503,11 +607,14 @@ CREATION
             width: 352px;
         }
         @media (max-width:@screen-sm-max) {
-            left: 420px;
-            top: 220px;
+            left: 355px;
+            top: 160px;
             width: 302px;
         }
         @media (max-width:@screen-xs-max) {
+            float: left;
+            margin-left: -105px;
+            position: static;
             width: 201px;
         }
     }
@@ -528,9 +635,12 @@ CREATION
             width: 279px;
         }
         @media (max-width:@screen-sm-max) {
+            right: 60px;
             width: 239px;
         }
         @media (max-width:@screen-xs-max) {
+            float: left;
+            position: static;
             width: 159px;
         }
     }
@@ -551,11 +661,14 @@ CREATION
             width: 555px;
         }
         @media (max-width:@screen-sm-max) {
-            bottom: 110px;
-            left: 200px;
+            bottom: 90px;
+            left: 137px;
             width: 476px;
         }
         @media (max-width:@screen-xs-max) {
+            float: left;
+            margin: -272px 0 0 108px;
+            position: static;
             width: 317px;
         }
     }
@@ -576,11 +689,14 @@ CREATION
             width: 147px;
         }
         @media (max-width:@screen-sm-max) {
-            bottom: 100px;
-            right: 122px;
+            bottom: 80px;
+            right: 133px;
             width: 126px;
         }
         @media (max-width:@screen-xs-max) {
+            float: left;
+            margin: 41px 0 0 -132px;
+            position: static;
             width: 84px;
         }
     }
@@ -601,11 +717,14 @@ CREATION
             width: 418px;
         }
         @media (max-width:@screen-sm-max) {
-            left: 555px;
-            top: 350px;
+            left: 425px;
+            top: 260px;
             width: 358px;
         }
         @media (max-width:@screen-xs-max) {
+            float: left;
+            margin: -233px 0 0 331px;
+            position: static;
             width: 239px;
         }
     }
@@ -686,6 +805,8 @@ CREATE MAGIC
         }
         @media (max-width:@screen-xs-max) {
             font-size: 35px;
+            right: 10px;
+            top: 20px;
         }
     }
     .txt-2 {
@@ -708,7 +829,10 @@ CREATE MAGIC
         }
         @media (max-width:@screen-sm-max) {
             font-size: 16px;
-            top: 160px;
+        }
+        @media (max-width:@screen-xs-max) {
+            right: 10px;
+            top: 70px;
         }
     }
     .txt-3 {
@@ -733,6 +857,10 @@ CREATE MAGIC
             font-size: 16px;
             top: 250px;
         }
+        @media (max-width:@screen-xs-max) {
+            right: 10px;
+            top: 150px;
+        }
     }
     .btn-1 {
         cursor: pointer;
@@ -752,6 +880,10 @@ CREATE MAGIC
         @media (max-width:@screen-sm-max) {
             top: 475px;
         }
+        @media (max-width:@screen-xs-max) {
+            right: 10px;
+            top: 370px;
+        }
     }
     .shirt-1 {
         left: 300px;
@@ -769,7 +901,12 @@ CREATE MAGIC
             width: 463px;
         }
         @media (max-width:@screen-sm-max) {
-            left: 120px;
+            left: 40px;
+            top: 90px;
+            width: 397px;
+        }
+        @media (max-width:@screen-xs-max) {
+            width: 265px;
         }
     }
     .shirt-2 {
@@ -789,7 +926,12 @@ CREATE MAGIC
             width: 267px;
         }
         @media (max-width:@screen-sm-max) {
-            left: 69px;
+            left: -8px;
+            top: 190px;
+            width: 229px;
+        }
+        @media (max-width:@screen-xs-max) {
+            width: 152px;
         }
     }
     .shirt-3 {
@@ -807,7 +949,10 @@ CREATE MAGIC
             top: 190px;
         }
         @media (max-width:@screen-sm-max) {
-            left: 353px;
+            left: 222px;
+            top: 160px;
+        }
+        @media (max-width:@screen-xs-max) {
         }
         .shirt {
             @media (max-width:1500px) {
@@ -815,6 +960,12 @@ CREATE MAGIC
             }
             @media (max-width:@screen-md-max) {
                 width: 447px;
+            }
+            @media (max-width:@screen-sm-max) {
+                width: 383px;
+            }
+            @media (max-width:@screen-xs-max) {
+                width: 256px;
             }
         }
         .pic {
@@ -834,6 +985,10 @@ CREATE MAGIC
             }
             @media (max-width:@screen-sm-max) {
                 left: 141px;
+                width: 120px;
+            }
+            @media (max-width:@screen-xs-max) {
+                width: 80px;
             }
         }
     }
@@ -854,7 +1009,11 @@ CREATE MAGIC
             width: 254px;
         }
         @media (max-width:@screen-sm-max) {
-            left: 333px;
+            left: 170px;
+            width: 218px;
+        }
+        @media (max-width:@screen-xs-max) {
+            width: 145px;
         }
     }
     .iron {
@@ -874,7 +1033,12 @@ CREATE MAGIC
             width: 285px;
         }
         @media (max-width:@screen-sm-max) {
-            left: 640px;
+            left: 450px;
+            top: 360px;
+            width: 244px;
+        }
+        @media (max-width:@screen-xs-max) {
+            width: 163px;
         }
     }
 }
@@ -883,13 +1047,18 @@ CREATE MAGIC
 COLLECTION
 ----------------------------------------- */
 .collection-section {
+    background-color: #FFF;
+
+    @media (max-width:@screen-sm-max) {
+        padding-top: 100px !important;
+    }
     .top-bg {
         background: url("../images/carousel-top-bg.png") no-repeat center;
         height: 102px;
         position: absolute;
         top: 60px;
         width: 100%;
-        z-index: -1;
+        z-index: 0;
     }
     .bottom-bg {
         background: url("../images/carousel-bottom-bg.png") no-repeat center;
@@ -897,10 +1066,11 @@ COLLECTION
         height: 372px;
         position: absolute;
         width: 100%;
-        z-index: -1;
+        z-index: 0;
     }
     .list-imgs {
         position: relative;
+        z-index: 1;
 
         .slick-arrow {
             border: medium none;
@@ -939,6 +1109,8 @@ COLLECTION
 PRODUCT
 ----------------------------------------- */
 .product-section {
+    background-color: #FFF;
+
     .txt-1 {
         color: #373737;
         font-size: 60px;
@@ -979,6 +1151,7 @@ PRODUCT
         }
         @media (max-width:@screen-sm-max) {
             width: ~"calc(50% - 70px)";
+            top: 160px;
         }
         .product-item {
             float: left;
@@ -1035,6 +1208,7 @@ PRODUCT
         }
         @media (max-width:@screen-sm-max) {
             padding-left: 30px;
+            top: 125px;
         }
         h3 {
             color: #7f7f7f;
@@ -1068,7 +1242,7 @@ PRODUCT
 FOOTER
 ----------------------------------------- */
 .footer {
-    background: url("../images/footer-bg.png") no-repeat;
+    background: #fff url("../images/footer-bg.png") no-repeat;
     height: 179px;
     width: 100%;
     bottom: 0;

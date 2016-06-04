@@ -219,7 +219,7 @@ MINIMAL CSS3 MENU
         z-index: 9999;
     }
     header.sticky .minimal-menu-button, .sticky-wrapper .minimal-menu-button {
-        top: -4px;
+        top: 22px;
     }
     header.sticky .minimal-menu {
         top: 80px;
@@ -231,7 +231,7 @@ MINIMAL CSS3 MENU
         display: none;
     }
     label.minimal-menu-button {
-        background-color: #fff;
+        background-color: #e14fd5;
         border-radius: 1px;
         cursor: pointer;
         display: inline-block;
@@ -240,10 +240,10 @@ MINIMAL CSS3 MENU
         text-indent: -9999px;
         text-transform: uppercase;
         width: 42px;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.7);
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
     }
     label.minimal-menu-button .icon-bar {
-        background-color: #000;
+        background-color: #fff;
         border-radius: 6px;
         color: #fff;
         display: block;
@@ -251,7 +251,7 @@ MINIMAL CSS3 MENU
         margin: 6px 5px;
     }
     .minimal-menu {
-        background-color: #000;
+        background: url("../images/school.png") repeat;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.7);
         height: 100%;
         left: -100%;
@@ -259,16 +259,11 @@ MINIMAL CSS3 MENU
         overflow: auto;
         top: 0;
         transition: left 0.8s ease 0s, opacity 0.5s ease 0s;
-        width: 45%;
     }
     #mobile-nav:checked + .minimal-menu {
         visibility: visible;
         left: 0;
         opacity: 1;
-    }
-    .minimal-menu h3, .minimal-menu ul li a {
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid rgba(100%, 100%, 100%, 0.2);
     }
     .minimal-menu ul li.submenu > a:before, .minimal-menu ul li.submenu > a:after {
         background-color: #fff;

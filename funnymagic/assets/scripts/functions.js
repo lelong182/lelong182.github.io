@@ -13,7 +13,7 @@
 
     window.loading_screen = window.pleaseWait({
         logo: "assets/images/logo.png",
-        backgroundColor: '#e14fd5',
+        backgroundColor: '#f7ede9',
         loadingHtml: '<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>'
     });
 
@@ -32,6 +32,11 @@
         $('.minimal-menu').find('div.menu-wrapper').parent().addClass('megamenu submenu');
         $('.minimal-menu').find('ul.sub-menu').before('<input class=\"show-submenu\" type=\"checkbox\" />');
         $('.minimal-menu').find('div.menu-wrapper').before('<input class=\"show-submenu\" type=\"checkbox\" />');
+         $(document).on('mouseup', 'body', function(event) {
+            if (!$('.minimal-menu').is(event.target) && $('.minimal-menu').has(event.target).length === 0 && !$('.minimal-menu-button').is(event.target)) {
+                $('.minimal-menu-button[type="checkbox"]').prop('checked', false);
+            }
+        });
 
 
         /* =================================
