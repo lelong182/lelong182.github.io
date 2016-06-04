@@ -465,8 +465,10 @@
         collectionsectionTL
             .fromTo($collectionsection_bottombg, 0.7, {
                 y: -200,
+                autoAlpha: 0
             }, {
                 y: 0,
+                autoAlpha: 1,
                 ease: Back.easeOut.config(1.3)
             }, '+=0.5');
         productsectionTL
