@@ -577,6 +577,9 @@
         $('.create-magic-section .btn-1').click(function() {
             $.fn.fullpage.moveTo('collection-section', 0);
         });
+        $('.collection-section .btn-1').click(function() {
+            $.fn.fullpage.moveTo('product-section', 0);
+        });
 
 
     });

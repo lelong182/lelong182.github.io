@@ -172,7 +172,7 @@ MAGIC PEN
     background: linear-gradient(#f7ede9, #faddd6);
 
     @media (max-width:@screen-xs-max) {
-        height: 620px !important;
+        height: 900px !important;
     }
     .txt-1 {
         color: #373737;
@@ -198,8 +198,8 @@ MAGIC PEN
         }
         @media (max-width:@screen-xs-max) {
             display: inline-block;
-            font-size: 35px;
-            line-height: 1;
+            font-size: 40px;
+            margin-top: 30px;
             padding: 0 13px;
             position: static;
             text-align: center;
@@ -226,13 +226,10 @@ MAGIC PEN
             left: 50px;
             top: 190px;
         }
-        @media (max-width:@screen-sm-max) {
-            font-size: 16px;
-        }
         @media (max-width:@screen-xs-max) {
             display: inline-block;
+            margin-bottom: 30px;
             padding: 0 15px;
-            margin-bottom: 10px;
             position: static;
             text-align: center;
             width: 100%;
@@ -294,11 +291,6 @@ MAGIC PEN
             width: 687px;
             top: 62px;
         }
-        @media (max-width:@screen-xs-max) {
-            float: right;
-            position: static;
-            width: 458px;
-        }
     }
     .pen-2 {
         position: absolute;
@@ -313,13 +305,6 @@ MAGIC PEN
         @media (max-width:@screen-md-max) {
             right: 46px;
             top: 142px;
-        }
-        @media (max-width:@screen-xs-max) {
-            float: right;
-            margin-top: -39px;
-            position: relative;
-            right: initial;
-            top: initial;
         }
         .pen-21 {
             left: -48px;
@@ -341,11 +326,6 @@ MAGIC PEN
                 top: 76px;
                 width: 177px;
             }
-            @media (max-width:@screen-xs-max) {
-                left: -19px;
-                top: 51px;
-                width: 118px;
-            }
         }
         .pen-22 {
             @media (max-width:1500px) {
@@ -356,9 +336,6 @@ MAGIC PEN
             }
             @media (max-width:@screen-sm-max) {
                 width: 654px;
-            }
-            @media (max-width:@screen-xs-max) {
-                width: 436px;
             }
         }
     }
@@ -382,12 +359,6 @@ MAGIC PEN
             width: 673px;
             top: 165px;
         }
-        @media (max-width:@screen-xs-max) {
-            float: right;
-            margin-top: -62px;
-            position: static;
-            width: 449px;
-        }
     }
     .pen-4 {
         position: absolute;
@@ -408,12 +379,6 @@ MAGIC PEN
         @media (max-width:@screen-sm-max) {
             width: 659px;
             top: 220px;
-        }
-        @media (max-width:@screen-xs-max) {
-            float: right;
-            margin-top: -107px;
-            position: static;
-            width: 439px;
         }
     }
     .pen-5 {
@@ -437,12 +402,18 @@ MAGIC PEN
             top: 255px;
             width: 640px;
         }
+    }
+    .wrap-mobile-img {
         @media (max-width:@screen-xs-max) {
-            float: right;
-            margin-bottom: 20px;
-            margin-top: -140px;
-            position: static;
-            width: 427px;
+            height: 561px;
+            position: relative;
+            margin-bottom: 50px;
+
+            img {
+                left: 50%;
+                position: absolute;
+                transform: translateX(-50%);
+            }
         }
     }
 }
@@ -454,7 +425,7 @@ CREATION
     background: linear-gradient(#faddd6, #dfdedc);
 
     @media (max-width:@screen-xs-max) {
-        height: 690px !important;
+        height: 870px !important;
     }
     .txt-1 {
         color: #373737;
@@ -479,9 +450,9 @@ CREATION
         }
         @media (max-width:@screen-xs-max) {
             display: inline-block;
-            font-size: 35px;
-            line-height: 1;
-            padding: 0 15px;
+            font-size: 40px;
+            margin-top: 30px;
+            padding: 0 13px;
             position: static;
             text-align: center;
             width: 100%;
@@ -505,15 +476,18 @@ CREATION
             right: 50px;
             top: 150px;
         }
-        @media (max-width:@screen-sm-max) {
-            font-size: 16px;
-        }
         @media (max-width:@screen-xs-max) {
             display: inline-block;
-            padding: 5px 15px;
+            margin-bottom: 30px;
+            padding: 0 15px;
             position: static;
             text-align: center;
             width: 100%;
+        }
+        br {
+            @media (max-width:@screen-xs-max) {
+                display: none;
+            }
         }
     }
     .btn-1 {
@@ -559,12 +533,6 @@ CREATION
             width: 151px;
             top: 100px;
         }
-        @media (max-width:@screen-xs-max) {
-            float: left;
-            margin-top: 50px;
-            position: static;
-            width: 101px;
-        }
     }
     .paper-2 {
         bottom: 0;
@@ -583,11 +551,6 @@ CREATION
         @media (max-width:@screen-sm-max) {
             width: 394px;
             left: 135px;
-        }
-        @media (max-width:@screen-xs-max) {
-            float: left;
-            position: static;
-            width: 262px;
         }
     }
     .paper-3 {
@@ -611,12 +574,6 @@ CREATION
             top: 160px;
             width: 302px;
         }
-        @media (max-width:@screen-xs-max) {
-            float: left;
-            margin-left: -105px;
-            position: static;
-            width: 201px;
-        }
     }
     .paper-4 {
         bottom: 100px;
@@ -637,11 +594,6 @@ CREATION
         @media (max-width:@screen-sm-max) {
             right: 60px;
             width: 239px;
-        }
-        @media (max-width:@screen-xs-max) {
-            float: left;
-            position: static;
-            width: 159px;
         }
     }
     .pic-1 {
@@ -665,12 +617,6 @@ CREATION
             left: 137px;
             width: 476px;
         }
-        @media (max-width:@screen-xs-max) {
-            float: left;
-            margin: -272px 0 0 108px;
-            position: static;
-            width: 317px;
-        }
     }
     .pic-2 {
         bottom: 185px;
@@ -692,12 +638,6 @@ CREATION
             bottom: 80px;
             right: 133px;
             width: 126px;
-        }
-        @media (max-width:@screen-xs-max) {
-            float: left;
-            margin: 41px 0 0 -132px;
-            position: static;
-            width: 84px;
         }
     }
     .pen-1 {
@@ -721,11 +661,18 @@ CREATION
             top: 260px;
             width: 358px;
         }
+    }
+    .wrap-mobile-img {
         @media (max-width:@screen-xs-max) {
-            float: left;
-            margin: -233px 0 0 331px;
-            position: static;
-            width: 239px;
+            height: 505px;
+            position: relative;
+            margin-bottom: 30px;
+
+            img {
+                left: 50%;
+                position: absolute;
+                transform: translateX(-50%);
+            }
         }
     }
 }
@@ -736,6 +683,9 @@ CREATE MAGIC
 .create-magic-section {
     background: linear-gradient(#dfdedc, #f1e3d6);
 
+    @media (max-width:@screen-xs-max) {
+        height: 1020px !important;
+    }
     .wrap-last-paper {
         left: 803px;
         position: absolute;
@@ -804,9 +754,13 @@ CREATE MAGIC
             font-size: 45px;
         }
         @media (max-width:@screen-xs-max) {
-            font-size: 35px;
-            right: 10px;
-            top: 20px;
+            display: inline-block;
+            font-size: 40px;
+            margin-top: 30px;
+            padding: 0 13px;
+            position: static;
+            text-align: center;
+            width: 100%;
         }
     }
     .txt-2 {
@@ -827,12 +781,18 @@ CREATE MAGIC
             right: 50px;
             top: 160px;
         }
-        @media (max-width:@screen-sm-max) {
-            font-size: 16px;
-        }
         @media (max-width:@screen-xs-max) {
-            right: 10px;
-            top: 70px;
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 0 15px;
+            position: static;
+            text-align: center;
+            width: 100%;
+        }
+        br {
+            @media (max-width:@screen-xs-max) {
+                display: none;
+            }
         }
     }
     .txt-3 {
@@ -854,12 +814,20 @@ CREATE MAGIC
             top: 260px;
         }
         @media (max-width:@screen-sm-max) {
-            font-size: 16px;
             top: 250px;
         }
         @media (max-width:@screen-xs-max) {
-            right: 10px;
-            top: 150px;
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            position: static;
+            text-align: center;
+            width: 100%;
+        }
+        br {
+            @media (max-width:@screen-xs-max) {
+                display: none;
+            }
         }
     }
     .btn-1 {
@@ -881,8 +849,10 @@ CREATE MAGIC
             top: 475px;
         }
         @media (max-width:@screen-xs-max) {
-            right: 10px;
-            top: 370px;
+            display: block;
+            margin: auto;
+            position: static;
+            width: 54px;
         }
     }
     .shirt-1 {
@@ -904,9 +874,6 @@ CREATE MAGIC
             left: 40px;
             top: 90px;
             width: 397px;
-        }
-        @media (max-width:@screen-xs-max) {
-            width: 265px;
         }
     }
     .shirt-2 {
@@ -930,9 +897,6 @@ CREATE MAGIC
             top: 190px;
             width: 229px;
         }
-        @media (max-width:@screen-xs-max) {
-            width: 152px;
-        }
     }
     .shirt-3 {
         left: 630px;
@@ -952,8 +916,6 @@ CREATE MAGIC
             left: 222px;
             top: 160px;
         }
-        @media (max-width:@screen-xs-max) {
-        }
         .shirt {
             @media (max-width:1500px) {
                 width: 511px;
@@ -963,9 +925,6 @@ CREATE MAGIC
             }
             @media (max-width:@screen-sm-max) {
                 width: 383px;
-            }
-            @media (max-width:@screen-xs-max) {
-                width: 256px;
             }
         }
         .pic {
@@ -986,9 +945,6 @@ CREATE MAGIC
             @media (max-width:@screen-sm-max) {
                 left: 141px;
                 width: 120px;
-            }
-            @media (max-width:@screen-xs-max) {
-                width: 80px;
             }
         }
     }
@@ -1012,9 +968,6 @@ CREATE MAGIC
             left: 170px;
             width: 218px;
         }
-        @media (max-width:@screen-xs-max) {
-            width: 145px;
-        }
     }
     .iron {
         left: 1045px;
@@ -1037,8 +990,18 @@ CREATE MAGIC
             top: 360px;
             width: 244px;
         }
+    }
+    .wrap-mobile-img {
         @media (max-width:@screen-xs-max) {
-            width: 163px;
+            height: 494px;
+            position: relative;
+            margin-bottom: 30px;
+
+            img {
+                left: 50%;
+                position: absolute;
+                transform: translateX(-50%);
+            }
         }
     }
 }
@@ -1051,6 +1014,10 @@ COLLECTION
 
     @media (max-width:@screen-sm-max) {
         padding-top: 100px !important;
+    }
+    @media (max-width:@screen-xs-max) {
+        padding-top: 0 !important;
+        height: 700px !important;
     }
     .top-bg {
         background: url("../images/carousel-top-bg.png") no-repeat center;
@@ -1067,6 +1034,19 @@ COLLECTION
         position: absolute;
         width: 100%;
         z-index: 0;
+
+        @media (max-width:@screen-xs-max) {
+            background-size: cover;
+            bottom: initial;
+            height: 200px;
+            top: 350px;
+        }
+    }
+    .btn-1 {
+        display: block;
+        margin: 220px auto 0;
+        width: 54px;
+        cursor: pointer;
     }
     .list-imgs {
         position: relative;
@@ -1086,9 +1066,16 @@ COLLECTION
             height: 107px;
             left: 250px;
 
+            @media (max-width:@screen-md-max) {
+                left: 100px;
+            }
             @media (max-width:@screen-sm-max) {
                 width: 70px;
+                left: 50px;
                 background-size: contain;
+            }
+            @media (max-width:@screen-xs-max) {
+                left: 10px;
             }
         }
         .slick-next {
@@ -1097,9 +1084,16 @@ COLLECTION
             height: 107px;
             right: 250px;
 
+            @media (max-width:@screen-md-max) {
+                right: 100px;
+            }
             @media (max-width:@screen-sm-max) {
                 width: 70px;
+                right: 100px;
                 background-size: contain;
+            }
+            @media (max-width:@screen-xs-max) {
+                right: 10px;
             }
         }
     }
@@ -1111,6 +1105,9 @@ PRODUCT
 .product-section {
     background-color: #FFF;
 
+    @media (max-width:@screen-xs-max) {
+        height: 1020px !important;
+    }
     .txt-1 {
         color: #373737;
         font-size: 60px;
@@ -1132,7 +1129,13 @@ PRODUCT
             font-size: 45px;
         }
         @media (max-width:@screen-xs-max) {
-            font-size: 35px;
+            display: inline-block;
+            font-size: 40px;
+            margin: 50px 0 30px;
+            padding: 0 13px;
+            position: static;
+            text-align: center;
+            width: 100%;
         }
     }
     .wrap-products {
@@ -1153,15 +1156,29 @@ PRODUCT
             width: ~"calc(50% - 70px)";
             top: 160px;
         }
+        @media (max-width:@screen-xs-max) {
+            display: inline-block;
+            position: static;
+            width: 100%;
+            margin-bottom: 20px;
+        }
         .product-item {
             float: left;
             text-align: center;
 
             &.item-1 {
                 width: 66%;
+
+                @media (max-width:@screen-xs-max) {
+                    width: 56%;
+                }
             }
             &.item-2 {
                 width: 34%;
+
+                @media (max-width:@screen-xs-max) {
+                    width: 44%;
+                }
             }
             .img-container {
                 height: 320px;
@@ -1210,10 +1227,20 @@ PRODUCT
             padding-left: 30px;
             top: 125px;
         }
+        @media (max-width:@screen-xs-max) {
+            font-size: 18px;
+            padding: 0 15px;
+            position: static;
+            width: 100%;
+        }
         h3 {
             color: #7f7f7f;
             font-weight: 600;
             margin: 15px 0 25px;
+
+            @media (max-width:@screen-xs-max) {
+                margin-bottom: 15px;
+            }
         }
         .list-socials {
             margin-top: 30px;
@@ -1267,6 +1294,12 @@ FOOTER
         @media (max-width:@screen-md-max) {
             left: 50px;
             font-size: 16px;
+        }
+        @media (max-width:@screen-xs-max) {
+            font-size: 14px;
+            left: 0;
+            right: 0;
+            text-align: center;
         }
     }
 }
