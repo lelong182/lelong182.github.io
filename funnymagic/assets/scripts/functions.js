@@ -548,6 +548,9 @@
                     });
                 });
             }
+            if (Modernizr.mq('(max-width: 857px)')) {
+                $('#fullpage .fp-section').removeAttr('style');
+            }
         });
 
 
