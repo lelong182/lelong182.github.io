@@ -28,9 +28,17 @@ CUSTOM WIDTH & HEIGHT
 ----------------------------------------- */
 .w-80 {
     width: 80px !important;
+
+    @media (max-width:@screen-xs-max) {
+        width: 100% !important;
+    }
 }
 .w-140 {
     width: 140px !important;
+
+    @media (max-width:@screen-xs-max) {
+        width: 100% !important;
+    }
 }
 
 /* ---------------------------------------
@@ -55,7 +63,7 @@ ORDER MODAL
 
         @media (max-width:@screen-xs-max) {
             font-size: 32px;
-            margin: 20px 0 40px;
+            margin: 20px 0 30px;
         }
     }
     .order-form {
@@ -90,7 +98,7 @@ ORDER MODAL
             color: #7e7e7e;
             font-size: 14px;
             font-style: italic;
-            line-height: 1.3;
+            line-height: 1.4;
             margin-top: 20px;
         }
     }
