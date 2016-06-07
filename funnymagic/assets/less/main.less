@@ -39,6 +39,9 @@ ORDER MODAL
 .wrap-order-content {
     padding: 50px;
 
+    @media (max-width:@screen-xs-max) {
+        padding: 30px 15px;
+    }
     .logo {
         display: block;
         margin: auto;
@@ -49,6 +52,11 @@ ORDER MODAL
         font-weight: 300;
         margin: 30px 0 50px;
         text-align: center;
+
+        @media (max-width:@screen-xs-max) {
+            font-size: 32px;
+            margin: 20px 0 40px;
+        }
     }
     .order-form {
         .form-group {
