@@ -26,7 +26,7 @@
         <link rel="stylesheet" type="text/css" href="assets/styles/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/styles/jquery.fullPage.css" />
         <link rel="stylesheet" type="text/css" href="assets/styles/animate.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/styles/styles.css?v=1.2.2" />
+        <link rel="stylesheet" type="text/css" href="assets/styles/styles.css?v=1.2.3" />
 
         <script src="assets/scripts/libs/prefixfree.min.js"></script>
         <script src="assets/scripts/libs/modernizr.js"></script>
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                         <h3>Bộ 12 màu</h3>
-                        <a class="order-btn">Đặt hàng</a>
+                        <a class="order-btn" data-toggle="modal" data-target="#order-modal">Đặt hàng</a>
                     </div>
                     <div class="product-item item-2">
                         <div class="img-container">
@@ -153,7 +153,7 @@
                             </div>
                         </div>
                         <h3>Bộ 6 màu</h3>
-                        <a class="order-btn">Đặt hàng</a>
+                        <a class="order-btn" data-toggle="modal" data-target="#order-modal">Đặt hàng</a>
                     </div>
                 </div>
                 <div class="wrap-contact">
@@ -180,9 +180,58 @@
                 <!-- /.footer -->
             </div>
             <!-- /.product-section -->
-            
         </div>
         <!-- /#fullpage -->
+        <div class="modal fade" id="order-modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="wrap-order-content">
+                        <img class="logo" src="assets/images/logo.png" alt="img" />
+                        <h3>ĐẶT MUA SẢN PHẨM</h3>
+                        <form class="order-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Tên người liên hệ" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Địa chỉ giao hàng" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="onlynumber" placeholder="Số điện thoại" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required />
+                            </div>
+                            <div class="row mgb-20">
+                                <div class="col-xs-6">
+                                    Bộ sản phẩm:
+                                    <select class="w-140">
+                                        <option value="1">12 màu</option>
+                                        <option value="2">6 màu</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    Số lượng:
+                                    <select class="w-80">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="order-btn">Đặt hàng</button>
+                            <p class="note">Sau khi đặt hàng thành công, chúng tôi sẽ liên hệ xác nhận đơn hàng trong vòng 24h</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="assets/scripts/libs/please-wait.min.js"></script>
         <script src="assets/scripts/libs/jquery-1.11.3.min.js"></script>
@@ -194,7 +243,8 @@
         <script src="assets/scrollmagic/plugins/animation.gsap.min.js"></script>
         <script src="assets/scripts/libs/jquery.sticky.js"></script>
         <script src="assets/scripts/libs/slick.min.js"></script>
-        <script src="assets/scripts/functions.js?v=1.2.2"></script>
+        <script src="assets/scripts/libs/onlynumber.js"></script>
+        <script src="assets/scripts/functions.js?v=1.2.3"></script>
 
     </body>
 </html>

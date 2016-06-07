@@ -32,7 +32,7 @@
         $('.minimal-menu').find('div.menu-wrapper').parent().addClass('megamenu submenu');
         $('.minimal-menu').find('ul.sub-menu').before('<input class=\"show-submenu\" type=\"checkbox\" />');
         $('.minimal-menu').find('div.menu-wrapper').before('<input class=\"show-submenu\" type=\"checkbox\" />');
-         $(document).on('mouseup', 'body', function(event) {
+        $(document).on('mouseup', 'body', function(event) {
             if (!$('.minimal-menu').is(event.target) && $('.minimal-menu').has(event.target).length === 0 && !$('.minimal-menu-button').is(event.target)) {
                 $('.minimal-menu-button[type="checkbox"]').prop('checked', false);
             }
@@ -55,6 +55,12 @@
         $("header.header").sticky({
             topSpacing: 0
         });
+
+
+        /* =================================
+         ===  Only number                 ====
+         =================================== */
+        $('.onlynumber').onlynumber();
 
 
         /* =================================
