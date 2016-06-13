@@ -1,0 +1,236 @@
+/* ---------------------------------------
+SPINNER
+----------------------------------------- */
+@import "utilities/spinner.less";
+
+/* ---------------------------------------
+CUSTOM SCROLLBAR
+----------------------------------------- */
+@import "utilities/scrollbar.less";
+
+/* ---------------------------------------
+PARSLEY VALIDATOR
+----------------------------------------- */
+input.parsley-success, select.parsley-success, textarea.parsley-success {
+    background-color: #F2F9F0 !important;
+    border: 1px solid #D6E9C6 !important;
+}
+input.parsley-error, select.parsley-error, textarea.parsley-error {
+    background-color: #F9F0F0 !important;
+    border: 1px solid #f09784 !important;
+}
+.parsley-errors-list {
+    color: #d16e6c;
+    font-size: 16px;
+    font-weight: 300;
+    list-style-type: none;
+    margin-bottom: 15px;
+    margin-top: -18px;
+    opacity: 0;
+    padding-left: 0;
+    transition: all 0.3s ease-in 0s;
+}
+.parsley-errors-list.filled {
+    opacity: 1;
+}
+
+/* ---------------------------------------
+TOOLTIP
+----------------------------------------- */
+.tooltip {
+    .tooltip-arrow {
+        // left: 10%;
+    }
+    .tooltip-inner {
+        // background-color: #FFF;
+        text-align: left;
+    }
+}
+
+/* ---------------------------------------
+HOMEPAGE
+----------------------------------------- */
+.wrap-home {
+    background: url("../images/home-bg.jpg") no-repeat center / cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .home-inner {
+        @media (min-width:@screen-sm-min) {
+            margin: 150px auto 0;
+            width: 620px;
+        }
+    }
+
+    /* ---------------------------------------
+    LOGO
+    ----------------------------------------- */
+    .logo {
+        margin: 20px 0;
+
+        @media (max-width:@screen-xs-max) {
+            left: 0;
+            margin: 0;
+            padding: 0 10px;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    /* ---------------------------------------
+    MAIN NAVIGAION
+    ----------------------------------------- */
+    .main-nav {
+        @media (min-width:@screen-sm-min) {
+            background: url("../images/menu-line.png") no-repeat right bottom;
+            padding-bottom: 7px;
+            text-align: right;
+        }
+        li {
+            @media (min-width:@screen-sm-min) {
+                display: inline-block;
+                margin: 0 7px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            a {
+                color: #000;
+                font-size: 15px;
+                text-transform: none;
+
+                @media (max-width:@screen-xs-max) {
+                    color: #FFF;
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    /* ---------------------------------------
+    LANGUAGE SWITCH
+    ----------------------------------------- */
+    .lang-switch {
+        text-align: right;
+
+        @media (max-width:@screen-xs-max) {
+            bottom: 0;
+            margin-right: 10px;
+            position: absolute;
+            right: 0;
+        }
+        li {
+            display: inline-block;
+            margin-left: 20px;
+
+            a {
+                border: 2px solid #fff;
+                color: #fff;
+                display: inline-block;
+                font-size: 15px;
+                height: 32px;
+                padding-top: 2px;
+                text-align: center;
+                width: 110px;
+
+                &:hover, &:focus {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+HEADER
+----------------------------------------- */
+header.header {
+    height: 95px;
+
+    .container {
+        position: relative;
+    }
+
+    /* ---------------------------------------
+    LOGO
+    ----------------------------------------- */
+    .logo {
+        margin: 5px 0 0;
+
+        a {
+            display: inline-block;
+        }
+    }
+
+    /* ---------------------------------------
+    MAIN NAVIGAION
+    ----------------------------------------- */
+    .main-nav {
+        left: 250px;
+        position: absolute;
+        top: 48px;
+
+        li {
+            @media (min-width:@screen-md-min) {
+                display: inline-block;
+                margin: 0 20px;
+            }
+            &.current-menu-item {
+                a {
+                    color: @main-color;
+                }
+            }
+            a {
+                color: #4d4d4f;
+                font-size: 13px;
+
+                &:hover {
+                    color: @main-color;
+                }
+            }
+        }
+    }
+
+    /* ---------------------------------------
+    USER LINKS
+    ----------------------------------------- */
+    .user-links {
+        color: #4d4d4f;
+        font-weight: 300;
+        position: absolute;
+        right: 15px;
+        top: 46px;
+
+        li {
+            display: inline-block;
+            margin-left: 15px;
+
+            a {
+                color: #4d4d4f;
+            }
+            .sign-icon {
+                float: left;
+                margin: -12px 6px 0 0;
+                width: 37px;
+            }
+            .heart-icon {
+                vertical-align: top;
+                width: 18px;
+            }
+        }
+    }
+}
