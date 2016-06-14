@@ -167,10 +167,10 @@
 		color: #aaa;
 		content: "\f107";
 		font-family: FontAwesome;
-		font-size: 12px;
+		font-size: 24px;
 		left: calc(100% + 5px);
 		position: absolute;
-		top: 2px;
+		top: 0;
 		transition: all 0.5s ease 0s;
 	}
 	.minimal-menu {
@@ -179,7 +179,7 @@
 	.minimal-menu-button {
 		position: absolute;
 		right: 15px;
-		top: 10px;
+		top: -16px;
 		z-index: 999;
 	}
 	.minimal-menu {
@@ -189,11 +189,8 @@
 	input.minimal-menu-button {
 		display: none;
 	}
-	.wrap-home label.minimal-menu-button {
-		background-color: #000;
-	}
 	label.minimal-menu-button {
-		background-color: #5e111a;
+		background-color: #000;
 		color: #fff;
 		cursor: pointer;
 		display: inline-block;
@@ -211,11 +208,8 @@
 		height: 3px;
 		margin: 6px 5px;
 	}
-	.wrap-home .minimal-menu {
-		background-color: #000;
-	}
 	.minimal-menu {
-		background-color: #5e111a;
+		background-color: #000;
 		height: 100%;
 		left: -100%;
 		opacity: 0;
@@ -268,7 +262,7 @@
 		border-right: 1px solid transparent;
 	}
 	.minimal-menu ul ul a {
-		padding-left: 40px;
+		padding-left: 25px !important;
 	}
 	.minimal-menu ul ul ul a {
 		padding-left: 55px;
@@ -280,7 +274,7 @@
 		font-size: 14px;
 	}
 	.minimal-menu ul li.submenu > a:before, .minimal-menu ul li.submenu > a:after {
-		top: 11px;
+		top: 5px;
 		left: auto;
 		right: 12px;
 	}

@@ -48,6 +48,41 @@ TOOLTIP
 }
 
 /* ---------------------------------------
+FLIP IMAGES
+----------------------------------------- */
+.flip-container {
+    perspective: 1000;
+
+    &:hover, &.hover {
+        .flipper {
+            transform: rotateY(180deg);
+        }
+    }
+    .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+
+        .front, .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .front {
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+        .back {
+            transform: rotateY(180deg);
+        }
+    }
+}
+.flip-container, .front, .back {
+    width: 100%;
+}
+
+/* ---------------------------------------
 HOMEPAGE
 ----------------------------------------- */
 .wrap-home {
@@ -162,6 +197,9 @@ header.header {
     height: 110px;
     background-color: @main-color;
 
+    @media (max-width:@screen-xs-max) {
+        height: 80px;
+    }
     .container {
         position: relative;
     }
@@ -172,8 +210,16 @@ header.header {
     .logo {
         margin: 10px 0 0;
 
+        @media (max-width:@screen-xs-max) {
+            float: left;
+        }
         a {
             display: inline-block;
+        }
+        img {
+            @media (max-width:@screen-xs-max) {
+                width: 60px;
+            }
         }
     }
 
@@ -185,8 +231,14 @@ header.header {
         right: 0;
         top: 32px;
 
+        @media (max-width:@screen-sm-max) {
+            top: 35px;
+        }
+        @media (max-width:@screen-xs-max) {
+            position: relative;
+        }
         li {
-            @media (min-width:@screen-md-min) {
+            @media (min-width:@screen-sm-min) {
                 display: inline-block;
                 margin: 0 2px;
 
@@ -197,6 +249,10 @@ header.header {
             &.current-menu-item {
                 a {
                     background-color: #370003;
+
+                    @media (max-width:@screen-xs-max) {
+                        background-color: rgba(255, 255, 255, 0.2);
+                    }
                 }
             }
             a {
@@ -205,8 +261,18 @@ header.header {
                 padding: 5px 10px 8px;
                 text-transform: none;
 
+                @media (max-width:@screen-sm-max) {
+                    font-size: 24px;
+                }
+                @media (max-width:@screen-xs-max) {
+                    font-size: 20px;
+                }
                 &:hover {
                     background-color: #370003;
+
+                    @media (max-width:@screen-xs-max) {
+                        background-color: rgba(255, 255, 255, 0.2);
+                    }
                 }
             }
         }
@@ -231,9 +297,6 @@ MAIN
         width: auto;
         margin: auto;
 
-        @media (max-width:@screen-xs-max) {
-            padding: 100px 15px 0;
-        }
         .megafolio-container {
             width: 100%;
             position: relative;
@@ -241,6 +304,57 @@ MAIN
             .mega-entry {
                 .mega-entry-innerwrap {
                     border: 1px solid #fff;
+                    filter: grayscale(1);
+                    transition: all 0.3s ease;
+
+                    &:hover, &:focus {
+                        filter: grayscale(0);
+                    }
+                    .fancybox {
+                        bottom: 0;
+                        left: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        z-index: 2;
+                    }
+                    .fa-play {
+                        border: 3px solid #fff;
+                        border-radius: 50%;
+                        color: #fff;
+                        font-size: 64px;
+                        height: 80px;
+                        left: 50%;
+                        padding: 6px 0 0 18px;
+                        position: absolute;
+                        top: 50%;
+                        width: 80px;
+                        z-index: 1;
+                        transform: translate(-50%, -50%);
+                    }
+                    .title {
+                        background-color: rgba(0, 0, 0, 0.3);
+                        bottom: 0;
+                        color: #fff;
+                        font-size: 30px;
+                        left: 0;
+                        margin: 0;
+                        padding: 30px 30px 30px 0;
+                        position: absolute;
+                        right: 0;
+                        text-align: right;
+                        z-index: 3;
+
+                        @media (max-width:@screen-sm-max) {
+                            font-size: 25px;
+                            padding: 20px 20px 20px 0;
+                        }
+                        @media (max-width:@screen-xs-max) {
+                            font-size: 18px;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }
@@ -252,6 +366,62 @@ FOOTER
 ----------------------------------------- */
 .footer {
     background-color: @main-color;
-    padding: 15px 0;
+    padding: 25px 0;
     color: #FFF;
+
+    @media (max-width:@screen-xs-max) {
+        text-align: center;
+    }
+    h4 {
+        font-weight: bold;
+        margin: 0 0 4px;
+    }
+    p {
+        margin-bottom: 3px;
+    }
+    .footer-socials {
+        margin-top: 15px;
+
+        li {
+            display: inline-block;
+
+            .flip-container, .front, .back {
+                height: 48px;
+                width: 48px;
+            }
+            .flipper {
+                i {
+                    background-color: #fff;
+                    border-radius: 50%;
+                    color: #5e111a;
+                    font-size: 30px;
+                    height: 48px;
+                    left: 0;
+                    line-height: 48px;
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    width: 48px;
+                }
+                .back {
+                    i {
+                        color: #fff;
+
+                        &.fa-google-plus {
+                            background-color: #d13f2d;
+                        }
+                        &.fa-linkedin {
+                            background-color: #0275b6;
+                        }
+                        &.fa-facebook {
+                            background-color: #3b5998;
+                        }
+                        &.fa-twitter {
+                            background-color: #44CCF6;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -29,12 +29,19 @@
         /* =================================
          ===  Megafolio                 ====
          =================================== */
-        $('.megafolio-container').megafoliopro({
+        $('.list-projects .style-1').megafoliopro({
             filterChangeScale: 1,
             delay: 20,
             paddingHorizontal: 0,
             paddingVertical: 0,
             layoutarray: [14]
+        });
+        $('.list-projects .style-2').megafoliopro({
+            filterChangeScale: 1,
+            delay: 20,
+            paddingHorizontal: 0,
+            paddingVertical: 0,
+            layoutarray: [11]
         });
 
 
