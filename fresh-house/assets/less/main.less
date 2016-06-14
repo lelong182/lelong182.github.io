@@ -159,7 +159,8 @@ HOMEPAGE
 HEADER
 ----------------------------------------- */
 header.header {
-    height: 95px;
+    height: 110px;
+    background-color: @main-color;
 
     .container {
         position: relative;
@@ -169,7 +170,7 @@ header.header {
     LOGO
     ----------------------------------------- */
     .logo {
-        margin: 5px 0 0;
+        margin: 10px 0 0;
 
         a {
             display: inline-block;
@@ -180,57 +181,77 @@ header.header {
     MAIN NAVIGAION
     ----------------------------------------- */
     .main-nav {
-        left: 250px;
         position: absolute;
-        top: 48px;
+        right: 0;
+        top: 32px;
 
         li {
             @media (min-width:@screen-md-min) {
                 display: inline-block;
-                margin: 0 20px;
+                margin: 0 2px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
             &.current-menu-item {
                 a {
-                    color: @main-color;
+                    background-color: #370003;
                 }
             }
             a {
-                color: #4d4d4f;
-                font-size: 13px;
+                color: #fff;
+                font-size: 29px;
+                padding: 5px 10px 8px;
+                text-transform: none;
 
                 &:hover {
-                    color: @main-color;
+                    background-color: #370003;
                 }
             }
         }
     }
+}
 
-    /* ---------------------------------------
-    USER LINKS
-    ----------------------------------------- */
-    .user-links {
-        color: #4d4d4f;
-        font-weight: 300;
-        position: absolute;
-        right: 15px;
-        top: 46px;
+/* ---------------------------------------
+HERO
+----------------------------------------- */
+.hero {
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
 
-        li {
-            display: inline-block;
-            margin-left: 15px;
+/* ---------------------------------------
+MAIN
+----------------------------------------- */
+.main {
+    .list-projects {
+        overflow: hidden;
+        width: auto;
+        margin: auto;
 
-            a {
-                color: #4d4d4f;
-            }
-            .sign-icon {
-                float: left;
-                margin: -12px 6px 0 0;
-                width: 37px;
-            }
-            .heart-icon {
-                vertical-align: top;
-                width: 18px;
+        @media (max-width:@screen-xs-max) {
+            padding: 100px 15px 0;
+        }
+        .megafolio-container {
+            width: 100%;
+            position: relative;
+
+            .mega-entry {
+                .mega-entry-innerwrap {
+                    border: 1px solid #fff;
+                }
             }
         }
     }
+}
+
+/* ---------------------------------------
+FOOTER
+----------------------------------------- */
+.footer {
+    background-color: @main-color;
+    padding: 15px 0;
+    color: #FFF;
 }
