@@ -591,6 +591,26 @@
         });
 
 
+        /* =================================
+         ===  Order Form                 ====
+         =================================== */
+        $('.order-form').submit(function () {
+            $('.wrap-order-content .form-note').html('<div class="mgt-15 alert alert-info" role="alert">' + $('.wrap-order-content .form-note').data('progressing-text') + '</div>');
+            $(".order-form input").prop('readonly', true);
+            var formInput = $(this).serialize();
+            $.post('mailer/index.php', formInput, function (data) {
+                if (data === 'OK') {
+                    $('.wrap-order-content .form-note').html('<div class="mgt-15 alert alert-success" role="alert">' + $('.wrap-order-content .form-note').data('successful-text') + '</div>');
+                    $('.order-form').slideUp();
+                } else {
+                    $('.wrap-order-content .form-note').html(data);
+                    $(".order-form input").prop('readonly', false);
+                }
+            });
+            return false;
+        });
+
+
     });
 })(window.jQuery);
 

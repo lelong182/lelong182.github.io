@@ -26,7 +26,7 @@
         <link rel="stylesheet" type="text/css" href="assets/styles/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/styles/jquery.fullPage.css" />
         <link rel="stylesheet" type="text/css" href="assets/styles/animate.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/styles/styles.css?v=1.2.3" />
+        <link rel="stylesheet" type="text/css" href="assets/styles/styles.css?v=1.2.4" />
 
         <script src="assets/scripts/libs/prefixfree.min.js"></script>
         <script src="assets/scripts/libs/modernizr.js"></script>
@@ -196,28 +196,28 @@
                         <h3>ĐẶT MUA SẢN PHẨM</h3>
                         <form class="order-form">
                             <div class="form-group">
-                                <input type="text" placeholder="Tên người liên hệ" required />
+                                <input type="text" name="fullname" placeholder="Tên người liên hệ" required />
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Địa chỉ giao hàng" required />
+                                <input type="text" name="address" placeholder="Địa chỉ giao hàng" required />
                             </div>
                             <div class="form-group">
-                                <input type="text" class="onlynumber" placeholder="Số điện thoại" required />
+                                <input type="text" name="phone" class="onlynumber" placeholder="Số điện thoại" required />
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email" required />
+                                <input type="email" name="email" placeholder="Email" required />
                             </div>
                             <div class="row mgb-20">
                                 <div class="col-xs-6">
                                     Bộ sản phẩm:
-                                    <select class="w-140">
+                                    <select name="product" class="w-140">
                                         <option value="1">12 màu</option>
                                         <option value="2">6 màu</option>
                                     </select>
                                 </div>
                                 <div class="col-xs-6 text-right">
                                     Số lượng:
-                                    <select class="w-80">
+                                    <select name="quantity" class="w-80">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -231,9 +231,10 @@
                                     </select>
                                 </div>
                             </div>
-                            <button class="order-btn">Đặt hàng</button>
-                            <p class="note">Sau khi đặt hàng thành công, chúng tôi sẽ liên hệ xác nhận đơn hàng trong vòng 24h</p>
+                            <button type="submit" class="order-btn">Đặt hàng</button>
                         </form>
+                        <div class="form-note" data-progressing-text="Đang xử lý..." data-successful-text="CHÚC MỪNG BẠN ĐÃ ĐẶT HÀNG THÀNH CÔNG!"></div>
+                        <p class="note">Sau khi đặt hàng thành công, chúng tôi sẽ liên hệ xác nhận đơn hàng trong vòng 24h</p>
                     </div>
                 </div>
             </div>
@@ -250,7 +251,7 @@
         <script src="assets/scripts/libs/jquery.sticky.js"></script>
         <script src="assets/scripts/libs/slick.min.js"></script>
         <script src="assets/scripts/libs/onlynumber.js"></script>
-        <script src="assets/scripts/functions.js?v=1.2.3"></script>
+        <script src="assets/scripts/functions.js?v=1.2.4"></script>
 
     </body>
 </html>
