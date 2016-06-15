@@ -434,6 +434,156 @@ CONTACTPAGE
 }
 
 /* ---------------------------------------
+CAREERPAGE
+----------------------------------------- */
+.wrap-career {
+    .list-careers {
+        padding: 70px 0 50px;
+
+        .career-item {
+            border: medium none;
+            border-radius: 0;
+            box-shadow: none;
+            margin-bottom: 40px;
+
+            > h4 {
+                font-size: 35px;
+                font-weight: bold;
+                margin: 0 0 20px;
+                cursor: pointer;
+                position: relative;
+
+                &:before {
+                    background-color: #000;
+                    content: "";
+                    height: 50px;
+                    position: absolute;
+                    right: 0;
+                    top: -5px;
+                    width: 50px;
+                }
+                &:after {
+                    color: #fff;
+                    font-family: FontAwesome;
+                    position: absolute;
+                }
+                &[aria-expanded="false"] {
+                    &:after {
+                        content: "\f107";
+                        right: 7px;
+                        top: -7px;
+                        font-size: 50px;
+                    }
+                }
+                &[aria-expanded="true"] {
+                    &:after {
+                        content: "\f00d";
+                        font-size: 35px;
+                        font-weight: lighter;
+                        right: 10px;
+                        top: -1px;
+                    }
+                }
+                > img {
+                    float: left;
+                    margin: -8px 10px 0 0;
+                }
+            }
+            .career-content {
+                border: 1px solid #5e111a;
+                font-size: 30px;
+                margin: 0 50px;
+                padding: 20px 35px;
+
+                strong {
+                    font-size: 35px;
+                    line-height: 1;
+                }
+                ul {
+                    list-style: none;
+                    margin-bottom: 30px;
+
+                    li {
+                        &:before {
+                            content: "- ";
+                            font-weight: lighter;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wrap-apply-form {
+        h3 {
+            font-size: 40px;
+            font-weight: bold;
+            position: relative;
+            text-align: center;
+            margin: 0 0 40px;
+
+            &:after {
+                background-color: #000;
+                content: "";
+                height: 3px;
+                left: 0;
+                position: absolute;
+                top: 60%;
+                width: 100%;
+            }
+            span {
+                background-color: #fff;
+                padding: 0 10px;
+                position: relative;
+                z-index: 1;
+            }
+        }
+        .apply-form {
+            padding: 0 50px 50px;
+
+            input[type="text"], input[type="email"] {
+                background-color: #000;
+                border: medium none;
+                color: #fefefe;
+                font-size: 30px;
+                height: 80px;
+                margin-bottom: 12px;
+                padding: 0 20px;
+                width: 100%;
+                transition: all 0.3s ease;
+
+                &:focus {
+                    color: #FFF;
+                }
+            }
+            textarea {
+                background-color: #000;
+                border: medium none;
+                color: #fefefe;
+                font-size: 30px;
+                height: 420px;
+                margin-bottom: 12px;
+                padding: 20px;
+                width: 100%;
+                transition: all 0.3s ease;
+                resize: none;
+
+                &:focus {
+                    color: #FFF;
+                }
+            }
+            button {
+                background-color: transparent;
+                border: 3px solid #000;
+                color: #000;
+                font-size: 30px;
+                margin-top: 30px;
+                padding: 10px 35px;
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
 CUSTOM CAPTION
 ----------------------------------------- */
 .border-caption {

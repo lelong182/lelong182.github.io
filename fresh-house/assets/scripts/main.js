@@ -45,6 +45,21 @@
         });
 
 
+        /* =================================
+         ===  Collapse                 ====
+         =================================== */
+        $(this).on('click', '.list-careers h4[data-toggle="collapse"]', function() {
+            if ($(this).attr('aria-expanded') == 'true') {
+                var this_parent = $(this).parent();
+                setTimeout(function() {
+                    $('html, body').stop().animate({
+                        'scrollTop': this_parent.offset().top
+                    }, 900, 'swing');
+                }, 400);
+            }
+        });
+
+
     });
 
 })(window.jQuery);
