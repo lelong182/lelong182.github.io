@@ -191,6 +191,316 @@ HOMEPAGE
 }
 
 /* ---------------------------------------
+ABOUTPAGE
+----------------------------------------- */
+.wrap-about {
+    @media (min-width:@screen-xs-max) {
+        overflow: hidden;
+    }
+    .about-block {
+        margin-top: 55px;
+
+        p {
+            font-size: 20px;
+        }
+    }
+    .list-persons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px -65px 0;
+
+        @media (max-width:@screen-md-max) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+        @media (max-width:@screen-xs-min) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .person {
+            margin: 0 70px 30px;
+            text-align: center;
+            width: 350px;
+
+            @media (max-width:@screen-md-max) {
+                width: 280px;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+            @media (max-width:@screen-sm-max) {
+                width: 230px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            @media (max-width:@screen-xs-min) {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+            }
+            .flip-container, .front, .back {
+                height: 320px;
+                width: 320px;
+
+                @media (max-width:@screen-md-max) {
+                    height: 280px;
+                    width: 280px;
+                }
+                @media (max-width:@screen-sm-max) {
+                    height: 230px;
+                    width: 230px;
+                }
+                @media (max-width:@screen-xs-min) {
+                    height: 300px;
+                    width: 300px;
+                }
+            }
+            .flip-container {
+                margin: 0 auto 25px;
+
+                .wrap-img {
+                    border: 5px solid #b3b3b3;
+                    border-radius: 50%;
+                    bottom: 0;
+                    left: 0;
+                    padding: 5px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+            }
+            .person-title {
+                font-size: 20px;
+                margin: 0 0 15px;
+            }
+            .person-desc {
+                line-height: 1.3;
+                text-align: justify;
+            }
+        }
+    }
+    .list-services {
+        font-size: 30px;
+        line-height: 1.2;
+        list-style: outside none none;
+        margin-bottom: 30px;
+
+        @media (max-width:@screen-md-max) {
+            font-size: 28px;
+        }
+        @media (max-width:@screen-sm-max) {
+            font-size: 23px;
+        }
+    }
+    .list-clients {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: outside none none;
+        margin: 20px 0 0;
+
+        li {
+            margin: 0 50px 50px;
+
+            @media (max-width:@screen-md-max) {
+                margin: 0 30px 30px;
+            }
+            @media (max-width:@screen-sm-max) {
+                margin: 0 20px 30px;
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+CONTACTPAGE
+----------------------------------------- */
+.wrap-contact {
+    margin-bottom: 50px;
+
+    .contact-content {
+        padding: 0 30px;
+        position: relative;
+
+        @media (max-width:@screen-xs-max) {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        .map {
+            height: 800px;
+
+            @media (max-width:@screen-xs-max) {
+                order: 2;
+            }
+        }
+        .contact-form {
+            left: 90px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 490px;
+            z-index: 10;
+
+            @media (max-width:@screen-xs-max) {
+                margin-bottom: 30px;
+                order: 1;
+                position: static;
+                transform: none;
+                width: 100%;
+            }
+            h3 {
+                color: #fff;
+                font-size: 35px;
+                font-weight: 700;
+                margin: 0 0 20px;
+
+                @media (max-width:@screen-xs-max) {
+                    color: #000;
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                }
+            }
+            input[type="text"], input[type="email"] {
+                background-color: rgba(0, 0, 0, 0.6);
+                border: medium none;
+                color: #fff;
+                font-size: 20px;
+                height: 66px;
+                margin-bottom: 15px;
+                padding: 0 15px;
+                width: 100%;
+                transition: all 0.4s ease;
+
+                @media (max-width:@screen-xs-max) {
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+                &:focus {
+                    background-color: #000;
+                }
+            }
+            textarea {
+                background-color: rgba(0, 0, 0, 0.6);
+                border: medium none;
+                color: #fff;
+                font-size: 20px;
+                height: 340px;
+                margin-bottom: 15px;
+                padding: 15px;
+                resize: none;
+                width: 100%;
+                transition: all 0.4s ease;
+
+                @media (max-width:@screen-xs-max) {
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+                &:focus {
+                    background-color: #000;
+                }
+            }
+            button {
+                background-color: transparent;
+                border: 2px solid #fff;
+                color: #fff;
+                float: right;
+                font-size: 24px;
+                font-weight: bold;
+                padding: 5px 17px 6px;
+                transition: all 0.3s ease;
+
+                @media (max-width:@screen-xs-max) {
+                    border-color: #000;
+                    color: #000;
+                }
+                &:hover {
+                    background-color: #fff;
+                    color: @main-color;
+
+                    @media (max-width:@screen-xs-max) {
+                        background-color: @main-color;
+                        border-color: @main-color;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+CUSTOM CAPTION
+----------------------------------------- */
+.border-caption {
+    position: relative;
+
+    h3& {
+        font-size: 39px;
+        margin: 0 0 24px;
+        padding: 0 0 12px 30px;
+        font-weight: bold;
+
+        @media (max-width:@screen-md-max) {
+            font-size: 35px;
+        }
+        @media (max-width:@screen-sm-max) {
+            font-size: 29px;
+            padding: 0 0 10px 20px;
+        }
+    }
+    &:before {
+        background-color: #000;
+        bottom: 0;
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+    &:after {
+        background-color: #000;
+        border-radius: 50%;
+        bottom: -5px;
+        content: "";
+        height: 12px;
+        left: 0;
+        position: absolute;
+        width: 12px;
+    }
+}
+.border-caption-2 {
+    position: relative;
+
+    h4& {
+        font-size: 34px;
+        font-weight: bold;
+        margin: 0 0 14px;
+        padding-bottom: 10px;
+
+        @media (max-width:@screen-md-max) {
+            font-size: 32px;
+        }
+        @media (max-width:@screen-sm-max) {
+            font-size: 26px;
+        }
+    }
+    &:before {
+        background-color: #000;
+        bottom: 0;
+        content: "";
+        height: 4px;
+        left: 0;
+        position: absolute;
+        width: 60px;
+    }
+}
+
+/* ---------------------------------------
 HEADER
 ----------------------------------------- */
 header.header {
