@@ -2,6 +2,15 @@
 
     "use strict";
 
+    $(window).on('load', function() {
+        if ($('#map').length) {
+            loadScript();
+            setTimeout(function() {
+                google.maps.event.addDomListener(window, 'load', initialize("185BIS Võ Thị Sáu, Phường 7, Quận 3", 10.803548, 106.721391));
+            }, 1000);
+        }
+    });
+
     $(document).ready(function() {
 
         myMinimalMenu();
@@ -58,6 +67,24 @@
                 }, 400);
             }
         });
+
+
+        /* =================================
+         ===  Custom Carousel                 ====
+         =================================== */
+        if ($('.list-thumbs').length) {
+            $('.list-thumbs').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+            $('.design-modal').on('shown.bs.modal', function(e) {
+                $('.list-thumbs').slick('setPosition');
+            });
+            $(this).on('click', '.list-thumbs img', function() {
+                $(this).closest('.design-modal-content').find('.wrap-img img').attr('src', $(this).attr('src'));
+            });
+        }
 
 
     });

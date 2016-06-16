@@ -30,6 +30,8 @@
         <link href="assets/styles/fancySelect.css" rel="stylesheet" type="text/css" />
         <link href="assets/styles/allinone_bannerRotator.css" rel="stylesheet" type="text/css" />
         <link href="assets/megafolio/css/settings.css" rel="stylesheet" type="text/css" />
+        <link href="assets/styles/slick.css" rel="stylesheet" type="text/css" />
+        <link href="assets/styles/slick-theme.css" rel="stylesheet" type="text/css" />
         
         <!-- utilities scripts -->
         <script src="assets/scripts/libs/prefixfree.min.js"></script>
@@ -68,7 +70,7 @@
                             <li><a href="about.html">About</a></li>
                             <li><a href="news.html">News</a></li>
                             <li><a href="career.html">Careers</a></li>
-                            <li><a>Contact</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <!-- /.minimal-menu -->
@@ -105,42 +107,290 @@
                     <div class="mega-entry" data-src="assets/images/project-img-1.jpg" data-width="777" data-height="915">
                         <a class="link" data-toggle="modal" data-target="#design-modal-1"></a>
                         <h4 class="title">Lorem ipsum dolor sit amet 1</h4>
-                        <div class="modal fade" id="design-modal-1" tabindex="-1">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <img class="close-icon" data-dismiss="modal" src="assets/images/close-icon.png" alt="img" />
-                                    <h1>test</h1>
+                    </div>
+                    <div class="modal fade design-modal" id="design-modal-1" tabindex="-1">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <img class="close-icon" data-dismiss="modal" src="assets/images/close-icon.png" alt="img" />
+                                <div class="design-modal-content">
+                                    <div class="wrap-img">
+                                        <img src="assets/images/design-img.jpg" alt="img" />
+                                    </div>
+                                    <div class="wrap-text">
+                                        <div class="text-inner">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                                        </div>
+                                        <div class="list-thumbs">
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-1.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-2.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-3.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-4.jpg" alt="img" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="mega-entry" data-src="assets/images/project-img-6.jpg" data-width="422" data-height="360">
-                        <a class="fancybox" rel="group" title="Lorem ipsum dolor sit amet 2" href="assets/images/project-img-6.jpg"></a>
+                        <a class="link" data-toggle="modal" data-target="#design-modal-2"></a>
                         <h4 class="title">Lorem ipsum dolor sit amet 2</h4>
                     </div>
+                    <div class="modal fade design-modal" id="design-modal-2" tabindex="-1">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <img class="close-icon" data-dismiss="modal" src="assets/images/close-icon.png" alt="img" />
+                                <div class="design-modal-content">
+                                    <div class="wrap-img">
+                                        <img src="assets/images/design-img.jpg" alt="img" />
+                                    </div>
+                                    <div class="wrap-text">
+                                        <div class="text-inner">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                                        </div>
+                                        <div class="list-thumbs">
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-1.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-2.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-3.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-4.jpg" alt="img" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mega-entry" data-src="assets/images/project-img-4.jpg" data-width="272" data-height="572">
-                        <a class="fancybox" rel="group" title="Lorem ipsum dolor sit amet 3" href="assets/images/project-img-4.jpg"></a>
+                        <a class="link" data-toggle="modal" data-target="#design-modal-3"></a>
                         <h4 class="title">Lorem ipsum dolor sit amet 3</h4>
                     </div>
+                    <div class="modal fade design-modal" id="design-modal-3" tabindex="-1">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <img class="close-icon" data-dismiss="modal" src="assets/images/close-icon.png" alt="img" />
+                                <div class="design-modal-content">
+                                    <div class="wrap-img">
+                                        <img src="assets/images/design-img.jpg" alt="img" />
+                                    </div>
+                                    <div class="wrap-text">
+                                        <div class="text-inner">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                                        </div>
+                                        <div class="list-thumbs">
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-1.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-2.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-3.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-4.jpg" alt="img" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mega-entry" data-src="assets/images/project-img-5.jpg" data-width="900" data-height="485">
-                        <a class="fancybox" rel="group" title="Lorem ipsum dolor sit amet 4" href="assets/images/project-img-5.jpg"></a>
+                        <a class="link" data-toggle="modal" data-target="#design-modal-4"></a>
                         <h4 class="title">Lorem ipsum dolor sit amet 4</h4>
                     </div>
+                    <div class="modal fade design-modal" id="design-modal-4" tabindex="-1">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <img class="close-icon" data-dismiss="modal" src="assets/images/close-icon.png" alt="img" />
+                                <div class="design-modal-content">
+                                    <div class="wrap-img">
+                                        <img src="assets/images/design-img.jpg" alt="img" />
+                                    </div>
+                                    <div class="wrap-text">
+                                        <div class="text-inner">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                                        </div>
+                                        <div class="list-thumbs">
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-1.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-2.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-3.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-4.jpg" alt="img" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mega-entry" data-src="assets/images/project-img-7.jpg" data-width="970" data-height="466">
-                        <a class="fancybox" rel="group" title="Lorem ipsum dolor sit amet 5" href="assets/images/project-img-7.jpg"></a>
+                        <a class="link" data-toggle="modal" data-target="#design-modal-5"></a>
                         <h4 class="title">Lorem ipsum dolor sit amet 5</h4>
                     </div>
+                    <div class="modal fade design-modal" id="design-modal-5" tabindex="-1">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <img class="close-icon" data-dismiss="modal" src="assets/images/close-icon.png" alt="img" />
+                                <div class="design-modal-content">
+                                    <div class="wrap-img">
+                                        <img src="assets/images/design-img.jpg" alt="img" />
+                                    </div>
+                                    <div class="wrap-text">
+                                        <div class="text-inner">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                                        </div>
+                                        <div class="list-thumbs">
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-1.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-2.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-3.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-4.jpg" alt="img" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mega-entry" data-src="assets/images/project-img-6.jpg" data-width="422" data-height="360">
-                        <a class="fancybox" rel="group" title="Lorem ipsum dolor sit amet 6" href="assets/images/project-img-6.jpg"></a>
+                        <a class="link" data-toggle="modal" data-target="#design-modal-6"></a>
                         <h4 class="title">Lorem ipsum dolor sit amet 6</h4>
                     </div>
+                    <div class="modal fade design-modal" id="design-modal-6" tabindex="-1">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <img class="close-icon" data-dismiss="modal" src="assets/images/close-icon.png" alt="img" />
+                                <div class="design-modal-content">
+                                    <div class="wrap-img">
+                                        <img src="assets/images/design-img.jpg" alt="img" />
+                                    </div>
+                                    <div class="wrap-text">
+                                        <div class="text-inner">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                                        </div>
+                                        <div class="list-thumbs">
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-1.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-2.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-3.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-4.jpg" alt="img" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mega-entry" data-src="assets/images/project-img-2.jpg" data-width="779" data-height="915">
-                        <a class="fancybox" rel="group" title="Lorem ipsum dolor sit amet 7" href="assets/images/project-img-2.jpg"></a>
+                        <a class="link" data-toggle="modal" data-target="#design-modal-7"></a>
                         <h4 class="title">Lorem ipsum dolor sit amet 7</h4>
                     </div>
+                    <div class="modal fade design-modal" id="design-modal-7" tabindex="-1">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <img class="close-icon" data-dismiss="modal" src="assets/images/close-icon.png" alt="img" />
+                                <div class="design-modal-content">
+                                    <div class="wrap-img">
+                                        <img src="assets/images/design-img.jpg" alt="img" />
+                                    </div>
+                                    <div class="wrap-text">
+                                        <div class="text-inner">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                                        </div>
+                                        <div class="list-thumbs">
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-1.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-2.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-3.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-4.jpg" alt="img" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mega-entry" data-src="assets/images/project-img-3.jpg" data-width="271" data-height="572">
-                        <a class="fancybox" rel="group" title="Lorem ipsum dolor sit amet 8" href="assets/images/project-img-3.jpg"></a>
+                        <a class="link" data-toggle="modal" data-target="#design-modal-8"></a>
                         <h4 class="title">Lorem ipsum dolor sit amet 8</h4>
+                    </div>
+                    <div class="modal fade design-modal" id="design-modal-8" tabindex="-1">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <img class="close-icon" data-dismiss="modal" src="assets/images/close-icon.png" alt="img" />
+                                <div class="design-modal-content">
+                                    <div class="wrap-img">
+                                        <img src="assets/images/design-img.jpg" alt="img" />
+                                    </div>
+                                    <div class="wrap-text">
+                                        <div class="text-inner">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                                        </div>
+                                        <div class="list-thumbs">
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-1.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-2.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-3.jpg" alt="img" />
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="assets/images/thumb-4.jpg" alt="img" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -250,11 +500,11 @@
         <script src="assets/scripts/libs/allinone_bannerRotator.js"></script>
         <script src="assets/megafolio/js/jquery.themepunch.tools.min.js"></script>
         <script src="assets/megafolio/js/jquery.themepunch.megafoliopro.js"></script>
+        <script src="assets/scripts/libs/slick.min.js"></script>
         
         <!-- main funtions -->
         <script src="assets/scripts/functions.js"></script>
         <script src="assets/scripts/main.js"></script>
-        <script src="assets/scripts/demo.js"></script>
         
     </body>
 </html>
