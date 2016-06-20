@@ -50,7 +50,7 @@
             delay: 20,
             paddingHorizontal: 0,
             paddingVertical: 0,
-            layoutarray: [11]
+            layoutarray: [14]
         });
 
 
@@ -85,6 +85,16 @@
                 $(this).closest('.design-modal-content').find('.wrap-img img').attr('src', $(this).attr('src'));
             });
         }
+
+
+        /* =================================
+         ===  More About                 ====
+         =================================== */
+        $(this).on('click', '.wrap-about .more-about-link', function() {
+            $('html, body').stop().animate({
+                'scrollTop': $('.wrap-about .about-block').offset().top
+            }, 900, 'swing');
+        });
 
 
     });

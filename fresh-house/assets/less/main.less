@@ -141,15 +141,15 @@ HOMEPAGE
                 }
             }
             a {
-                color: #000;
+                color: #fff;
                 font-size: 15px;
                 text-transform: none;
 
                 @media (max-width:@screen-xs-max) {
-                    color: #FFF;
+                    color: #000;
                 }
                 &:hover {
-                    color: #fff;
+                    color: #000;
                 }
             }
         }
@@ -197,11 +197,31 @@ ABOUTPAGE
     @media (min-width:@screen-xs-max) {
         overflow: hidden;
     }
+    > .text-center {
+        position: relative;
+
+        .more-about-link {
+            background-color: rgba(0, 0, 0, 0.6);
+            bottom: 20px;
+            color: #fff;
+            display: inline-block;
+            font-size: 30px;
+            left: 50%;
+            line-height: 1;
+            padding: 0 15px;
+            position: absolute;
+            transform: translateX(-50%);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+        }
+    }
     .about-block {
         margin-top: 55px;
 
         p {
-            font-size: 20px;
+            font-size: 15px;
         }
     }
     .list-persons {
@@ -286,17 +306,10 @@ ABOUTPAGE
         }
     }
     .list-services {
-        font-size: 30px;
+        font-size: 20px;
         line-height: 1.2;
         list-style: outside none none;
-        margin-bottom: 30px;
-
-        @media (max-width:@screen-md-max) {
-            font-size: 28px;
-        }
-        @media (max-width:@screen-sm-max) {
-            font-size: 23px;
-        }
+        margin-bottom: 25px;
     }
     .list-clients {
         display: flex;
@@ -532,7 +545,7 @@ CAREERPAGE
             margin-bottom: 40px;
 
             > h4 {
-                font-size: 35px;
+                font-size: 33px;
                 font-weight: bold;
                 margin: 0 0 20px;
                 cursor: pointer;
@@ -576,17 +589,17 @@ CAREERPAGE
             }
             .career-content {
                 border: 1px solid #5e111a;
-                font-size: 30px;
+                font-size: 20px;
                 margin: 0 50px;
                 padding: 20px 35px;
 
                 strong {
-                    font-size: 35px;
+                    font-size: 25px;
                     line-height: 1;
                 }
                 ul {
                     list-style: none;
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
 
                     li {
                         &:before {
@@ -627,14 +640,14 @@ CAREERPAGE
 
             input[type="text"], input[type="email"] {
                 background-color: #000;
-                border: medium none;
+                border: none;
                 color: #fefefe;
-                font-size: 30px;
-                height: 80px;
+                font-size: 20px;
+                height: 54px;
                 margin-bottom: 12px;
-                padding: 0 20px;
-                width: 100%;
+                padding: 0 15px;
                 transition: all 0.3s ease;
+                width: 100%;
 
                 &:focus {
                     color: #FFF;
@@ -642,12 +655,12 @@ CAREERPAGE
             }
             textarea {
                 background-color: #000;
-                border: medium none;
+                border: none;
                 color: #fefefe;
-                font-size: 30px;
-                height: 420px;
+                font-size: 20px;
+                height: 350px;
                 margin-bottom: 12px;
-                padding: 20px;
+                padding: 10px 15px;
                 width: 100%;
                 transition: all 0.3s ease;
                 resize: none;
@@ -660,9 +673,9 @@ CAREERPAGE
                 background-color: transparent;
                 border: 3px solid #000;
                 color: #000;
-                font-size: 30px;
-                margin-top: 30px;
-                padding: 10px 35px;
+                font-size: 20px;
+                margin-top: 20px;
+                padding: 8px 30px;
                 transition: all 0.3s ease;
 
                 &:hover {
@@ -719,17 +732,10 @@ CUSTOM CAPTION
     position: relative;
 
     h4& {
-        font-size: 34px;
+        font-size: 25px;
         font-weight: bold;
-        margin: 0 0 14px;
-        padding-bottom: 10px;
-
-        @media (max-width:@screen-md-max) {
-            font-size: 32px;
-        }
-        @media (max-width:@screen-sm-max) {
-            font-size: 26px;
-        }
+        margin: 0 0 10px;
+        padding-bottom: 8px;
     }
     &:before {
         background-color: #000;
@@ -746,7 +752,7 @@ CUSTOM CAPTION
 HEADER
 ----------------------------------------- */
 header.header {
-    height: 110px;
+    height: 85px;
     background-color: @main-color;
 
     @media (max-width:@screen-xs-max) {
@@ -760,7 +766,7 @@ header.header {
     LOGO
     ----------------------------------------- */
     .logo {
-        margin: 10px 0 0;
+        margin: 14px 0 0;
 
         @media (max-width:@screen-xs-max) {
             float: left;
@@ -769,9 +775,7 @@ header.header {
             display: inline-block;
         }
         img {
-            @media (max-width:@screen-xs-max) {
-                width: 60px;
-            }
+            width: 60px;
         }
     }
 
@@ -781,11 +785,8 @@ header.header {
     .main-nav {
         position: absolute;
         right: 0;
-        top: 32px;
+        top: 28px;
 
-        @media (max-width:@screen-sm-max) {
-            top: 35px;
-        }
         @media (max-width:@screen-xs-max) {
             position: relative;
         }
@@ -809,15 +810,12 @@ header.header {
             }
             a {
                 color: #fff;
-                font-size: 29px;
+                font-size: 20px;
                 padding: 5px 10px 8px;
                 text-transform: none;
 
                 @media (max-width:@screen-sm-max) {
-                    font-size: 24px;
-                }
-                @media (max-width:@screen-xs-max) {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 &:hover {
                     background-color: #370003;
@@ -858,9 +856,14 @@ MAIN
                     border: 1px solid #fff;
                     filter: grayscale(1);
                     transition: all 0.3s ease;
+                    overflow: hidden;
 
                     &:hover, &:focus {
                         filter: grayscale(0);
+
+                        .title {
+                            bottom: 0;
+                        }
                     }
                     .fancybox, .link {
                         bottom: 0;
@@ -886,16 +889,17 @@ MAIN
                     }
                     .title {
                         background-color: rgba(0, 0, 0, 0.3);
-                        bottom: 0;
+                        bottom: -100%;
                         color: #fff;
-                        font-size: 30px;
+                        font-size: 20px;
                         left: 0;
                         margin: 0;
-                        padding: 30px 30px 30px 0;
+                        padding: 20px 20px 20px 0;
                         position: absolute;
                         right: 0;
                         text-align: right;
                         z-index: 3;
+                        transition: all 0.3s ease;
 
                         @media (max-width:@screen-sm-max) {
                             font-size: 25px;
