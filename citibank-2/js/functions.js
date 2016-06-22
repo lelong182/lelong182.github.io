@@ -20,6 +20,15 @@
     $(window).on('load', function() {
         window.loading_screen.finish();
         $('body').css('opacity', 1);
+        if ($('.welcome-modal').length) {
+            setTimeout(function() {
+                $(".welcome-modal").modal({
+                    show: true,
+                    // backdrop: 'static',
+                    // keyboard: false
+                });
+            }, 1500);
+        }
     });
 
     $(document).ready(function() {
