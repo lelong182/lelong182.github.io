@@ -70,7 +70,39 @@
             infinite: true,
             fade: true,
             autoplaySpeed: 4000,
-            autoplay: true
+            autoplay: true,
+            speed: 800
+        });
+        $('.hotel-content .list-contents').slick({
+            arrows: false,
+            infinite: true,
+            fade: true,
+            autoplaySpeed: 5000,
+            autoplay: true,
+            speed: 1000
+        });
+        $('.hotel-image .list-imgs').slick({
+            arrows: false,
+            infinite: true,
+            fade: true,
+            autoplaySpeed: 4000,
+            autoplay: true,
+            speed: 800
+        });
+        $(this).on('click', '.slick-nav li a', function() {
+            var index = $(this).parent().index();
+            var current_slick = $(this).closest('.wrap-hotel-content').find('.list-contents');
+            $(this).parent().addClass('active');
+            $(this).closest('.wrap-hotel-content').find('.slick-nav li').removeClass('active');
+            current_slick.slick('slickGoTo', index, false);
+        });
+        $('.hotel-content .list-contents').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            $(this).closest('.wrap-hotel-content').find('.slick-nav li').removeClass('active');
+            $(this).closest('.wrap-hotel-content').find('.slick-nav li').eq(nextSlide).addClass('active');
+        });
+        $('.hotel-tabs').on('shown.bs.tab', function(e) {
+            $('.hotel-content .list-contents').slick('setPosition');
+            $('.hotel-image .list-imgs').slick('setPosition');
         });
 
 
