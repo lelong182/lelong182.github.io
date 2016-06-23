@@ -50,7 +50,7 @@
             delay: 20,
             paddingHorizontal: 0,
             paddingVertical: 0,
-            layoutarray: [14]
+            layoutarray: [11]
         });
 
 
