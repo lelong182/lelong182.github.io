@@ -24,6 +24,19 @@ PARALLAX
 }
 
 /* ---------------------------------------
+CSS POSITION
+----------------------------------------- */
+.pos-relative {
+    position: relative;
+}
+.pos-absolute {
+    position: absolute;
+}
+.pos-fixed {
+    position: fixed;
+}
+
+/* ---------------------------------------
 PAGINATION
 ----------------------------------------- */
 .pagination {
@@ -300,8 +313,9 @@ TOPBAR
     background: url("../images/top-bg.png") repeat-x;
     height: 36px;
     line-height: 1;
-    padding-top: 3px;
-    position: relative;
+    padding: 3px 20px 0;
+    position: absolute;
+    width: 100%;
 
     a {
         color: #fff;
@@ -348,7 +362,12 @@ HEADER
     background: url("../images/header-bg.jpg") repeat-x;
     height: 86px;
     line-height: 1;
-    margin-top: -14px;
+    margin-top: 22px;
+    padding: 18px 0 0 20px;
+
+    .logo {
+        margin: 0;
+    }
 }
 
 /* ---------------------------------------
@@ -421,7 +440,7 @@ HERO
                 padding-left: 0;
             }
             > h3 {
-                font-size: 68px;
+                font-size: 60px;
                 font-weight: 200;
                 margin: 60px 0 22px;
 
@@ -441,7 +460,7 @@ HERO
                 }
             }
             > h5 {
-                font-size: 26px;
+                font-size: 22px;
                 font-weight: 200;
                 margin: 0 0 80px;
 
@@ -458,7 +477,7 @@ HERO
                 }
             }
             > h4 {
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 1px;
                 line-height: 1.3;
@@ -596,9 +615,9 @@ HERO
                 height: 200px;
                 width: 100%;
             }
-            .list-imgs {
-                .image {
-                    height: 200px;
+            img {
+                @media (max-width:@screen-sm-max) {
+                    height: 100%;
                     width: 100%;
                     object-fit: cover;
                 }
@@ -660,6 +679,7 @@ HERO
                         margin: 0 0 20px;
                         text-transform: uppercase;
                         letter-spacing: 1px;
+                        font-size: 20px;
 
                         @media (max-width:@screen-sm-max) {
                             font-size: 18px;
@@ -694,11 +714,6 @@ HERO
                             }
                         }
                     }
-                    br {
-                        @media (max-width:@screen-md-max) {
-                            display: none;
-                        }
-                    }
                 }
             }
         }
@@ -711,7 +726,7 @@ MAIN
 .main {
     .wrap-home {
         > h3 {
-            font-size: 30px;
+            font-size: 28px;
             letter-spacing: 4px;
             line-height: 1.4;
             margin: 55px 0 30px;
@@ -762,7 +777,7 @@ MAIN
                 li {
                     margin-bottom: 0;
                     text-align: center;
-                    width: ~"calc(100% / 7)";
+                    width: ~"calc(100% / 6)";
 
                     @media (max-width:@screen-sm-max) {
                         width: ~"calc(100% / 4)";
@@ -1071,7 +1086,7 @@ MAIN
                                 }
                                 .box-restaurant-inner {
                                     color: #fff;
-                                    padding: 25px 40px 15px 50px;
+                                    padding: 25px 38px 15px 40px;
                                     transform: skewX(16deg);
 
                                     @media (max-width:@screen-xs-min) {
@@ -1092,8 +1107,8 @@ MAIN
                                             letter-spacing: 1px;
                                             line-height: 1;
                                             margin-bottom: 5px;
-                                            margin-right: 18px;
-                                            padding-right: 18px;
+                                            margin-right: 13px;
+                                            padding-right: 13px;
                                             text-transform: uppercase;
 
                                             &:last-child {
@@ -1181,6 +1196,9 @@ MAIN
             p {
                 margin-bottom: 20px;
             }
+            .symbol {
+                font-family: Arial;
+            }
             .wrap-spg {
                 display: flex;
                 margin: 50px -235px;
@@ -1256,6 +1274,7 @@ FOOTER
 ----------------------------------------- */
 .footer {
     padding-bottom: 15px;
+    margin-bottom: 110px;
 
     .footer-1 {
         border-bottom: 2px solid #ccc;
@@ -1336,6 +1355,22 @@ FOOTER
             }
         }
     }
+}
+
+/* ---------------------------------------
+FLIP IMAGES
+----------------------------------------- */
+.apply {
+    background: transparent url("../images/bg-apply.png") repeat-x;
+    bottom: 0;
+    display: none;
+    height: 116px;
+    left: 0;
+    padding: 30px 20px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 2000;
 }
 
 /* ---------------------------------------

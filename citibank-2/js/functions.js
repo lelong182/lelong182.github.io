@@ -20,15 +20,6 @@
     $(window).on('load', function() {
         window.loading_screen.finish();
         $('body').css('opacity', 1);
-        if ($('.welcome-modal').length) {
-            setTimeout(function() {
-                $(".welcome-modal").modal({
-                    show: true,
-                    // backdrop: 'static',
-                    // keyboard: false
-                });
-            }, 1500);
-        }
     });
 
     $(document).ready(function() {
@@ -57,6 +48,7 @@
          =================================== */
         if ($('.slideshow').length) {
             $('.slideshow').allinone_bannerRotator({
+                defaultEffect: 'fade',
                 autoPlay: 3,
                 skin: 'universal',
                 width: 1370,
@@ -112,6 +104,18 @@
         $('.hotel-tabs').on('shown.bs.tab', function(e) {
             $('.hotel-content .list-contents').slick('setPosition');
             $('.hotel-image .list-imgs').slick('setPosition');
+        });
+
+
+        /* =================================
+         ===  Apply Bar                 ====
+         =================================== */
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 700) {
+                $('.apply').fadeIn();
+            } else {
+                $('.apply').fadeOut();
+            }
         });
 
 
