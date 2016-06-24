@@ -28,6 +28,12 @@ CSS POSITION
 ----------------------------------------- */
 .pos-relative {
     position: relative;
+
+    &-sm {
+        @media (min-width:@screen-sm-min) {
+            position: relative;
+        }
+    }
 }
 .pos-absolute {
     position: absolute;
@@ -315,6 +321,7 @@ TOPBAR
     line-height: 1;
     padding: 3px 20px 0;
     position: absolute;
+    left: 0;
     width: 100%;
 
     a {
@@ -635,10 +642,10 @@ HERO
             .text-inner {
                 align-items: center;
                 display: flex;
-                padding: 50px 0 0 30px;
+                padding: 25px 0 0 30px;
 
                 @media (max-width:@screen-md-max) {
-                    padding: 25px 30px 0 10px;
+                    padding: 15px 30px 0 10px;
                 }
                 @media (max-width:@screen-sm-max) {
                     padding: 0 40px;
@@ -676,7 +683,7 @@ HERO
                     }
                     h3 {
                         font-weight: 700;
-                        margin: 0 0 20px;
+                        margin: 0 0 10px;
                         text-transform: uppercase;
                         letter-spacing: 1px;
                         font-size: 20px;
@@ -702,6 +709,9 @@ HERO
                         }
                         @media (max-width:@screen-xs-max) {
                             font-size: 14px;
+                        }
+                        &.promo-text {
+                            font-size: 15px;
                         }
                         span {
                             font-size: 14px;
