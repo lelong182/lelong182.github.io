@@ -111,11 +111,20 @@
          ===  Apply Bar                 ====
          =================================== */
         $(window).scroll(function() {
-            if ($(window).scrollTop() > 700) {
-                $('.apply').fadeIn();
-            } else {
-                $('.apply').fadeOut();
+            if (!$('.apply').hasClass('closed')) {
+                if ($(window).scrollTop() > 700) {
+                    $('.apply').fadeIn();
+                } else {
+                    $('.apply').fadeOut();
+                }
             }
+        });
+        $(this).on('click', '.apply .close-link', function() {
+            $('.apply').addClass('closed');
+            $('.apply').fadeOut();
+            $('.footer').css({
+                'margin-bottom': 0
+            });
         });
 
 
