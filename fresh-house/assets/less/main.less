@@ -234,7 +234,7 @@ ABOUTPAGE
             margin-left: -20px;
             margin-right: -20px;
         }
-        @media (max-width:@screen-xs-min) {
+        @media (max-width:@screen-xs-max) {
             margin-left: 0;
             margin-right: 0;
         }
@@ -306,7 +306,7 @@ ABOUTPAGE
         }
     }
     .list-services {
-        font-size: 20px;
+        font-size: 15px;
         line-height: 1.2;
         list-style: outside none none;
         margin-bottom: 25px;
@@ -314,18 +314,19 @@ ABOUTPAGE
     .list-clients {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         list-style: outside none none;
         margin: 20px 0 0;
 
         li {
-            margin: 0 50px 50px;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 25%;
 
-            @media (max-width:@screen-md-max) {
-                margin: 0 30px 30px;
+            @media (max-width:@screen-xs-max) {
+                width: 50%;
             }
-            @media (max-width:@screen-sm-max) {
-                margin: 0 20px 30px;
+            img {
+                max-width: 90%;
             }
         }
     }
@@ -640,13 +641,13 @@ CAREERPAGE
 
             input[type="text"], input[type="email"] {
                 background-color: #000;
-                border: none;
+                border: medium none;
                 color: #fefefe;
-                font-size: 20px;
-                height: 54px;
-                margin-bottom: 12px;
+                font-size: 15px;
+                height: 40px;
+                margin-bottom: 10px;
                 padding: 0 15px;
-                transition: all 0.3s ease;
+                transition: all 0.3s ease 0s;
                 width: 100%;
 
                 &:focus {
@@ -657,9 +658,9 @@ CAREERPAGE
                 background-color: #000;
                 border: none;
                 color: #fefefe;
-                font-size: 20px;
-                height: 350px;
-                margin-bottom: 12px;
+                font-size: 15px;
+                height: 200px;
+                margin-bottom: 10px;
                 padding: 10px 15px;
                 width: 100%;
                 transition: all 0.3s ease;
@@ -754,6 +755,7 @@ HEADER
 header.header {
     height: 85px;
     background-color: @main-color;
+    z-index: 100;
 
     @media (max-width:@screen-xs-max) {
         height: 80px;
@@ -817,12 +819,50 @@ header.header {
                 @media (max-width:@screen-sm-max) {
                     font-size: 18px;
                 }
+                @media (max-width:@screen-xs-max) {
+                    font-weight: lighter;
+                }
                 &:hover {
                     background-color: #370003;
 
                     @media (max-width:@screen-xs-max) {
                         background-color: rgba(255, 255, 255, 0.2);
                     }
+                }
+            }
+        }
+        .minimal-menu-button {
+            span {
+                height: 2px;
+                position: absolute;
+                background: #fff;
+                text-indent: -999em;
+                width: 100%;
+                top: 8px;
+                transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
+
+                &:before, &:after {
+                    content: '';
+                    height: 2px;
+                    background: #fff;
+                    width: 100%;
+                    position: absolute;
+                    top: -8px;
+                    left: 0;
+                    transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
+                }
+                &:after {
+                    top: 8px;
+                }
+            }
+            &.active span {
+                background: transparent;
+
+                &:before {
+                    transform: translateY(8px) translateX(1px) rotate(45deg);
+                }
+                &:after {
+                    transform: translateY(-8px) translateX(1px) rotate(-45deg);
                 }
             }
         }
@@ -855,17 +895,19 @@ MAIN
                 .mega-entry-innerwrap {
                     border: 1px solid #fff;
                     filter: grayscale(1);
+                    -webkit-filter: grayscale(1);
                     transition: all 0.3s ease;
                     overflow: hidden;
 
                     &:hover, &:focus {
                         filter: grayscale(0);
+                        -webkit-filter: grayscale(0);
 
                         .title {
                             bottom: 0;
                         }
                     }
-                    .fancybox, .link {
+                    .fancybox, .iframebox, .link {
                         bottom: 0;
                         left: 0;
                         position: absolute;
@@ -891,22 +933,18 @@ MAIN
                         background-color: rgba(0, 0, 0, 0.3);
                         bottom: -100%;
                         color: #fff;
-                        font-size: 20px;
+                        font-size: 15px;
+                        font-weight: normal;
                         left: 0;
                         margin: 0;
-                        padding: 20px 20px 20px 0;
+                        padding: 15px;
                         position: absolute;
                         right: 0;
                         text-align: right;
+                        transition: all 0.3s ease 0s;
                         z-index: 3;
-                        transition: all 0.3s ease;
 
-                        @media (max-width:@screen-sm-max) {
-                            font-size: 25px;
-                            padding: 20px 20px 20px 0;
-                        }
                         @media (max-width:@screen-xs-max) {
-                            font-size: 18px;
                             padding: 10px;
                             text-align: center;
                         }
@@ -917,14 +955,14 @@ MAIN
     }
     .news-details {
         .news-title {
-            font-size: 36px;
+            font-size: 30px;
             font-weight: bold;
-            margin: 40px 0 20px;
+            margin: 30px 0 10px;
         }
         .news-content {
-            font-size: 20px;
+            font-size: 15px;
             line-height: 1.3;
-            padding-bottom: 30px;
+            padding-bottom: 15px;
 
             p {
                 margin-bottom: 20px;

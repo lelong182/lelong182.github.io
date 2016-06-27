@@ -14,9 +14,12 @@
 })(window.jQuery);
 
 function myMinimalMenu() {
-    $('.minimal-menu').before('<label class=\"minimal-menu-button\" for=\"mobile-nav\"><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></label><input class=\"minimal-menu-button\" type=\"checkbox\" id=\"mobile-nav\" name=\"mobile-nav\" />');
+    $('.minimal-menu').before('<label class=\"minimal-menu-button\" for=\"mobile-nav\"><span>Menu</span></label><input class=\"minimal-menu-button\" type=\"checkbox\" id=\"mobile-nav\" name=\"mobile-nav\" />');
     $('.minimal-menu').find('ul.sub-menu').parent().addClass('submenu');
     $('.minimal-menu').find('ul.sub-menu').before('<input class=\"show-submenu\" type=\"checkbox\" />');
+    $(document).on('click', '.minimal-menu-button', function() {
+        $(this).toggleClass('active');
+    });
     $(document).on('mouseup', 'body', function(event) {
         if (!$('.minimal-menu').is(event.target) && $('.minimal-menu').has(event.target).length === 0 && !$('.minimal-menu-button').is(event.target)) {
             $('.minimal-menu-button[type="checkbox"]').prop('checked', false);
@@ -24,9 +27,10 @@ function myMinimalMenu() {
     });
 }
 
-function myFancybox(selector) {
+function myFancybox(selector, type) {
     if ($(selector).length) {
         $(selector).fancybox({
+            type: type,
             padding: 0,
             helpers: {
                 overlay: {
@@ -34,6 +38,29 @@ function myFancybox(selector) {
                         'background': 'rgba(0, 0, 0, 0.85)'
                     }
                 }
+            },
+            onUpdate: function() {
+                var posXY = '';
+                $('.fancybox-skin').draggable({
+                    axis: "x",
+                    drag: function(event, ui) {
+                        posXY = ui.position.left;
+                        if (posXY > 50) {
+                            return false;
+                        }
+                        if (posXY < -50) {
+                            return false;
+                        }
+                    },
+                    stop: function() {
+                        if (posXY > 45) {
+                            $.fancybox.prev();
+                        }
+                        if (posXY < -45) {
+                            $.fancybox.next();
+                        }
+                    }
+                });
             }
         });
     }
@@ -56,6 +83,17 @@ function onlynumber() {
 function myFancySelect(selector, options) {
     if ($(selector).length) {
         $(selector).fancySelect(options);
+    }
+}
+
+function mySticky(selector) {
+    if ($(selector).length) {
+        $(window).on('load resize', function() {
+            $(selector).sticky('update');
+        });
+        $(selector).sticky({
+            topSpacing: 0
+        });
     }
 }
 

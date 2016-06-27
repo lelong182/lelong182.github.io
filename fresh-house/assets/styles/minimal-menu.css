@@ -164,7 +164,7 @@
 }
 @media only screen and (max-width:857px) {
 	.minimal-menu ul li.submenu > a:after {
-		color: #aaa;
+		color: #fff;
 		content: "\f107";
 		font-family: FontAwesome;
 		font-size: 24px;
@@ -178,8 +178,8 @@
 	}
 	.minimal-menu-button {
 		position: absolute;
-		right: 15px;
-		top: -16px;
+		right: 20px;
+		top: 0;
 		z-index: 999;
 	}
 	.minimal-menu {
@@ -190,15 +190,9 @@
 		display: none;
 	}
 	label.minimal-menu-button {
-		background-color: #000;
-		color: #fff;
 		cursor: pointer;
-		display: inline-block;
-		height: 40px;
-		padding-top: 4px;
-		text-indent: -9999px;
-		text-transform: uppercase;
-		width: 42px;
+		height: 35px;
+		width: 35px;
 	}
 	label.minimal-menu-button .icon-bar {
 		background-color: #fff;
@@ -209,7 +203,8 @@
 		margin: 6px 5px;
 	}
 	.minimal-menu {
-		background-color: #000;
+		background-color: #5e111a;
+		box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.5);
 		height: 100%;
 		left: -100%;
 		opacity: 0;
@@ -218,7 +213,7 @@
 		transition: left 0.8s ease 0s, opacity 0.5s ease 0s;
 		width: 55%;
 	}
-	#mobile-nav:checked + .minimal-menu {
+	.minimal-menu-button.active + .minimal-menu {
 		visibility: visible;
 		left: 0;
 		opacity: 1;
@@ -274,7 +269,7 @@
 		font-size: 14px;
 	}
 	.minimal-menu ul li.submenu > a:before, .minimal-menu ul li.submenu > a:after {
-		top: 5px;
+		top: 0;
 		left: auto;
 		right: 12px;
 	}

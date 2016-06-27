@@ -14,13 +14,16 @@
     $(document).ready(function() {
 
         myMinimalMenu();
-        myFancybox('.fancybox');
+        myFancybox('.fancybox', 'image');
+        myFancybox('.iframebox', 'iframe');
+        mySticky('header.header');
 
         /* =================================
          ===  Slideshow                 ====
          =================================== */
         if ($('.slideshow').length) {
             $('.slideshow').allinone_bannerRotator({
+                defaultEffect: 'fade',
                 autoPlay: 3,
                 skin: 'universal',
                 width: 2000,
