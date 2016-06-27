@@ -14,7 +14,7 @@
 })(window.jQuery);
 
 function myMinimalMenu() {
-    $('.minimal-menu').before('<label class=\"minimal-menu-button\" for=\"mobile-nav\"><span>Menu</span></label><input class=\"minimal-menu-button\" type=\"checkbox\" id=\"mobile-nav\" name=\"mobile-nav\" />');
+    $('.minimal-menu').before('<div class=\"minimal-menu-button\"><span>Menu</span></div>');
     $('.minimal-menu').find('ul.sub-menu').parent().addClass('submenu');
     $('.minimal-menu').find('ul.sub-menu').before('<input class=\"show-submenu\" type=\"checkbox\" />');
     $(document).on('click', '.minimal-menu-button', function() {
@@ -22,7 +22,7 @@ function myMinimalMenu() {
     });
     $(document).on('mouseup', 'body', function(event) {
         if (!$('.minimal-menu').is(event.target) && $('.minimal-menu').has(event.target).length === 0 && !$('.minimal-menu-button').is(event.target)) {
-            $('.minimal-menu-button[type="checkbox"]').prop('checked', false);
+            $('.minimal-menu-button').removeClass('active');
         }
     });
 }

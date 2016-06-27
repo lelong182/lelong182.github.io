@@ -189,12 +189,12 @@
 	input.minimal-menu-button {
 		display: none;
 	}
-	label.minimal-menu-button {
+	.minimal-menu-button {
 		cursor: pointer;
 		height: 35px;
 		width: 35px;
 	}
-	label.minimal-menu-button .icon-bar {
+	.minimal-menu-button .icon-bar {
 		background-color: #fff;
 		border-radius: 2px;
 		color: #fff;
