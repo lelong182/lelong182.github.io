@@ -416,6 +416,7 @@ HERO
         width: 100%;
     }
     .on-slideshow {
+        background: -ms-linear-gradient(#0d3446, #134f6a);
         background: linear-gradient(#0d3446, #134f6a);
         bottom: 0;
         color: #fff;
@@ -545,7 +546,7 @@ HERO
                     }
                 }
                 .media {
-                    margin: 20px 0 20px 20px;
+                    margin: 20px 0 12px 20px;
 
                     @media (max-width:@screen-sm-max) {
                         margin: 15px 20px !important;
@@ -608,17 +609,12 @@ HERO
         }
     }
     .bottom-slideshow {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
         display: flex;
+        background: -ms-linear-gradient(#9e8952, #c7b073);
         background: linear-gradient(#9e8952, #c7b073);
         color: #fff;
 
         @media (max-width:@screen-xs-min) {
-            -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         }
         .wrap-img {
@@ -641,11 +637,7 @@ HERO
             }
         }
         .wrap-text {
-            -webkit-box-flex: 2 1 0;
-            -moz-box-flex: 2 1 0;
-            -webkit-flex: 2 1 0;
-            -ms-flex: 2 1 0;
-            flex: 2 1 0;
+            flex: 2 1 1px;
 
             @media (max-width:@screen-sm-max) {
                 width: 70%;
@@ -1530,5 +1522,104 @@ SPINNER
     40% {
         -webkit-transform: scale(1.0);
         transform: scale(1.0);
+    }
+}
+
+/* ---------------------------------------
+NO FLEX
+----------------------------------------- */
+.ie {
+    .hero {
+        .on-slideshow {
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#0d3446', endColorstr='#134f6a');
+        }
+        .bottom-slideshow {
+            display: table;
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#9e8952', endColorstr='#c7b073');
+
+            .wrap-img {
+                display: table-cell;
+            }
+            .wrap-text {
+                display: table-cell;
+                vertical-align: top;
+
+                .text-inner {
+                    display: block;
+
+                    .sale-label {
+                        float: left;
+                        width: 181px;
+                    }
+                    .sale-content {
+                        float: left;
+                        width: ~"calc(100% - 216px)";
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        .wrap-home {
+            .wrap-tabs {
+                .wrap-hotel-content {
+                    display: table;
+
+                    .hotel-location {
+                        display: table-cell;
+
+                        .slick-nav {
+                            transform: translate(-50%, 150%);
+                        }
+                    }
+                    .hotel-content {
+                        display: table-cell;
+                    }
+                    .hotel-image {
+                        display: table-cell;
+                    }
+                }
+            }
+            .bottom-content {
+                .wrap-spg {
+                    display: table;
+
+                    .image {
+                        display: table-cell;
+                    }
+                    .text {
+                        display: table-cell;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        .footer-1 {
+            display: table;
+            width: 100%;
+            padding-bottom: 5px;
+
+            ul {
+                display: table-cell;
+
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+        .footer-2 {
+            display: table;
+            width: 100%;
+
+            .logo {
+                display: table-cell;
+            }
+            .copyright {
+                display: table-cell;
+                vertical-align: top;
+            }
+        }
     }
 }
