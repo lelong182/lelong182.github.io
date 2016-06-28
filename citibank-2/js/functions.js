@@ -39,18 +39,11 @@
 
         $('body').css('opacity', 1);
 
-    });
-
-
-
-    $(document).ready(function() {
-
         /* =================================
          ===  Animation                 ====
          =================================== */
-        $('.allinone_bannerRotator').addClass('hidden');
         $('.first-slide')
-            .delay(2000)
+            .delay(1500)
             .velocity({
                 translateX: 0,
                 opacity: 1
@@ -70,7 +63,7 @@
                 }
             });
         $('.bottom-slideshow .wrap-img')
-            .delay(2500)
+            .delay(2000)
             .velocity({
                 translateX: 0,
                 opacity: 1
@@ -78,6 +71,11 @@
                 duration: 800
             });
 
+    });
+
+
+
+    $(document).ready(function() {
 
         /* =================================
          ===  Tooltip                 ====
