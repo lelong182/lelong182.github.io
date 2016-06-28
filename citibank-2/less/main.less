@@ -608,11 +608,17 @@ HERO
         }
     }
     .bottom-slideshow {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         background: linear-gradient(#9e8952, #c7b073);
         color: #fff;
 
         @media (max-width:@screen-xs-min) {
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         }
         .wrap-img {
@@ -635,6 +641,10 @@ HERO
             }
         }
         .wrap-text {
+            -webkit-box-flex: 2 1 0;
+            -moz-box-flex: 2 1 0;
+            -webkit-flex: 2 1 0;
+            -ms-flex: 2 1 0;
             flex: 2 1 0;
 
             @media (max-width:@screen-sm-max) {
@@ -645,6 +655,10 @@ HERO
             }
             .text-inner {
                 align-items: center;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
                 display: flex;
                 padding: 40px 0 0 30px;
 
@@ -982,12 +996,18 @@ MAIN
                 }
             }
             .wrap-hotel-content {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
                 display: flex;
                 border-bottom: 1px solid #ddd;
 
                 @media (max-width:@screen-sm-max) {
                     border: 1px solid #ddd;
                     margin-top: 10px;
+                    -webkit-flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
                     flex-wrap: wrap;
                 }
                 .hotel-location {
@@ -1238,6 +1258,10 @@ MAIN
                 font-family: Arial;
             }
             .wrap-spg {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
                 display: flex;
                 margin: 50px -235px;
 
@@ -1245,6 +1269,8 @@ MAIN
                     margin: 50px -135px;
                 }
                 @media (max-width:@screen-sm-max) {
+                    -webkit-flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
                     flex-wrap: wrap;
                     margin-left: 0;
                     margin-right: 0;
@@ -1316,6 +1342,10 @@ FOOTER
 
     .footer-1 {
         border-bottom: 2px solid #ccc;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         justify-content: space-between;
         margin-bottom: 12px;
@@ -1369,6 +1399,10 @@ FOOTER
         }
     }
     .footer-2 {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         justify-content: space-between;
 
