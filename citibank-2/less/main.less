@@ -424,6 +424,10 @@ HERO
         opacity: 0;
         transform: translateX(200px);
         transition: transform 1s ease;
+
+        @media (max-width:@screen-xs-min) {
+            display: none;
+        }
     }
     .wrap-slideshow {
         position: relative;
@@ -690,6 +694,7 @@ HERO
                     display: block;
                     padding: 20px 25px;
                     text-align: center;
+                    transform: translateX(0);
                 }
                 .sale-label {
                     border: 2px solid #fff;
