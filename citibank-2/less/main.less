@@ -1549,9 +1549,20 @@ NO FLEX
 .ie {
     .hero {
         .on-slideshow {
-            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#0d3446', endColorstr='#134f6a');
             transform: skewX(0deg);
 
+            @media (min-width:@screen-lg-min) {
+                width: 850px !important;
+                background-position-x: 114px !important;
+            }
+            @media (min-width:@screen-md-min) {
+                background: url("../images/blue-bg.png") no-repeat;
+                width: 820px;
+                background-position-x: 86px;
+            }
+            @media (max-width:@screen-sm-max) {
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#0d3446', endColorstr='#134f6a');
+            }
             .on-slideshow-content {
                 transform: skewX(0deg);
             }
