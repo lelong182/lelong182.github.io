@@ -43,7 +43,7 @@
          ===  Animation                 ====
          =================================== */
         $('.first-slide')
-            .delay(1000)
+            .delay(1500)
             .velocity({
                 translateX: 0,
                 opacity: 1
@@ -63,7 +63,7 @@
                 }
             });
         $('.bottom-slideshow .wrap-img')
-            .delay(1500)
+            .delay(2000)
             .velocity({
                 translateX: 0,
                 opacity: 1
