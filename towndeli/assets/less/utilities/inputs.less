@@ -1,0 +1,248 @@
+.custom-input {
+    border: 1px solid #bbb;
+    color: #333;
+    font-size: 15px;
+    height: 40px;
+    padding: 0 12px;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+
+    &:focus {
+        border: 1px solid @main-color;
+    }
+    &.uppercase {
+        text-transform: uppercase;
+    }
+}
+.custom-textarea {
+    border: 1px solid #bbb;
+    color: #999;
+    font-size: 15px;
+    height: 200px;
+    padding: 6px 12px;
+    width: 100%;
+    resize: none;
+
+    &:focus {
+        border: 1px solid @main-color;
+        color: #333;
+    }
+}
+.input-has-addon {
+    position: relative;
+
+    &.count-character {
+        .custom-input {
+            padding-right: 80px;
+        }
+    }
+    .custom-input {
+        padding-right: 30px;
+    }
+    > span {
+        color: #999;
+        font-size: 15px;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+}
+.input-has-link {
+    position: relative;
+
+    .custom-input {
+        padding-right: 55px;
+    }
+    .link {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+}
+.input-has-icon {
+    position: relative;
+
+    .custom-input {
+        padding-right: 42px;
+    }
+    i {
+        color: #999;
+        font-size: 22px;
+        position: absolute;
+        right: 10px;
+        top: 9px;
+    }
+}
+.input-has-box {
+    .box {
+        float: left;
+        margin-right: 10px;
+        width: 150px;
+    }
+    .custom-input {
+        float: left;
+        width: ~"calc(100% - 160px)";
+    }
+}
+.input-has-list {
+    position: relative;
+
+    .list-multi-level {
+        background-color: #f2f2f2;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
+        color: #555;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 10px 5px 0;
+        position: absolute;
+        top: ~"calc(100% + 3px)";
+        transition: all 0.3s ease 0s;
+        visibility: hidden;
+        width: 100%;
+        z-index: 10;
+
+        &.opened {
+            opacity: 1;
+            top: 100%;
+            visibility: visible;
+        }
+        &.has-scroll {
+            max-height: 300px;
+            overflow: initial;
+
+            &.mCustomScrollbar {
+                .mCustomScrollBox {
+                    margin-right: -28px;
+                    width: ~"calc(100% + 28px)";
+
+                    .mCSB_container {
+                        > li {
+                            &:first-child {
+                                &.has-child {
+                                    > i {
+                                        top: 9px !important;
+                                    }
+                                }
+                                > label {
+                                    margin-top: 5px;
+                                }
+                            }
+                            &.has-child {
+                                &.open {
+                                    > label {
+                                        margin-bottom: 6px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            li {
+                &.has-child {
+                    padding-right: 5px;
+                }
+            }
+        }
+        > li {
+            &:first-child {
+                &.has-child {
+                    > i {
+                        top: 9px !important;
+                    }
+                }
+                > label {
+                    margin-top: 5px;
+                }
+            }
+            &.has-child {
+                &.open {
+                    > label {
+                        margin-bottom: 6px !important;
+                    }
+                }
+            }
+        }
+        li {
+            &:last-child {
+                border-bottom: none;
+            }
+            &.has-child {
+                padding-left: 25px;
+
+                &.open {
+                    > label {
+                        margin-bottom: 11px;
+                    }
+                }
+                i {
+                    font-size: 10px !important;
+                    left: 10px !important;
+                    top: 14px !important;
+                }
+                > ul {
+                    margin-left: 0 !important;
+                }
+                li {
+                    &:last-child {
+                        &:not(.has-child) {
+                            label {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    &:not(.has-child) {
+                        padding-left: 20px;
+
+                        label {
+                            margin: 5px 0;
+                        }
+                    }
+                }
+            }
+            input[type="checkbox"] + label {
+                background-position: right 0;
+                padding-left: 0;
+            }
+            input[type="checkbox"]:checked + label {
+                background-position: right -15px;
+            }
+            label {
+                font-size: 15px;
+                line-height: 15px;
+                margin: 10px 0 1px;
+                position: relative;
+                width: 100%;
+
+                &:before {
+                    left: initial;
+                    right: 0;
+                }
+                &:after {
+                    background-color: #bbb;
+                    content: "";
+                    height: 1px;
+                    left: -50%;
+                    position: absolute;
+                    top: -10px;
+                    width: 9999px;
+                }
+            }
+        }
+    }
+}
+.search-form {
+    position: relative;
+    display: inline-block;
+
+    .custom-input {
+        padding-right: 40px;
+    }
+    button[type="submit"] {
+        background-color: transparent;
+        border: medium none;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+}

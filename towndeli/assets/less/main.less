@@ -1,0 +1,70 @@
+/* ---------------------------------------
+    SPINNER
+----------------------------------------- */
+@import "utilities/spinner.less";
+
+/* ---------------------------------------
+    WRAP MEDIA
+----------------------------------------- */
+.wrap-media {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0;
+
+    .centerer {
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+    img, .img, object {
+        vertical-align: middle;
+        display: inline-block;
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ---------------------------------------
+    TOPBAR
+----------------------------------------- */
+.topbar {
+    background-color: #262626;
+    color: #fff;
+    height: 40px;
+    text-transform: uppercase;
+    &:before {
+        background-color: #02b691;
+        content: "";
+        height: 40px;
+        left: -50px;
+        position: absolute;
+        top: 0;
+        transform: skewX(20deg);
+        width: 23%;
+    }
+    h4 {
+        font-size: 14px;
+        margin: 12px 0 0;
+        position: relative;
+    }
+    a {
+        border-bottom: 1px solid #fff;
+        color: #fff;
+    }
+}
+
+/* ---------------------------------------
+    IFRAME GOOGLE CODE
+----------------------------------------- */
+iframe[name='google_conversion_frame'] {
+    height: 0 !important;
+    width: 0 !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    margin-top: -13px;
+    float: left;
+}
