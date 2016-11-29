@@ -36,32 +36,231 @@
         <!-- /.topbar -->
 
         <header class="header">
-
+            <div class="container">
+                <span class="menu-icon"></span>
+                <!-- /.menu-icon -->
+                <h1 class="logo">
+                    <a href="index.html" title="TownDeli">TownDeli</a>
+                </h1>
+                <!-- /.logo -->
+                <ul class="menu">
+                    <li>
+                        <a><span class="glass-icon"></span>Menu</a>
+                    </li>
+                    <li>
+                        <a><span class="calendar-icon"></span>Schedule</a>
+                    </li>
+                    <li>
+                        <a><span class="cart-icon"></span>Your cart</a>
+                    </li>
+                </ul>
+                <!-- /.menu -->
+                <ul class="top-links">
+                    <li class="user">
+                        <a><img src="dist/images/avatar.png" alt="img" /></a>
+                    </li>
+                    <li class="lang">
+                        <a><img src="dist/images/en-flag.png" alt="img" /></a>
+                    </li>
+                </ul>
+                <!-- /.top-links -->
+            </div>
         </header>
         <!-- /.header -->
 
         <div class="hero">
-
+            <div class="wrap-sliders">
+                <div id="home-sliders" class="master-slider ms-skin-default">
+                    <div class="ms-slide">
+                        <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img" />
+                        <div class="ms-layer ms-caption">
+                            <h4>This summer too hot ?<br /> buy 1 get 1 today</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam pulvinar pulvinar leo eget pretium.</p>
+                            <a class="more-btn">See more</a>
+                        </div>
+                    </div>
+                    <div class="ms-slide">
+                        <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img" />
+                        <div class="ms-layer ms-caption">
+                            <h4>This summer too hot ?<br /> buy 1 get 1 today</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam pulvinar pulvinar leo eget pretium.</p>
+                            <a class="more-btn">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /#home-sliders -->
+            </div>
+            <div class="wrap-works">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img class="img-responsive center-block" src="dist/images/two-glass.jpg" alt="img" />
+                        </div>
+                        <div class="col-sm-6">
+                            <h2>HOW TOWNDELI WORKS ?</h2>
+                            <ul>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <span class="glass-icon"></span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>1. PICK A COFFEE</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat faucibudui vel nulla.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <span class="calendar-icon"></span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>2. PICK DELIVERY DATES</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat faucibudui vel nulla.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <span class="desk-icon"></span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>3. REMAIN IN COMFORT ZONE & ENJOY COFFEE</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat faucibudui vel nulla.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.hero -->
 
         <div class="pick-coffee">
-
+            <div class="container">
+                <h3>1.PICK A COFFEE</h3>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="coffee-select">COFFEE</label>
+                        <select id="coffee-select" class="custom-select" style="width:100%">
+                            <option value="1">COFFEE 1</option>
+                            <option value="2">COFFEE 2</option>
+                            <option value="3">COFFEE 3</option>
+                            <option value="4">COFFEE 4</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="size-select">SIZE</label>
+                        <select id="size-select" class="custom-select" style="width:100%">
+                            <option value="1">SIZE 1</option>
+                            <option value="2">SIZE 2</option>
+                            <option value="3">SIZE 3</option>
+                            <option value="4">SIZE 4</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="topping-select">TOPPING</label>
+                        <select id="topping-select" class="custom-select" style="width:100%">
+                            <option value="1">TOPPING 1</option>
+                            <option value="2">TOPPING 2</option>
+                            <option value="3">TOPPING 3</option>
+                            <option value="4">TOPPING 4</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="quantity-select">QUANTITY</label>
+                        <select id="quantity-select" class="custom-select" style="width:100%">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+                <h3>2.DELIVERY DATES</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="date-input">DATE</label>
+                        <input id="date-input" type="text" />
+                    </div>
+                    <div class="col-md-3">
+                        <label for="time-select">TIME</label>
+                        <select id="time-select" class="custom-select" style="width:100%">
+                            <option value="08:30:00">08:30:00</option>
+                            <option value="09:00:00">09:00:00</option>
+                            <option value="09:30:00">09:30:00</option>
+                            <option value="10:00:00">10:00:00</option>
+                            <option value="10:30:00">10:30:00</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="wrap-want-desk">
+                            <span>new</span>
+                            <label for="want-desk-checkbox">I WANT <br />DESK DELITM *</label>
+                            <input id="want-desk-checkbox" type="checkbox" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <hr />
+                        <h4>*DESK DELITM DELIVERY</h4>
+                        <h5>Delivery at your desk may take extra cost, please check our current Delivery Pricing</h5>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="checkout-btn">CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.pick-coffee -->
 
-        <div class="discount-banner">
-
+        <div class="discount-banner parallax">
+            <h4>Order 3+ cups at towndeli discount 10%</h4>
         </div>
         <!-- /.discount-banner -->
 
         <div class="hot-trends">
-
+            <div class="container">
+                <h2>Hot trends</h2>
+                <div class="combo-trends">
+                    <h3>Combo</h3>
+                    <a class="more-link">SEE MORE</a>
+                </div>
+                <div class="coffee-trends">
+                    <h3>Coffee sáng</h3>
+                    <a class="more-link">SEE MORE</a>
+                </div>
+                <div class="dessert-trends">
+                    <h3>Dessert</h3>
+                    <a class="more-link">SEE MORE</a>
+                </div>
+            </div>
         </div>
         <!-- /.hot-trends -->
 
-        <div class="testimonial">
-
+        <div class="testimonial parallax">
+            <div class="container">
+                <div class="media">
+                    <div class="media-left">
+                        <img width="170" src="dist/images/avatar-2.png" alt="img" />
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                        <p>Mikhail Tuan Duong, Freelance Creative</p>
+                        <div class="stars">
+                            <img src="dist/images/star-icon.png" alt="img" />
+                            <img src="dist/images/star-icon.png" alt="img" />
+                            <img src="dist/images/star-icon.png" alt="img" />
+                            <img src="dist/images/star-icon.png" alt="img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.testimonial -->
 
@@ -80,7 +279,7 @@
         </footer>
         <!-- /.footer -->
 
-        <script src="dist/scripts/main.js?v=1.0.0"></script>
+        <script type="text/javascript" src="dist/scripts/main.js?v=1.0.0"></script>
 
     </body>
 </html>

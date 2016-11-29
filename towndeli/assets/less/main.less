@@ -4,6 +4,18 @@
 @import "utilities/spinner.less";
 
 /* ---------------------------------------
+    PARALLAX
+----------------------------------------- */
+.parallax {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        background-attachment: scroll;
+    }
+}
+
+/* ---------------------------------------
     WRAP MEDIA
 ----------------------------------------- */
 .wrap-media {
@@ -37,7 +49,7 @@
     height: 40px;
     text-transform: uppercase;
     &:before {
-        background-color: #02b691;
+        background-color: @main-color;
         content: "";
         height: 40px;
         left: -50px;
@@ -54,6 +66,235 @@
     a {
         border-bottom: 1px solid #fff;
         color: #fff;
+    }
+}
+
+/* ---------------------------------------
+    HEADER
+----------------------------------------- */
+header.header {
+    background: url('../images/header-bg.png') repeat-x;
+    height: 88px;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    z-index: 999;
+    .container {
+        position: relative;
+    }
+    .menu-icon {
+        background: url('../images/hambuger-icon.png') no-repeat;
+        height: 33px;
+        position: absolute;
+        top: 30px;
+        width: 44px;
+    }
+    .logo {
+        left: 130px;
+        margin: 0;
+        position: absolute;
+        top: 5px;
+        a {
+            background: url('../images/logo.png') no-repeat;
+            display: inline-block;
+            height: 79px;
+            text-indent: -9999px;
+            width: 149px;
+        }
+    }
+    .menu {
+        font-size: 0;
+        left: 360px;
+        margin-bottom: 0;
+        position: absolute;
+        top: 0;
+        li {
+            display: inline-block;
+            &.active {
+                a {
+                    background-color: @main-color;
+                }
+            }
+            a {
+                color: #fff;
+                display: inline-block;
+                font-size: 14px;
+                height: 88px;
+                line-height: 88px;
+                padding: 0 50px;
+                text-transform: uppercase;
+                span {
+                    margin: 26px 10px 0 0;
+                    float: left;
+                }
+            }
+            .glass-icon {
+                background: url('../images/glass-icon.png') no-repeat;
+                height: 32px;
+                width: 24px;
+            }
+            .calendar-icon {
+                background: url('../images/calendar-icon.png') no-repeat;
+                width: 30px;
+                height: 32px;
+            }
+            .cart-icon {
+                background: url('../images/cart-icon.png') no-repeat;
+                width: 38px;
+                height: 33px;
+            }
+        }
+    }
+    .top-links {
+        font-size: 0;
+        margin-bottom: 0;
+        position: absolute;
+        right: 0;
+        top: 21px;
+        li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+    }
+}
+
+/* ---------------------------------------
+    HERO
+----------------------------------------- */
+.hero {
+    position: relative;
+
+    .wrap-sliders {
+        overflow: hidden;
+    }
+    .wrap-works {
+        background-color: transparent;
+        margin-top: -45px;
+        overflow: hidden;
+        padding-top: 60px;
+        position: relative;
+        &:before {
+            border-bottom: 45px solid #fff;
+            border-left: 2000px solid transparent;
+            content: "";
+            height: 0;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 0;
+        }
+        h2 {
+            color: @main-color;
+            font-size: 32px;
+            font-weight: 900;
+            margin: 25px 0 35px;
+        }
+        ul {
+            margin-bottom: 0;
+            li {
+                font-size: 14px;
+                line-height: 1.2;
+                list-style: none;
+                margin-bottom: 20px;
+                h4 {
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin: 0;
+                }
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .media-left {
+            padding-right: 0;
+            position: relative;
+            width: 11%;
+            span {
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .glass-icon {
+            background: url('../images/glass-2-icon.png') no-repeat;
+            height: 32px;
+            width: 24px;
+        }
+        .calendar-icon {
+            background: url('../images/calendar-2-icon.png') no-repeat;
+            width: 30px;
+            height: 32px;
+        }
+        .desk-icon {
+            background: url('../images/desk-icon.png') no-repeat;
+            width: 44px;
+            height: 29px;
+        }
+    }
+}
+
+/* ---------------------------------------
+    PICK COFFEE
+----------------------------------------- */
+.pick-coffee {
+    background-color: @second-color;
+    color: #fff;
+}
+
+/* ---------------------------------------
+    DISCOUNT BANNER
+----------------------------------------- */
+.discount-banner {
+    background-image: url("../images/coffee-banner-1.jpg");
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: center;
+    h4 {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 900;
+        margin: 0;
+        text-transform: uppercase;
+    }
+}
+
+/* ---------------------------------------
+    HOT TRENDS
+----------------------------------------- */
+.hot-trends {
+    h2 {
+        font-size: 32px;
+        font-weight: 900;
+    }
+    h3 {
+        font-size: 32px;
+    }
+}
+
+/* ---------------------------------------
+    TESTIMONIAL
+----------------------------------------- */
+.testimonial {
+    background-image: url("../images/coffee-banner-1.jpg");
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    &:before {
+        background-color: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    p {
+        font-size: 24px;
     }
 }
 

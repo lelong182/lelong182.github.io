@@ -6988,6 +6988,19 @@ MAIN STYLES
   }
 }
 /* ---------------------------------------
+    PARALLAX
+----------------------------------------- */
+.parallax {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+/* ---------------------------------------
     WRAP MEDIA
 ----------------------------------------- */
 .wrap-media {
@@ -7039,6 +7052,224 @@ MAIN STYLES
 .topbar a {
   border-bottom: 1px solid #fff;
   color: #fff;
+}
+/* ---------------------------------------
+    HEADER
+----------------------------------------- */
+header.header {
+  background: url('../images/header-bg.png') repeat-x;
+  height: 88px;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: 999;
+}
+header.header .container {
+  position: relative;
+}
+header.header .menu-icon {
+  background: url('../images/hambuger-icon.png') no-repeat;
+  height: 33px;
+  position: absolute;
+  top: 30px;
+  width: 44px;
+}
+header.header .logo {
+  left: 130px;
+  margin: 0;
+  position: absolute;
+  top: 5px;
+}
+header.header .logo a {
+  background: url('../images/logo.png') no-repeat;
+  display: inline-block;
+  height: 79px;
+  text-indent: -9999px;
+  width: 149px;
+}
+header.header .menu {
+  font-size: 0;
+  left: 360px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+}
+header.header .menu li {
+  display: inline-block;
+}
+header.header .menu li.active a {
+  background-color: #02b691;
+}
+header.header .menu li a {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  height: 88px;
+  line-height: 88px;
+  padding: 0 50px;
+  text-transform: uppercase;
+}
+header.header .menu li a span {
+  margin: 26px 10px 0 0;
+  float: left;
+}
+header.header .menu li .glass-icon {
+  background: url('../images/glass-icon.png') no-repeat;
+  height: 32px;
+  width: 24px;
+}
+header.header .menu li .calendar-icon {
+  background: url('../images/calendar-icon.png') no-repeat;
+  width: 30px;
+  height: 32px;
+}
+header.header .menu li .cart-icon {
+  background: url('../images/cart-icon.png') no-repeat;
+  width: 38px;
+  height: 33px;
+}
+header.header .top-links {
+  font-size: 0;
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 21px;
+}
+header.header .top-links li {
+  display: inline-block;
+  margin-left: 15px;
+}
+/* ---------------------------------------
+    HERO
+----------------------------------------- */
+.hero {
+  position: relative;
+}
+.hero .wrap-sliders {
+  overflow: hidden;
+}
+.hero .wrap-works {
+  background-color: transparent;
+  margin-top: -45px;
+  overflow: hidden;
+  padding-top: 60px;
+  position: relative;
+}
+.hero .wrap-works:before {
+  border-bottom: 45px solid #fff;
+  border-left: 2000px solid transparent;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+.hero .wrap-works h2 {
+  color: #02b691;
+  font-size: 32px;
+  font-weight: 900;
+  margin: 25px 0 35px;
+}
+.hero .wrap-works ul {
+  margin-bottom: 0;
+}
+.hero .wrap-works ul li {
+  font-size: 14px;
+  line-height: 1.2;
+  list-style: none;
+  margin-bottom: 20px;
+}
+.hero .wrap-works ul li h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+.hero .wrap-works ul li p {
+  margin-bottom: 0;
+}
+.hero .wrap-works .media-left {
+  padding-right: 0;
+  position: relative;
+  width: 11%;
+}
+.hero .wrap-works .media-left span {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero .wrap-works .glass-icon {
+  background: url('../images/glass-2-icon.png') no-repeat;
+  height: 32px;
+  width: 24px;
+}
+.hero .wrap-works .calendar-icon {
+  background: url('../images/calendar-2-icon.png') no-repeat;
+  width: 30px;
+  height: 32px;
+}
+.hero .wrap-works .desk-icon {
+  background: url('../images/desk-icon.png') no-repeat;
+  width: 44px;
+  height: 29px;
+}
+/* ---------------------------------------
+    PICK COFFEE
+----------------------------------------- */
+.pick-coffee {
+  background-color: #262626;
+  color: #fff;
+}
+/* ---------------------------------------
+    DISCOUNT BANNER
+----------------------------------------- */
+.discount-banner {
+  background-image: url("../images/coffee-banner-1.jpg");
+  padding-top: 90px;
+  padding-bottom: 90px;
+  text-align: center;
+}
+.discount-banner h4 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+}
+/* ---------------------------------------
+    HOT TRENDS
+----------------------------------------- */
+.hot-trends h2 {
+  font-size: 32px;
+  font-weight: 900;
+}
+.hot-trends h3 {
+  font-size: 32px;
+}
+/* ---------------------------------------
+    TESTIMONIAL
+----------------------------------------- */
+.testimonial {
+  background-image: url("../images/coffee-banner-1.jpg");
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.testimonial:before {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.testimonial p {
+  font-size: 24px;
 }
 /* ---------------------------------------
     IFRAME GOOGLE CODE
