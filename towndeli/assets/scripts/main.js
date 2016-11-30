@@ -34,10 +34,26 @@
             }
         });
 
+
         /* =================================
          ===  Custom Select                 ====
          =================================== */
         $('.custom-select').select2();
+
+
+        /* =================================
+         ===  Product Item                 ====
+         =================================== */
+        $(this).on({
+            mouseenter: function () {
+                $(this).find('.content').addClass('open');
+                $(this).find('.bottom-info').addClass('open');
+            },
+            mouseleave: function () {
+                $(this).find('.content').removeClass('open');
+                $(this).find('.bottom-info').removeClass('open');
+            }
+        }, '.product-item');
 
     });
 

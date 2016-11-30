@@ -6620,6 +6620,30 @@ button.close {
 /*---------------------------------------
   VARIABLES                
 -----------------------------------------*/
+/*---------------------------------------
+  FONTS
+-----------------------------------------*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.eot');
+  src: local('Roboto Thin'), local('Roboto-Thin'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.woff2') format('woff2'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.woff') format('woff'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.ttf') format('truetype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.svg#Roboto') format('svg');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.eot');
+  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.woff2') format('woff2'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.woff') format('woff'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.ttf') format('truetype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.svg#Roboto') format('svg');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.eot');
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.woff2') format('woff2'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.woff') format('woff'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.ttf') format('truetype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.svg#Roboto') format('svg');
+}
 /* ---------------------------------------
 GENERAL STYLES
 ----------------------------------------- */
@@ -7073,6 +7097,7 @@ header.header .menu-icon {
   position: absolute;
   top: 30px;
   width: 44px;
+  cursor: pointer;
 }
 header.header .logo {
   left: 130px;
@@ -7108,6 +7133,9 @@ header.header .menu li a {
   line-height: 88px;
   padding: 0 50px;
   text-transform: uppercase;
+}
+header.header .menu li a:hover {
+  background-color: #02b691;
 }
 header.header .menu li a span {
   margin: 26px 10px 0 0;
@@ -7240,12 +7268,36 @@ header.header .top-links li {
 /* ---------------------------------------
     HOT TRENDS
 ----------------------------------------- */
+.hot-trends {
+  padding: 30px 0;
+}
 .hot-trends h2 {
   font-size: 32px;
   font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 25px;
 }
-.hot-trends h3 {
+.hot-trends .trends-header {
+  display: inline-block;
+  width: 100%;
+}
+.hot-trends .trends-header h3 {
+  float: left;
   font-size: 32px;
+  margin: 0 0 20px;
+}
+.hot-trends .trends-header .more-link {
+  border: 1px solid #000;
+  color: #000;
+  float: left;
+  font-size: 14px;
+  margin-left: 30px;
+  padding: 8px 18px;
+}
+.hot-trends .trends-header .more-link:hover {
+  border-color: #02b691;
+  background-color: #02b691;
+  color: #fff;
 }
 /* ---------------------------------------
     TESTIMONIAL
@@ -7270,6 +7322,255 @@ header.header .top-links li {
 }
 .testimonial p {
   font-size: 24px;
+}
+/* ---------------------------------------
+    GET APP
+----------------------------------------- */
+.get-app {
+  background: url('../images/get-app-bg.gif') repeat center;
+  padding-top: 80px;
+}
+.get-app .container {
+  position: relative;
+}
+.get-app .two-mobile {
+  bottom: 0;
+  position: absolute;
+}
+.get-app h3 {
+  margin: 0 0 20px 350px;
+}
+.get-app ul {
+  font-size: 0;
+  margin: 0 0 80px 350px;
+}
+.get-app ul li {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  list-style: none;
+  margin-right: 15px;
+}
+/* ---------------------------------------
+    SOCIAL SECTION
+----------------------------------------- */
+.social-section {
+  background-color: #f0f0f0;
+  border-bottom: 3px solid #fff;
+  border-top: 3px solid #fff;
+  padding: 35px 0;
+}
+.social-section .list-socials {
+  margin-bottom: 0;
+  float: left;
+}
+.social-section .list-socials li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 30px;
+}
+.social-section .list-socials li a {
+  color: #3e3935;
+  font-size: 30px;
+}
+.social-section .get-email {
+  float: right;
+  padding-top: 7px;
+}
+.social-section .get-email label {
+  float: left;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 6px 10px 0 0;
+}
+.social-section .get-email input[type="email"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  float: left;
+  font-size: 13px;
+  height: 30px;
+  margin-right: 10px;
+  padding: 0 10px;
+  width: 300px;
+}
+.social-section .get-email .submit-btn {
+  background-color: #262626;
+  border: medium none;
+  border-radius: 4px;
+  color: #fff;
+  float: left;
+  font-weight: 700;
+  height: 30px;
+  letter-spacing: 2px;
+  padding: 0 30px;
+  text-transform: uppercase;
+}
+/* ---------------------------------------
+    PRODUCT ITEM
+----------------------------------------- */
+.product-item {
+  border: 1px solid #f2f2f2;
+  overflow: hidden;
+  position: relative;
+}
+.product-item h4 {
+  margin: 0;
+}
+.product-item .price {
+  font-size: 18px;
+}
+.product-item .product-btn {
+  border: 1px solid #fff;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 7px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 70px;
+}
+.product-item .product-btn:hover {
+  background-color: #fff;
+  color: #02b691 !important;
+}
+.product-item .main-img {
+  height: 280px;
+}
+.product-item .main-img img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.product-item .content {
+  background-color: rgba(255, 255, 255, 0.8);
+  bottom: 0;
+  color: #515252;
+  font-weight: 100;
+  left: 0;
+  opacity: 0;
+  padding: 30px 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(0.7);
+  transition: all 0.2s cubic-bezier(0.33, 0.53, 0.6, 0.64);
+  visibility: hidden;
+  z-index: 10;
+}
+.product-item .content.open {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+.product-item .content .price {
+  font-size: 18px;
+}
+.product-item .content p {
+  margin: 10px 0 0;
+}
+.product-item .bottom-info.open .static-content {
+  bottom: -100%;
+}
+.product-item .bottom-info.open .hover-content {
+  bottom: 0;
+}
+.product-item .bottom-info .static-content {
+  background-color: rgba(2, 182, 145, 0.9);
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  padding: 25px 12px;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.33, 0.53, 0.6, 0.64);
+  width: 100%;
+  z-index: 20;
+}
+.product-item .bottom-info .static-content .price {
+  font-weight: 100;
+}
+.product-item .bottom-info .static-content .product-btn {
+  font-size: 18px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+}
+.product-item .bottom-info .hover-content {
+  background-color: rgba(2, 182, 145, 0.9);
+  bottom: -100%;
+  color: #fff;
+  left: 0;
+  padding: 35px 0 28px;
+  position: absolute;
+  transition: all 0.4s cubic-bezier(0.33, 0.53, 0.6, 0.64);
+  width: 100%;
+  z-index: 20;
+}
+.product-item .bottom-info .hover-content ul {
+  font-size: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+.product-item .bottom-info .hover-content ul li {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 2px;
+}
+.product-item .bottom-info .hover-content ul li.price-extra {
+  position: relative;
+}
+.product-item .bottom-info .hover-content ul li.price-extra span {
+  position: absolute;
+  right: 0;
+  top: -17px;
+}
+.product-item .bottom-info .hover-content ul li .product-btn {
+  color: #fff;
+}
+/* ---------------------------------------
+    FOOTER
+----------------------------------------- */
+footer.footer {
+  background-color: #262626;
+  color: #8d8d8d;
+  padding: 70px 0 60px;
+  font-size: 13px;
+}
+footer.footer a {
+  color: #8d8d8d;
+}
+footer.footer a:hover {
+  color: #fff;
+}
+footer.footer h3 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 25px;
+  text-transform: uppercase;
+}
+footer.footer ul {
+  margin-bottom: 0;
+}
+footer.footer ul li {
+  list-style: outside none none;
+}
+footer.footer .footer-blogs li {
+  margin-bottom: 20px;
+}
+footer.footer .footer-blogs li p {
+  margin-bottom: 5px;
+}
+footer.footer .further-links li {
+  margin-bottom: 20px;
+}
+footer.footer .list-socials {
+  margin-top: 40px;
+}
+footer.footer .list-socials li {
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
 }
 /* ---------------------------------------
     IFRAME GOOGLE CODE
