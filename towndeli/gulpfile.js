@@ -43,6 +43,7 @@ gulp.task('js', function () {
         'assets/scripts/libs/jquery.easing.1.3.js',
         'assets/scripts/libs/bootstrap.min.js',
         'assets/scripts/libs/modernizr.js',
+        'assets/scripts/libs/onlynumber.js',
         'assets/scripts/libs/select2.full.min.js',
         'assets/masterslider/masterslider.min.js',
         'assets/scripts/main.js'

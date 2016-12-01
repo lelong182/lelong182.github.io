@@ -4,6 +4,21 @@
 @import "utilities/spinner.less";
 
 /* ---------------------------------------
+    CUSTOM INPUT
+----------------------------------------- */
+@import "utilities/inputs.less";
+
+/* ---------------------------------------
+    CUSTOM CHECKBOX & RADIO
+----------------------------------------- */
+@import "utilities/checkbox-radio.less";
+
+/* ---------------------------------------
+    SELECT2
+----------------------------------------- */
+@import "utilities/select2.less";
+
+/* ---------------------------------------
     PARALLAX
 ----------------------------------------- */
 .parallax {
@@ -48,6 +63,7 @@
     color: #fff;
     height: 40px;
     text-transform: uppercase;
+    transition: all 0.3s ease;
     &:before {
         background-color: @main-color;
         content: "";
@@ -58,6 +74,12 @@
         transform: skewX(20deg);
         width: 23%;
     }
+    &.closed {
+        margin-top: -40px;
+    }
+    .container {
+        position: relative;
+    }
     h4 {
         font-size: 14px;
         margin: 12px 0 0;
@@ -66,6 +88,12 @@
     a {
         border-bottom: 1px solid #fff;
         color: #fff;
+    }
+    .close-icon {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 9px;
     }
 }
 
@@ -79,6 +107,10 @@ header.header {
     top: 40px;
     width: 100%;
     z-index: 999;
+    transition: all 0.3s ease;
+    &.no-topbar {
+        top: 0;
+    }
     .container {
         position: relative;
     }
@@ -95,6 +127,9 @@ header.header {
         margin: 0;
         position: absolute;
         top: 5px;
+        @media (max-width:@screen-md-max) {
+            left: 80px;
+        }
         a {
             background: url('../images/logo.png') no-repeat;
             display: inline-block;
@@ -109,6 +144,9 @@ header.header {
         margin-bottom: 0;
         position: absolute;
         top: 0;
+        @media (max-width:@screen-md-max) {
+            left: 260px;
+        }
         li {
             display: inline-block;
             &.active {
@@ -170,6 +208,70 @@ header.header {
 
     .wrap-sliders {
         overflow: hidden;
+        .ms-slide {
+            .ms-caption {
+                .slider-text {
+                    margin: 130px 0 0 10%;
+                }
+                h4 {
+                    color: #fff;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 1;
+                    margin: 0 0 10px;
+                    text-transform: uppercase;
+                }
+                p {
+                    color: #fff;
+                    font-size: 14px;
+                    margin-bottom: 25px;
+                    width: 500px;
+                }
+                .more-btn {
+                    background-color: @main-color;
+                    color: #fff;
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: 700;
+                    padding: 18px 35px;
+                    text-transform: uppercase;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .ms-nav-next {
+            background: none;
+            right: -300px;
+            @media (max-width:@screen-md-max) {
+                right: -50px;
+            }
+            &:before {
+                font-family: FontAwesome;
+                content: "\f105";
+                color: #fff;
+                font-size: 40px;
+            }
+        }
+        .ms-nav-prev {
+            background: none;
+            left: -300px;
+            @media (max-width:@screen-md-max) {
+                left: -50px;
+            }
+            &:before {
+                font-family: FontAwesome;
+                content: "\f104";
+                color: #fff;
+                font-size: 40px;
+            }
+        }
+        .ms-bullets {
+            &.ms-dir-h {
+                bottom: 40px;
+            }
+        }
     }
     .wrap-works {
         background-color: transparent;
@@ -245,6 +347,68 @@ header.header {
 .pick-coffee {
     background-color: @second-color;
     color: #fff;
+    padding: 45px 0;
+    h3 {
+        font-family: Arial;
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 1;
+        margin: 0 0 25px;
+    }
+    label {
+        font-size: 18px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+    .custom-input {
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff;
+    }
+    .wrap-want-desk {
+        padding-top: 37px;
+        position: relative;
+        span {
+            background-color: #02b691;
+            border-radius: 6px;
+            font-size: 18px;
+            left: 0;
+            padding: 1px 15px;
+            position: absolute;
+            top: 0;
+        }
+    }
+    .media {
+        margin-top: 0;
+        .media-left {
+            padding-right: 15px;
+        }
+        .media-body {
+            h4 {
+                margin: 6px 0 2px;
+            }
+            h5 {
+                margin: 0;
+                a {
+                    border-bottom: 1px solid #fff;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .checkout-btn {
+        background-color: @main-color;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        height: 78px;
+        padding: 0 30px;
+        i {
+            font-size: 36px;
+            margin: -5px 0 0 10px;
+            vertical-align: middle;
+        }
+    }
 }
 
 /* ---------------------------------------
@@ -321,6 +485,49 @@ header.header {
     }
     p {
         font-size: 24px;
+        line-height: 1.2;
+        @media (max-width:@screen-md-max) {
+            font-size: 22px;
+        }
+    }
+    .stars {
+        img {
+            margin-right: 8px;
+        }
+    }
+    .ms-view {
+        background-color: transparent;
+    }
+    .ms-nav-next {
+        background: none;
+        right: -300px;
+        @media (max-width:@screen-md-max) {
+            right: -50px;
+        }
+        &:before {
+            font-family: FontAwesome;
+            content: "\f105";
+            color: #fff;
+            font-size: 40px;
+        }
+    }
+    .ms-nav-prev {
+        background: none;
+        left: -300px;
+        @media (max-width:@screen-md-max) {
+            left: -50px;
+        }
+        &:before {
+            font-family: FontAwesome;
+            content: "\f104";
+            color: #fff;
+            font-size: 40px;
+        }
+    }
+    .ms-bullets {
+        &.ms-dir-h {
+            bottom: 0;
+        }
     }
 }
 

@@ -16,10 +16,16 @@
     $(document).ready(function () {
 
         /* =================================
+         ===  Onlynumber                 ====
+         =================================== */
+        $('.onlynumber').onlynumber();
+
+
+        /* =================================
          ===  Sliders                 ====
          =================================== */
         $('#home-sliders').masterslider({
-            width: 1920,
+            width: 1100,
             height: 400,
             view: 'fade',
             space: 1,
@@ -33,12 +39,37 @@
                 arrows: {autohide: false}
             }
         });
+        $('#testimonial-sliders').masterslider({
+            width: 1100,
+            height: 10,
+            view: 'fade',
+            space: 1,
+            layout: 'fillwidth',
+            autoHeight:true,
+            loop: true,
+            mouse: false,
+            preload: 0,
+            autoplay: false,
+            controls: {
+                bullets: {autohide: false},
+                arrows: {autohide: false}
+            }
+        });
 
 
         /* =================================
          ===  Custom Select                 ====
          =================================== */
         $('.custom-select').select2();
+
+
+        /* =================================
+         ===  Topbar                 ====
+         =================================== */
+        $(this).on('click', '.topbar .close-icon', function() {
+            $('.topbar').addClass('closed');
+            $('header.header').addClass('no-topbar');
+        });
 
 
         /* =================================
