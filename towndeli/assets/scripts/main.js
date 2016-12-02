@@ -61,6 +61,9 @@
          ===  Custom Select                 ====
          =================================== */
         $('.custom-select').select2();
+        $('.custom-select.no-search').select2({
+            minimumResultsForSearch: -1
+        });
 
 
         /* =================================
@@ -85,6 +88,23 @@
                 $(this).find('.bottom-info').removeClass('open');
             }
         }, '.product-item');
+
+
+        /* =================================
+         ===  Checkout Quantity                 ====
+         =================================== */
+        $(this).on('click', '.wrap-quantity .plus-icon', function() {
+            var this_quantity_input = $(this).closest('.wrap-quantity').find('input');
+            var this_quantity_value = parseInt(this_quantity_input.val());
+            this_quantity_input.val(this_quantity_value + 1);
+        });
+        $(this).on('click', '.wrap-quantity .minus-icon', function() {
+            var this_quantity_input = $(this).closest('.wrap-quantity').find('input');
+            var this_quantity_value = parseInt(this_quantity_input.val());
+            if(this_quantity_value > 1) {
+                this_quantity_input.val(this_quantity_value - 1);
+            }
+        });
 
     });
 
