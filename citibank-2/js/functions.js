@@ -153,6 +153,13 @@
                         slidesToShow: 2,
                         variableWidth: false,
                     }
+                },
+                {
+                    breakpoint: 320,
+                    settings: {
+                        slidesToShow: 1,
+                        variableWidth: false,
+                    }
                 }
             ]
         });
