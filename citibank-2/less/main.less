@@ -873,7 +873,21 @@ MAIN
                     margin-bottom: 0;
                     padding-top: 10px;
                     text-align: center;
+                    width: 228px;
+                    @media (max-width:@screen-md-max) {
+                        width: 188px;
+                    }
+                    @media (max-width:@screen-sm-max) {
+                        width: 200px;
+                    }
+                    @media (max-width:@screen-xs-max) {
+                        width: 180px;
+                    }
                     &.featured-tab {
+                        width: 229px;
+                        @media (max-width:@screen-xs-max) {
+                            width: 200px;
+                        }
                         a {
                             background-color: transparent !important;
                             border-right: none;
@@ -1116,6 +1130,11 @@ MAIN
                             @media (max-width:@screen-xs-min) {
                                 margin-bottom: 15px;
                             }
+                            br {
+                                @media (max-width:@screen-xs-max) {
+                                    display: none;
+                                }
+                            }
                         }
                         p {
                             font-size: 18px;
@@ -1321,6 +1340,11 @@ MAIN
                                 }
                                 @media (max-width:@screen-xs-min) {
                                     margin-right: 0;
+                                }
+                                br {
+                                    @media (max-width:@screen-xs-max) {
+                                        display: none;
+                                    }
                                 }
                             }
                             .box-restaurant {

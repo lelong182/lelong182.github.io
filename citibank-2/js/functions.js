@@ -128,30 +128,10 @@
         $('.hotel-tabs').slick({
             arrows: true,
             infinite: false,
-            slidesToShow: 6,
             slidesToScroll: 1,
             autoplay: false,
-            speed: 800,
-            responsive: [
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: 4
-                    }
-                },
-                {
-                    breakpoint: 857,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }
-            ]
+            variableWidth: true,
+            speed: 800
         });
         $(this).on('click', '.slick-nav li a', function () {
             var index = $(this).parent().index();
