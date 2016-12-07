@@ -1074,18 +1074,34 @@ MAIN
                         top: 20px;
                         width: 350px;
                         z-index: 100;
+                        @media (max-width:@screen-sm-max) {
+                            position: static;
+                        }
+                        @media (max-width:@screen-xs-max) {
+                            padding: 15px 20px;
+                            width: 250px;
+                        }
+                        @media (max-width:@screen-xs-min) {
+                            width: 100%;
+                        }
                         h4 {
                             font-size: 22px;
                             font-weight: 300;
                             line-height: 1.3;
                             margin: 0 0 20px;
                             text-transform: uppercase;
+                            @media (max-width:@screen-xs-min) {
+                                margin-bottom: 15px;
+                            }
                         }
                         p {
                             font-size: 18px;
                             font-weight: 300;
                             line-height: 1.3;
                             margin-bottom: 40px;
+                            @media (max-width:@screen-xs-min) {
+                                margin-bottom: 20px;
+                            }
                         }
                         .slick-nav {
                             margin-bottom: 0;
@@ -1102,12 +1118,28 @@ MAIN
                         background-color: #ede9dd;
                         order: 2;
                         width: 460px;
+                        @media (max-width:@screen-sm-max) {
+                            order: 1;
+                            width: ~"calc(100% - 350px)";
+                        }
+                        @media (max-width:@screen-xs-max) {
+                            width: ~"calc(100% - 250px)";
+                        }
+                        @media (max-width:@screen-xs-min) {
+                            width: 100%;
+                        }
                         .wrap-list-contents {
                             right: 0;
                         }
                         .list-contents {
                             .content {
                                 padding: 50px 40px 0;
+                                @media (max-width:@screen-sm-max) {
+                                    padding: 40px 40px 30px;
+                                }
+                                @media (max-width:@screen-xs-max) {
+                                    padding: 15px 20px 20px;
+                                }
                                 .box-restaurant {
                                     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
                                     border-bottom: 1px solid #000;
@@ -1142,6 +1174,10 @@ MAIN
                     .hotel-image {
                         order: 1;
                         width: ~"calc(100% - 460px)";
+                        @media (max-width:@screen-sm-max) {
+                            order: 2;
+                            width: 100%;
+                        }
                     }
                 }
                 .hotel-location {
