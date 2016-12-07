@@ -33,6 +33,20 @@
 </head>
 <body>
 
+<div class="modal fade subscribe-modal" id="subscribe-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="subscribe-inner">
+                <div class="img-container">
+                    <img class="img-responsive center-block" src="dist/images/sale-40.png" alt="img" />
+                </div>
+                <p class="label">Subscribe and get 40% off !</p>
+                <button class="subscribe-btn">SUBSCRIBE NOW !</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="topbar">
     <div class="container">
         <h4><strong>boost up your monday ! 50% off</strong> for espresso every monday from 09:00-12:00. <a>see more</a>
@@ -44,8 +58,119 @@
 
 <header class="header">
     <div class="container">
-        <span class="menu-icon"></span>
-        <!-- /.menu-icon -->
+        <div class="wrap-cat-menu">
+            <span class="menu-icon"></span>
+            <!-- /.menu-icon -->
+            <div class="cat-menu">
+                <h3>Categories</h3>
+                <div class="popular-links">
+                   <h4><a>Deals</a></h4>
+                   <h4><a>Popular</a></h4>
+                   <h4><a>Recently Viewed</a></h4>
+                </div>
+                <ul class="cat-menu-details">
+                    <li class="has-child">
+                        <a>Produce</a>
+                        <ul>
+                            <li>
+                                <a>Produce 1</a>
+                            </li>
+                            <li>
+                                <a>Produce 2</a>
+                            </li>
+                            <li>
+                                <a>Produce 3</a>
+                            </li>
+                            <li>
+                                <a>Produce 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Meat & Seafood</a>
+                        <ul>
+                            <li>
+                                <a>Meat & Seafood 1</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 2</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 3</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Deli</a>
+                        <ul>
+                            <li>
+                                <a>Deli 1</a>
+                            </li>
+                            <li>
+                                <a>Deli 2</a>
+                            </li>
+                            <li>
+                                <a>Deli 3</a>
+                            </li>
+                            <li>
+                                <a>Deli 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Bakery</a>
+                        <ul>
+                            <li>
+                                <a>Bakery 1</a>
+                            </li>
+                            <li>
+                                <a>Bakery 2</a>
+                            </li>
+                            <li>
+                                <a>Bakery 3</a>
+                            </li>
+                            <li>
+                                <a>Bakery 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Alcohol</a>
+                    </li>
+                    <li>
+                        <a>Dairy & Eggs</a>
+                    </li>
+                    <li>
+                        <a>Bulk</a>
+                    </li>
+                    <li class="has-child">
+                        <a>Canned Goods</a>
+                        <ul>
+                            <li>
+                                <a>Canned Goods 1</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 2</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 3</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Dry Goods & Pasta</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.cat-menu -->
+        </div>
+        <!-- /.wrap-cat-menu -->
         <h1 class="logo">
             <a href="index.html" title="TownDeli">TownDeli</a>
         </h1>
@@ -57,17 +182,104 @@
             <li>
                 <a><span class="calendar-icon"></span>Schedule</a>
             </li>
-            <li>
+            <li class="cart-menu">
                 <a><span class="cart-icon"></span>Your cart</a>
+                <div class="cart-box">
+                    <div class="table-responsive">
+                        <table class="table checkout-table">
+                            <tbody>
+                                <tr>
+                                    <td><h3>Cart</h3></td>
+                                    <td><a class="more-link">Drink more</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                    </td>
+                                    <td>Std.size Cookie, Strawberry...</td>
+                                    <td>
+                                        <div class="wrap-quantity">
+                                            <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                            <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                            <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">50.000 VNĐ</td>
+                                    <td class="text-right">
+                                        <a class="edit-icon"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                    </td>
+                                    <td>Std.size Cookie, Strawberry...</td>
+                                    <td>
+                                        <div class="wrap-quantity">
+                                            <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                            <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                            <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">50.000 VNĐ</td>
+                                    <td class="text-right">
+                                        <a class="edit-icon"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                    </td>
+                                    <td>Std.size Cookie, Strawberry...</td>
+                                    <td>
+                                        <div class="wrap-quantity">
+                                            <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                            <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                            <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">50.000 VNĐ</td>
+                                    <td class="text-right">
+                                        <a class="edit-icon"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bottom-cart-box">
+                        <div class="info">
+                            <p><strong>TOTAL:</strong></p>
+                            <p><strong>180.000 VNĐ / DAY</strong></p>
+                            <p>150.000 VNĐ: Coffee & Dessert</p>
+                            <p>30.000 VNĐ: Shipping Fee</p>
+                        </div>
+                        <button class="checkout-btn">CHECKOUT <i class="fa fa-angle-right"></i></button>
+                    </div>
+                </div>
             </li>
         </ul>
         <!-- /.menu -->
         <ul class="top-links">
             <li class="user">
                 <a><img src="dist/images/avatar.png" alt="img"/></a>
+                <div class="child-box">
+                    <ul>
+                        <li><a>Đăng ký</a></li>
+                        <li><a>Đăng nhập</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="lang">
                 <a><img src="dist/images/en-flag.png" alt="img"/></a>
+                <div class="child-box">
+                    <ul>
+                        <li class="active"><a>English</a></li>
+                        <li><a>Tiếng Việt</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <!-- /.top-links -->

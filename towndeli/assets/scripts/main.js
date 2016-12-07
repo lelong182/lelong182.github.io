@@ -11,6 +11,11 @@
     $(window).on('load', function () {
         window.loading_screen.finish();
         $('body').css('opacity', 1);
+        if ($('.subscribe-modal').length) {
+            setTimeout(function() {
+                $('.subscribe-modal').modal('show')
+            }, 1000);
+        }
     });
 
     $(document).ready(function () {
@@ -64,6 +69,71 @@
         $('.custom-select.no-search').select2({
             minimumResultsForSearch: -1
         });
+
+
+        /* =================================
+         ===  Category Menu                 ====
+         =================================== */
+        $(this).on({
+            mouseenter: function () {
+                var self = $(this)
+                $('body').prepend('<div class="black-overlay"></div>');
+                setTimeout(function() {
+                    $('.black-overlay').addClass('open');
+                    self.find('.cat-menu').addClass('open');
+                }, 0);
+            },
+            mouseleave: function () {
+                $('.black-overlay').removeClass('open');
+                $(this).find('.cat-menu').removeClass('open');
+                setTimeout(function() {
+                    $('.black-overlay').remove();
+                }, 100);
+            }
+        }, '.wrap-cat-menu');
+        $(this).on({
+            mouseenter: function () {
+                $(this).children('ul').addClass('open');
+            },
+            mouseleave: function () {
+                $(this).children('ul').removeClass('open');
+            }
+        }, '.cat-menu-details li.has-child');
+
+
+        /* =================================
+         ===  Top Links                 ====
+         =================================== */
+        $(this).on({
+            mouseenter: function () {
+                $(this).find('.child-box').addClass('open');
+            },
+            mouseleave: function () {
+                $(this).find('.child-box').removeClass('open');
+            }
+        }, '.top-links > li');
+
+
+        /* =================================
+         ===  Cart Box                 ====
+         =================================== */
+        $(this).on({
+            mouseenter: function () {
+                var self = $(this)
+                $('body').prepend('<div class="black-overlay"></div>');
+                setTimeout(function() {
+                    $('.black-overlay').addClass('open');
+                    self.find('.cart-box').addClass('open');
+                }, 0);
+            },
+            mouseleave: function () {
+                $('.black-overlay').removeClass('open');
+                $(this).find('.cart-box').removeClass('open');
+                setTimeout(function() {
+                    $('.black-overlay').remove();
+                }, 100);
+            }
+        }, '.cart-menu');
 
 
         /* =================================
