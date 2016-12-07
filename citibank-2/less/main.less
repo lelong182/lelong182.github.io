@@ -852,23 +852,40 @@ MAIN
                 margin-bottom: 40px;
             }
             .hotel-tabs {
-                border-top: 1px solid #ddd;
+                border-bottom: none;
                 border-left: 1px solid #ddd;
                 border-right: 1px solid #ddd;
 
                 @media (max-width:@screen-sm-max) {
                     border-bottom: none;
                 }
+                &:before {
+                    background-color: #fff;
+                    border-bottom: 1px solid #ddd;
+                    content: "";
+                    height: 10px;
+                    left: -1px;
+                    position: absolute;
+                    top: 0;
+                    width: ~"calc(100% + 2px)";
+                }
                 li {
                     margin-bottom: 0;
+                    padding-top: 10px;
                     text-align: center;
                     &.featured-tab {
                         a {
-                            background-image: linear-gradient(135deg, #a7916c 0%, #816341 100%);
-                            &.st-regis-logo {
-                                &:before {
-                                    background: url("../images/hover-st-regis-logo.png") no-repeat;
-                                }
+                            background-color: transparent !important;
+                            border-right: none;
+                            &:after {
+                                background-image: linear-gradient(135deg, #a7916c 0px, #816341 100%);
+                                bottom: 0;
+                                content: "";
+                                left: 0;
+                                position: absolute;
+                                right: 0;
+                                top: -20px;
+                                z-index: -1;
                             }
                         }
                     }
@@ -959,8 +976,8 @@ MAIN
                         &.st-regis-logo {
                             &:before {
                                 background: url("../images/st-regis-logo.png") no-repeat;
-                                width: 122px;
-                                height: 72px;
+                                width: 143px;
+                                height: 97px;
                             }
                         }
                         &.aloft-logo {
@@ -1032,6 +1049,9 @@ MAIN
                         font-family: FontAwesome;
                         font-size: 50px;
                     }
+                    &.slick-disabled {
+                        display: none !important;
+                    }
                 }
                 .slick-prev {
                     height: 46px;
@@ -1044,6 +1064,9 @@ MAIN
                         content: "\f104";
                         font-family: FontAwesome;
                         font-size: 50px;
+                    }
+                    &.slick-disabled {
+                        display: none !important;
                     }
                 }
             }

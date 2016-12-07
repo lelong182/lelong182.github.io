@@ -127,7 +127,7 @@
         });
         $('.hotel-tabs').slick({
             arrows: true,
-            infinite: true,
+            infinite: false,
             slidesToShow: 6,
             slidesToScroll: 1,
             autoplay: false,
