@@ -40,8 +40,92 @@
                 <div class="img-container">
                     <img class="img-responsive center-block" src="dist/images/sale-40.png" alt="img" />
                 </div>
-                <p class="label">Subscribe and get 40% off !</p>
+                <p class="label"><img src="dist/images/airplane-icon.png" alt="img" /> Subscribe and get 40% off !</p>
                 <button class="subscribe-btn">SUBSCRIBE NOW !</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade login-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="login-header">
+                <h3>Đăng nhập</h3>
+                <p>Cần tạo tài khoản? <a data-toggle="modal" data-target=".register-modal">Đăng ký</a></p>
+            </div>
+            <div class="login-details">
+                <div class="socials-login">
+                    <a class="facebook"><i class="fa fa-facebook"></i>Đăng nhập với Facebook</a>
+                    <a class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <a class="twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="devider"><span>hoặc</span></div>
+                <form>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/airplane-icon.png" alt="img" /></span>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/key-icon.png" alt="img" /></span>
+                        <input type="password" placeholder="Mật khẩu" />
+                    </div>
+                    <div class="clearfix mgt-10 mgb-10">
+                        <div class="remember">
+                            <label for="remember-chk">Ghi nhớ</label>
+                            <input id="remember-chk" type="checkbox" />
+                        </div>
+                        <a class="forgot-password-link">Quên mật khẩu ?</a>
+                    </div>
+                    <button class="submit-btn">Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade register-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="login-header">
+                <h3>Đăng ký</h3>
+                <p>Bạn đã có tài khoản? <a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></p>
+            </div>
+            <div class="login-details">
+                <div class="socials-login">
+                    <a class="facebook"><i class="fa fa-facebook"></i>Đăng nhập với Facebook</a>
+                    <a class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <a class="twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="devider"><span>hoặc đăng kí tài khoản trên Towndeli</span></div>
+                <form>
+                    <div class="row">
+                        <div class="col-xs-6 pdr-5">
+                            <div class="wrap-input">
+                                <span><img src="dist/images/user-icon.png" alt="img" /></span>
+                                <input type="text" placeholder="Tên" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6 pdl-5">
+                            <div class="wrap-input">
+                                <input type="text" placeholder="Họ" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-input">
+                        <input type="text" placeholder="Số điện thoại" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/airplane-icon.png" alt="img" /></span>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/key-icon.png" alt="img" /></span>
+                        <input type="password" placeholder="Mật khẩu" />
+                    </div>
+                    <p class="note">Bằng việc đăng ký và sử dụng website, bạn đồng ý với các Điều khoản & Quy chế</p>
+                    <button class="submit-btn">Đăng ký</button>
+                </form>
             </div>
         </div>
     </div>
@@ -265,10 +349,21 @@
         <ul class="top-links">
             <li class="user">
                 <a><img src="dist/images/avatar.png" alt="img"/></a>
+                <!--
                 <div class="child-box">
                     <ul>
-                        <li><a>Đăng ký</a></li>
-                        <li><a>Đăng nhập</a></li>
+                        <li><a data-toggle="modal" data-target=".register-modal">Đăng ký</a></li>
+                        <li><a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                -->
+                <div class="child-box big">
+                    <ul>
+                        <li><a class="highlight">Schedule</a></li>
+                        <li><a class="highlight">Reward points</a></li>
+                        <li class="devider"></li>
+                        <li><a>Profile</a></li>
+                        <li><a>Log out</a></li>
                     </ul>
                 </div>
             </li>
@@ -507,15 +602,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -543,15 +638,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -586,15 +681,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -621,15 +716,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -656,15 +751,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -691,15 +786,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -734,15 +829,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -769,15 +864,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -804,15 +899,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -839,15 +934,15 @@
                             <div class="hover-content">
                                 <ul>
                                     <li>
-                                        <a class="product-btn">STANDARD</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+5.000 đ</span>
-                                        <a class="product-btn">EXTRA</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
                                     </li>
                                     <li class="price-extra">
                                         <span>+10.000 đ</span>
-                                        <a class="product-btn">EXTRA BIG</a>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
                                     </li>
                                 </ul>
                             </div>
@@ -857,6 +952,102 @@
             </div>
         </div>
     </div>
+    <div class="modal fade quickview-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="quickview-inner">
+                    <span class="close-icon" data-dismiss="modal"><img src="dist/images/close-3-icon.png" alt="img" /></span>
+                    <div class="media">
+                        <div class="media-left">
+                            <div class="img-container">
+                                <img src="dist/images/product-img.png" alt="img" />
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <div class="quickview-header">
+                                <h4>ESPRESSO</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor indi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                <div class="share-icons">
+                                    <a><img src="dist/images/facebook-icon.png" alt="img" /></a>
+                                    <a><img src="dist/images/google-plus-icon.png" alt="img" /></a>
+                                </div>
+                            </div>
+                            <div class="quickview-options">
+                                <div class="clearfix">
+                                    <ul class="list-size">
+                                        <li><a>12oz.</a></li>
+                                        <li><a>16oz.</a></li>
+                                        <li><a>22oz.</a></li>
+                                    </ul>
+                                    <div class="wrap-quantity">
+                                        <label for="quickview-quantity-input">QUANTITY</label>
+                                        <input id="quickview-quantity-input" class="onlynumber" type="text" value="1" />
+                                    </div>
+                                </div>
+                                <div class="row mgt-20 mgb-10">
+                                    <div class="col-sm-3 col-xs-6">
+                                        <select class="custom-select no-search" style="width:100%">
+                                            <option value="1">TRAI CAY 1</option>
+                                            <option value="2">TRAI CAY 2</option>
+                                            <option value="3">TRAI CAY 3</option>
+                                            <option value="4">TRAI CAY 4</option>
+                                            <option value="5">TRAI CAY 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <select class="custom-select no-search" style="width:100%">
+                                            <option value="1">TRAI CAY 1</option>
+                                            <option value="2">TRAI CAY 2</option>
+                                            <option value="3">TRAI CAY 3</option>
+                                            <option value="4">TRAI CAY 4</option>
+                                            <option value="5">TRAI CAY 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <select class="custom-select no-search" style="width:100%">
+                                            <option value="1">TRAI CAY 1</option>
+                                            <option value="2">TRAI CAY 2</option>
+                                            <option value="3">TRAI CAY 3</option>
+                                            <option value="4">TRAI CAY 4</option>
+                                            <option value="5">TRAI CAY 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <select class="custom-select" style="width:100%">
+                                            <option value="1">TRAI CAY 1</option>
+                                            <option value="2">TRAI CAY 2</option>
+                                            <option value="3">TRAI CAY 3</option>
+                                            <option value="4">TRAI CAY 4</option>
+                                            <option value="5">TRAI CAY 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <ul class="selected-list">
+                                    <li>COOKIES</li>
+                                    <li>COOKIES</li>
+                                    <li>COOKIES</li>
+                                    <li>COOKIES</li>
+                                    <li>STRAWBERRY</li>
+                                    <li>COOKIES</li>
+                                    <li>COOKIES + STRAWBERRY</li>
+                                    <li>COOKIES</li>
+                                    <li>COOKIES</li>
+                                </ul>
+                            </div>
+                            <div class="text-right">
+                                <span class="heart-icon"></span>
+                                <ul class="total">
+                                    <li>20.000 đ</li>
+                                    <li><button class="add-btn"><i class="fa fa-plus"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.quickview-modal -->
 </div>
 <!-- /.hot-trends -->
 

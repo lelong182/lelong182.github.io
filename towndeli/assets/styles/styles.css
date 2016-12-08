@@ -7597,6 +7597,9 @@ header.header .top-links li .child-box.open {
   transform: scale(1);
   visibility: visible;
 }
+header.header .top-links li .child-box.big {
+  width: 150px;
+}
 header.header .top-links li .child-box ul {
   padding: 5px 0;
 }
@@ -7605,12 +7608,356 @@ header.header .top-links li .child-box ul li {
   margin-left: 0;
   padding: 5px 10px;
 }
-header.header .top-links li .child-box ul li.active a {
+header.header .top-links li .child-box ul li.active a,
+header.header .top-links li .child-box ul li:hover a {
   color: #02b691;
+}
+header.header .top-links li .child-box ul li.devider {
+  background-color: #eae9e9;
+  height: 1px;
+  margin: 7px 0;
+  padding: 0;
 }
 header.header .top-links li .child-box ul li a {
   color: #515252;
   font-size: 16px;
+}
+header.header .top-links li .child-box ul li a.highlight {
+  color: #02b691;
+}
+.login-modal.modal {
+  text-align: center;
+  padding: 0 !important;
+}
+.login-modal.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.login-modal.modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  margin: auto;
+}
+.login-modal.modal .modal-dialog .modal-content {
+  font-size: 14px;
+}
+.login-modal .login-header {
+  background-color: #02b691;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.login-modal .login-header h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+.login-modal .login-header p {
+  margin-bottom: 0;
+}
+.login-modal .login-header a {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.login-modal .login-details {
+  padding: 15px;
+}
+.login-modal .login-details .socials-login {
+  font-size: 0;
+}
+.login-modal .login-details .socials-login a {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  height: 40px;
+  text-align: center;
+  vertical-align: top;
+  width: 40px;
+}
+.login-modal .login-details .socials-login a.facebook {
+  background-color: #536da3;
+  padding-top: 10px;
+  width: calc(100% - 100px);
+}
+.login-modal .login-details .socials-login a.facebook i {
+  border-right: 1px solid #41598d;
+  float: left;
+  height: 40px;
+  margin-top: -10px;
+  padding-top: 6px;
+  width: 40px;
+}
+.login-modal .login-details .socials-login a.google-plus {
+  background-color: #e3411f;
+  margin: 0 10px;
+}
+.login-modal .login-details .socials-login a.google-plus i {
+  margin-top: 7px;
+}
+.login-modal .login-details .socials-login a.twitter {
+  background-color: #1ebef0;
+}
+.login-modal .login-details .socials-login a.twitter i {
+  margin-top: 6px;
+}
+.login-modal .login-details .socials-login a i {
+  font-size: 28px;
+  vertical-align: top;
+}
+.login-modal .login-details .devider {
+  color: #898989;
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+}
+.login-modal .login-details .devider:before {
+  background-color: #898989;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+.login-modal .login-details .devider span {
+  background-color: #fff;
+  padding: 0 15px;
+  position: relative;
+}
+.login-modal .login-details .wrap-input {
+  position: relative;
+  margin-bottom: 10px;
+}
+.login-modal .login-details .wrap-input span {
+  left: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.login-modal .login-details .wrap-input input {
+  padding-left: 30px !important;
+}
+.login-modal .login-details input[type="text"],
+.login-modal .login-details input[type="email"],
+.login-modal .login-details input[type="password"] {
+  border: 1px solid #999;
+  font-size: 14px;
+  height: 40px;
+  padding: 0 10px;
+  width: 100%;
+}
+.login-modal .login-details .wrap-password {
+  position: relative;
+}
+.login-modal .login-details .wrap-password .show-password {
+  background: url("../images/eye-icon.png") no-repeat;
+  cursor: pointer;
+  height: 15px;
+  left: initial;
+  right: 10px;
+  width: 22px;
+}
+.login-modal .login-details .wrap-password .hide-password {
+  background: url("../images/eye-icon-2.png") no-repeat;
+  cursor: pointer;
+  height: 19px;
+  left: initial;
+  right: 10px;
+  width: 22px;
+}
+.login-modal .login-details .remember {
+  float: left;
+}
+.login-modal .login-details .remember label {
+  cursor: pointer;
+  font-weight: normal;
+  margin: 0 4px 0 0;
+}
+.login-modal .login-details .remember input[type="checkbox"] {
+  margin-top: -2px;
+  vertical-align: middle;
+}
+.login-modal .login-details .forgot-password-link {
+  color: #898989;
+  float: right;
+}
+.login-modal .login-details .submit-btn {
+  background-color: #02b691;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 10px 0;
+  padding: 9px 0 10px;
+  text-align: center;
+  width: 100%;
+}
+.register-modal.modal {
+  text-align: center;
+  padding: 0 !important;
+}
+.register-modal.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.register-modal.modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  margin: auto;
+}
+.register-modal.modal .modal-dialog .modal-content {
+  font-size: 14px;
+}
+.register-modal .login-header {
+  background-color: #02b691;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.register-modal .login-header h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+.register-modal .login-header p {
+  margin-bottom: 0;
+}
+.register-modal .login-header a {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.register-modal .login-details {
+  padding: 15px;
+}
+.register-modal .login-details .socials-login {
+  font-size: 0;
+}
+.register-modal .login-details .socials-login a {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  height: 40px;
+  text-align: center;
+  vertical-align: top;
+  width: 40px;
+}
+.register-modal .login-details .socials-login a.facebook {
+  background-color: #536da3;
+  padding-top: 10px;
+  width: calc(100% - 100px);
+}
+.register-modal .login-details .socials-login a.facebook i {
+  border-right: 1px solid #41598d;
+  float: left;
+  height: 40px;
+  margin-top: -10px;
+  padding-top: 6px;
+  width: 40px;
+}
+.register-modal .login-details .socials-login a.google-plus {
+  background-color: #e3411f;
+  margin: 0 10px;
+}
+.register-modal .login-details .socials-login a.google-plus i {
+  margin-top: 7px;
+}
+.register-modal .login-details .socials-login a.twitter {
+  background-color: #1ebef0;
+}
+.register-modal .login-details .socials-login a.twitter i {
+  margin-top: 6px;
+}
+.register-modal .login-details .socials-login a i {
+  font-size: 28px;
+  vertical-align: top;
+}
+.register-modal .login-details .devider {
+  color: #898989;
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+}
+.register-modal .login-details .devider:before {
+  background-color: #898989;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+.register-modal .login-details .devider span {
+  background-color: #fff;
+  padding: 0 15px;
+  position: relative;
+}
+.register-modal .login-details .wrap-input {
+  position: relative;
+  margin-bottom: 10px;
+}
+.register-modal .login-details .wrap-input span {
+  left: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.register-modal .login-details .wrap-input input {
+  padding-left: 30px !important;
+}
+.register-modal .login-details input[type="text"],
+.register-modal .login-details input[type="email"],
+.register-modal .login-details input[type="password"] {
+  border: 1px solid #999;
+  font-size: 14px;
+  height: 40px;
+  padding: 0 10px;
+  width: 100%;
+}
+.register-modal .login-details .wrap-password {
+  position: relative;
+}
+.register-modal .login-details .wrap-password .show-password {
+  background: url("../images/eye-icon.png") no-repeat;
+  cursor: pointer;
+  height: 15px;
+  left: initial;
+  right: 10px;
+  width: 22px;
+}
+.register-modal .login-details .wrap-password .hide-password {
+  background: url("../images/eye-icon-2.png") no-repeat;
+  cursor: pointer;
+  height: 19px;
+  left: initial;
+  right: 10px;
+  width: 22px;
+}
+.register-modal .login-details .note {
+  color: #898989;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 15px;
+}
+.register-modal .login-details .submit-btn {
+  background-color: #02b691;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 10px 0;
+  padding: 9px 0 10px;
+  text-align: center;
+  width: 100%;
 }
 /* ---------------------------------------
     HERO
@@ -8052,6 +8399,10 @@ header.header .top-links li .child-box ul li a {
   text-align: center;
   width: 100%;
 }
+.subscribe-modal .subscribe-inner .label img {
+  margin-right: 5px;
+  vertical-align: bottom;
+}
 .subscribe-modal .subscribe-inner .subscribe-btn {
   background-color: #02b691;
   border: none;
@@ -8182,6 +8533,186 @@ header.header .top-links li .child-box ul li a {
 }
 .product-item .bottom-info .hover-content ul li .product-btn {
   color: #fff;
+}
+/* ---------------------------------------
+    QUICK VIEW MODAL
+----------------------------------------- */
+.quickview-modal.modal {
+  text-align: center;
+  padding: 0 !important;
+}
+.quickview-modal.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.quickview-modal.modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  margin: auto;
+}
+.quickview-modal.modal .modal-dialog .modal-content {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 15px;
+}
+.quickview-modal .quickview-inner {
+  background-color: #fff;
+  color: #444545;
+  padding: 30px;
+  position: relative;
+}
+.quickview-modal .quickview-inner .close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+}
+.quickview-modal .quickview-inner .media {
+  margin-top: 0;
+}
+.quickview-modal .quickview-inner .media .media-left {
+  padding-right: 25px;
+}
+.quickview-modal .quickview-inner .media .media-left .img-container {
+  width: 370px;
+}
+.quickview-modal .quickview-inner .media .media-left .img-container img {
+  width: 100%;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-header {
+  position: relative;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-header h4 {
+  font-size: 24px;
+  margin: 0 0 15px;
+  text-transform: uppercase;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-header p {
+  font-size: 14px;
+  line-height: 1.2;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-header .share-icons {
+  font-size: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-header .share-icons a {
+  margin-left: 10px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options {
+  border-bottom: 1px solid #e6e6e5;
+  border-top: 1px solid #e6e6e5;
+  margin-bottom: 15px;
+  padding: 20px 0;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .list-size {
+  float: left;
+  font-size: 0;
+  margin-bottom: 0;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .list-size li {
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .list-size li a {
+  background-color: #02b691;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 14px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .wrap-quantity {
+  float: right;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .wrap-quantity label {
+  color: #696767;
+  font-size: 14px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .wrap-quantity input[type="text"] {
+  border: 1px solid #e9e9e7;
+  border-radius: 6px;
+  height: 32px;
+  padding: 0 10px;
+  width: 100px;
+  font-size: 22px;
+  text-align: center;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .select2-container--default .select2-selection--single {
+  border: 1px solid #e9e9e7;
+  border-radius: 6px;
+  height: 32px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #696767;
+  font-size: 12px;
+  line-height: 30px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: -2px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .select2-container--default .select2-selection--single .select2-selection__arrow:after {
+  font-size: 24px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .selected-list {
+  font-size: 0;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .selected-list li {
+  background-color: #e9e9e7;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 10px;
+  margin: 0 5px 5px 0;
+  padding: 4px 18px;
+}
+.quickview-modal .quickview-inner .media .media-body .heart-icon {
+  cursor: pointer;
+  display: inline-block;
+}
+.quickview-modal .quickview-inner .media .media-body .heart-icon.active {
+  content: "\f004";
+}
+.quickview-modal .quickview-inner .media .media-body .heart-icon:before {
+  color: #f34336;
+  content: "\f08a";
+  font-family: FontAwesome;
+  font-size: 36px;
+  line-height: 1;
+}
+.quickview-modal .quickview-inner .media .media-body .total {
+  background-color: #02b691;
+  border-radius: 6px;
+  color: #fff;
+  float: right;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 0 20px;
+  padding: 6px 16px 5px;
+}
+.quickview-modal .quickview-inner .media .media-body .total li {
+  border-right: 1px solid #fff;
+  display: inline-block;
+  margin-right: 8px;
+  padding-right: 10px;
+}
+.quickview-modal .quickview-inner .media .media-body .total li:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+.quickview-modal .quickview-inner .media .media-body .total li .add-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  vertical-align: middle;
 }
 /* ---------------------------------------
     CHECKOUT TABLE

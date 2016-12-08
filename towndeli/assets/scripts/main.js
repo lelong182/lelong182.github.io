@@ -11,11 +11,11 @@
     $(window).on('load', function () {
         window.loading_screen.finish();
         $('body').css('opacity', 1);
-        if ($('.subscribe-modal').length) {
-            setTimeout(function() {
-                $('.subscribe-modal').modal('show')
-            }, 1000);
-        }
+        // if ($('.subscribe-modal').length) {
+        //     setTimeout(function() {
+        //         $('.subscribe-modal').modal('show');
+        //     }, 1000);
+        // }
     });
 
     $(document).ready(function () {
@@ -112,6 +112,41 @@
                 $(this).find('.child-box').removeClass('open');
             }
         }, '.top-links > li');
+        $('.register-modal').on('show.bs.modal', function () {
+            $('.login-modal').modal('hide');
+        });
+        $('.login-modal').on('show.bs.modal', function () {
+            $('.register-modal').modal('hide');
+        });
+
+
+        /* =================================
+         ===  Toggle View Password                 ====
+         =================================== */
+        $(this).on('click', 'input[type="password"]', function() {
+            if ($(this).is(":focus") && $(this).parent('.wrap-password').length == 0) {
+                $(this).parent().addClass('wrap-password');
+                $(this).after('<span class="show-password"></span>');
+                $(this).focus();
+            }
+        });
+        $(this).on('mouseup', 'body', function(event) {
+            if (!$('.wrap-password').is(event.target) && $('.wrap-password').has(event.target).length === 0) {
+                $('.wrap-password').each(function(index) {
+                    var span = $(this).find('.show-password');
+                    span.parent().removeClass('wrap-password');
+                    span.remove();
+                });
+            }
+        });
+        $(this).on('click', '.wrap-password .show-password', function() {
+            $(this).prev().attr('type', 'text');
+            $(this).removeClass('show-password').addClass('hide-password');
+        });
+        $(this).on('click', '.wrap-password .hide-password', function() {
+            $(this).prev().attr('type', 'password');
+            $(this).removeClass('hide-password').addClass('show-password');
+        });
 
 
         /* =================================
