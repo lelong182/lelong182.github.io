@@ -11,11 +11,11 @@
     $(window).on('load', function () {
         window.loading_screen.finish();
         $('body').css('opacity', 1);
-        // if ($('.subscribe-modal').length) {
-        //     setTimeout(function() {
-        //         $('.subscribe-modal').modal('show');
-        //     }, 1000);
-        // }
+        if ($('.subscribe-modal').length) {
+            setTimeout(function() {
+                $('.subscribe-modal').modal('show');
+            }, 1000);
+        }
     });
 
     $(window).on('load resize', function () {
