@@ -7304,6 +7304,11 @@ header.header .wrap-cat-menu {
   position: relative;
   width: 44px;
 }
+@media (max-width: 480px) {
+  header.header .wrap-cat-menu {
+    position: static;
+  }
+}
 header.header .wrap-cat-menu .menu-icon {
   background: url('../images/hambuger-icon.png') no-repeat;
   cursor: pointer;
@@ -7330,6 +7335,12 @@ header.header .wrap-cat-menu .cat-menu {
   header.header .wrap-cat-menu .cat-menu {
     left: -10px;
     width: 280px;
+  }
+}
+@media (max-width: 480px) {
+  header.header .wrap-cat-menu .cat-menu {
+    left: 0;
+    width: 100%;
   }
 }
 header.header .wrap-cat-menu .cat-menu.open {
@@ -7378,6 +7389,11 @@ header.header .wrap-cat-menu .cat-menu .cat-menu-details li.has-child:after {
   top: 0;
   width: 35px;
 }
+@media (max-width: 857px) {
+  header.header .wrap-cat-menu .cat-menu .cat-menu-details li.has-child:after {
+    content: none;
+  }
+}
 header.header .wrap-cat-menu .cat-menu .cat-menu-details li.has-child ul {
   background-color: #fff;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
@@ -7397,11 +7413,29 @@ header.header .wrap-cat-menu .cat-menu .cat-menu-details li.has-child ul {
     width: 200px;
   }
 }
+@media (max-width: 480px) {
+  header.header .wrap-cat-menu .cat-menu .cat-menu-details li.has-child ul {
+    box-shadow: none;
+    height: 0;
+    margin: 10px 0 0 20px;
+    padding: 0;
+    position: static;
+    transform: scale(1);
+    transition: none;
+    width: 100%;
+  }
+}
 header.header .wrap-cat-menu .cat-menu .cat-menu-details li.has-child ul.open {
   left: calc(100% + 21px);
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+}
+@media (max-width: 480px) {
+  header.header .wrap-cat-menu .cat-menu .cat-menu-details li.has-child ul.open {
+    height: auto;
+    transition: all 0.2s cubic-bezier(0.33, 0.53, 0.6, 0.64);
+  }
 }
 header.header .wrap-cat-menu .cat-menu .cat-menu-details li a {
   color: #515252;
@@ -8910,11 +8944,24 @@ header.header .top-links li .child-box ul li a.highlight {
   border-radius: 6px;
   padding: 15px;
 }
+@media (max-width: 857px) {
+  .quickview-modal.modal .modal-dialog .modal-content {
+    border-radius: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0;
+  }
+}
 .quickview-modal .quickview-inner {
   background-color: #fff;
   color: #444545;
   padding: 30px;
   position: relative;
+}
+@media (max-width: 857px) {
+  .quickview-modal .quickview-inner {
+    padding: 15px;
+  }
 }
 .quickview-modal .quickview-inner .close-icon {
   cursor: pointer;
@@ -8928,8 +8975,27 @@ header.header .top-links li .child-box ul li a.highlight {
 .quickview-modal .quickview-inner .media .media-left {
   padding-right: 25px;
 }
+@media (max-width: 857px) {
+  .quickview-modal .quickview-inner .media .media-left {
+    display: block;
+    padding-right: 0;
+  }
+}
 .quickview-modal .quickview-inner .media .media-left .img-container {
   width: 370px;
+}
+@media (max-width: 857px) {
+  .quickview-modal .quickview-inner .media .media-left .img-container {
+    display: block;
+    margin: 0 auto 15px;
+    width: 320px;
+  }
+}
+@media (max-width: 480px) {
+  .quickview-modal .quickview-inner .media .media-left .img-container {
+    width: 100%;
+    margin-top: 15px;
+  }
 }
 .quickview-modal .quickview-inner .media .media-left .img-container img {
   width: 100%;
@@ -8961,10 +9027,21 @@ header.header .top-links li .child-box ul li a.highlight {
   margin-bottom: 15px;
   padding: 20px 0;
 }
+@media (max-width: 1199px) {
+  .quickview-modal .quickview-inner .media .media-body .quickview-options .row > div {
+    margin-bottom: 10px;
+  }
+}
 .quickview-modal .quickview-inner .media .media-body .quickview-options .list-size {
   float: left;
   font-size: 0;
   margin-bottom: 0;
+}
+@media (max-width: 857px) {
+  .quickview-modal .quickview-inner .media .media-body .quickview-options .list-size {
+    float: initial;
+    margin-bottom: 10px;
+  }
 }
 .quickview-modal .quickview-inner .media .media-body .quickview-options .list-size li {
   display: inline-block;
@@ -8980,6 +9057,11 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .quickview-modal .quickview-inner .media .media-body .quickview-options .wrap-quantity {
   float: right;
+}
+@media (max-width: 857px) {
+  .quickview-modal .quickview-inner .media .media-body .quickview-options .wrap-quantity {
+    float: initial;
+  }
 }
 .quickview-modal .quickview-inner .media .media-body .quickview-options .wrap-quantity label {
   color: #696767;

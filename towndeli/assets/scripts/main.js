@@ -21,7 +21,7 @@
     $(window).on('load resize', function () {
         var cart_box_right = $('.cart-menu a').offset().left + $('.cart-box').width();
         var window_width = $(window).width();
-        if(window_width - cart_box_right < 0) {
+        if (window_width - cart_box_right < 0) {
             $('.cart-box').css('right', 0);
         } else {
             $('.cart-box').removeAttr('style');
@@ -60,7 +60,7 @@
             view: 'fade',
             space: 1,
             layout: 'fillwidth',
-            autoHeight:true,
+            autoHeight: true,
             loop: true,
             mouse: false,
             preload: 0,
@@ -84,25 +84,25 @@
         /* =================================
          ===  Category Menu                 ====
          =================================== */
-        $(this).on('click', '.wrap-cat-menu .menu-icon', function() {
-            if($('.wrap-cat-menu').hasClass('opened')) {
+        $(this).on('click', '.wrap-cat-menu .menu-icon', function () {
+            if ($('.wrap-cat-menu').hasClass('opened')) {
                 $('.wrap-cat-menu').removeClass('opened');
                 $('.wrap-cat-menu .cat-menu').removeClass('open');
                 $('.black-overlay').remove();
             } else {
                 $('.wrap-cat-menu').addClass('opened');
-                if($('.black-overlay').length) {
+                if ($('.black-overlay').length) {
                     $('.wrap-cat-menu .cat-menu').addClass('open');
                 } else {
                     $('body').prepend('<div class="black-overlay"></div>');
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $('.black-overlay').addClass('open');
                         $('.wrap-cat-menu .cat-menu').addClass('open');
                     }, 0);
                 }
             }
         });
-        $(this).on('mouseup', 'body', function(event) {
+        $(this).on('mouseup', 'body', function (event) {
             if (!$('.wrap-cat-menu .cat-menu').is(event.target) && $('.wrap-cat-menu .cat-menu').has(event.target).length === 0 && !$('.wrap-cat-menu .menu-icon').is(event.target)) {
                 $('.wrap-cat-menu').removeClass('opened');
                 $('.wrap-cat-menu .cat-menu').removeClass('open');
@@ -111,14 +111,30 @@
                 }
             }
         });
-        $(this).on({
-            mouseenter: function () {
-                $(this).children('ul').addClass('open');
-            },
-            mouseleave: function () {
-                $(this).children('ul').removeClass('open');
+        $(window).on('load resize', function () {
+            if (Modernizr.mq('(min-width: 858px)')) {
+                $(document).off('click', '.cat-menu-details li.has-child').on({
+                    mouseenter: function () {
+                        $(this).children('ul').addClass('open');
+                    },
+                    mouseleave: function () {
+                        $(this).children('ul').removeClass('open');
+                    }
+                }, '.cat-menu-details li.has-child');
+                console.log(123);
+            } else {
+                $(document).off('mouseenter mouseleave', '.cat-menu-details li.has-child').on('click', '.cat-menu-details li.has-child', function() {
+                    var this_ul = $(this).children('ul');
+                    if(this_ul.hasClass('open')) {
+                        this_ul.removeClass('open');
+                    } else {
+                        $('.cat-menu-details li.has-child ul').removeClass('open');
+                        this_ul.addClass('open');
+                    }
+                });
+                console.log(456);
             }
-        }, '.cat-menu-details li.has-child');
+        });
 
 
         /* =================================
@@ -143,27 +159,27 @@
         /* =================================
          ===  Toggle View Password                 ====
          =================================== */
-        $(this).on('click', 'input[type="password"]', function() {
+        $(this).on('click', 'input[type="password"]', function () {
             if ($(this).is(":focus") && $(this).parent('.wrap-password').length == 0) {
                 $(this).parent().addClass('wrap-password');
                 $(this).after('<span class="show-password"></span>');
                 $(this).focus();
             }
         });
-        $(this).on('mouseup', 'body', function(event) {
+        $(this).on('mouseup', 'body', function (event) {
             if (!$('.wrap-password').is(event.target) && $('.wrap-password').has(event.target).length === 0) {
-                $('.wrap-password').each(function(index) {
+                $('.wrap-password').each(function (index) {
                     var span = $(this).find('.show-password');
                     span.parent().removeClass('wrap-password');
                     span.remove();
                 });
             }
         });
-        $(this).on('click', '.wrap-password .show-password', function() {
+        $(this).on('click', '.wrap-password .show-password', function () {
             $(this).prev().attr('type', 'text');
             $(this).removeClass('show-password').addClass('hide-password');
         });
-        $(this).on('click', '.wrap-password .hide-password', function() {
+        $(this).on('click', '.wrap-password .hide-password', function () {
             $(this).prev().attr('type', 'password');
             $(this).removeClass('hide-password').addClass('show-password');
         });
@@ -172,25 +188,25 @@
         /* =================================
          ===  Cart Box                 ====
          =================================== */
-        $(this).on('click', '.cart-menu a', function() {
-            if($('.cart-menu').hasClass('opened')) {
+        $(this).on('click', '.cart-menu a', function () {
+            if ($('.cart-menu').hasClass('opened')) {
                 $('.cart-menu').removeClass('opened');
                 $('.cart-menu .cart-box').removeClass('open');
                 $('.black-overlay').remove();
             } else {
                 $('.cart-menu').addClass('opened');
-                if($('.black-overlay').length) {
+                if ($('.black-overlay').length) {
                     $('.cart-menu .cart-box').addClass('open');
                 } else {
                     $('body').prepend('<div class="black-overlay"></div>');
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $('.black-overlay').addClass('open');
                         $('.cart-menu .cart-box').addClass('open');
                     }, 0);
                 }
             }
         });
-        $(this).on('mouseup', 'body', function(event) {
+        $(this).on('mouseup', 'body', function (event) {
             if (!$('.cart-menu').is(event.target) && $('.cart-menu').has(event.target).length === 0 && !$('.cart-menu a').is(event.target)) {
                 $('.cart-menu').removeClass('opened');
                 $('.cart-menu .cart-box').removeClass('open');
@@ -204,7 +220,7 @@
         /* =================================
          ===  Topbar                 ====
          =================================== */
-        $(this).on('click', '.topbar .close-icon', function() {
+        $(this).on('click', '.topbar .close-icon', function () {
             $('.topbar').addClass('closed');
             $('header.header').addClass('no-topbar');
         });
@@ -228,15 +244,15 @@
         /* =================================
          ===  Checkout Quantity                 ====
          =================================== */
-        $(this).on('click', '.wrap-quantity .plus-icon', function() {
+        $(this).on('click', '.wrap-quantity .plus-icon', function () {
             var this_quantity_input = $(this).closest('.wrap-quantity').find('input');
             var this_quantity_value = parseInt(this_quantity_input.val());
             this_quantity_input.val(this_quantity_value + 1);
         });
-        $(this).on('click', '.wrap-quantity .minus-icon', function() {
+        $(this).on('click', '.wrap-quantity .minus-icon', function () {
             var this_quantity_input = $(this).closest('.wrap-quantity').find('input');
             var this_quantity_value = parseInt(this_quantity_input.val());
-            if(this_quantity_value > 1) {
+            if (this_quantity_value > 1) {
                 this_quantity_input.val(this_quantity_value - 1);
             }
         });
