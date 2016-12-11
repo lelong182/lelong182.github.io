@@ -18,6 +18,16 @@
         // }
     });
 
+    $(window).on('load resize', function () {
+        var cart_box_right = $('.cart-menu a').offset().left + $('.cart-box').width();
+        var window_width = $(window).width();
+        if(window_width - cart_box_right < 0) {
+            $('.cart-box').css('right', 0);
+        } else {
+            $('.cart-box').removeAttr('style');
+        }
+    });
+
     $(document).ready(function () {
 
         /* =================================
@@ -38,7 +48,7 @@
             loop: true,
             mouse: false,
             preload: 0,
-            autoplay: true,
+            autoplay: false,
             controls: {
                 bullets: {autohide: false},
                 arrows: {autohide: false}
