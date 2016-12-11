@@ -7401,7 +7401,7 @@ header.header .logo a {
 }
 header.header .menu {
   font-size: 0;
-  left: 360px;
+  left: 305px;
   margin-bottom: 0;
   position: absolute;
   top: 0;
@@ -8223,6 +8223,7 @@ header.header .top-links li .child-box ul li a.highlight {
   color: #fff;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .testimonial:before {
   background-color: rgba(0, 0, 0, 0.5);
