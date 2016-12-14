@@ -69,5 +69,5 @@ gulp.task('default', [
     'css',
     'js',
     // 'images',
-    'watch'
+    // 'watch'
 ]);

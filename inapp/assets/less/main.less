@@ -193,6 +193,225 @@ header.header {
 }
 
 /* ---------------------------------------
+    WHO WE ARE
+----------------------------------------- */
+.who-we-are {
+    background-color: #f7f7f7;
+    .wwa-text {
+        float: left;
+        font-size: 15px;
+        margin-right: 45px;
+        padding-top: 120px;
+        width: ~"calc(100% - 591px)";
+        h3 {
+            font-family: "Poppins",sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            margin: 0 0 20px;
+            text-transform: uppercase;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+        ul {
+            margin-bottom: 0;
+            li {
+                list-style: none;
+                margin-bottom: 30px;
+                .media {
+                    .media-body {
+                        padding-top: 11px;
+                        h4 {
+                            color: @main-color;
+                            font-family: "Poppins",sans-serif;
+                            font-size: 18px;
+                            font-weight: 700;
+                            margin: 0;
+                            text-transform: uppercase;
+                        }
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wwa-img {
+        background: url('../images/wwa-img.jpg') no-repeat;
+        float: left;
+        height: 748px;
+        width: 546px;
+    }
+}
+
+/* ---------------------------------------
+    SERVICES
+----------------------------------------- */
+.services {
+    overflow: hidden;
+    padding-top: 100px;
+    .container {
+        position: relative;
+        height: 700px;
+    }
+    h3 {
+        font-family: "Poppins",sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0 0 5px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    h4 {
+        font-family: "Poppins",sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 20px 0 15px;
+        text-transform: uppercase;
+    }
+    h5 {
+        font-size: 16px;
+        margin: 0;
+        text-align: center;
+    }
+    .media {
+        margin-top: 40px;
+        &:first-child {
+            margin-top: 0;
+        }
+        .media-left {
+            padding-right: 20px;
+        }
+        .media-right {
+            padding-left: 20px;
+        }
+    }
+    .services-left-text {
+        left: 50%;
+        position: absolute;
+        text-align: right;
+        top: 160px;
+        transform: translateX(~"calc(-50% - 435px)");
+        width: 400px;
+    }
+    .services-right-text {
+        position: absolute;
+        right: 50%;
+        top: 200px;
+        transform: translateX(~"calc(-50% + 825px)");
+        width: 400px;
+    }
+    .services-img {
+        background: url('../images/services-img.png') no-repeat;
+        bottom: -280px;
+        height: 869px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 500px;
+    }
+}
+
+/* ---------------------------------------
+    OUR PROCESS
+----------------------------------------- */
+.our-process {
+    background-image: url("../images/op-bg.jpg");
+    color: #fff;
+    padding-bottom: 50px;
+    padding-top: 110px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    &:before {
+        background-color: rgba(0, 0, 0, 0.75);
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    h3 {
+        font-family: "Poppins",sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0 0 5px;
+    }
+    h4 {
+        color: #fff;
+        font-family: "Poppins",sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 0 10px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    h5 {
+        font-size: 16px;
+        margin: 0;
+    }
+    .list-op {
+        font-size: 0;
+        margin-top: 60px;
+        .op-item {
+            display: inline-block;
+            margin: 0 70px;
+            img {
+                margin-bottom: 15px;
+            }
+            ul {
+                font-size: 15px;
+                text-align: left;
+                li {
+                    list-style: none;
+                    margin-bottom: 10px;
+                    &:before {
+                        content: "-";
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+    CASE STUDY
+----------------------------------------- */
+.case-study {
+    background-color: #f7f7f7;
+    padding-top: 110px;
+    padding-bottom: 50px;
+    h3 {
+        font-family: "Poppins",sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0 0 5px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    h5 {
+        font-size: 16px;
+        margin: 0;
+        text-align: center;
+    }
+    .cs-item {
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        padding: 10px;
+        h4 {
+            font-family: "Poppins",sans-serif;
+            font-size: 13px;
+            margin: 0;
+        }
+    }
+}
+
+/* ---------------------------------------
     IFRAME GOOGLE CODE
 ----------------------------------------- */
 iframe[name='google_conversion_frame'] {
