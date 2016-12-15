@@ -33,6 +33,90 @@
 </head>
 <body>
 
+<div class="modal fade login-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="login-header">
+                <h3>Đăng nhập</h3>
+                <p>Cần tạo tài khoản? <a data-toggle="modal" data-target=".register-modal">Đăng ký</a></p>
+            </div>
+            <div class="login-details">
+                <div class="socials-login">
+                    <a class="facebook"><i class="fa fa-facebook"></i>Đăng nhập với Facebook</a>
+                    <a class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <a class="twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="devider"><span>hoặc</span></div>
+                <form>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/airplane-icon.png" alt="img" /></span>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/key-icon.png" alt="img" /></span>
+                        <input type="password" placeholder="Mật khẩu" />
+                    </div>
+                    <div class="clearfix mgt-10 mgb-10">
+                        <div class="remember">
+                            <label for="remember-chk">Ghi nhớ</label>
+                            <input id="remember-chk" type="checkbox" />
+                        </div>
+                        <a class="forgot-password-link">Quên mật khẩu ?</a>
+                    </div>
+                    <button class="submit-btn">Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade register-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="login-header">
+                <h3>Đăng ký</h3>
+                <p>Bạn đã có tài khoản? <a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></p>
+            </div>
+            <div class="login-details">
+                <div class="socials-login">
+                    <a class="facebook"><i class="fa fa-facebook"></i>Đăng nhập với Facebook</a>
+                    <a class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <a class="twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="devider"><span>hoặc đăng kí tài khoản trên Towndeli</span></div>
+                <form>
+                    <div class="row">
+                        <div class="col-xs-6 pdr-5">
+                            <div class="wrap-input">
+                                <span><img src="dist/images/user-icon.png" alt="img" /></span>
+                                <input type="text" placeholder="Tên" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6 pdl-5">
+                            <div class="wrap-input">
+                                <input type="text" placeholder="Họ" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-input">
+                        <input type="text" placeholder="Số điện thoại" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/airplane-icon.png" alt="img" /></span>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/key-icon.png" alt="img" /></span>
+                        <input type="password" placeholder="Mật khẩu" />
+                    </div>
+                    <p class="note">Bằng việc đăng ký và sử dụng website, bạn đồng ý với các Điều khoản & Quy chế</p>
+                    <button class="submit-btn">Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="topbar">
     <div class="container">
         <h4><strong>boost up your monday ! 50% off</strong> for espresso every monday from 09:00-12:00. <a>see more</a>
@@ -44,8 +128,119 @@
 
 <header class="header">
     <div class="container">
-        <span class="menu-icon"></span>
-        <!-- /.menu-icon -->
+        <div class="wrap-cat-menu">
+            <span class="menu-icon"></span>
+            <!-- /.menu-icon -->
+            <div class="cat-menu">
+                <h3>Categories</h3>
+                <div class="popular-links">
+                    <h4><a>Deals</a></h4>
+                    <h4><a>Popular</a></h4>
+                    <h4><a>Recently Viewed</a></h4>
+                </div>
+                <ul class="cat-menu-details">
+                    <li class="has-child">
+                        <a>Produce</a>
+                        <ul>
+                            <li>
+                                <a>Produce 1</a>
+                            </li>
+                            <li>
+                                <a>Produce 2</a>
+                            </li>
+                            <li>
+                                <a>Produce 3</a>
+                            </li>
+                            <li>
+                                <a>Produce 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Meat & Seafood</a>
+                        <ul>
+                            <li>
+                                <a>Meat & Seafood 1</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 2</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 3</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Deli</a>
+                        <ul>
+                            <li>
+                                <a>Deli 1</a>
+                            </li>
+                            <li>
+                                <a>Deli 2</a>
+                            </li>
+                            <li>
+                                <a>Deli 3</a>
+                            </li>
+                            <li>
+                                <a>Deli 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Bakery</a>
+                        <ul>
+                            <li>
+                                <a>Bakery 1</a>
+                            </li>
+                            <li>
+                                <a>Bakery 2</a>
+                            </li>
+                            <li>
+                                <a>Bakery 3</a>
+                            </li>
+                            <li>
+                                <a>Bakery 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Alcohol</a>
+                    </li>
+                    <li>
+                        <a>Dairy & Eggs</a>
+                    </li>
+                    <li>
+                        <a>Bulk</a>
+                    </li>
+                    <li class="has-child">
+                        <a>Canned Goods</a>
+                        <ul>
+                            <li>
+                                <a>Canned Goods 1</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 2</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 3</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Dry Goods & Pasta</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.cat-menu -->
+        </div>
+        <!-- /.wrap-cat-menu -->
         <h1 class="logo">
             <a href="index.html" title="TownDeli">TownDeli</a>
         </h1>
@@ -55,19 +250,120 @@
                 <a><span class="glass-icon"></span>Menu</a>
             </li>
             <li>
-                <a><span class="calendar-icon"></span>Schedule</a>
+                <a href="index.html#pick-coffee" class="scroll"><span class="calendar-icon"></span>Schedule</a>
             </li>
-            <li>
-                <a><span class="cart-icon"></span>Your cart</a>
+            <li class="cart-menu">
+                <a><span class="cart-icon" data-value="10"></span>Your cart</a>
+                <div class="cart-box">
+                    <div class="table-responsive">
+                        <table class="table checkout-table">
+                            <tbody>
+                            <tr>
+                                <td><h3>Cart</h3></td>
+                                <td><a class="more-link">Drink more</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                </td>
+                                <td>Std.size Cookie, Strawberry...</td>
+                                <td>
+                                    <div class="wrap-quantity">
+                                        <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                        <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                        <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                    </div>
+                                </td>
+                                <td class="text-center">50.000 VNĐ</td>
+                                <td class="text-right">
+                                    <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                </td>
+                                <td>Std.size Cookie, Strawberry...</td>
+                                <td>
+                                    <div class="wrap-quantity">
+                                        <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                        <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                        <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                    </div>
+                                </td>
+                                <td class="text-center">50.000 VNĐ</td>
+                                <td class="text-right">
+                                    <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                </td>
+                                <td>Std.size Cookie, Strawberry...</td>
+                                <td>
+                                    <div class="wrap-quantity">
+                                        <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                        <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                        <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                    </div>
+                                </td>
+                                <td class="text-center">50.000 VNĐ</td>
+                                <td class="text-right">
+                                    <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bottom-cart-box">
+                        <div class="info">
+                            <p><strong>TOTAL:</strong></p>
+                            <p><strong>180.000 VNĐ / DAY</strong></p>
+                            <p>150.000 VNĐ: Coffee & Dessert</p>
+                            <p>30.000 VNĐ: Shipping Fee</p>
+                        </div>
+                        <button class="checkout-btn">CHECKOUT <i class="fa fa-angle-right"></i></button>
+                    </div>
+                </div>
             </li>
         </ul>
         <!-- /.menu -->
         <ul class="top-links">
             <li class="user">
                 <a><img src="dist/images/avatar.png" alt="img"/></a>
+                <div class="child-box">
+                    <ul>
+                        <li><a data-toggle="modal" data-target=".register-modal">Đăng ký</a></li>
+                        <li class="devider no-mg"></li>
+                        <li><a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                <!-- Dropdown dưới là khi user đã login -->
+                <!--
+                <div class="child-box big">
+                    <ul>
+                        <li><a class="highlight">Schedule</a></li>
+                        <li><a class="highlight">Reward points</a></li>
+                        <li class="devider"></li>
+                        <li><a>Profile</a></li>
+                        <li><a>Log out</a></li>
+                    </ul>
+                </div>
+                -->
             </li>
             <li class="lang">
                 <a><img src="dist/images/en-flag.png" alt="img"/></a>
+                <div class="child-box">
+                    <ul>
+                        <li class="active"><a>English</a></li>
+                        <li class="devider no-mg"></li>
+                        <li><a>Tiếng Việt</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <!-- /.top-links -->
@@ -80,8 +376,8 @@
         <div id="home-sliders" class="master-slider ms-skin-default">
             <div class="ms-slide">
                 <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
-                <div class="ms-layer ms-caption" data-effect="top(400)"
-                     data-duration="800"
+                <div class="ms-layer ms-caption" data-effect="left(200)"
+                     data-duration="700"
                      data-delay="0"
                      data-hide-effect="fade">
                     <div class="slider-text">
@@ -95,8 +391,8 @@
             </div>
             <div class="ms-slide">
                 <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
-                <div class="ms-layer ms-caption" data-effect="skewright(20|30,100|300)"
-                     data-duration="800"
+                <div class="ms-layer ms-caption" data-effect="skewright(20|30,100|200)"
+                     data-duration="700"
                      data-delay="0"
                      data-hide-effect="fade">
                     <div class="slider-text">
@@ -110,8 +406,8 @@
             </div>
             <div class="ms-slide">
                 <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
-                <div class="ms-layer ms-caption" data-effect="front(400)"
-                     data-duration="800"
+                <div class="ms-layer ms-caption" data-effect="front(300)"
+                     data-duration="700"
                      data-delay="0"
                      data-hide-effect="fade">
                     <div class="slider-text">

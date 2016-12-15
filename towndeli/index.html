@@ -264,10 +264,10 @@
                 <a><span class="glass-icon"></span>Menu</a>
             </li>
             <li>
-                <a><span class="calendar-icon"></span>Schedule</a>
+                <a href="index.html#pick-coffee" class="scroll"><span class="calendar-icon"></span>Schedule</a>
             </li>
             <li class="cart-menu">
-                <a><span class="cart-icon"></span>Your cart</a>
+                <a><span class="cart-icon" data-value="10"></span>Your cart</a>
                 <div class="cart-box">
                     <div class="table-responsive">
                         <table class="table checkout-table">
@@ -293,7 +293,7 @@
                                     </td>
                                     <td class="text-center">50.000 VNĐ</td>
                                     <td class="text-right">
-                                        <a class="edit-icon"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -310,7 +310,7 @@
                                     </td>
                                     <td class="text-center">50.000 VNĐ</td>
                                     <td class="text-right">
-                                        <a class="edit-icon"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -327,7 +327,7 @@
                                     </td>
                                     <td class="text-center">50.000 VNĐ</td>
                                     <td class="text-right">
-                                        <a class="edit-icon"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -352,6 +352,7 @@
                 <div class="child-box">
                     <ul>
                         <li><a data-toggle="modal" data-target=".register-modal">Đăng ký</a></li>
+                        <li class="devider no-mg"></li>
                         <li><a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -373,6 +374,7 @@
                 <div class="child-box">
                     <ul>
                         <li class="active"><a>English</a></li>
+                        <li class="devider no-mg"></li>
                         <li><a>Tiếng Việt</a></li>
                     </ul>
                 </div>
@@ -388,8 +390,8 @@
         <div id="home-sliders" class="master-slider ms-skin-default">
             <div class="ms-slide">
                 <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
-                <div class="ms-layer ms-caption" data-effect="top(400)"
-                     data-duration="800"
+                <div class="ms-layer ms-caption" data-effect="left(200)"
+                     data-duration="700"
                      data-delay="0"
                      data-hide-effect="fade">
                     <div class="slider-text">
@@ -403,8 +405,8 @@
             </div>
             <div class="ms-slide">
                 <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
-                <div class="ms-layer ms-caption" data-effect="skewright(20|30,100|300)"
-                     data-duration="800"
+                <div class="ms-layer ms-caption" data-effect="skewright(20|30,100|200)"
+                     data-duration="700"
                      data-delay="0"
                      data-hide-effect="fade">
                     <div class="slider-text">
@@ -418,8 +420,8 @@
             </div>
             <div class="ms-slide">
                 <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
-                <div class="ms-layer ms-caption" data-effect="front(400)"
-                     data-duration="800"
+                <div class="ms-layer ms-caption" data-effect="front(300)"
+                     data-duration="700"
                      data-delay="0"
                      data-hide-effect="fade">
                     <div class="slider-text">
@@ -487,7 +489,7 @@
 </div>
 <!-- /.hero -->
 
-<div class="pick-coffee">
+<div id="pick-coffee" class="pick-coffee">
     <div class="container">
         <h3>1.PICK A COFFEE</h3>
         <div class="row mgb-30">

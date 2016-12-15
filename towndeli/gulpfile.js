@@ -46,6 +46,7 @@ gulp.task('js', function () {
         'assets/scripts/libs/onlynumber.js',
         'assets/scripts/libs/select2.full.min.js',
         'assets/masterslider/masterslider.min.js',
+        'assets/scrollmagic/ScrollMagic.min.js',
         'assets/scripts/main.js'
     ])
         .pipe(concat('main.js'))
@@ -69,5 +70,5 @@ gulp.task('default', [
     'css',
     'js',
     // 'images',
-    // 'watch'
+    'watch'
 ]);
