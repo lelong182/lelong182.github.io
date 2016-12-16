@@ -1,54 +1,35 @@
 .pagination {
-    clear: both;
-    margin: 20px 0 0;
-    text-align: center;
-    width: 100%;
-
-    li {
-        display: inline-block;
-        margin: 0 2px;
-
-        &:first-child {
-            a, span {
-                padding-right: 9px;
-                padding-top: 1px;
-            }
-        }
-        &:last-child {
-            a, span {
-                padding-left: 9px;
-                padding-top: 1px;
-            }
-        }
-        a, span {
-            border: 1px solid #999;
-            border-radius: 0 !important;
-            color: #59595b;
+    border-radius: 0;
+    font-family: "Poppins",sans-serif;
+    margin: 0;
+    ul {
+        font-size: 0;
+        margin-bottom: 0;
+        li {
             display: inline-block;
-            font-size: 15px;
-            height: 26px;
-            padding: 1px 8px 0;
-
-            &:hover, &:focus {
-                background-color: @main-color;
-                border-color: @main-color;
-                color: #fff;
+            margin-right: 8px;
+            &.active {
+                span {
+                    border: 1px solid #fd792e;
+                    color: #fd792e;
+                }
             }
-        }
-        i {
-            font-size: 22px;
-        }
-    }
-    .active {
-        span {
-            background-color: @main-color;
-            border-color: @main-color;
-            color: #fff;
-
-            &:hover, &:focus {
-                background-color: @main-color;
-                border-color: @main-color;
-                color: #fff;
+            span, a {
+                display: inline-block;
+                font-size: 16px;
+                height: 40px;
+                letter-spacing: 1px;
+                padding-top: 9px;
+                text-align: center;
+                width: 40px;
+            }
+            a {
+                border: 1px solid #999;
+                color: #999;
+                &:hover {
+                    border: 1px solid #fd792e;
+                    color: #fd792e;
+                }
             }
         }
     }

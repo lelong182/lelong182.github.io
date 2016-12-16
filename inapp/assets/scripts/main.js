@@ -55,6 +55,90 @@
             }
         });
 
+
+        /* =================================
+         ===  Meet The Team                 ====
+         =================================== */
+        $('.meet-the-team .list-members').slick({
+            arrows: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+
+        /* =================================
+         ===  Testimonial                 ====
+         =================================== */
+        $('.testimonial .list-testi').slick({
+            arrows: true,
+            infinite: true,
+            fade: true,
+            autoplay: true,
+            speed: 1000
+        });
+
+
+        /* =================================
+         ===  Clients                 ====
+         =================================== */
+        $('.clients .list-clients').slick({
+            arrows: true,
+            infinite: true,
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 800,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 5
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+
     });
 
 })(window.jQuery);

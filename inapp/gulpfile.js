@@ -23,6 +23,8 @@ gulp.task('css', ['less'], function () {
         'assets/styles/minimal-menu.css',
         'assets/styles/font-awesome.min.css',
         'assets/styles/animate.min.css',
+        'assets/styles/slick.css',
+        'assets/styles/slick-theme.css',
         'assets/masterslider/style/masterslider.css',
         'assets/masterslider/skins/default/style.css',
         'assets/styles/styles.css'
@@ -42,6 +44,7 @@ gulp.task('js', function () {
         'assets/scripts/libs/jquery.easing.1.3.js',
         'assets/scripts/libs/bootstrap.min.js',
         'assets/scripts/libs/modernizr.js',
+        'assets/scripts/libs/slick.min.js',
         'assets/masterslider/masterslider.min.js',
         'assets/scripts/main.js'
     ])
