@@ -7506,7 +7506,7 @@ header.header .main-nav li a:focus:before {
   display: inline-block;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  padding: 15px 20px;
+  padding: 16px 20px 15px;
   margin-top: 25px;
   text-transform: uppercase;
 }
@@ -7884,7 +7884,7 @@ header.header .main-nav li a:focus:before {
   float: left;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  padding: 10px 30px;
+  padding: 11px 30px 10px;
   text-transform: uppercase;
 }
 .main .wrap-blog .main-content .list-blogs .blog-item .bottom-blog-item .view-more-link:hover {
@@ -7916,7 +7916,7 @@ header.header .main-nav li a:focus:before {
   display: inline-block;
   font-size: 20px;
   height: 40px;
-  padding-top: 5px;
+  padding-top: 6px;
   width: 40px;
 }
 .main .wrap-blog .main-content .list-blogs .blog-item .bottom-blog-item .wrap-share ul li a:hover {
