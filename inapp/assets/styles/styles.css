@@ -7775,6 +7775,15 @@ header.header .main-nav li a:focus:before {
   /* ---------------------------------------
         BLOG PAGE
     ----------------------------------------- */
+  /* ---------------------------------------
+        SERVICE PAGE
+    ----------------------------------------- */
+  /* ---------------------------------------
+        INTERVIEW PAGE
+    ----------------------------------------- */
+  /* ---------------------------------------
+        JOB PAGE
+    ----------------------------------------- */
 }
 .main .wrap-blog {
   background-color: #f7f7f7;
@@ -7921,6 +7930,462 @@ header.header .main-nav li a:focus:before {
 }
 .main .wrap-blog .main-content .list-blogs .blog-item .bottom-blog-item .wrap-share ul li a:hover {
   border-color: #fd792e;
+  background-color: #fd792e;
+  color: #fff;
+}
+.main .wrap-service {
+  background-color: #f7f7f7;
+}
+.main .wrap-service .top-content {
+  background-image: url("../images/top-blog-bg.jpg");
+  color: #fff;
+  padding-bottom: 120px;
+  padding-top: 140px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.main .wrap-service .top-content:before {
+  background-color: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.main .wrap-service .top-content .top-content-inner {
+  margin: auto;
+  overflow: hidden;
+  width: 696px;
+}
+.main .wrap-service .top-content .top-content-inner .caption {
+  font-family: "Arvo", sans-serif;
+  font-size: 30px;
+  margin: 0 0 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+.main .wrap-service .top-content .top-content-inner .caption span {
+  position: relative;
+}
+.main .wrap-service .top-content .top-content-inner .caption span:before {
+  background-color: #fd792e;
+  content: "";
+  height: 2px;
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  width: 1000px;
+}
+.main .wrap-service .top-content .top-content-inner .caption span:after {
+  background-color: #fd792e;
+  content: "";
+  height: 2px;
+  left: calc(100% + 10px);
+  position: absolute;
+  top: 50%;
+  width: 1000px;
+}
+.main .wrap-service .top-content .top-content-inner h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+.main .wrap-service .top-content .top-content-inner h5 {
+  font-family: "Arvo", sans-serif;
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  word-spacing: 8px;
+  margin: 0;
+}
+.main .wrap-service .main-content {
+  padding: 30px 0 60px;
+}
+.main .wrap-service .main-content .service-menu {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.main .wrap-service .main-content .service-menu li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.main .wrap-service .main-content .service-menu li.active a,
+.main .wrap-service .main-content .service-menu li:hover a {
+  color: #fd792e;
+}
+.main .wrap-service .main-content .service-menu li.active .icon.mobile-icon,
+.main .wrap-service .main-content .service-menu li:hover .icon.mobile-icon {
+  background: url('../images/services-icon-1.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li.active .icon.graphic-icon,
+.main .wrap-service .main-content .service-menu li:hover .icon.graphic-icon {
+  background: url('../images/services-icon-3.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li.active .icon.support-icon,
+.main .wrap-service .main-content .service-menu li:hover .icon.support-icon {
+  background: url('../images/services-icon-5.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li.active .icon.web-icon,
+.main .wrap-service .main-content .service-menu li:hover .icon.web-icon {
+  background: url('../images/services-icon-2.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li.active .icon.offshore-icon,
+.main .wrap-service .main-content .service-menu li:hover .icon.offshore-icon {
+  background: url('../images/services-icon-4.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li.active .icon.software-icon,
+.main .wrap-service .main-content .service-menu li:hover .icon.software-icon {
+  background: url('../images/services-icon-6.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li a {
+  color: #aeaeae;
+}
+.main .wrap-service .main-content .service-menu li .icon {
+  display: inline-block;
+  width: 50px;
+  height: 58px;
+}
+.main .wrap-service .main-content .service-menu li .icon.mobile-icon {
+  background: url('../images/services-icon-1-inactive.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li .icon.graphic-icon {
+  background: url('../images/services-icon-3-inactive.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li .icon.support-icon {
+  background: url('../images/services-icon-5-inactive.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li .icon.web-icon {
+  background: url('../images/services-icon-2-inactive.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li .icon.offshore-icon {
+  background: url('../images/services-icon-4-inactive.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li .icon.software-icon {
+  background: url('../images/services-icon-6-inactive.png') no-repeat;
+}
+.main .wrap-service .main-content .service-menu li h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 15px 0 0;
+  text-transform: uppercase;
+  position: relative;
+}
+.main .wrap-service .main-content .service-menu li h3:before {
+  content: "";
+  height: 25px;
+  left: 0;
+  position: absolute;
+  top: -23px;
+  width: 100%;
+}
+.main .wrap-service .main-content .service-content {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.main .wrap-service .main-content .service-content p {
+  margin-bottom: 20px;
+}
+.main .wrap-service .main-content .service-content .capability {
+  margin-bottom: 20px;
+}
+.main .wrap-service .main-content .service-content .capability h4 {
+  color: #fd792e;
+  font-family: "Poppins", fantasy;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+}
+.main .wrap-service .main-content .service-content .capability ul {
+  margin-bottom: 0;
+}
+.main .wrap-service .main-content .service-content .capability ul li {
+  list-style: none;
+}
+.main .wrap-service .main-content .service-content .capability ul li:before {
+  content: "-";
+  margin: 0 5px;
+}
+.main .wrap-service .main-content .service-content .view-more-link {
+  border: 1px solid #fd792e;
+  color: #fd792e;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+.main .wrap-service .main-content .service-content .view-more-link:hover {
+  background-color: #fd792e;
+  color: #fff;
+}
+.main .wrap-interview {
+  background-color: #f7f7f7;
+}
+.main .wrap-interview .top-content {
+  background-image: url("../images/top-blog-bg.jpg");
+  color: #fff;
+  padding-bottom: 120px;
+  padding-top: 140px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.main .wrap-interview .top-content:before {
+  background-color: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.main .wrap-interview .top-content .top-content-inner {
+  margin: auto;
+  overflow: hidden;
+  width: 670px;
+}
+.main .wrap-interview .top-content .top-content-inner.big {
+  width: 771px;
+}
+.main .wrap-interview .top-content .top-content-inner .caption {
+  font-family: "Arvo", sans-serif;
+  font-size: 30px;
+  position: relative;
+  text-transform: uppercase;
+}
+.main .wrap-interview .top-content .top-content-inner .caption span {
+  position: relative;
+}
+.main .wrap-interview .top-content .top-content-inner .caption span:before {
+  background-color: #fd792e;
+  content: "";
+  height: 2px;
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  width: 1000px;
+}
+.main .wrap-interview .top-content .top-content-inner .caption span:after {
+  background-color: #fd792e;
+  content: "";
+  height: 2px;
+  left: calc(100% + 10px);
+  position: absolute;
+  top: 50%;
+  width: 1000px;
+}
+.main .wrap-interview .top-content .top-content-inner h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.main .wrap-interview .main-content {
+  padding: 40px 0;
+}
+.main .wrap-interview .main-content .interview-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.main .wrap-interview .main-content .interview-header h3 {
+  color: #fd792e;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+}
+.main .wrap-interview .main-content .interview-header h5 {
+  color: #999;
+  font-size: 15px;
+  margin: 0;
+}
+.main .wrap-interview .main-content .interview-header h6 {
+  color: #999;
+  font-size: 13px;
+  margin: 0;
+}
+.main .wrap-interview .main-content .interview-header h6 span {
+  display: inline-block;
+  margin: 0 15px;
+}
+.main .wrap-interview .main-content .interview-content {
+  font-size: 14px;
+  line-height: 1.6;
+  width: 930px;
+  margin: auto;
+}
+.main .wrap-interview .main-content .interview-content p {
+  margin-bottom: 20px;
+}
+.main .wrap-interview .main-content .interview-content .wrap-share {
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  position: relative;
+}
+.main .wrap-interview .main-content .interview-content .wrap-share span {
+  float: left;
+  margin-top: 10px;
+}
+.main .wrap-interview .main-content .interview-content .wrap-share ul {
+  float: left;
+  font-size: 0;
+  margin-bottom: 0;
+}
+.main .wrap-interview .main-content .interview-content .wrap-share ul li {
+  display: inline-block;
+  margin-left: 8px;
+  text-align: center;
+}
+.main .wrap-interview .main-content .interview-content .wrap-share ul li a {
+  border: 1px solid #bbb;
+  color: #acacac;
+  display: inline-block;
+  font-size: 20px;
+  height: 40px;
+  padding-top: 6px;
+  width: 40px;
+}
+.main .wrap-interview .main-content .interview-content .wrap-share ul li a:hover {
+  border-color: #fd792e;
+  background-color: #fd792e;
+  color: #fff;
+}
+.main .wrap-job {
+  background-color: #f7f7f7;
+}
+.main .wrap-job .top-content {
+  background-image: url("../images/top-blog-bg.jpg");
+  color: #fff;
+  padding-bottom: 120px;
+  padding-top: 140px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.main .wrap-job .top-content:before {
+  background-color: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.main .wrap-job .top-content .top-content-inner {
+  margin: auto;
+  overflow: hidden;
+  width: 771px;
+}
+.main .wrap-job .top-content .top-content-inner .caption {
+  font-family: "Arvo", sans-serif;
+  font-size: 30px;
+  position: relative;
+  text-transform: uppercase;
+}
+.main .wrap-job .top-content .top-content-inner .caption span {
+  position: relative;
+}
+.main .wrap-job .top-content .top-content-inner .caption span:before {
+  background-color: #fd792e;
+  content: "";
+  height: 2px;
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  width: 1000px;
+}
+.main .wrap-job .top-content .top-content-inner .caption span:after {
+  background-color: #fd792e;
+  content: "";
+  height: 2px;
+  left: calc(100% + 10px);
+  position: absolute;
+  top: 50%;
+  width: 1000px;
+}
+.main .wrap-job .top-content .top-content-inner h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.main .wrap-job .main-content {
+  padding: 40px 0;
+}
+.main .wrap-job .main-content h3 {
+  color: #fd792e;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+.main .wrap-job .main-content .cat-menu {
+  margin-bottom: 0;
+}
+.main .wrap-job .main-content .cat-menu li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+.main .wrap-job .main-content .cat-menu li a {
+  color: #424242;
+  font-size: 14px;
+}
+.main .wrap-job .main-content .cat-menu li a:hover {
+  color: #fd792e;
+  margin-left: 5px;
+}
+.main .wrap-job .main-content .list-jobs .job-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+.main .wrap-job .main-content .list-jobs .job-item h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.main .wrap-job .main-content .list-jobs .job-item h4 a {
+  color: #424242;
+}
+.main .wrap-job .main-content .list-jobs .job-item h4 a:hover {
+  color: #fd792e;
+}
+.main .wrap-job .main-content .list-jobs .job-item h6 {
+  color: #888;
+  font-size: 13px;
+  margin: 0;
+}
+.main .wrap-job .main-content .list-jobs .job-item h6 span {
+  display: inline-block;
+  margin: 0 15px;
+}
+.main .wrap-job .main-content .list-jobs .job-item .excerpt {
+  margin: 20px 0 30px;
+}
+.main .wrap-job .main-content .list-jobs .job-item .excerpt h5 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.main .wrap-job .main-content .list-jobs .job-item .view-more-link {
+  border: 1px solid #fd792e;
+  color: #fd792e;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  padding: 8px 20px 7px;
+  text-transform: uppercase;
+}
+.main .wrap-job .main-content .list-jobs .job-item .view-more-link:hover {
   background-color: #fd792e;
   color: #fff;
 }
