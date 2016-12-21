@@ -7666,8 +7666,13 @@ header.header .main-nav li a:focus:before {
 .contact-us {
   background-color: #fdfdfd;
 }
+.contact-us .contact-inner {
+  display: table;
+}
 .contact-us .contact-info {
-  padding: 120px 0 50px;
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
 }
 .contact-us .contact-info h3 {
   font-family: "Poppins", sans-serif;
@@ -7716,19 +7721,11 @@ header.header .main-nav li a:focus:before {
   color: #fd792e;
 }
 .contact-us .contact-form {
-  padding: 60px 50px 50px;
-  position: relative;
-  z-index: 1;
-}
-.contact-us .contact-form:before {
   background-color: #fd792e;
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
+  display: table-cell;
+  padding: 70px 50px;
+  position: relative;
+  vertical-align: top;
 }
 .contact-us .contact-form ::-webkit-input-placeholder {
   color: #fff;

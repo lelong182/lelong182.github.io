@@ -615,8 +615,13 @@ header.header {
 ----------------------------------------- */
 .contact-us {
     background-color: #fdfdfd;
+    .contact-inner {
+        display: table;
+    }
     .contact-info {
-        padding: 120px 0 50px;
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
         h3 {
             font-family: "Poppins", sans-serif;
             font-size: 40px;
@@ -667,19 +672,11 @@ header.header {
         }
     }
     .contact-form {
-        padding: 60px 50px 50px;
+        background-color: @main-color;
+        display: table-cell;
+        padding: 70px 50px;
         position: relative;
-        z-index: 1;
-        &:before {
-            background-color: @main-color;
-            bottom: 0;
-            content: "";
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: -1;
-        }
+        vertical-align: top;
         ::-webkit-input-placeholder {
             color: #fff;
         }
