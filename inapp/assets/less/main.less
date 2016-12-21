@@ -1338,6 +1338,201 @@ header.header {
             }
         }
     }
+    /* ---------------------------------------
+        CASE STUDY PAGE
+    ----------------------------------------- */
+    .wrap-case-study {
+        background-color: #f7f7f7;
+        .top-content {
+            background-image: url("../images/top-cs-bg.jpg");
+            color: #fff;
+            padding-bottom: 120px;
+            padding-top: 140px;
+            position: relative;
+            text-align: center;
+            z-index: 1;
+            &:before {
+                background-color: rgba(0, 0, 0, 0.75);
+                bottom: 0;
+                content: "";
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: -1;
+            }
+            .top-content-inner {
+                margin: auto;
+                overflow: hidden;
+                width: 678px;
+                .caption {
+                    font-family: "Arvo",sans-serif;
+                    font-size: 30px;
+                    margin: 0 0 20px;
+                    position: relative;
+                    text-transform: uppercase;
+                    span {
+                        position: relative;
+                        &:before {
+                            background-color: @main-color;
+                            content: "";
+                            height: 2px;
+                            position: absolute;
+                            right: ~"calc(100% + 10px)";
+                            top: 50%;
+                            width: 1000px;
+                        }
+                        &:after {
+                            background-color: @main-color;
+                            content: "";
+                            height: 2px;
+                            left: ~"calc(100% + 10px)";
+                            position: absolute;
+                            top: 50%;
+                            width: 1000px;
+                        }
+                    }
+                }
+                h4 {
+                    font-family: "Poppins",sans-serif;
+                    font-size: 60px;
+                    font-weight: 700;
+                    margin: 0 0 10px;
+                    text-transform: uppercase;
+                }
+                h6 {
+                    font-family: "Arvo",sans-serif;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    word-spacing: 3px;
+                    margin: 0;
+                }
+            }
+        }
+        .main-content {
+            padding: 40px 0;
+            .cs-menu {
+                margin-bottom: 50px;
+                text-align: center;
+                li {
+                    display: inline-block;
+                    margin: 0 20px;
+                    &.active, &:hover {
+                        a {
+                            color: @main-color;
+                        }
+                        .icon {
+                            &.mobile-icon {
+                                background: url('../images/services-icon-1.png') no-repeat;
+                            }
+                            &.graphic-icon {
+                                background: url('../images/services-icon-3.png') no-repeat;
+                            }
+                            &.support-icon {
+                                background: url('../images/services-icon-5.png') no-repeat;
+                            }
+                            &.web-icon {
+                                background: url('../images/services-icon-2.png') no-repeat;
+                            }
+                            &.offshore-icon {
+                                background: url('../images/services-icon-4.png') no-repeat;
+                            }
+                            &.software-icon {
+                                background: url('../images/services-icon-6.png') no-repeat;
+                            }
+                        }
+                    }
+                    a {
+                        color: #aeaeae;
+                    }
+                    .icon {
+                        display: inline-block;
+                        width: 50px;
+                        height: 58px;
+                        &.mobile-icon {
+                            background: url('../images/services-icon-1-inactive.png') no-repeat;
+                        }
+                        &.graphic-icon {
+                            background: url('../images/services-icon-3-inactive.png') no-repeat;
+                        }
+                        &.support-icon {
+                            background: url('../images/services-icon-5-inactive.png') no-repeat;
+                        }
+                        &.web-icon {
+                            background: url('../images/services-icon-2-inactive.png') no-repeat;
+                        }
+                        &.offshore-icon {
+                            background: url('../images/services-icon-4-inactive.png') no-repeat;
+                        }
+                        &.software-icon {
+                            background: url('../images/services-icon-6-inactive.png') no-repeat;
+                        }
+                    }
+                    h3 {
+                        font-family: "Poppins",sans-serif;
+                        font-size: 15px;
+                        font-weight: 700;
+                        margin: 15px 0 0;
+                        text-transform: uppercase;
+                        position: relative;
+                        &:before {
+                            content: "";
+                            height: 25px;
+                            left: 0;
+                            position: absolute;
+                            top: -23px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .cs-item {
+                background-color: #fff;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                padding: 10px;
+                transition: all 0.4s ease;
+                &:hover {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+                }
+                h4 {
+                    font-family: Poppins, sans-serif;
+                    font-size: 13px;
+                    margin: 15px 0 10px;
+                    a {
+                        color: @second-color;
+                    }
+                }
+                .cs-img {
+                    margin: -10px -10px 0;
+                    width: ~"calc(100% + 20px)";
+                }
+                a {
+                    color: @main-color;
+                    font-family: "Poppins", sans-serif;
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .view-more-link {
+                border: 1px solid @main-color;
+                color: @main-color;
+                display: inline-block;
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                padding: 16px 20px 15px;
+                margin-top: 25px;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: @main-color;
+                    color: #fff;
+                }
+            }
+        }
+    }
 }
 
 /* ---------------------------------------
