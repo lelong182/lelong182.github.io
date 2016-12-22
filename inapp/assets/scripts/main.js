@@ -45,7 +45,7 @@
             height: 767,
             view: 'fade',
             space: 1,
-            layout: 'fullwidth',
+            layout: 'fullscreen',
             loop: true,
             mouse: false,
             preload: 0,

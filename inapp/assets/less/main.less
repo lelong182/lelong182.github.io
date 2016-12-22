@@ -53,6 +53,25 @@ header.header {
     top: 0;
     width: 100%;
     z-index: 100;
+    &.static {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+        height: 75px;
+        position: relative;
+        .logo {
+            margin-top: 18px;
+            a {
+                background: url('../images/logo-2.png') no-repeat;
+            }
+        }
+        .main-nav {
+            top: 32px;
+            li {
+                a {
+                    color: #424242;
+                }
+            }
+        }
+    }
     .container {
         position: relative;
     }
@@ -202,12 +221,10 @@ header.header {
 ----------------------------------------- */
 .who-we-are {
     background-color: #f7f7f7;
+    position: relative;
     .wwa-text {
-        float: left;
         font-size: 15px;
-        margin-right: 45px;
-        padding-top: 120px;
-        width: ~"calc(100% - 591px)";
+        padding: 100px 45% 20px 0;
         h3 {
             font-family: "Poppins", sans-serif;
             font-size: 40px;
@@ -243,10 +260,12 @@ header.header {
         }
     }
     .wwa-img {
-        background: url('../images/wwa-img.jpg') no-repeat;
-        float: left;
-        height: 748px;
-        width: 546px;
+        background: url('../images/wwa-img-1.jpg') no-repeat center / cover;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
     }
 }
 
@@ -1362,6 +1381,9 @@ header.header {
                 margin: auto;
                 overflow: hidden;
                 width: 678px;
+                &.empty {
+                    height: 80px;
+                }
                 .caption {
                     font-family: "Arvo",sans-serif;
                     font-size: 30px;
@@ -1409,6 +1431,75 @@ header.header {
         }
         .main-content {
             padding: 40px 0;
+            &.details {
+                display: table;
+                margin-top: -220px;
+                overflow: hidden;
+                padding: 0 0 70px;
+                position: relative;
+                z-index: 2;
+                &.small {
+                    padding-left: 70px;
+                    padding-right: 70px;
+                    color: #424242;
+                    font-size: 13px;
+                }
+                .details-img {
+                    display: table-cell;
+                    padding-right: 10px;
+                    vertical-align: top;
+                    &.big {
+                        padding-right: 35px;
+                    }
+                }
+                .details-content {
+                    display: table-cell;
+                    padding-top: 50px;
+                    vertical-align: top;
+                    h3 {
+                        color: #fff;
+                        font-family: "Poppins",sans-serif;
+                        font-size: 30px;
+                        font-weight: 700;
+                        margin: 0 0 15px;
+                        text-transform: uppercase;
+                    }
+                    .sub-desc {
+                        color: #fff;
+                        font-size: 15px;
+                        margin-bottom: 0;
+                    }
+                    .more-details {
+                        margin-top: 90px;
+                        .media {
+                            margin-top: 30px;
+                            .media-left {
+                                vertical-align: middle;
+                                padding-right: 20px;
+                            }
+                            .media-body {
+                                h4 {
+                                    font-family: "Poppins",sans-serif;
+                                    font-weight: 700;
+                                    margin: 0 0 15px;
+                                    text-transform: uppercase;
+                                }
+                                p {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                        .social-store-links {
+                            font-size: 0;
+                            margin: 30px 0 0 70px;
+                            li {
+                                display: inline-block;
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+                }
+            }
             .cs-menu {
                 margin-bottom: 50px;
                 text-align: center;
@@ -1526,6 +1617,200 @@ header.header {
                 &:hover {
                     background-color: @main-color;
                     color: #fff;
+                }
+            }
+        }
+    }
+    /* ---------------------------------------
+        WHY INAPP PAGE
+   ----------------------------------------- */
+    .wrap-why-inapp {
+        .who-we-are {
+            .wwa-text {
+                padding-top: 60px;
+                padding-bottom: 70px;
+                h3 {
+                    font-size: 35px;
+                }
+                p {
+                    margin-bottom: 15px;
+                }
+                ul {
+                    li {
+                        margin-bottom: 10px;
+                        &:before {
+                            content: "-";
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .our-vision {
+            background-image: url("../images/wwa-bg-1.jpg");
+            color: #fff;
+            font-size: 15px;
+            line-height: 1.7;
+            padding: 110px 20% 120px;
+            text-align: center;
+            h3 {
+                font-family: "Poppins",sans-serif;
+                font-size: 35px;
+                font-weight: 700;
+                margin: 0 0 15px;
+                text-transform: uppercase;
+            }
+        }
+        .our-objectives {
+            background-color: #f7f7f7;
+            position: relative;
+            .oo-text {
+                font-size: 15px;
+                line-height: 1.7;
+                padding: 100px 0 20px 40%;
+                h3 {
+                    font-family: "Poppins", sans-serif;
+                    font-size: 35px;
+                    font-weight: 700;
+                    margin: 0 0 35px;
+                    text-transform: uppercase;
+                }
+                h4 {
+                    font-weight: 700;
+                    margin: 0 0 7px;
+                }
+                .option {
+                    margin-bottom: 40px;
+                }
+            }
+            .oo-img {
+                background: url('../images/wwa-img-2.jpg') no-repeat center / cover;
+                bottom: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 40%;
+            }
+        }
+        .more-our {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            .our-technologies {
+                background-image: url("../images/wwa-bg-2.jpg");
+                color: #fff;
+                padding-bottom: 80px;
+                padding-top: 110px;
+                position: relative;
+                z-index: 1;
+                font-size: 15px;
+                width: 50%;
+                display: table-cell;
+                &:before {
+                    background-color: rgba(0, 0, 0, 0.75);
+                    bottom: 0;
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: -1;
+                }
+                h3 {
+                    font-family: "Poppins", sans-serif;
+                    font-size: 35px;
+                    font-weight: 700;
+                    margin: 0 0 35px;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+                .content {
+                    padding: 0 50px;
+                    ul {
+                        li {
+                            list-style: none;
+                            margin-bottom: 5px;
+                            &:before {
+                                content: "-";
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                    h4 {
+                        color: #fd792e;
+                        font-size: 15px;
+                        font-weight: 700;
+                        margin: 0 0 10px;
+                    }
+                }
+            }
+            .our-strength {
+                background-image: url("../images/wwa-bg-3.jpg");
+                color: #fff;
+                padding-bottom: 50px;
+                padding-top: 110px;
+                position: relative;
+                z-index: 1;
+                width: 50%;
+                display: table-cell;
+                &:before {
+                    background-color: rgba(0, 0, 0, 0.75);
+                    bottom: 0;
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: -1;
+                }
+                h3 {
+                    font-family: "Poppins", sans-serif;
+                    font-size: 35px;
+                    font-weight: 700;
+                    margin: 0 0 35px;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+                .content {
+                    padding: 0 100px;
+                    .strength {
+                        display: inline-block;
+                        height: 30px;
+                        margin-bottom: 20px;
+                        width: 100%;
+                        span {
+                            float: left;
+                            font-size: 18px;
+                            font-weight: 300;
+                            line-height: 1;
+                            margin: 3px 15px 0 0;
+                            text-align: right;
+                            width: 90px;
+                        }
+                        .progress {
+                            background-color: #fff;
+                            border-radius: 12px;
+                            height: 25px;
+                            padding: 2px;
+                            position: relative;
+                            .progress-bar {
+                                background-color: @main-color;
+                                border-radius: 12px;
+                                &[aria-valuenow="100"] {
+                                    b {
+                                        color: #fff;
+                                    }
+                                }
+                                b {
+                                    color: @main-color;
+                                    font-size: 18px;
+                                    position: absolute;
+                                    top: 2px;
+                                    right: 5px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
