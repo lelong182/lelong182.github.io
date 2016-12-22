@@ -7172,16 +7172,16 @@ header.header .main-nav li {
     display: block;
   }
 }
-header.header .main-nav li.current a:before {
-  bottom: -5px;
-  opacity: 1;
-  visibility: visible;
-}
 header.header .main-nav li a {
   color: #fff;
   font-size: 15px;
 }
-header.header .main-nav li a:before {
+header.header .main-nav .minimal-menu .menu > li.current > a:before {
+  bottom: -5px;
+  opacity: 1;
+  visibility: visible;
+}
+header.header .main-nav .minimal-menu .menu > li > a:before {
   background-color: #fd792e;
   bottom: 2px;
   content: "";
@@ -7193,11 +7193,23 @@ header.header .main-nav li a:before {
   visibility: hidden;
   transition: all 0.2s ease;
 }
-header.header .main-nav li a:hover:before,
-header.header .main-nav li a:focus:before {
+header.header .main-nav .minimal-menu .menu > li > a:hover:before,
+header.header .main-nav .minimal-menu .menu > li > a:focus:before {
   bottom: -5px;
   opacity: 1;
   visibility: visible;
+}
+header.header .main-nav .minimal-menu .menu .sub-menu {
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+  text-align: left;
+}
+header.header .main-nav .minimal-menu .menu .sub-menu li a {
+  color: #424242;
+  padding: 15px;
+}
+header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
+  color: #fd792e;
 }
 /* ---------------------------------------
     HERO
