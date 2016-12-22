@@ -115,24 +115,24 @@
         overflow: visible;
     }
 
-    .minimal-menu ul ul li.submenu > a:before,
-    .minimal-menu ul ul li.submenu > a:after {
+    .minimal-menu ul ul li.menu-item-has-children > a:before,
+    .minimal-menu ul ul li.menu-item-has-children > a:after {
         left: auto;
         top: 50%;
         right: 0;
         background: #ccc;
     }
 
-    .minimal-menu ul ul li.submenu > a:before {
+    .minimal-menu ul ul li.menu-item-has-children > a:before {
         margin-top: -1px;
     }
 
-    .minimal-menu ul ul li.submenu > a:after {
+    .minimal-menu ul ul li.menu-item-has-children > a:after {
         margin-top: 2px;
     }
 
-    .minimal-menu ul ul li.submenu > a:hover:before,
-    .minimal-menu ul ul li.submenu > a:hover:after {
+    .minimal-menu ul ul li.menu-item-has-children > a:hover:before,
+    .minimal-menu ul ul li.menu-item-has-children > a:hover:after {
         right: -13px;
     }
 
@@ -193,7 +193,7 @@
 }
 
 @media only screen and (max-width: 857px) {
-    .minimal-menu ul li.submenu > a:after {
+    .minimal-menu ul li.menu-item-has-children > a:after {
         color: #fff;
         content: "\f107";
         font-family: FontAwesome;
@@ -326,23 +326,23 @@
         font-size: 14px;
     }
 
-    .minimal-menu ul li.submenu > a:before,
-    .minimal-menu ul li.submenu > a:after {
+    .minimal-menu ul li.menu-item-has-children > a:before,
+    .minimal-menu ul li.menu-item-has-children > a:after {
         top: 0;
         left: auto;
         right: 12px;
     }
 
-    .minimal-menu.clr-white ul li.submenu a:before,
-    .minimal-menu.clr-white ul li.submenu a:after {
+    .minimal-menu.clr-white ul li.menu-item-has-children a:before,
+    .minimal-menu.clr-white ul li.menu-item-has-children a:after {
         background: #999;
     }
 
-    .minimal-menu ul li.submenu > a:before {
+    .minimal-menu ul li.menu-item-has-children > a:before {
         margin-top: -2px;
     }
 
-    .minimal-menu ul li.submenu > a:after {
+    .minimal-menu ul li.menu-item-has-children > a:after {
         margin-top: 1px;
     }
 

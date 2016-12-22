@@ -7176,7 +7176,24 @@ header.header .main-nav li a {
   color: #fff;
   font-size: 15px;
 }
-header.header .main-nav .minimal-menu .menu > li.current > a:before {
+header.header .main-nav .minimal-menu .menu > li:hover > a:before {
+  bottom: -5px;
+  opacity: 1;
+  visibility: visible;
+}
+header.header .main-nav .minimal-menu .menu > li.menu-item-has-children:hover a:after {
+  top: -5px;
+  opacity: 0;
+}
+header.header .main-nav .minimal-menu .menu > li.menu-item-has-children a:after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  position: absolute;
+  right: -12px;
+  top: 0;
+  transition: all 0.3s ease;
+}
+header.header .main-nav .minimal-menu .menu > li.current-menu-item > a:before {
   bottom: -5px;
   opacity: 1;
   visibility: visible;
@@ -7192,12 +7209,6 @@ header.header .main-nav .minimal-menu .menu > li > a:before {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease;
-}
-header.header .main-nav .minimal-menu .menu > li > a:hover:before,
-header.header .main-nav .minimal-menu .menu > li > a:focus:before {
-  bottom: -5px;
-  opacity: 1;
-  visibility: visible;
 }
 header.header .main-nav .minimal-menu .menu .sub-menu {
   background-color: #fff;
