@@ -240,7 +240,7 @@
     }
 
     .minimal-menu {
-        background-color: #5e111a;
+        background-color: #424242;
         box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.5);
         height: 100%;
         left: -100%;
@@ -251,7 +251,7 @@
         width: 55%;
     }
 
-    .minimal-menu-button.active + .minimal-menu {
+    .minimal-menu-button:checked + .minimal-menu {
         visibility: visible;
         left: 0;
         opacity: 1;
@@ -259,7 +259,7 @@
 
     .minimal-menu h3,
     .minimal-menu ul li a {
-        border-bottom: 1px solid rgba(100%, 100%, 100%, 0.2);
+        border-bottom: 1px solid rgba(255,255,255,0.3);
         border-top: 1px solid transparent;
         color: #fff;
         padding: 10px;
@@ -273,6 +273,14 @@
         padding: 20px 0 20px 40px;
         color: #fff;
         background: rgba(100%, 100%, 100%, 0.10);
+    }
+
+    .minimal-menu ul ul {
+        display: none;
+    }
+
+    .minimal-menu ul li a.opened + ul {
+        display: block;
     }
 
     .minimal-menu ul {
@@ -302,12 +310,6 @@
 
     .minimal-menu ul > li {
         padding-bottom: 0;
-    }
-
-    .minimal-menu > ul > li:hover > a,
-    .minimal-menu > ul > li.current > a {
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent;
     }
 
     .minimal-menu ul ul a {
