@@ -141,6 +141,17 @@
 
 
         /* =================================
+         ===  Case Study                 ====
+         =================================== */
+        $('.wrap-case-study .details-slider').slick({
+            arrows: true,
+            infinite: true,
+            autoplay: true,
+            speed: 1200
+        });
+
+
+        /* =================================
          ===  Animation                 ====
          =================================== */
         var wwa_img = $('.home .who-we-are .wwa-img'),
