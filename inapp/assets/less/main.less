@@ -277,6 +277,9 @@ header.header {
                     @media (max-width:@screen-xs-max) {
                         font-size: 40px;
                     }
+                    @media (max-width:@screen-xs-min) {
+                        font-size: 30px;
+                    }
                 }
                 h4 {
                     color: #fffefe;
@@ -286,6 +289,9 @@ header.header {
                     text-transform: uppercase;
                     @media (max-width:@screen-xs-max) {
                         font-size: 25px;
+                    }
+                    @media (max-width:@screen-xs-min) {
+                        font-size: 20px;
                     }
                 }
                 h5 {
@@ -297,6 +303,9 @@ header.header {
                     @media (max-width:@screen-xs-max) {
                         font-size: 18px;
                     }
+                    @media (max-width:@screen-xs-min) {
+                        font-size: 16px;
+                    }
                 }
                 h6 {
                     color: #fffefe;
@@ -306,6 +315,9 @@ header.header {
                     line-height: 1.4;
                     @media (max-width:@screen-xs-max) {
                         font-size: 15px;
+                    }
+                    @media (max-width:@screen-xs-min) {
+                        font-size: 14px;
                     }
                 }
                 p {
@@ -748,6 +760,15 @@ header.header {
                 }
                 @media (max-width:@screen-xs-max) {
                     font-size: 16px;
+                }
+            }
+        }
+    }
+    .list-cs {
+        .row {
+            .col-xs-6 {
+                @media (max-width:@screen-xs-min) {
+                    width: 100%;
                 }
             }
         }
@@ -2249,6 +2270,12 @@ footer.footer {
         li {
             display: inline-block;
             margin-left: 25px;
+            @media (max-width:@screen-xs-max) {
+                margin: 0 10px;
+            }
+            @media (max-width:@screen-xs-min) {
+                margin: 0 5px;
+            }
             a {
                 color: #424242;
                 font-size: 14px;

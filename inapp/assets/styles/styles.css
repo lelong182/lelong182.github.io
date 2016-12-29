@@ -7355,6 +7355,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
     font-size: 40px;
   }
 }
+@media (max-width: 480px) {
+  .hero .wrap-sliders .ms-slide .ms-caption h3 {
+    font-size: 30px;
+  }
+}
 .hero .wrap-sliders .ms-slide .ms-caption h4 {
   color: #fffefe;
   font-family: "Arvo", sans-serif;
@@ -7365,6 +7370,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
 @media (max-width: 857px) {
   .hero .wrap-sliders .ms-slide .ms-caption h4 {
     font-size: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .hero .wrap-sliders .ms-slide .ms-caption h4 {
+    font-size: 20px;
   }
 }
 .hero .wrap-sliders .ms-slide .ms-caption h5 {
@@ -7379,6 +7389,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
     font-size: 18px;
   }
 }
+@media (max-width: 480px) {
+  .hero .wrap-sliders .ms-slide .ms-caption h5 {
+    font-size: 16px;
+  }
+}
 .hero .wrap-sliders .ms-slide .ms-caption h6 {
   color: #fffefe;
   font-family: "Poppins", sans-serif;
@@ -7389,6 +7404,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
 @media (max-width: 857px) {
   .hero .wrap-sliders .ms-slide .ms-caption h6 {
     font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .hero .wrap-sliders .ms-slide .ms-caption h6 {
+    font-size: 14px;
   }
 }
 .hero .wrap-sliders .ms-slide .ms-caption p {
@@ -7926,6 +7946,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
 @media (max-width: 857px) {
   .case-study .stats .stats-item span {
     font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .case-study .list-cs .row .col-xs-6 {
+    width: 100%;
   }
 }
 .case-study .cs-item {
@@ -9474,6 +9499,16 @@ footer.footer .footer-links {
 footer.footer .footer-links li {
   display: inline-block;
   margin-left: 25px;
+}
+@media (max-width: 857px) {
+  footer.footer .footer-links li {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 480px) {
+  footer.footer .footer-links li {
+    margin: 0 5px;
+  }
 }
 footer.footer .footer-links li a {
   color: #424242;
