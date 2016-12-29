@@ -7295,6 +7295,15 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
     bottom: 1% !important;
   }
 }
+.hero .wrap-sliders .ms-slide .img-2 {
+  top: 20% !important;
+}
+@media (max-width: 857px) {
+  .hero .wrap-sliders .ms-slide .img-2 {
+    top: initial !important;
+    bottom: 1% !important;
+  }
+}
 .hero .wrap-sliders .ms-slide .text-1 {
   top: 35% !important;
 }
@@ -7304,11 +7313,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   }
 }
 .hero .wrap-sliders .ms-slide .text-2 {
-  top: 39.5% !important;
+  top: 40% !important;
 }
 @media (max-width: 1399px) {
   .hero .wrap-sliders .ms-slide .text-2 {
-    top: 40.5% !important;
+    top: 41% !important;
   }
 }
 @media (max-width: 857px) {
@@ -7317,29 +7326,40 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   }
 }
 .hero .wrap-sliders .ms-slide .text-3 {
-  top: 46.5% !important;
+  top: 49% !important;
 }
 @media (max-width: 1399px) {
   .hero .wrap-sliders .ms-slide .text-3 {
-    top: 49.5% !important;
+    top: 51% !important;
   }
 }
 @media (max-width: 857px) {
   .hero .wrap-sliders .ms-slide .text-3 {
-    top: 42.5% !important;
+    top: 43% !important;
   }
 }
 .hero .wrap-sliders .ms-slide .text-4 {
-  top: 53% !important;
+  top: 56% !important;
 }
 @media (max-width: 1399px) {
   .hero .wrap-sliders .ms-slide .text-4 {
-    top: 57% !important;
+    top: 58% !important;
   }
 }
 @media (max-width: 857px) {
   .hero .wrap-sliders .ms-slide .text-4 {
-    top: 50% !important;
+    top: 52% !important;
+  }
+}
+@media (max-width: 1199px) {
+  .hero .wrap-sliders .ms-slide .text-6 .w-700 {
+    width: 800px !important;
+  }
+}
+@media (max-width: 857px) {
+  .hero .wrap-sliders .ms-slide .text-6 .w-700 {
+    width: 90% !important;
+    margin: auto;
   }
 }
 .hero .wrap-sliders .ms-slide .ms-caption h3 {
@@ -7418,6 +7438,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   width: 700px;
 }
 @media (max-width: 1199px) {
+  .hero .wrap-sliders .ms-slide .ms-caption .w-700 {
+    width: 600px;
+  }
+}
+@media (max-width: 857px) {
   .hero .wrap-sliders .ms-slide .ms-caption .w-700 {
     width: 500px;
   }

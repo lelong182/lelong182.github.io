@@ -233,6 +233,13 @@ header.header {
                     bottom: 1% !important;
                 }
             }
+            .img-2 {
+                top: 20% !important;
+                @media (max-width:@screen-xs-max) {
+                    top: initial !important;
+                    bottom: 1% !important;
+                }
+            }
             .text-1 {
                 top: 35% !important;
                 @media (max-width:@screen-xs-max) {
@@ -240,30 +247,41 @@ header.header {
                 }
             }
             .text-2 {
-                top: 39.5% !important;
+                top: 40% !important;
                 @media (max-width:@screen-md-max) {
-                    top: 40.5% !important;
+                    top: 41% !important;
                 }
                 @media (max-width:@screen-xs-max) {
                     top: 35% !important;
                 }
             }
             .text-3 {
-                top: 46.5% !important;
+                top: 49% !important;
                 @media (max-width:@screen-md-max) {
-                    top: 49.5% !important;
+                    top: 51% !important;
                 }
                 @media (max-width:@screen-xs-max) {
-                    top: 42.5% !important;
+                    top: 43% !important;
                 }
             }
             .text-4 {
-                top: 53% !important;
+                top: 56% !important;
                 @media (max-width:@screen-md-max) {
-                    top: 57% !important;
+                    top: 58% !important;
                 }
                 @media (max-width:@screen-xs-max) {
-                    top: 50% !important;
+                    top: 52% !important;
+                }
+            }
+            .text-6 {
+                .w-700 {
+                    @media (max-width:@screen-sm-max) {
+                        width: 800px !important;
+                    }
+                    @media (max-width:@screen-xs-max) {
+                        width: 90% !important;
+                        margin: auto;
+                    }
                 }
             }
             .ms-caption {
@@ -326,6 +344,9 @@ header.header {
                 .w-700 {
                     width: 700px;
                     @media (max-width:@screen-sm-max) {
+                        width: 600px;
+                    }
+                    @media (max-width:@screen-xs-max) {
                         width: 500px;
                     }
                 }
