@@ -7478,6 +7478,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   height: 36px;
   right: -50px;
 }
+@media (max-width: 1500px) {
+  .hero .wrap-sliders .ms-nav-next {
+    right: 5px;
+  }
+}
 @media (max-width: 1399px) {
   .hero .wrap-sliders .ms-nav-next {
     right: 20px;
@@ -7496,6 +7501,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   width: 19px;
   height: 36px;
   left: -50px;
+}
+@media (max-width: 1500px) {
+  .hero .wrap-sliders .ms-nav-prev {
+    left: 5px;
+  }
 }
 @media (max-width: 1399px) {
   .hero .wrap-sliders .ms-nav-prev {
@@ -9374,6 +9384,15 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
 }
 .main .wrap-case-study .main-content.details .wrap-details-slider .details-slider-frame.frame-4 .details-slider .img-container {
   height: 534px;
+}
+.main .wrap-case-study .main-content.details .wrap-details-slider .details-slider-frame.frame-5 {
+  background: url('../images/tablet_frame.png') no-repeat;
+  width: 652px;
+  height: 459px;
+  padding: 27px 27px 0;
+}
+.main .wrap-case-study .main-content.details .wrap-details-slider .details-slider-frame.frame-5 .details-slider .img-container {
+  height: 406px;
 }
 .main .wrap-case-study .main-content.details .details-content {
   display: table-cell;

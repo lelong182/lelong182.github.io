@@ -176,6 +176,10 @@
             cu_info = $('.home .contact-us .contact-info'),
             cu_form = $('.home .contact-us .contact-form'),
             footer = $('.home .footer');
+        var counter1 = {var: 0},
+            counter2 = {var: 0},
+            counter3 = {var: 0},
+            counter4 = {var: 0};
         var ctrl = new ScrollMagic.Controller({
             globalSceneOptions: {
                 triggerHook: "onCenter"
@@ -308,6 +312,34 @@
                 autoAlpha: 1,
                 ease: Power4.easeOut
             }, '-=0.3')
+            .to(counter1, 2, {
+                var: $('.case-study .stats-item.item-1 strong').data('value'),
+                onUpdate: function () {
+                    $('.case-study .stats-item.item-1 strong b').html(Math.ceil(counter1.var));
+                },
+                ease: Circ.easeOut
+            }, '-=0.5')
+            .to(counter2, 2, {
+                var: $('.case-study .stats-item.item-2 strong').data('value'),
+                onUpdate: function () {
+                    $('.case-study .stats-item.item-2 strong b').html(Math.ceil(counter2.var));
+                },
+                ease: Circ.easeOut
+            }, '-=2')
+            .to(counter3, 2, {
+                var: $('.case-study .stats-item.item-3 strong').data('value'),
+                onUpdate: function () {
+                    $('.case-study .stats-item.item-3 strong b').html(Math.ceil(counter3.var));
+                },
+                ease: Circ.easeOut
+            }, '-=2')
+            .to(counter4, 2, {
+                var: $('.case-study .stats-item.item-4 strong').data('value'),
+                onUpdate: function () {
+                    $('.case-study .stats-item.item-4 strong b').html(Math.ceil(counter4.var));
+                },
+                ease: Circ.easeOut
+            }, '-=2')
             .fromTo(cs_list, 0.8, {
                 y: '+=200',
                 autoAlpha: 0
@@ -315,7 +347,7 @@
                 y: 0,
                 autoAlpha: 1,
                 ease: Sine.easeOut
-            }, '-=0.4');
+            }, '-=2');
         mttTL
             .fromTo(mtt_text_h3, 0.6, {
                 rotationX: -90,

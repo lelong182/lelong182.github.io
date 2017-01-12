@@ -378,6 +378,9 @@ header.header {
             width: 19px;
             height: 36px;
             right: -50px;
+            @media (max-width: 1500px) {
+                right: 5px;
+            }
             @media (max-width: @screen-md-max) {
                 right: 20px;
             }
@@ -393,6 +396,9 @@ header.header {
             width: 19px;
             height: 36px;
             left: -50px;
+            @media (max-width: 1500px) {
+                left: 5px;
+            }
             @media (max-width: @screen-md-max) {
                 left: 20px;
             }
@@ -2074,6 +2080,17 @@ header.header {
                             .details-slider {
                                 .img-container {
                                     height: 534px;
+                                }
+                            }
+                        }
+                        &.frame-5 {
+                            background: url('../images/tablet_frame.png') no-repeat;
+                            width: 652px;
+                            height: 459px;
+                            padding: 27px 27px 0;
+                            .details-slider {
+                                .img-container {
+                                    height: 406px;
                                 }
                             }
                         }
