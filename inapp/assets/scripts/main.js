@@ -49,7 +49,7 @@
             loop: true,
             mouse: false,
             preload: 0,
-            autoplay: false,
+            autoplay: true,
             controls: {
                 arrows: {autohide: false}
             }
