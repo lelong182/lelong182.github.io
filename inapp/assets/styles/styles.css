@@ -7298,12 +7298,22 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
     left: 50px;
   }
 }
+@media (max-width: 1199px) {
+  .hero .wrap-sliders .ms-slide .left-layer {
+    left: 80px;
+  }
+}
 .hero .wrap-sliders .ms-slide .right-layer {
   right: 0;
 }
 @media (max-width: 1399px) {
   .hero .wrap-sliders .ms-slide .right-layer {
     right: 50px;
+  }
+}
+@media (max-width: 1199px) {
+  .hero .wrap-sliders .ms-slide .right-layer {
+    right: 80px;
   }
 }
 .hero .wrap-sliders .ms-slide .img-1 {
