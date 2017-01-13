@@ -58,7 +58,7 @@
             loop: true,
             mouse: false,
             preload: 0,
-            autoplay: true,
+            autoplay: false,
             controls: {
                 arrows: {autohide: false}
             }

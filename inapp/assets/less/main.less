@@ -221,6 +221,11 @@ header.header {
     .wrap-sliders {
         overflow: hidden;
         .ms-slide {
+            img.ms-layer {
+                @media (max-width: @screen-xs-max) {
+                    display: none;
+                }
+            }
             .left-layer {
                 left: 0;
                 @media (max-width: @screen-md-max) {
@@ -730,6 +735,7 @@ header.header {
     background-color: #f7f7f7;
     padding-top: 110px;
     padding-bottom: 50px;
+    overflow: hidden;
     @media (max-width: @screen-md-max) {
         padding-top: 70px;
     }
@@ -872,6 +878,7 @@ header.header {
     padding-bottom: 60px;
     padding-top: 110px;
     text-align: center;
+    overflow: hidden;
     @media (max-width: @screen-md-max) {
         padding-top: 70px;
     }
@@ -957,6 +964,7 @@ header.header {
     position: relative;
     text-align: center;
     z-index: 1;
+    overflow: hidden;
     @media (max-width: @screen-md-max) {
         padding-bottom: 40px;
         padding-top: 60px;

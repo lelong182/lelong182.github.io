@@ -7285,6 +7285,11 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
 .hero .wrap-sliders {
   overflow: hidden;
 }
+@media (max-width: 857px) {
+  .hero .wrap-sliders .ms-slide img.ms-layer {
+    display: none;
+  }
+}
 .hero .wrap-sliders .ms-slide .left-layer {
   left: 0;
 }
@@ -7911,6 +7916,7 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   background-color: #f7f7f7;
   padding-top: 110px;
   padding-bottom: 50px;
+  overflow: hidden;
 }
 @media (max-width: 1399px) {
   .case-study {
@@ -8072,6 +8078,7 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   padding-bottom: 60px;
   padding-top: 110px;
   text-align: center;
+  overflow: hidden;
 }
 @media (max-width: 1399px) {
   .meet-the-team {
@@ -8176,6 +8183,7 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   position: relative;
   text-align: center;
   z-index: 1;
+  overflow: hidden;
 }
 @media (max-width: 1399px) {
   .testimonial {
