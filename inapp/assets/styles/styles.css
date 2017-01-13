@@ -7119,31 +7119,39 @@ header.header {
   width: 100%;
   z-index: 100;
 }
-header.header.static {
+header.header.white-style,
+header.header.is-sticky {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
   height: 75px;
-  position: relative;
+  background-color: #fff;
 }
-header.header.static .logo {
+header.header.white-style .logo,
+header.header.is-sticky .logo {
   margin-top: 18px;
 }
-header.header.static .logo a {
+header.header.white-style .logo a,
+header.header.is-sticky .logo a {
   background: url('../images/logo-2.png') no-repeat;
 }
-header.header.static .main-nav {
+header.header.white-style .main-nav,
+header.header.is-sticky .main-nav {
   top: 32px;
 }
-header.header.static .main-nav .minimal-menu-button {
+header.header.white-style .main-nav .minimal-menu-button,
+header.header.is-sticky .main-nav .minimal-menu-button {
   top: -8px;
 }
-header.header.static .main-nav .minimal-menu-button .icon-bar {
+header.header.white-style .main-nav .minimal-menu-button .icon-bar,
+header.header.is-sticky .main-nav .minimal-menu-button .icon-bar {
   background-color: #424242;
 }
-header.header.static .main-nav li a {
+header.header.white-style .main-nav li a,
+header.header.is-sticky .main-nav li a {
   color: #424242;
 }
 @media (max-width: 857px) {
-  header.header.static .main-nav li a {
+  header.header.white-style .main-nav li a,
+  header.header.is-sticky .main-nav li a {
     color: #fff;
   }
 }
@@ -8461,6 +8469,9 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   /* ---------------------------------------
         WHY INAPP PAGE
    ----------------------------------------- */
+}
+.main.has-static-menu {
+  margin-top: 75px;
 }
 .main .wrap-blog {
   background-color: #f7f7f7;

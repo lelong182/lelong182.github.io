@@ -2,6 +2,15 @@
 
     "use strict";
 
+    $.fn.adtop_animation = function (effect, callback) {
+        this.addClass(effect + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $(this).removeClass(effect + ' animated');
+            if (typeof callback === 'function') {
+                callback.call(this);
+            }
+        });
+    };
+
     window.loading_screen = window.pleaseWait({
         logo: inapps_params.logo_url,
         backgroundColor: '#4c4c4c',
@@ -54,6 +63,12 @@
                 arrows: {autohide: false}
             }
         });
+
+
+        /* =================================
+         ===  Sliders                 ====
+         =================================== */
+        mySticky('header.header', 75);
 
 
         /* =================================
@@ -442,3 +457,72 @@
     });
 
 })(window.jQuery);
+
+var ctrl = new ScrollMagic.Controller();
+var scene = new ScrollMagic.Scene();
+function mySticky(selector, options) {
+    if ($(selector).length) {
+        var offset = 0;
+        var side = '';
+        var side_val = 0;
+        if (typeof options == 'number') {
+            offset = options;
+        } else {
+            offset = options[Object.keys(options)[0]];
+            side = Object.keys(options)[1];
+            side_val = options[Object.keys(options)[1]];
+        }
+        var this_position_type = $(selector).css('position');
+        $(selector).removeAttr('style');
+        scene
+            .offset(offset)
+            .on("enter", function () {
+                $(selector).addClass('is-sticky');
+                $(selector).adtop_animation('slideInDown');
+                if (side == 'left') {
+                    $(selector).css({
+                        position: 'fixed',
+                        left: side_val
+                    });
+                } else if (side == 'right') {
+                    $(selector).css({
+                        position: 'fixed',
+                        right: side_val
+                    });
+                } else {
+                    $(selector).css({
+                        position: 'fixed'
+                    });
+                }
+            })
+            .on("leave", function () {
+                $(selector).removeClass('is-sticky');
+                $(selector).adtop_animation('slideInDown');
+                if (side == 'left') {
+                    $(selector).css({
+                        position: this_position_type,
+                        left: 'initial'
+                    });
+                } else if (side == 'right') {
+                    $(selector).css({
+                        position: this_position_type,
+                        right: 'initial'
+                    });
+                } else {
+                    $(selector).css({
+                        position: this_position_type
+                    });
+                }
+            })
+            .addTo(ctrl);
+        if (offset < 0) {
+            ctrl.enabled(false);
+            scene.enabled(false);
+        } else {
+            ctrl.enabled(true);
+            scene.enabled(true);
+        }
+        scene.update(true);
+        ctrl.update(true);
+    }
+}
