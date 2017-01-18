@@ -51,7 +51,7 @@ header.header {
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 999;
     &.white-style, &.is-sticky {
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
         height: 75px;
@@ -1245,11 +1245,23 @@ header.header {
                 margin: auto;
                 overflow: hidden;
                 width: 670px;
+                @media (max-width: @screen-sm-max) {
+                    width: 90%;
+                }
+                @media (max-width: @screen-xs-max) {
+                    width: ~"calc(100% - 30px)";
+                }
                 .caption {
                     font-family: "Arvo", sans-serif;
                     font-size: 30px;
                     position: relative;
                     text-transform: uppercase;
+                    @media (max-width: @screen-sm-max) {
+                        font-size: 25px;
+                    }
+                    @media (max-width: @screen-xs-max) {
+                        font-size: 23px;
+                    }
                     span {
                         position: relative;
                         &:before {
@@ -1277,6 +1289,9 @@ header.header {
                     font-size: 40px;
                     font-weight: 700;
                     text-transform: uppercase;
+                    @media (max-width: @screen-xs-max) {
+                        font-size: 35px;
+                    }
                 }
             }
         }
@@ -1285,6 +1300,9 @@ header.header {
             .list-blogs {
                 margin: auto;
                 width: 880px;
+                @media (max-width: @screen-sm-max) {
+                    width: 100%;
+                }
                 .blog-item {
                     border-bottom: 1px solid #ddd;
                     margin-bottom: 30px;
@@ -1396,6 +1414,9 @@ header.header {
                 margin: auto;
                 overflow: hidden;
                 width: 696px;
+                @media (max-width: @screen-sm-max) {
+                    width: 90%;
+                }
                 @media (max-width: @screen-xs-max) {
                     width: ~"calc(100% - 30px)";
                 }
@@ -1443,7 +1464,7 @@ header.header {
                         font-size: 50px;
                     }
                     @media (max-width: @screen-xs-max) {
-                        font-size: 40px;
+                        font-size: 35px;
                     }
                 }
                 h5 {
@@ -1477,6 +1498,10 @@ header.header {
                     }
                     @media (max-width: @screen-xs-max) {
                         margin: 0 10px 10px;
+                    }
+                    @media (max-width: @screen-xs-min) {
+                        margin: 10px 0;
+                        display: block;
                     }
                     &.active, &:hover {
                         a {
@@ -1616,6 +1641,9 @@ header.header {
                 margin: auto;
                 overflow: hidden;
                 width: 670px;
+                @media (max-width: @screen-sm-max) {
+                    width: 90%;
+                }
                 @media (max-width: @screen-xs-max) {
                     width: ~"calc(100% - 30px)";
                 }
@@ -1663,6 +1691,9 @@ header.header {
                     font-size: 40px;
                     font-weight: 700;
                     text-transform: uppercase;
+                    @media (max-width: @screen-xs-max) {
+                        font-size: 35px;
+                    }
                 }
             }
         }
@@ -1797,6 +1828,9 @@ header.header {
                 margin: auto;
                 overflow: hidden;
                 width: 771px;
+                @media (max-width: @screen-sm-max) {
+                    width: 90%;
+                }
                 @media (max-width: @screen-xs-max) {
                     width: ~"calc(100% - 30px)";
                 }
@@ -1838,6 +1872,9 @@ header.header {
                     font-size: 40px;
                     font-weight: 700;
                     text-transform: uppercase;
+                    @media (max-width: @screen-xs-max) {
+                        font-size: 35px;
+                    }
                 }
             }
         }
@@ -1948,6 +1985,9 @@ header.header {
                 margin: auto;
                 overflow: hidden;
                 width: 678px;
+                @media (max-width: @screen-sm-max) {
+                    width: 90%;
+                }
                 @media (max-width: @screen-xs-max) {
                     width: ~"calc(100% - 30px)";
                 }
@@ -1999,7 +2039,7 @@ header.header {
                         font-size: 50px;
                     }
                     @media (max-width: @screen-xs-max) {
-                        font-size: 40px;
+                        font-size: 35px;
                     }
                 }
                 h6 {
@@ -2150,7 +2190,7 @@ header.header {
                         display: block;
                         padding-top: 30px;
                     }
-                    h3 {
+                    h1 {
                         color: #fff;
                         font-family: "Poppins", sans-serif;
                         font-size: 30px;
@@ -2220,6 +2260,10 @@ header.header {
                     }
                     @media (max-width: @screen-xs-max) {
                         margin: 0 10px 10px;
+                    }
+                    @media (max-width: @screen-xs-min) {
+                        margin: 10px 0;
+                        display: block;
                     }
                     &.active, &:hover {
                         a {
