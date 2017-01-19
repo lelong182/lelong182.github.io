@@ -9644,9 +9644,9 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
 }
 @media (max-width: 480px) {
   .main .wrap-case-study .main-content.details .wrap-details-slider .details-slider-frame.frame-5 {
-    width: 378px;
-    height: 266px;
-    padding: 15px 16px 0;
+    width: 313px;
+    height: 220px;
+    padding: 12px 12px 0;
   }
 }
 .main .wrap-case-study .main-content.details .wrap-details-slider .details-slider-frame.frame-5 .details-slider .img-container {
@@ -9664,7 +9664,7 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
 }
 @media (max-width: 480px) {
   .main .wrap-case-study .main-content.details .wrap-details-slider .details-slider-frame.frame-5 .details-slider .img-container {
-    height: 236px;
+    height: 195px;
   }
 }
 .main .wrap-case-study .main-content.details .details-content {
