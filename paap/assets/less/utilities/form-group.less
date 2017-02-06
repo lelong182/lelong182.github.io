@@ -1,0 +1,41 @@
+.form-group {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.left-form-group {
+    color: #555;
+    float: left;
+    font-size: 15px;
+    height: 40px;
+    margin-bottom: 0;
+    padding-top: 9px;
+    width: 13%;
+
+    &.small-group {
+        height: 25px;
+        padding-top: 2px;
+    }
+}
+.right-form-group {
+    color: #555;
+    float: left;
+    margin-left: 30px;
+    width: ~"calc(87% - 30px)";
+    position: relative;
+
+    h5 {
+        font-size: 15px;
+        font-weight: 700;
+        margin: 5px 0 10px;
+
+        &.no-bold {
+            font-weight: normal;
+        }
+    }
+    label {
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+}
