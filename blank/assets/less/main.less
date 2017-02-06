@@ -1,0 +1,36 @@
+/* ---------------------------------------
+    SPINNER
+----------------------------------------- */
+@import "utilities/spinner.less";
+/* ---------------------------------------
+    CUSTOM INPUT
+----------------------------------------- */
+@import "utilities/inputs.less";
+/* ---------------------------------------
+    CUSTOM CHECKBOX & RADIO
+----------------------------------------- */
+@import "utilities/checkbox-radio.less";
+
+/* ---------------------------------------
+    PARALLAX
+----------------------------------------- */
+.parallax {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        background-attachment: scroll;
+    }
+}
+
+/* ---------------------------------------
+    IFRAME GOOGLE CODE
+----------------------------------------- */
+iframe[name='google_conversion_frame'] {
+    height: 0 !important;
+    width: 0 !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    margin-top: -13px;
+    float: left;
+}
