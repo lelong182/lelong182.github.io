@@ -12163,6 +12163,11 @@ label.css-label:before {
 .main .clients {
   margin: 20px 0 40px;
 }
+.main .list-paaps .paap-header h3 {
+  color: #0099cc;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
 .main .list-paaps .paap-item {
   display: flex;
   flex-flow: row wrap;
