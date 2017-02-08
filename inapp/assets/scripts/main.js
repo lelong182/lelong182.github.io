@@ -210,7 +210,8 @@
             counter4 = {var: 0};
         var ctrl = new ScrollMagic.Controller({
             globalSceneOptions: {
-                triggerHook: "onCenter"
+                triggerHook: "onCenter",
+                reverse:false
             }
         });
         var wwaTL = new TimelineMax(),

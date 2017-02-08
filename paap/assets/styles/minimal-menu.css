@@ -33,7 +33,7 @@
 
 .minimal-menu ul li a {
     display: block;
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .minimal-menu> ul> li> a {

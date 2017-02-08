@@ -111,7 +111,7 @@
         z-index: -1;
     }
     .hero-inner {
-        padding: 0 50px;
+        padding: 0 50px 0 35px;
         .form-group {
             margin-bottom: 50px;
         }
@@ -147,10 +147,36 @@
     }
     .list-paaps {
         .paap-header {
+            position: relative;
             h3 {
                 color: @main-color;
                 font-size: 18px;
                 margin: 0 0 10px;
+            }
+            .wrap-sort {
+                position: absolute;
+                top: 0;
+                right: -20px;
+                h4 {
+                    float: left;
+                    font-size: 14px;
+                    margin: 0 10px 0;
+                    line-height: 20px;
+                }
+                ul {
+                    margin-bottom: 0;
+                    float: left;
+                    font-size: 0;
+                    li {
+                        display: inline-block;
+                        margin: 0 20px;
+                        a {
+                            .underline-from-center(1px, @main-color);
+                            font-size: 14px;
+                            color: @main-color;
+                        }
+                    }
+                }
             }
         }
         .paap-item {

@@ -20,6 +20,7 @@ gulp.task('less', function () {
 gulp.task('css', ['less'], function () {
     gulp.src([
         'assets/styles/please-wait.css',
+        'assets/styles/minimal-menu.css',
         'assets/styles/font-awesome.min.css',
         'assets/styles/animate.min.css',
         'assets/styles/slick.css',

@@ -2723,17 +2723,13 @@ header.header {
                             .progress-bar {
                                 background-color: @main-color;
                                 border-radius: 12px;
-                                &[aria-valuenow="100"] {
-                                    b {
-                                        color: #fff;
-                                    }
-                                }
                                 b {
-                                    color: @main-color;
+                                    color: #fff;
                                     font-size: 18px;
                                     position: absolute;
                                     top: 2px;
-                                    right: 5px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
                                 }
                             }
                         }

@@ -11854,6 +11854,22 @@ MAIN STYLES
 .custom-textarea.uppercase {
   text-transform: uppercase;
 }
+.input-has-icon {
+  position: relative;
+}
+.input-has-icon .custom-input {
+  padding-right: 50px;
+}
+.input-has-icon .icon {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+}
+.input-has-icon .icon-2 {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
 /* ---------------------------------------
     CUSTOM CHECKBOX & RADIO
 ----------------------------------------- */
@@ -12096,7 +12112,7 @@ label.css-label:before {
   z-index: -1;
 }
 .hero .hero-inner {
-  padding: 0 50px;
+  padding: 0 50px 0 35px;
 }
 .hero .hero-inner .form-group {
   margin-bottom: 50px;
@@ -12163,10 +12179,69 @@ label.css-label:before {
 .main .clients {
   margin: 20px 0 40px;
 }
+.main .list-paaps .paap-header {
+  position: relative;
+}
 .main .list-paaps .paap-header h3 {
   color: #0099cc;
   font-size: 18px;
   margin: 0 0 10px;
+}
+.main .list-paaps .paap-header .wrap-sort {
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+.main .list-paaps .paap-header .wrap-sort h4 {
+  float: left;
+  font-size: 14px;
+  margin: 0 10px 0;
+  line-height: 20px;
+}
+.main .list-paaps .paap-header .wrap-sort ul {
+  margin-bottom: 0;
+  float: left;
+  font-size: 0;
+}
+.main .list-paaps .paap-header .wrap-sort ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.main .list-paaps .paap-header .wrap-sort ul li a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  color: #0099cc;
+}
+.main .list-paaps .paap-header .wrap-sort ul li a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #0099cc;
+  height: 1px;
+  -webkit-transition-property: "left, right";
+  transition-property: "left, right";
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.main .list-paaps .paap-header .wrap-sort ul li a:hover:before,
+.main .list-paaps .paap-header .wrap-sort ul li a:focus:before,
+.main .list-paaps .paap-header .wrap-sort ul li a:active:before {
+  left: 0;
+  right: 0;
 }
 .main .list-paaps .paap-item {
   display: flex;

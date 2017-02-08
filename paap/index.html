@@ -38,26 +38,29 @@
         <h1 class="logo">
             <a href="index.html" title="PAAP">PAAP</a>
         </h1>
-        <div class="top-menu">
-            <ul>
-                <li>
-                    <a>Trang chủ</a>
-                </li>
-                <li>
-                    <a>Giới thiệu</a>
-                </li>
-                <li>
-                    <a>Đối tác</a>
-                </li>
-                <li>
-                    <a>Đăng nhập/Đăng ký</a>
-                </li>
-                <li class="lang-switch">
-                    <a><img src="dist/images/uk-flag.png" alt="img" /></a>
-                    <a><img src="dist/images/vi-flag.png" alt="img" /></a>
-                </li>
-            </ul>
-        </div>
+        <nav class="top-menu">
+            <div class="minimal-menu">
+                <ul class="menu">
+                    <li class="current">
+                        <a href="index.html">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a>Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a>Đối tác</a>
+                    </li>
+                    <li>
+                        <a>Đăng nhập/Đăng ký</a>
+                    </li>
+                    <li class="lang-switch">
+                        <a><img src="dist/images/uk-flag.png" alt="img" /></a>
+                        <a><img src="dist/images/vi-flag.png" alt="img" /></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.minimal-menu -->
+        </nav>
         <!-- /.top-menu -->
     </div>
 </div>
@@ -74,10 +77,16 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-5 pdr-30 pdl-30">
-                        <input class="custom-input" type="text" placeholder="ĐIỂM KHỞI HÀNH" />
+                        <div class="input-has-icon">
+                            <input class="custom-input" type="text" placeholder="ĐIỂM KHỞI HÀNH" />
+                            <img class="icon" src="dist/images/marker-icon.png" alt="img" />
+                        </div>
                     </div>
                     <div class="col-md-5 pdr-30 pdl-30">
-                        <input class="custom-input" type="text" placeholder="ĐIỂM ĐẾN" />
+                        <div class="input-has-icon">
+                            <input class="custom-input" type="text" placeholder="ĐIỂM ĐẾN" />
+                            <img class="icon" src="dist/images/marker-icon.png" alt="img" />
+                        </div>
                     </div>
                     <div class="col-md-2">
                         <button class="search-btn">TÌM PAAP</button>
@@ -87,7 +96,10 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-5 pdr-30 pdl-30">
-                        <input class="custom-input" type="text" placeholder="NGÀY ĐI" />
+                        <div class="input-has-icon">
+                            <input class="custom-input" type="text" placeholder="NGÀY ĐI" />
+                            <img class="icon" src="dist/images/calendar-icon.png" alt="img" />
+                        </div>
                     </div>
                     <div class="col-md-5 pdr-30 pdl-30">
                         <select class="custom-select no-search" style="width: 100%;">
@@ -124,6 +136,15 @@
         <div class="list-paaps">
             <div class="paap-header">
                 <h3>PAAP TRONG NGÀY</h3>
+                <div class="wrap-sort">
+                    <h4>Sắp xếp theo:</h4>
+                    <ul>
+                        <li><a>Điểm khởi hành</a></li>
+                        <li><a>Điểm đến</a></li>
+                        <li><a>Loại xe</a></li>
+                        <li><a>Thời gian khởi hành</a></li>
+                    </ul>
+                </div>
             </div>
             <!-- /.paap-header -->
             <div class="paap-item">

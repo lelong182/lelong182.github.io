@@ -10141,15 +10141,13 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   background-color: #fd792e;
   border-radius: 12px;
 }
-.main .wrap-why-inapp .more-our .our-strength .content .strength .progress .progress-bar[aria-valuenow="100"] b {
-  color: #fff;
-}
 .main .wrap-why-inapp .more-our .our-strength .content .strength .progress .progress-bar b {
-  color: #fd792e;
+  color: #fff;
   font-size: 18px;
   position: absolute;
   top: 2px;
-  right: 5px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /* ---------------------------------------
     FOOTER
