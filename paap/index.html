@@ -62,6 +62,10 @@
             <!-- /.minimal-menu -->
         </nav>
         <!-- /.top-menu -->
+        <div class="lang-switch-mobile visible-xs">
+            <a><img src="dist/images/uk-flag.png" alt="img" /></a>
+            <a><img src="dist/images/vi-flag.png" alt="img" /></a>
+        </div>
     </div>
 </div>
 <!-- /.topbar -->
@@ -76,32 +80,32 @@
         <div class="hero-inner">
             <div class="form-group">
                 <div class="row">
-                    <div class="col-md-5 pdr-30 pdl-30">
+                    <div class="col-sm-5 col-xs-6 pdr-30 pdl-30">
                         <div class="input-has-icon">
                             <input class="custom-input" type="text" placeholder="ĐIỂM KHỞI HÀNH" />
                             <img class="icon" src="dist/images/marker-icon.png" alt="img" />
                         </div>
                     </div>
-                    <div class="col-md-5 pdr-30 pdl-30">
+                    <div class="col-sm-5 col-xs-6 pdr-30 pdl-30">
                         <div class="input-has-icon">
                             <input class="custom-input" type="text" placeholder="ĐIỂM ĐẾN" />
                             <img class="icon" src="dist/images/marker-icon.png" alt="img" />
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-sm-2 hidden-xs">
                         <button class="search-btn">TÌM PAAP</button>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="col-md-5 pdr-30 pdl-30">
+                    <div class="col-sm-5 col-xs-6 pdr-30 pdl-30">
                         <div class="input-has-icon">
                             <input class="custom-input" type="text" placeholder="NGÀY ĐI" />
                             <img class="icon" src="dist/images/calendar-icon.png" alt="img" />
                         </div>
                     </div>
-                    <div class="col-md-5 pdr-30 pdl-30">
+                    <div class="col-sm-5 col-xs-6 pdr-30 pdl-30">
                         <select class="custom-select no-search" style="width: 100%;">
                             <option value="">LOẠI PHƯƠNG TIỆN</option>
                             <option value="1">Phương tiện 1</option>
@@ -109,10 +113,14 @@
                             <option value="3">Phương tiện 3</option>
                         </select>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-sm-2 hidden-xs">
                         <button class="create-btn">TẠO PAAP</button>
                     </div>
                 </div>
+            </div>
+            <div class="form-group visible-xs">
+                <button class="search-btn mgb-5">TÌM PAAP</button>
+                <button class="create-btn">TẠO PAAP</button>
             </div>
         </div>
         <!-- /.hero-inner -->
