@@ -11773,6 +11773,12 @@ MAIN STYLES
 /* ---------------------------------------
     SPINNER
 ----------------------------------------- */
+.pg-loading-screen {
+  display: block !important;
+}
+.pg-loading-screen.hidden {
+  display: none !important;
+}
 .spinner {
   margin: 100px auto 0;
   width: 70px;
@@ -11992,11 +11998,6 @@ label.css-label:before {
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .parallax {
-    background-attachment: scroll;
-  }
 }
 /* ---------------------------------------
     TOPBAR
