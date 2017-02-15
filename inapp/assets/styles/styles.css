@@ -9037,7 +9037,8 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   color: #424242;
   font-size: 14px;
 }
-.main .wrap-interview .main-content .interview-sidebar .cat-menu li a:hover {
+.main .wrap-interview .main-content .interview-sidebar .cat-menu li a:hover,
+.main .wrap-interview .main-content .interview-sidebar .cat-menu li a.active {
   color: #fd792e;
   margin-left: 5px;
 }
@@ -9232,7 +9233,8 @@ header.header .main-nav .minimal-menu .menu .sub-menu li a:hover {
   color: #424242;
   font-size: 14px;
 }
-.main .wrap-job .main-content .cat-menu li a:hover {
+.main .wrap-job .main-content .cat-menu li a:hover,
+.main .wrap-job .main-content .cat-menu li a.active {
   color: #fd792e;
   margin-left: 5px;
 }

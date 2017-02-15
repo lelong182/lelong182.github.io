@@ -40,6 +40,14 @@
     $(document).ready(function () {
 
         /* =================================
+         ===  Tooltip                 ====
+         =================================== */
+        $('[data-toggle="tooltip"]').tooltip({
+            container: 'body'
+        });
+
+
+        /* =================================
          ===  Onlynumber                 ====
          =================================== */
         $('.onlynumber').onlynumber();
@@ -87,6 +95,10 @@
          ===  Custom Select                 ====
          =================================== */
         $('.custom-select').select2();
+        $('.home-custom-select').select2({
+            containerCssClass: 'home-select2',
+            dropdownCssClass: 'home-select2'
+        });
         $('.custom-select.no-search').select2({
             minimumResultsForSearch: -1
         });
