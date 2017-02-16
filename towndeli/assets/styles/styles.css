@@ -6630,24 +6630,33 @@ button.close {
 -----------------------------------------*/
 @font-face {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: 100;
   src: url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.eot');
   src: local('Roboto Thin'), local('Roboto-Thin'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.woff2') format('woff2'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.woff') format('woff'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.ttf') format('truetype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-100.svg#Roboto') format('svg');
 }
 @font-face {
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
   src: url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.eot');
   src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.woff2') format('woff2'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.woff') format('woff'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.ttf') format('truetype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-regular.svg#Roboto') format('svg');
 }
 @font-face {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   src: url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.eot');
   src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.woff2') format('woff2'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.woff') format('woff'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.ttf') format('truetype'), url('../fonts/roboto-v15-vietnamese_latin_latin-ext-700.svg#Roboto') format('svg');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  src: url('../fonts/roboto-v15-latin-ext_latin_vietnamese-italic.eot');
+  src: local('Roboto Italic'), local('Roboto-Italic'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-italic.woff2') format('woff2'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-italic.woff') format('woff'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-italic.ttf') format('truetype'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-italic.svg#Roboto') format('svg');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/roboto-v15-latin-ext_latin_vietnamese-700italic.eot');
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-700italic.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-700italic.woff2') format('woff2'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-700italic.woff') format('woff'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-700italic.ttf') format('truetype'), url('../fonts/roboto-v15-latin-ext_latin_vietnamese-700italic.svg#Roboto') format('svg');
 }
 /* ---------------------------------------
 GENERAL STYLES
@@ -9433,6 +9442,107 @@ header.header .top-links li .child-box ul li a.highlight {
   padding: 7px 14px;
   transition-duration: 0.1s;
 }
+.main .wrap-profile .lv-bagde {
+  width: 260px;
+  background-color: #02b691;
+  height: 80px;
+  border-radius: 5px;
+  color: #fff;
+  position: relative;
+  padding-top: 20px;
+}
+.main .wrap-profile .lv-bagde strong {
+  color: #000;
+}
+.main .wrap-profile .lv-bagde.new-lv .lv-img {
+  background: url('../images/new-lv.png') no-repeat;
+  width: 24px;
+  height: 36px;
+  display: inline-block;
+}
+.main .wrap-profile .lv-bagde.silver-lv .lv-img {
+  background: url('../images/silver-lv.png') no-repeat;
+  width: 24px;
+  height: 36px;
+  display: inline-block;
+}
+.main .wrap-profile .lv-bagde.golden-lv .lv-img {
+  background: url('../images/golden-lv.png') no-repeat;
+  width: 24px;
+  height: 36px;
+  display: inline-block;
+}
+.main .wrap-profile .lv-bagde.diamond-lv .lv-img {
+  background: url('../images/diamond-lv.png') no-repeat;
+  width: 43px;
+  height: 42px;
+  display: inline-block;
+  margin-top: -2px;
+}
+.main .wrap-profile .lv-bagde.diamond-lv .media .media-left {
+  vertical-align: top;
+}
+.main .wrap-profile .lv-bagde.paper-lv .lv-img {
+  background: url('../images/paper-lv.png') no-repeat;
+  width: 34px;
+  height: 36px;
+  display: inline-block;
+  margin-top: -3px;
+}
+.main .wrap-profile .lv-bagde.plastic-lv .lv-img {
+  background: url('../images/plastic-lv.png') no-repeat;
+  width: 30px;
+  height: 44px;
+  display: inline-block;
+  margin-top: -3px;
+}
+.main .wrap-profile .lv-bagde.plastic-lv .media .media-left {
+  vertical-align: top;
+}
+.main .wrap-profile .lv-bagde.glass-lv .lv-img {
+  background: url('../images/glass-lv.png') no-repeat;
+  width: 36px;
+  height: 54px;
+  display: inline-block;
+  margin-top: -6px;
+}
+.main .wrap-profile .lv-bagde.glass-lv .media .media-left {
+  vertical-align: top;
+}
+.main .wrap-profile .lv-bagde.ceramic-lv .lv-img {
+  background: url('../images/ceramic-lv.png') no-repeat;
+  width: 39px;
+  height: 48px;
+  display: inline-block;
+  margin-top: -5px;
+}
+.main .wrap-profile .lv-bagde.ceramic-lv .media .media-left {
+  vertical-align: top;
+}
+.main .wrap-profile .lv-bagde h4 {
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+.main .wrap-profile .lv-bagde .media {
+  overflow: visible;
+}
+.main .wrap-profile .lv-bagde .media .media-left {
+  vertical-align: middle;
+  padding-right: 0;
+}
+.main .wrap-profile .lv-bagde .wrap-lv-img {
+  width: 70px;
+  text-align: center;
+}
+.main .wrap-profile .lv-bagde .info-icon {
+  background: url('../images/info-icon.png') no-repeat;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+}
 .main .wrap-profile .profile-content {
   border-left: 1px solid #eee;
   padding: 40px 0;
@@ -9454,6 +9564,9 @@ header.header .top-links li .child-box ul li a.highlight {
     margin-top: 5px;
   }
 }
+.main .wrap-profile .profile-content .lv-bagde {
+  margin-bottom: 30px;
+}
 .main .wrap-profile .profile-content .wrap-avatar {
   text-align: center;
 }
@@ -9474,67 +9587,6 @@ header.header .top-links li .child-box ul li a.highlight {
   opacity: 0;
   position: absolute;
   visibility: hidden;
-}
-.main .wrap-profile .profile-content .lv-bagde {
-  width: 260px;
-  background-color: #02b691;
-  height: 80px;
-  border-radius: 5px;
-  color: #fff;
-  position: relative;
-  padding-top: 18px;
-  margin-bottom: 30px;
-}
-.main .wrap-profile .profile-content .lv-bagde strong {
-  color: #000;
-}
-.main .wrap-profile .profile-content .lv-bagde.new-lv .lv-img {
-  background: url('../images/new-lv.png') no-repeat;
-  width: 24px;
-  height: 36px;
-  display: inline-block;
-}
-.main .wrap-profile .profile-content .lv-bagde.silver-lv .lv-img {
-  background: url('../images/silver-lv.png') no-repeat;
-  width: 24px;
-  height: 36px;
-  display: inline-block;
-}
-.main .wrap-profile .profile-content .lv-bagde.golden-lv .lv-img {
-  background: url('../images/golden-lv.png') no-repeat;
-  width: 24px;
-  height: 36px;
-  display: inline-block;
-}
-.main .wrap-profile .profile-content .lv-bagde.diamond-lv .lv-img {
-  background: url('../images/diamond-lv.png') no-repeat;
-  width: 43px;
-  height: 42px;
-  display: inline-block;
-}
-.main .wrap-profile .profile-content .lv-bagde.diamond-lv .media .media-left {
-  vertical-align: top;
-}
-.main .wrap-profile .profile-content .lv-bagde h4 {
-  font-size: 15px;
-  margin: 0 0 8px;
-}
-.main .wrap-profile .profile-content .lv-bagde .media .media-left {
-  vertical-align: middle;
-  padding-right: 0;
-}
-.main .wrap-profile .profile-content .lv-bagde .wrap-lv-img {
-  width: 70px;
-  text-align: center;
-}
-.main .wrap-profile .profile-content .lv-bagde .info-icon {
-  background: url('../images/info-icon.png') no-repeat;
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  top: 5px;
-  right: 8px;
-  cursor: pointer;
 }
 .main .wrap-profile .profile-content .profile-form .form-group {
   display: inline-block;
@@ -9622,6 +9674,81 @@ header.header .top-links li .child-box ul li a.highlight {
   background-color: #fff;
   font-size: 14px;
   color: #515252;
+}
+.main .wrap-profile .point-content {
+  border-left: 1px solid #eee;
+  padding: 20px 0 50px 20px;
+}
+.main .wrap-profile .point-content .point-header ul {
+  font-size: 0;
+}
+.main .wrap-profile .point-content .point-header ul li {
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+.main .wrap-profile .point-content .point-header ul li.point-value h3 {
+  color: #000;
+  font-size: 18px;
+  margin: 0 0 7px;
+}
+.main .wrap-profile .point-content .point-header ul li.point-value h4 {
+  color: #02b691;
+  font-size: 20px;
+  margin: 0;
+}
+.main .wrap-profile .point-content .point-table {
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+}
+.main .wrap-profile .point-content .point-table thead tr th {
+  background-color: #666;
+  color: #fff;
+  padding: 10px;
+  border-bottom: none;
+}
+.main .wrap-profile .point-content .point-table thead tr th:nth-child(1) {
+  width: 150px;
+  text-align: center;
+}
+.main .wrap-profile .point-content .point-table thead tr th:nth-child(2) {
+  width: 400px;
+}
+.main .wrap-profile .point-content .point-table thead tr th:nth-child(3) {
+  width: 150px;
+  text-align: center;
+}
+.main .wrap-profile .point-content .point-table thead tr th:nth-child(4) {
+  width: 150px;
+  text-align: center;
+}
+.main .wrap-profile .point-content .point-table thead tr th:nth-child(5) {
+  width: 150px;
+  text-align: center;
+}
+.main .wrap-profile .point-content .point-table tbody tr:nth-child(2n) td {
+  background-color: #eee;
+}
+.main .wrap-profile .point-content .point-table tbody tr td {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+}
+.main .wrap-profile .point-content .point-table tbody tr td:nth-child(1) {
+  text-align: center;
+}
+.main .wrap-profile .point-content .point-table tbody tr td:nth-child(3) {
+  text-align: center;
+}
+.main .wrap-profile .point-content .point-table tbody tr td:nth-child(4) {
+  text-align: center;
+}
+.main .wrap-profile .point-content .point-table tbody tr td:nth-child(5) {
+  text-align: center;
+}
+.main .wrap-profile .point-content .point-table tbody tr td a {
+  color: #02b691;
+  text-decoration: underline;
 }
 .main .wrap-checkout {
   padding: 60px 0;
@@ -9966,6 +10093,46 @@ header.header .top-links li .child-box ul li a.highlight {
   .main .wrap-product .list-products .pagination {
     margin-top: 15px;
   }
+}
+.main .wrap-order-successfully {
+  background-color: #fedfc0;
+  width: 700px;
+  margin: 50px auto 100px;
+  padding: 0 30px 20px;
+  overflow: hidden;
+}
+.main .wrap-order-successfully .img {
+  background: url('../images/order-successfully-bg.png') no-repeat;
+  width: 256px;
+  height: 253px;
+  float: left;
+  margin-right: 30px;
+}
+.main .wrap-order-successfully .text {
+  float: left;
+  width: calc(100% - 286px);
+  text-align: center;
+}
+.main .wrap-order-successfully .text h2 {
+  color: #02b691;
+  font-size: 29px;
+  font-weight: 700;
+  font-style: italic;
+  margin: 50px 0 20px;
+  text-transform: uppercase;
+}
+.main .wrap-order-successfully .text h4 {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0 0 30px;
+  text-transform: uppercase;
+}
+.main .wrap-order-successfully .text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 0;
+  text-align: left;
 }
 /* ---------------------------------------
     FOOTER

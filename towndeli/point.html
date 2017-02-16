@@ -16,7 +16,7 @@
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <![endif]-->
-    <title>TownDeli - My Profile</title>
+    <title>TownDeli - My Point</title>
     <meta name="keywords" content="keywords"/>
     <meta name="description" content="description"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -432,8 +432,8 @@
                 <div class="col-sm-2">
                     <div class="cat-menu">
                         <ul>
-                            <li class="active"><a href="profile.html">My Profile</a></li>
-                            <li><a href="point.html">My Point</a></li>
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li class="active"><a href="point.html">My Point</a></li>
                             <li><a>My Schedule</a></li>
                             <li><a>My Order</a></li>
                         </ul>
@@ -441,161 +441,95 @@
                     <!-- /.cat-menu -->
                 </div>
                 <div class="col-sm-10">
-                    <div class="profile-content">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="wrap-avatar">
-                                    <img class="img-responsive center-block" src="dist/images/avatar-3.png" alt="img" />
-                                    <label for="avatar-input">Đổi AVATAR</label>
-                                    <input id="avatar-input" type="file" />
-                                </div>
+                    <div class="point-content">
+                        <div class="point-header">
+                            <ul>
+                                <li>
+                                    <div class="lv-bagde paper-lv">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="wrap-lv-img">
+                                                    <span class="lv-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4><strong>Cấp độ:</strong> Ly Thủy Tinh (+30)</h4>
+                                                <h4><strong>Điểm:</strong> 100</h4>
+                                            </div>
+                                        </div>
+                                        <i class="info-icon" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, voluptatum?"></i>
+                                    </div>
+                                </li>
+                                <li class="point-value">
+                                    <h3>Tổng điểm đã tích</h3>
+                                    <h4>250</h4>
+                                </li>
+                                <li class="point-value">
+                                    <h3>Đã sử dụng</h3>
+                                    <h4>150</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table point-table">
+                                <thead>
+                                    <tr>
+                                        <th>Thời gian</th>
+                                        <th>Mô tả</th>
+                                        <th>Sử dụng</th>
+                                        <th>Điểm tích lũy</th>
+                                        <th>Điểm có</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>22:00 13/12/2016</td>
+                                        <td><a>Đơn hàng 5 ly trà sữa</a></td>
+                                        <td> - </td>
+                                        <td>100</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22:00 13/12/2016</td>
+                                        <td><a>Like & Share trà sữa cầu vồng</a></td>
+                                        <td> - </td>
+                                        <td>50</td>
+                                        <td>`50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22:00 13/12/2016</td>
+                                        <td><a>Đơn hàng 1 ly cà phê</a></td>
+                                        <td>-100</td>
+                                        <td>50</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22:00 13/12/2016</td>
+                                        <td><a>Đơn hàng 3 ly trà sửa</a></td>
+                                        <td> - </td>
+                                        <td>150</td>
+                                        <td>150</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center">
+                            <div class="pagination">
+                                <ul>
+                                    <li class="border"><a>PREVIOUS</a></li>
+                                    <li class="active"><span>1</span></li>
+                                    <li><a>2</a></li>
+                                    <li><a>3</a></li>
+                                    <li><a>4</a></li>
+                                    <li><a>5</a></li>
+                                    <li><a>6</a></li>
+                                    <li class="border"><a>NEXT</a></li>
+                                </ul>
                             </div>
-                            <div class="col-md-8">
-                                <div class="lv-bagde new-lv">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <div class="wrap-lv-img">
-                                                <span class="lv-img"></span>
-                                            </div>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4><strong>Cấp độ:</strong> New Townie</h4>
-                                            <h4><strong>Điểm:</strong> 100</h4>
-                                        </div>
-                                    </div>
-                                    <i class="info-icon" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, voluptatum?"></i>
-                                </div>
-                                <form class="profile-form">
-                                    <h4>Thông tin cá nhân</h4>
-                                    <div class="form-group">
-                                        <div class="left-form">
-                                            <label for="fullname">Họ tên</label>
-                                        </div>
-                                        <div class="right-form">
-                                            <input id="fullname" type="text" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="left-form">
-                                            <label for="phone">SĐT</label>
-                                        </div>
-                                        <div class="right-form">
-                                            <input id="phone" type="text" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="left-form">
-                                            <label for="fullname">Giới tính</label>
-                                        </div>
-                                        <div class="right-form">
-                                            <div class="wrap-sex">
-                                                <select style="width: 100%" class="custom-select no-search">
-                                                    <option value="male">Nam</option>
-                                                    <option value="female">Nữ</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="left-form">
-                                            <label for="fullname">Ngày sinh</label>
-                                        </div>
-                                        <div class="right-form">
-                                            <div class="wrap-date">
-                                                <select style="width: 100%" class="custom-select no-search">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                    <option value="11">11</option>
-                                                    <option value="12">12</option>
-                                                    <option value="13">13</option>
-                                                    <option value="14">14</option>
-                                                    <option value="15">15</option>
-                                                    <option value="16">16</option>
-                                                    <option value="17">17</option>
-                                                    <option value="18">18</option>
-                                                    <option value="19">19</option>
-                                                    <option value="20">20</option>
-                                                    <option value="21">21</option>
-                                                    <option value="22">22</option>
-                                                    <option value="23">23</option>
-                                                    <option value="24">24</option>
-                                                    <option value="25">25</option>
-                                                    <option value="26">26</option>
-                                                    <option value="27">27</option>
-                                                    <option value="28">28</option>
-                                                    <option value="29">29</option>
-                                                    <option value="30">30</option>
-                                                    <option value="31">31</option>
-                                                </select>
-                                            </div>
-                                            <div class="wrap-month">
-                                                <select style="width: 100%" class="custom-select no-search">
-                                                    <option value="1">Tháng một</option>
-                                                    <option value="2">Tháng hai</option>
-                                                    <option value="3">Tháng ba</option>
-                                                    <option value="4">Tháng tư</option>
-                                                    <option value="5">Tháng năm</option>
-                                                    <option value="6">Tháng sáu</option>
-                                                    <option value="7">Tháng bảy</option>
-                                                    <option value="8">Tháng tám</option>
-                                                    <option value="9">Tháng chín</option>
-                                                    <option value="10">Tháng mười</option>
-                                                    <option value="11">Tháng mười một</option>
-                                                    <option value="12">Tháng mười hai</option>
-                                                </select>
-                                            </div>
-                                            <div class="wrap-year">
-                                                <select style="width: 100%" class="custom-select no-search">
-                                                    <option value="1990">1990</option>
-                                                    <option value="1991">1991</option>
-                                                    <option value="1992">1992</option>
-                                                    <option value="1993">1993</option>
-                                                    <option value="1994">1994</option>
-                                                    <option value="1995">1995</option>
-                                                    <option value="1996">1996</option>
-                                                    <option value="1997">1997</option>
-                                                    <option value="1998">1998</option>
-                                                    <option value="1999">1999</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4>Thông tin tài khoản</h4>
-                                    <div class="form-group">
-                                        <div class="left-form">
-                                            <label for="email">Email</label>
-                                        </div>
-                                        <div class="right-form">
-                                            <input id="email" type="email" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="left-form">
-                                            <label>Mật khẩu</label>
-                                        </div>
-                                        <div class="right-form">
-                                            <a class="change-password-link">Đổi mật khẩu</a>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="left-form"></div>
-                                        <div class="right-form">
-                                            <button class="submit-btn">Cập nhật</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                            <!-- /.pagination -->
                         </div>
                     </div>
-                    <!-- /.profile-content -->
+                    <!-- /.point-content -->
                 </div>
             </div>
         </div>
