@@ -1,0 +1,197 @@
+/* ---------------------------------------
+    SPINNER
+----------------------------------------- */
+@import "utilities/spinner.less";
+/* ---------------------------------------
+    CUSTOM INPUT
+----------------------------------------- */
+@import "utilities/inputs.less";
+/* ---------------------------------------
+    CUSTOM CHECKBOX & RADIO
+----------------------------------------- */
+@import "utilities/checkbox-radio.less";
+
+/* ---------------------------------------
+    PARALLAX
+----------------------------------------- */
+.parallax {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        background-attachment: scroll;
+    }
+}
+
+/* ---------------------------------------
+    IFRAME GOOGLE CODE
+----------------------------------------- */
+iframe[name='google_conversion_frame'] {
+    height: 0 !important;
+    width: 0 !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    margin-top: -13px;
+    float: left;
+}
+
+/* ---------------------------------------
+    HERO
+----------------------------------------- */
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center / cover;
+    padding: 60px 0;
+    /* ---------------------------------------
+        HEADER
+    ----------------------------------------- */
+    header.header {
+        .container {
+            position: relative;
+        }
+        /* ---------------------------------------
+            LOGO
+        ----------------------------------------- */
+        .logo {
+            margin: 0;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            a {
+                background: url('../images/logo.png') no-repeat;
+                width: 266px;
+                height: 42px;
+                display: inline-block;
+                text-indent: -9999px;
+            }
+        }
+        /* ---------------------------------------
+            MAIN MENU
+        ----------------------------------------- */
+        .main-nav {
+            position: absolute;
+            right: -20px;
+            top: -30px;
+            @media (max-width: @screen-xs-max) {
+                height: 34px;
+                position: relative;
+                z-index: 100;
+            }
+            li {
+                display: inline-block;
+                @media (max-width: @screen-xs-max) {
+                    display: block;
+                }
+                &.current-menu-item {
+                    a {
+                        font-weight: 700;
+                    }
+                }
+                a {
+                    color: #fff;
+                    font-size: 16px;
+                    padding: 15px 20px;
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.3);
+                    }
+                }
+            }
+            .minimal-menu {
+                .menu {
+                    .sub-menu {
+                        background-color: #fff;
+                        box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+                        text-align: left;
+                        @media (max-width: @screen-xs-max) {
+                            background-color: transparent;
+                        }
+                        li {
+                            a {
+                                color: #424242;
+                                padding: 15px;
+                                @media (max-width: @screen-xs-max) {
+                                    color: #fff;
+                                    padding: 10px;
+                                }
+                                &:hover {
+                                    color: @main-color;
+                                    @media (max-width: @screen-xs-max) {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* ---------------------------------------
+           LOGIN MENU
+       ----------------------------------------- */
+        .login-menu {
+            position: absolute;
+            top: -56px;
+            right: 70px;
+            ul {
+                font-size: 0;
+                margin-bottom: 0;
+                li {
+                    display: inline-block;
+                    padding: 5px 10px 0;
+                    line-height: 11px;
+                    border-right: 1px solid #fff;
+                    &:last-child {
+                        border-right: none;
+                    }
+                    a {
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-bottom: 1px solid transparent;
+                        &:hover {
+                            border-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        /* ---------------------------------------
+           CART MENU
+       ----------------------------------------- */
+        .cart-menu {
+            position: absolute;
+            top: -55px;
+            right: 0;
+            ul {
+                font-size: 0;
+                margin-bottom: 0;
+                li {
+                    display: inline-block;
+                    padding: 0 10px;
+                    line-height: 1;
+                    border-right: 1px solid #fff;
+                    &:last-child {
+                        border-right: none;
+                    }
+                    a {
+                        color: #fff;
+                        font-size: 20px;
+                        &:hover {
+                            color: @main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* ---------------------------------------
+        SLOGAN
+    ----------------------------------------- */
+    .slogan {
+        color: #d7d7d7;
+        font-size: 52px;
+        text-align: center;
+        font-family: "UTMBebas", sans-serif;
+        line-height: 1;
+        word-spacing: 5px;
+    }
+}
