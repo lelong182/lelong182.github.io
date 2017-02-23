@@ -46,6 +46,70 @@
             });
         }
 
+
+        /* =================================
+         ===  List Clients                 ====
+         =================================== */
+        $('.list-clients').slick({
+            arrows: false,
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 5
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+
+
+        /* =================================
+         ===  List Testimonial                 ====
+         =================================== */
+        $('.testimonial .list-testi').slick({
+            arrows: true,
+            infinite: true,
+            fade: true,
+            autoplay: true,
+            speed: 1000
+        });
+
+
+        /* =================================
+         ===  List Clients Said                 ====
+         =================================== */
+        $('.clients-said .list-clients-said').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            fade: true,
+            autoplay: true,
+            speed: 1000
+        });
+
     });
 
 })(window.jQuery);
