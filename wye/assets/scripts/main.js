@@ -110,6 +110,45 @@
             speed: 1000
         });
 
+
+        /* =================================
+         ===  List Bottom Clients                 ====
+         =================================== */
+        $('.list-bottom-clients').slick({
+            arrows: true,
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 5
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+
     });
 
 })(window.jQuery);
