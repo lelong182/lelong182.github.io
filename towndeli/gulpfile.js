@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require('gulp'),
+    connect = require('gulp-connect'),
     less = require('gulp-less'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -65,6 +66,23 @@ gulp.task('watch', function () {
     gulp.watch('assets/scripts/**/*.js', ['js']);
     gulp.watch('assets/less/**/*.less', ['css']);
 });
+
+// Start development server
+gulp.task('connectDev', function () {
+    connect.server({
+        root: './',
+        port: 8000,
+        livereload: true
+    });
+});
+
+gulp.task('dev', [
+    'css',
+    'js',
+    'watch',
+    'images',
+    'connectDev'
+]);
 
 gulp.task('default', [
     'css',
