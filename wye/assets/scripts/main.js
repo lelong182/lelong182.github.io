@@ -149,6 +149,65 @@
             ]
         });
 
+
+        /* =================================
+         ===  Business Slider                 ====
+         =================================== */
+        $('.wrap-small-business .wrap-slider .thumbs').slick({
+            arrows: false,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: false,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+        $(this).on('click', '.thumbs img', function () {
+            var this_src = $(this).data('src');
+            $('.main-img img').attr('src', this_src);
+        });
+
+
+        /* =================================
+         ===  Our Other Packages                 ====
+         =================================== */
+        $('.other-packages .list-packages').slick({
+            arrows: true,
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+
     });
 
 })(window.jQuery);
