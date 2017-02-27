@@ -8290,6 +8290,22 @@ header.header .top-links li .child-box ul li a.highlight {
   text-align: center;
   width: 100%;
 }
+.review-modal {
+  text-align: center;
+  padding: 0 !important;
+}
+.review-modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.review-modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
 .review-modal .modal-body .title {
   font-family: Roboto;
   color: #333333;
@@ -8330,6 +8346,22 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .review-modal .modal-footer .btn-cacel {
   border-radius: 0;
+}
+.review-completed-modal {
+  text-align: center;
+  padding: 0 !important;
+}
+.review-completed-modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.review-completed-modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 .review-completed-modal .modal-body .like-icon {
   text-align: center;
