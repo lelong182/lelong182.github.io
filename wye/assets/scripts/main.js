@@ -208,6 +208,33 @@
         });
 
 
+        /* =================================
+         ===  List Bottom Clients                 ====
+         =================================== */
+        $('.list-other-cs').slick({
+            arrows: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+
+
     });
 
 })(window.jQuery);

@@ -324,6 +324,7 @@ header.header {
                     background: url('../images/breadcrumb-bg.png') repeat-x;
                     height: 34px;
                     font-size: 13px;
+                    text-transform: uppercase;
                     color: #fff;
                     padding: 7px 35px 0;
                     position: relative;
@@ -468,6 +469,44 @@ header.header {
                                 font-family: FontAwesome;
                                 margin-right: 5px;
                             }
+                        }
+                    }
+                }
+            }
+            .benefits {
+                background-color: @second-color;
+                margin-top: 30px;
+                color: #fff;
+                padding: 40px 0;
+                h3 {
+                    text-align: center;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    margin: 0 0 50px;
+                }
+                ul {
+                    font-size: 16px;
+                    li {
+                        list-style: none;
+                        width: ~"calc(50% - 15px)";
+                        float: left;
+                        margin-right: 30px;
+                        margin-bottom: 20px;
+                        position: relative;
+                        padding-left: 40px;
+                        &:before {
+                            content: "";
+                            background: url('../images/benefit-icon.png') no-repeat;
+                            width: 18px;
+                            height: 19px;
+                            margin-right: 20px;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                        }
+                        &:nth-child(2n) {
+                            margin-right: 0;
                         }
                     }
                 }
@@ -745,6 +784,315 @@ header.header {
                     .slick-prev {
                         background: url('../images/op-prev-btn.png') no-repeat;
                         left: 0;
+                    }
+                }
+            }
+        }
+        /* ---------------------------------------
+           CASE STUDY PAGE
+       ----------------------------------------- */
+        .wrap-case-study {
+            .top-banner {
+                background-image: url('../images/case-study-bg.jpg');
+                position: relative;
+                z-index: 1;
+                padding: 160px 0 15px;
+                &:before {
+                    background-color: rgba(0, 0, 0, 0.6);
+                    bottom: 0;
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: -1;
+                }
+                .top-content {
+                    width: 660px;
+                    margin: auto;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 16px;
+                    .logo {
+                        width: 210px;
+                        height: 210px;
+                        margin: auto;
+                        text-align: center;
+                        background-color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                    h2 {
+                        font-weight: 700;
+                        margin: 35px 0 20px;
+                    }
+                    h4 {
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin: 0 0 15px;
+                    }
+                    > div {
+                        text-align: justify;
+                    }
+                }
+            }
+            .search-section {
+                padding: 25px 0;
+                background-color: @second-color;
+                box-shadow: 0 4px 2px rgba(0, 0, 0, 0.12);
+                form {
+                    margin: 0 70px;
+                    input[type="text"] {
+                        border: 1px solid #d7d7d7;
+                        border-radius: 3px;
+                        width: ~"calc(100% - 284px)";
+                        height: 34px;
+                        padding: 0 10px;
+                    }
+                    .submit-btn {
+                        background-color: @main-color;
+                        border: none;
+                        border-radius: 3px;
+                        color: #fff;
+                        padding: 7px 0;
+                        width: 260px;
+                        margin-left: 20px;
+                    }
+                }
+            }
+            .case-study-content {
+                padding: 70px 0 30px;
+                h3 {
+                    font-size: 40px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    margin: 0 0 30px;
+                    strong {
+                        font-weight: 400;
+                    }
+                }
+                h4 {
+                    text-transform: uppercase;
+                    font-size: 30px;
+                    font-weight: 300;
+                    margin: 0 0 30px;
+                    strong {
+                        font-weight: 500;
+                    }
+                }
+                .list-helps {
+                    font-size: 16px;
+                    margin-bottom: 40px;
+                    li {
+                        margin-bottom: 20px;
+                        list-style: none;
+                        line-height: 1.5;
+                        &:before {
+                            content: "\f00c";
+                            font-family: FontAwesome;
+                            color: #24abe6;
+                            font-size: 15px;
+                            margin-right: 5px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                .list-other-cs {
+                    .img-container {
+                        border: 1px solid #d7d7d7;
+                        margin: 0 20px;
+                        display: flex;
+                        height: 200px;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                }
+                .slick-next, .slick-prev {
+                    width: 59px;
+                    height: 77px;
+                    z-index: 100;
+                    &:before {
+                        content: none;
+                    }
+                }
+                .slick-next {
+                    background: url('../images/other-next-btn.png') no-repeat;
+                    right: 0;
+                }
+                .slick-prev {
+                    background: url('../images/other-prev-btn.png') no-repeat;
+                    left: 0;
+                }
+                .sidebar {
+                    background-color: #d3eefa;
+                    padding: 30px 25px 10px;
+                    text-align: center;
+                    > h4 {
+                        color: #000;
+                        font-size: 30px;
+                        font-weight: 500;
+                        margin: 0 0 25px;
+                        text-transform: uppercase;
+                    }
+                    ul {
+                        margin-bottom: 0;
+                        text-align: center;
+                        display: inline-block;
+                        li {
+                            list-style: none;
+                            position: relative;
+                            width: 220px;
+                            height: 220px;
+                            border: 1px solid #d7d7d7;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-flow: column;
+                            z-index: 1;
+                            transition: all 0.2s ease;
+                            margin-bottom: 15px;
+                            &:hover {
+                                box-shadow: inset 0 0 7px rgba(255, 255, 255, 0.35);
+                                &:before {
+                                    border-color: @main-color;
+                                }
+                            }
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                top: -1px;
+                                right: -1px;
+                                bottom: -1px;
+                                left: -1px;
+                                border: 2px solid transparent;
+                                z-index: -1;
+                                transition: all 0.2s ease;
+                            }
+                            .bg {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: -1;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                            .icon {
+                                display: inline-block;
+                                margin-bottom: 20px;
+                            }
+                            h4 {
+                                font-size: 20px;
+                                font-weight: 500;
+                                margin: 0;
+                                color: #fff;
+                                line-height: 1.3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* ---------------------------------------
+            SMALL BUSINESS PAGE
+        ----------------------------------------- */
+        .wrap-about-us {
+            .top-banner {
+                background-image: url("../images/about-us-img.jpg");
+                height: 650px;
+            }
+            .about-us-content {
+                margin-top: -40px;
+                .about-box {
+                    box-shadow: 0 4px 9px 2px rgba(0,0,0,.1);
+                    border-radius: 6px;
+                    background-color: #fff;
+                    overflow: hidden;
+                    position: relative;
+                    min-height: 670px;
+                    padding: 0 50px 0 660px;
+                    font-size: 16px;
+                    margin-bottom: 55px;
+                    .about-img {
+                        position: absolute;
+                        bottom: 0;
+                        left: 10px;
+                        max-width: 650px;
+                    }
+                    h3 {
+                        font-size: 30px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        text-align: center;
+                        margin: 60px 0 30px;
+                    }
+                }
+                .more-desc {
+                    font-size: 16px;
+                    margin-bottom: 70px;
+                    h4 {
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin: 0 0 15px;
+                    }
+                }
+                .location {
+                    display: table;
+                    table-layout: fixed;
+                    width: 100%;
+                    .list-facilitators {
+                        background-color: #f7f9fc;
+                        padding: 20px 15px;
+                        display: table-cell;
+                        width: 310px;
+                        height: 580px;
+                        h3 {
+                            color: #000;
+                            font-size: 20px;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            margin: 0 0 20px;
+                        }
+                        .facilitator-item {
+                            margin-bottom: 25px;
+                        }
+                    }
+                    .wrap-map {
+                        display: table-cell;
+                        width: ~"calc(100% - 310px)";
+                        position: relative;
+                        #gmap {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                        }
+                        #gmap_autocomplete {
+                            width: 300px;
+                            height: 34px;
+                            border: 1px solid #d7d7d7;
+                            padding: 0 28px 0 12px;
+                        }
+                        .input-has-icon {
+                            position: absolute;
+                            right: 0;
+                            top: -40px;
+                            i {
+                                position: absolute;
+                                top: 8px;
+                                right: 8px;
+                            }
+                        }
                     }
                 }
             }
