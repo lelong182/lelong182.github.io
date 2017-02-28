@@ -25,6 +25,7 @@ gulp.task('css', ['less'], function () {
         'assets/styles/animate.min.css',
         'assets/styles/slick.css',
         'assets/styles/slick-theme.css',
+        'assets/styles/perfect-scrollbar.min.css',
         'assets/styles/styles.css'
     ])
         .pipe(concatCss('main.css'))
@@ -43,6 +44,7 @@ gulp.task('js', function () {
         'assets/scripts/libs/bootstrap.min.js',
         'assets/scripts/libs/modernizr.js',
         'assets/scripts/libs/slick.min.js',
+        'assets/scripts/libs/perfect-scrollbar.jquery.min.js',
         'assets/scripts/main.js'
     ])
         .pipe(concat('main.js'))

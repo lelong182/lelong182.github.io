@@ -48,6 +48,12 @@
 
 
         /* =================================
+         ===  Custom Scroll                 ====
+         =================================== */
+        $('.has-scroll').perfectScrollbar();
+
+
+        /* =================================
          ===  List Clients                 ====
          =================================== */
         $('.list-clients').slick({
@@ -162,9 +168,9 @@
             speed: 1000,
             responsive: [
                 {
-                    breakpoint: 480,
+                    breakpoint: 991,
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 3
                     }
                 }
             ]
@@ -189,6 +195,12 @@
                 {
                     breakpoint: 1199,
                     settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
                         slidesToShow: 3
                     }
                 },
@@ -196,12 +208,6 @@
                     breakpoint: 767,
                     settings: {
                         slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1
                     }
                 }
             ]
@@ -220,13 +226,25 @@
             speed: 1000,
             responsive: [
                 {
-                    breakpoint: 767,
+                    breakpoint: 1399,
                     settings: {
                         slidesToShow: 3
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 767,
                     settings: {
                         slidesToShow: 2
                     }

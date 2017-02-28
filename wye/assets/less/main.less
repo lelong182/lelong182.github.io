@@ -244,7 +244,7 @@ header.header {
         right: -15px;
         top: 38px;
         @media (max-width: @screen-sm-max) {
-            top: -15px;
+            top: 45px;
         }
         @media (max-width: @screen-xs-max) {
             right: 0;
@@ -265,6 +265,9 @@ header.header {
                 color: #fff;
                 font-size: 18px;
                 padding: 15px 20px;
+                @media (max-width: @screen-lg-min) {
+                    font-size: 16px;
+                }
                 @media (max-width: @screen-sm-max) {
                     padding: 10px;
                     font-size: 14px;
@@ -317,7 +320,7 @@ header.header {
         top: 14px;
         right: 70px;
         @media (max-width: @screen-xs-max) {
-            top: -50px;
+            top: 10px;
             right: 80px;
         }
         ul {
@@ -351,7 +354,7 @@ header.header {
         top: 13px;
         right: 0;
         @media (max-width: @screen-xs-max) {
-            top: -50px;
+            top: 10px;
             right: 10px;
         }
         ul {
@@ -390,11 +393,21 @@ header.header {
         .left {
             width: 50%;
             float: left;
+            @media (max-width: @screen-xs-min) {
+                width: auto;
+                float: initial;
+                margin-bottom: 10px;
+            }
         }
         .right {
             width: 50%;
             float: left;
             text-align: right;
+            @media (max-width: @screen-xs-min) {
+                width: auto;
+                float: initial;
+                text-align: left;
+            }
         }
         .breadcrumb {
             background-color: transparent;
@@ -457,6 +470,9 @@ header.header {
                 padding: 0 15px;
                 font-size: 16px;
                 margin-right: 10px;
+                @media (max-width: @screen-lg-min) {
+                    width: ~"calc(100% - 130px)";
+                }
             }
             .submit-btn {
                 border-radius: 3px;
@@ -502,9 +518,18 @@ header.header {
             .top-banner {
                 background-image: url("../images/corporate-img.jpg");
                 height: 450px;
+                @media (max-width: @screen-xs-max) {
+                    height: 300px;
+                }
             }
             .list-corporates {
-                padding: 45px 0;
+                padding: 45px 0 15px;
+                @media (max-width: @screen-lg-min) {
+                    padding-top: 35px;
+                }
+                @media (max-width: @screen-xs-max) {
+                    padding-top: 25px;
+                }
                 .corp-item {
                     margin: 0 10px 30px;
                     position: relative;
@@ -515,6 +540,13 @@ header.header {
                     display: flex;
                     flex-flow: column;
                     justify-content: center;
+                    @media (max-width: @screen-lg-min) {
+                        margin: 0 0 20px;
+                    }
+                    @media (max-width: @screen-xs-max) {
+                        margin-bottom: 10px;
+                        height: 300px;
+                    }
                     &:hover {
                         .bg-container {
                             .item-bg {
@@ -562,12 +594,21 @@ header.header {
                 background-color: @second-color;
                 margin-top: 30px;
                 color: #fff;
-                padding: 40px 0;
+                padding: 40px 0 20px;
+                @media (max-width: @screen-lg-min) {
+                    margin-top: 0;
+                }
                 h3 {
                     text-align: center;
                     font-size: 30px;
                     text-transform: uppercase;
                     margin: 0 0 50px;
+                    @media (max-width: @screen-xs-max) {
+                        margin-bottom: 40px;
+                    }
+                    @media (max-width: @screen-xs-min) {
+                        margin-bottom: 25px;
+                    }
                 }
                 ul {
                     font-size: 16px;
@@ -579,6 +620,11 @@ header.header {
                         margin-bottom: 20px;
                         position: relative;
                         padding-left: 40px;
+                        @media (max-width: @screen-xs-min) {
+                            width: auto;
+                            float: initial;
+                            margin-right: 0;
+                        }
                         &:before {
                             content: "";
                             background: url('../images/benefit-icon.png') no-repeat;
@@ -604,10 +650,29 @@ header.header {
             .top-banner {
                 background-image: url("../images/corporate-img.jpg");
                 height: 450px;
+                @media (max-width: @screen-xs-max) {
+                    height: 300px;
+                }
             }
             .small-business-content {
                 padding: 60px 0 50px;
+                @media (max-width: @screen-sm-max) {
+                    padding: 40px 0 20px;
+                }
+                @media (max-width: @screen-xs-min) {
+                    padding: 20px 0 10px;
+                }
+                .row {
+                    .col-xs-5, .col-xs-7 {
+                        @media (max-width: @screen-xs-min) {
+                            width: 100%;
+                        }
+                    }
+                }
                 .wrap-slider {
+                    @media (max-width: @screen-xs-min) {
+                        margin-bottom: 20px;
+                    }
                     .main-img {
                         margin-bottom: 15px;
                         img {
@@ -671,6 +736,10 @@ header.header {
                     background-color: #d3eefa;
                     padding: 20px 25px 10px;
                     text-align: center;
+                    @media (max-width: @screen-sm-max) {
+                        width: 300px;
+                        margin: 30px auto 0;
+                    }
                     > h4 {
                         color: #000;
                         font-size: 18px;
@@ -744,6 +813,12 @@ header.header {
                         font-size: 30px;
                         text-transform: uppercase;
                         margin: 0 0 50px;
+                        @media (max-width: @screen-xs-max) {
+                            margin-bottom: 40px;
+                        }
+                        @media (max-width: @screen-xs-min) {
+                            margin-bottom: 25px;
+                        }
                     }
                     ul {
                         font-size: 16px;
@@ -755,6 +830,11 @@ header.header {
                             margin-bottom: 20px;
                             position: relative;
                             padding-left: 40px;
+                            @media (max-width: @screen-xs-min) {
+                                width: auto;
+                                float: initial;
+                                margin-right: 0;
+                            }
                             &:before {
                                 content: "";
                                 background: url('../images/benefit-icon.png') no-repeat;
@@ -882,6 +962,9 @@ header.header {
                 position: relative;
                 z-index: 1;
                 padding: 160px 0 15px;
+                @media (max-width: @screen-xs-max) {
+                    padding-top: 100px;
+                }
                 &:before {
                     background-color: rgba(0, 0, 0, 0.6);
                     bottom: 0;
@@ -898,6 +981,9 @@ header.header {
                     text-align: center;
                     color: #fff;
                     font-size: 16px;
+                    @media (max-width: @screen-xs-max) {
+                        width: ~"calc(100% - 30px)";
+                    }
                     .logo {
                         width: 210px;
                         height: 210px;
@@ -932,12 +1018,18 @@ header.header {
                 box-shadow: 0 4px 2px rgba(0, 0, 0, 0.12);
                 form {
                     margin: 0 70px;
+                    @media (max-width: @screen-xs-max) {
+                        margin: 0;
+                    }
                     input[type="text"] {
                         border: 1px solid #d7d7d7;
                         border-radius: 3px;
                         width: ~"calc(100% - 284px)";
                         height: 34px;
                         padding: 0 10px;
+                        @media (max-width: @screen-xs-min) {
+                            width: ~"calc(100% - 95px)";
+                        }
                     }
                     .submit-btn {
                         background-color: @main-color;
@@ -947,16 +1039,27 @@ header.header {
                         padding: 7px 0;
                         width: 260px;
                         margin-left: 20px;
+                        @media (max-width: @screen-xs-min) {
+                            padding: 7px 14px;
+                            width: auto;
+                            margin-left: 10px;
+                        }
                     }
                 }
             }
             .case-study-content {
                 padding: 70px 0 30px;
+                @media (max-width: @screen-xs-max) {
+                    padding-top: 30px;
+                }
                 h3 {
                     font-size: 40px;
                     font-weight: 300;
                     text-transform: uppercase;
                     margin: 0 0 30px;
+                    @media (max-width: @screen-xs-max) {
+                        margin-bottom: 20px;
+                    }
                     strong {
                         font-weight: 400;
                     }
@@ -995,6 +1098,9 @@ header.header {
                         height: 200px;
                         justify-content: center;
                         align-items: center;
+                        @media (max-width: @screen-lg-min) {
+                            margin: 0 10px;
+                        }
                         img {
                             max-width: 100%;
                         }
@@ -1020,6 +1126,10 @@ header.header {
                     background-color: #d3eefa;
                     padding: 30px 25px 10px;
                     text-align: center;
+                    @media (max-width: @screen-sm-max) {
+                        width: 300px;
+                        margin: 30px auto 0;
+                    }
                     > h4 {
                         color: #000;
                         font-size: 30px;
@@ -1094,6 +1204,18 @@ header.header {
             .top-banner {
                 background-image: url("../images/about-us-img.jpg");
                 height: 650px;
+                @media (max-width: @screen-md-max) {
+                    height: 550px;
+                }
+                @media (max-width: @screen-sm-max) {
+                    height: 450px;
+                }
+                @media (max-width: @screen-xs-max) {
+                    height: 350px;
+                }
+                @media (max-width: @screen-xs-min) {
+                    height: 250px;
+                }
             }
             .about-us-content {
                 margin-top: -40px;
@@ -1107,11 +1229,28 @@ header.header {
                     padding: 0 50px 0 660px;
                     font-size: 16px;
                     margin-bottom: 55px;
+                    @media (max-width: @screen-md-max) {
+                        min-height: 570px;
+                        padding-left: 460px;
+                    }
+                    @media (max-width: @screen-sm-max) {
+                        min-height: initial;
+                        padding: 0 40px 370px;
+                    }
                     .about-img {
                         position: absolute;
                         bottom: 0;
                         left: 10px;
                         max-width: 650px;
+                        @media (max-width: @screen-md-max) {
+                            max-width: 450px;
+                        }
+                        @media (max-width: @screen-sm-max) {
+                            max-width: 100%;
+                            max-height: 350px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
                     }
                     h3 {
                         font-size: 30px;
@@ -1119,6 +1258,9 @@ header.header {
                         text-transform: uppercase;
                         text-align: center;
                         margin: 60px 0 30px;
+                        @media (max-width: @screen-sm-max) {
+                            margin: 30px 0 20px;
+                        }
                     }
                 }
                 .more-desc {
@@ -1139,7 +1281,16 @@ header.header {
                         padding: 20px 15px;
                         display: table-cell;
                         width: 310px;
-                        height: 580px;
+                        @media (max-width: @screen-xs-max) {
+                            display: block;
+                            width: auto;
+                        }
+                        .wrap-list-facilitators {
+                            height: 480px;
+                            @media (max-width: @screen-xs-max) {
+                                height: 300px;
+                            }
+                        }
                         h3 {
                             color: #000;
                             font-size: 20px;
@@ -1155,6 +1306,11 @@ header.header {
                         display: table-cell;
                         width: ~"calc(100% - 310px)";
                         position: relative;
+                        @media (max-width: @screen-xs-max) {
+                            display: block;
+                            width: auto;
+                            height: 400px;
+                        }
                         #gmap {
                             position: absolute;
                             top: 0;
@@ -1167,11 +1323,23 @@ header.header {
                             height: 34px;
                             border: 1px solid #d7d7d7;
                             padding: 0 28px 0 12px;
+                            @media (max-width: @screen-xs-min) {
+                                width: 100%;
+                            }
                         }
                         .input-has-icon {
                             position: absolute;
                             right: 0;
                             top: -40px;
+                            @media (max-width: @screen-xs-max) {
+                                right: 9px;
+                                top: 8px;
+                                z-index: 999;
+                            }
+                            @media (max-width: @screen-xs-min) {
+                                top: 44px;
+                                left: 9px;
+                            }
                             i {
                                 position: absolute;
                                 top: 8px;
@@ -1565,7 +1733,7 @@ header.header {
             width: 40%;
         }
         @media (max-width:@screen-xs-min) {
-            width: 100%;
+            width: auto;
             float: initial;
             margin-bottom: 10px;
         }
@@ -1578,7 +1746,7 @@ header.header {
             width: 60%;
         }
         @media (max-width:@screen-xs-min) {
-            width: 100%;
+            width: auto;
             float: initial;
             text-align: left;
         }
@@ -1605,6 +1773,9 @@ header.header {
             @media (max-width:@screen-sm-max) {
                 width: ~"calc(100% - 180px)";
             }
+            @media (max-width:@screen-sm-max) {
+                width: ~"calc(100% - 124px)";
+            }
         }
         .submit-btn {
             border-radius: 3px;
@@ -1614,6 +1785,9 @@ header.header {
             padding: 5px 25px;
             font-size: 16px;
             text-transform: uppercase;
+            @media (max-width:@screen-xs-min) {
+                padding: 5px 15px;
+            }
         }
     }
 }
