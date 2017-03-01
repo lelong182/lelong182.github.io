@@ -12293,8 +12293,8 @@ header.header .login-menu ul li a:hover {
 }
 header.header .cart-menu {
   position: absolute;
-  top: 13px;
-  right: 0;
+  top: 15px;
+  right: 5px;
 }
 @media (max-width: 857px) {
   header.header .cart-menu {
@@ -12314,12 +12314,34 @@ header.header .cart-menu ul li {
 }
 header.header .cart-menu ul li:last-child {
   border-right: none;
+  width: 30px;
 }
 header.header .cart-menu ul li a {
   color: #fff;
   font-size: 20px;
 }
 header.header .cart-menu ul li a:hover {
+  color: #24abe6;
+}
+header.header .cart-menu ul li .search-form {
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header.header .cart-menu ul li .search-form input[type="text"] {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+header.header .cart-menu ul li .search-form .search-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+header.header .cart-menu ul li .search-form .search-btn:hover {
   color: #24abe6;
 }
 /* ---------------------------------------

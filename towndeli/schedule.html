@@ -117,90 +117,96 @@
     </div>
 </div>
 
-<div class="modal fade review-modal" tabindex="-1">
+<div class="modal fade edit-schedule-modal" tabindex="-1">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="row mgb-5">
-                    <div class="col-xs-4">
-                        <span class="title">Xử lý đơn hàng:</span>
-                    </div>
-                    <div class="col-xs-8 star-wrapper">
-                        <i class="star star1 star-yellow"></i>
-                        <i class="star star2 star-yellow"></i>
-                        <i class="star star3 star-yellow"></i>
-                        <i class="star star4 star-yellow"></i>
-                        <i class="star star5 star-gray"></i>
-                    </div>
+                <div class="row mgb-15">
+                    <h4 class="title">1.PICK A COFEE</h4>
                 </div>
-                <div class="row mgb-5">
-                    <div class="col-xs-4">
-                        <span class="title">Thời gian giao hàng:</span>
+                <div class="row mgb-15">
+                    <div class="col-md-3">
+                        <label class="cus-lable">COFEE</label>
+                        <select id="coffee-select" class="custom-select" style="width:100%">
+                            <option value="1">COFFEE 1</option>
+                            <option value="2">COFFEE 2</option>
+                            <option value="3">COFFEE 3</option>
+                            <option value="4">COFFEE 4</option>
+                        </select>
                     </div>
-                    <div class="col-xs-8 star-wrapper">
-                        <i class="star star1 star-gray"></i>
-                        <i class="star star2 star-gray"></i>
-                        <i class="star star3 star-gray"></i>
-                        <i class="star star4 star-gray"></i>
-                        <i class="star star5 star-gray"></i>
+                    <div class="col-md-3">
+                        <label class="cus-lable">SIZE</label>
+                        <select id="coffee-select" class="custom-select" style="width:100%">
+                            <option value="1">SIZE 1</option>
+                            <option value="2">SIZE 2</option>
+                            <option value="3">SIZE 3</option>
+                            <option value="4">SIZE 4</option>
+                        </select>
                     </div>
-                </div>
-                <div class="row mgb-5">
-                    <div class="col-xs-4">
-                        <span class="title">Phong cách giao hàng:</span>
+                    <div class="col-md-3">
+                        <label class="cus-lable">TOPPING</label>
+                        <select id="coffee-select" class="custom-select" style="width:100%">
+                            <option value="1">TOPPING 1</option>
+                            <option value="2">TOPPING 2</option>
+                            <option value="3">TOPPING 3</option>
+                            <option value="4">TOPPING 4</option>
+                        </select>
                     </div>
-                    <div class="col-xs-8 star-wrapper">
-                        <i class="star star1 star-gray"></i>
-                        <i class="star star2 star-gray"></i>
-                        <i class="star star3 star-gray"></i>
-                        <i class="star star4 star-gray"></i>
-                        <i class="star star5 star-gray"></i>
+                    <div class="col-md-3">
+                        <label class="cus-lable">QUANTITY</label>
+                        <select id="coffee-select" class="custom-select" style="width:100%">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row mgb-15">
-                    <div class="col-xs-4">
-                        <span class="title">Chất lượng món nước:</span>
-                    </div>
-                    <div class="col-xs-8 star-wrapper">
-                        <i class="star star1 star-gray"></i>
-                        <i class="star star2 star-gray"></i>
-                        <i class="star star3 star-gray"></i>
-                        <i class="star star4 star-gray"></i>
-                        <i class="star star5 star-gray"></i>
-                    </div>
+                    <h4 class="title">1.DELIVERY DATES</h4>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <textarea class="form-control" rows="5" id="comment" placeholder="Review của bạn..."></textarea>
+                <div class="row mgb-15">
+                    <div class="col-md-6">
+                        <label class="cus-lable">DATE</label>
+                        <select id="coffee-select" class="custom-select" style="width:100%">
+                            <option value="1">Các ngày trong tuần</option>
+                            <option value="2">Orther options</option>
+                            <option value="3">Orther options</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="cus-lable">TIME</label>
+                        <select id="coffee-select" class="custom-select" style="width:100%">
+                            <option value="08:30:00">08:30:00</option>
+                            <option value="09:00:00">09:00:00</option>
+                            <option value="09:30:00">09:30:00</option>
+                            <option value="10:00:00">10:00:00</option>
+                            <option value="10:30:00">10:30:00</option>
+                        </select>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-send" data-dismiss="modal" data-dismiss="modal" data-toggle="modal" data-target=".review-completed-modal">Gởi</button>
-                <button type="button" class="btn btn-cacel" data-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-update">Cập nhật</button>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade review-completed-modal" tabindex="-1">
+<div class="modal fade remove-schedule-modal" tabindex="-1">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="like-icon">
-                    <img src="dist/images/big-like-icon.png" alt=""/>
+                <div class="remove-icon">
+                    <img src="dist/images/big-remove-icon.png" alt=""/>
                 </div>
                 <div class="text">
-                    <span>Cảm ơn bạn đã vote và gởi review</span>
-                    <span>Hãy like hoặc share đẻ nhận nhiều thú vị từ Town Deli</span>
+                    <span><strong>Lịch đặt món này đã thanh toán trong 1 tháng.</strong></span>
+                    <span>Nếu bạn chắc chắn muốn hủy, Town Deli sẽ chuyển khoản số tiền còn lại tính từ ngày <span class="date">19/12/2016</span> cho bạn</span>
                 </div>
             </div>
             <div class="modal-footer">
-                <ul>
-                    <li class="facebook"><a href=""><i></i></a></li>
-                    <li class="google"><a href=""></a><i></i></li>
-                    <li class="twitter"><a href=""></a><i></i></li>
-                </ul>
+                <button type="button" class="btn btn-remove">Cập nhật</button>
             </div>
         </div>
     </div>
@@ -516,7 +522,7 @@
 
 <div class="main">
     <div class="container">
-        <div class="wrap-tracking">
+        <div class="wrap-schedule">
             <div class="row">
                 <div class="col-sm-2">
                     <div class="cat-menu">
@@ -530,152 +536,121 @@
                     <!-- /.cat-menu -->
                 </div>
                 <div class="col-sm-10">
-                    <div class="tracking-content">
+                    <div class="schedule-content">
+                        <div class="row header">
+                            <div class="col-xs-12">
+                                <h4 class="title">Lịch đặt món</h4>
+                            </div>
+                        </div>
                         <div class="row">
-                            <div class="tracking-header">
-                                <div class="order-name">
-                                    <span>Đơn đặt hàng 1: Cold-brewed coffee</span>
-                                </div>
-                                <div class="btn-control">
-                                    <ul >
-                                        <li>
-                                            <a href="#" class="pre"><span></span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="next"><span></span></a>
-                                        </li>
+                            <div class="table-responsive">
+                                <table class="table schedule-table">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Tên món</th>
+                                            <th>Ngày tạo</th>
+                                            <th>Size</th>
+                                            <th>Số lượng</th>
+                                            <th>Thời gian giao</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <span>Cafe Sữa</span>
+                                                <span><strong>Tooping:</strong> Phô mai, khúc bạch, trân châu</span>
+                                            </td>
+                                            <td>
+                                                <span class="time">23:30</span>
+                                                <span class="date">13/12/2016</span>
+                                            </td>
+                                            <td>
+                                                <span class="time">Vưa</span>
+                                            </td>
+                                            <td>2 ly</td>
+                                            <td><span>8:30 Mỗi ngày</span></td>
+                                            <td class="btn-control">
+                                                <a href="" class="edit" data-toggle="modal" data-target=".edit-schedule-modal"></a>
+                                                <a href="" class="remove" data-toggle="modal" data-target=".remove-schedule-modal"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                <span>Cafe Sữa</span>
+                                                <span><strong>Tooping:</strong> Phô mai, khúc bạch, trân châu</span>
+                                            </td>
+                                            <td>
+                                                <span class="time">23:30</span>
+                                                <span class="date">13/12/2016</span>
+                                            </td>
+                                            <td>
+                                                <span class="time">Vưa</span>
+                                            </td>
+                                            <td>2 ly</td>
+                                            <td><span>8:30 Mỗi ngày</span></td>
+                                            <td class="btn-control">
+                                                <a href="" class="edit" data-toggle="modal" data-target=".edit-schedule-modal"></a>
+                                                <a href="" class="remove" data-toggle="modal" data-target=".remove-schedule-modal"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>
+                                                <span>Cafe Sữa</span>
+                                                <span><strong>Tooping:</strong> Phô mai, khúc bạch, trân châu</span>
+                                            </td>
+                                            <td>
+                                                <span class="time">23:30</span>
+                                                <span class="date">13/12/2016</span>
+                                            </td>
+                                            <td>
+                                                <span class="time">Vưa</span>
+                                            </td>
+                                            <td>2 ly</td>
+                                            <td><span>8:30 Mỗi ngày</span></td>
+                                            <td class="btn-control">
+                                                <a href="" class="edit" data-toggle="modal" data-target=".edit-schedule-modal"></a>
+                                                <a href="" class="remove" data-toggle="modal" data-target=".remove-schedule-modal"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>
+                                                <span>Cafe Sữa</span>
+                                                <span><strong>Tooping:</strong> Phô mai, khúc bạch, trân châu</span>
+                                            </td>
+                                            <td>
+                                                <span class="time">23:30</span>
+                                                <span class="date">13/12/2016</span>
+                                            </td>
+                                            <td>
+                                                <span class="time">Vưa</span>
+                                            </td>
+                                            <td>2 ly</td>
+                                            <td><span>8:30 Mỗi ngày</span></td>
+                                            <td class="btn-control">
+                                                <a href="" class="edit" data-toggle="modal" data-target=".edit-schedule-modal"></a>
+                                                <a href="" class="remove" data-toggle="modal" data-target=".remove-schedule-modal"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center">
+                                <div class="pagination">
+                                    <ul>
+                                        <li class="border"><a>PREVIOUS</a></li>
+                                        <li class="active"><span>1</span></li>
+                                        <li><a>2</a></li>
+                                        <li><a>3</a></li>
+                                        <li class="border"><a>NEXT</a></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="general-info row">
-                                <div class="col-xs-12 col-sm-3 border-right mgt-15">
-                                    <div class="wrapper">
-                                        <div><strong>Mã đơn hàng:</strong></div>
-                                        <div>1234567890</div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-3 border-right mgt-15">
-                                    <div class="wrapper">
-                                        <div><strong>Thời gian đặt:</strong></div>
-                                        <div>22:00, Thứ 3 13/12/2016</div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-3 border-right mgt-15">
-                                    <div class="wrapper">
-                                        <div><strong>Tổng tiền:</strong></div>
-                                        <div>80.000 đ</div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-3 mgt-15 mgb-15">
-                                    <div class="wrapper completed">
-                                        <div><strong>Tình trạng đơn hàng:</strong></div>
-                                        <i class="icon"></i>
-                                        <span class="status">Hoàn tất</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="orders-flow orders-flow-tracking-4">
-                                <div class="top">
-                                    <div class="content content-step-4">
-                                        <div class="coffe-cup">
-                                            <a><img src="dist/images/coffe-cup.png" alt="img"></a>
-                                        </div>
-                                        <div class="ship-info">
-                                            <span>Nguyễn Văn A đã thành công giao thức uống đến Nguyễn Thị Linh vào lúc 23:30</span>
-                                            <a href="" data-toggle="modal" data-target=".review-modal">Hãy review để giúp Town Deli tốt hơn</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mid">                                 
-                                    <div class="progress-wrapper">
-                                        <div class="progress progress-tracking-4">
-                                            <div class="one">
-                                                <div class="circle active">
-                                                    <i class="icon"></i>
-                                                </div>
-                                                <div class="title">
-                                                    <span>22:10</span>
-                                                    <span><strong>Đã duyệt</strong></span>
-                                                </div>
-                                            </div>
-                                            <div class="two">
-                                                <div class="circle active">
-                                                    <i class="icon"></i>
-                                                </div>
-                                                <div class="title">
-                                                    <span>22:30</span>
-                                                    <span><strong>Đã pha chế</strong></span>
-                                                </div>
-                                            </div>
-                                            <div class="three">
-                                                <div class="circle active">
-                                                    <i class="icon"></i>
-                                                </div>
-                                                <div class="title titile-step-3">
-                                                    <span>Giao vào lúc: <strong>23:30</strong></span>
-                                                    <span>Giao đến: 153 Hai Bà Trưng, P.Đakao, Q.1</span>
-                                                    <span>Người nhận: Nguyễn Thị Linh</span>
-                                                    <span>SĐT: 0964123321</span>
-                                                </div>
-                                            </div>
-                                            <div class="progress-bar progress-bar-4">
-                                                <div class="node-wrapper"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 orders-detail">
-                                <h5 class="title"><strong>Chi tiết đơn hàng</strong></h5>
-                                <div class="table-responsive">
-                                    <table class="table orders-list-table">
-                                        <thead>
-                                            <tr>
-                                                <th>STT</th>
-                                                <th>TÊN MÓN</th>
-                                                <th>YÊU CẦU MÓN</th>
-                                                <th>SỐ LƯỢNG</th>
-                                                <th>THÀNH TIỀN</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td class="name">
-                                                    <span class="drink-name">Cool-brewed coffee - Standard</span>
-                                                    <span class="notes">Món thêm: Cookies, Strawbery, phô mai</span>
-                                                </td>
-                                                <td>Ít ngọt, ít đá</td>
-                                                <td>1</td>
-                                                <td>20.000 đ</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td class="name">
-                                                    <span class="drink-name">Cool-brewed coffee - Standard</span>
-                                                    <span class="notes">Món thêm: Cookies, Strawbery, phô mai</span>
-                                                </td>
-                                                <td>Ít ngọt, ít đá</td>
-                                                <td>1</td>
-                                                <td>20.000 đ</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="orders-table-footer">
-                                    <div class="col-xs-6 col-sm-8 notes">
-                                        <div class="note-title">Ghi chú đơn hàng</div>
-                                        <div class="note-content">
-                                            Giao hàng trước 12h, gặp lệ tân và nói giao hàng cho chị Loan phòng maketing
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-4 total">
-                                        <div>Tính tạm: 80.000 đ</div>
-                                        <div>Voucher: -10.000 đ</div>
-                                        <div>Điểm tích lũy: -20.000 đ</div>
-                                        <div><strong>TỔNG TIỀN: 80.000 đ</strong></div>
-                                    </div>
-                                </div>
+                                <!-- /.pagination -->
                             </div>
                         </div>
                     </div>
