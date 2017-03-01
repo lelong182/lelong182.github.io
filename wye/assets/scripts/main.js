@@ -54,6 +54,26 @@
 
 
         /* =================================
+         ===  Top Search                 ====
+         =================================== */
+        $(this).on('click', '.cart-menu .search-btn', function () {
+            var search_form = $('.cart-menu .search-form');
+            if(search_form.hasClass('open')) {
+                search_form.removeClass('open');
+            } else {
+                search_form.addClass('open');
+            }
+            return false;
+        });
+        $(document).on('mouseup', 'body', function (e) {
+            var container = $('.cart-menu .search-form');
+            if (!container.is(e.target) && container.has(e.target).length === 0 && !$('.cart-menu .search-btn').is(e.target)) {
+                container.removeClass('open');
+            }
+        });
+
+
+        /* =================================
          ===  List Clients                 ====
          =================================== */
         $('.list-clients').slick({

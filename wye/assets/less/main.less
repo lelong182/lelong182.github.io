@@ -55,7 +55,7 @@ iframe[name='google_conversion_frame'] {
             top: -20px;
         }
         .main-nav {
-            top: -30px;
+            top: -22px;
             @media (max-width: @screen-sm-max) {
                 top: -15px;
             }
@@ -72,15 +72,24 @@ iframe[name='google_conversion_frame'] {
             }
         }
         .login-menu {
-            top: -56px;
+            top: -48px;
             @media (max-width: @screen-xs-max) {
                 top: -50px;
             }
         }
         .cart-menu {
-            top: -55px;
+            top: -48px;
             @media (max-width: @screen-xs-max) {
                 top: -50px;
+            }
+            ul {
+                li {
+                    .search-form {
+                        input[type="text"] {
+                            background-color: @second-color;
+                        }
+                    }
+                }
             }
         }
     }
@@ -329,7 +338,7 @@ header.header {
             li {
                 display: inline-block;
                 padding: 5px 10px 0;
-                line-height: 11px;
+                line-height: 8px;
                 border-right: 1px solid #fff;
                 &:last-child {
                     border-right: none;
@@ -339,6 +348,7 @@ header.header {
                     font-size: 14px;
                     font-weight: 500;
                     border-bottom: 1px solid transparent;
+                    line-height: 10px;
                     &:hover {
                         border-color: #fff;
                     }
@@ -365,9 +375,15 @@ header.header {
                 padding: 0 10px;
                 line-height: 1;
                 border-right: 1px solid #fff;
+                &:first-child {
+                    a {
+                        display: inline-block;
+                        margin-top: -2px;
+                    }
+                }
                 &:last-child {
                     border-right: none;
-                    width: 30px;
+                    width: 26px;
                 }
                 a {
                     color: #fff;
@@ -377,21 +393,56 @@ header.header {
                     }
                 }
                 .search-form {
-                    font-size: 16px;
+                    font-size: 14px;
                     position: absolute;
-                    top: 0;
+                    top: -2px;
                     right: 0;
+                    &.open {
+                        input[type="text"] {
+                            width: 250px;
+                            opacity: 1;
+                            visibility: visible;
+                            transition: all 0.2s ease;
+                        }
+                    }
+                    ::-webkit-input-placeholder {
+                        color: #fff;
+                    }
+
+                    :-moz-placeholder {
+                        color: #fff;
+                    }
+
+                    ::-moz-placeholder {
+                        color: #fff;
+                    }
+
+                    :-ms-input-placeholder {
+                        color: #fff;
+                    }
                     input[type="text"] {
                         width: 0;
+                        height: 34px;
+                        padding: 0 10px;
                         opacity: 0;
                         visibility: hidden;
+                        background-color: #737778;
+                        border: none;
+                        color: #fff;
+                        position: absolute;
+                        top: -5px;
+                        right: -5px;
+                        transition: all 0.2s ease;
                     }
                     .search-btn {
                         background-color: transparent;
                         border: none;
                         color: #fff;
-                        font-size: 20px;
+                        font-size: 18px;
                         transition: all 0.3s ease;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
                         &:hover {
                             color: @main-color;
                         }
