@@ -12073,6 +12073,11 @@ iframe[name='google_conversion_frame'] {
   font-weight: 700;
   line-height: 1;
 }
+@media (max-width: 857px) {
+  .hero .testimonial .list-testi h4 {
+    margin-top: 10px;
+  }
+}
 .hero .testimonial .list-testi p {
   color: #fff;
   font-size: 16px;
@@ -13476,16 +13481,9 @@ header.header .cart-menu ul li .search-form .search-btn:hover {
   .corporates-business .cb-box {
     padding-top: 40px;
     height: 400px;
-  }
-}
-@media (max-width: 480px) {
-  .corporates-business .cb-box {
     width: calc(100% - 30px);
     margin: 0 0 20px;
   }
-}
-.corporates-business .cb-box:hover {
-  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1);
 }
 .corporates-business .cb-box h3 {
   color: #24abe6;
@@ -13536,6 +13534,70 @@ header.header .cart-menu ul li .search-form .search-btn:hover {
   right: 0;
   font-size: 16px;
   padding: 15px 0;
+}
+.corporates-business .cb-box .hover-box {
+  position: absolute;
+  border: 1px solid #d7d7d7;
+  opacity: 0;
+  visibility: hidden;
+  top: -1px;
+  right: -1px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  width: 500px;
+  font-size: 16px;
+  padding: 40px 30px;
+  z-index: 10;
+}
+@media (max-width: 1199px) {
+  .corporates-business .cb-box .hover-box {
+    padding: 20px;
+    width: calc(100% + 2px);
+  }
+}
+.corporates-business .cb-box .hover-box.open {
+  opacity: 1;
+  visibility: visible;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1);
+}
+.corporates-business .cb-box .hover-box ul {
+  margin-bottom: 30px;
+  text-align: left;
+  height: 480px;
+}
+@media (max-width: 1199px) {
+  .corporates-business .cb-box .hover-box ul {
+    height: 420px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 857px) {
+  .corporates-business .cb-box .hover-box ul {
+    height: 380px;
+  }
+}
+.corporates-business .cb-box .hover-box ul li {
+  list-style: none;
+}
+.corporates-business .cb-box .hover-box ul li h6 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  font-weight: normal;
+}
+.corporates-business .cb-box .hover-box ul li h6:before {
+  content: "\f059";
+  font-family: FontAwesome;
+  margin-right: 8px;
+}
+.corporates-business .cb-box .hover-box .started-btn {
+  background-color: #24abe6;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  width: 300px;
+  padding: 5px 0;
+  font-size: 20px;
+  font-weight: 500;
 }
 /* ---------------------------------------
      FOR CORPORATES & FOR BUSINESS

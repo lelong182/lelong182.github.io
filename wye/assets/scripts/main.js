@@ -86,6 +86,19 @@
 
 
         /* =================================
+         ===  Corporates Business                 ====
+         =================================== */
+        $(this).on({
+            mouseenter: function () {
+                $(this).find('.hover-box').addClass('open');
+            },
+            mouseleave: function () {
+                $(this).find('.hover-box').removeClass('open');
+            }
+        }, '.corporates-business .cb-box');
+
+
+        /* =================================
          ===  List Clients                 ====
          =================================== */
         $('.list-clients').slick({
