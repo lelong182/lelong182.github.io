@@ -44,6 +44,14 @@
                     $(this).addClass('opened');
                 }
             });
+            mySticky('label.minimal-menu-button', 25);
+            $(this).on('click', 'label.minimal-menu-button', function () {
+                if($('input.minimal-menu-button:checked').length) {
+                    $('.black-overlay').remove();
+                } else {
+                    $('body').prepend('<div class="black-overlay"></div>');
+                }
+            });
         }
 
 
@@ -276,3 +284,70 @@
     });
 
 })(window.jQuery);
+
+var ctrl = new ScrollMagic.Controller();
+var scene = new ScrollMagic.Scene();
+function mySticky(selector, options) {
+    if ($(selector).length) {
+        var offset = 0;
+        var side = '';
+        var side_val = 0;
+        if (typeof options == 'number') {
+            offset = options;
+        } else {
+            offset = options[Object.keys(options)[0]];
+            side = Object.keys(options)[1];
+            side_val = options[Object.keys(options)[1]];
+        }
+        var this_position_type = $(selector).css('position');
+        $(selector).removeAttr('style');
+        scene
+            .offset(offset)
+            .on("enter", function () {
+                $(selector).addClass('is-sticky');
+                if (side == 'left') {
+                    $(selector).css({
+                        position: 'fixed',
+                        left: side_val
+                    });
+                } else if (side == 'right') {
+                    $(selector).css({
+                        position: 'fixed',
+                        right: side_val
+                    });
+                } else {
+                    $(selector).css({
+                        position: 'fixed'
+                    });
+                }
+            })
+            .on("leave", function () {
+                $(selector).removeClass('is-sticky');
+                if (side == 'left') {
+                    $(selector).css({
+                        position: this_position_type,
+                        left: 'initial'
+                    });
+                } else if (side == 'right') {
+                    $(selector).css({
+                        position: this_position_type,
+                        right: 'initial'
+                    });
+                } else {
+                    $(selector).css({
+                        position: this_position_type
+                    });
+                }
+            })
+            .addTo(ctrl);
+        if (offset < 0) {
+            ctrl.enabled(false);
+            scene.enabled(false);
+        } else {
+            ctrl.enabled(true);
+            scene.enabled(true);
+        }
+        scene.update(true);
+        ctrl.update(true);
+    }
+}

@@ -44,6 +44,7 @@ gulp.task('js', function () {
         'assets/scripts/libs/bootstrap.min.js',
         'assets/scripts/libs/modernizr.js',
         'assets/scripts/libs/slick.min.js',
+        'assets/scrollmagic/ScrollMagic.min.js',
         'assets/scripts/libs/perfect-scrollbar.jquery.min.js',
         'assets/scripts/main.js'
     ])

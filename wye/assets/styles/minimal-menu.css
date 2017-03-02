@@ -215,6 +215,13 @@
         z-index: 999;
     }
 
+    .minimal-menu-button.is-sticky {
+        top: 10px;
+        right: 15px;
+        background-color: #333;
+        box-shadow: 0px 0px 3px -1px rgba(0,0,0,0.8);
+    }
+
     .minimal-menu {
         position: fixed;
         z-index: 999;

@@ -11928,6 +11928,18 @@ label.css-label:before {
   }
 }
 /* ---------------------------------------
+    BLACK OVERLAY
+----------------------------------------- */
+.black-overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 190;
+}
+/* ---------------------------------------
     IFRAME GOOGLE CODE
 ----------------------------------------- */
 iframe[name='google_conversion_frame'] {
@@ -13545,6 +13557,7 @@ header.header .cart-menu ul li .search-form .search-btn:hover {
   font-size: 35px;
   font-weight: 500;
   margin: 0 0 50px;
+  text-transform: uppercase;
 }
 @media (max-width: 857px) {
   .for-corporates h3,
