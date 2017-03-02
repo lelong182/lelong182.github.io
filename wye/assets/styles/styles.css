@@ -12089,7 +12089,7 @@ iframe[name='google_conversion_frame'] {
   min-width: 200px;
   display: inline-block;
   text-align: center;
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
 }
 .hero .testimonial .list-testi .testi-btn:hover {
   background-color: #24abe6;
