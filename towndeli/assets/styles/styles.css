@@ -8615,6 +8615,137 @@ header.header .top-links li .child-box ul li a.highlight {
 .edit-order-name-modal .modal-footer .btn-cacel {
   border-radius: 0;
 }
+.download-order-modal {
+  text-align: center;
+  padding: 0 !important;
+}
+@media (min-width: 1200px) {
+  .download-order-modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+}
+.download-order-modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+@media (max-width: 858px) {
+  .download-order-modal .modal-dialog {
+    min-width: 310px;
+  }
+}
+.download-order-modal .modal-body {
+  padding-top: 0;
+  color: #000000;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: left;
+}
+.download-order-modal .modal-body label {
+  display: block;
+}
+.download-order-modal .modal-body .title {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+@media (max-width: 520px) {
+  .download-order-modal .modal-body .table-responsive {
+    width: 350px;
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 420px) {
+  .download-order-modal .modal-body .table-responsive {
+    width: 300px;
+    overflow-x: scroll;
+  }
+}
+.download-order-modal .modal-body .table-responsive .detail-order-table {
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+  min-width: 320px;
+}
+.download-order-modal .modal-body .table-responsive .detail-order-table thead tr th {
+  background-color: #666;
+  color: #fff;
+  padding: 10px;
+  border-bottom: none;
+}
+.download-order-modal .modal-body .table-responsive .detail-order-table tbody tr td {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.download-order-modal .modal-body .table-responsive .detail-order-table tbody tr td:nth-child(3) {
+  text-align: center;
+}
+.download-order-modal .modal-body .table-responsive .detail-order-table tbody tr td:nth-child(4) {
+  text-align: right;
+}
+.download-order-modal .modal-body .table-responsive .detail-order-table tbody tr td a {
+  color: #02b691;
+  text-decoration: underline;
+}
+.download-order-modal .modal-body .table-responsive .detail-order-table tbody tr td span {
+  display: block;
+}
+.download-order-modal .modal-body .table-responsive .detail-order-table tbody tr td .cash {
+  color: #555555;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.download-order-modal .modal-body .btn-control {
+  padding-top: 25px;
+}
+.download-order-modal .modal-body .btn-control .btn-send-order .icon {
+  position: absolute;
+  width: 37px;
+  height: 30px;
+  margin-left: 15px;
+  background: url('../images/big-email.png') no-repeat;
+}
+.download-order-modal .modal-body .btn-control .btn-down-order {
+  padding-left: 100px;
+}
+@media (max-width: 420px) {
+  .download-order-modal .modal-body .btn-control .btn-down-order {
+    padding-left: 80px;
+  }
+}
+.download-order-modal .modal-body .btn-control .btn-down-order .icon {
+  position: absolute;
+  width: 24px;
+  height: 30px;
+  margin-left: 20px;
+  background: url('../images/big-download.png') no-repeat;
+}
+.download-order-modal .modal-body .btn-control .text {
+  padding-top: 35px;
+  position: absolute;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+}
+@media (max-width: 420px) {
+  .download-order-modal .modal-body .btn-control .text {
+    line-height: 15px;
+    font-size: 13px;
+  }
+}
+.download-order-modal .modal-body .total-order {
+  text-align: right;
+}
 .edit-schedule-modal {
   text-align: center;
   padding: 0 !important;
@@ -9789,10 +9920,24 @@ header.header .top-links li .child-box ul li a.highlight {
   margin-bottom: 0;
 }
 .checkout-table tbody tr.voucher-row td {
-  border-bottom: 1px solid #eae9e9;
   border-top: 1px solid #eae9e9;
 }
 .checkout-table tbody tr.voucher-row td input[type="text"] {
+  border: 2px solid #515252;
+  height: 30px;
+  padding: 0 10px;
+  width: 300px;
+}
+.checkout-table tbody tr.voucher-row td .btn-apply {
+  background-color: #02b691;
+  margin-left: 10px;
+  width: 99px;
+  height: 30px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+.checkout-table tbody tr.scores-row td input[type="text"] {
   border: 2px solid #515252;
   height: 30px;
   padding: 0 10px;
@@ -10289,6 +10434,79 @@ header.header .top-links li .child-box ul li a.highlight {
   color: #02b691;
   font-size: 32px;
   line-height: 1;
+}
+.main .wrap-checkout .customer-info label {
+  color: #515252;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  margin-right: 10px;
+}
+.main .wrap-checkout .customer-info input[type=text] {
+  border-width: 2px;
+  border-color: #515252;
+  border-style: solid;
+  height: 37px;
+  width: 100%;
+}
+.main .wrap-checkout .customer-info .send-gift-checkbox label {
+  padding-left: 30px;
+  padding-top: 5px;
+}
+.main .wrap-checkout .customer-info .send-gift-checkbox label:after {
+  border-width: 2px;
+  border-color: #02b691;
+  border-style: solid;
+  content: "";
+  height: 21px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+}
+.main .wrap-checkout .customer-info .send-gift-checkbox input[type=checkbox].css-checkbox:checked + label.css-label:after {
+  background-position: none !important;
+  background: url("../images/checked.png") no-repeat !important;
+}
+.main .wrap-checkout .customer-info .location {
+  height: 40px !important;
+}
+.main .wrap-checkout .customer-info .form-group {
+  display: inline-block;
+  width: 100%;
+}
+.main .wrap-checkout .customer-info .form-group .left-form {
+  float: left;
+  width: 110px;
+}
+.main .wrap-checkout .customer-info .form-group .left-form label {
+  font-weight: normal;
+  margin: 7px 0 0;
+}
+.main .wrap-checkout .customer-info .form-group .right-form {
+  float: left;
+  width: calc(100% - 110px);
+}
+.main .wrap-checkout .schedule .payment-one-month-checkbox label {
+  padding-left: 30px;
+  padding-top: 5px;
+}
+.main .wrap-checkout .schedule .payment-one-month-checkbox label:after {
+  border-width: 2px;
+  border-color: #02b691;
+  border-style: solid;
+  content: "";
+  height: 21px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+}
+.main .wrap-checkout .schedule .payment-one-month-checkbox input[type=checkbox].css-checkbox:checked + label.css-label:after {
+  background-position: none !important;
+  background: url("../images/checked.png") no-repeat !important;
 }
 .main .wrap-checkout .payment-methods #payment-methods-select {
   width: 300px;
