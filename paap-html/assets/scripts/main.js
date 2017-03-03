@@ -35,6 +35,16 @@
             });
         }
 
+
+        /* =================================
+         ===  Login page                 ====
+         =================================== */
+        $(this).on('click', '.paap-login .login-form .register-btn', function () {
+            $('.paap-login .register-form').removeClass('hidden');
+            $('.paap-login .login-form').addClass('hidden');
+            return false;
+        });
+
     });
 
 })(window.jQuery);

@@ -11876,6 +11876,14 @@ MAIN STYLES
   top: 10px;
   right: 15px;
 }
+.input-has-icon .icon-3 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+.input-has-icon .icon-3 + .custom-input {
+  padding: 0 10px 0 50px;
+}
 /* ---------------------------------------
     CUSTOM CHECKBOX & RADIO
 ----------------------------------------- */
@@ -12797,6 +12805,51 @@ label.css-label:before {
   width: 150px;
   background-color: #fff;
   margin-left: 15px;
+}
+.main .paap-login {
+  width: 360px;
+  margin: auto;
+  padding: 50px 0 100px;
+}
+.main .paap-login h3 {
+  font-family: 'CourierNew', sans-serif;
+  margin: 0 0 25px;
+  color: #0099cc;
+}
+.main .paap-login .login-btn {
+  background-color: #0099cc;
+  width: 100%;
+  border: none;
+  color: #fff;
+  height: 46px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: 'CourierNew', sans-serif;
+}
+.main .paap-login .register-btn {
+  background-color: #00a651;
+  border: none;
+  width: 100%;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  height: 46px;
+  border-radius: 5px;
+  font-family: 'CourierNew', sans-serif;
+  margin-bottom: 15px;
+}
+.main .paap-login .forget-link {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'CourierNew', sans-serif;
+  color: #0099cc;
+}
+.main .paap-login label {
+  font-size: 18px;
+  color: #0099cc;
+  font-family: 'CourierNew', sans-serif;
 }
 /* ---------------------------------------
     FOOTER
