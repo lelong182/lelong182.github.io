@@ -24,7 +24,7 @@
     <link rel="shortcut icon" href="dist/images/favicon.png"/>
 
     <link rel="stylesheet" type="text/css" href="dist/styles/main.css?v=1.0.1"/>
-
+    
     <!--[if lt IE 9]>
     <script src="dist/scripts/html5shiv.js"></script>
     <script src="dist/scripts/respond.js"></script>
@@ -112,6 +112,56 @@
                     <p class="note">Bằng việc đăng ký và sử dụng website, bạn đồng ý với các Điều khoản & Quy chế</p>
                     <button class="submit-btn">Đăng ký</button>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade verify-code-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-icon" data-dismiss="modal">
+                    <img src="dist/images/close-3-icon.png" alt="img">
+                </span>
+                <img src="dist/images/verify-code.png" alt="">
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text">TOWNDELI đã gởi đến số điện thoại <span>090 xxx xxxx</span> mã xác nhận gồm 4 ký số vì đây là lần sử dụng đầu tiên. Vui lòng nhập đúng 4 ký số bạn nhận được vào ô bên dưới:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <input type="text" class="form-control code-input">
+                        <label class="error">Mã xác thực không đúng</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a class="re-send-code">Tôi chưa nhận được mã, hãy gởi lại</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="update-phone-mumber">
+                            <input type="radio" name="update-phone-number" value="yes" id="update-phone-mumber" class="css-checkbox" />
+                            <label for="update-phone-mumber" class="css-label">Tôi muốn cập nhật số điện thoại này</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="no-update-phone-mumber">
+                            <input type="radio" name="update-phone-number" value="no" id="no-update-phone-mumber" class="css-checkbox" />
+                            <label for="no-update-phone-mumber" class="css-label">Không cập nhật số điện thoại này</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-send">Gởi xác nhận</button>
             </div>
         </div>
     </div>
@@ -536,7 +586,7 @@
                             <label for="send-gift-checkbox" class="css-label">SEND THIS GIFT TO</label>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 hidden receive-gift-info">
                         <div class="row">
                             <div class="col-md-6">
                                 <label>NAME</label>
@@ -549,7 +599,7 @@
                         </div>
                         <div class="row mgt-15">
                             <div class="col-md-2">
-                                <label>MESSAGE</label>
+                                <label>MESSAGE (Optional)</label>
                             </div>
                             <div class="col-md-10">
                                 <textarea id="" placeholder="Need to send a message? Add here..."></textarea>
@@ -573,8 +623,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
-                        <input type="text" class="location" value="01 Le Duan, Dakao, Q.1, HCMC, Vietnam">
+                    <div class="col-md-8 location-container">
+                        <input type="text" class="location" id="locationTextField">
+                        <img src="dist/images/location1.png" class="input_img">
                     </div>
                 </div>
             </div>
@@ -582,7 +633,6 @@
             <div class="schedule">
                 <div class="wrap-caption-link">
                     <h3>schedule</h3>
-                    <a class="more-link">Schedule more</a>
                 </div>
                 <div class="clearfix mgb-20 mgt-15">
                     <div class="pull-left">
@@ -603,11 +653,11 @@
                     <h3>payment methods</h3>
                     <span class="question-icon" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cum ducimus earum excepturi, fugit laudantium necessitatibus nostrum obcaecati perferendis repellendus."><i class="fa fa-question-circle"></i></span>
                 </div>
-                <div class="form-group">
-                    <div class="left-form">
+                <div class="row">
+                    <div class="col-md-3">
                         <label for="payment-methods-select">PAYMENT METHODS</label>
                     </div>
-                    <div class="right-form">
+                    <div class="col-md-9">
                         <select id="payment-methods-select" class="custom-select no-search">
                             <option value="">Select payment method</option>
                             <option value="1">Method 1</option>
@@ -616,15 +666,17 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="left-form">
+                <div class="row mgt-15">
+                    <div class="col-md-3">
                         <label for="additional-note-input">ADDITIONAL NOTE</label>
                     </div>
-                    <div class="right-form">
+                    <div class="col-md-9">
                         <textarea id="additional-note-input" placeholder="Please add your note here"></textarea>
                     </div>
                 </div>
-                <div class="text-right"><button class="payment-btn">PAYMENT</button></div>
+                <div class="text-right mgt-15">
+                    <button class="payment-btn" data-toggle="modal" data-target=".verify-code-modal">Hoàn thành</button>
+                </div>
             </div>
         </div>
         <!-- /.wrap-checkout -->
@@ -757,6 +809,12 @@
 </footer>
 <!-- /.footer -->
 
+<script>
+    function initMap () {
+        var autocomplete = new google.maps.places.Autocomplete(document.getElementById('locationTextField'));
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC9YsGjT0YMg7iOHE71N3ZTNDa1SXz54GU&callback=initMap"></script>
 <script type="text/javascript" src="dist/scripts/main.js?v=1.0.1"></script>
 
 </body>

@@ -313,7 +313,7 @@
 
 
         /* =================================
-         ===  Checkout Quantity                 ====
+         ===  Checkout Quantity         ====
          =================================== */
         $(this).on('click', '.wrap-quantity .plus-icon', function () {
             var this_quantity_input = $(this).closest('.wrap-quantity').find('input');
@@ -328,6 +328,76 @@
             }
         });
 
+        /* =================================
+         ===  Checkout Page             ====
+         =================================== */
+        $(this).on('change', '.wrap-checkout #send-gift-checkbox', function () {
+            if(this.checked) {
+                $('.receive-gift-info').removeClass('hidden');
+            } else {
+                $('.receive-gift-info').addClass('hidden');
+            }
+        });
+
+        /* =================================
+         ===  Product Page              ====
+         =================================== */
+        $(this).on('change', '.quickview-modal #add-topping-checkbox', function () {
+            if(this.checked) {
+                $('.add-topping-content').removeClass('hidden');
+            } else {
+                $('.add-topping-content').addClass('hidden');
+            }
+        });
+        $(this).on('change', '.quickview-modal #require-checkbox', function () {
+            if(this.checked) {
+                $('.require-content').removeClass('hidden');
+            } else {
+                $('.require-content').addClass('hidden');
+            }
+        });
+
+        /* =================================
+         ===  Index Page                ====
+         =================================== */
+        $(this).on('change', '.custom-date-select .custom-radio input', function (event) {
+            var checkedVal = $(this).val();
+
+            if (checkedVal === 'custom') {
+                event.preventDefault();
+                $('.custom-date-select').addClass("open");
+                $('.custom-date-select .text-value').attr("aria-expanded","true");
+                $('.custom-date-select .custom-content').removeClass('hidden');
+                $('.custom-date-select .text-value').text('');
+                return;
+            } else {
+                var label = $(this).parent().find('.css-label');
+
+                $('.custom-date-select .text-value').text(label.text());
+                $('.custom-date-select .custom-content').addClass('hidden');
+                $('.custom-date-select .date-checkbox input').prop('checked', false);
+            }
+        });
+
+        $(this).on('change', '.custom-date-select .date-checkbox input', function () {
+            var allCheckboxSelected = $('.custom-date-select .date-checkbox input:checked');
+            var selectDate = '';
+            for (var i = 0; i < allCheckboxSelected.length; i++) {
+                var dataText = $(allCheckboxSelected[i]).attr('data-text');
+                selectDate = selectDate + dataText + ' ';
+            }
+
+            $('.custom-date-select .text-value').text(selectDate);
+        });
+
+        /* =================================
+         ===  Schedule Page             ====
+         =================================== */
+
+        $('.edit-schedule-modal').on('hidden.bs.modal', function(){
+            console.log('hidden');
+            $('.edit-schedule-modal .custom-select').select2("close");
+        })
     });
 
 })(window.jQuery);
