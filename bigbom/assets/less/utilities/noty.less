@@ -1,0 +1,67 @@
+#noty_top_layout_container {
+    left: 0 !important;
+    width: 100% !important;
+    li {
+        background: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        color: #fff !important;
+        margin-bottom: 2px;
+        .noty_type_error {
+            background-color: @error-color;
+            .noty_message {
+                &:before {
+                    background: url("../images/error-icon.png") no-repeat;
+                    content: "";
+                    height: 22px;
+                    left: 5px;
+                    position: absolute;
+                    top: 5px;
+                    width: 25px;
+                }
+            }
+        }
+        .noty_type_success {
+            background-color: @main-color;
+            .noty_message {
+                &:before {
+                    background: url("../images/success-icon.png") no-repeat;
+                    content: "";
+                    height: 24px;
+                    left: 5px;
+                    position: absolute;
+                    top: 4px;
+                    width: 24px;
+                }
+            }
+        }
+        .noty_type_warning {
+            background-color: @warning-color;
+            .noty_message {
+                &:before {
+                    background: url("../images/warning-icon-2.png") no-repeat;
+                    content: "";
+                    height: 22px;
+                    left: 5px;
+                    position: absolute;
+                    top: 4px;
+                    width: 25px;
+                }
+            }
+        }
+        .noty_message {
+            font-weight: normal !important;
+            padding-left: 34px !important;
+            text-align: left !important;
+        }
+        .noty_close {
+            background: url('../images/w-close-icon-3.png') no-repeat center / contain !important;
+            display: block !important;
+            height: 14px !important;
+            opacity: 1 !important;
+            right: 5px !important;
+            top: 9px !important;
+            width: 14px !important;
+        }
+    }
+}

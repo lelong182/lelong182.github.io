@@ -1,0 +1,51 @@
+.form-group {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .error-message {
+        border-left: 1px solid #e74c3c;
+        color: #e74c3c;
+        border-right: 1px solid #e74c3c;
+        padding: 6px 8px;
+        font-size: 12px;
+        border-bottom: 1px solid #e74c3c;
+        text-align: left;
+    }
+}
+.left-form-group {
+    color: #555;
+    float: left;
+    font-size: 15px;
+    height: 40px;
+    margin-bottom: 0;
+    padding-top: 9px;
+    width: 20%;
+
+    &.small-group {
+        height: 25px;
+        padding-top: 2px;
+    }
+}
+.right-form-group {
+    color: #555;
+    float: left;
+    margin-left: 25px;
+    width: ~"calc(80% - 25px)";
+    position: relative;
+
+    h5 {
+        font-size: 15px;
+        font-weight: 700;
+        margin: 5px 0 10px;
+
+        &.no-bold {
+            font-weight: normal;
+        }
+    }
+    label {
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+}

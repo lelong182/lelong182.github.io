@@ -1,0 +1,108 @@
+.popover-modal:after,
+.popover-modal:before {
+    display: inline-block;
+    content: ""
+}
+.popover-wrapper {
+    position: relative
+}
+.popover-modal {
+    -webkit-transition: all 240ms cubic-bezier(.34, 1.61, .7, 1);
+    -o-transition: all 240ms cubic-bezier(.34, 1.61, .7, 1);
+    transition: all 240ms cubic-bezier(.34, 1.61, .7, 1);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transform-origin: 29px -10px;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    width: 360px;
+    margin-top: 8px;
+    left: -12px;
+    border-radius: 4px;
+    border: 1px solid #aab2bd;
+    background-color: #fff
+}
+.popover-wrapper.open .popover-modal {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    background: #C30101 ;
+}
+.popover-wrapper.open .btn-dropdown {
+    outline: 0
+}
+.popover-modal:before {
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    border: 8px solid transparent;
+    border-bottom-color: #aab2bd
+}
+.popover-modal:after {
+    position: absolute;
+    top: -14px;
+    left: 17px;
+    border: 7px solid transparent;
+    border-bottom-color: #C30101;
+}
+.popover-modal .popover-body {
+    margin: 0;
+    padding: 4px 0;
+    max-height: 300px;
+    text-align: left;
+    color: #fff;
+}
+.w260{
+    width: 260px;
+}
+.w90{
+    width: 90px;
+}
+.w90 img{
+    width: 100%;
+}
+.popover-modal .popover-body a{
+    color: #ff7e00;
+}
+.popover-modal .popover-body.popover-body-padded {
+    padding: 8px
+}
+.popover-modal .popover-header {
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    text-align: left;
+    margin: 2px 0 0px;
+}
+.popover-modal .popover-header a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 19px
+}
+.popover-modal .popover-header a:hover {
+    color: #fff
+}
+.popover-modal .popover-header .popover-close-btn {
+    float: right
+}
+.popover-wrapper.right .popover-modal {
+    transform-origin: 275px -10px;
+    right: 0
+}
+.popover-wrapper.right .popover-modal:before {
+    left: auto;
+    right: 16px
+}
+.popover-wrapper.right .popover-modal:after {
+    left: auto;
+    right: 17px
+}
+
+.popover-wrapper.success.open .popover-modal{
+    background: #5eb657!important;
+}
+.success .popover-modal:after{
+    border-bottom-color: #5eb657;
+}

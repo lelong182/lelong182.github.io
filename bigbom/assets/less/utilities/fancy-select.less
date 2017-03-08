@@ -1,0 +1,119 @@
+.fancy-select {
+  select:focus + .trigger {
+    border-color: @active-color;
+  }
+  .trigger {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 0;
+    box-shadow: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: normal;
+    height: 40px;
+    padding: 8px 30px 0 12px;
+    text-transform: none;
+    width: 100%;
+
+    &.open {
+      &:after {
+        content: "\f106";
+        color: #fff;
+      }
+      background-color: @main-color;
+      color: #FFF !important;
+      border-color: @active-color;
+    }
+    &:after {
+      border: medium none;
+      color: #666;
+      content: "\f107";
+      font-family: FontAwesome;
+      font-size: 20px;
+      height: auto;
+      right: 7px;
+      top: 5px;
+      width: auto;
+    }
+  }
+  .options {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 0;
+    box-shadow: none;
+    min-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &.has-sub {
+      overflow: initial;
+      max-height: none;
+    }
+    &.overflowing.open {
+      bottom: 41px;
+      top: initial;
+    }
+    &.open {
+      top: 41px;
+      + .action-btn {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &.has-label {
+      li {
+        cursor: default;
+
+        &.selected, &.hover {
+          color: #333;
+        }
+      }
+    }
+    li {
+      color: #333;
+      font-size: 15px;
+      font-weight: normal;
+      padding: 7px 12px;
+      text-transform: none;
+
+      &.selected, &.hover {
+        background-color: #fff;
+        color: @main-color;
+      }
+      label {
+        width: 100%;
+
+        &:hover {
+          color: @main-color;
+        }
+      }
+      .select-icon {
+        float: left;
+        margin-right: 5px;
+
+        img {
+          width: 16px;
+        }
+      }
+    }
+  }
+  .action-btn {
+    background-color: #ff7e00;
+    border-bottom: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    color: #fff;
+    height: 30px;
+    left: 0;
+    padding-top: 6px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 241px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+}

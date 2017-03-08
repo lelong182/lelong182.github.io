@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Test Table Color</title>
+	<link rel="stylesheet" href="table-color.css">
+</head>
+<body>
+	<div id="chart"></div>
+	<script src="jquery-1.12.2.min.js"></script>
+	<script src="table-color.js"></script>
+	<script>
+		$(document).ready(function(){
+			var data = {
+				2: [5, 10, 15, 8, 8, 42, 12, 32, 14, 24, 51, 32, 5, 0, 2, 54, 3, 4, 23, 54, 7, 8, 30, 14],
+				5: [4, 7, 22, 18, 12, 30, 15, 33, 15, 20, 74, 20, 10, 5, 6, 7, 9, 2, 74, 5, 6, 32, 74, 10],
+				8: [5, 40, 30, 5, 20, 30, 20, 20, 20, 4, 20, 32, 5, 0, 2, 0, 3, 4, 23, 54, 7, 8, 30, 14]
+			};
+			var configs = {
+				colors: {
+		            green: {
+		                range: [11, 30]
+		            },
+		            '.yellow': {
+		            	range: [30, 40]
+		            },
+		            F2F2F2: {
+		            	'<=': 10
+		            },
+		            ff0000: {
+		            	'>=': 40
+		            }
+	        	}
+			}
+
+			$('#chart').tableColor(data, configs);
+		});
+	</script>
+</body>
+</html>

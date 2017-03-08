@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <![endif]-->
+        <title>Bigbom</title>
+        <meta name="keywords" content="keywords" />
+        <meta name="description" content="description" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="dist/images/favicon.ico" />
+
+        <!-- detect scripts -->
+        <script src="dist/scripts/libs/platform.js"></script>
+        <script src="dist/scripts/detect.js"></script>
+
+        <!-- utilities scripts -->
+        <script src="dist/scripts/libs/modernizr.js"></script>
+        <!--[if lt IE 9]>
+        <script src="dist/scripts/libs/html5shiv.js"></script>
+        <script src="dist/scripts/libs/respond.js"></script>
+        <![endif]-->
+
+        <!-- main styles -->
+        <link href="dist/styles/general.css" rel="stylesheet" type="text/css" />
+        <link href="dist/styles/common.css" rel="stylesheet" type="text/css" />
+        <link href="dist/styles/accounts.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+    <body class="accounts-wrapper" style="opacity: 0">
+
+        <div class="sidebar">
+            <div class="sidebar-inner">
+                <div class="header-sidebar hidden-xs hidden-sm">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <img class="svg" src="assets/images/logo.svg" alt="img" />
+                        </a>
+                    </h1>
+                    <!-- /.logo -->
+                    <div class="lang-switch">
+                        <a>EN</a>
+                    </div>
+                    <!-- /.lang-switch -->
+                </div>
+                <!-- /.header-sidebar -->
+                <img class="close-sidebar visible-xs visible-sm" src="assets/images/account/w-close-icon.png" alt="img" />
+                <ul class="menu">
+                    <li>
+                        <a data-toggle="collapse" href="#accout-menu-collapse">
+                            <img src="assets/images/account/person-icon.png" alt="img" />
+                            Tài khoản <strong>Luanhi</strong>
+                        </a>
+                        <ul class="collapse" id="accout-menu-collapse">
+                            <li>
+                                <a href="account-info.html">Thông tin</a>
+                            </li>
+                            <li>
+                                <a href="change-password.html">Đổi Mật khẩu</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="group-staff-manager.html">
+                            <img src="assets/images/account/key-icon.png" alt="img" />
+                            Quản lý group nhân viên
+                        </a>
+                    </li>
+                    <li>
+                        <a href="group-company-manager.html">
+                            <img src="assets/images/account/key-icon.png" alt="img" />
+                            Quản lý group công ty
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="payment.html">
+                            <img class="mgt-4" src="assets/images/account/card-icon.png" alt="img" />
+                            Thanh toán
+                        </a>
+                    </li>
+                    <li>
+                        <a href="promotion-code.html">
+                            <img src="assets/images/account/tag-icon.png" alt="img" />
+                            Mã khuyến mãi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="referral-code.html">
+                            <img class="mgt-2" src="assets/images/account/persons-icon.png" alt="img" />
+                            Mã Referral
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login-history.html">
+                            <img class="mgt-4" src="assets/images/account/back-icon.png" alt="img" />
+                            Lịch sử đăng nhập
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.menu -->
+                <div class="footer-sidebar hidden-xs hidden-sm">
+                    <a class="chat-btn">
+                        <img src="assets/images/account/chat-icon.png" alt="img" />
+                        Chat Hỗ trợ
+                    </a>
+                    <div class="hotline">Hotline Hỗ Trợ:<br /><a href="tel:0862521357">(08) 6252 1357</a> - <a href="tel:0862611357">(08) 6261 1357</a> - <a href="tel:0862911357">(08) 6291 1357</a></div>
+                </div>
+                <!-- /.footer-sidebar -->
+            </div>
+        </div>
+        <!-- /.sidebar -->
+        <div class="main">
+            <div class="beta-notification">
+                Bigbom đang trong quá trình thử nghiệm, nếu có bất kỳ lỗi không mong muốn nào mong bạn thông cảm và thông báo cho chúng tôi!
+            </div>
+            <!-- /.beta-notification -->
+            <div class="main-content">
+                <div class="header-mobile visible-xs visible-sm">
+                    <label class="menu-button">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </label>
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <img width="155" src="assets/images/logo.svg" alt="img" />
+                        </a>
+                    </h1>
+                    <!-- /.logo -->
+                    <a class="chat-btn">
+                        <img src="assets/images/account/chat-icon.png" alt="img" />
+                    </a>
+                    <div class="lang-switch">
+                        <a>EN</a>
+                    </div>
+                    <!-- /.lang-switch -->
+                </div>
+                <!-- /.header-mobile -->
+                <ul class="nav nav-tabs tabs-has-table payment-tabs">
+                    <li class="active"><a href="#payment-info" data-toggle="tab">Thông tin <span class="hidden-xs">Thanh toán</span></a></li>
+                    <li><a href="#payment-history" data-toggle="tab">Lịch sử <span class="hidden-xs">thanh toán</span></a></li>
+                </ul>
+                <h4 class="highlight mgb-30">SỐ DƯ CUỐI KỲ: <strong class="big-text">8.665.846 <span class="small-text">₫</span></strong></h4>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="payment-info">
+                        <div class="wrap-payment-method">
+                            <div class="payment-method-header">
+                                <h5>Phương Thức Thanh toán</h5>
+                                <a class="green-btn add-payment-method">Thêm phương thức thanh toán</a>
+                            </div>
+                            <div class="payment-method-row">
+                                <div class="payment-method-content">
+                                    <div class="payment-star">
+                                        <a class="active"><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="payment-name">
+                                        <div class="payment-name-icon mgr-10">
+                                            <img src="assets/images/account/visa-icon.png" alt="img" />
+                                        </div>
+                                        <div class="payment-name-text">
+                                            Visa: 4000 **** **** 9010 <span class="highlight-5">Chính</span><br />
+                                            <span class="highlight-3">hết hạn vào 06/16</span>
+                                        </div>
+                                    </div>
+                                    <div class="payment-country">
+                                        <span>Quốc gia: </span>
+                                        <span class="flag flag-vn"></span>
+                                    </div>
+                                    <div class="payment-btns">
+                                        <a class="edit-payment">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            Chỉnh sửa
+                                        </a>
+                                        <a><i class="glyphicon glyphicon-trash"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-method-form-edit hidden">
+                                    <div class="form-group">
+                                        <input class="custom-input uppercase" type="text" placeholder="Nhập tên in trên card" />    
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6 pdr-5">
+                                                <input class="custom-input" type="text" data-masked-input="9999-9999-9999-9999" placeholder="Nhập số thẻ" />
+                                            </div>
+                                            <div class="col-xs-6 pdl-5">
+                                                <input class="custom-input" type="text" data-masked-input="99/99" maxlength="5" placeholder="MM/YY" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-input" type="text" data-masked-input="999" placeholder="Nhập mã bảo mật" />
+                                    </div>
+                                    <div class="text-center mgt-20">
+                                        <a class="green-btn">Lưu chỉnh sửa</a>
+                                        <a class="gray-link cancel-btn mgl-20">HỦY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method-row">
+                                <div class="payment-method-content">
+                                    <div class="payment-star">
+                                        <a><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="payment-name">
+                                        <div class="payment-name-icon mgr-10">
+                                            <img src="assets/images/account/bank-icon.png" alt="img" />
+                                        </div>
+                                        <div class="payment-name-text">
+                                            Ngân hàng Techcombank
+                                        </div>
+                                    </div>
+                                    <div class="payment-country">
+                                        <span>Quốc gia: </span>
+                                        <span class="flag flag-vn"></span>
+                                    </div>
+                                    <div class="payment-btns">
+                                        <a class="edit-payment">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            Chỉnh sửa
+                                        </a>
+                                        <a><i class="glyphicon glyphicon-trash"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-method-form-edit hidden">
+                                    <div class="form-group">
+                                        <input class="custom-input uppercase" type="text" placeholder="Nhập tên in trên card" />    
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6 pdr-5">
+                                                <input class="custom-input" type="text" data-masked-input="9999-9999-9999-9999" placeholder="Nhập số thẻ" />
+                                            </div>
+                                            <div class="col-xs-6 pdl-5">
+                                                <input class="custom-input" type="text" data-masked-input="99/99" maxlength="5" placeholder="MM/YY" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-input" type="text" data-masked-input="999" placeholder="Nhập mã bảo mật" />
+                                    </div>
+                                    <div class="text-center mgt-20">
+                                        <a class="green-btn">Lưu chỉnh sửa</a>
+                                        <a class="gray-link cancel-btn mgl-20">HỦY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method-row">
+                                <div class="payment-method-content">
+                                    <div class="payment-star">
+                                        <a class="active"><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="payment-name">
+                                        <div class="payment-name-icon mgr-10">
+                                            <img src="assets/images/account/visa-icon.png" alt="img" />
+                                        </div>
+                                        <div class="payment-name-text">
+                                            Visa: 4000 **** **** 9010 <span class="highlight-5">Chính</span><br />
+                                            <span class="highlight-3">hết hạn vào 06/16</span>
+                                        </div>
+                                    </div>
+                                    <div class="payment-country">
+                                        <span>Quốc gia: </span>
+                                        <span class="flag flag-vn"></span>
+                                    </div>
+                                    <div class="payment-btns">
+                                        <a class="edit-payment">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            Chỉnh sửa
+                                        </a>
+                                        <a><i class="glyphicon glyphicon-trash"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-method-form-edit hidden">
+                                    <div class="form-group">
+                                        <input class="custom-input uppercase" type="text" placeholder="Nhập tên in trên card" />    
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6 pdr-5">
+                                                <input class="custom-input" type="text" data-masked-input="9999-9999-9999-9999" placeholder="Nhập số thẻ" />
+                                            </div>
+                                            <div class="col-xs-6 pdl-5">
+                                                <input class="custom-input" type="text" data-masked-input="99/99" maxlength="5" placeholder="MM/YY" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-input" type="text" data-masked-input="999" placeholder="Nhập mã bảo mật" />
+                                    </div>
+                                    <div class="text-center mgt-20">
+                                        <a class="green-btn">Lưu chỉnh sửa</a>
+                                        <a class="gray-link cancel-btn mgl-20">HỦY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method-row">
+                                <div class="payment-method-content">
+                                    <div class="payment-star">
+                                        <a><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="payment-name">
+                                        <div class="payment-name-icon mgr-10">
+                                            <img src="assets/images/account/bank-icon.png" alt="img" />
+                                        </div>
+                                        <div class="payment-name-text">
+                                            Ngân hàng Techcombank
+                                        </div>
+                                    </div>
+                                    <div class="payment-country">
+                                        <span>Quốc gia: </span>
+                                        <span class="flag flag-vn"></span>
+                                    </div>
+                                    <div class="payment-btns">
+                                        <a class="edit-payment">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            Chỉnh sửa
+                                        </a>
+                                        <a><i class="glyphicon glyphicon-trash"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-method-form-edit hidden">
+                                    <div class="form-group">
+                                        <input class="custom-input uppercase" type="text" placeholder="Nhập tên in trên card" />    
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6 pdr-5">
+                                                <input class="custom-input" type="text" data-masked-input="9999-9999-9999-9999" placeholder="Nhập số thẻ" />
+                                            </div>
+                                            <div class="col-xs-6 pdl-5">
+                                                <input class="custom-input" type="text" data-masked-input="99/99" maxlength="5" placeholder="MM/YY" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-input" type="text" data-masked-input="999" placeholder="Nhập mã bảo mật" />
+                                    </div>
+                                    <div class="text-center mgt-20">
+                                        <a class="green-btn">Lưu chỉnh sửa</a>
+                                        <a class="gray-link cancel-btn mgl-20">HỦY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method-row">
+                                <div class="payment-method-content">
+                                    <div class="payment-star">
+                                        <a class="active"><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="payment-name">
+                                        <div class="payment-name-icon mgr-10">
+                                            <img src="assets/images/account/visa-icon.png" alt="img" />
+                                        </div>
+                                        <div class="payment-name-text">
+                                            Visa: 4000 **** **** 9010 <span class="highlight-5">Chính</span><br />
+                                            <span class="highlight-3">hết hạn vào 06/16</span>
+                                        </div>
+                                    </div>
+                                    <div class="payment-country">
+                                        <span>Quốc gia: </span>
+                                        <span class="flag flag-vn"></span>
+                                    </div>
+                                    <div class="payment-btns">
+                                        <a class="edit-payment">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            Chỉnh sửa
+                                        </a>
+                                        <a><i class="glyphicon glyphicon-trash"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-method-form-edit hidden">
+                                    <div class="form-group">
+                                        <input class="custom-input uppercase" type="text" placeholder="Nhập tên in trên card" />    
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6 pdr-5">
+                                                <input class="custom-input" type="text" data-masked-input="9999-9999-9999-9999" placeholder="Nhập số thẻ" />
+                                            </div>
+                                            <div class="col-xs-6 pdl-5">
+                                                <input class="custom-input" type="text" data-masked-input="99/99" maxlength="5" placeholder="MM/YY" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-input" type="text" data-masked-input="999" placeholder="Nhập mã bảo mật" />
+                                    </div>
+                                    <div class="text-center mgt-20">
+                                        <a class="green-btn">Lưu chỉnh sửa</a>
+                                        <a class="gray-link cancel-btn mgl-20">HỦY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method-row">
+                                <div class="payment-method-content">
+                                    <div class="payment-star">
+                                        <a><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="payment-name">
+                                        <div class="payment-name-icon mgr-10">
+                                            <img src="assets/images/account/bank-icon.png" alt="img" />
+                                        </div>
+                                        <div class="payment-name-text">
+                                            Ngân hàng Techcombank
+                                        </div>
+                                    </div>
+                                    <div class="payment-country">
+                                        <span>Quốc gia: </span>
+                                        <span class="flag flag-vn"></span>
+                                    </div>
+                                    <div class="payment-btns">
+                                        <a class="edit-payment">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            Chỉnh sửa
+                                        </a>
+                                        <a><i class="glyphicon glyphicon-trash"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-method-form-edit hidden">
+                                    <div class="form-group">
+                                        <input class="custom-input uppercase" type="text" placeholder="Nhập tên in trên card" />    
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6 pdr-5">
+                                                <input class="custom-input" type="text" data-masked-input="9999-9999-9999-9999" placeholder="Nhập số thẻ" />
+                                            </div>
+                                            <div class="col-xs-6 pdl-5">
+                                                <input class="custom-input" type="text" data-masked-input="99/99" maxlength="5" placeholder="MM/YY" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-input" type="text" data-masked-input="999" placeholder="Nhập mã bảo mật" />
+                                    </div>
+                                    <div class="text-center mgt-20">
+                                        <a class="green-btn">Lưu chỉnh sửa</a>
+                                        <a class="gray-link cancel-btn mgl-20">HỦY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method-row">
+                                <div class="payment-method-content">
+                                    <div class="payment-star">
+                                        <a><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="payment-name">
+                                        <div class="payment-name-icon mgr-10">
+                                            <img src="assets/images/account/bank-icon.png" alt="img" />
+                                        </div>
+                                        <div class="payment-name-text">
+                                            Ngân hàng Techcombank
+                                        </div>
+                                    </div>
+                                    <div class="payment-country">
+                                        <span>Quốc gia: </span>
+                                        <span class="flag flag-vn"></span>
+                                    </div>
+                                    <div class="payment-btns">
+                                        <a class="edit-payment">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            Chỉnh sửa
+                                        </a>
+                                        <a><i class="glyphicon glyphicon-trash"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-method-form-edit hidden">
+                                    <div class="form-group">
+                                        <input class="custom-input uppercase" type="text" placeholder="Nhập tên in trên card" />    
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6 pdr-5">
+                                                <input class="custom-input" type="text" data-masked-input="9999-9999-9999-9999" placeholder="Nhập số thẻ" />
+                                            </div>
+                                            <div class="col-xs-6 pdl-5">
+                                                <input class="custom-input" type="text" data-masked-input="99/99" maxlength="5" placeholder="MM/YY" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-input" type="text" data-masked-input="999" placeholder="Nhập mã bảo mật" />
+                                    </div>
+                                    <div class="text-center mgt-20">
+                                        <a class="green-btn">Lưu chỉnh sửa</a>
+                                        <a class="gray-link cancel-btn mgl-20">HỦY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method-row">
+                                <div class="payment-method-content">
+                                    <div class="payment-star">
+                                        <a><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="payment-name">
+                                        <div class="payment-name-icon mgr-10">
+                                            <img src="assets/images/account/bank-icon.png" alt="img" />
+                                        </div>
+                                        <div class="payment-name-text">
+                                            Ngân hàng Techcombank
+                                        </div>
+                                    </div>
+                                    <div class="payment-country">
+                                        <span>Quốc gia: </span>
+                                        <span class="flag flag-vn"></span>
+                                    </div>
+                                    <div class="payment-btns">
+                                        <a class="edit-payment">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            Chỉnh sửa
+                                        </a>
+                                        <a><i class="glyphicon glyphicon-trash"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-method-form-edit hidden">
+                                    <div class="form-group">
+                                        <input class="custom-input uppercase" type="text" placeholder="Nhập tên in trên card" />    
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6 pdr-5">
+                                                <input class="custom-input" type="text" data-masked-input="9999-9999-9999-9999" placeholder="Nhập số thẻ" />
+                                            </div>
+                                            <div class="col-xs-6 pdl-5">
+                                                <input class="custom-input" type="text" data-masked-input="99/99" maxlength="5" placeholder="MM/YY" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-input" type="text" data-masked-input="999" placeholder="Nhập mã bảo mật" />
+                                    </div>
+                                    <div class="text-center mgt-20">
+                                        <a class="green-btn">Lưu chỉnh sửa</a>
+                                        <a class="gray-link cancel-btn mgl-20">HỦY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method-row">
+                                <div class="payment-method-content">
+                                    <div class="payment-star">
+                                        <a><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="payment-name">
+                                        <div class="payment-name-icon mgr-10">
+                                            <img src="assets/images/account/bank-icon.png" alt="img" />
+                                        </div>
+                                        <div class="payment-name-text">
+                                            Ngân hàng Techcombank
+                                        </div>
+                                    </div>
+                                    <div class="payment-country">
+                                        <span>Quốc gia: </span>
+                                        <span class="flag flag-vn"></span>
+                                    </div>
+                                    <div class="payment-btns">
+                                        <a class="edit-payment">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            Chỉnh sửa
+                                        </a>
+                                        <a><i class="glyphicon glyphicon-trash"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-method-form-edit hidden">
+                                    <div class="form-group">
+                                        <input class="custom-input uppercase" type="text" placeholder="Nhập tên in trên card" />    
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6 pdr-5">
+                                                <input class="custom-input" type="text" data-masked-input="9999-9999-9999-9999" placeholder="Nhập số thẻ" />
+                                            </div>
+                                            <div class="col-xs-6 pdl-5">
+                                                <input class="custom-input" type="text" data-masked-input="99/99" maxlength="5" placeholder="MM/YY" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-input" type="text" data-masked-input="999" placeholder="Nhập mã bảo mật" />
+                                    </div>
+                                    <div class="text-center mgt-20">
+                                        <a class="green-btn">Lưu chỉnh sửa</a>
+                                        <a class="gray-link cancel-btn mgl-20">HỦY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method-form-add hidden">
+                                <div class="pay info-pay">
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <select id="country-select">
+                                                <option value="">Chọn quốc gia</option>
+                                                <option value="1" data-flag="vn">Việt Nam</option>
+                                                <option value="2" data-flag="kr">Hàn Quốc</option>
+                                                <option value="3" data-flag="jp">Nhật Bản</option>
+                                            </select>
+                                            <div class="select-payment hidden" id="payment-type">
+                                                <input type="radio" name="chon-thanh-toan" id="visa" class="css-radio" value="1" checked />
+                                                <label for="visa" class="css-label-radio">Visa, master card</label>
+                                                <input type="radio" name="chon-thanh-toan" id="show-transfer" class="css-radio" value="0" />
+                                                <label for="show-transfer" class="css-label-radio">Chuyển khoản</label>
+                                                <input type="radio" name="chon-thanh-toan" id="hopdong" class="css-radio" value="0" />
+                                                <label for="hopdong" class="css-label-radio">Thanh toán qua hợp đồng</label>
+                                            </div>
+                                            <!--End chon thanh toan-->
+                                        </div>
+                                    </div>
+                                    <div class="pay-show-content">
+                                        <div id="default-visa" class="check visa clearfix hidden">
+                                            <div class="row">
+                                                <div class="col-md-5 col-md-offset-2 col-sm-8">
+                                                    <div class="form-group card-input">
+                                                        <input id="namecard" class="custom-input" type="text" placeholder="Nhập tên in trên card">
+                                                    </div>
+                                                    <div class="form-group card-input">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 mgb-10-xs pdr-5 pdr-15-xs pd-xs">
+                                                                <input id="numbercard" class="custom-input" data-masked-input="9999-9999-9999-9999" type="text" placeholder="Nhập số thẻ">
+                                                            </div>
+                                                            <div class="col-sm-6 pdl-5 pdl-15-xs pd-xs">
+                                                                <input type="text" id="expiredate" name="expire-date" class="custom-input" data-masked-input="99/99" placeholder="MM/YY" maxlength="5">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group card-input">
+                                                        <input id="codesecurity" class="custom-input" data-masked-input="999" type="text" placeholder="Nhập mã bảo mật">
+                                                    </div>
+                                                    <div class="form-group mgb-0">
+                                                        <input class="custom-input" type="text" placeholder="Nhập mã giảm giá (nếu có)">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-sm-4 showcard-input">
+                                                    <div class="namecard-targeting ">
+                                                        <img src="assets/images/card-1.gif">
+                                                        <p class="text-center">Tên chủ thẻ</p>
+                                                    </div>
+                                                    <!--/.namecard-->
+                                                    <div class="numbercard-targeting hidden">
+                                                        <img src="assets/images/card-2.gif">
+                                                        <p class="text-center">Mã số thẻ</p>
+                                                    </div>
+                                                    <!--/.numbercard-->
+                                                    <div class="expiredate-targeting hidden">
+                                                        <img src="assets/images/card-3.gif">
+                                                        <p class="text-center">Ngày hết hạn</p>
+                                                    </div>
+                                                    <!--/.expire-date-->
+                                                    <div class="codesecurity-targeting hidden">
+                                                        <img src="assets/images/visa-card.png">
+                                                        <p class="text-center">Mã bảo mật</p>
+                                                    </div>
+                                                    <!--/.codesecurity-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="check show-transfer clearfix hidden">
+                                            <div class="row">
+                                                <div class="col-md-6 col-md-offset-3">
+                                                    <select class="custom-select">
+                                                        <option value="">Chọn ngân hàng</option>
+                                                        <option value="1">Donga Bank</option>
+                                                        <option value="2">A châu ACB</option>
+                                                        <option value="3">Vietcombank</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pay pay-1 hidden">
+                                    <div class="box">
+                                        <div class="clearfix">
+                                            <h2>Thông tin thanh toán</h2>
+                                            <img src="assets/images/icon-pay.png" />
+                                            <p><span>Bạn đã thanh toán thành công 10.000.000.000</span>
+                                                <br/> Sô tiền sẽ cập nhật trong tài khoản trong ít phút 5 giây</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pay pay-2 hidden">
+                                    <div class="box">
+                                        <div class="clearfix">
+                                            <h2>Thông tin thanh toán</h2>
+                                            <img src="assets/images/icon-pay-2.png" />
+                                            <p><span>Hợp đồng của bạn đang được xét duyệt.
+                                    chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mgb-10">
+                                    <a class="green-btn">Lưu thông tin</a>
+                                    <a class="gray-link mgl-20">HỦY</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="payment-history">
+                        <div class="wrap-payment-method">
+                            <div class="payment-method-header">
+                                <h4><strong>25/1/2016 - 25/2/2016</strong></h4>
+                                <div class="payment-right-tools">
+                                    <span class="wrap-export dropdown mgr-30">
+                                        <a data-toggle="dropdown"><img alt="img" src="assets/images/export-icon.png"> Xuất File</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a>Xuất File CSV</a>
+                                            </li>
+                                            <li>
+                                                <a>Xuất File EXcel</a>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                    <span class="wrap-date mgr-30">
+                                        <input class="date-view-picker" type="text" />
+                                    </span>
+                                    <span class="search-form">
+                                        <input class="custom-input w-300" type="text" placeholder="Tìm kiếm..." />
+                                        <button type="submit">
+                                            <img src="assets/images/search-icon.png" alt="img" />
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="wrap-bb-table list-payment">
+                                <div class="bb-table">
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-header" data-width="150">Thời gian</div>
+                                        <div class="bb-table-header" data-width="150">Mô Tả</div>
+                                        <div class="bb-table-header" data-width="150">Kênh</div>
+                                        <div class="bb-table-header" data-width="150">Ngân sách</div>
+                                        <div class="bb-table-header" data-width="150">Phí quản lý</div>
+                                        <div class="bb-table-header" data-width="150">Số tiền nợ</div>
+                                        <div class="bb-table-header" data-width="150">Số tiền có</div>
+                                        <div class="bb-table-header" data-width="150">Số dư</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell">25/2/2016<br />11:10</div>
+                                        <div class="bb-table-cell"><span class="highlight-5"><b>Thanh toán VISA:</b><br />400***</span></div>
+                                        <div class="bb-table-cell">
+                                            <img width="20" src="assets/images/facebook-icon.png" alt="img" />
+                                            <img width="20" src="assets/images/google-icon.png" alt="img" />
+                                        </div>
+                                        <div class="bb-table-cell">100.000.000₫</div>
+                                        <div class="bb-table-cell">10%</div>
+                                        <div class="bb-table-cell">4.000.000₫</div>
+                                        <div class="bb-table-cell"></div>
+                                        <div class="bb-table-cell">8.665.846₫</div>
+                                    </div>
+                                    <div class="bb-table-group">
+                                        <div class="cell-group ads-details" data-colspan="1">
+                                        </div>
+                                        <div class="cell-group has-row" data-colspan="7" data-offset="1">
+                                            <div class="bb-table-row">
+                                                <div class="bb-table-cell">Chiến dịch ABC</div>
+                                                <div class="bb-table-cell">
+                                                    <img width="20" src="assets/images/facebook-icon.png" alt="img" />
+                                                </div>
+                                                <div class="bb-table-cell">50.000.000₫</div>
+                                                <div class="bb-table-cell">5%</div>
+                                                <div class="bb-table-cell">2.000.000₫</div>
+                                                <div class="bb-table-cell"></div>
+                                                <div class="bb-table-cell">4.332.923₫</div>
+                                            </div>
+                                            <div class="bb-table-row">
+                                                <div class="bb-table-cell">Chiến dịch ABC</div>
+                                                <div class="bb-table-cell">
+                                                    <img width="20" src="assets/images/google-icon.png" alt="img" />
+                                                </div>
+                                                <div class="bb-table-cell">50.000.000₫</div>
+                                                <div class="bb-table-cell">5%</div>
+                                                <div class="bb-table-cell">2.000.000₫</div>
+                                                <div class="bb-table-cell"></div>
+                                                <div class="bb-table-cell">4.332.923₫</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell">25/2/2016<br />10:10</div>
+                                        <div class="bb-table-cell"><span class="highlight-5"><b>Mã khuyến mãi:</b><br />ADERFGHJ</span></div>
+                                        <div class="bb-table-cell">
+                                            <img width="20" src="assets/images/facebook-icon.png" alt="img" />
+                                        </div>
+                                        <div class="bb-table-cell"></div>
+                                        <div class="bb-table-cell"></div>
+                                        <div class="bb-table-cell"></div>
+                                        <div class="bb-table-cell">900.000₫</div>
+                                        <div class="bb-table-cell">4.665.846₫</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.main-content -->
+            <div class="footer-main">
+                <ul class="copyright">
+                    <li>© 2015 Adtop., JSC</li>
+                    <li class="hidden-xs hidden-sm"><a>Giới Thiệu Về BigBom</a></li>
+                    <li class="hidden-xs hidden-sm"><a>Chính Sách Bảo Mật</a></li>
+                </ul>
+                <!-- /.copyright -->
+                <ul class="footer-socials">
+                    <li><a class="facebook">facebook</a></li>
+                    <li><a class="googleplus">googleplus</a></li>
+                    <li><a class="twitter">twitter</a></li>
+                </ul>
+                <!-- /.footer-socials -->
+                <div class="hotline visible-xs visible-sm">Hotline Hỗ Trợ:<br /><a href="tel:0862521357">(08) 6252 1357</a> - <a href="tel:0862611357">(08) 6261 1357</a> - <a href="tel:0862911357">(08) 6291 1357</a></div>
+            </div>
+            <!-- /.footer-main -->
+        </div>
+        <!-- /.main -->
+
+        <script>
+            var adblock = true;
+            var params = {assetURL: 'dist'};
+        </script>
+        <script src="dist/scripts/adframe.js"></script>
+        <script src="dist/scripts/general.js"></script>
+        <script src="dist/scripts/common.js"></script>
+        <script src="dist/scripts/accounts.js"></script>
+        <script src="dist/scripts/accounts_demo.js"></script>
+        
+    </body>
+</html>

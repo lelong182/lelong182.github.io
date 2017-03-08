@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <![endif]-->
+    <title>Bigbom</title>
+    <meta name="keywords" content="keywords" />
+    <meta name="description" content="description" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="dist/images/favicon.ico" />
+
+    <!-- detect scripts -->
+    <script src="dist/scripts/libs/platform.js"></script>
+    <script src="dist/scripts/detect.js"></script>
+
+    <!-- utilities scripts -->
+    <script src="dist/scripts/libs/modernizr.js"></script>
+    <!--[if lt IE 9]>
+        <script src="dist/scripts/libs/html5shiv.js"></script>
+        <script src="dist/scripts/libs/respond.js"></script>
+        <![endif]-->
+
+    <!-- main styles -->
+    <link href="dist/styles/general.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="main-wrapper" style="opacity: 0">
+
+    <div class="beta-notification">
+        Bigbom đang trong quá trình thử nghiệm, nếu có bất kỳ lỗi không mong muốn nào mong bạn thông cảm và thông báo cho chúng tôi!
+    </div>
+    <!-- /.beta-notification -->
+
+    <div class="wrapper">
+        <div class="topbar">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img class="svg" src="assets/images/logo.svg" alt="img" />
+                </a>
+            </h1>
+            <!-- /.logo -->
+            <div class="campaign-manager">
+                <h3>
+                    <span class="refresh-link"><i class="material-icons">assistant</i></span>
+                    <span class="mine">Chiến dịch: <strong>Của Tôi</strong></span>
+                    <!--<span class="share-by">Chia sẻ bởi: <span class="share-by-name">Nguyễn Văn Hùng</span></span>-->
+                    <i class="material-icons arrow-icon">arrow_drop_down</i>
+                </h3>
+                <ul class="campaign-items">
+                    <li class="header-campaign-items"><i class="material-icons">star</i>Là trình quản lý chiến dịch mặc định</li>
+                    <li class="active">
+                        <h4>Nguyễn Văn Hùng</h4>
+                        <h6>nguyenvanhung1889@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Huỳnh Thanh Hải</h4>
+                        <h6>haiht@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Mai Tiến Đỗ</h4>
+                        <h6>domt@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Bích Nguy</h4>
+                        <h6>bichnguy@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Phúc Ngô</h4>
+                        <h6>phucngo@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.campaign-manager -->
+            <nav class="main-nav">
+                <div class="minimal-menu">
+                    <img class="close-sidebar" src="assets/images/account/w-close-icon.png" alt="img" />
+                    <ul class="menu">
+                        <li class="current-menu-item"><a href="data-table.html">Chiến Dịch</a></li>
+                        <li><a href="statistic.html">Thống Kê</a></li>
+                        <li>
+                            <a class="has-icon refferal-link">Mã giới thiệu <img class="animated infinite flash duration-1" src="assets/images/blink-icon.png" alt="img" /></a>
+                            <div class="refferal-box">
+                                <div class="w-280 pull-left mgr-10">
+                                    <input id="refferal-value" class="custom-input" type="text" value="https://bigbom.com/refferal/aGr3dU" readonly />
+                                </div>
+                                <button data-clipboard-target="#refferal-value" class="orange-btn copy-btn">COPY</button>
+                            </div>
+                        </li>
+                        <li><a href="cr-code.html">Mã chuyển đổi</a></li>
+                        <li><a href="account-linking.html">Liên Kết Tài Khoản</a></li>
+                    </ul>
+                </div>
+                <!-- /.minimal-menu -->
+            </nav>
+            <!-- /.main-nav -->
+            <form class="search-form">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+            </form>
+            <!-- /.search-form -->
+            <a class="orange-btn creat-campaign-btn" href="create-campaign.html">Tạo chiến dịch</a>
+            <!-- /.creat-campaign-btn -->
+            <ul class="top-links">
+                <li>
+                    <a class="notifications-link has-item"><i class="material-icons">notifications</i></a>
+                    <div class="list-notifications">
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Ngạo Thiên Hùng Bá</span> không được duyệt</h4>
+                            <span class="time">15m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Bạn đã kích hoạt <span class="highlight">Mã giảm giá QYJASHKA</span></h4>
+                            <span class="time">30m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Đột Kích Tinh Anh</span> đã hết ngân sách</h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="person-menu">
+                    <a class="person-link">ÍL</a>
+                    <div class="person-actions">
+                        <h4 class="header-person">Đăng nhập với tư cách:</h4>
+                        <div class="wrap-list-person">
+                            <div class="current-person person-item">
+                                <h4>Ích Luân Hình (Của tôi)</h4>
+                                <span>lklnn90@gmail.com</span>
+                                <i class="material-icons">play_arrow</i>
+                            </div>
+                            <div class="list-person">
+                                <div class="person-item active">
+                                    <h4>Ích Luân Hình (Của tôi)</h4>
+                                    <span>lklnn90@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty ABC</h4>
+                                    <span>Mời bởi: hunhhv@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty XYZ</h4>
+                                    <span>Mời bởi: hanhnn@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty DEF</h4>
+                                    <span>Mời bởi: phongvn@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="header-person">Quản lý tài khoản</h4>
+                        <div class="list-actions">
+                            <a class="action">
+                                <i class="material-icons">person</i>Quản lý tài khoản
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">vpn_key</i>Cài đặt quyền & thông báo
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">info</i>Hướng dẫn
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">input</i>Đăng xuất
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lang-switch">
+                    <a>EN</a>
+                </li>
+            </ul>
+            <!-- /.top-links -->
+        </div>
+        <!-- /.topbar -->
+        <div class="main">
+            <div class="main-header">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a>Trang Chủ</a><i class="fa fa-angle-right"></i></li>
+                        <li><a>Chiến Dịch</a><i class="fa fa-angle-right"></i></li>
+                        <li>Tạo Chiến Dịch</li>
+                    </ul>
+                </div>
+                <!-- /.breadcrumbs -->
+                <div class="steps-menu">
+                    <ul>
+                        <li class="step-1 active">
+                            <div class="circle"><i></i></div>
+                            <h4>Tạo Chiến Dịch</h4>
+                        </li>
+                        <li class="step-2 active">
+                            <div class="circle"><i></i></div>
+                            <h4>Tạo Rules</h4>
+                        </li>
+                        <li class="step-3 active">
+                            <div class="circle"><i></i></div>
+                            <h4>Kênh</h4>
+                        </li>
+                        <li class="step-4">
+                            <div class="circle"><i></i></div>
+                            <h4>Hoàn Thành</h4>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.steps-menu -->
+            </div>
+            <!-- /.main-header -->
+            <div class="main-content">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="wrap-group-title">
+                            <select class="custom-select" style="width: 100%;">
+                                    <option value="1">Phong Vân 3D - Cốc Cốc</option>
+                                    <option value="2">Phong Vân 4D - Cốc Cốc</option>
+                                    <option value="3">Phong Vân 5D - Cốc Cốc</option>
+                                </select>
+                            <a class="link" data-toggle="modal" data-target=".group-title-modal">Đổi tên nhóm quảng cáo</a>
+                        </div>
+                        <div class="modal fade group-title-modal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <h3>Đổi tên nhóm quảng cáo</h3>
+                                <form class="search-form">
+                                    <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                    <button type="submit">
+                                            <img src="assets/images/search-icon.png" alt="img" />
+                                        </button>
+                                </form>
+                                <div class="list-group-title">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-1">Nhóm 1:</label>
+                                            <input id="title-1" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-2">Nhóm 2:</label>
+                                            <input id="title-2" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-3">Nhóm 3:</label>
+                                            <input id="title-3" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-4">Nhóm 4:</label>
+                                            <input id="title-4" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-5">Nhóm 5:</label>
+                                            <input id="title-5" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-6">Nhóm 6:</label>
+                                            <input id="title-6" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-7">Nhóm 7:</label>
+                                            <input id="title-7" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-8">Nhóm 8:</label>
+                                            <input id="title-8" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-9">Nhóm 9:</label>
+                                            <input id="title-9" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label for="title-10">Nhóm 10:</label>
+                                            <input id="title-10" class="custom-input" type="text" value="Phong Vân 3D" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mgb-30">
+                                    <a class="read-more-link">
+                                        <i class="fa fa-spinner fa-pulse"></i> Xem thêm
+                                    </a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="green-btn update-btn mgr-20">Cập nhật</a>
+                                    <a class="gray-link" data-dismiss="modal">Hủy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-create-ads" id="coccoc-search">
+                    <ul class="nav nav-tabs main-tabs">
+                        <li class="active"><a href="#object" data-toggle="tab">Đối Tượng</a></li>
+                        <li><a href="#create-ads" data-toggle="tab">Tạo quảng cáo</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="object">
+                            <div class="content-box has-selected">
+                                <div class="form-group" data-step="1" data-intro="Vui lòng nhập các từ khóa liên quan đến chiến dịch" data-position='right'>
+                                    <label class="left-form-group">Từ khóa</label>
+                                    <div class="right-form-group">
+                                        <div class="textarea-has-addon mgb-10">
+                                            <textarea class="custom-textarea h-150" placeholder="Nhập nhiều từ khóa cách nhau bằng dấu “,”. Ví dụ: từ khóa 1, từ khóa 2,..."></textarea>
+                                            <span>0/30</span>
+                                        </div>
+                                        <p>
+                                            Các từ khóa trùng:
+                                            <span class="label label-warning">Từ khóa 1</span>
+                                            <span class="label label-warning">Từ khóa 2</span>
+                                            <span class="label label-warning">Từ khóa 3</span>
+                                            <span class="label label-warning">Từ khóa 4</span>
+                                            <span class="label label-warning">Từ khóa 5</span>
+                                        </p>
+                                        <button class="orange-btn">Thêm từ khóa</button>
+                                        <div class="wrap-business-location mgt-20" data-step="2" data-intro="Hãy nhập các thông tin cần thiết nếu ban muốn thêm địa chỉ kinh doanh" data-position='right'>
+                                            <input type="checkbox" id="business-location-chk" class="css-checkbox" /><label for="business-location-chk" class="css-label">Địa chỉ của điểm kinh doanh</label>
+                                            <div class="business-location mgt-10" style="display: none;">
+                                                <div class="row mgb-10">
+                                                    <div class="col-xs-7 pdr-5">
+                                                        <select class="custom-select" style="width: 100%;">
+                                                                <option value="">Thành phố</option>
+                                                                <option value="1">Hà Nội</option>
+                                                                <option value="2">Hồ Chí Minh</option>
+                                                                <option value="3">Đà Nẵng</option>
+                                                            </select>
+                                                    </div>
+                                                    <div class="col-xs-5 pdl-5">
+                                                        <select class="custom-select" style="width: 100%;">
+                                                                <option value="">Quận / huyện</option>
+                                                                <option value="1">Quận 1</option>
+                                                                <option value="2">Quận 2</option>
+                                                                <option value="3">Quận 3</option>
+                                                            </select>
+                                                    </div>
+                                                </div>
+                                                <input class="custom-input mgb-10" type="text" placeholder="Đường ( Tối đa 75 ký tự )" maxlength="75" />
+                                                <input class="custom-input" type="text" placeholder="Số ( Tối đa 75 ký tự )" maxlength="75" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.content-box -->
+                            <div class="selected-box">
+                                <h3>Đã chọn</h3>
+                                <form class="search-form mgb-15">
+                                    <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                    <button type="submit">
+                                            <img src="assets/images/search-icon.png" alt="img" />
+                                        </button>
+                                </form>
+                                <ul>
+                                    <li>
+                                        <h4>Từ khóa:</h4>
+                                        <span>code tân thủ thiên thư <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                        <span>Chơi thiên thư <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                        <span>Game thiên thư <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                        <span>Thiên thư fanpage <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.selected-box -->
+                            <hr class="mgb-30 mgt-10" />
+                            <div class="foot-main-content">
+                                <a class="green-btn create-ads-tab-link" data-step="3" data-intro="Sau khi thêm từ khóa xong, bạn nhấn nút lưu để tiếp tục sang bước tiếp theo" data-position='right'>Lưu & Tiếp tục</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade create-ads-section" id="create-ads">
+                            <div class="create-ads-content has-results">
+                                <div class="form-group">
+                                    <div class="create-ads-content-inner">
+                                        <div class="top-create-ads-content clearfix">
+                                            <div class="ads-rapidly-results hidden">
+                                                <h4>54 Quảng cáo sẽ tạo</h4>
+                                                <span>3 tiêu đề</span> x
+                                                <span>3 nội dung</span> x
+                                                <span>2 URL</span> x
+                                                <span>2 hình ảnh</span>
+                                            </div>
+                                            <div class="current-folder hidden">
+                                                <a class="link">
+                                                    <i class="fa fa-angle-left" aria-hidden="true"></i> Quay lại
+                                                </a>
+                                                <strong class="folder-name"></strong>
+                                            </div>
+                                        </div>
+                                        <div class="wrap-list-ads">
+                                            <form class="search-form">
+                                                <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                                <button type="submit">
+                                                    <img src="assets/images/search-icon.png" alt="img" />
+                                                </button>
+                                            </form>
+                                            <div class="list-ads">
+                                                <ul>
+                                                    <li class="add-more-item">
+                                                        <label for="add-more-ads-1" class="add-more">
+                                                            <img src="assets/images/big-plus-icon.png" alt="img" />
+                                                        </label>
+                                                        <input id="add-more-ads-1" type="file" />
+                                                    </li>
+                                                    <li class="ads-item folder" data-folder="113">
+                                                        <span class="count">100</span>
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-rs-img4.jpg" alt="img" />
+                                                                <img src="assets/images/ads-rs-img5.jpg" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>
+                                                            <span>Nhóm combo 1</span>
+                                                            <i class="glyphicon glyphicon-pencil edit-folder-name-link"></i>
+                                                        </h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="view-folder-link"><img src="assets/images/view-folder-icon.png" alt="img" /></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item folder-item" data-folder-item="113">
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-img13.png" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="ads-item-info">
+                                                            <p>Tiêu đề 1</p>
+                                                            <p>Nội dung 1</p>
+                                                            <p><a>bigbom.com</a></p>
+                                                        </div>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item folder-item" data-folder-item="113">
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>Item 2 - Nhóm combo 1</h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item folder" data-folder="432">
+                                                        <span class="count">50</span>
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-rs-img4.jpg" alt="img" />
+                                                                <img src="assets/images/ads-rs-img5.jpg" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>
+                                                            <span>Nhóm combo 2</span>
+                                                            <i class="glyphicon glyphicon-pencil edit-folder-name-link"></i>
+                                                        </h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="view-folder-link"><img src="assets/images/view-folder-icon.png" alt="img" /></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item folder-item" data-folder-item="432">
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>Item 1 - Nhóm combo 2</h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item folder-item" data-folder-item="432">
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-img13.png" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>Item 2 - Nhóm combo 2</h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item">
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-img13.png" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>Free Vector Icons - SVG</h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item">
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>Free Vector Icons - SVG</h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item">
+                                                        <span class="count">3</span>
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-rs-img2.png" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>Free Vector Icons - SVG</h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item">
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>Free Vector Icons - SVG</h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ads-item">
+                                                        <div class="media-container">
+                                                            <div class="wrap-media">
+                                                                <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                            </div>
+                                                        </div>
+                                                        <h4>Free Vector Icons - SVG</h4>
+                                                        <div class="wrap-links">
+                                                            <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                            <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                            <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="folder-notification-box hidden">
+                                                <img class="hand-icon" src="assets/images/hand-icon.png" alt="img" />
+                                                <div class="ribbon-content">
+                                                    <p>Quảng cáo tổ hợp khi tạo được đưa vào combo</p>
+                                                    <ul>
+                                                        <li><span class="count">100</span> Số quảng cáo trong combo</li>
+                                                        <li>Nhấp 2 lần vào hình hoặc click <img src="assets/images/view-folder-icon.png" alt="img" /> để vào chi tiết</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- /.ribbon-content -->
+                                            </div>
+                                        </div>
+                                        <div class="wrap-input-preview">
+                                            <div class="create-ads-input">
+                                                <div class="ads-common" data-step="4" data-intro="Hãy nhập đúng ký tự cho phép các tiêu đề, nội dung và URL đích mà bạn muốn hiển thị trên quảng cáo của mình" data-position='right'>
+                                                    <div class="form-group upload-more-img">
+                                                        <input id="upload-more-img-input" type="file" />
+                                                        <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        <label for="upload-more-img-input">file-name.jpg</label>
+                                                        <a class="remove-link"><i class="material-icons">delete</i></a>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <h5>Quảng cáo của bạn được hiển thị trên</h5>
+                                                        <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Trang kết quả tìm kiếm cốc cốc và góc dưới phải trang chủ côc cốc</option>
+                                                            <option value="2">Trang kết quả tìm kiếm cốc cốc</option>
+                                                            <option value="3">Góc dưới phải trang chủ côc cốc</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-has-link count-character">
+                                                            <input class="custom-input" type="text" name="ad-title" maxlength="50" placeholder="Tiêu đề" />
+                                                            <a class="link">Thêm</a>
+                                                            <span class="count-desc"></span>
+                                                        </div>
+                                                        <ul class="list-inputed">
+                                                            <!-- <li class="place">Mỗi tiêu đề chưa 49 ký tự</li> -->
+                                                            <li>Tam quốc đại chiến<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Game hay sieu bá đạo<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Game không dành cho người yếu tim<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Tam quốc đại chiến<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Game hay sieu bá đạo<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Game không dành cho người yếu tim<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-has-link count-character">
+                                                            <input class="custom-input" type="text" name="ad-content" maxlength="75" placeholder="Nội dung" />
+                                                            <a class="link">Thêm</a>
+                                                            <span class="count-desc"></span>
+                                                        </div>
+                                                        <ul class="list-inputed">
+                                                            <!-- <li class="place">Mỗi nội dung chưa 75 ký tự</li> -->
+                                                            <li>Tam quốc đại chiến<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Game hay sieu bá đạo<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Game không dành cho người yếu tim<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Tam quốc đại chiến<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Game hay sieu bá đạo<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>Game không dành cho người yếu tim<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-has-link">
+                                                            <input class="custom-input" type="text" placeholder="URL đích" />
+                                                            <a class="link">Thêm</a>
+                                                        </div>
+                                                        <ul class="list-inputed">
+                                                            <!-- <li class="place">Mỗi URL chứa 880 ký tự</li> -->
+                                                            <li>abc.com/ldp1<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>abc.com/ldp2<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>abc.com/ldp3<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>abc.com/ldp4<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>abc.com/ldp5<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                            <li>abc.com/ldp6<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="checkbox" id="tracking-ga-1" class="css-checkbox tracking-ga-link" /><label for="tracking-ga-1" class="css-label">Link tracking Google analytics</label>
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <a class="green-btn save-ads">Lưu quảng cáo</a>
+                                                        <a class="green-btn update-ads">Cập nhật</a>
+                                                    </div>
+                                                </div>
+                                                <div class="ads-tracking-ga hidden">
+                                                    <a class="back-common-link link mgb-30"><i class="big fa fa-angle-left mgt-0"></i>Quay lại</a>
+                                                    <div class="form-group">
+                                                        <input class="custom-input" type="text" placeholder="Nguồn chiến dịch" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="custom-input" type="text" placeholder="Phương tiện chiến dịch" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="custom-input" type="text" placeholder="Tên chiến dịch" />
+                                                    </div>
+                                                    <div class="form-group mgb-10">
+                                                        <select class="tracking-content-select">
+                                                            <option value="">Chọn nội dung cần tracking</option>
+                                                            <option value="1">Tên nhóm quảng cáo</option>
+                                                            <option value="2">Tên quảng cáo</option>
+                                                            <option value="3">Hình thức quảng cáo</option>
+                                                            <option value="4">Độ tuổi</option>
+                                                            <option value="5">Giới tính</option>
+                                                            <option value="6">Sở thích</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <span class="selected-span">Tên quảng cáo <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                        <span class="selected-span">Độ Tuổi <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <a class="green-btn">Tạo link tracking</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="create-ads-preview" data-step="5" data-intro="Bạn có thể đăng nhiều hình ảnh mà bạn muốn" data-position='left'>
+                                                <div class="preview-ads-content pd-20-xs hidden">
+                                                    <div class="current-ads-media hidden">
+                                                        <div class="search-results-content">
+                                                            <h4>trên trình duyệt</h4>
+                                                            <div class="search-result-1">
+                                                                <div class="media">
+                                                                    <div class="media-body">
+                                                                        <h4>Tam quốc đại chiến</h4>
+                                                                        <p>Game hay siêu bá đạo</p>
+                                                                    </div>
+                                                                    <div class="media-right">
+                                                                        <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <h4>trên kết quả tìm kiếm</h4>
+                                                            <div class="search-result-2">
+                                                                <div class="media">
+                                                                    <h4>Tam quốc đại chiến</h4>
+                                                                    <div class="media-left">
+                                                                        <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p>Game hay siêu bá đạo</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="carousel-preview-1" class="carousel slide vertical format-4 preview-ads-media">
+                                                        <div class="carousel-counter"></div>
+                                                        <div class="carousel-inner">
+                                                            <div class="item active">
+                                                                <div class="search-results-content">
+                                                                    <h4>trên trình duyệt</h4>
+                                                                    <div class="search-result-1">
+                                                                        <div class="media">
+                                                                            <div class="media-body">
+                                                                                <h4>Tam quốc đại chiến</h4>
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                            <div class="media-right">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>trên kết quả tìm kiếm</h4>
+                                                                    <div class="search-result-2">
+                                                                        <div class="media">
+                                                                            <h4>Tam quốc đại chiến</h4>
+                                                                            <div class="media-left">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                            <div class="media-body">
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="search-results-content">
+                                                                    <h4>trên trình duyệt</h4>
+                                                                    <div class="search-result-1">
+                                                                        <div class="media">
+                                                                            <div class="media-body">
+                                                                                <h4>Tam quốc đại chiến</h4>
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                            <div class="media-right">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>trên kết quả tìm kiếm</h4>
+                                                                    <div class="search-result-2">
+                                                                        <div class="media">
+                                                                            <h4>Tam quốc đại chiến</h4>
+                                                                            <div class="media-left">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                            <div class="media-body">
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="search-results-content">
+                                                                    <h4>trên trình duyệt</h4>
+                                                                    <div class="search-result-1">
+                                                                        <div class="media">
+                                                                            <div class="media-body">
+                                                                                <h4>Tam quốc đại chiến</h4>
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                            <div class="media-right">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>trên kết quả tìm kiếm</h4>
+                                                                    <div class="search-result-2">
+                                                                        <div class="media">
+                                                                            <h4>Tam quốc đại chiến</h4>
+                                                                            <div class="media-left">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                            <div class="media-body">
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="search-results-content">
+                                                                    <h4>trên trình duyệt</h4>
+                                                                    <div class="search-result-1">
+                                                                        <div class="media">
+                                                                            <div class="media-body">
+                                                                                <h4>Tam quốc đại chiến</h4>
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                            <div class="media-right">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>trên kết quả tìm kiếm</h4>
+                                                                    <div class="search-result-2">
+                                                                        <div class="media">
+                                                                            <h4>Tam quốc đại chiến</h4>
+                                                                            <div class="media-left">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                            <div class="media-body">
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="search-results-content">
+                                                                    <h4>trên trình duyệt</h4>
+                                                                    <div class="search-result-1">
+                                                                        <div class="media">
+                                                                            <div class="media-body">
+                                                                                <h4>Tam quốc đại chiến</h4>
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                            <div class="media-right">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>trên kết quả tìm kiếm</h4>
+                                                                    <div class="search-result-2">
+                                                                        <div class="media">
+                                                                            <h4>Tam quốc đại chiến</h4>
+                                                                            <div class="media-left">
+                                                                                <img class="media-object" src="assets/images/ads-img31.jpg" alt="img" />
+                                                                            </div>
+                                                                            <div class="media-body">
+                                                                                <p>Game hay siêu bá đạo</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <a data-slide="prev" href="#carousel-preview-1" class="left carousel-control">
+                                                            <img src="assets/images/next-arrow2.png" alt="img" />
+                                                        </a>
+                                                        <a data-slide="next" href="#carousel-preview-1" class="right carousel-control">
+                                                            <img src="assets/images/prev-arrow2.png" alt="img" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="preview-ads-footer hidden-completed">
+                                                        <div id="carousel-1" class="carousel slide">
+                                                            <label for="add-more-img" class="add-more">
+                                                                <img src="assets/images/add-more-img.png" alt="img" />
+                                                            </label>
+                                                            <input id="add-more-img" type="file" />
+                                                            <div class="carousel-inner">
+                                                                <div class="item active">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-4">
+                                                                            <a class="thumbnail">
+                                                                                <span class="remove-icon"></span>
+                                                                                <img src="//placehold.it/250x100" alt="img">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="col-xs-4">
+                                                                            <a class="thumbnail">
+                                                                                <span class="remove-icon"></span>
+                                                                                <img src="//placehold.it/250x100" alt="img">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="col-xs-4">
+                                                                            <a class="thumbnail">
+                                                                                <span class="remove-icon"></span>
+                                                                                <img src="//placehold.it/250x100" alt="img">
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-4">
+                                                                            <a class="thumbnail">
+                                                                                <span class="remove-icon"></span>
+                                                                                <img src="//placehold.it/250x100" alt="img">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="col-xs-4">
+                                                                            <a class="thumbnail">
+                                                                                <span class="remove-icon"></span>
+                                                                                <img src="//placehold.it/250x100" alt="img">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="col-xs-4">
+                                                                            <a class="thumbnail">
+                                                                                <span class="remove-icon"></span>
+                                                                                <img src="//placehold.it/250x100" alt="img">
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-4">
+                                                                            <a class="thumbnail">
+                                                                                <span class="remove-icon"></span>
+                                                                                <img src="//placehold.it/250x100" alt="img">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="col-xs-4">
+                                                                            <a class="thumbnail">
+                                                                                <span class="remove-icon"></span>
+                                                                                <img src="//placehold.it/250x100" alt="img">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="col-xs-4">
+                                                                            <a class="thumbnail">
+                                                                                <span class="remove-icon"></span>
+                                                                                <img src="//placehold.it/250x100" alt="img">
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a data-slide="prev" href="#carousel-1" class="left carousel-control">
+                                                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                                            </a>
+                                                            <a data-slide="next" href="#carousel-1" class="right carousel-control">
+                                                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="upload-section">
+                                                    <div class="wrap-upload-btns">
+                                                        <p>
+                                                            <img src="assets/images/img-upload.png" alt="img" />
+                                                        </p>
+                                                        <p>
+                                                            <label for="upload-banner-1" class="green-btn">Upload banner</label>
+                                                            <input id="upload-banner-1" type="file" /> &nbsp;&nbsp;
+                                                            <span class="highlight">hoặc</span> &nbsp;&nbsp;
+                                                            <a class="green-btn" data-toggle="modal" data-target="#file-manager-modal">Ảnh từ thư viện</a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="wrap-progress hidden">
+                                                        <span class="left-info">Đang upload (2/5)</span>
+                                                        <span class="right-info">75%</span>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                                                <span class="sr-only">75% Complete</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="note big">Kích cỡ hình ảnh: 90 x 90<br />Dung lượng ảnh tối đa cho phép là 150 KB</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foot-main-content">
+                                <!--<a class="gray-btn save-btn">Lưu & Tiếp tục</a>-->
+                                <div class="foot-main-content-inner" data-step="6" data-intro="Nhấn tiếp tục để qua phân phối ngân sách của bạn<br/>Nhấn tạo kênh mới nếu bạn muốn tạo 1 kênh mới hoặc 1 nhóm quảng cáo mới" data-position='left'>
+                                    <a class="orange-btn complete-btn">Tiếp Tục</a>
+                                    <div class="wrap-select">
+                                        <select class="create-new-select">
+                                            <option value="create-channels.html">Tạo kênh mới</option>
+                                            <option value="create-channels-2.html">Tạo đối tượng mới</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade file-manager" id="file-manager-modal" tabindex="-1">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                    <h4 class="modal-title">Thư viện ảnh</h4>
+                                    <label for="upload-banner" class="green-btn upload-btn"><i class="glyphicon glyphicon-picture"></i>Upload Banner</label>
+                                    <input id="upload-banner" type="file" />
+                                </div>
+                                <div class="modal-body">
+                                    <div class="wrap-progress">
+                                        <span class="left-info">Đang upload (2/5)</span>
+                                        <span class="right-info">75%</span>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                                <span class="sr-only">75% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="list-items">
+                                        <li class="active">
+                                            <div class="wrap-links">
+                                                <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                            <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                        </li>
+                                        <li>
+                                            <div class="wrap-links">
+                                                <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                            <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                        </li>
+                                        <li>
+                                            <div class="wrap-links">
+                                                <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                            <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                        </li>
+                                        <li>
+                                            <div class="wrap-links">
+                                                <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                            <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                        </li>
+                                        <li>
+                                            <div class="wrap-links">
+                                                <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                            <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                        </li>
+                                        <li>
+                                            <div class="wrap-links">
+                                                <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                            <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade notification-permutation-modal" tabindex="-1">
+                        <div class="vertical-alignment-helper">
+                            <div class="modal-dialog modal-lg vertical-align-center">
+                                <div class="modal-content">
+                                    <img class="rocket5" src="assets/images/rocket5.png" alt="img" />
+                                    <div class="ribbon-content">
+                                        <img class="close-link" src="assets/images/close-icon.png" alt="img" data-dismiss="modal" />
+                                        <h3>Bạn muốn thay đổi nội dung</h3>
+                                        <p class="gray-text"><strong>Lưu ý:</strong> Khi chọn “<span class="highlight">Thay đổi tất cả</span>” các quảng cáo có nội dung cũ trùng với nội dung mới sẽ được thay đổi</p>
+                                        <p class="url-text">- URL: http://adtop.vn -> http://bigbom.com</p>
+                                        <div class="wrap-btns">
+                                            <div>
+                                                <a class="green-btn">Chỉ quảng cáo này</a>
+                                            </div>
+                                            <div>
+                                                <a class="green-btn">Thay đổi tất cả</a>
+                                                <p class="count-ads-text"><strong>9</strong> quảng cáo sẽ được thay đổi <span class="show-per-ads"><i class="fa fa-caret-down"></i></span></p>
+                                            </div>
+                                        </div>
+                                        <ul class="list-per-ads hidden">
+                                            <li>
+                                                <input type="checkbox" id="per-ads-chk-1" class="css-checkbox" checked />
+                                                <label for="per-ads-chk-1" class="css-label">
+                                                        <span class="wrap-img">
+                                                            <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        </span>
+                                                        Đột Kích - chiến thần <strong>+</strong> <a class="primary-link">http://adtop.vn</a>
+                                                     </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="per-ads-chk-2" class="css-checkbox" checked />
+                                                <label for="per-ads-chk-2" class="css-label">
+                                                        <span class="wrap-img">
+                                                            <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        </span>
+                                                        Đột Kích - chiến thần <strong>+</strong> <a class="primary-link">http://adtop.vn</a>
+                                                    </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="per-ads-chk-3" class="css-checkbox" checked />
+                                                <label for="per-ads-chk-3" class="css-label">
+                                                        <span class="wrap-img">
+                                                            <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        </span>
+                                                        Đột Kích - chiến thần <strong>+</strong> <a class="primary-link">http://adtop.vn</a>
+                                                    </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="per-ads-chk-4" class="css-checkbox" checked />
+                                                <label for="per-ads-chk-4" class="css-label">
+                                                        <span class="wrap-img">
+                                                            <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        </span>
+                                                        Đột Kích - chiến thần <strong>+</strong> <a class="primary-link">http://adtop.vn</a>
+                                                    </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="per-ads-chk-5" class="css-checkbox" checked />
+                                                <label for="per-ads-chk-5" class="css-label">
+                                                        <span class="wrap-img">
+                                                            <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        </span>
+                                                        Đột Kích - chiến thần <strong>+</strong> <a class="primary-link">http://adtop.vn</a>
+                                                    </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="per-ads-chk-6" class="css-checkbox" checked />
+                                                <label for="per-ads-chk-6" class="css-label">
+                                                        <span class="wrap-img">
+                                                            <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        </span>
+                                                        Đột Kích - chiến thần <strong>+</strong> <a class="primary-link">http://adtop.vn</a>
+                                                    </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="per-ads-chk-7" class="css-checkbox" checked />
+                                                <label for="per-ads-chk-7" class="css-label">
+                                                        <span class="wrap-img">
+                                                            <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        </span>
+                                                        Đột Kích - chiến thần <strong>+</strong> <a class="primary-link">http://adtop.vn</a>
+                                                    </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="per-ads-chk-8" class="css-checkbox" checked />
+                                                <label for="per-ads-chk-8" class="css-label">
+                                                        <span class="wrap-img">
+                                                            <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        </span>
+                                                        Đột Kích - chiến thần <strong>+</strong> <a class="primary-link">http://adtop.vn</a>
+                                                    </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="per-ads-chk-9" class="css-checkbox" checked />
+                                                <label for="per-ads-chk-9" class="css-label">
+                                                        <span class="wrap-img">
+                                                            <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                        </span>
+                                                        Đột Kích - chiến thần <strong>+</strong> <a class="primary-link">http://adtop.vn</a>
+                                                    </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.ribbon-content -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.wrap-create-ads -->
+            </div>
+            <!-- /.main-content -->
+        </div>
+        <!-- /.main -->
+        <footer class="footer">
+            <ul class="copyright">
+                <li>© 2015 Adtop., JSC</li>
+                <li><a>Giới Thiệu Về BigBom</a></li>
+                <li><a href="privacy-policy.html">Chính Sách Bảo Mật</a></li>
+            </ul>
+            <!-- /.copyright -->
+            <ul class="footer-socials">
+                <li><a class="facebook">facebook</a></li>
+                <li><a class="googleplus">googleplus</a></li>
+                <li><a class="twitter">twitter</a></li>
+            </ul>
+            <!-- /.footer-socials -->
+        </footer>
+        <!-- /.footer -->
+    </div>
+    <!-- /.wrapper -->
+
+    <script>
+        var adblock = true;
+        var params = {
+            assetURL: 'dist'
+        };
+    </script>
+    <script src="dist/scripts/adframe.js"></script>
+    <script src="dist/scripts/general.js"></script>
+    <script src="dist/scripts/common.js"></script>
+    <script src="dist/scripts/main.js"></script>
+    <script src="dist/scripts/main_demo.js"></script>
+
+</body>
+
+</html>

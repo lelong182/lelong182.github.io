@@ -1,0 +1,345 @@
+table.custom-table {
+    text-align: center;
+
+    &.fixed {
+        table-layout: fixed;
+    }
+    thead {
+        tr {
+            th {
+                &:last-child {
+                    &:before {
+                        content: none;
+                    }
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: ~"calc(100% + 1px)";
+                    top: 0;
+                    background-color: #4C4C4C;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    th {
+        text-align: center;
+        color: #fff !important;
+        background: #4C4C4C !important;
+        font-size: 15px;
+        position: relative;
+    }
+    th, td {
+        padding: 20px;
+        border: 1px solid #bbb !important;
+        border-spacing: 0;
+        vertical-align: middle;
+        padding: 12px;
+        font-size: 15px;
+        color: #000;
+        position: relative;
+
+        &.text-left {
+            text-align: left;
+            position: relative;
+        }
+        &.text-top {
+            vertical-align: top;
+        }
+    }
+    tr {
+        &.disabled-status {
+            th, td {
+                color: #999;
+            }
+        }
+    }
+    td strong {
+        font-size: 13px;
+        font-weight: bold;
+    }
+    td span.tdngansach {
+        font-size: 15px;
+    }
+    td span.tdtangtoc {
+        font-size: 13px;
+        color: #888888;
+    }
+    td div.edit span {
+        cursor: pointer;
+    }
+    td:hover div.edit i.iconedit {
+        background: url(../images/edit.png) no-repeat right center;
+        cursor: pointer;
+        padding: 6px;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    td .editable-unsaved {
+        font-weight: normal;
+    }
+    td .editable-click, span.editable-click, span.editable-click:hover {
+        border-bottom: none !important;
+        cursor: pointer;
+    }
+    td .control-group.form-group {
+        margin-bottom: 0px !important;
+    }
+    td .input-sm {
+        font-size: 14px;
+    }
+    tr.act-tr-level-0 {
+        background-color: #fff !important;
+
+        td {
+            .act-more {
+                display: inline-block;
+                font-size: 0;
+                line-height: 1;
+                vertical-align: middle;
+            }
+            .minus-icon, .plus-icon {
+                height: 19px;
+                position: relative;
+                width: 19px;
+                display: inline-block;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 19px;
+                    height: 19px;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .minus-icon {
+                &:before {
+                    background: url("../images/minus-icon.png") no-repeat;
+                }
+            }
+            .plus-icon {
+                &:before {
+                    background: url("../images/plus-icon.png") no-repeat;
+                }
+            }
+        }
+    }
+    tr.act-tr-level-1 {
+        background-color: #e5e5e5;
+
+        td {
+            .minus-icon, .plus-icon {
+                height: 19px;
+                position: relative;
+                width: 32px;
+                float: right;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 32px;
+                    height: 19px;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .minus-icon {
+                &:before {
+                    background: url("../images/minus-icon-2.png") no-repeat;
+                }
+            }
+            .plus-icon {
+                &:before {
+                    background: url("../images/plus-icon-2.png") no-repeat;
+                }
+            }
+        }
+    }
+    tr.act-tr-level-2 {
+        background-color: #f8f8f8;
+    }
+    tr.gray-row {
+        background-color: #eee;
+    }
+    tr.gray-row-2 {
+        background-color: #f8f8f8;
+    }
+    tr.quickcheck th {
+        background-color: #62b366 !important;
+        color: #fff;
+        font-size: 15px;
+        font-weight: normal;
+    }
+    tr.quickcheck th a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0px 40px;
+    }
+    a.off-campaign {
+        background: url(../images/icon-bin.png) no-repeat center left;
+    }
+    a.campaign-group {
+        background: url(../images/icon-fodel.png) no-repeat center left;
+    }
+    a.compare {
+        background: url(../images/icon-compare.png) no-repeat center left;
+    }
+    td h4 {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    td .pull-left {
+        padding-right: 20px;
+    }
+    td input {
+        border-radius: 0px;
+        height: 40px;
+    }
+    td .green-btn {
+        background: #34a853 !important;
+        padding: 8px 15px;
+        position: static;
+    }
+    td a.cancel {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #888888;
+        padding-left: 10px;
+    }
+    td .b2 {
+        width: ~"calc(100% - 650px)";
+
+        span {
+            background-color: #4da445;
+            border-radius: 5px;
+            color: #fff;
+            display: inline-block;
+            font-size: 14px;
+            margin: 0 5px 5px 0;
+            padding: 2px 5px;
+
+            a.close-link {
+                color: #fff;
+                font-size: 10px;
+                margin-left: 5px;
+            }
+        }
+    }
+    td .b3 {
+        border-left: 1px solid #bbb;
+        padding-left: 20px;
+    }
+    td .b3 h5 {
+        font-size: 15px;
+        color: #333333;
+        text-transform: uppercase;
+        padding: 0px;
+        margin: 5px 0px 15px 0px;
+    }
+    td .b3 img {
+        margin: 0px 40px 15px 0px;
+    }
+    td .b3 a {
+        color: @active-color;
+        font-size: 15px;
+        padding-bottom: 3px;
+        display: block;
+    }
+    td .b1 {
+        width: 300px;
+    }
+    td .b1 .thumb {
+        margin-bottom: 15px;
+        display: block;
+    }
+    td .b1 .thumb img {
+        width: 100%;
+    }
+    a.off-video-icon {
+        background: url(../images/off-video-icon.png) no-repeat center left;
+        padding-left: 20px;
+        color: @active-color;
+    }
+    a.change-video-icon {
+        background: url(../images/thay-video-icon.png) no-repeat center left;
+        padding-left: 20px;
+        color: @active-color;
+    }
+    a.change-images-icon {
+        background: url(../images/images-icon.png) no-repeat center left;
+        padding-left: 20px;
+        color: @active-color;
+    }
+    td .form-groups {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    td .form-groups .url-value-input {
+        width: ~"calc(100% - 149px)";
+    }
+    td dl {
+        display: inline-block;
+        margin-top: -6px;
+        width: 100%;
+    }
+    td dl dt {
+        padding-right: 5px !important;
+        clear: both;
+    }
+    td dl dt, td dl dd {
+        padding: 5px 0px;
+        float: left;
+        line-height: 1;
+    }
+    td .box-keyword {
+        background: #fff;
+        border: #bbb solid 1px;
+        padding: 10px;
+        margin-bottom: 15px;
+        white-space: normal;
+    }
+    td .box-keyword a {
+        color: #0033cc;
+    }
+    td .box-keyword a:nth-child(1) {
+        color: #339966;
+    }
+    td .btn-group-sm>.btn, .btn-sm {
+        padding: 10px 15px;
+    }
+    td .add-keywords-link {
+        position: absolute;
+        right: 12px;
+        top: 20px;
+    }
+    td .text {
+        margin-bottom: 5px;
+    }
+    label.css-label:before {
+        background-image: url(../images/checkbox4.png);
+    }
+    input[type=checkbox].css-checkbox+label.css-label {
+        padding: 0px !important;
+    }
+    tr td:nth-child(3) {
+        min-width: 125px;
+    }
+    tr td:nth-child(6) {
+        min-width: 270px;
+    }
+    tr td:nth-child(4) {
+        max-width: 50px;
+    }
+    tr td:nth-child(7) {
+        min-width: 140px;
+    }
+    td.budget-targeting {
+        height: 70px;
+    }
+}

@@ -1,0 +1,44 @@
+.dropdown-tabs {
+	.dropdown-menu {
+		ul {
+			li {
+				list-style: none;
+
+				&.active {
+					a {
+						background-color: @main-color;
+						color: #fff !important;
+					}
+				}
+				a {
+					display: inline-block;
+					white-space: nowrap;
+					width: 100%;
+
+					&:hover, &:focus {
+						background-color: @main-color;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+.dropdown-menu {
+	border-radius: 0;
+	padding: 0;
+	min-width: auto;
+
+	li {
+		a {
+			color: #000 !important;
+			font-size: 15px;
+			padding: 5px 10px 7px;
+
+			&:hover, &:focus {
+				background-color: @main-color;
+				color: #fff !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <![endif]-->
+    <title>Bigbom</title>
+    <meta name="keywords" content="keywords" />
+    <meta name="description" content="description" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="dist/images/favicon.ico" />
+
+    <!-- detect scripts -->
+    <script src="dist/scripts/libs/platform.js"></script>
+    <script src="dist/scripts/detect.js"></script>
+
+    <!-- utilities scripts -->
+    <script src="dist/scripts/libs/modernizr.js"></script>
+    <!--[if lt IE 9]>
+        <script src="dist/scripts/libs/html5shiv.js"></script>
+        <script src="dist/scripts/libs/respond.js"></script>
+        <![endif]-->
+
+    <!-- main styles -->
+    <link href="dist/styles/general.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="main-wrapper" style="opacity: 0">
+
+    <div class="beta-notification">
+        Bigbom đang trong quá trình thử nghiệm, nếu có bất kỳ lỗi không mong muốn nào mong bạn thông cảm và thông báo cho chúng tôi!
+    </div>
+    <!-- /.beta-notification -->
+
+    <div class="wrapper">
+        <div class="topbar">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img class="svg" src="assets/images/logo.svg" alt="img" />
+                </a>
+            </h1>
+            <!-- /.logo -->
+            <div class="campaign-manager">
+                <h3>
+                    <span class="refresh-link"><i class="material-icons">assistant</i></span>
+                    <span class="mine">Chiến dịch: <strong>Của Tôi</strong></span>
+                    <!--<span class="share-by">Chia sẻ bởi: <span class="share-by-name">Nguyễn Văn Hùng</span></span>-->
+                    <i class="material-icons arrow-icon">arrow_drop_down</i>
+                </h3>
+                <ul class="campaign-items">
+                    <li class="header-campaign-items"><i class="material-icons">star</i>Là trình quản lý chiến dịch mặc định</li>
+                    <li class="active">
+                        <h4>Nguyễn Văn Hùng</h4>
+                        <h6>nguyenvanhung1889@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Huỳnh Thanh Hải</h4>
+                        <h6>haiht@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Mai Tiến Đỗ</h4>
+                        <h6>domt@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Bích Nguy</h4>
+                        <h6>bichnguy@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Phúc Ngô</h4>
+                        <h6>phucngo@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.campaign-manager -->
+            <nav class="main-nav">
+                <div class="minimal-menu">
+                    <img class="close-sidebar" src="assets/images/account/w-close-icon.png" alt="img" />
+                    <ul class="menu">
+                        <li class="current-menu-item"><a href="data-table.html">Chiến Dịch</a></li>
+                        <li><a href="statistic.html">Thống Kê</a></li>
+                        <li>
+                            <a class="has-icon refferal-link">Mã giới thiệu <img class="animated infinite flash duration-1" src="assets/images/blink-icon.png" alt="img" /></a>
+                            <div class="refferal-box">
+                                <div class="w-280 pull-left mgr-10">
+                                    <input id="refferal-value" class="custom-input" type="text" value="https://bigbom.com/refferal/aGr3dU" readonly />
+                                </div>
+                                <button data-clipboard-target="#refferal-value" class="orange-btn copy-btn">COPY</button>
+                            </div>
+                        </li>
+                        <li><a href="cr-code.html">Mã chuyển đổi</a></li>
+                        <li><a href="account-linking.html">Liên Kết Tài Khoản</a></li>
+                    </ul>
+                </div>
+                <!-- /.minimal-menu -->
+            </nav>
+            <!-- /.main-nav -->
+            <form class="search-form">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+            </form>
+            <!-- /.search-form -->
+            <a class="orange-btn creat-campaign-btn" href="create-campaign.html">Tạo chiến dịch</a>
+            <!-- /.creat-campaign-btn -->
+            <ul class="top-links">
+                <li>
+                    <a class="notifications-link has-item"><i class="material-icons">notifications</i></a>
+                    <div class="list-notifications">
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Ngạo Thiên Hùng Bá</span> không được duyệt</h4>
+                            <span class="time">15m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Bạn đã kích hoạt <span class="highlight">Mã giảm giá QYJASHKA</span></h4>
+                            <span class="time">30m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Đột Kích Tinh Anh</span> đã hết ngân sách</h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="person-menu">
+                    <a class="person-link">ÍL</a>
+                    <div class="person-actions">
+                        <h4 class="header-person">Đăng nhập với tư cách:</h4>
+                        <div class="wrap-list-person">
+                            <div class="current-person person-item">
+                                <h4>Ích Luân Hình (Của tôi)</h4>
+                                <span>lklnn90@gmail.com</span>
+                                <i class="material-icons">play_arrow</i>
+                            </div>
+                            <div class="list-person">
+                                <div class="person-item active">
+                                    <h4>Ích Luân Hình (Của tôi)</h4>
+                                    <span>lklnn90@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty ABC</h4>
+                                    <span>Mời bởi: hunhhv@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty XYZ</h4>
+                                    <span>Mời bởi: hanhnn@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty DEF</h4>
+                                    <span>Mời bởi: phongvn@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="header-person">Quản lý tài khoản</h4>
+                        <div class="list-actions">
+                            <a class="action">
+                                <i class="material-icons">person</i>Quản lý tài khoản
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">vpn_key</i>Cài đặt quyền & thông báo
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">info</i>Hướng dẫn
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">input</i>Đăng xuất
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lang-switch">
+                    <a>EN</a>
+                </li>
+            </ul>
+            <!-- /.top-links -->
+        </div>
+        <!-- /.topbar -->
+        <div class="main">
+            <div class="main-header">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a>Trang Chủ</a><i class="fa fa-angle-right"></i></li>
+                        <li><a>Chiến Dịch</a><i class="fa fa-angle-right"></i></li>
+                        <li>Tạo Chiến Dịch</li>
+                    </ul>
+                </div>
+                <!-- /.breadcrumbs -->
+                <div class="steps-menu">
+                    <ul>
+                        <li class="step-1 active">
+                            <a href="create-campaign.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Tạo Chiến Dịch</h4>
+                            </a>
+                        </li>
+                        <li class="step-2 active">
+                            <a href="create-rules.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Tạo Rules</h4>
+                            </a>
+                        </li>
+                        <li class="step-3 active">
+                            <a href="create-channels.html">
+                                <div data-step="1" data-intro="Chọn kênh mà bạn muốn quảng cáo" data-position='bottom'>
+                                    <div class="circle"><i></i></div>
+                                    <h4>Kênh</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="step-4">
+                            <a href="complete-create-campaign.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Hoàn Thành</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.steps-menu -->
+            </div>
+            <!-- /.main-header -->
+            <div class="main-content">
+                <h3 class="border-caption">BigBOm sẽ đề xuất các kênh phù hợp cho quảng cáo của bạn</h3>
+                <div class="wrap-create-channels">
+                    <ul class="nav nav-tabs" data-step="2" data-intro="Chọn kênh mà bạn muốn chạy quảng cáo" data-position='right'>
+                        <li>
+                            <a href="#facebook-channel" class="blue-btn" data-toggle="tab">
+                                <img src="assets/images/facebook-icon2.png" alt="img" /> Kênh Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#google-channel" class="red-btn" data-toggle="tab">
+                                <img src="assets/images/google-icon2.png" alt="img" /> Kênh Google
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#coccoc-channel" class="green-2-btn" data-toggle="tab">
+                                <img src="assets/images/coccoc-icon2.png" alt="img" /> Kênh Cốc cốc
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="facebook-channel">
+                            <div class="form-group">
+                                <label class="left-form-group">Chọn tài khoản</label>
+                                <div class="right-form-group">
+                                    <select class="custom-select" style="width: 100%;">
+                                            <option value="">Vui lòng chọn tài khoản</option>
+                                            <option value="1">Adtop content</option>
+                                            <option value="2">Chơi đi</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="left-form-group">Chọn tài khoản quảng cáo</label>
+                                <div class="right-form-group">
+                                    <select class="custom-select" style="width: 100%;">
+                                            <option value="">Vui lòng chọn tài khoản</option>
+                                            <option value="1">Adtop content</option>
+                                            <option value="2">Chơi đi</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="left-form-group">Chuyển đổi</label>
+                                <div class="right-form-group">
+                                    <select class="custom-select" style="width: 100%;">
+                                            <option value="1">Chọn pixel Facebook</option>
+                                            <option value="2">Xem nội dung</option>
+                                            <option value="3">Tìm kiếm</option>
+                                            <option value="4">Thêm vào giỏ hàng</option>
+                                            <option value="5">Thêm vào danh sách yêu thích</option>
+                                            <option value="6">Bắt đầu thanh toán</option>
+                                            <option value="7">Thêm thông tin thanh toán</option>
+                                            <option value="8">Mua hàng</option>
+                                            <option value="9">Khách hàng tiềm năng</option>
+                                            <option value="10">Hoàn tất đăng ký</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="form-group code-section hidden">
+                                <label class="left-form-group small-group">Mã code</label>
+                                <div class="right-form-group">
+                                    <div class="code-box">
+                                        <textarea class="custom-textarea"></textarea>
+                                        <div class="code-box-footer">
+                                            <a class="link">
+                                                <i class="glyphicon glyphicon-envelope"></i> Gởi Code Qua Email
+                                            </a>
+                                            <a class="link">
+                                                <i class="fa fa-question-circle"></i> Hướng dẫn dùng code
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mgt-20">
+                                <a class="gray-btn save-btn">Lưu & Tiếp tục</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="google-channel">
+                            <div class="form-group">
+                                <label class="left-form-group">Chọn tài khoản</label>
+                                <div class="right-form-group">
+                                    <select class="custom-select" style="width: 100%;">
+                                            <option value="">Vui lòng chọn tài khoản</option>
+                                            <option value="1">Adtop content</option>
+                                            <option value="2">Chơi đi</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="form-group cr-code-section">
+                                <label class="left-form-group">Chuyển đổi</label>
+                                <div class="right-form-group">
+                                    <a class="primary-link mgt-10">Bạn chưa có code chuyển đổi. Tạo Ngay</a>
+                                    <div class="wrap-cr-code hidden">
+                                        <h3>Tạo Chuyển Đổi Trên Web</h3>
+                                        <div class="cr-code-content">
+                                            <div class="heading" data-toggle="collapse" data-target="#collapse-1">
+                                                <span>Tên Chuyển Đổi</span>
+                                            </div>
+                                            <div class="collapse" id="collapse-1">
+                                                <div class="collapse-content">
+                                                    <input class="custom-input" type="text" placeholder="Nhập Tên" />
+                                                </div>
+                                            </div>
+                                            <div class="heading" data-toggle="collapse" data-target="#collapse-2">
+                                                <span>Giá Trị</span>
+                                            </div>
+                                            <div class="collapse" id="collapse-2">
+                                                <div class="collapse-content cr-value">
+                                                    <div class="form-group">
+                                                        <input type="radio" name="value" id="value-1" class="css-radio" checked /><label for="value-1" class="css-label-radio">Hành động chuyển đổi có cùng giá trị mỗi lần xảy ra</label>
+                                                        <div class="wrap-inut-value">
+                                                            <input class="custom-input onlynumber" type="text" />
+                                                            <div class="pull-left">
+                                                                <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="radio" name="value" id="value-2" class="css-radio" /><label for="value-2" class="css-label-radio">Giá trị của hành động chuyển đổi này có thể thay</label>
+                                                        <div class="wrap-inut-value hidden">
+                                                            <input class="custom-input onlynumber" type="text" />
+                                                            <div class="pull-left">
+                                                                <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mgb-0">
+                                                        <input type="radio" name="value" id="value-3" class="css-radio" /><label for="value-3" class="css-label-radio">Không chỉ định giá trị</label>
+                                                        <div class="wrap-inut-value hidden">
+                                                            <input class="custom-input onlynumber" type="text" />
+                                                            <div class="pull-left">
+                                                                <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="heading">
+                                                <span>Số Lượng</span>
+                                                <div class="wrap-radio">
+                                                    <input type="radio" name="quantity" checked id="quantity-1" class="css-radio" /><label for="quantity-1" class="css-label-radio">Mỗi Chuyển đổi</label>
+                                                    <input type="radio" name="quantity" id="quantity-2" class="css-radio" /><label for="quantity-2" class="css-label-radio">Một Chuyển đổi</label>
+                                                </div>
+                                            </div>
+                                            <div class="heading" data-toggle="collapse" data-target="#collapse-3">
+                                                <span>Thời Lượng chuyển đổi</span>
+                                            </div>
+                                            <div class="collapse" id="collapse-3">
+                                                <div class="collapse-content">
+                                                    <div class="row mgb-10">
+                                                        <div class="col-xs-9">
+                                                            <strong>Thời gian chuyển đổi:</strong><br /> Từ nhấp chuột vào quảng cáo trên Mạng tìm kiếm hoặc hiển thị
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <select class="custom-select" style="width: 100%;">
+                                                                    <option value="1">1 tuần</option>
+                                                                    <option value="2">2 tuần</option>
+                                                                    <option value="3">3 tuần</option>
+                                                                    <option value="4">4 tuần</option>
+                                                                    <option value="5">30 ngày</option>
+                                                                    <option value="6">45 ngày</option>
+                                                                    <option value="7">60 ngày</option>
+                                                                    <option value="8">90 ngày</option>
+                                                                </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-9">
+                                                            <strong>Cửa sổ chuyển đổi xem qua:</strong><br /> Từ hiển thị, không phải nhấp chuột, của quảng cáo hình ảnh hoặc quảng cáo đa phương tiện trên Mạng hiển thị của bạn.
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <select class="custom-select" style="width: 100%;">
+                                                                    <option value="1">1 tuần</option>
+                                                                    <option value="2">2 tuần</option>
+                                                                    <option value="3">3 tuần</option>
+                                                                    <option value="4">4 tuần</option>
+                                                                    <option value="5">30 ngày</option>
+                                                                    <option value="6">45 ngày</option>
+                                                                    <option value="7">60 ngày</option>
+                                                                    <option value="8">90 ngày</option>
+                                                                </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="heading">
+                                                <span>Danh mục</span>
+                                                <div class="wrap-select">
+                                                    <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Chế độ xem trang chính</option>
+                                                            <option value="2">Dẫn đầu</option>
+                                                            <option value="3">Đăng ký</option>
+                                                            <option value="4">Mua/bán</option>
+                                                            <option value="5">Khác</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                            <div class="heading" data-toggle="collapse" data-target="#collapse-4">
+                                                <span>Bao gồm trong "Chuyển đổi"</span>
+                                            </div>
+                                            <div class="collapse" id="collapse-4">
+                                                <div class="collapse-content">
+                                                    <input type="checkbox" id="include-cr" class="css-checkbox" checked /><label for="include-cr" class="css-label">Bao gồm dữ liệu cho hành động chuyển đổi này trong cột "Chuyển đổi". Cột này được sử dụng bởi bất kỳ chiến lược giá thầu dựa trên chuyển đổi nào mà bạn có thể đã thiết lập</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                        <div class="wrap-cr-code hidden">
+                                            <h3>Tạo Chuyển Đổi Trên Ứng dụng Android</h3>
+                                            <div class="cr-code-content">
+                                                <div class="heading" data-toggle="collapse" data-target="#collapse-1">
+                                                    <span>Chọn Hành động muốn theo dõi</span>
+                                                </div>
+                                                <div class="collapse" id="collapse-1">
+                                                    <div class="collapse-content cr-action">
+                                                        <div class="form-group">
+                                                            <input type="radio" name="action" id="action-1" class="css-radio" checked /><label for="action-1" class="css-label-radio">Lượt cài đặt ứng dụng (từ Google Play)</label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="radio" name="action" id="action-2" class="css-radio" /><label for="action-2" class="css-label-radio">Lượt cài đặt ứng dụng (mở lần đầu)</label>
+                                                        </div>
+                                                        <div class="form-group mgb-0">
+                                                            <input type="radio" name="action" id="action-3" class="css-radio" /><label for="action-3" class="css-label-radio">Hành động trong ứng dụng</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="heading" data-toggle="collapse" data-target="#collapse-2">
+                                                    <span>Tên Chuyển Đổi</span>
+                                                </div>
+                                                <div class="collapse" id="collapse-2">
+                                                    <div class="collapse-content">
+                                                        <input class="custom-input" type="text" placeholder="Nhập Tên" />
+                                                    </div>
+                                                </div>
+                                                <div class="heading" data-toggle="collapse" data-target="#collapse-3">
+                                                    <span>Giá Trị</span>
+                                                </div>
+                                                <div class="collapse" id="collapse-3">
+                                                    <div class="collapse-content cr-value">
+                                                        <div class="form-group install-app hidden">
+                                                            <input type="radio" name="value" id="value-1" class="css-radio" checked /><label for="value-1" class="css-label-radio">Hành động chuyển đổi có cùng giá trị mỗi lần xảy ra</label>
+                                                            <div class="wrap-inut-value">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group install-app hidden">
+                                                            <input type="radio" name="value" id="value-2" class="css-radio" /><label for="value-2" class="css-label-radio">Giá trị của hành động chuyển đổi này có thể thay</label>
+                                                            <div class="wrap-inut-value hidden">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group install-app hidden">
+                                                            <input type="radio" name="value" id="value-3" class="css-radio" /><label for="value-3" class="css-label-radio">Không chỉ định giá trị</label>
+                                                            <div class="wrap-inut-value hidden">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group in-app">
+                                                            <input type="radio" name="value" id="value-4" class="css-radio" checked /><label for="value-4" class="css-label-radio">Mỗi lượt cài đặt có giá trị:</label>
+                                                            <div class="wrap-inut-value">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group in-app mgb-0">
+                                                            <input type="radio" name="value" id="value-5" class="css-radio" /><label for="value-5" class="css-label-radio">Không chỉ định giá trị cho lượt cài đặt này</label>
+                                                            <div class="wrap-inut-value hidden">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="heading" data-toggle="collapse" data-target="#collapse-4">
+                                                    <span>Tên Ứng dụng</span>
+                                                </div>
+                                                <div class="collapse" id="collapse-4">
+                                                    <div class="collapse-content">
+                                                        <div class="wrap-search-app">
+                                                            <input class="custom-input" type="text" placeholder="Nhập Tên" />
+                                                            <button class="green-btn">Tìm ứng dụng</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="heading cr-quantity hidden">
+                                                    <span>Số Lượng</span>
+                                                    <div class="wrap-radio">
+                                                        <input type="radio" name="quantity" checked id="quantity-1" class="css-radio" /><label for="quantity-1" class="css-label-radio">Mỗi Chuyển đổi</label>
+                                                        <input type="radio" name="quantity" id="quantity-2" class="css-radio" /><label for="quantity-2" class="css-label-radio">Một Chuyển đổi</label>
+                                                    </div>
+                                                </div>
+                                                <div class="heading cr-duration hidden" data-toggle="collapse" data-target="#collapse-5">
+                                                    <span>Thời Lượng chuyển đổi</span>
+                                                </div>
+                                                <div class="collapse cr-duration hidden" id="collapse-5">
+                                                    <div class="collapse-content">
+                                                        <div class="row mgb-10">
+                                                            <div class="col-xs-9">
+                                                                <strong>Thời gian chuyển đổi:</strong><br />
+                                                                Từ nhấp chuột vào quảng cáo trên Mạng tìm kiếm hoặc hiển thị
+                                                            </div>
+                                                            <div class="col-xs-3">
+                                                                <select class="custom-select" style="width: 100%;">
+                                                                    <option value="1">1 tuần</option>
+                                                                    <option value="2">2 tuần</option>
+                                                                    <option value="3">3 tuần</option>
+                                                                    <option value="4">4 tuần</option>
+                                                                    <option value="5">30 ngày</option>
+                                                                    <option value="6">45 ngày</option>
+                                                                    <option value="7">60 ngày</option>
+                                                                    <option value="8">90 ngày</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-9">
+                                                                <strong>Cửa sổ chuyển đổi xem qua:</strong><br />
+                                                                Từ hiển thị, không phải nhấp chuột, của quảng cáo hình ảnh hoặc quảng cáo đa phương tiện trên Mạng hiển thị của bạn.
+                                                            </div>
+                                                            <div class="col-xs-3">
+                                                                <select class="custom-select" style="width: 100%;">
+                                                                    <option value="1">1 tuần</option>
+                                                                    <option value="2">2 tuần</option>
+                                                                    <option value="3">3 tuần</option>
+                                                                    <option value="4">4 tuần</option>
+                                                                    <option value="5">30 ngày</option>
+                                                                    <option value="6">45 ngày</option>
+                                                                    <option value="7">60 ngày</option>
+                                                                    <option value="8">90 ngày</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="heading cr-category hidden">
+                                                    <span>Danh mục</span>
+                                                    <div class="wrap-select">
+                                                        <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Chế độ xem trang chính</option>
+                                                            <option value="2">Dẫn đầu</option>
+                                                            <option value="3">Đăng ký</option>
+                                                            <option value="4">Mua/bán</option>
+                                                            <option value="5">Khác</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="heading" data-toggle="collapse" data-target="#collapse-6">
+                                                    <span>Bao gồm trong "Chuyển đổi"</span>
+                                                </div>
+                                                <div class="collapse" id="collapse-6">
+                                                    <div class="collapse-content">
+                                                        <input type="checkbox" id="include-cr" class="css-checkbox" checked /><label for="include-cr" class="css-label">Bao gồm dữ liệu cho hành động chuyển đổi này trong cột "Chuyển đổi". Cột này được sử dụng bởi bất kỳ chiến lược giá thầu dựa trên chuyển đổi nào mà bạn có thể đã thiết lập</label>
+                                                    </div>
+                                                </div>
+                                                <div class="heading url-reposted hidden" data-toggle="collapse" data-target="#collapse-7">
+                                                    <span>URL đăng lại</span>
+                                                </div>
+                                                <div class="collapse url-reposted hidden" id="collapse-7">
+                                                    <div class="collapse-content">
+                                                        <p>Tùy chọn. Nếu bạn muốn, AdWords có thể đăng thông tin chuyển đổi lên gói phân tích ứng dụng Android của bạn</p>
+                                                        <input class="custom-input" type="text" placeholder="Nhập URL" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        -->
+                                    <!--
+                                        <div class="wrap-cr-code hidden">
+                                            <h3>Tạo Chuyển Đổi Trên Ứng dụng ios</h3>
+                                            <div class="cr-code-content">
+                                                <div class="heading" data-toggle="collapse" data-target="#collapse-1">
+                                                    <span>Chọn Hành động muốn theo dõi</span>
+                                                </div>
+                                                <div class="collapse" id="collapse-1">
+                                                    <div class="collapse-content cr-action">
+                                                        <div class="form-group">
+                                                            <input type="radio" name="action" id="action-2" class="css-radio" checked /><label for="action-2" class="css-label-radio">Lượt cài đặt ứng dụng (mở lần đầu)</label>
+                                                        </div>
+                                                        <div class="form-group mgb-0">
+                                                            <input type="radio" name="action" id="action-3" class="css-radio" /><label for="action-3" class="css-label-radio">Hành động trong ứng dụng</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="heading" data-toggle="collapse" data-target="#collapse-2">
+                                                    <span>Tên Chuyển Đổi</span>
+                                                </div>
+                                                <div class="collapse" id="collapse-2">
+                                                    <div class="collapse-content">
+                                                        <input class="custom-input" type="text" placeholder="Nhập Tên" />
+                                                    </div>
+                                                </div>
+                                                <div class="heading" data-toggle="collapse" data-target="#collapse-3">
+                                                    <span>Giá Trị</span>
+                                                </div>
+                                                <div class="collapse" id="collapse-3">
+                                                    <div class="collapse-content cr-value">
+                                                        <div class="form-group install-app hidden">
+                                                            <input type="radio" name="value" id="value-1" class="css-radio" /><label for="value-1" class="css-label-radio">Hành động chuyển đổi có cùng giá trị mỗi lần xảy ra</label>
+                                                            <div class="wrap-inut-value">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group install-app hidden">
+                                                            <input type="radio" name="value" id="value-2" class="css-radio" /><label for="value-2" class="css-label-radio">Giá trị của hành động chuyển đổi này có thể thay</label>
+                                                            <div class="wrap-inut-value hidden">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group install-app hidden">
+                                                            <input type="radio" name="value" id="value-3" class="css-radio" /><label for="value-3" class="css-label-radio">Không chỉ định giá trị</label>
+                                                            <div class="wrap-inut-value hidden">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group in-app">
+                                                            <input type="radio" name="value" id="value-4" class="css-radio" checked /><label for="value-4" class="css-label-radio">Mỗi lượt cài đặt có giá trị:</label>
+                                                            <div class="wrap-inut-value">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group in-app mgb-0">
+                                                            <input type="radio" name="value" id="value-5" class="css-radio" /><label for="value-5" class="css-label-radio">Không chỉ định giá trị cho lượt cài đặt này</label>
+                                                            <div class="wrap-inut-value hidden">
+                                                                <input class="custom-input onlynumber" type="text" />
+                                                                <div class="pull-left">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="1">Đồng Việt Nam (VNĐ)</option>
+                                                                        <option value="2">Đôla Mỹ ($)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="heading cr-quantity hidden">
+                                                    <span>Số Lượng</span>
+                                                    <div class="wrap-radio">
+                                                        <input type="radio" name="quantity" checked id="quantity-1" class="css-radio" /><label for="quantity-1" class="css-label-radio">Mỗi Chuyển đổi</label>
+                                                        <input type="radio" name="quantity" id="quantity-2" class="css-radio" /><label for="quantity-2" class="css-label-radio">Một Chuyển đổi</label>
+                                                    </div>
+                                                </div>
+                                                <div class="heading cr-duration hidden" data-toggle="collapse" data-target="#collapse-4">
+                                                    <span>Thời Lượng chuyển đổi</span>
+                                                </div>
+                                                <div class="collapse cr-duration hidden" id="collapse-4">
+                                                    <div class="collapse-content">
+                                                        <div class="row mgb-10">
+                                                            <div class="col-xs-9">
+                                                                <strong>Thời gian chuyển đổi:</strong><br />
+                                                                Từ nhấp chuột vào quảng cáo trên Mạng tìm kiếm hoặc hiển thị
+                                                            </div>
+                                                            <div class="col-xs-3">
+                                                                <select class="custom-select" style="width: 100%;">
+                                                                    <option value="1">1 tuần</option>
+                                                                    <option value="2">2 tuần</option>
+                                                                    <option value="3">3 tuần</option>
+                                                                    <option value="4">4 tuần</option>
+                                                                    <option value="5">30 ngày</option>
+                                                                    <option value="6">45 ngày</option>
+                                                                    <option value="7">60 ngày</option>
+                                                                    <option value="8">90 ngày</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-9">
+                                                                <strong>Cửa sổ chuyển đổi xem qua:</strong><br />
+                                                                Từ hiển thị, không phải nhấp chuột, của quảng cáo hình ảnh hoặc quảng cáo đa phương tiện trên Mạng hiển thị của bạn.
+                                                            </div>
+                                                            <div class="col-xs-3">
+                                                                <select class="custom-select" style="width: 100%;">
+                                                                    <option value="1">1 tuần</option>
+                                                                    <option value="2">2 tuần</option>
+                                                                    <option value="3">3 tuần</option>
+                                                                    <option value="4">4 tuần</option>
+                                                                    <option value="5">30 ngày</option>
+                                                                    <option value="6">45 ngày</option>
+                                                                    <option value="7">60 ngày</option>
+                                                                    <option value="8">90 ngày</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="heading cr-category hidden">
+                                                    <span>Danh mục</span>
+                                                    <div class="wrap-select">
+                                                        <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Chế độ xem trang chính</option>
+                                                            <option value="2">Dẫn đầu</option>
+                                                            <option value="3">Đăng ký</option>
+                                                            <option value="4">Mua/bán</option>
+                                                            <option value="5">Khác</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="heading" data-toggle="collapse" data-target="#collapse-5">
+                                                    <span>Bao gồm trong "Chuyển đổi"</span>
+                                                </div>
+                                                <div class="collapse" id="collapse-5">
+                                                    <div class="collapse-content">
+                                                        <input type="checkbox" id="include-cr" class="css-checkbox" checked /><label for="include-cr" class="css-label">Bao gồm dữ liệu cho hành động chuyển đổi này trong cột "Chuyển đổi". Cột này được sử dụng bởi bất kỳ chiến lược giá thầu dựa trên chuyển đổi nào mà bạn có thể đã thiết lập</label>
+                                                    </div>
+                                                </div>
+                                                <div class="heading url-reposted" data-toggle="collapse" data-target="#collapse-6">
+                                                    <span>URL đăng lại</span>
+                                                </div>
+                                                <div class="collapse url-reposted" id="collapse-6">
+                                                    <div class="collapse-content">
+                                                        <p>Tùy chọn. Nếu bạn muốn, AdWords có thể đăng thông tin chuyển đổi lên gói phân tích ứng dụng Android của bạn</p>
+                                                        <input class="custom-input" type="text" placeholder="Nhập URL" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        -->
+                                </div>
+                            </div>
+                            <div class="form-group code-section hidden">
+                                <label class="left-form-group">Chuyển đổi</label>
+                                <div class="right-form-group">
+                                    <div class="pull-left mw-130">
+                                        <select class="custom-select" style="width: 100%;">
+                                                <option value="1">Chuyển đổi web ngạo thiên</option>
+                                                <option value="2">Chuyển đổi web ABC</option>
+                                                <option value="3">Chuyển đổi web XYZ</option>
+                                            </select>
+                                    </div>
+                                    <div class="pull-left text-right mgt-8 w-130">
+                                        <a class="link">Xem mã code</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group code-section hidden">
+                                <label class="left-form-group small-group">Mã code</label>
+                                <div class="right-form-group">
+                                    <div class="code-box">
+                                        <textarea class="custom-textarea"></textarea>
+                                        <div class="code-box-footer">
+                                            <a class="link">
+                                                <i class="glyphicon glyphicon-envelope"></i> Gởi Code Qua Email
+                                            </a>
+                                            <a class="link">
+                                                <i class="fa fa-question-circle"></i> Hướng dẫn dùng code
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mgt-20">
+                                <a class="gray-btn save-btn">Lưu & Tiếp tục</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade in active" id="coccoc-channel">
+                            <div class="form-group" data-step="3" data-intro="Chọn tài khoản liên kết" data-position='right'>
+                                <label class="left-form-group">Chọn tài khoản</label>
+                                <div class="right-form-group">
+                                    <select class="custom-select" style="width: 100%;">
+                                            <option value="">Vui lòng chọn tài khoản</option>
+                                            <option value="1">Adtop content</option>
+                                            <option value="2">Chơi đi</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="form-group" data-step="4" data-intro="Lựa chọn hình thức chuyển đổi mà bạn mong muốn" data-position='right'>
+                                <label class="left-form-group">Chuyển đổi</label>
+                                <div class="right-form-group">
+                                    <select class="custom-select" style="width: 100%;">
+                                            <option value="1">Chọn pixel Facebook</option>
+                                            <option value="2">Xem nội dung</option>
+                                            <option value="3">Tìm kiếm</option>
+                                            <option value="4">Thêm vào giỏ hàng</option>
+                                            <option value="5">Thêm vào danh sách yêu thích</option>
+                                            <option value="6">Bắt đầu thanh toán</option>
+                                            <option value="7">Thêm thông tin thanh toán</option>
+                                            <option value="8">Mua hàng</option>
+                                            <option value="9">Khách hàng tiềm năng</option>
+                                            <option value="10">Hoàn tất đăng ký</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="left-form-group small-group">Mã code</label>
+                                <div class="right-form-group">
+                                    <label class="mgt-2 mgb-5"><strong>Code xuyên trang</strong> đặt trong thẻ (&lt;head&gt;&lt;head&gt;)</label>
+                                    <div class="code-box mgb-15">
+                                        <textarea class="custom-textarea code-box"><!-- Google Code for test Conversion Page --><script type=\"text/javascript\">/* <![CDATA[ */ var google_conversion_id=953167574,google_conversion_language=\"en\",google_conversion_format=\"3\",google_conversion_color=\"ffffff\",google_conversion_label=\"LMBpCJ26ymIQ1t3AxgM\",google_conversion_value=1,google_conversion_currency=\"VND\",google_remarketing_only=!1; /* ]]> */</script><script type=\"text/javascript\" src=\"//www.googleadservices.com/pagead/conversion.js\"></script><noscript><div style=\"display:inline;\"><img height=\"1\" width=\"1\" style=\"border-style:none;\" alt=\"\" src=\"//www.googleadservices.com/pagead/conversion/953167574/?value=1.00&amp;currency_code=VND&amp;label=LMBpCJ26ymIQ1t3AxgM&amp;guid=ON&amp;script=0\"/></div></noscript></textarea>
+                                    </div>
+                                    <label class="mgb-5"><strong>Code được tạo</strong></label>
+                                    <div class="code-box">
+                                        <textarea class="custom-textarea code-box"><!-- Google Code for test Conversion Page --><script type=\"text/javascript\">/* <![CDATA[ */ var google_conversion_id=953167574,google_conversion_language=\"en\",google_conversion_format=\"3\",google_conversion_color=\"ffffff\",google_conversion_label=\"LMBpCJ26ymIQ1t3AxgM\",google_conversion_value=1,google_conversion_currency=\"VND\",google_remarketing_only=!1; /* ]]> */</script><script type=\"text/javascript\" src=\"//www.googleadservices.com/pagead/conversion.js\"></script><noscript><div style=\"display:inline;\"><img height=\"1\" width=\"1\" style=\"border-style:none;\" alt=\"\" src=\"//www.googleadservices.com/pagead/conversion/953167574/?value=1.00&amp;currency_code=VND&amp;label=LMBpCJ26ymIQ1t3AxgM&amp;guid=ON&amp;script=0\"/></div></noscript></textarea>
+                                    </div>
+                                    <div class="mgt-15">
+                                        <a class="open-mail-box link mgr-20">
+                                            <i class="glyphicon glyphicon-envelope"></i> Gởi Code Qua Email
+                                        </a>
+                                        <a class="link">
+                                            <i class="fa fa-question-circle"></i> Hướng dẫn dùng code
+                                        </a>
+                                    </div>
+                                    <div class="mail-box-show-hide hidden">
+                                        <div class="send-mail">
+                                            <span class="pull-left">To:</span>
+                                            <input class="sendmail" type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mgt-20">
+                                <a class="green-btn save-btn" href="create-channels-2.html">Lưu & Tiếp tục</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.wrap-create-channels -->
+            </div>
+            <!-- /.main-content -->
+        </div>
+        <!-- /.main -->
+        <footer class="footer">
+            <ul class="copyright">
+                <li>© 2015 Adtop., JSC</li>
+                <li><a>Giới Thiệu Về BigBom</a></li>
+                <li><a href="privacy-policy.html">Chính Sách Bảo Mật</a></li>
+            </ul>
+            <!-- /.copyright -->
+            <ul class="footer-socials">
+                <li><a class="facebook">facebook</a></li>
+                <li><a class="googleplus">googleplus</a></li>
+                <li><a class="twitter">twitter</a></li>
+            </ul>
+            <!-- /.footer-socials -->
+        </footer>
+        <!-- /.footer -->
+    </div>
+    <!-- /.wrapper -->
+
+    <script>
+        var adblock = true;
+        var params = {
+            assetURL: 'dist'
+        };
+    </script>
+    <script src="dist/scripts/adframe.js"></script>
+    <script src="dist/scripts/general.js"></script>
+    <script src="dist/scripts/common.js"></script>
+    <script src="dist/scripts/main.js"></script>
+    <script src="dist/scripts/main_demo.js"></script>
+
+</body>
+
+</html>

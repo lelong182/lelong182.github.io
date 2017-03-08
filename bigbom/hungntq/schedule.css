@@ -1,0 +1,58 @@
+.scheduleTable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: table;
+}
+.scheduleTable >div {
+	display: table-row;
+}
+.scheduleTable >div >a, .scheduleTable >div >label {
+	display: table-cell;
+}
+.scheduleTable >div span {
+	cursor: pointer;
+}
+
+.scheduleTable .cell {
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+}
+.scheduleTable .cell:hover {
+  background-color: #e6e6e6;
+}
+.scheduleTable .cell.selected, .scheduleTable .cell._selected {
+  background-color: #ff0000;
+}
+.scheduleTable .cell.unselect, .scheduleTable .cell._unselect {
+  background-color: #fff;
+}
+.scheduleTable [data-day="all"] {
+  margin-top: 5px;
+}
+.scheduleTable [data-day="all"] .selected, .scheduleTable [data-day="all"] ._selected {
+  background-color: blue;
+}
+.scheduleTable [data-day="all"] .unselect, .scheduleTable [data-day="all"] ._unselect {
+  background-color: #fff;
+}
+
+.scheduleTable span.selected, .scheduleTable span._selected {
+  background-color: #ff0000;
+}
+.scheduleTable span.unselect, .scheduleTable span._unselect {
+  background-color: #fff;
+}
+.scheduleTable [data-day="all"] {
+  margin-top: 5px;
+}
+.scheduleTable [data-day="all"] .selected, .scheduleTable [data-day="all"] ._selected {
+  background-color: blue;
+}
+.scheduleTable [data-day="all"] .unselect, .scheduleTable [data-day="all"] ._unselect {
+  background-color: #fff;
+}

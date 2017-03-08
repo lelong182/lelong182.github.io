@@ -1,0 +1,31 @@
+@media (max-width:857px) {
+
+	/* CSS Responsive table */
+	table.responsive, table.responsive thead, table.responsive tbody, table.responsive th, table.responsive td, table.responsive tr {
+		display: block;
+	}
+	table.responsive thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.responsive td {
+		position: relative;
+	}
+	table.responsive td:before {
+		left: 0;
+		position: absolute;
+		text-align: left;
+		top: 0;
+		width: 35%;
+		word-wrap: break-word;
+	}
+	table.responsive tr:first-child {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.responsive td:before {
+		content: attr(data-content);
+	}
+}

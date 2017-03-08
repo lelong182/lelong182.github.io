@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <![endif]-->
+    <title>Bigbom</title>
+    <meta name="keywords" content="keywords" />
+    <meta name="description" content="description" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="dist/images/favicon.ico" />
+
+    <!-- detect scripts -->
+    <script src="dist/scripts/libs/platform.js"></script>
+    <script src="dist/scripts/detect.js"></script>
+
+    <!-- utilities scripts -->
+    <script src="dist/scripts/libs/modernizr.js"></script>
+    <!--[if lt IE 9]>
+        <script src="dist/scripts/libs/html5shiv.js"></script>
+        <script src="dist/scripts/libs/respond.js"></script>
+        <![endif]-->
+
+    <!-- main styles -->
+    <link href="dist/styles/general.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="main-wrapper" style="opacity: 0">
+
+    <div class="beta-notification">
+        Bigbom đang trong quá trình thử nghiệm, nếu có bất kỳ lỗi không mong muốn nào mong bạn thông cảm và thông báo cho chúng tôi!
+    </div>
+    <!-- /.beta-notification -->
+
+    <div class="wrapper">
+        <div class="topbar">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img class="svg" src="assets/images/logo.svg" alt="img" />
+                </a>
+            </h1>
+            <!-- /.logo -->
+            <div class="campaign-manager">
+                <h3>
+                    <span class="refresh-link"><i class="material-icons">assistant</i></span>
+                    <span class="mine">Chiến dịch: <strong>Của Tôi</strong></span>
+                    <!--<span class="share-by">Chia sẻ bởi: <span class="share-by-name">Nguyễn Văn Hùng</span></span>-->
+                    <i class="material-icons arrow-icon">arrow_drop_down</i>
+                </h3>
+                <ul class="campaign-items">
+                    <li class="header-campaign-items"><i class="material-icons">star</i>Là trình quản lý chiến dịch mặc định</li>
+                    <li class="active">
+                        <h4>Nguyễn Văn Hùng</h4>
+                        <h6>nguyenvanhung1889@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Huỳnh Thanh Hải</h4>
+                        <h6>haiht@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Mai Tiến Đỗ</h4>
+                        <h6>domt@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Bích Nguy</h4>
+                        <h6>bichnguy@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Phúc Ngô</h4>
+                        <h6>phucngo@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.campaign-manager -->
+            <nav class="main-nav">
+                <div class="minimal-menu">
+                    <img class="close-sidebar" src="assets/images/account/w-close-icon.png" alt="img" />
+                    <ul class="menu">
+                        <li class="current-menu-item"><a href="data-table.html">Chiến Dịch</a></li>
+                        <li><a href="statistic.html">Thống Kê</a></li>
+                        <li>
+                            <a class="has-icon refferal-link">Mã giới thiệu <img class="animated infinite flash duration-1" src="assets/images/blink-icon.png" alt="img" /></a>
+                            <div class="refferal-box">
+                                <div class="w-280 pull-left mgr-10">
+                                    <input id="refferal-value" class="custom-input" type="text" value="https://bigbom.com/refferal/aGr3dU" readonly />
+                                </div>
+                                <button data-clipboard-target="#refferal-value" class="orange-btn copy-btn">COPY</button>
+                            </div>
+                        </li>
+                        <li><a href="cr-code.html">Mã chuyển đổi</a></li>
+                        <li><a href="account-linking.html">Liên Kết Tài Khoản</a></li>
+                    </ul>
+                </div>
+                <!-- /.minimal-menu -->
+            </nav>
+            <!-- /.main-nav -->
+            <form class="search-form">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+            </form>
+            <!-- /.search-form -->
+            <a class="orange-btn creat-campaign-btn" href="create-campaign.html">Tạo chiến dịch</a>
+            <!-- /.creat-campaign-btn -->
+            <ul class="top-links">
+                <li>
+                    <a class="notifications-link has-item"><i class="material-icons">notifications</i></a>
+                    <div class="list-notifications">
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Ngạo Thiên Hùng Bá</span> không được duyệt</h4>
+                            <span class="time">15m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Bạn đã kích hoạt <span class="highlight">Mã giảm giá QYJASHKA</span></h4>
+                            <span class="time">30m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Đột Kích Tinh Anh</span> đã hết ngân sách</h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="person-menu">
+                    <a class="person-link">ÍL</a>
+                    <div class="person-actions">
+                        <h4 class="header-person">Đăng nhập với tư cách:</h4>
+                        <div class="wrap-list-person">
+                            <div class="current-person person-item">
+                                <h4>Ích Luân Hình (Của tôi)</h4>
+                                <span>lklnn90@gmail.com</span>
+                                <i class="material-icons">play_arrow</i>
+                            </div>
+                            <div class="list-person">
+                                <div class="person-item active">
+                                    <h4>Ích Luân Hình (Của tôi)</h4>
+                                    <span>lklnn90@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty ABC</h4>
+                                    <span>Mời bởi: hunhhv@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty XYZ</h4>
+                                    <span>Mời bởi: hanhnn@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty DEF</h4>
+                                    <span>Mời bởi: phongvn@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="header-person">Quản lý tài khoản</h4>
+                        <div class="list-actions">
+                            <a class="action">
+                                <i class="material-icons">person</i>Quản lý tài khoản
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">vpn_key</i>Cài đặt quyền & thông báo
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">info</i>Hướng dẫn
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">input</i>Đăng xuất
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lang-switch">
+                    <a>EN</a>
+                </li>
+            </ul>
+            <!-- /.top-links -->
+        </div>
+        <!-- /.topbar -->
+        <div class="main">
+            <div class="main-header">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a>Trang Chủ</a><i class="fa fa-angle-right"></i></li>
+                        <li><a>Chiến Dịch</a><i class="fa fa-angle-right"></i></li>
+                        <li>Tạo Chiến Dịch</li>
+                    </ul>
+                </div>
+                <!-- /.breadcrumbs -->
+                <div class="steps-menu">
+                    <ul>
+                        <li class="step-1 active">
+                            <a href="create-campaign.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Tạo Chiến Dịch</h4>
+                            </a>
+                        </li>
+                        <li class="step-2 active">
+                            <a href="create-rules.html">
+                                <div data-step="1" data-intro="Tạo Rule để thiết lập ngân sách và ngày bắt đầu" data-position='right'>
+                                    <div class="circle"><i></i></div>
+                                    <h4>Tạo Rules</h4>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="step-3">
+                            <a href="create-channels.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Kênh</h4>
+                            </a>
+                        </li>
+                        <li class="step-4">
+                            <a href="complete-create-campaign.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Hoàn Thành</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.steps-menu -->
+            </div>
+            <!-- /.main-header -->
+            <div class="main-content">
+                <h3 class="border-caption">VIỆC THIẾT LẬP NGÂN SÁCH SẼ GIÚP QUẢNG CÁO TIẾP CẬN ĐÚNG ĐỐI TƯỢNG</h3>
+                <div class="wrap-create-rules">
+                    <div class="rules-type">
+                        <div class="type-item rules-auto active">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Hệ thống tự đề xuất đối tượng</h4>
+                                    <p>(Việc chọn ngân sách sẽ tăng hoặc giảm khả năng tiếp cận, CPA, đối tượng ...)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-item rules-manual">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Bạn muốn tự thiết lập đối tượng</h4>
+                                    <p>Bạn sẽ tự tạo ra một đối tượng phù hợp với quảng cáo của mình</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.rules-type -->
+                    <div class="content-box has-selected">
+                        <div class="form-group" data-step="2" data-intro="Nhập giá thầu CPA mà bạn mong muốn" data-position='right'>
+                            <label class="left-form-group star-lbl">Giá thầu CPA</label>
+                            <div class="right-form-group">
+                                <input class="custom-input number-format" type="text" value="1.000" />
+                            </div>
+                        </div>
+                        <div class="form-group bidding-section">
+                            <label class="left-form-group small-group">Đặt bidding</label>
+                            <div class="right-form-group">
+                                <input type="radio" name="bidding" id="auto-bidding" class="css-radio" checked /><label for="auto-bidding" class="css-label-radio">Tự động <span>(Đề nghị)</span></label>
+                                <input type="radio" name="bidding" id="manual-bidding" class="css-radio" /><label for="manual-bidding" class="css-label-radio">Thủ công</label>
+                                <div class="manual-bidding-content mgt-20 hidden">
+                                    <input class="custom-input mgb-20" type="text" placeholder="Nhập giá thầu CPC" />
+                                    <input id="keep-running-chk" class="css-checkbox" type="checkbox" checked>
+                                    <label for="keep-running-chk" class="css-label">
+                                            Tiếp tục chạy khi vượt giá thầu CPA
+                                            (Bỏ chọn nếu bạn muốn hệ thống tự tắt quảng cáo khi vượt giá CPA)
+                                        </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="left-form-group">Giá thầu trên di động</label>
+                            <div class="right-form-group">
+                                <div class="row">
+                                    <div class="col-sm-3 col-xs-5 pdr-10 pdr-5-sm">
+                                        <select class="custom-select" style="width: 100%;">
+                                                <option value="1">Tăng lên</option>
+                                                <option value="2">Giảm xuống</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-sm-9 col-xs-7 pdl-10 pdl-5-sm">
+                                        <div class="input-has-addon">
+                                            <input class="custom-input percent-format" type="text" />
+                                            <span>%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="left-form-group small-group">AB testing</label>
+                            <div class="right-form-group">
+                                <input type="radio" name="testing" id="testing-1" class="css-radio" checked /><label for="testing-1" class="css-label-radio">Độ tuổi</label>
+                                <input type="radio" name="testing" id="testing-2" class="css-radio" /><label for="testing-2" class="css-label-radio">Giới tính</label>
+                                <input type="radio" name="testing" id="testing-3" class="css-radio" /><label for="testing-3" class="css-label-radio">Sở thích</label>
+                            </div>
+                        </div>
+                        <div class="form-group budget-section mgb-0" data-step="3" data-intro="Đây Ngân sách tổng mà bạn muốn chạy." data-position='right'>
+                            <label class="left-form-group star-lbl">Ngân sách</label>
+                            <div class="right-form-group">
+                                <input class="custom-input budget-format" type="text" value="1.000.000" />
+                            </div>
+                        </div>
+                        <div class="form-group budget-section mgb-10">
+                            <label class="left-form-group"></label>
+                            <div class="right-form-group" data-step="4" data-intro="Lựa chọn hinh thức chạy chiến dịch<br/> Vi dụ: bạn có ngân sách 700 triệu<br/> - Tăng tốc: sẽ chạy đến khi hết ngân sách 700 triệu <br/>- Rải đều: 700tr sẽ chia đều cho khoảng thời gian mà bạn chọn. vi dụ bạn chạy trong 7 ngày => mỗi ngày bạn sẽ chạy với ngân sách tối đa là 100 triệu"
+                                data-position='right'>
+                                <div class="btn-group mgt-10">
+                                    <a class="active" id="speeding">Tăng tốc</a>
+                                    <a id="spread">Rải đều</a>
+                                </div>
+                                <div class="wrap-daterange">
+                                    <div class="row">
+                                        <div class="col-sm-6 pdr-10">
+                                            <label for="start-date">Ngày bắt đầu</label>
+                                            <div class="input-has-icon">
+                                                <input type="text" id="start-date" class="start-date custom-input" />
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 pdl-10">
+                                            <label for="end-date">Ngày kết thúc</label>
+                                            <div class="input-has-icon">
+                                                <input type="text" id="end-date" class="end-date custom-input" disabled />
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="primary-link scheduled-link">
+                                    <i class="glyphicon glyphicon-time"></i> Lên lịch khung giờ
+                                </a>
+                                <div class="form-group schedule-section hidden mgt-10">
+                                    <div class="wrap-schedules">
+                                        <div class="scheduleTable"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.content-box -->
+                    <div class="selected-box">
+                        <h3>Đã thiết lập</h3>
+                        <ul>
+                            <li>
+                                <h4>CPA Bidding:</h4>
+                                <span>1.0000 <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                            <li>
+                                <h4>Giá thầu trên thiết bị di động:</h4>
+                                <span>Tăng - 10% <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                            <li>
+                                <h4>AB testing:</h4>
+                                <span>Độ tuổi <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                            <li>
+                                <h4>Ngân sách:</h4>
+                                <span>1.000.000 - Tăng tốc - 6/2/2016 - 6/3/2016 <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.selected-box -->
+                    <hr class="mgb-30 mgt-10" />
+                    <div class="foot-main-content">
+                        <a class="green-btn" href="create-channels.html">Lưu & Tiếp tục</a>
+                    </div>
+                </div>
+                <!-- /.wrap-create-rules -->
+            </div>
+            <!-- /.main-content -->
+        </div>
+        <!-- /.main -->
+        <footer class="footer">
+            <ul class="copyright">
+                <li>© 2015 Adtop., JSC</li>
+                <li><a>Giới Thiệu Về BigBom</a></li>
+                <li><a href="privacy-policy.html">Chính Sách Bảo Mật</a></li>
+            </ul>
+            <!-- /.copyright -->
+            <ul class="footer-socials">
+                <li><a class="facebook">facebook</a></li>
+                <li><a class="googleplus">googleplus</a></li>
+                <li><a class="twitter">twitter</a></li>
+            </ul>
+            <!-- /.footer-socials -->
+        </footer>
+        <!-- /.footer -->
+    </div>
+    <!-- /.wrapper -->
+
+    <script>
+        var adblock = true;
+        var params = {
+            assetURL: 'dist'
+        };
+    </script>
+    <script src="dist/scripts/adframe.js"></script>
+    <script src="dist/scripts/general.js"></script>
+    <script src="dist/scripts/common.js"></script>
+    <script src="dist/scripts/main.js"></script>
+    <script src="dist/scripts/main_demo.js"></script>
+
+</body>
+
+</html>

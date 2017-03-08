@@ -1,0 +1,1 @@
+.tableColor a,.tableColor>div span{cursor:pointer}.tableColor{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:table}.tableColor>div{display:table-row}.tableColor>div>a,.tableColor>div>label{display:table-cell}.tableColor a{text-align:center;border:1px solid #ccc;width:30px;height:30px}

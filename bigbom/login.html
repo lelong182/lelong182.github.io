@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <![endif]-->
+        <title>Bigbom</title>
+        <meta name="keywords" content="keywords" />
+        <meta name="description" content="description" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="dist/images/favicon.ico" />
+
+        <!-- detect scripts -->
+        <script src="dist/scripts/libs/platform.js"></script>
+        <script src="dist/scripts/detect.js"></script>
+
+        <!-- utilities scripts -->
+        <script src="dist/scripts/libs/modernizr.js"></script>
+        <!--[if lt IE 9]>
+        <script src="dist/scripts/libs/html5shiv.js"></script>
+        <script src="dist/scripts/libs/respond.js"></script>
+        <![endif]-->
+
+        <!-- main styles -->
+        <link href="dist/styles/general.css" rel="stylesheet" type="text/css" />
+        <link href="dist/styles/auth.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+    <body class="auth-wrapper" style="opacity: 0">
+
+        <img class="login-bg" src="assets/images/login-bg.png" alt="img" />
+
+        <div class="wrapper">
+            <img class="logo svg" src="assets/images/logo.svg" alt="img" />
+            <div class="wrap-content">
+                 <ul class="nav nav-tabs">
+                    <li class="active"><a href="#login" data-toggle="tab">Đăng nhập</a></li>
+                    <li><a href="#signup" data-toggle="tab">Đăng ký</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="login">
+                        <div class="socials-login">
+                            <a class="facebook" href="notification.html">
+                                <img src="assets/images/w-facebook-icon.png" alt="img" />
+                                Đăng nhập bằng Facebook
+                            </a>
+                            <a class="google">
+                                <img src="assets/images/w-google-icon.png" alt="img" />
+                                Đăng nhập bằng Google
+                            </a>
+                        </div>
+                        <!-- /.socials-login -->
+                        <hr />
+                        <form class="login-form" action="account-linking.html">
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Mật khẩu" />
+                            </div>
+                            <div class="form-group clearfix text-center-xs">
+                                <a href="forget-password.html" class="forget-link">Quên mật khẩu?</a>
+                                <a class="signup-link">Bạn chưa có tài khoản? Tạo Ngay</a>
+                            </div>
+                            <button type="submit" class="orange-btn">Đăng nhập</button>
+                        </form>
+                        <!-- /.login-form -->
+                    </div>
+                    <!-- /#login -->
+                    <div class="tab-pane fade" id="signup">
+                        <form class="signup-form">
+                            <div class="form-group text-left">
+                                <input type="radio" name="account-type" id="business" class="css-radio" checked /><label for="business" class="css-label-radio mgr-40 mgr-20">Doanh nghiệp</label>
+                                <input type="radio" name="account-type" id="personal" class="css-radio" /><label for="personal" class="css-label-radio">Cá nhân</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-6 pdr-10 pdr-5-sm">
+                                        <input type="text" placeholder="Họ" />
+                                    </div>
+                                    <div class="col-xs-6 pdl-10 pdl-5-sm">
+                                        <input type="text" placeholder="Tên" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Mật khẩu" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Nhập lại mật khẩu" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Điện thoại" />
+                            </div>
+                            <button type="submit" class="orange-btn">Đăng ký</button>
+                        </form>
+                        <!-- /.signup-form -->
+                    </div>
+                    <!-- /#signup -->
+                </div>
+            </div>
+            <!-- /.wrap-content -->
+        </div>
+        <!-- /.wrapper -->
+
+        <script>
+            var adblock = true;
+            var params = {assetURL: 'dist'};
+        </script>
+        <script src="dist/scripts/adframe.js"></script>
+        <script src="dist/scripts/general.js"></script>
+        <script src="dist/scripts/auth.js"></script>
+        <script src="dist/scripts/auth_demo.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,54 @@
+.pagination {
+    clear: both;
+    margin: 20px 0 0;
+    width: 100%;
+    font-size: 0;
+
+    li {
+        display: inline-block;
+        margin: 0 2px;
+
+        &:first-child {
+            a, span {
+                padding-right: 9px;
+                padding-top: 1px;
+            }
+        }
+        &:last-child {
+            a, span {
+                padding-left: 9px;
+                padding-top: 1px;
+            }
+        }
+        &.active {
+            a {
+                color: #fff;
+                background-color: @main-color !important;
+                border-color: @main-color !important;
+
+                &:hover, &:focus {
+                    background-color: @main-color !important;
+                    border-color: @main-color !important;
+                }
+            }
+        }
+        a, span {
+            border: 1px solid #999;
+            border-radius: 0 !important;
+            color: #59595b;
+            display: inline-block;
+            font-size: 15px;
+            height: 26px;
+            padding: 1px 8px 0;
+
+            &:hover, &:focus {
+                background-color: @main-color;
+                border-color: @main-color;
+                color: #fff;
+            }
+        }
+        i {
+            font-size: 22px;
+        }
+    }
+}

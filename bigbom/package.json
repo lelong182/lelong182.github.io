@@ -1,0 +1,26 @@
+{
+  "name": "bigbom-html",
+  "version": "1.0.0",
+  "description": "Bigbom HTML",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.adtopgo.com:frontend/bigbom-html.git"
+  },
+  "author": "lelong182",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.0.1"
+  }
+}

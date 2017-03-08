@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <![endif]-->
+    <title>Bigbom</title>
+    <meta name="keywords" content="keywords" />
+    <meta name="description" content="description" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="dist/images/favicon.ico" />
+
+    <!-- detect scripts -->
+    <script src="dist/scripts/libs/platform.js"></script>
+    <script src="dist/scripts/detect.js"></script>
+
+    <!-- utilities scripts -->
+    <script src="dist/scripts/libs/modernizr.js"></script>
+    <!--[if lt IE 9]>
+        <script src="dist/scripts/libs/html5shiv.js"></script>
+        <script src="dist/scripts/libs/respond.js"></script>
+        <![endif]-->
+
+    <!-- main styles -->
+    <link href="dist/styles/general.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="main-wrapper" style="opacity: 0">
+
+    <div class="beta-notification">
+        Bigbom đang trong quá trình thử nghiệm, nếu có bất kỳ lỗi không mong muốn nào mong bạn thông cảm và thông báo cho chúng tôi!
+    </div>
+    <!-- /.beta-notification -->
+
+    <div class="modal fade tutorial-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="wrap-video">
+                <iframe width="560" height="315" src="//www.youtube.com/embed/cnCX1TLJ7vc" autoplay="0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="text-center mgt-30">
+                <button class="close-btn" data-dismiss="modal">Bỏ qua Clip này</button>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="topbar">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img class="svg" src="assets/images/logo.svg" alt="img" />
+                </a>
+            </h1>
+            <!-- /.logo -->
+            <div class="campaign-manager">
+                <h3>
+                    <span class="refresh-link"><i class="material-icons">assistant</i></span>
+                    <span class="mine">Chiến dịch: <strong>Của Tôi</strong></span>
+                    <!--<span class="share-by">Chia sẻ bởi: <span class="share-by-name">Nguyễn Văn Hùng</span></span>-->
+                    <i class="material-icons arrow-icon">arrow_drop_down</i>
+                </h3>
+                <ul class="campaign-items">
+                    <li class="header-campaign-items"><i class="material-icons">star</i>Là trình quản lý chiến dịch mặc định</li>
+                    <li class="active">
+                        <h4>Nguyễn Văn Hùng</h4>
+                        <h6>nguyenvanhung1889@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Huỳnh Thanh Hải</h4>
+                        <h6>haiht@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Mai Tiến Đỗ</h4>
+                        <h6>domt@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Bích Nguy</h4>
+                        <h6>bichnguy@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Phúc Ngô</h4>
+                        <h6>phucngo@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.campaign-manager -->
+            <nav class="main-nav">
+                <div class="minimal-menu">
+                    <img class="close-sidebar" src="assets/images/account/w-close-icon.png" alt="img" />
+                    <ul class="menu">
+                        <li class="current-menu-item"><a href="data-table.html">Chiến Dịch</a></li>
+                        <li><a href="statistic.html">Thống Kê</a></li>
+                        <li>
+                            <a class="has-icon refferal-link">Mã giới thiệu <img class="animated infinite flash duration-1" src="assets/images/blink-icon.png" alt="img" /></a>
+                            <div class="refferal-box">
+                                <div class="w-280 pull-left mgr-10">
+                                    <input id="refferal-value" class="custom-input" type="text" value="https://bigbom.com/refferal/aGr3dU" readonly />
+                                </div>
+                                <button data-clipboard-target="#refferal-value" class="orange-btn copy-btn">COPY</button>
+                            </div>
+                        </li>
+                        <li><a href="cr-code.html">Mã chuyển đổi</a></li>
+                        <li><a href="account-linking.html">Liên Kết Tài Khoản</a></li>
+                    </ul>
+                </div>
+                <!-- /.minimal-menu -->
+            </nav>
+            <!-- /.main-nav -->
+            <form class="search-form">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+            </form>
+            <!-- /.search-form -->
+            <a class="orange-btn creat-campaign-btn" href="create-campaign.html">Tạo chiến dịch</a>
+            <!-- /.creat-campaign-btn -->
+            <ul class="top-links">
+                <li>
+                    <a class="notifications-link has-item"><i class="material-icons">notifications</i></a>
+                    <div class="list-notifications">
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Ngạo Thiên Hùng Bá</span> không được duyệt</h4>
+                            <span class="time">15m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Bạn đã kích hoạt <span class="highlight">Mã giảm giá QYJASHKA</span></h4>
+                            <span class="time">30m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Đột Kích Tinh Anh</span> đã hết ngân sách</h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="person-menu">
+                    <a class="person-link">ÍL</a>
+                    <div class="person-actions">
+                        <h4 class="header-person">Đăng nhập với tư cách:</h4>
+                        <div class="wrap-list-person">
+                            <div class="current-person person-item">
+                                <h4>Ích Luân Hình (Của tôi)</h4>
+                                <span>lklnn90@gmail.com</span>
+                                <i class="material-icons">play_arrow</i>
+                            </div>
+                            <div class="list-person">
+                                <div class="person-item active">
+                                    <h4>Ích Luân Hình (Của tôi)</h4>
+                                    <span>lklnn90@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty ABC</h4>
+                                    <span>Mời bởi: hunhhv@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty XYZ</h4>
+                                    <span>Mời bởi: hanhnn@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty DEF</h4>
+                                    <span>Mời bởi: phongvn@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="header-person">Quản lý tài khoản</h4>
+                        <div class="list-actions">
+                            <a class="action">
+                                <i class="material-icons">person</i>Quản lý tài khoản
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">vpn_key</i>Cài đặt quyền & thông báo
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">info</i>Hướng dẫn
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">input</i>Đăng xuất
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lang-switch">
+                    <a>EN</a>
+                </li>
+            </ul>
+            <!-- /.top-links -->
+        </div>
+        <!-- /.topbar -->
+        <div class="main">
+            <div class="main-content">
+                <div class="wrap-account-linking">
+                    <h3 class="header">Liên Kết tài khoản</h3>
+                    <div class="wrap-left-right">
+                        <div class="left-side" data-step="1" data-intro="Lựa chọn kênh quảng cáo mà bạn muốn liên kế" data-position='right'>
+                            <h4>Chọn Kênh quảng cáo</h4>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active">
+                                    <a href="#coccoc" data-toggle="tab">
+                                        <img src="assets/images/coccoc-icon.png" alt="img" /> Cốc Cốc
+                                        <span class="add-icon" data-toggle="modal" data-target=".coccoc-linking-modal" id="start-intro-btn" data-step="2" data-intro="Hãy click vào icon Thêm nếu bạn muốn thêm nhiều tài khoản liên kết." data-position='right'></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#google" data-toggle="tab">
+                                        <img src="assets/images/google-icon.png" alt="img" /> Google
+                                        <span class="add-icon"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#facebook" data-toggle="tab">
+                                        <img src="assets/images/facebook-icon.png" alt="img" /> Facebook
+                                        <span class="add-icon" data-toggle="modal" data-target=".facebook-linking-modal"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right-side">
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="coccoc">
+                                    <div class="linking-now">
+                                        <h5 class="mgb-10">Hãy Liên Kết Tài Khoản Cốc Cốc Với BIGBOM</h5>
+                                        <p class="mgb-30 highlight-3">Lưu ý: Nếu bạn chưa có Secret key, Bigbom sẽ hỗ trợ bạn gởi yêu cầu cấp Secret Key cho Cốc Cốc</p>
+                                        <a class="primary-btn mgb-10-xs mgr-10" data-toggle="modal" data-target=".coccoc-linking-modal">Liên kết Ngay</a>
+                                        <!--<a class="primary-link request-secret-link">YÊU CẦU CẤP SECRET KEY</a>-->
+                                    </div>
+                                    <div class="request-secret-form hidden">
+                                        <div class="form-group">
+                                            <input class="custom-input" type="text" placeholder="Họ tên" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="custom-input" type="email" placeholder="Email liên hệ" />
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="wrap-ads-id">
+                                                <input class="custom-input" type="text" placeholder="Ads ID" />
+                                                <span class="add-icon"><i class="material-icons">add_box</i></span>
+                                            </div>
+                                            <a class="primary-link">Xem hướng dẫn cách lấy Ads ID</a>
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="agree-chk" class="css-checkbox" type="checkbox" checked>
+                                            <label for="agree-chk" class="css-label">Tôi đồng ý với <a class="primary-link">điều khoản bảo mật</a></label>
+                                        </div>
+                                        <button class="green-btn send-btn">Gởi yêu cầu</button>
+                                    </div>
+                                    <div class="request-secret-successful hidden">
+                                        <img src="assets/images/big-email-check-icon.png" alt="img" />
+                                        <h5>Bạn đã gởi yêu cầu thành công <br />Mã Secret Key sẽ được gởi qua email bạn đăng ký</h5>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="google">
+                                    <div class="linking-now">
+                                        <h5>Bạn chưa liên kết tài khoản Google với BIGBOM</h5>
+                                        <a href="account-linking-2.html" class="primary-btn mgb-10-xs">Liên kết Ngay</a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="facebook">
+                                    <div class="linking-now">
+                                        <h5>Bạn chưa liên kết tài khoản Facebook với BIGBOM</h5>
+                                        <a class="primary-btn mgb-10-xs" data-toggle="modal" data-target=".facebook-linking-modal">Liên kết Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.wrap-account-linking -->
+            </div>
+            <!-- /.main-content -->
+            <div class="modal fade facebook-linking-modal linking-modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                            <h4 class="modal-title text-left">Liên kết tài khoản facebook</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="wrap-bb-table">
+                                <div class="bb-table">
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-header text-center" data-width="30">
+                                            <input data-id="all" id="bb-table-chk-all" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-all" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-header" data-width="300">Tên tài khoản</div>
+                                        <div class="bb-table-header" data-width="150">ID tài khoản</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-11" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-11" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop Media 61- teamtech</div>
+                                        <div class="bb-table-cell">1062752200498747</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-22" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-22" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop59- teamtech</div>
+                                        <div class="bb-table-cell">1062223360551631</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-33" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-33" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop Media (HCM) (USD) 30 Team tech</div>
+                                        <div class="bb-table-cell">1061660350607932</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-44" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-44" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop Media 61- teamtech</div>
+                                        <div class="bb-table-cell">1062752200498747</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-55" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-55" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop59- teamtech</div>
+                                        <div class="bb-table-cell">1062223360551631</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-111" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-111" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop Media 61- teamtech</div>
+                                        <div class="bb-table-cell">1062752200498747</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-222" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-222" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop59- teamtech</div>
+                                        <div class="bb-table-cell">1062223360551631</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-333" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-333" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop Media (HCM) (USD) 30 Team tech</div>
+                                        <div class="bb-table-cell">1061660350607932</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-444" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-444" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop Media 61- teamtech</div>
+                                        <div class="bb-table-cell">1062752200498747</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-555" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-555" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop59- teamtech</div>
+                                        <div class="bb-table-cell">1062223360551631</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-1" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-1" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop Media 61- teamtech</div>
+                                        <div class="bb-table-cell">1062752200498747</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-2" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-2" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop59- teamtech</div>
+                                        <div class="bb-table-cell">1062223360551631</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-3" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-3" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop Media (HCM) (USD) 30 Team tech</div>
+                                        <div class="bb-table-cell">1061660350607932</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-4" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-4" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop Media 61- teamtech</div>
+                                        <div class="bb-table-cell">1062752200498747</div>
+                                    </div>
+                                    <div class="bb-table-row">
+                                        <div class="bb-table-cell text-center">
+                                            <input id="bb-table-chk-5" class="css-checkbox" type="checkbox">
+                                            <label for="bb-table-chk-5" class="css-label"></label>
+                                        </div>
+                                        <div class="bb-table-cell">Adtop59- teamtech</div>
+                                        <div class="bb-table-cell">1062223360551631</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="text-center">
+                                <button class="green-btn">Liên kết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.facebook-linking-modal -->
+            <div class="modal fade coccoc-linking-modal linking-modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content" data-step="3" data-intro="Nhập thông tin tài khoản Cốc Cốc <br/>Secret key : đội hỗ trợ Bigbom sẽ cung cấp mã Secret key để liên kết Bigbom với Cốc Cốc" data-position='right'>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                            <h4 class="modal-title text-left">Liên kết tài khoản Cốc Cốc</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <input class="custom-input" type="text" placeholder="ID account" />
+                            </div>
+                            <div class="form-group">
+                                <input class="custom-input" type="text" placeholder="Secret Key" />
+                            </div>
+                            <div class="form-group">
+                                <input class="custom-input" type="text" placeholder="Tên tài khoản" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="text-center">
+                                <a href="account-linking-2.html">
+                                    <button class="orange-btn">Đồng ý</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.coccoc-linking-modal -->
+        </div>
+        <!-- /.main -->
+        <footer class="footer">
+            <ul class="copyright">
+                <li>© 2015 Adtop., JSC</li>
+                <li><a>Giới Thiệu Về BigBom</a></li>
+                <li><a href="privacy-policy.html">Chính Sách Bảo Mật</a></li>
+            </ul>
+            <!-- /.copyright -->
+            <ul class="footer-socials">
+                <li><a class="facebook">facebook</a></li>
+                <li><a class="googleplus">googleplus</a></li>
+                <li><a class="twitter">twitter</a></li>
+            </ul>
+            <!-- /.footer-socials -->
+        </footer>
+        <!-- /.footer -->
+    </div>
+    <!-- /.wrapper -->
+
+    <script>
+        var adblock = true;
+        var params = {
+            assetURL: 'dist'
+        };
+    </script>
+    <script src="dist/scripts/adframe.js"></script>
+    <script src="dist/scripts/general.js"></script>
+    <script src="dist/scripts/common.js"></script>
+    <script src="dist/scripts/main.js"></script>
+    <script src="dist/scripts/main_demo.js"></script>
+
+
+</body>
+
+</html>

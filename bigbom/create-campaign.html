@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <![endif]-->
+    <title>Bigbom</title>
+    <meta name="keywords" content="keywords" />
+    <meta name="description" content="description" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="dist/images/favicon.ico" />
+
+    <!-- detect scripts -->
+    <script src="dist/scripts/libs/platform.js"></script>
+    <script src="dist/scripts/detect.js"></script>
+
+    <!-- utilities scripts -->
+    <script src="dist/scripts/libs/modernizr.js"></script>
+    <!--[if lt IE 9]>
+        <script src="dist/scripts/libs/html5shiv.js"></script>
+        <script src="dist/scripts/libs/respond.js"></script>
+        <![endif]-->
+
+    <!-- main styles -->
+    <link href="dist/styles/general.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="main-wrapper" style="opacity: 0">
+
+    <div class="beta-notification">
+        Bigbom đang trong quá trình thử nghiệm, nếu có bất kỳ lỗi không mong muốn nào mong bạn thông cảm và thông báo cho chúng tôi!
+    </div>
+    <!-- /.beta-notification -->
+
+    <div class="wrapper">
+        <div class="topbar">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img class="svg" src="assets/images/logo.svg" alt="img" />
+                </a>
+            </h1>
+            <!-- /.logo -->
+            <div class="campaign-manager">
+                <h3>
+                    <span class="refresh-link"><i class="material-icons">assistant</i></span>
+                    <span class="mine">Chiến dịch: <strong>Của Tôi</strong></span>
+                    <!--<span class="share-by">Chia sẻ bởi: <span class="share-by-name">Nguyễn Văn Hùng</span></span>-->
+                    <i class="material-icons arrow-icon">arrow_drop_down</i>
+                </h3>
+                <ul class="campaign-items">
+                    <li class="header-campaign-items"><i class="material-icons">star</i>Là trình quản lý chiến dịch mặc định</li>
+                    <li class="active">
+                        <h4>Nguyễn Văn Hùng</h4>
+                        <h6>nguyenvanhung1889@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Huỳnh Thanh Hải</h4>
+                        <h6>haiht@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Mai Tiến Đỗ</h4>
+                        <h6>domt@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Bích Nguy</h4>
+                        <h6>bichnguy@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Phúc Ngô</h4>
+                        <h6>phucngo@adtop.vn</h6>
+                        <div class="wrap-icons">
+                            <i class="material-icons">star</i>
+                            <i class="break-link-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.campaign-manager -->
+            <nav class="main-nav">
+                <div class="minimal-menu">
+                    <img class="close-sidebar" src="assets/images/account/w-close-icon.png" alt="img" />
+                    <ul class="menu">
+                        <li class="current-menu-item"><a href="data-table.html">Chiến Dịch</a></li>
+                        <li><a href="statistic.html">Thống Kê</a></li>
+                        <li>
+                            <a class="has-icon refferal-link">Mã giới thiệu <img class="animated infinite flash duration-1" src="assets/images/blink-icon.png" alt="img" /></a>
+                            <div class="refferal-box">
+                                <div class="w-280 pull-left mgr-10">
+                                    <input id="refferal-value" class="custom-input" type="text" value="https://bigbom.com/refferal/aGr3dU" readonly />
+                                </div>
+                                <button data-clipboard-target="#refferal-value" class="orange-btn copy-btn">COPY</button>
+                            </div>
+                        </li>
+                        <li><a href="cr-code.html">Mã chuyển đổi</a></li>
+                        <li><a href="account-linking.html">Liên Kết Tài Khoản</a></li>
+                    </ul>
+                </div>
+                <!-- /.minimal-menu -->
+            </nav>
+            <!-- /.main-nav -->
+            <form class="search-form">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+            </form>
+            <!-- /.search-form -->
+            <a class="orange-btn creat-campaign-btn" href="create-campaign.html">Tạo chiến dịch</a>
+            <!-- /.creat-campaign-btn -->
+            <ul class="top-links">
+                <li>
+                    <a class="notifications-link has-item"><i class="material-icons">notifications</i></a>
+                    <div class="list-notifications">
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Ngạo Thiên Hùng Bá</span> không được duyệt</h4>
+                            <span class="time">15m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Bạn đã kích hoạt <span class="highlight">Mã giảm giá QYJASHKA</span></h4>
+                            <span class="time">30m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4>Chiến dịch <span class="highlight">Đột Kích Tinh Anh</span> đã hết ngân sách</h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                        <div class="notification-item">
+                            <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                            <span class="time">40m</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="person-menu">
+                    <a class="person-link">ÍL</a>
+                    <div class="person-actions">
+                        <h4 class="header-person">Đăng nhập với tư cách:</h4>
+                        <div class="wrap-list-person">
+                            <div class="current-person person-item">
+                                <h4>Ích Luân Hình (Của tôi)</h4>
+                                <span>lklnn90@gmail.com</span>
+                                <i class="material-icons">play_arrow</i>
+                            </div>
+                            <div class="list-person">
+                                <div class="person-item active">
+                                    <h4>Ích Luân Hình (Của tôi)</h4>
+                                    <span>lklnn90@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty ABC</h4>
+                                    <span>Mời bởi: hunhhv@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty XYZ</h4>
+                                    <span>Mời bởi: hanhnn@gmail.com</span>
+                                </div>
+                                <div class="person-item">
+                                    <h4>Thuộc công ty DEF</h4>
+                                    <span>Mời bởi: phongvn@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="header-person">Quản lý tài khoản</h4>
+                        <div class="list-actions">
+                            <a class="action">
+                                <i class="material-icons">person</i>Quản lý tài khoản
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">vpn_key</i>Cài đặt quyền & thông báo
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">info</i>Hướng dẫn
+                            </a>
+                            <a class="action">
+                                <i class="material-icons">input</i>Đăng xuất
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lang-switch">
+                    <a>EN</a>
+                </li>
+            </ul>
+            <!-- /.top-links -->
+        </div>
+        <!-- /.topbar -->
+        <div class="main">
+            <div class="main-header">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a>Trang Chủ</a><i class="fa fa-angle-right"></i></li>
+                        <li><a>Chiến Dịch</a><i class="fa fa-angle-right"></i></li>
+                        <li>Tạo Chiến Dịch</li>
+                    </ul>
+                </div>
+                <!-- /.breadcrumbs -->
+                <div class="steps-menu" data-step="1" data-intro="Quy trình tạo chiến dịch" data-position='bottom'>
+                    <ul>
+                        <li class="step-1 active">
+                            <a href="create-campaign.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Tạo Chiến Dịch</h4>
+                            </a>
+                        </li>
+                        <li class="step-2">
+                            <a href="create-rules.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Tạo Rules</h4>
+                            </a>
+                        </li>
+                        <li class="step-3">
+                            <a href="create-channels.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Kênh</h4>
+                            </a>
+                        </li>
+                        <li class="step-4">
+                            <a href="complete-create-campaign.html">
+                                <div class="circle"><i></i></div>
+                                <h4>Hoàn Thành</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.steps-menu -->
+            </div>
+            <!-- /.main-header -->
+            <div class="main-content">
+                <h3 class="border-caption">CHỌN Mục tiêu & lĩnh vực SẼ GIÚP QUẢNG CÁO CỦA BẠN CHÍNH XÁC HƠN</h3>
+                <div class="wrap-create-camp">
+                    <div class="content-box has-selected">
+                        <div class="form-group" data-step="2" data-intro="Nhập tên cho chiến dịch của bạn" data-position='right'>
+                            <label class="left-form-group star-lbl">Tên chiến dịch</label>
+                            <div class="right-form-group">
+                                <input class="custom-input" type="text" />
+                            </div>
+                        </div>
+                        <div class="form-group" data-step="3" data-intro="Lựa chọn lĩnh vực phù hợp với quảng cáo của bạn
+                            <br/>Ví dụ bạn muốn quảng cáo về games, hãy chọn lĩnh vực là game.
+                            <br/><br/>
+                            Lựa chon này sẽ ảnh hưởng đến:<br/>
+                            - Đối tượng bigbom đề xuất cho bạn (sẽ update sau)<br/>
+                            - Ảnh hưởng đến bidding CPA tự động" data-position='right'>
+                            <label class="left-form-group">Lĩnh vực</label>
+                            <div class="right-form-group">
+                                <select class="custom-select" style="width: 100%;">
+                                        <option value="">Vui lòng chọn</option>
+                                        <option value="1">Game</option>
+                                        <option value="2">Thương mại điện tử</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group" data-step="4" data-intro="Hình thức quảng cáo mà bạn mong muốn" data-position='right'>
+                            <label class="left-form-group">Hình thức quảng cáo</label>
+                            <div class="right-form-group">
+                                <select class="custom-select" style="width: 100%;">
+                                        <option value="">Vui lòng chọn</option>
+                                        <option value="1">Banner</option>
+                                        <option value="2">Tìm kiếm từ khóa</option>
+                                        <option value="3">Video</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group target-section">
+                            <label class="left-form-group small-group">Mục tiêu</label>
+                            <div class="right-form-group">
+                                <input type="radio" name="target" id="target-1" class="css-radio" checked /><label for="target-1" class="css-label-radio">Cài đặt ứng dụng</label>
+                                <input type="radio" name="target" id="target-2" class="css-radio" /><label for="target-2" class="css-label-radio">Tăng chuyển đổi trên web</label>
+                            </div>
+                        </div>
+                        <div class="form-group language-section">
+                            <label class="left-form-group">Ngôn ngữ</label>
+                            <div class="right-form-group">
+                                <div class="input-has-list">
+                                    <input class="custom-input" type="text" name="language" placeholder="Nhập ngôn ngữ" />
+                                    <!-- thêm class ".opened" để show list -->
+                                    <ul class="list-multi-level has-scroll">
+                                        <li>
+                                            <input type="checkbox" id="lang-1" class="css-checkbox-2" /><label for="lang-1" class="css-label-2">Tiếng Việt</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="lang-2" class="css-checkbox-2" /><label for="lang-2" class="css-label-2">Tiếng Anh</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="lang-3" class="css-checkbox-2" /><label for="lang-3" class="css-label-2">Tiếng Trung Quốc</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="lang-4" class="css-checkbox-2" /><label for="lang-4" class="css-label-2">Tiếng Lào</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="lang-5" class="css-checkbox-2" /><label for="lang-5" class="css-label-2">Tiếng Campuchia</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="lang-6" class="css-checkbox-2" /><label for="lang-6" class="css-label-2">Tiếng Đức</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group device-section hidden">
+                            <label class="left-form-group small-group">Thiết bị được chọn mục tiêu</label>
+                            <div class="right-form-group">
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        <input type="radio" name="all-device" id="all-device" class="css-radio" checked /><label for="all-device" class="css-label-radio">Tất cả</label>
+                                    </div>
+                                    <a class="link">Tùy chỉnh</a>
+                                </div>
+                                <div class="device-type hidden">
+                                    <input type="checkbox" id="computer" class="css-checkbox" checked /><label for="computer" class="css-label">Máy tính</label>
+                                    <input type="checkbox" id="mobile" class="css-checkbox" checked /><label for="mobile" class="css-label">Điện thoại di động</label>
+                                    <input type="checkbox" id="tablet" class="css-checkbox" checked /><label for="tablet" class="css-label">Máy tính bảng</label>
+                                </div>
+                                <div class="wrap-device-box hidden">
+                                    <p><strong>Tùy chỉnh thiết bị di động và máy tính bảng</strong></p>
+                                    <div class="device-box">
+                                        <div class="row hidden-xs">
+                                            <div class="col-xs-3">
+                                                <h4>Hệ điều hành</h4>
+                                            </div>
+                                            <div class="col-xs-4 pd-5">
+                                                <h4>Phiên bản</h4>
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <h4>Thiết bị</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row mgb-20">
+                                            <div class="col-sm-3 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Hệ điều hành">
+                                                    <input type="checkbox" id="android" class="css-checkbox" checked /><label for="android" class="css-label">Android</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 pd-5 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Phiên bản">
+                                                    <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Tất Cả Phiên Bản</option>
+                                                            <option value="2">Phiên bản 1</option>
+                                                            <option value="2">Phiên bản 2</option>
+                                                            <option value="2">Phiên bản 3</option>
+                                                            <option value="2">Phiên bản 4</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Thiết bị">
+                                                    <div class="all-options">Tất Cả Thiết Bị Android<i class="fa fa-angle-down"></i></div>
+                                                    <div class="wrap-options-result">
+                                                        <form class="search-form">
+                                                            <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                                        </form>
+                                                        <ul class="list-multi-level has-scroll">
+                                                            <li class="has-child">
+                                                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                <input type="checkbox" id="asus" class="css-checkbox-2" /><label for="asus" class="css-label-2">Asus</label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <input type="checkbox" id="zenfone-4" class="css-checkbox-2" /><label for="zenfone-4" class="css-label-2">Zenfone 4</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="zenfone-5" class="css-checkbox-2" /><label for="zenfone-5" class="css-label-2">Zenfone 5</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="zenfone-6" class="css-checkbox-2" /><label for="zenfone-6" class="css-label-2">Zenfone 6</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="zenfone-2" class="css-checkbox-2" /><label for="zenfone-2" class="css-label-2">Zenfone 2</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="has-child">
+                                                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                <input type="checkbox" id="samsung" class="css-checkbox-2" /><label for="samsung" class="css-label-2">Samsung</label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <input type="checkbox" id="galazy-s4" class="css-checkbox-2" /><label for="galazy-s4" class="css-label-2">Galaxy S4</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="galazy-s5" class="css-checkbox-2" /><label for="galazy-s5" class="css-label-2">Galaxy S5</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="galazy-s6" class="css-checkbox-2" /><label for="galazy-s6" class="css-label-2">Galaxy S6</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="galazy-s7" class="css-checkbox-2" /><label for="galazy-s7" class="css-label-2">Galaxy S7</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mgb-20">
+                                            <div class="col-sm-3 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Hệ điều hành">
+                                                    <input type="checkbox" id="blackberry" class="css-checkbox" checked /><label for="blackberry" class="css-label">Blackberry</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 pd-5 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Phiên bản">
+                                                    <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Tất Cả Phiên Bản</option>
+                                                            <option value="2">Phiên bản 1</option>
+                                                            <option value="2">Phiên bản 2</option>
+                                                            <option value="2">Phiên bản 3</option>
+                                                            <option value="2">Phiên bản 4</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Thiết bị">
+                                                    <div class="all-options">Tất Cả Thiết Bị BlackBerry<i class="fa fa-angle-down"></i></div>
+                                                    <div class="wrap-options-result">
+                                                        <form class="search-form">
+                                                            <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                                        </form>
+                                                        <ul class="list-multi-level has-scroll">
+                                                            <li class="has-child">
+                                                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                <input type="checkbox" id="bb" class="css-checkbox-2" /><label for="bb" class="css-label-2">BB</label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <input type="checkbox" id="black-berry-4" class="css-checkbox-2" /><label for="black-berry-4" class="css-label-2">BlackBerry 4</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="black-berry-5" class="css-checkbox-2" /><label for="black-berry-5" class="css-label-2">BlackBerry 5</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="black-berry-6" class="css-checkbox-2" /><label for="black-berry-6" class="css-label-2">BlackBerry 6</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="black-berry-2" class="css-checkbox-2" /><label for="black-berry-2" class="css-label-2">BlackBerry 2</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mgb-20">
+                                            <div class="col-sm-3 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Hệ điều hành">
+                                                    <input type="checkbox" id="ios" class="css-checkbox" checked /><label for="ios" class="css-label">iOS</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 pd-5 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Phiên bản">
+                                                    <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Tất Cả Phiên Bản</option>
+                                                            <option value="2">Phiên bản 1</option>
+                                                            <option value="2">Phiên bản 2</option>
+                                                            <option value="2">Phiên bản 3</option>
+                                                            <option value="2">Phiên bản 4</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Thiết bị">
+                                                    <div class="all-options">Tất Cả Thiết Bị iOS<i class="fa fa-angle-down"></i></div>
+                                                    <div class="wrap-options-result">
+                                                        <form class="search-form">
+                                                            <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                                        </form>
+                                                        <ul class="list-multi-level has-scroll">
+                                                            <li class="has-child">
+                                                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                <input type="checkbox" id="first-iphone" class="css-checkbox-2" /><label for="first-iphone" class="css-label-2">iPhone</label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <input type="checkbox" id="iphone-4" class="css-checkbox-2" /><label for="iphone-4" class="css-label-2">iPhone 4</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="iphone-5" class="css-checkbox-2" /><label for="iphone-5" class="css-label-2">iPhone 5</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="iphone-6" class="css-checkbox-2" /><label for="iphone-6" class="css-label-2">iPhone 6</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="iphone-7" class="css-checkbox-2" /><label for="iphone-7" class="css-label-7">iPhone 7</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-3 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Hệ điều hành">
+                                                    <input type="checkbox" id="windows-phone" class="css-checkbox" checked /><label for="windows-phone" class="css-label">Windows phone</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 pd-5 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Phiên bản">
+                                                    <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Tất Cả Phiên Bản</option>
+                                                            <option value="2">Phiên bản 1</option>
+                                                            <option value="2">Phiên bản 2</option>
+                                                            <option value="2">Phiên bản 3</option>
+                                                            <option value="2">Phiên bản 4</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 mgb-10-xs">
+                                                <div class="wrap-db-xs" data-content="Thiết bị">
+                                                    <div class="all-options">Tất Cả Thiết Bị Windows phone<i class="fa fa-angle-down"></i></div>
+                                                    <div class="wrap-options-result">
+                                                        <form class="search-form">
+                                                            <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                                        </form>
+                                                        <ul class="list-multi-level has-scroll">
+                                                            <li class="has-child">
+                                                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                <input type="checkbox" id="lumia" class="css-checkbox-2" /><label for="lumia" class="css-label-2">Lumia</label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <input type="checkbox" id="lumia-4" class="css-checkbox-2" /><label for="lumia-4" class="css-label-2">Lumia 4</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="lumia-5" class="css-checkbox-2" /><label for="lumia-5" class="css-label-2">Lumia 5</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="lumia-6" class="css-checkbox-2" /><label for="lumia-6" class="css-label-2">Lumia 6</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" id="lumia-7" class="css-checkbox-2" /><label for="lumia-7" class="css-label-7">Lumia 7</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group os-section">
+                            <label class="left-form-group">Hệ điều hành</label>
+                            <div class="right-form-group">
+                                <ul class="nav nav-tabs os-tabs">
+                                    <li class="active"><a href="#os-android-tab" data-toggle="tab">Android</a></li>
+                                    <li><a href="#os-ios-tab" data-toggle="tab">iOS</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="os-android-tab">
+                                        <div class="wrap-os-versions mgb-10 w-800-lg">
+                                            <select class="custom-select" style="width: 100%;">
+                                                    <option value="">Tất cả phiên bản</option>
+                                                    <option value="2.0">2.0</option><option value="2.1">2.1</option><option value="2.2">2.2</option>
+                                                    <option value="2.3">2.3</option><option value="3.0">3.0</option><option value="3.1">3.1</option>
+                                                    <option value="3.2">3.2</option><option value="4.0">4.0</option><option value="4.1">4.1</option>
+                                                    <option value="4.2">4.2</option><option value="4.3">4.3</option><option value="4.4">4.4</option>
+                                                    <option value="5.0">5.0</option><option value="5.1">5.1</option><option value="6.0">6.0</option>
+                                                </select>
+                                        </div>
+                                        <div class="wrap-devices w-800-lg">
+                                            <div class="all-devices">
+                                                <div class="form-group">
+                                                    <input type="checkbox" id="all-android-mobile" checked class="css-checkbox" /><label for="all-android-mobile" class="css-label">Tất cả điện thoại Android</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="checkbox" id="all-android-tablet" checked class="css-checkbox" /><label for="all-android-tablet" class="css-label">Tất cả máy tính bảng Android</label>
+                                                </div>
+                                            </div>
+                                            <div class="option-devices">
+                                                <div class="form-group">
+                                                    <input type="checkbox" id="option-chk-1" class="css-checkbox option-chk" /><label for="option-chk-1" class="css-label">Tùy chọn thiết bị</label>
+                                                </div>
+                                                <div class="search-device-form hidden">
+                                                    <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                                    <img src="assets/images/search-icon.png" alt="img" />
+                                                </div>
+                                                <ul class="list-multi-level hidden">
+                                                    <li class="has-child">
+                                                        <i class="glyphicon glyphicon-triangle-right"></i>
+                                                        <input type="checkbox" id="second-iphone" class="css-checkbox-2" /><label for="second-iphone" class="css-label-2">iPhone</label>
+                                                        <ul>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone4" class="css-checkbox-2" /><label for="iphone4" class="css-label-2">iPhone 4</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone4s" class="css-checkbox-2" /><label for="iphone4s" class="css-label-2">iPhone 4S</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone5" class="css-checkbox-2" /><label for="iphone5" class="css-label-2">iPhone 5</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone5s" class="css-checkbox-2" /><label for="iphone5s" class="css-label-2">iPhone 5S</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone6" class="css-checkbox-2" /><label for="iphone6" class="css-label-2">iPhone 6</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone6s" class="css-checkbox-2" /><label for="iphone6s" class="css-label-2">iPhone 6S</label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <i class="glyphicon glyphicon-triangle-right"></i>
+                                                        <input type="checkbox" id="ipad" class="css-checkbox-2" /><label for="ipad" class="css-label-2">iPad</label>
+                                                        <ul>
+                                                            <li>
+                                                                <input type="checkbox" id="ipad1" class="css-checkbox-2" /><label for="ipad1" class="css-label-2">iPad 1</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="ipad2" class="css-checkbox-2" /><label for="ipad2" class="css-label-2">iPad 2</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="ipad3" class="css-checkbox-2" /><label for="ipad3" class="css-label-2">iPad 3</label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="ver-seperate"><span>Hoặc</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="os-ios-tab">
+                                        <div class="wrap-os-versions mgb-10 w-800-lg">
+                                            <select class="custom-select" style="width: 100%;">
+                                                    <option value="">Tất cả phiên bản</option>
+                                                    <option value="2.0">2.0</option><option value="2.1">2.1</option><option value="2.2">2.2</option>
+                                                    <option value="2.3">2.3</option><option value="3.0">3.0</option><option value="3.1">3.1</option>
+                                                    <option value="3.2">3.2</option><option value="4.0">4.0</option><option value="4.1">4.1</option>
+                                                    <option value="4.2">4.2</option><option value="4.3">4.3</option><option value="4.4">4.4</option>
+                                                    <option value="5.0">5.0</option><option value="5.1">5.1</option><option value="6.0">6.0</option>
+                                                </select>
+                                        </div>
+                                        <div class="wrap-devices w-800-lg">
+                                            <div class="all-devices">
+                                                <div class="form-group">
+                                                    <input type="checkbox" id="all-android-mobile-2" checked class="css-checkbox" /><label for="all-android-mobile-2" class="css-label">Tất cả điện thoại Android</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="checkbox" id="all-android-tablet-2" checked class="css-checkbox" /><label for="all-android-tablet-2" class="css-label">Tất cả máy tính bảng Android</label>
+                                                </div>
+                                            </div>
+                                            <div class="option-devices">
+                                                <div class="form-group">
+                                                    <input type="checkbox" id="option-chk-2" class="css-checkbox option-chk" /><label for="option-chk-2" class="css-label">Tùy chọn thiết bị</label>
+                                                </div>
+                                                <div class="search-device-form hidden">
+                                                    <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                                    <img src="assets/images/search-icon.png" alt="img" />
+                                                </div>
+                                                <ul class="list-multi-level hidden">
+                                                    <li class="has-child">
+                                                        <i class="glyphicon glyphicon-triangle-right"></i>
+                                                        <input type="checkbox" id="third-iphone" class="css-checkbox-2" /><label for="third-iphone" class="css-label-2">iPhone</label>
+                                                        <ul>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone4-2" class="css-checkbox-2" /><label for="iphone4-2" class="css-label-2">iPhone 4</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone4s-2" class="css-checkbox-2" /><label for="iphone4s-2" class="css-label-2">iPhone 4S</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone5-2" class="css-checkbox-2" /><label for="iphone5-2" class="css-label-2">iPhone 5</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone5s-2" class="css-checkbox-2" /><label for="iphone5s-2" class="css-label-2">iPhone 5S</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone6-2" class="css-checkbox-2" /><label for="iphone6-2" class="css-label-2">iPhone 6</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="iphone6s-2" class="css-checkbox-2" /><label for="iphone6s-2" class="css-label-2">iPhone 6S</label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <i class="glyphicon glyphicon-triangle-right"></i>
+                                                        <input type="checkbox" id="ipad-2" class="css-checkbox-2" /><label for="ipad-2" class="css-label-2">iPad</label>
+                                                        <ul>
+                                                            <li>
+                                                                <input type="checkbox" id="ipad1-2" class="css-checkbox-2" /><label for="ipad1-2" class="css-label-2">iPad 1</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="ipad2-2" class="css-checkbox-2" /><label for="ipad2-2" class="css-label-2">iPad 2</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="ipad3-2" class="css-checkbox-2" /><label for="ipad3-2" class="css-label-2">iPad 3</label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="ver-seperate"><span>Hoặc</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.content-box -->
+                    <div class="selected-box">
+                        <h3>Đã chọn</h3>
+                        <ul>
+                            <li>
+                                <h4>Lĩnh Vực:</h4>
+                                <span>Games <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                            <li>
+                                <h4>Hình thức quảng cáo:</h4>
+                                <span>Games <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                            <li>
+                                <h4>Địa điểm:</h4>
+                                <span>Games <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                            <li>
+                                <h4>Ngôn ngữ:</h4>
+                                <span>Games <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                            <li>
+                                <h4>Hệ điều hành:</h4>
+                                <span>Android - Phiên bản > 4.1 <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                <span>Asus zenfone 2 <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                <span>Android - Phiên bản > 4.1 <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                <span>Asus zenfone 2 <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                            <li>
+                                <h4>Mạng di động & Wifi:</h4>
+                                <span>Games <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.selected-box -->
+                    <hr class="mgb-30 mgt-10" />
+                    <div class="foot-main-content">
+                        <a class="green-btn" href="create-rules.html" data-step="5" data-intro="Nhấn nút lưu" data-position='right'>Lưu & Tiếp tục</a>
+                    </div>
+                </div>
+                <!-- /.wrap-create-camp -->
+            </div>
+            <!-- /.main-content -->
+        </div>
+        <!-- /.main -->
+        <footer class="footer">
+            <ul class="copyright">
+                <li>© 2015 Adtop., JSC</li>
+                <li><a>Giới Thiệu Về BigBom</a></li>
+                <li><a href="privacy-policy.html">Chính Sách Bảo Mật</a></li>
+            </ul>
+            <!-- /.copyright -->
+            <ul class="footer-socials">
+                <li><a class="facebook">facebook</a></li>
+                <li><a class="googleplus">googleplus</a></li>
+                <li><a class="twitter">twitter</a></li>
+            </ul>
+            <!-- /.footer-socials -->
+        </footer>
+        <!-- /.footer -->
+    </div>
+    <!-- /.wrapper -->
+
+    <script>
+        var adblock = true;
+        var params = {
+            assetURL: 'dist'
+        };
+    </script>
+    <script src="dist/scripts/adframe.js"></script>
+    <script src="dist/scripts/general.js"></script>
+    <script src="dist/scripts/common.js"></script>
+    <script src="dist/scripts/main.js"></script>
+    <script src="dist/scripts/main_demo.js"></script>
+
+</body>
+
+</html>

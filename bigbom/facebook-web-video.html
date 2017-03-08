@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <![endif]-->
+        <title>Bigbom</title>
+        <meta name="keywords" content="keywords" />
+        <meta name="description" content="description" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="dist/images/favicon.ico" />
+
+        <!-- detect scripts -->
+        <script src="dist/scripts/libs/platform.js"></script>
+        <script src="dist/scripts/detect.js"></script>
+
+        <!-- utilities scripts -->
+        <script src="dist/scripts/libs/modernizr.js"></script>
+        <!--[if lt IE 9]>
+        <script src="dist/scripts/libs/html5shiv.js"></script>
+        <script src="dist/scripts/libs/respond.js"></script>
+        <![endif]-->
+
+        <!-- main styles -->
+        <link href="dist/styles/general.css" rel="stylesheet" type="text/css" />
+        <link href="dist/styles/common.css" rel="stylesheet" type="text/css" />
+        <link href="dist/styles/main.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+    <body class="main-wrapper" style="opacity: 0">
+
+        <div class="beta-notification">
+            Bigbom đang trong quá trình thử nghiệm, nếu có bất kỳ lỗi không mong muốn nào mong bạn thông cảm và thông báo cho chúng tôi!
+        </div>
+        <!-- /.beta-notification -->
+
+        <div class="wrapper">
+            <div class="topbar">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img class="svg" src="assets/images/logo.svg" alt="img" />
+                    </a>
+                </h1>
+                <!-- /.logo -->
+                <div class="campaign-manager">
+                    <h3>
+                        <span class="refresh-link"><i class="material-icons">assistant</i></span>
+                        <span class="mine">Chiến dịch: <strong>Của Tôi</strong></span>
+                        <!--<span class="share-by">Chia sẻ bởi: <span class="share-by-name">Nguyễn Văn Hùng</span></span>-->
+                        <i class="material-icons arrow-icon">arrow_drop_down</i>
+                    </h3>
+                    <ul class="campaign-items">
+                        <li class="header-campaign-items"><i class="material-icons">star</i>Là trình quản lý chiến dịch mặc định</li>
+                        <li class="active">
+                            <h4>Nguyễn Văn Hùng</h4>
+                            <h6>nguyenvanhung1889@adtop.vn</h6>
+                            <div class="wrap-icons">
+                                <i class="material-icons">star</i>
+                                <i class="break-link-icon"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Huỳnh Thanh Hải</h4>
+                            <h6>haiht@adtop.vn</h6>
+                            <div class="wrap-icons">
+                                <i class="material-icons">star</i>
+                                <i class="break-link-icon"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Mai Tiến Đỗ</h4>
+                            <h6>domt@adtop.vn</h6>
+                            <div class="wrap-icons">
+                                <i class="material-icons">star</i>
+                                <i class="break-link-icon"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Bích Nguy</h4>
+                            <h6>bichnguy@adtop.vn</h6>
+                            <div class="wrap-icons">
+                                <i class="material-icons">star</i>
+                                <i class="break-link-icon"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Phúc Ngô</h4>
+                            <h6>phucngo@adtop.vn</h6>
+                            <div class="wrap-icons">
+                                <i class="material-icons">star</i>
+                                <i class="break-link-icon"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.campaign-manager -->
+                <nav class="main-nav">
+                    <div class="minimal-menu">
+                        <img class="close-sidebar" src="assets/images/account/w-close-icon.png" alt="img" />
+                        <ul class="menu">
+                            <li class="current-menu-item"><a href="data-table.html">Chiến Dịch</a></li>
+                            <li><a href="statistic.html">Thống Kê</a></li>
+                            <li>
+                                <a class="has-icon refferal-link">Mã giới thiệu <img class="animated infinite flash duration-1" src="assets/images/blink-icon.png" alt="img" /></a>
+                                <div class="refferal-box">
+                                    <div class="w-280 pull-left mgr-10">
+                                        <input id="refferal-value" class="custom-input" type="text" value="https://bigbom.com/refferal/aGr3dU" readonly />
+                                    </div>
+                                    <button data-clipboard-target="#refferal-value" class="orange-btn copy-btn">COPY</button>
+                                </div>
+                            </li>
+                            <li><a href="cr-code.html">Mã chuyển đổi</a></li>
+                            <li><a href="account-linking.html">Liên Kết Tài Khoản</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.minimal-menu -->
+                </nav>
+                <!-- /.main-nav -->
+                <form class="search-form">
+                    <input type="text" placeholder="Tìm kiếm..." />
+                    <button type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+                </form>
+                <!-- /.search-form -->
+                <a class="orange-btn creat-campaign-btn" href="create-campaign.html">Tạo chiến dịch</a>
+                <!-- /.creat-campaign-btn -->
+                <ul class="top-links">
+                    <li>
+                        <a class="notifications-link has-item"><i class="material-icons">notifications</i></a>
+                        <div class="list-notifications">
+                            <div class="notification-item">
+                                <h4>Chiến dịch <span class="highlight">Ngạo Thiên Hùng Bá</span> không được duyệt</h4>
+                                <span class="time">15m</span>
+                            </div>
+                            <div class="notification-item">
+                                <h4>Bạn đã kích hoạt <span class="highlight">Mã giảm giá QYJASHKA</span></h4>
+                                <span class="time">30m</span>
+                            </div>
+                            <div class="notification-item">
+                                <h4>Chiến dịch <span class="highlight">Đột Kích Tinh Anh</span> đã hết ngân sách</h4>
+                                <span class="time">40m</span>
+                            </div>
+                            <div class="notification-item">
+                                <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                                <span class="time">40m</span>
+                            </div>
+                            <div class="notification-item">
+                                <h4><span class="highlight">luanhinh@gmail.com</span> đã thêm nhóm quảng cáo <span class="highlight">VTC_Test AB</span></h4>
+                                <span class="time">40m</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="person-menu">
+                        <a class="person-link">ÍL</a>
+                        <div class="person-actions">
+                            <h4 class="header-person">Đăng nhập với tư cách:</h4>
+                            <div class="wrap-list-person">
+                                <div class="current-person person-item">
+                                    <h4>Ích Luân Hình (Của tôi)</h4>
+                                    <span>lklnn90@gmail.com</span>
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                                <div class="list-person">
+                                    <div class="person-item active">
+                                        <h4>Ích Luân Hình (Của tôi)</h4>
+                                        <span>lklnn90@gmail.com</span>
+                                    </div>
+                                    <div class="person-item">
+                                        <h4>Thuộc công ty ABC</h4>
+                                        <span>Mời bởi: hunhhv@gmail.com</span>
+                                    </div>
+                                    <div class="person-item">
+                                        <h4>Thuộc công ty XYZ</h4>
+                                        <span>Mời bởi: hanhnn@gmail.com</span>
+                                    </div>
+                                    <div class="person-item">
+                                        <h4>Thuộc công ty DEF</h4>
+                                        <span>Mời bởi: phongvn@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="header-person">Quản lý tài khoản</h4>
+                            <div class="list-actions">
+                                <a class="action">
+                                    <i class="material-icons">person</i>Quản lý tài khoản
+                                </a>
+                                <a class="action">
+                                    <i class="material-icons">vpn_key</i>Cài đặt quyền & thông báo
+                                </a>
+                                <a class="action">
+                                    <i class="material-icons">info</i>Hướng dẫn
+                                </a>
+                                <a class="action">
+                                    <i class="material-icons">input</i>Đăng xuất
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lang-switch">
+                        <a>EN</a>
+                    </li>
+                </ul>
+                <!-- /.top-links -->
+            </div>
+            <!-- /.topbar -->
+            <div class="main">
+                <div class="main-header">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a>Trang Chủ</a><i class="fa fa-angle-right"></i></li>
+                            <li><a>Chiến Dịch</a><i class="fa fa-angle-right"></i></li>
+                            <li>Tạo Chiến Dịch</li>
+                        </ul>
+                    </div>
+                    <!-- /.breadcrumbs -->
+                    <div class="steps-menu">
+                        <ul>
+                            <li class="step-1 active">
+                                <div class="circle"><i></i></div>
+                                <h4>Tạo Chiến Dịch</h4>
+                            </li>
+                            <li class="step-2 active">
+                                <div class="circle"><i></i></div>
+                                <h4>Tạo Rules</h4>
+                            </li>
+                            <li class="step-3 active">
+                                <div class="circle"><i></i></div>
+                                <h4>Kênh</h4>
+                            </li>
+                            <li class="step-4">
+                                <div class="circle"><i></i></div>
+                                <h4>Hoàn Thành</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.steps-menu -->
+                </div>
+                <!-- /.main-header -->
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="wrap-group-title">
+                                <select class="custom-select" style="width: 100%;">
+                                    <option value="1">Phong Vân 3D - Facebook</option>
+                                    <option value="2">Phong Vân 4D - Facebook</option>
+                                    <option value="3">Phong Vân 5D - Facebook</option>
+                                </select>
+                                <a class="link" data-toggle="modal" data-target=".group-title-modal">Đổi tên nhóm quảng cáo</a>
+                            </div>
+                            <div class="modal fade group-title-modal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                    <h3>Đổi tên nhóm quảng cáo</h3>
+                                    <form class="search-form">
+                                        <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                        <button type="submit">
+                                            <img src="assets/images/search-icon.png" alt="img" />
+                                        </button>
+                                    </form>
+                                    <div class="list-group-title">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-1">Nhóm 1:</label>
+                                                <input id="title-1" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-2">Nhóm 2:</label>
+                                                <input id="title-2" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-3">Nhóm 3:</label>
+                                                <input id="title-3" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-4">Nhóm 4:</label>
+                                                <input id="title-4" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-5">Nhóm 5:</label>
+                                                <input id="title-5" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-6">Nhóm 6:</label>
+                                                <input id="title-6" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-7">Nhóm 7:</label>
+                                                <input id="title-7" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-8">Nhóm 8:</label>
+                                                <input id="title-8" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-9">Nhóm 9:</label>
+                                                <input id="title-9" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-10">Nhóm 10:</label>
+                                                <input id="title-10" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-11">Nhóm 11:</label>
+                                                <input id="title-11" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <label for="title-12">Nhóm 12:</label>
+                                                <input id="title-12" class="custom-input" type="text" value="Phong Vân 3D" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mgb-30">
+                                        <a class="read-more-link">
+                                            <i class="fa fa-spinner fa-pulse"></i>
+                                            Xem thêm
+                                        </a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="green-btn update-btn mgr-20">Cập nhật</a>
+                                        <a class="gray-link" data-dismiss="modal">Hủy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-create-ads">
+                        <ul class="nav nav-tabs main-tabs">
+                            <li class="active"><a href="#object" data-toggle="tab">Đối Tượng</a></li>
+                            <li><a href="#create-ads" data-toggle="tab">Tạo quảng cáo</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="object">
+                                <div class="ads-object-inner">
+                                    <div class="content-box has-selected">
+                                        <div class="form-group">
+                                            <label class="left-form-group">Đối tượng tùy chỉnh</label>
+                                            <div class="right-form-group">
+                                                <div class="clearfix">
+                                                    <div class="w-266 mgr-10 pull-left">
+                                                        <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Bao gồm</option>
+                                                            <option value="2">Loại trừ</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mw-276 pull-left">
+                                                        <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Chiến dịch 1</option>
+                                                            <option value="2">Chiến dịch 2</option>
+                                                            <option value="3">Chiến dịch 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="left-form-group">Độ tuổi</label>
+                                            <div class="right-form-group">
+                                                <div class="wrap-age-range">
+                                                    <div class="wrap-select">
+                                                        <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">18 tuổi</option>
+                                                            <option value="2">19 tuổi</option>
+                                                            <option value="3">20 tuổi</option>
+                                                            <option value="4">21 tuổi</option>
+                                                        </select>
+                                                    </div>
+                                                    <span class="dash">-</span>
+                                                    <div class="wrap-select">
+                                                        <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">> 65 tuổi</option>
+                                                            <option value="2">64 tuổi</option>
+                                                            <option value="3">63 tuổi</option>
+                                                            <option value="4">62 tuổi</option>
+                                                        </select>
+                                                    </div>
+                                                    <a class="link add-age-range">Thêm độ tuổi</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="left-form-group small-group">Giới tính</label>
+                                            <div class="right-form-group">
+                                                <input type="radio" name="sex" id="all-sex" class="css-radio" checked /><label for="all-sex" class="css-label-radio">Tất cả</label>
+                                                <input type="radio" name="sex" id="male" class="css-radio" /><label for="male" class="css-label-radio">Nam</label>
+                                                <input type="radio" name="sex" id="female" class="css-radio" /><label for="female" class="css-label-radio">Nữ</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group obj-target-section mgb-10">
+                                            <label class="left-form-group pdt-0">Mục tiêu</label>
+                                            <div class="right-form-group">
+                                                <div class="clearfix">
+                                                    <div class="mw-276 pull-left mgr-10">
+                                                        <p class="mgb-5">Bao gồm những đối tượng</p>
+                                                        <div class="wrap-list-obj-target">
+                                                            <ul class="list-multi-level has-scroll">
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Thông tin nhân khẩu học</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-inclusion-1" class="css-checkbox-2" /><label for="opt-inclusion-1" class="css-label-2">Option 1</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-11" class="css-checkbox-2" /><label for="opt-inclusion-11" class="css-label-2">Option 11</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-12" class="css-checkbox-2" /><label for="opt-inclusion-12" class="css-label-2">Option 12</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-13" class="css-checkbox-2" /><label for="opt-inclusion-13" class="css-label-2">Option 13</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-inclusion-2" class="css-checkbox-2" /><label for="opt-inclusion-2" class="css-label-2">Option 2</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-21" class="css-checkbox-2" /><label for="opt-inclusion-21" class="css-label-2">Option 21</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-22" class="css-checkbox-2" /><label for="opt-inclusion-22" class="css-label-2">Option 22</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-23" class="css-checkbox-2" /><label for="opt-inclusion-23" class="css-label-2">Option 23</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Sở thích</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-inclusion-3" class="css-checkbox-2" /><label for="opt-inclusion-3" class="css-label-2">Option 3</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-31" class="css-checkbox-2" /><label for="opt-inclusion-31" class="css-label-2">Option 31</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-32" class="css-checkbox-2" /><label for="opt-inclusion-32" class="css-label-2">Option 32</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-33" class="css-checkbox-2" /><label for="opt-inclusion-33" class="css-label-2">Option 33</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-inclusion-4" class="css-checkbox-2" /><label for="opt-inclusion-4" class="css-label-2">Option 4</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-41" class="css-checkbox-2" /><label for="opt-inclusion-41" class="css-label-2">Option 41</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-42" class="css-checkbox-2" /><label for="opt-inclusion-42" class="css-label-2">Option 42</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-43" class="css-checkbox-2" /><label for="opt-inclusion-43" class="css-label-2">Option 43</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Hành vi</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-inclusion-5" class="css-checkbox-2" /><label for="opt-inclusion-5" class="css-label-2">Option 5</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-51" class="css-checkbox-2" /><label for="opt-inclusion-51" class="css-label-2">Option 51</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-52" class="css-checkbox-2" /><label for="opt-inclusion-52" class="css-label-2">Option 52</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-53" class="css-checkbox-2" /><label for="opt-inclusion-53" class="css-label-2">Option 53</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-inclusion-6" class="css-checkbox-2" /><label for="opt-inclusion-6" class="css-label-2">Option 6</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-61" class="css-checkbox-2" /><label for="opt-inclusion-61" class="css-label-2">Option 61</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-62" class="css-checkbox-2" /><label for="opt-inclusion-62" class="css-label-2">Option 62</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-63" class="css-checkbox-2" /><label for="opt-inclusion-63" class="css-label-2">Option 63</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Danh mục khác</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-inclusion-7" class="css-checkbox-2" /><label for="opt-inclusion-7" class="css-label-2">Option 7</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-71" class="css-checkbox-2" /><label for="opt-inclusion-71" class="css-label-2">Option 71</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-72" class="css-checkbox-2" /><label for="opt-inclusion-72" class="css-label-2">Option 72</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-73" class="css-checkbox-2" /><label for="opt-inclusion-73" class="css-label-2">Option 73</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-inclusion-8" class="css-checkbox-2" /><label for="opt-inclusion-8" class="css-label-2">Option 8</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-81" class="css-checkbox-2" /><label for="opt-inclusion-81" class="css-label-2">Option 81</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-82" class="css-checkbox-2" /><label for="opt-inclusion-82" class="css-label-2">Option 82</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-inclusion-83" class="css-checkbox-2" /><label for="opt-inclusion-83" class="css-label-2">Option 83</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mgt-10 mgb-10">
+                                                    <a class="link">Thêm loại trừ</a> <span class="mgl-5 mgr-5">hoặc</span> <a class="link">Thêm thu hẹp</a>
+                                                </div>
+                                                <div class="clearfix mgb-10 hidden">
+                                                    <div class="mw-276 pull-left mgr-10">
+                                                        <p class="mgb-5">Loại trừ những đối tượng</p>
+                                                        <div class="wrap-list-obj-target">
+                                                            <span class="close-icon"><i class="material-icons">close</i></span>
+                                                            <ul class="list-multi-level has-scroll">
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Thông tin nhân khẩu học</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-exclusion-1" class="css-checkbox-2" /><label for="opt-exclusion-1" class="css-label-2">Option 1</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-11" class="css-checkbox-2" /><label for="opt-exclusion-11" class="css-label-2">Option 11</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-12" class="css-checkbox-2" /><label for="opt-exclusion-12" class="css-label-2">Option 12</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-13" class="css-checkbox-2" /><label for="opt-exclusion-13" class="css-label-2">Option 13</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-exclusion-2" class="css-checkbox-2" /><label for="opt-exclusion-2" class="css-label-2">Option 2</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-21" class="css-checkbox-2" /><label for="opt-exclusion-21" class="css-label-2">Option 21</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-22" class="css-checkbox-2" /><label for="opt-exclusion-22" class="css-label-2">Option 22</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-23" class="css-checkbox-2" /><label for="opt-exclusion-23" class="css-label-2">Option 23</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Sở thích</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-exclusion-3" class="css-checkbox-2" /><label for="opt-exclusion-3" class="css-label-2">Option 3</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-31" class="css-checkbox-2" /><label for="opt-exclusion-31" class="css-label-2">Option 31</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-32" class="css-checkbox-2" /><label for="opt-exclusion-32" class="css-label-2">Option 32</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-33" class="css-checkbox-2" /><label for="opt-exclusion-33" class="css-label-2">Option 33</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-exclusion-4" class="css-checkbox-2" /><label for="opt-exclusion-4" class="css-label-2">Option 4</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-41" class="css-checkbox-2" /><label for="opt-exclusion-41" class="css-label-2">Option 41</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-42" class="css-checkbox-2" /><label for="opt-exclusion-42" class="css-label-2">Option 42</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-43" class="css-checkbox-2" /><label for="opt-exclusion-43" class="css-label-2">Option 43</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Hành vi</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-exclusion-5" class="css-checkbox-2" /><label for="opt-exclusion-5" class="css-label-2">Option 5</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-51" class="css-checkbox-2" /><label for="opt-exclusion-51" class="css-label-2">Option 51</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-52" class="css-checkbox-2" /><label for="opt-exclusion-52" class="css-label-2">Option 52</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-53" class="css-checkbox-2" /><label for="opt-exclusion-53" class="css-label-2">Option 53</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-exclusion-6" class="css-checkbox-2" /><label for="opt-exclusion-6" class="css-label-2">Option 6</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-61" class="css-checkbox-2" /><label for="opt-exclusion-61" class="css-label-2">Option 61</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-62" class="css-checkbox-2" /><label for="opt-exclusion-62" class="css-label-2">Option 62</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-63" class="css-checkbox-2" /><label for="opt-exclusion-63" class="css-label-2">Option 63</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Danh mục khác</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-exclusion-7" class="css-checkbox-2" /><label for="opt-exclusion-7" class="css-label-2">Option 7</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-71" class="css-checkbox-2" /><label for="opt-exclusion-71" class="css-label-2">Option 71</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-72" class="css-checkbox-2" /><label for="opt-exclusion-72" class="css-label-2">Option 72</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-73" class="css-checkbox-2" /><label for="opt-exclusion-73" class="css-label-2">Option 73</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-exclusion-8" class="css-checkbox-2" /><label for="opt-exclusion-8" class="css-label-2">Option 8</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-81" class="css-checkbox-2" /><label for="opt-exclusion-81" class="css-label-2">Option 81</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-82" class="css-checkbox-2" /><label for="opt-exclusion-82" class="css-label-2">Option 82</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-exclusion-83" class="css-checkbox-2" /><label for="opt-exclusion-83" class="css-label-2">Option 83</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix hidden">
+                                                    <div class="mw-276 pull-left mgr-10">
+                                                        <p class="mgb-5">Và cũng phải phù hợp đối tượng</p>
+                                                        <div class="wrap-list-obj-target">
+                                                            <span class="close-icon"><i class="material-icons">close</i></span>
+                                                            <ul class="list-multi-level has-scroll">
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Thông tin nhân khẩu học</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-1" class="css-checkbox-2" /><label for="opt-1" class="css-label-2">Option 1</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-11" class="css-checkbox-2" /><label for="opt-11" class="css-label-2">Option 11</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-12" class="css-checkbox-2" /><label for="opt-12" class="css-label-2">Option 12</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-13" class="css-checkbox-2" /><label for="opt-13" class="css-label-2">Option 13</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-2" class="css-checkbox-2" /><label for="opt-2" class="css-label-2">Option 2</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-21" class="css-checkbox-2" /><label for="opt-21" class="css-label-2">Option 21</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-22" class="css-checkbox-2" /><label for="opt-22" class="css-label-2">Option 22</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-23" class="css-checkbox-2" /><label for="opt-23" class="css-label-2">Option 23</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Sở thích</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-3" class="css-checkbox-2" /><label for="opt-3" class="css-label-2">Option 3</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-31" class="css-checkbox-2" /><label for="opt-31" class="css-label-2">Option 31</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-32" class="css-checkbox-2" /><label for="opt-32" class="css-label-2">Option 32</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-33" class="css-checkbox-2" /><label for="opt-33" class="css-label-2">Option 33</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-4" class="css-checkbox-2" /><label for="opt-4" class="css-label-2">Option 4</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-41" class="css-checkbox-2" /><label for="opt-41" class="css-label-2">Option 41</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-42" class="css-checkbox-2" /><label for="opt-42" class="css-label-2">Option 42</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-43" class="css-checkbox-2" /><label for="opt-43" class="css-label-2">Option 43</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Hành vi</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-5" class="css-checkbox-2" /><label for="opt-5" class="css-label-2">Option 5</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-51" class="css-checkbox-2" /><label for="opt-51" class="css-label-2">Option 51</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-52" class="css-checkbox-2" /><label for="opt-52" class="css-label-2">Option 52</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-53" class="css-checkbox-2" /><label for="opt-53" class="css-label-2">Option 53</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-6" class="css-checkbox-2" /><label for="opt-6" class="css-label-2">Option 6</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-61" class="css-checkbox-2" /><label for="opt-61" class="css-label-2">Option 61</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-62" class="css-checkbox-2" /><label for="opt-62" class="css-label-2">Option 62</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-63" class="css-checkbox-2" /><label for="opt-63" class="css-label-2">Option 63</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="has-child">
+                                                                    <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                    <label>Danh mục khác</label>
+                                                                    <ul>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-7" class="css-checkbox-2" /><label for="opt-7" class="css-label-2">Option 7</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-71" class="css-checkbox-2" /><label for="opt-71" class="css-label-2">Option 71</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-72" class="css-checkbox-2" /><label for="opt-72" class="css-label-2">Option 72</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-73" class="css-checkbox-2" /><label for="opt-73" class="css-label-2">Option 73</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="has-child">
+                                                                            <i class="glyphicon glyphicon-triangle-right"></i>
+                                                                            <input type="checkbox" id="opt-8" class="css-checkbox-2" /><label for="opt-8" class="css-label-2">Option 8</label>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-81" class="css-checkbox-2" /><label for="opt-81" class="css-label-2">Option 81</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-82" class="css-checkbox-2" /><label for="opt-82" class="css-label-2">Option 82</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="opt-83" class="css-checkbox-2" /><label for="opt-83" class="css-label-2">Option 83</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--
+                                        <div class="form-group location-section">
+                                            <label class="left-form-group">Địa điểm</label>
+                                            <div class="right-form-group">
+                                                <div class="btn-group">
+                                                    <a class="active">Bao gồm</a>
+                                                    <a>Loại trừ</a>
+                                                </div>
+                                                <div class="list-selected-location list-selected hidden"></div>
+                                                <div class="wrap-select-input-location">
+                                                    <div class="wrap-select">
+                                                        <select class="custom-select" style="width: 100%;">
+                                                            <option value="1">Mọi người tại địa điểm này</option>
+                                                            <option value="2">Người sống ở địa điểm này</option>
+                                                            <option value="3">Những người ở địa điểm này trong thời gian gần đây</option>
+                                                            <option value="4">Những người đã ghé thăm địa điểm này</option>
+                                                        </select>
+                                                    </div>
+                                                    <input class="custom-input" type="text" id="googleMapSearch" placeholder="Thêm quốc gia, tiểu bang / tỉnh, thành phố" />
+                                                </div>
+                                                <div id="googleMap" style="height: 300px"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group network-section">
+                                            <label class="left-form-group small-group">Mạng di động & Wifi</label>
+                                            <div class="right-form-group">
+                                                <div class="form-group">
+                                                    <input type="checkbox" id="wifi" class="css-checkbox" /><label for="wifi" class="css-label">Wifi</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="pull-left">
+                                                        <input type="checkbox" id="all-network" class="css-checkbox" /><label for="all-network" class="css-label">Tất cả mạng di động.</label>
+                                                    </div>
+                                                    <div class="pull-left">
+                                                        <a class="link">Tùy chỉnh</a>
+                                                    </div>
+                                                </div>
+                                                <ul class="list-multi-level hidden">
+                                                    <li class="has-child">
+                                                        <i class="glyphicon glyphicon-triangle-right"></i>
+                                                        <input type="checkbox" id="vietnam" class="css-checkbox-2" /><label for="vietnam" class="css-label-2">Việt Nam</label>
+                                                        <ul>
+                                                            <li>
+                                                                <input type="checkbox" id="beeline" class="css-checkbox-2" /><label for="beeline" class="css-label-2">Beeline</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="mobifone" class="css-checkbox-2" /><label for="mobifone" class="css-label-2">Mobifone</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="vinaphone" class="css-checkbox-2" /><label for="vinaphone" class="css-label-2">Vinaphone</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="viettel" class="css-checkbox-2" /><label for="viettel" class="css-label-2">Viettel</label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <i class="glyphicon glyphicon-triangle-right"></i>
+                                                        <input type="checkbox" id="my" class="css-checkbox-2" /><label for="my" class="css-label-2">Mỹ</label>
+                                                        <ul>
+                                                            <li>
+                                                                <input type="checkbox" id="att" class="css-checkbox-2" /><label for="att" class="css-label-2">AT&T</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" id="vodafone" class="css-checkbox-2" /><label for="vodafone" class="css-label-2">Vodafone</label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        -->
+                                        <div class="form-group connect-section">
+                                            <label class="left-form-group small-group">Kết nối</label>
+                                            <div class="right-form-group">
+                                                <div class="form-group">
+                                                    <input type="radio" name="connect" id="facebook-connect" class="css-radio" checked /><label for="facebook-connect" class="css-label-radio">Trang facebook</label>
+                                                    <input type="radio" name="connect" id="app-connect" class="css-radio" /><label for="app-connect" class="css-label-radio">Ứng dụng</label>
+                                                    <input type="radio" name="connect" id="event-connect" class="css-radio" /><label for="event-connect" class="css-label-radio">Sự kiện</label>
+                                                    <input type="radio" name="connect" id="enhance-connect" class="css-radio" /><label for="enhance-connect" class="css-label-radio">Nâng cao</label>
+                                                </div>
+                                                <div class="clearfix mgb-20" data-type="facebook-connect">
+                                                    <div class="mw-276 pull-left mgr-10">
+                                                        <select class="connect-select">
+                                                            <option value="1">Những người thích trang của bạn</option>
+                                                            <option value="2">Bạn bè của những người thích trang của bạn</option>
+                                                            <option value="3">Loại trừ những người thích trang của bạn</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="w-266 pull-left">
+                                                        <select class="connect-select">
+                                                            <option value="">Vui lòng chọn trang</option>
+                                                            <option value="1">Adtop content</option>
+                                                            <option value="2">Chơi Đi</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix mgb-20 hidden" data-type="app-connect">
+                                                    <div class="mw-276 pull-left mgr-10">
+                                                        <select class="connect-select">
+                                                            <option value="1">Những người đã sử dụng ứng dụng của bạn</option>
+                                                            <option value="2">Bạn bè của những người đã sử dụng ứng dụng của bạn</option>
+                                                            <option value="3">Loại trừ những người đã sử dụng ứng dụng của bạn</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="w-266 pull-left">
+                                                        <select class="connect-select">
+                                                            <option value="">Vui lòng chọn ứng dụng</option>
+                                                            <option value="3">Ứng dụng 1</option>
+                                                            <option value="4">Ứng dụng 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix mgb-20 hidden" data-type="event-connect">
+                                                    <div class="mw-276 pull-left mgr-10">
+                                                        <select class="connect-select">
+                                                            <option value="1">Những người đã phản hồi sự kiện</option>
+                                                            <option value="2">Bạn bè của những người đã phản hồi sự kiện</option>
+                                                            <option value="3">Loại trừ những người đã phản hồi sự kiện</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="w-266 pull-left">
+                                                        <select class="connect-select">
+                                                            <option value="">Vui lòng chọn sự kiện</option>
+                                                            <option value="5">Sự kiện 1</option>
+                                                            <option value="6">Sự kiện 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.content-box -->
+                                    <div class="selected-box">
+                                        <h3 class="mgb-30">
+                                            Phạm vị tiếp cận quảng cáo
+                                            <span class="highlight">24.000.000 người</span>
+                                        </h3>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                        <p class="text-center">
+                                            <i class="fa fa-bell"></i>
+                                            &nbsp;
+                                            Lựa chọn của bạn tương đối rộng
+                                        </p>
+                                        <h3 class="mgt-50">Đối tượng Đã chọn</h3>
+                                        <form class="search-form mgb-15">
+                                            <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                            <button type="submit">
+                                                <img src="assets/images/search-icon.png" alt="img" />
+                                            </button>
+                                        </form>
+                                        <ul>
+                                            <li>
+                                                <h4>Độ tuổi:</h4>
+                                                <span>18 - 65 <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                            </li>
+                                            <li>
+                                                <h4>Giới tính:</h4>
+                                                <span>Nam - Nữ <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                            </li>
+                                            <li>
+                                                <h4>Sở thích:</h4>
+                                                <span>Công Nghệ <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                <span>Giải Trí <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                            </li>
+                                            <li>
+                                                <h4>Hành vi:</h4>
+                                                <span>Tìm kiếm game <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                <span>Hoạt động số <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                <span>Tất cả thiết bị di động <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                <span>Trò chơi trên canvas <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                            </li>
+                                            <li>
+                                                <h4>Nhân khẩu học:</h4>
+                                                <span>Trường đại học nào đó <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                <span>Bằng đại học <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                            </li>
+                                            <li>
+                                                <h4>Kết nối:</h4>
+                                                <span>Những người thích trang Adtop content <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                            </li>
+                                            <li>
+                                                <h4>Khác:</h4>
+                                                <span>Khác <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.selected-box -->
+                                    <hr class="mgb-30 mgt-10" />
+                                    <div class="foot-main-content">
+                                        <a class="green-btn create-ads-tab-link">Lưu & Tiếp tục</a>
+                                    </div>
+                                </div>                                 
+                            </div>
+                            <div class="tab-pane fade create-ads-section" id="create-ads">
+                                <div class="create-ads-header">
+                                    <ul class="nav nav-tabs sub-tabs">
+                                        <li class="active"><a href="#single-video" data-toggle="tab">Tạo video</a></li>
+                                        <li><a href="#available-article" data-toggle="tab">Sử dụng bài viết có sẵn</a></li>
+                                    </ul>
+                                </div>
+                                <div class="create-ads-content">
+                                    <div class="form-group">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="single-video">
+                                                <div class="create-ads-content-inner">
+                                                    <div class="top-create-ads-content clearfix">
+                                                        <div class="pull-left w-320">
+                                                            <select class="custom-select" style="width: 100%;">
+                                                                <option value="">Chọn trang facebook</option>
+                                                                <option value="1">Trang facebook 1</option>
+                                                                <option value="2">Trang facebook 2</option>
+                                                                <option value="3">Trang facebook 3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="ads-rapidly-results pull-right">
+                                                            <h4>18 Quảng cáo sẽ tạo</h4>
+                                                            <span>3 tiêu đề</span>
+                                                            +
+                                                            <span>3 văn bản</span>
+                                                            +
+                                                            <span>2 hình ảnh</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap-list-ads">
+                                                        <form class="search-form">
+                                                            <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                                            <button type="submit">
+                                                                <img src="assets/images/search-icon.png" alt="img" />
+                                                            </button>
+                                                        </form>
+                                                        <div class="list-ads">
+                                                            <ul>
+                                                                <li class="add-more-item">
+                                                                    <label for="add-more-ads-1" class="add-more">
+                                                                        <img src="assets/images/big-plus-icon.png" alt="img" />
+                                                                    </label>
+                                                                    <input id="add-more-ads-1" type="file" />
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img3.jpg" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <span class="count">3</span>
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img2.png" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap-input-preview">
+                                                        <div class="create-ads-input">
+                                                            <div class="ads-common">
+                                                                <div class="form-group upload-more-img">
+                                                                    <input id="upload-more-img-input" type="file" />
+                                                                    <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                                    <label for="upload-more-img-input">file-name.jpg</label>
+                                                                    <a class="remove-link"><i class="material-icons">delete</i></a>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input class="custom-input" type="text" placeholder="Nhập URL" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="input-has-link">
+                                                                        <input class="custom-input" type="text" maxlength="25" placeholder="Nhập Tiêu đề" />
+                                                                        <a class="link">Thêm</a>
+                                                                    </div>
+                                                                    <ul class="list-inputed">
+                                                                        <!-- <li class="place">Mỗi tiêu đề chưa 25 ký tự</li> -->
+                                                                        <li>Tam quốc đại chiến<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                                        <li>Game hay sieu bá đạo<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                                        <li>Game không dành cho người yếu tim<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                                        <li>Tam quốc đại chiến<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                                        <li>Game hay sieu bá đạo<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                                        <li>Game không dành cho người yếu tim<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="input-has-link">
+                                                                        <input class="custom-input" type="text" maxlength="90" placeholder="Nhập Văn bản" />
+                                                                        <a class="link">Thêm</a>
+                                                                    </div>
+                                                                    <ul class="list-inputed">
+                                                                        <!-- <li class="place">Mỗi văn bản chứa 90 ký tự</li> -->
+                                                                        <li>Nhận ngay trang bi khủng<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                                        <li>Nâng cấp VIP khi chơi<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                                        <li>Chơi game cùng Ngọc trinh<span class="close-link"><i class="glyphicon glyphicon-remove"></i></span></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="input-has-addon count-character">
+                                                                        <input class="custom-input" type="text" maxlength="200" placeholder="Liên kết bảng tin" />
+                                                                        <span><span class="count-desc"></span> ký tự</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="">Chọn nút kêu gọi hành động</option>
+                                                                        <option value="1">Mua ngay</option>
+                                                                        <option value="2">Đặt ngay</option>
+                                                                        <option value="3">Tìm hiểu thêm</option>
+                                                                        <option value="4">Đăng ký</option>
+                                                                        <option value="5">Tải xuống</option>
+                                                                        <option value="6">Xem thêm</option>
+                                                                        <option value="7">Áp dụng ngay</option>
+                                                                        <option value="8">Liên hệ với chúng tôi</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="tracking-ga-1" class="css-checkbox tracking-ga-link" /><label for="tracking-ga-1" class="css-label">Link tracking Google analytics</label>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <i class="highlight-3">(utm_medium=adtop1&utm_content=1&utm_campaign=adtop)</i>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <a class="link mgb-10 enhance-options-link">Tùy chọn nâng cao</a>
+                                                                    <div class="wrap-enhance-options hidden">
+                                                                        <input class="custom-input mgb-20" type="text" placeholder="URL hiển thị" />
+                                                                        <input class="custom-input" type="text" placeholder="Thẻ URL" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="text-center">
+                                                                    <a class="green-btn save-ads">Lưu quảng cáo</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ads-tracking-ga hidden">
+                                                                <a class="back-common-link link mgb-30"><i class="big fa fa-angle-left mgt-0"></i>Quay lại</a>
+                                                                <div class="form-group">
+                                                                    <input class="custom-input" type="text" placeholder="Nguồn chiến dịch" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input class="custom-input" type="text" placeholder="Phương tiện chiến dịch" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input class="custom-input" type="text" placeholder="Tên chiến dịch" />
+                                                                </div>
+                                                                <div class="form-group mgb-10">
+                                                                    <select class="tracking-content-select">
+                                                                        <option value="">Chọn nội dung cần tracking</option>
+                                                                        <option value="1">Tên nhóm quảng cáo</option>
+                                                                        <option value="2">Tên quảng cáo</option>
+                                                                        <option value="3">Hình thức quảng cáo</option>
+                                                                        <option value="4">Độ tuổi</option>
+                                                                        <option value="5">Giới tính</option>
+                                                                        <option value="6">Sở thích</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <span class="selected-span">Tên quảng cáo <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                                    <span class="selected-span">Độ Tuổi <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                                </div>
+                                                                <div class="text-center">
+                                                                    <a class="green-btn">Tạo link tracking</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="create-ads-preview">
+                                                            <div class="preview-ads-content has-footer">
+                                                                <div class="wrap-preview-tabs">
+                                                                    <ul class="nav nav-tabs preview-tabs has-border">
+                                                                        <li class="active">
+                                                                            <input type="checkbox" id="computer-chk-1" class="css-checkbox" /><label for="computer-chk-1" class="css-label"></label>
+                                                                            <a href="#computer-preview-1" data-toggle="tab">Máy tính</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="checkbox" id="right-col-chk-1" class="css-checkbox" /><label for="right-col-chk-1" class="css-label"></label>
+                                                                            <a href="#right-col-preview-1" data-toggle="tab">Cột phải</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="checkbox" id="mobile-chk-1" class="css-checkbox" /><label for="mobile-chk-1" class="css-label"></label>
+                                                                            <a href="#mobile-preview-1" data-toggle="tab">Điện thoại di động</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tab-content">
+                                                                    <div class="tab-pane fade in active" id="computer-preview-1">
+                                                                        <div id="carousel-preview-1" class="carousel slide vertical format-3">
+                                                                            <div class="carousel-counter"></div>
+                                                                            <div class="carousel-inner">
+                                                                                <div class="item active">
+                                                                                    <img class="center-block" src="assets/images/ads-img10.jpg" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img10.jpg" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img10.jpg" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img10.jpg" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img10.jpg" alt="img" />
+                                                                                </div>
+                                                                            </div>
+                                                                            <a data-slide="prev" href="#carousel-preview-1" class="left carousel-control">
+                                                                                <img src="assets/images/next-arrow2.png" alt="img" />
+                                                                            </a>
+                                                                            <a data-slide="next" href="#carousel-preview-1" class="right carousel-control">
+                                                                                <img src="assets/images/prev-arrow2.png" alt="img" />
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" id="right-col-preview-1">
+                                                                        <div id="carousel-preview-2" class="carousel slide vertical format-3">
+                                                                            <div class="carousel-counter"></div>
+                                                                            <div class="carousel-inner">
+                                                                                <div class="item active">
+                                                                                    <img class="center-block" src="assets/images/ads-img11.png" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img11.png" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img11.png" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img11.png" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img11.png" alt="img" />
+                                                                                </div>
+                                                                            </div>
+                                                                            <a data-slide="prev" href="#carousel-preview-2" class="left carousel-control">
+                                                                                <img src="assets/images/next-arrow2.png" alt="img" />
+                                                                            </a>
+                                                                            <a data-slide="next" href="#carousel-preview-2" class="right carousel-control">
+                                                                                <img src="assets/images/prev-arrow2.png" alt="img" />
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" id="mobile-preview-1">
+                                                                        <div id="carousel-preview-3" class="carousel slide vertical format-3">
+                                                                            <div class="carousel-counter"></div>
+                                                                            <div class="carousel-inner">
+                                                                                <div class="item active">
+                                                                                    <img class="center-block" src="assets/images/ads-img12.png" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img12.png" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img12.png" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img12.png" alt="img" />
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img class="center-block" src="assets/images/ads-img12.png" alt="img" />
+                                                                                </div>
+                                                                            </div>
+                                                                            <a data-slide="prev" href="#carousel-preview-3" class="left carousel-control">
+                                                                                <img src="assets/images/next-arrow2.png" alt="img" />
+                                                                            </a>
+                                                                            <a data-slide="next" href="#carousel-preview-3" class="right carousel-control">
+                                                                                <img src="assets/images/prev-arrow2.png" alt="img" />
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="preview-ads-footer">
+                                                                    <div class="change-other-images hidden">
+                                                                        <label for="change-images-1"><i class="glyphicon glyphicon-picture"></i>Thay video khác</label>
+                                                                        <input id="change-images-1" type="file" />
+                                                                    </div>
+                                                                    <div id="carousel-1" class="carousel slide video-carousel">
+                                                                        <label for="add-more-img" class="add-more">
+                                                                            <img src="assets/images/add-more-img.png" alt="img" />
+                                                                        </label>
+                                                                        <input id="add-more-img" type="file" />
+                                                                        <div class="carousel-inner">
+                                                                            <div class="item active">
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-4">
+                                                                                        <a class="thumbnail active">
+                                                                                            <span class="choose-icon"></span>
+                                                                                            <img src="//placehold.it/250x100" alt="img">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="col-xs-4">
+                                                                                        <a class="thumbnail">
+                                                                                            <img src="//placehold.it/250x100" alt="img">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="col-xs-4">
+                                                                                        <a class="thumbnail">
+                                                                                            <img src="//placehold.it/250x100" alt="img">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="item">
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-4">
+                                                                                        <a class="thumbnail">
+                                                                                            <img src="//placehold.it/250x100" alt="img">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="col-xs-4">
+                                                                                        <a class="thumbnail">
+                                                                                            <img src="//placehold.it/250x100" alt="img">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="col-xs-4">
+                                                                                        <a class="thumbnail">
+                                                                                            <img src="//placehold.it/250x100" alt="img">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="item">
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-4">
+                                                                                        <a class="thumbnail">
+                                                                                            <img src="//placehold.it/250x100" alt="img">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="col-xs-4">
+                                                                                        <a class="thumbnail">
+                                                                                            <img src="//placehold.it/250x100" alt="img">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="col-xs-4">
+                                                                                        <a class="thumbnail">
+                                                                                            <img src="//placehold.it/250x100" alt="img">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a data-slide="prev" href="#carousel-1" class="left carousel-control">
+                                                                            <i class="glyphicon glyphicon-chevron-left"></i>
+                                                                        </a>
+                                                                        <a data-slide="next" href="#carousel-1" class="right carousel-control">
+                                                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="upload-section hidden">
+                                                                <div class="wrap-upload-btns">
+                                                                    <p>
+                                                                        <img src="assets/images/video-upload.png" alt="img" />
+                                                                    </p>
+                                                                    <p>
+                                                                        <label for="upload-video-1" class="green-btn">Upload video</label>
+                                                                        <input id="upload-video-1" type="file" />
+                                                                        &nbsp;&nbsp;
+                                                                        <span class="highlight">hoặc</span>
+                                                                        &nbsp;&nbsp;
+                                                                        <a class="green-btn" data-toggle="modal" data-target="#file-manager-modal">Video từ thư viện</a>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="wrap-progress hidden">
+                                                                    <span class="left-info">Đang upload (2/5)</span>
+                                                                    <span class="right-info">75%</span>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                                                            <span class="sr-only">75% Complete</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="note big">Lưu ý: File Video: MP4 hoặc MOV , dung lượng tối đa 1,75GB<br />- Thời lượng tối đa: 45 phút, độ phân giải 720p</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="available-article">
+                                                <div class="create-ads-content-inner">
+                                                    <div class="top-create-ads-content">
+                                                        <div class="w-320">
+                                                            <select class="custom-select" style="width: 100%;">
+                                                                <option value="">Chọn trang facebook</option>
+                                                                <option value="1">Trang facebook 1</option>
+                                                                <option value="2">Trang facebook 2</option>
+                                                                <option value="3">Trang facebook 3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap-list-ads">
+                                                        <form class="search-form">
+                                                            <input class="custom-input" type="text" placeholder="Tìm kiếm..." />
+                                                            <button type="submit">
+                                                                <img src="assets/images/search-icon.png" alt="img" />
+                                                            </button>
+                                                        </form>
+                                                        <div class="list-ads">
+                                                            <ul>
+                                                                <li class="add-more-item">
+                                                                    <label for="add-more-ads-2" class="add-more">
+                                                                        <img src="assets/images/big-plus-icon.png" alt="img" />
+                                                                    </label>
+                                                                    <input id="add-more-ads-2" type="file" />
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img3.jpg" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <span class="count">3</span>
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img2.png" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="ads-item">
+                                                                    <div class="media-container">
+                                                                        <div class="wrap-media">
+                                                                            <img src="assets/images/ads-rs-img.png" alt="img" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Free Vector Icons - SVG</h4>
+                                                                    <div class="wrap-links">
+                                                                        <a class="status-link"><i class="fa fa-power-off"></i></a>
+                                                                        <a class="copy-link"><i class="fa fa-clone"></i></a>
+                                                                        <a class="remove-link"><i class="fa fa-trash-o"></i></a>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap-input-preview">
+                                                        <div class="create-ads-input">
+                                                            <div class="ads-common">
+                                                                <div class="form-group upload-more-img">
+                                                                    <input id="upload-more-img-input-2" type="file" />
+                                                                    <img src="assets/images/ads-img31.jpg" alt="img" />
+                                                                    <label for="upload-more-img-input-2">file-name.jpg</label>
+                                                                    <a class="remove-link"><i class="material-icons">delete</i></a>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="">Chọn bài viết có sẵn trong Trang</option>
+                                                                        <option value="1">Bạn muốn chuyển việc? Ứng tuyển ngay</option>
+                                                                        <option value="2">Cuộc thi săn ảnh "Show you're Jockey"</option>
+                                                                        <option value="3">Những điều cần lưu ý khi thiết kế Email Marketing</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <select class="custom-select" style="width: 100%;">
+                                                                        <option value="">Chọn URL đích</option>
+                                                                        <option value="1">https://facebook.com/abc</option>
+                                                                        <option value="2">https://facebook.com/def</option>
+                                                                        <option value="3">http://abc.com</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="tracking-ga-3" class="css-checkbox tracking-ga-link" /><label for="tracking-ga-3" class="css-label">Link tracking Google analytics</label>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <i class="highlight-3">(utm_medium=adtop1&utm_content=1&utm_campaign=adtop)</i>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <a class="link mgb-10 enhance-options-link">Tùy chọn nâng cao</a>
+                                                                    <div class="wrap-enhance-options hidden">
+                                                                        <input class="custom-input mgb-20" type="text" placeholder="URL hiển thị" />
+                                                                        <input class="custom-input" type="text" placeholder="Thẻ URL" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="text-center">
+                                                                    <a class="green-btn save-ads">Lưu quảng cáo</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ads-tracking-ga hidden">
+                                                                <a class="back-common-link link mgb-30"><i class="big fa fa-angle-left mgt-0"></i>Quay lại</a>
+                                                                <div class="form-group">
+                                                                    <input class="custom-input" type="text" placeholder="Nguồn chiến dịch" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input class="custom-input" type="text" placeholder="Phương tiện chiến dịch" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input class="custom-input" type="text" placeholder="Tên chiến dịch" />
+                                                                </div>
+                                                                <div class="form-group mgb-10">
+                                                                    <select class="tracking-content-select">
+                                                                        <option value="">Chọn nội dung cần tracking</option>
+                                                                        <option value="1">Tên nhóm quảng cáo</option>
+                                                                        <option value="2">Tên quảng cáo</option>
+                                                                        <option value="3">Hình thức quảng cáo</option>
+                                                                        <option value="4">Độ tuổi</option>
+                                                                        <option value="5">Giới tính</option>
+                                                                        <option value="6">Sở thích</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <span class="selected-span">Tên quảng cáo <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                                    <span class="selected-span">Độ Tuổi <a class="close-link"><i class="glyphicon glyphicon-remove"></i></a></span>
+                                                                </div>
+                                                                <div class="text-center">
+                                                                    <a class="green-btn">Tạo link tracking</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="create-ads-preview">
+                                                            <div class="preview-ads-content">
+                                                                <div class="wrap-preview-tabs">
+                                                                    <ul class="nav nav-tabs preview-tabs has-border">
+                                                                        <li class="active">
+                                                                            <input type="checkbox" id="computer-chk-2" class="css-checkbox" /><label for="computer-chk-2" class="css-label"></label>
+                                                                            <a href="#computer-preview-3" data-toggle="tab">Máy tính</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="checkbox" id="right-col-chk-2" class="css-checkbox" /><label for="right-col-chk-2" class="css-label"></label>
+                                                                            <a href="#right-col-preview-3" data-toggle="tab">Cột phải</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="checkbox" id="mobile-chk-2" class="css-checkbox" /><label for="mobile-chk-2" class="css-label"></label>
+                                                                            <a href="#mobile-preview-3" data-toggle="tab">Điện thoại di động</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tab-content">
+                                                                    <div class="tab-pane fade in active" id="computer-preview-3">
+                                                                        <img src="assets/images/ads-img.jpg" alt="img" />
+                                                                    </div>
+                                                                    <div class="tab-pane fade" id="right-col-preview-3">
+                                                                        <img src="assets/images/ads-img3.jpg" alt="img" />
+                                                                    </div>
+                                                                    <div class="tab-pane fade" id="mobile-preview-3">
+                                                                        <img src="assets/images/ads-img4.jpg" alt="img" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="upload-section hidden">
+                                                                <div class="wrap-upload-btns">
+                                                                    <p>
+                                                                        <img src="assets/images/video-upload.png" alt="img" />
+                                                                    </p>
+                                                                    <p>
+                                                                        <label for="upload-video-2" class="green-btn">Upload video</label>
+                                                                        <input id="upload-video-2" type="file" />
+                                                                        &nbsp;&nbsp;
+                                                                        <span class="highlight">hoặc</span>
+                                                                        &nbsp;&nbsp;
+                                                                        <a class="green-btn" data-toggle="modal" data-target="#file-manager-modal">Video từ thư viện</a>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="wrap-progress hidden">
+                                                                    <span class="left-info">Đang upload (2/5)</span>
+                                                                    <span class="right-info">75%</span>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                                                            <span class="sr-only">75% Complete</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="note big">Lưu ý: File Video: MP4 hoặc MOV , dung lượng tối đa 1,75GB<br />- Thời lượng tối đa: 45 phút, độ phân giải 720p</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrap-complete-btns"></div>
+                                </div>
+                                <div class="foot-main-content">
+                                    <a class="gray-btn save-btn">Lưu & Tiếp tục</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade file-manager" id="file-manager-modal" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                        <h4 class="modal-title">Thư viện ảnh</h4>
+                                        <label for="upload-banner" class="green-btn upload-btn"><i class="glyphicon glyphicon-picture"></i>Upload Banner</label>
+                                        <input id="upload-banner" type="file" />
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="wrap-progress">
+                                            <span class="left-info">Đang upload (2/5)</span>
+                                            <span class="right-info">75%</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                                    <span class="sr-only">75% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="list-items">
+                                            <li class="active">
+                                                <div class="wrap-links">
+                                                    <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                    <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                                <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                            </li>
+                                            <li>
+                                                <div class="wrap-links">
+                                                    <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                    <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                                <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                            </li>
+                                            <li>
+                                                <div class="wrap-links">
+                                                    <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                    <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                                <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                            </li>
+                                            <li>
+                                                <div class="wrap-links">
+                                                    <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                    <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                                <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                            </li>
+                                            <li>
+                                                <div class="wrap-links">
+                                                    <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                    <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                                <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                            </li>
+                                            <li>
+                                                <div class="wrap-links">
+                                                    <a class="choose-link pull-left"><i class="fa fa-check-circle"></i></a>
+                                                    <a class="remove-link pull-right"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                                <img class="img-responsive" src="assets/images/ads-rs-img.png" alt="img" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.wrap-create-ads -->
+                </div>
+                <!-- /.main-content -->
+            </div>
+            <!-- /.main -->
+            <footer class="footer">
+                <ul class="copyright">
+                    <li>© 2015 Adtop., JSC</li>
+                    <li><a>Giới Thiệu Về BigBom</a></li>
+                    <li><a href="privacy-policy.html">Chính Sách Bảo Mật</a></li>
+                </ul>
+                <!-- /.copyright -->
+                <ul class="footer-socials">
+                    <li><a class="facebook">facebook</a></li>
+                    <li><a class="googleplus">googleplus</a></li>
+                    <li><a class="twitter">twitter</a></li>
+                </ul>
+                <!-- /.footer-socials -->
+            </footer>
+            <!-- /.footer -->
+        </div>
+        <!-- /.wrapper -->
+
+        <script>
+            var adblock = true;
+            var params = {assetURL: 'dist'};
+        </script>
+        <script src="dist/scripts/adframe.js"></script>
+        <script src="dist/scripts/general.js"></script>
+        <script src="dist/scripts/common.js"></script>
+        <script src="dist/scripts/main.js"></script>
+        <script src="dist/scripts/main_demo.js"></script>
+        
+    </body>
+</html>
