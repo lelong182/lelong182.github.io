@@ -12851,6 +12851,58 @@ label.css-label:before {
   color: #0099cc;
   font-family: 'CourierNew', sans-serif;
 }
+.main .paap-service {
+  padding: 50px 0;
+}
+.main .paap-service h3 {
+  margin: 0 0 50px;
+}
+.main .paap-service label[for="service-avatar-input"] {
+  background: url('../images/photo-icon.png') no-repeat;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.main .paap-service input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.main .paap-service .add-vehicle-btn {
+  background-color: #0099cc;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 50px;
+}
+.main .paap-service .form-group {
+  display: inline-block;
+  width: 100%;
+}
+.main .paap-service .form-group .left {
+  width: 200px;
+  min-height: 1px;
+  float: left;
+}
+.main .paap-service .form-group .right {
+  float: left;
+  width: calc(100% - 200px);
+}
+.main .paap-service .wrap-active-area .wrap-area-chk label {
+  font-weight: normal;
+  font-size: 12px;
+}
+.main .paap-service .wrap-active-area .map {
+  height: 810px;
+  width: 100%;
+}
+.main .paap-service .wrap-active-area .map .land {
+  cursor: pointer;
+}
+.main .paap-service .wrap-active-area .map .land.active,
+.main .paap-service .wrap-active-area .map .land:hover {
+  fill: #0099cc;
+}
 /* ---------------------------------------
     FOOTER
 ----------------------------------------- */

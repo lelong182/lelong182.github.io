@@ -575,6 +575,61 @@
             font-family: 'CourierNew', sans-serif;
         }
     }
+    .paap-service {
+        padding: 50px 0;
+        h3 {
+            margin: 0 0 50px;
+        }
+        label[for="service-avatar-input"] {
+            background: url('../images/photo-icon.png') no-repeat;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+        input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .add-vehicle-btn {
+            background-color: @main-color;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            padding: 10px 50px;
+        }
+        .form-group {
+            display: inline-block;
+            width: 100%;
+            .left {
+                width: 200px;
+                min-height: 1px;
+                float: left;
+            }
+            .right {
+                float: left;
+                width: ~"calc(100% - 200px)";
+            }
+        }
+        .wrap-active-area {
+            .wrap-area-chk {
+                label {
+                    font-weight: normal;
+                    font-size: 12px;
+                }
+            }
+            .map {
+                height: 810px;
+                width: 100%;
+                .land {
+                    cursor: pointer;
+                    &.active, &:hover {
+                        fill: @main-color;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* ---------------------------------------
