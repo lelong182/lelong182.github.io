@@ -105,6 +105,11 @@
                         }
                     }
                 }
+                span {
+                    color: #fff;
+                    font-size: 18px;
+                    vertical-align: middle;
+                }
             }
         }
     }
@@ -210,6 +215,9 @@
             color: #fff;
             font-size: 18px;
             border-radius: 2px;
+            &[disabled] {
+                background-color: #999;
+            }
         }
         .create-btn {
             .grow-shadow();
@@ -220,6 +228,9 @@
             color: #fff;
             font-size: 18px;
             border-radius: 2px;
+            &[disabled] {
+                background-color: #999;
+            }
         }
     }
 }
@@ -444,6 +455,9 @@
                 margin-bottom: 15px;
                 border-radius: 5px;
                 padding: 4px 0;
+                &[disabled] {
+                    background-color: #999;
+                }
             }
             .order-btn {
                 .grow-shadow();
@@ -453,6 +467,9 @@
                 color: #fff;
                 border-radius: 5px;
                 padding: 4px 0;
+                &[disabled] {
+                    background-color: #999;
+                }
             }
         }
     }
@@ -519,6 +536,9 @@
                 margin-right: 15px;
                 padding: 6px 0;
                 width: 150px;
+                &[disabled] {
+                    background-color: #999;
+                }
             }
             .cancel-btn {
                 border: 1px solid @main-color;
@@ -527,6 +547,9 @@
                 width: 150px;
                 background-color: #fff;
                 margin-left: 15px;
+                &[disabled] {
+                    background-color: #999;
+                }
             }
         }
     }
@@ -550,6 +573,9 @@
             border-radius: 5px;
             margin-bottom: 10px;
             font-family: 'CourierNew', sans-serif;
+            &[disabled] {
+                background-color: #999;
+            }
         }
         .register-btn {
             background-color: @third-color;
@@ -562,6 +588,9 @@
             border-radius: 5px;
             font-family: 'CourierNew', sans-serif;
             margin-bottom: 15px;
+            &[disabled] {
+                background-color: #999;
+            }
         }
         .forget-link {
             font-size: 18px;
@@ -597,6 +626,9 @@
             border-radius: 3px;
             color: #fff;
             padding: 10px 50px;
+            &[disabled] {
+                background-color: #999;
+            }
         }
         .form-group {
             display: inline-block;

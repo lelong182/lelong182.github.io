@@ -25,6 +25,7 @@ gulp.task('css', ['less'], function () {
         'assets/styles/animate.min.css',
         'assets/styles/slick.css',
         'assets/styles/slick-theme.css',
+        'assets/styles/sweetalert2.min.css',
         'assets/styles/select2.min.css',
         'assets/styles/styles.css'
     ])
@@ -44,6 +45,7 @@ gulp.task('js', function () {
         'assets/scripts/libs/bootstrap.min.js',
         'assets/scripts/libs/modernizr.js',
         'assets/scripts/libs/slick.min.js',
+        'assets/scripts/libs/sweetalert2.min.js',
         'assets/scripts/libs/select2.full.min.js',
         'assets/scripts/main.js'
     ])
@@ -67,7 +69,7 @@ gulp.task('watch', function () {
 gulp.task('dev', [
     'css',
     'js',
-    'watch'
+    // 'watch'
 ]);
 
 gulp.task('default', [

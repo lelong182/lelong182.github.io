@@ -11860,6 +11860,11 @@ MAIN STYLES
 .custom-textarea.uppercase {
   text-transform: uppercase;
 }
+.error-message {
+  color: #e74c3c;
+  margin-top: 3px;
+  font-size: 13px;
+}
 .input-has-icon {
   position: relative;
 }
@@ -12141,6 +12146,11 @@ label.css-label:before {
     content: none;
   }
 }
+.topbar .top-menu ul li span {
+  color: #fff;
+  font-size: 18px;
+  vertical-align: middle;
+}
 .topbar .lang-switch-mobile {
   position: absolute;
   top: 13px;
@@ -12279,6 +12289,9 @@ label.css-label:before {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
+.hero .hero-inner .search-btn[disabled] {
+  background-color: #999;
+}
 .hero .hero-inner .create-btn {
   display: inline-block;
   vertical-align: middle;
@@ -12306,6 +12319,9 @@ label.css-label:before {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+}
+.hero .hero-inner .create-btn[disabled] {
+  background-color: #999;
 }
 /* ---------------------------------------
     MAIN
@@ -12677,6 +12693,9 @@ label.css-label:before {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+.main .paap-details .creator .chat-btn[disabled] {
+  background-color: #999;
+}
 .main .paap-details .creator .order-btn {
   display: inline-block;
   vertical-align: middle;
@@ -12703,6 +12722,9 @@ label.css-label:before {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+}
+.main .paap-details .creator .order-btn[disabled] {
+  background-color: #999;
 }
 .main .paap-create {
   padding: 50px 0 100px;
@@ -12798,6 +12820,9 @@ label.css-label:before {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
+.main .paap-create .paap-create-footer .submit-btn[disabled] {
+  background-color: #999;
+}
 .main .paap-create .paap-create-footer .cancel-btn {
   border: 1px solid #0099cc;
   border-radius: 4px;
@@ -12805,6 +12830,9 @@ label.css-label:before {
   width: 150px;
   background-color: #fff;
   margin-left: 15px;
+}
+.main .paap-create .paap-create-footer .cancel-btn[disabled] {
+  background-color: #999;
 }
 .main .paap-login {
   width: 360px;
@@ -12828,6 +12856,9 @@ label.css-label:before {
   margin-bottom: 10px;
   font-family: 'CourierNew', sans-serif;
 }
+.main .paap-login .login-btn[disabled] {
+  background-color: #999;
+}
 .main .paap-login .register-btn {
   background-color: #00a651;
   border: none;
@@ -12839,6 +12870,9 @@ label.css-label:before {
   border-radius: 5px;
   font-family: 'CourierNew', sans-serif;
   margin-bottom: 15px;
+}
+.main .paap-login .register-btn[disabled] {
+  background-color: #999;
 }
 .main .paap-login .forget-link {
   font-size: 18px;
@@ -12874,6 +12908,9 @@ label.css-label:before {
   border-radius: 3px;
   color: #fff;
   padding: 10px 50px;
+}
+.main .paap-service .add-vehicle-btn[disabled] {
+  background-color: #999;
 }
 .main .paap-service .form-group {
   display: inline-block;
