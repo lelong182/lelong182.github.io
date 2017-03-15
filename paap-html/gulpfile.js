@@ -19,7 +19,7 @@ gulp.task('less', function () {
 
 gulp.task('css', ['less'], function () {
     gulp.src([
-        'assets/styles/please-wait.css',
+        // 'assets/styles/please-wait.css',
         'assets/styles/minimal-menu.css',
         'assets/styles/font-awesome.min.css',
         'assets/styles/animate.min.css',
@@ -39,7 +39,7 @@ gulp.task('css', ['less'], function () {
 
 gulp.task('js', function () {
     gulp.src([
-        'assets/scripts/libs/please-wait.min.js',
+        // 'assets/scripts/libs/please-wait.min.js',
         'assets/scripts/libs/jquery.min.js',
         'assets/scripts/libs/jquery.easing.1.3.js',
         'assets/scripts/libs/bootstrap.min.js',

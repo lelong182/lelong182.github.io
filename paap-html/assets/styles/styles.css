@@ -6686,7 +6686,6 @@ body {
   height: 100%;
 }
 body {
-  opacity: 0;
   font-family: 'VNF-ITC', sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -9126,7 +9125,6 @@ HOVER
   transition-timing-function: ease-out;
 }
 .hvr-underline-from-center:hover:before,
-.hvr-underline-from-center:focus:before,
 .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
@@ -12126,7 +12124,6 @@ label.css-label:before {
   transition-timing-function: ease-out;
 }
 .topbar .top-menu ul li a:hover:before,
-.topbar .top-menu ul li a:focus:before,
 .topbar .top-menu ul li a:active:before {
   left: 0;
   right: 0;
@@ -12432,7 +12429,6 @@ label.css-label:before {
   transition-timing-function: ease-out;
 }
 .main .list-paaps .paap-header .wrap-sort ul li a:hover:before,
-.main .list-paaps .paap-header .wrap-sort ul li a:focus:before,
 .main .list-paaps .paap-header .wrap-sort ul li a:active:before {
   left: 0;
   right: 0;
@@ -12572,7 +12568,6 @@ label.css-label:before {
   transition-timing-function: ease-out;
 }
 .main .readmore-paaps a:hover:before,
-.main .readmore-paaps a:focus:before,
 .main .readmore-paaps a:active:before {
   left: 0;
   right: 0;
@@ -12939,6 +12934,65 @@ label.css-label:before {
 .main .paap-service .wrap-active-area .map .land.active,
 .main .paap-service .wrap-active-area .map .land:hover {
   fill: #0099cc;
+}
+.main .paap-service-details {
+  padding: 50px 0;
+}
+.main .paap-service-details .info-box {
+  border-radius: 9px;
+  border: 1px solid #898989;
+  text-align: center;
+  color: #2d3e58;
+  overflow: hidden;
+}
+.main .paap-service-details .info-box .img-container {
+  height: 190px;
+  margin: 50px 0 30px;
+}
+.main .paap-service-details .info-box .img-container img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.main .paap-service-details .info-box h4 {
+  font-size: 34px;
+  margin: 0 0 15px;
+}
+.main .paap-service-details .info-box p {
+  font-size: 18px;
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+.main .paap-service-details .info-box p.small {
+  font-size: 14px;
+  color: #2d3e58;
+}
+.main .paap-service-details .info-box .bottom-box {
+  background-color: #2d3e58;
+  padding: 10px 0;
+  margin-top: 15px;
+}
+.main .paap-service-details .service-tabs .nav-tabs {
+  border-color: #898989;
+}
+.main .paap-service-details .service-tabs .nav-tabs li.active a,
+.main .paap-service-details .service-tabs .nav-tabs li:hover a {
+  border-color: #898989 #898989 #fff !important;
+}
+.main .paap-service-details .service-tabs .nav-tabs li a {
+  font-size: 18px;
+  color: #0099cc;
+  border-radius: 0;
+  padding: 15px 50px;
+}
+.main .paap-service-details .service-tabs .nav-tabs li a:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+.main .paap-service-details .service-tabs .tab-content {
+  color: #646464;
+  font-size: 18px;
+  padding-top: 20px;
 }
 /* ---------------------------------------
     FOOTER
