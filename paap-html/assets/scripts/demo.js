@@ -25,6 +25,17 @@
          =================================== */
         homeClients();
 
+
+        /* =================================
+         ===  Hide List Location                 ====
+         =================================== */
+        $(this).on('mouseup', 'body', function (event) {
+            if (!$('.list-location').is(event.target) && $('.list-location').has(event.target).length === 0 && !$('.wrap-search-location .custom-input').is(event.target)) {
+                $('.list-location').removeClass('open');
+                $('.location-item').remove();
+            }
+        });
+
     });
 
 })(window.jQuery);

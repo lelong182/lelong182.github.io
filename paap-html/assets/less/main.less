@@ -25,6 +25,53 @@
 }
 
 /* ---------------------------------------
+    CUSTOM DATEPICKER
+----------------------------------------- */
+.datepicker.dropdown-menu {
+    min-width: 300px;
+    table {
+        width: 100%;
+        tr {
+            td {
+                &.active.active, &.active.highlighted.active, &.active.highlighted:active, &.active:active {
+                    background-color: @main-color;
+                    border-color: @main-color;
+                }
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+    IS LOADING
+----------------------------------------- */
+.is-loading {
+    position: relative;
+    &:before {
+        background-color: rgba(255, 255, 255, 0.7);
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 999;
+    }
+    &:after {
+        animation: 1s linear 0s normal none infinite running fa-spin;
+        color: #4c4c4c;
+        content: "\f1ce";
+        font-family: FontAwesome;
+        font-size: 24px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+}
+
+/* ---------------------------------------
     TOPBAR
 ----------------------------------------- */
 .topbar {
@@ -232,6 +279,106 @@
                 background-color: #999;
             }
         }
+        .wrap-search-location {
+            position: relative;
+            .list-location {
+                position: absolute;
+                background-color: #fff;
+                border-radius: 5px;
+                z-index: 100;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.2s ease;
+                width: 100%;
+                border: 1px solid #bbb;
+                box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
+                &.open {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                ul {
+                    max-height: 165px;
+                    overflow: hidden;
+                    margin-bottom: 0;
+                    li {
+                        list-style: none;
+                        border-bottom: 1px solid #bbb;
+                        padding: 9px 15px;
+                        font-size: 12px;
+                        line-height: 1.5;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            background-color: #eee;
+                        }
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        &.no-result {
+                            cursor: initial;
+                            &:hover {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .wrap-select {
+            .select2-container--default {
+                .select2-selection--single {
+                    .select2-selection__rendered {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .wrap-datepicker {
+            ::-webkit-input-placeholder {
+                color: #000;
+                opacity: 1;
+            }
+            :-moz-placeholder {
+                color: #000;
+                opacity: 1;
+            }
+            ::-moz-placeholder {
+                color: #000;
+                opacity: 1;
+            }
+            :-ms-input-placeholder {
+                color: #000;
+                opacity: 1;
+            }
+            .form-control {
+                height: 46px;
+                border-radius: 5px;
+                border: 1px solid @main-color;
+                font-size: 18px;
+                box-shadow: none;
+                color: #000;
+                text-transform: uppercase;
+            }
+            .date {
+                position: relative;
+                width: 100%;
+                .input-group-addon {
+                    position: absolute;
+                    background: url('../images/calendar-icon.png') no-repeat;
+                    width: 30px;
+                    height: 30px;
+                    top: 8px;
+                    right: 10px;
+                    cursor: pointer;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -239,9 +386,24 @@
     MAIN
 ----------------------------------------- */
 .main {
+    .wrap-clients {
+        overflow: hidden;
+        min-height: 200px;
+    }
     .clients {
         margin: 20px 0 40px;
         overflow: hidden;
+        .img-container {
+            text-align: center;
+            margin: auto;
+            padding: 0 10px;
+            a {
+                display: inline-block;
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
     }
     .list-paaps {
         .paap-header {
@@ -475,7 +637,7 @@
     }
     .paap-create {
         padding: 50px 0 100px;
-        > .row {
+        form > .row {
             margin-bottom: 10px;
             .col-xs-6 {
                 @media (max-width: @screen-xs-min) {
@@ -523,6 +685,127 @@
                 width: 100%;
                 margin-left: 0;
             }
+            .wrap-datepicker {
+                .date {
+                    display: none;
+                }
+            }
+        }
+        .wrap-datepicker {
+            ::-webkit-input-placeholder {
+                color: #000;
+                opacity: 1;
+            }
+            :-moz-placeholder {
+                color: #000;
+                opacity: 1;
+            }
+            ::-moz-placeholder {
+                color: #000;
+                opacity: 1;
+            }
+            :-ms-input-placeholder {
+                color: #000;
+                opacity: 1;
+            }
+            .form-control {
+                height: 46px;
+                border-radius: 5px;
+                border: 1px solid @main-color;
+                font-size: 18px;
+                box-shadow: none;
+                color: #000;
+                text-transform: uppercase;
+            }
+            .date {
+                position: relative;
+                width: 100%;
+                .input-group-addon {
+                    position: absolute;
+                    background: url('../images/calendar-icon.png') no-repeat;
+                    width: 30px;
+                    height: 30px;
+                    top: 8px;
+                    right: 10px;
+                    cursor: pointer;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            .timepicker {
+                position: relative;
+                width: 100%;
+                .input-group-addon {
+                    position: absolute;
+                    background: url('../images/clock-icon.png') no-repeat;
+                    width: 25px;
+                    height: 25px;
+                    top: 8px;
+                    right: 10px;
+                    cursor: pointer;
+                    i {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .wrap-search-location {
+            position: relative;
+            .list-location {
+                position: absolute;
+                background-color: #fff;
+                border-radius: 5px;
+                z-index: 100;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.2s ease;
+                width: 100%;
+                border: 1px solid #bbb;
+                box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
+                &.open {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                ul {
+                    max-height: 165px;
+                    overflow: hidden;
+                    margin-bottom: 0;
+                    li {
+                        list-style: none;
+                        border-bottom: 1px solid #bbb;
+                        padding: 9px 15px;
+                        font-size: 12px;
+                        line-height: 1.5;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            background-color: #eee;
+                        }
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        &.no-result {
+                            cursor: initial;
+                            &:hover {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .wrap-select {
+            .select2-container--default {
+                .select2-selection--single {
+                    .select2-selection__rendered {
+                        text-transform: uppercase;
+                    }
+                }
+            }
         }
         .paap-create-footer {
             text-align: center;
@@ -538,6 +821,7 @@
                 width: 150px;
                 &[disabled] {
                     background-color: #999;
+                    border-color: #999;
                 }
             }
             .cancel-btn {

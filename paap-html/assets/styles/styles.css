@@ -12011,6 +12011,50 @@ label.css-label:before {
   background-size: cover;
 }
 /* ---------------------------------------
+    CUSTOM DATEPICKER
+----------------------------------------- */
+.datepicker.dropdown-menu {
+  min-width: 300px;
+}
+.datepicker.dropdown-menu table {
+  width: 100%;
+}
+.datepicker.dropdown-menu table tr td.active.active,
+.datepicker.dropdown-menu table tr td.active.highlighted.active,
+.datepicker.dropdown-menu table tr td.active.highlighted:active,
+.datepicker.dropdown-menu table tr td.active:active {
+  background-color: #0099cc;
+  border-color: #0099cc;
+}
+/* ---------------------------------------
+    IS LOADING
+----------------------------------------- */
+.is-loading {
+  position: relative;
+}
+.is-loading:before {
+  background-color: rgba(255, 255, 255, 0.7);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.is-loading:after {
+  animation: 1s linear 0s normal none infinite running fa-spin;
+  color: #4c4c4c;
+  content: "\f1ce";
+  font-family: FontAwesome;
+  font-size: 24px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+/* ---------------------------------------
     TOPBAR
 ----------------------------------------- */
 .topbar {
@@ -12320,12 +12364,119 @@ label.css-label:before {
 .hero .hero-inner .create-btn[disabled] {
   background-color: #999;
 }
+.hero .hero-inner .wrap-search-location {
+  position: relative;
+}
+.hero .hero-inner .wrap-search-location .list-location {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  width: 100%;
+  border: 1px solid #bbb;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
+}
+.hero .hero-inner .wrap-search-location .list-location.open {
+  opacity: 1;
+  visibility: visible;
+}
+.hero .hero-inner .wrap-search-location .list-location ul {
+  max-height: 165px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.hero .hero-inner .wrap-search-location .list-location ul li {
+  list-style: none;
+  border-bottom: 1px solid #bbb;
+  padding: 9px 15px;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero .hero-inner .wrap-search-location .list-location ul li:hover {
+  background-color: #eee;
+}
+.hero .hero-inner .wrap-search-location .list-location ul li:last-child {
+  border-bottom: none;
+}
+.hero .hero-inner .wrap-search-location .list-location ul li.no-result {
+  cursor: initial;
+}
+.hero .hero-inner .wrap-search-location .list-location ul li.no-result:hover {
+  background-color: #fff;
+}
+.hero .hero-inner .wrap-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+  text-transform: uppercase;
+}
+.hero .hero-inner .wrap-datepicker ::-webkit-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.hero .hero-inner .wrap-datepicker :-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.hero .hero-inner .wrap-datepicker ::-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.hero .hero-inner .wrap-datepicker :-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.hero .hero-inner .wrap-datepicker .form-control {
+  height: 46px;
+  border-radius: 5px;
+  border: 1px solid #0099cc;
+  font-size: 18px;
+  box-shadow: none;
+  color: #000;
+  text-transform: uppercase;
+}
+.hero .hero-inner .wrap-datepicker .date {
+  position: relative;
+  width: 100%;
+}
+.hero .hero-inner .wrap-datepicker .date .input-group-addon {
+  position: absolute;
+  background: url('../images/calendar-icon.png') no-repeat;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+}
+.hero .hero-inner .wrap-datepicker .date .input-group-addon span {
+  display: none;
+}
 /* ---------------------------------------
     MAIN
 ----------------------------------------- */
+.main .wrap-clients {
+  overflow: hidden;
+  min-height: 200px;
+}
 .main .clients {
   margin: 20px 0 40px;
   overflow: hidden;
+}
+.main .clients .img-container {
+  text-align: center;
+  margin: auto;
+  padding: 0 10px;
+}
+.main .clients .img-container a {
+  display: inline-block;
+}
+.main .clients .img-container a img {
+  max-width: 100%;
 }
 .main .list-paaps .paap-header {
   position: relative;
@@ -12724,15 +12875,15 @@ label.css-label:before {
 .main .paap-create {
   padding: 50px 0 100px;
 }
-.main .paap-create > .row {
+.main .paap-create form > .row {
   margin-bottom: 10px;
 }
 @media (max-width: 480px) {
-  .main .paap-create > .row .col-xs-6 {
+  .main .paap-create form > .row .col-xs-6 {
     width: 100%;
     margin-bottom: 5px;
   }
-  .main .paap-create > .row .col-xs-6:last-child {
+  .main .paap-create form > .row .col-xs-6:last-child {
     margin-bottom: 0;
   }
 }
@@ -12783,6 +12934,117 @@ label.css-label:before {
     margin-left: 0;
   }
 }
+.main .paap-create .wrap-time .wrap-datepicker .date {
+  display: none;
+}
+.main .paap-create .wrap-datepicker ::-webkit-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.main .paap-create .wrap-datepicker :-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.main .paap-create .wrap-datepicker ::-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.main .paap-create .wrap-datepicker :-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.main .paap-create .wrap-datepicker .form-control {
+  height: 46px;
+  border-radius: 5px;
+  border: 1px solid #0099cc;
+  font-size: 18px;
+  box-shadow: none;
+  color: #000;
+  text-transform: uppercase;
+}
+.main .paap-create .wrap-datepicker .date {
+  position: relative;
+  width: 100%;
+}
+.main .paap-create .wrap-datepicker .date .input-group-addon {
+  position: absolute;
+  background: url('../images/calendar-icon.png') no-repeat;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+}
+.main .paap-create .wrap-datepicker .date .input-group-addon span {
+  display: none;
+}
+.main .paap-create .wrap-datepicker .timepicker {
+  position: relative;
+  width: 100%;
+}
+.main .paap-create .wrap-datepicker .timepicker .input-group-addon {
+  position: absolute;
+  background: url('../images/clock-icon.png') no-repeat;
+  width: 25px;
+  height: 25px;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+}
+.main .paap-create .wrap-datepicker .timepicker .input-group-addon i {
+  display: none;
+}
+.main .paap-create .wrap-search-location {
+  position: relative;
+}
+.main .paap-create .wrap-search-location .list-location {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  width: 100%;
+  border: 1px solid #bbb;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
+}
+.main .paap-create .wrap-search-location .list-location.open {
+  opacity: 1;
+  visibility: visible;
+}
+.main .paap-create .wrap-search-location .list-location ul {
+  max-height: 165px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.main .paap-create .wrap-search-location .list-location ul li {
+  list-style: none;
+  border-bottom: 1px solid #bbb;
+  padding: 9px 15px;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.main .paap-create .wrap-search-location .list-location ul li:hover {
+  background-color: #eee;
+}
+.main .paap-create .wrap-search-location .list-location ul li:last-child {
+  border-bottom: none;
+}
+.main .paap-create .wrap-search-location .list-location ul li.no-result {
+  cursor: initial;
+}
+.main .paap-create .wrap-search-location .list-location ul li.no-result:hover {
+  background-color: #fff;
+}
+.main .paap-create .wrap-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+  text-transform: uppercase;
+}
 .main .paap-create .paap-create-footer {
   text-align: center;
   margin-top: 30px;
@@ -12817,6 +13079,7 @@ label.css-label:before {
 }
 .main .paap-create .paap-create-footer .submit-btn[disabled] {
   background-color: #999;
+  border-color: #999;
 }
 .main .paap-create .paap-create-footer .cancel-btn {
   border: 1px solid #0099cc;

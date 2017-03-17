@@ -148,7 +148,7 @@ function homeClients() {
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         speed: 800,
         responsive: [
             {
