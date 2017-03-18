@@ -33,124 +33,126 @@
 </head>
 <body>
 
-<div class="topbar">
-    <div class="container">
-        <h1 class="logo">
-            <a href="index.html" title="PAAP">PAAP</a>
-        </h1>
-        <nav class="top-menu">
-            <div class="minimal-menu">
-                <ul class="menu">
-                    <li class="current">
-                        <a href="index.html">Trang chủ</a>
-                    </li>
-                    <li>
-                        <a>Giới thiệu</a>
-                    </li>
-                    <li>
-                        <a>Đối tác</a>
-                    </li>
-                    <li>
-                        <a>Đăng nhập/Đăng ký</a>
-                    </li>
-                    <li class="lang-switch">
-                        <a><img src="dist/images/uk-flag.png" alt="img" /></a>
-                        <a><img src="dist/images/vi-flag.png" alt="img" /></a>
-                    </li>
-                </ul>
+<div class="wrapper">
+    <div class="topbar">
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html" title="PAAP">PAAP</a>
+            </h1>
+            <nav class="top-menu">
+                <div class="minimal-menu">
+                    <ul class="menu">
+                        <li class="current">
+                            <a href="index.html">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a>Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a>Đối tác</a>
+                        </li>
+                        <li>
+                            <a>Đăng nhập/Đăng ký</a>
+                        </li>
+                        <li class="lang-switch">
+                            <a><img src="dist/images/uk-flag.png" alt="img" /></a>
+                            <a><img src="dist/images/vi-flag.png" alt="img" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.minimal-menu -->
+            </nav>
+            <!-- /.top-menu -->
+            <div class="lang-switch-mobile visible-xs">
+                <a><img src="dist/images/uk-flag.png" alt="img" /></a>
+                <a><img src="dist/images/vi-flag.png" alt="img" /></a>
             </div>
-            <!-- /.minimal-menu -->
-        </nav>
-        <!-- /.top-menu -->
-        <div class="lang-switch-mobile visible-xs">
-            <a><img src="dist/images/uk-flag.png" alt="img" /></a>
-            <a><img src="dist/images/vi-flag.png" alt="img" /></a>
         </div>
     </div>
-</div>
-<!-- /.topbar -->
+    <!-- /.topbar -->
 
-<div class="main">
-    <div class="container">
-        <div class="paap-create">
-            <h3>Tạo PAAP mới</h3>
-            <form>
-                <div class="row">
-                    <div class="col-sm-3"><h4>Quãng đường</h4></div>
-                    <div class="col-sm-4 col-xs-6">
-                        <div class="input-has-icon">
-                            <input class="custom-input" type="text" placeholder="Nhập vào điểm khởi hành" />
-                            <img class="icon" src="dist/images/marker-icon.png" alt="img" />
-                        </div>
-                    </div>
-                    <div class="col-sm-1 hidden-xs text-center">
-                        <img class="mgt-15" src="dist/images/arrow-icon-2.png" alt="img" />
-                    </div>
-                    <div class="col-sm-4 col-xs-6">
-                        <div class="input-has-icon">
-                            <input class="custom-input" type="text" placeholder="Nhập vào điểm đến" />
-                            <img class="icon" src="dist/images/marker-icon.png" alt="img" />
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3"><h4>Ngày/giờ khởi hành</h4></div>
-                    <div class="col-sm-4">
-                        <div class="wrap-date">
+    <div class="main">
+        <div class="container">
+            <div class="paap-create">
+                <h3>Tạo PAAP mới</h3>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-3"><h4>Quãng đường</h4></div>
+                        <div class="col-sm-4 col-xs-6">
                             <div class="input-has-icon">
-                                <input class="custom-input" type="text" placeholder="Chọn ngày" />
-                                <img class="icon-2" src="dist/images/calendar-icon-2.png" alt="img" />
+                                <input class="custom-input" type="text" placeholder="Nhập vào điểm khởi hành" />
+                                <img class="icon" src="dist/images/marker-icon.png" alt="img" />
                             </div>
                         </div>
-                        <div class="wrap-time">
+                        <div class="col-sm-1 hidden-xs text-center">
+                            <img class="mgt-15" src="dist/images/arrow-icon-2.png" alt="img" />
+                        </div>
+                        <div class="col-sm-4 col-xs-6">
                             <div class="input-has-icon">
-                                <input class="custom-input" type="text" placeholder="Chọn giờ" />
-                                <img class="icon-2" src="dist/images/clock-icon.png" alt="img" />
+                                <input class="custom-input" type="text" placeholder="Nhập vào điểm đến" />
+                                <img class="icon" src="dist/images/marker-icon.png" alt="img" />
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3"><h4>Phương tiện</h4></div>
-                    <div class="col-sm-4">
-                        <select class="custom-select no-search" style="width: 100%;">
-                            <option value="">LOẠI PHƯƠNG TIỆN</option>
-                            <option value="1">Phương tiện 1</option>
-                            <option value="2">Phương tiện 2</option>
-                            <option value="3">Phương tiện 3</option>
-                        </select>
+                    <div class="row">
+                        <div class="col-sm-3"><h4>Ngày/giờ khởi hành</h4></div>
+                        <div class="col-sm-4">
+                            <div class="wrap-date">
+                                <div class="input-has-icon">
+                                    <input class="custom-input" type="text" placeholder="Chọn ngày" />
+                                    <img class="icon-2" src="dist/images/calendar-icon-2.png" alt="img" />
+                                </div>
+                            </div>
+                            <div class="wrap-time">
+                                <div class="input-has-icon">
+                                    <input class="custom-input" type="text" placeholder="Chọn giờ" />
+                                    <img class="icon-2" src="dist/images/clock-icon.png" alt="img" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3"><h4>Mô tả</h4></div>
-                    <div class="col-sm-9">
-                        <textarea class="custom-textarea" placeholder="Nhập về mô tả cho chuyến đi"></textarea>
+                    <div class="row">
+                        <div class="col-sm-3"><h4>Phương tiện</h4></div>
+                        <div class="col-sm-4">
+                            <select class="custom-select no-search" style="width: 100%;">
+                                <option value="">LOẠI PHƯƠNG TIỆN</option>
+                                <option value="1">Phương tiện 1</option>
+                                <option value="2">Phương tiện 2</option>
+                                <option value="3">Phương tiện 3</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="paap-create-footer">
-                    <button class="submit-btn">HOÀN TẤT</button>
-                    <button class="cancel-btn">HỦY</button>
-                </div>
-            </form>
+                    <div class="row">
+                        <div class="col-sm-3"><h4>Mô tả</h4></div>
+                        <div class="col-sm-9">
+                            <textarea class="custom-textarea" placeholder="Nhập về mô tả cho chuyến đi"></textarea>
+                        </div>
+                    </div>
+                    <div class="paap-create-footer">
+                        <button class="submit-btn">HOÀN TẤT</button>
+                        <button class="cancel-btn">HỦY</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.paap-create -->
         </div>
-        <!-- /.paap-create -->
     </div>
-</div>
-<!-- /.main -->
+    <!-- /.main -->
 
-<footer class="footer">
-    <div class="container">
-        <h3 class="logo">
-            <a href="index.html" title="Pink Coder">Pink Coder</a>
-        </h3>
-        <div class="info">
-            <p>Bản quyền © 2017 thuộc về PinkCoder</p>
-            <p>Tên công ty: CÔNG TY TNHH DỊCH VỤ TIN HỌC HỒNG HỘI</p>
-            <p>Địa chỉ đăng ký kinh doanh: Số 205 Đường 232, Đường số 4, KP 12, Phường An Bình, Thành phố Biên Hoà, Tỉnh Đồng Nai</p>
+    <footer class="footer">
+        <div class="container">
+            <h3 class="logo">
+                <a href="index.html" title="Pink Coder">Pink Coder</a>
+            </h3>
+            <div class="info">
+                <p>Bản quyền © 2017 thuộc về PinkCoder</p>
+                <p>Tên công ty: CÔNG TY TNHH DỊCH VỤ TIN HỌC HỒNG HỘI</p>
+                <p>Địa chỉ đăng ký kinh doanh: Số 205 Đường 232, Đường số 4, KP 12, Phường An Bình, Thành phố Biên Hoà, Tỉnh Đồng Nai</p>
+            </div>
         </div>
-    </div>
-</footer>
-<!-- /.footer -->
+    </footer>
+    <!-- /.footer -->
+</div>
 
 <script type="text/javascript" src="dist/scripts/main.js?v=1.5.0"></script>
 <script type="text/javascript" src="assets/scripts/demo.js?v=1.5.0"></script>

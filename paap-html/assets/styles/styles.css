@@ -12055,6 +12055,14 @@ label.css-label:before {
   z-index: 1000;
 }
 /* ---------------------------------------
+    WRAPPER
+----------------------------------------- */
+.wrapper {
+  position: relative;
+  padding-bottom: 80px;
+  min-height: 100%;
+}
+/* ---------------------------------------
     TOPBAR
 ----------------------------------------- */
 .topbar {
@@ -12258,6 +12266,13 @@ label.css-label:before {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+.hero.is-search {
+  background: none;
+  padding: 0;
+}
+.hero.is-search:before {
+  content: none;
 }
 .hero:before {
   background-color: rgba(183, 183, 183, 0.3);
@@ -12478,6 +12493,9 @@ label.css-label:before {
 .main .clients .img-container a img {
   max-width: 100%;
 }
+.main .list-paaps {
+  margin-bottom: 50px;
+}
 .main .list-paaps .paap-header {
   position: relative;
 }
@@ -12686,7 +12704,7 @@ label.css-label:before {
 }
 .main .readmore-paaps {
   text-align: center;
-  margin: 10px 0 50px;
+  margin-top: 10px;
 }
 .main .readmore-paaps a {
   display: inline-block;
@@ -13263,6 +13281,11 @@ label.css-label:before {
 footer.footer {
   background-color: #0099cc;
   padding: 13px 0 14px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 50;
 }
 footer.footer .logo {
   margin: 2px 0 0;

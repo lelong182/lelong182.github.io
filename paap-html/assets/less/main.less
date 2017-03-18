@@ -72,6 +72,15 @@
 }
 
 /* ---------------------------------------
+    WRAPPER
+----------------------------------------- */
+.wrapper {
+    position: relative;
+    padding-bottom: 80px;
+    min-height: 100%;
+}
+
+/* ---------------------------------------
     TOPBAR
 ----------------------------------------- */
 .topbar {
@@ -216,6 +225,13 @@
     @media (max-width: @screen-xs-min) {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    &.is-search {
+        background: none;
+        padding: 0;
+        &:before {
+            content: none;
+        }
     }
     &:before {
         background-color: rgba(183, 183, 183, 0.3);
@@ -406,6 +422,7 @@
         }
     }
     .list-paaps {
+        margin-bottom: 50px;
         .paap-header {
             position: relative;
             h3 {
@@ -541,7 +558,7 @@
     }
     .readmore-paaps {
         text-align: center;
-        margin: 10px 0 50px;
+        margin-top: 10px;
         a {
             .underline-from-center(1px, @main-color);
             color: @main-color;
@@ -1018,6 +1035,11 @@
 footer.footer {
     background-color: @main-color;
     padding: 13px 0 14px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 50;
     .logo {
         margin: 2px 0 0;
         float: left;
