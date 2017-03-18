@@ -12274,6 +12274,9 @@ label.css-label:before {
 .hero.is-search:before {
   content: none;
 }
+.hero.is-search .hero-inner {
+  padding: 0;
+}
 .hero:before {
   background-color: rgba(183, 183, 183, 0.3);
   bottom: 0;
