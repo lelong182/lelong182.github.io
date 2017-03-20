@@ -57,9 +57,9 @@
                         <input type="password" placeholder="Mật khẩu" />
                     </div>
                     <div class="clearfix mgt-10 mgb-10">
-                        <div class="remember">
-                            <label for="remember-chk">Ghi nhớ</label>
-                            <input id="remember-chk" type="checkbox" />
+                        <div class="remember-checkbox">
+                            <input type="checkbox" id="send-gift-checkbox" class="css-checkbox" />
+                            <label for="send-gift-checkbox" class="css-label">Ghi nhớ</label>
                         </div>
                         <a class="forgot-password-link">Quên mật khẩu ?</a>
                     </div>
@@ -99,6 +99,7 @@
                         </div>
                     </div>
                     <div class="wrap-input">
+                        <span><i class="fa fa-mobile" aria-hidden="true"></i></span>
                         <input type="text" placeholder="Số điện thoại" />
                     </div>
                     <div class="wrap-input">
@@ -182,6 +183,41 @@
             <span class="menu-icon"></span>
             <!-- /.menu-icon -->
             <div class="cat-menu">
+                <ul class="top-links inside-menu">
+                    <li class="user">
+                        <a><img src="dist/images/avatar.png" alt="img"/></a>
+                        <div class="child-box">
+                            <ul>
+                                <li><a data-toggle="modal" data-target=".register-modal">Đăng ký</a></li>
+                                <li class="devider no-mg"></li>
+                                <li><a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                        <!-- Dropdown dưới là khi user đã login -->
+                        <!--
+                        <div class="child-box big">
+                            <ul>
+                                <li><a class="highlight">Schedule</a></li>
+                                <li><a class="highlight">Reward points</a></li>
+                                <li class="devider"></li>
+                                <li><a>Profile</a></li>
+                                <li><a>Log out</a></li>
+                            </ul>
+                        </div>
+                        -->
+                    </li>
+                    <li class="lang">
+                        <a><img src="dist/images/en-flag.png" alt="img"/></a>
+                        <div class="child-box">
+                            <ul>
+                                <li class="active"><a>English</a></li>
+                                <li class="devider no-mg"></li>
+                                <li><a>Tiếng Việt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- /.top-links -->
                 <h3>Categories</h3>
                 <div class="popular-links">
                     <h4><a>Deals</a></h4>
@@ -297,13 +333,13 @@
         <!-- /.logo -->
         <ul class="menu">
             <li>
-                <a><span class="glass-icon"></span>Menu</a>
+                <a><span class="glass-icon"></span><span class="text">Menu</span></a>
             </li>
             <li>
-                <a href="index.html#pick-coffee" class="scroll"><span class="calendar-icon"></span>Schedule</a>
+                <a href="index.html#pick-coffee" class="scroll"><span class="calendar-icon"></span><span class="text">Schedule</span></a>
             </li>
             <li class="cart-menu">
-                <a><span class="cart-icon" data-value="10"></span>Your cart</a>
+                <a><span class="cart-icon" data-value="10"></span><span class="text">Your cart</span></a>
                 <div class="cart-box">
                     <div class="table-responsive">
                         <table class="table checkout-table">

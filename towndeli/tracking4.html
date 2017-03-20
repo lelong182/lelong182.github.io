@@ -57,9 +57,9 @@
                         <input type="password" placeholder="Mật khẩu" />
                     </div>
                     <div class="clearfix mgt-10 mgb-10">
-                        <div class="remember">
-                            <label for="remember-chk">Ghi nhớ</label>
-                            <input id="remember-chk" type="checkbox" />
+                        <div class="remember-checkbox">
+                            <input type="checkbox" id="send-gift-checkbox" class="css-checkbox" />
+                            <label for="send-gift-checkbox" class="css-label">Ghi nhớ</label>
                         </div>
                         <a class="forgot-password-link">Quên mật khẩu ?</a>
                     </div>
@@ -99,6 +99,7 @@
                         </div>
                     </div>
                     <div class="wrap-input">
+                        <span><i class="fa fa-mobile" aria-hidden="true"></i></span>
                         <input type="text" placeholder="Số điện thoại" />
                     </div>
                     <div class="wrap-input">
@@ -221,11 +222,47 @@
             <span class="menu-icon"></span>
             <!-- /.menu-icon -->
             <div class="cat-menu">
+                <ul class="top-links inside-menu">
+                    <li class="user">
+                        <a><img src="dist/images/avatar.png" alt="img"/></a>
+                        <div class="child-box">
+                            <ul>
+                                <li><a data-toggle="modal" data-target=".register-modal">Đăng ký</a></li>
+                                <li class="devider no-mg"></li>
+                                <li><a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                        <!-- Dropdown dưới là khi user đã login -->
+                        <!--
+                        <div class="child-box big">
+                            <ul>
+                                <li><a class="highlight">Schedule</a></li>
+                                <li><a class="highlight">Reward points</a></li>
+                                <li class="devider"></li>
+                                <li><a>Profile</a></li>
+                                <li><a>Log out</a></li>
+                            </ul>
+                        </div>
+                        -->
+                    </li>
+                    <li class="lang">
+                        <a><img src="dist/images/en-flag.png" alt="img"/></a>
+                        <div class="child-box">
+                            <ul>
+                                <li class="active"><a>English</a></li>
+                                <li class="devider no-mg"></li>
+                                <li><a>Tiếng Việt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- /.top-links -->
+                <!-- /.menu -->
                 <h3>Categories</h3>
                 <div class="popular-links">
-                    <h4><a>Deals</a></h4>
-                    <h4><a>Popular</a></h4>
-                    <h4><a>Recently Viewed</a></h4>
+                   <h4><a>Deals</a></h4>
+                   <h4><a>Popular</a></h4>
+                   <h4><a>Recently Viewed</a></h4>
                 </div>
                 <ul class="cat-menu-details">
                     <li class="has-child">
@@ -336,75 +373,75 @@
         <!-- /.logo -->
         <ul class="menu">
             <li>
-                <a><span class="glass-icon"></span>Menu</a>
+                <a><span class="glass-icon"></span><span class="text">Menu</span></a>
             </li>
             <li>
-                <a href="index.html#pick-coffee" class="scroll"><span class="calendar-icon"></span>Schedule</a>
+                <a href="index.html#pick-coffee" class="scroll"><span class="calendar-icon"></span><span class="text">Schedule</span></a>
             </li>
             <li class="cart-menu">
-                <a><span class="cart-icon" data-value="10"></span>Your cart</a>
+                <a><span class="cart-icon" data-value="10"></span><span class="text">Your cart</span></a>
                 <div class="cart-box">
                     <div class="table-responsive">
                         <table class="table checkout-table">
                             <tbody>
-                            <tr>
-                                <td><h3>Cart</h3></td>
-                                <td><a class="more-link">Drink more</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
-                                </td>
-                                <td>Std.size Cookie, Strawberry...</td>
-                                <td>
-                                    <div class="wrap-quantity">
-                                        <span class="plus-icon"><i class="fa fa-plus"></i></span>
-                                        <input class="onlynumber" type="text" value="5" maxlength="2" />
-                                        <span class="minus-icon"><i class="fa fa-minus"></i></span>
-                                    </div>
-                                </td>
-                                <td class="text-center">50.000 VNĐ</td>
-                                <td class="text-right">
-                                    <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
-                                </td>
-                                <td>Std.size Cookie, Strawberry...</td>
-                                <td>
-                                    <div class="wrap-quantity">
-                                        <span class="plus-icon"><i class="fa fa-plus"></i></span>
-                                        <input class="onlynumber" type="text" value="5" maxlength="2" />
-                                        <span class="minus-icon"><i class="fa fa-minus"></i></span>
-                                    </div>
-                                </td>
-                                <td class="text-center">50.000 VNĐ</td>
-                                <td class="text-right">
-                                    <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
-                                </td>
-                                <td>Std.size Cookie, Strawberry...</td>
-                                <td>
-                                    <div class="wrap-quantity">
-                                        <span class="plus-icon"><i class="fa fa-plus"></i></span>
-                                        <input class="onlynumber" type="text" value="5" maxlength="2" />
-                                        <span class="minus-icon"><i class="fa fa-minus"></i></span>
-                                    </div>
-                                </td>
-                                <td class="text-center">50.000 VNĐ</td>
-                                <td class="text-right">
-                                    <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td><h3>Cart</h3></td>
+                                    <td><a class="more-link">Drink more</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                    </td>
+                                    <td>Std.size Cookie, Strawberry...</td>
+                                    <td>
+                                        <div class="wrap-quantity">
+                                            <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                            <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                            <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">50.000 VNĐ</td>
+                                    <td class="text-right">
+                                        <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                    </td>
+                                    <td>Std.size Cookie, Strawberry...</td>
+                                    <td>
+                                        <div class="wrap-quantity">
+                                            <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                            <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                            <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">50.000 VNĐ</td>
+                                    <td class="text-right">
+                                        <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                    </td>
+                                    <td>Std.size Cookie, Strawberry...</td>
+                                    <td>
+                                        <div class="wrap-quantity">
+                                            <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                            <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                            <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">50.000 VNĐ</td>
+                                    <td class="text-right">
+                                        <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
