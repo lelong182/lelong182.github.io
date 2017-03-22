@@ -129,10 +129,10 @@
             </div>
             <div class="modal-body">
                 <div class="row mgb-5">
-                    <div class="col-xs-4">
+                    <div class="col-xs-7 col-sm-5">
                         <span class="title">Xử lý đơn hàng:</span>
                     </div>
-                    <div class="col-xs-8 star-wrapper">
+                    <div class="col-xs-5 col-sm-7 star-wrapper">
                         <i class="star star1 star-yellow"></i>
                         <i class="star star2 star-yellow"></i>
                         <i class="star star3 star-yellow"></i>
@@ -141,10 +141,10 @@
                     </div>
                 </div>
                 <div class="row mgb-5">
-                    <div class="col-xs-4">
+                    <div class="col-xs-7 col-sm-5">
                         <span class="title">Thời gian giao hàng:</span>
                     </div>
-                    <div class="col-xs-8 star-wrapper">
+                    <div class="col-xs-5 col-sm-7 star-wrapper">
                         <i class="star star1 star-yellow"></i>
                         <i class="star star2 star-yellow"></i>
                         <i class="star star3 star-yellow"></i>
@@ -153,10 +153,10 @@
                     </div>
                 </div>
                 <div class="row mgb-5">
-                    <div class="col-xs-4">
+                    <div class="col-xs-7 col-sm-5">
                         <span class="title">Phong cách giao hàng:</span>
                     </div>
-                    <div class="col-xs-8 star-wrapper">
+                    <div class="col-xs-5 col-sm-7 star-wrapper">
                         <i class="star star1 star-yellow"></i>
                         <i class="star star2 star-yellow"></i>
                         <i class="star star3 star-yellow"></i>
@@ -165,10 +165,10 @@
                     </div>
                 </div>
                 <div class="row mgb-15">
-                    <div class="col-xs-4">
+                    <div class="col-xs-7 col-sm-5">
                         <span class="title">Chất lượng món nước:</span>
                     </div>
-                    <div class="col-xs-8 star-wrapper">
+                    <div class="col-xs-5 col-sm-7 star-wrapper">
                         <i class="star star1 star-yellow"></i>
                         <i class="star star2 star-yellow"></i>
                         <i class="star star3 star-yellow"></i>
@@ -182,6 +182,10 @@
                         </textarea>
                     </div>
                 </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-send">Lưu</button>
+                <button type="button" class="btn btn-cacel" data-dismiss="modal">Hủy</button>
             </div>
         </div>
     </div>
@@ -314,7 +318,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-6 btn-control">
-                        <a class="btn-send-order">
+                        <a class="btn-send-order" data-toggle="modal" data-target=".send-order-email-modal">
                             <span class="icon"></span>
                             <span class="text">Gởi hóa đơn</span>
                         </a>
@@ -725,9 +729,9 @@
                                                 <span class="date">13/12/2016</span>
                                             </td>
                                             <td class="td-name">
-                                                <span class="code1">Mã:123456 <i></i></span>
+                                                <span class="code1">Mã:123456 <i title="Thanh toán trực tuyến"></i></span>
                                                 <a>
-                                                    <span class="name">Cold-brewed coffee <i class="edit-icon" data-toggle="modal" data-target=".edit-order-name-modal"></i>
+                                                    <span class="name" data-toggle="modal" data-target=".edit-order-name-modal">Cold-brewed coffee <i class="edit-icon"></i>
                                                 </a>
                                             </td>
                                             <td>
@@ -741,10 +745,10 @@
                                             <td>2 ly</td>
                                             <td>16.000đ</td>
                                             <td class="btn-control">
-                                                <a class="reviewed" data-toggle="modal" data-target=".review-order-modal"></a>
-                                                <a class="btn2"></a>
-                                                <a class="btn3" data-toggle="modal" data-target=".send-order-email-modal"></a>
-                                                <a class="btn4" data-toggle="modal" data-target=".download-order-modal"></a>
+                                                <a class="no-review" title="Review đơn hàng" data-toggle="modal" data-target=".review-order-modal"></a>
+                                                <a class="btn2" title="Tạo đơn hàng tương tự"></a>
+                                                <a class="btn3" title=" Gửi email hóa đơn" data-toggle="modal" data-target=".send-order-email-modal"></a>
+                                                <a class="btn4" title="Tải hóa đơn" data-toggle="modal" data-target=".download-order-modal"></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -753,9 +757,9 @@
                                                 <span class="date">13/12/2016</span>
                                             </td>
                                             <td class="td-name">
-                                                <span class="code1">Mã:123456 <i></i></span>
+                                                <span class="code2">Mã:123456 <i title="Thanh toán tiền mặt"></i></span>
                                                 <a>
-                                                    <span class="name">Cold-brewed coffee <i class="edit-icon" data-toggle="modal" data-target=".edit-order-name-modal"></i>
+                                                    <span class="name" data-toggle="modal" data-target=".edit-order-name-modal">Cold-brewed coffee <i class="edit-icon"></i>
                                                 </a>
                                             </td>
                                             <td>
@@ -769,10 +773,10 @@
                                             <td>2 ly</td>
                                             <td>16.000đ</td>
                                             <td class="btn-control">
-                                                <a class="reviewed" data-toggle="modal" data-target=".review-order-modal"></a>
-                                                <a class="btn2"></a>
-                                                <a class="btn3" data-toggle="modal" data-target=".send-order-email-modal"></a>
-                                                <a class="btn4" data-toggle="modal" data-target=".download-order-modal"></a>
+                                                <a class="reviewed" title="Đơn hàng đã được review" data-toggle="modal" data-target=".review-order-modal"></a>
+                                                <a class="btn2" title="Tạo đơn hàng tương tự"></a>
+                                                <a class="btn3" title=" Gửi email hóa đơn" data-toggle="modal" data-target=".send-order-email-modal"></a>
+                                                <a class="btn4" title="Tải hóa đơn" data-toggle="modal" data-target=".download-order-modal"></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -781,9 +785,9 @@
                                                 <span class="date">13/12/2016</span>
                                             </td>
                                             <td class="td-name">
-                                                <span class="code1">Mã:123456 <i></i></span>
+                                                <span class="code1">Mã:123456 <i title="Thanh toán trực tuyến"></i></span>
                                                 <a>
-                                                    <span class="name">Cold-brewed coffee <i class="edit-icon" data-toggle="modal" data-target=".edit-order-name-modal"></i>
+                                                    <span class="name" data-toggle="modal" data-target=".edit-order-name-modal">Cold-brewed coffee <i class="edit-icon"></i>
                                                 </a>
                                             </td>
                                             <td>
@@ -797,10 +801,10 @@
                                             <td>2 ly</td>
                                             <td>16.000đ</td>
                                             <td class="btn-control">
-                                                <a class="reviewed" data-toggle="modal" data-target=".review-order-modal"></a>
-                                                <a class="btn2"></a>
-                                                <a class="btn3" data-toggle="modal" data-target=".send-order-email-modal"></a>
-                                                <a class="btn4" data-toggle="modal" data-target=".download-order-modal"></a>
+                                                <a class="reviewed" title="Đơn hàng đã được review" data-toggle="modal" data-target=".review-order-modal"></a>
+                                                <a class="btn2" title="Tạo đơn hàng tương tự"></a>
+                                                <a class="btn3" title=" Gửi email hóa đơn" data-toggle="modal" data-target=".send-order-email-modal"></a>
+                                                <a class="btn4" title="Tải hóa đơn" data-toggle="modal" data-target=".download-order-modal"></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -809,9 +813,9 @@
                                                 <span class="date">13/12/2016</span>
                                             </td>
                                             <td class="td-name">
-                                                <span class="code1">Mã:123456 <i></i></span>
+                                                <span class="code1">Mã:123456 <i title="Thanh toán trực tuyến"></i></span>
                                                 <a>
-                                                    <span class="name">Cold-brewed coffee <i class="edit-icon" data-toggle="modal" data-target=".edit-order-name-modal"></i>
+                                                    <span class="name" data-toggle="modal" data-target=".edit-order-name-modal">Cold-brewed coffee <i class="edit-icon"></i>
                                                 </a>
                                             </td>
                                             <td>
@@ -825,10 +829,10 @@
                                             <td>2 ly</td>
                                             <td>16.000đ</td>
                                             <td class="btn-control">
-                                                <a class="reviewed" data-toggle="modal" data-target=".review-order-modal"></a>
-                                                <a class="btn2"></a>
-                                                <a class="btn3" data-toggle="modal" data-target=".send-order-email-modal"></a>
-                                                <a class="btn4" data-toggle="modal" data-target=".download-order-modal"></a>
+                                                <a class="reviewed" title="Đơn hàng đã được review" data-toggle="modal" data-target=".review-order-modal"></a>
+                                                <a class="btn2" title="Tạo đơn hàng tương tự"></a>
+                                                <a class="btn3" title=" Gửi email hóa đơn" data-toggle="modal" data-target=".send-order-email-modal"></a>
+                                                <a class="btn4" title="Tải hóa đơn" data-toggle="modal" data-target=".download-order-modal"></a>
                                             </td>
                                         </tr>
                                     </tbody>

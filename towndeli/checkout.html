@@ -58,8 +58,8 @@
                     </div>
                     <div class="clearfix mgt-10 mgb-10">
                         <div class="remember-checkbox">
-                            <input type="checkbox" id="send-gift-checkbox" class="css-checkbox" />
-                            <label for="send-gift-checkbox" class="css-label">Ghi nhớ</label>
+                            <input type="checkbox" id="remember-checkbox" class="css-checkbox" />
+                            <label for="remember-checkbox" class="css-label">Ghi nhớ</label>
                         </div>
                         <a class="forgot-password-link">Quên mật khẩu ?</a>
                     </div>
@@ -167,6 +167,270 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade quickview-modal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="quickview-inner">
+                <span class="close-icon" data-dismiss="modal"><img src="dist/images/close-3-icon.png" alt="img" /></span>
+                <div class="row content">
+                    <div class="col-sm-4">
+                        <div class="text-center">
+                            <img src="dist/images/product-img.png" alt="img" class="img-responsive center-block"/>
+                        </div>
+                    </div>
+                    <div class="body col-sm-8">
+                        <div class="quickview-header">
+                            <h4>ESPRESSO</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor indi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            <div class="share-icons">
+                                <a><img src="dist/images/facebook-icon.png" alt="img" /></a>
+                                <a><img src="dist/images/google-plus-icon.png" alt="img" /></a>
+                            </div>
+                        </div>
+                        <div class="quickview-options">
+                            <div class="clearfix">
+                                <ul class="list-size">
+                                    <li><a class="active">STANDARD</a></li>
+                                    <li><a>EXTRA</a></li>
+                                    <li><a>EXTRA-BIG</a></li>
+                                </ul>
+                                <div class="wrap-quantity">
+                                    <label for="quickview-quantity-input">QUANTITY</label>
+                                    <input id="quickview-quantity-input" class="onlynumber" type="text" value="1" />
+                                </div>
+                            </div>
+                            <div class="row mgt-15">
+                                <div class="col-md-12">
+                                    <div class="add-topping-checkbox">
+                                        <input type="checkbox" id="add-topping-checkbox" class="css-checkbox" />
+                                        <label for="add-topping-checkbox" class="css-label">THÊM TOPPING</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row hidden add-topping-content mgt-15">
+                                <div class="col-xs-12">
+                                    <div id="addToppingTabOnProduct" class="add-topping-tab"> 
+                                            <ul  class="nav nav-pills">
+                                                <li class="active">
+                                                    <a  href="#pro-option1" data-toggle="tab">TOPPING</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#pro-option2" data-toggle="tab">THẠCH</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#pro-option3" data-toggle="tab">HƯƠNG</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#pro-option4" data-toggle="tab">FLAN</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#pro-option5" data-toggle="tab">ĐẶC BIỆT</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content clearfix">
+                                                <div class="tab-pane active" id="pro-option1">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option1-topping-checkbox1" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox1" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox2" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox2" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox3" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox3" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox4" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox4" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox5" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox5" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox6" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox6" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option1-topping-checkbox7" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox7" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox8" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox8" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox9" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox9" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox10" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox10" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox11" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox11" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox12" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox12" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option1-topping-checkbox13" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox13" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="topping-checkbox14" class="css-checkbox" />
+                                                                <label for="topping-checkbox14" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox15" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox15" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox16" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox16" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox17" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox17" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                            <div class="topping-checkbox mgt-15">
+                                                                <input type="checkbox" id="option1-topping-checkbox18" class="css-checkbox" />
+                                                                <label for="option1-topping-checkbox18" class="css-label">Mini Taro Ball</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="pro-option2">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option2-topping-checkbox1" class="css-checkbox" />
+                                                                <label for="option2-topping-checkbox1" class="css-label">Thạch option</label>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option2-topping-checkbox2" class="css-checkbox" />
+                                                                <label for="option2-topping-checkbox2" class="css-label">Thạch option</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option2-topping-checkbox3" class="css-checkbox" />
+                                                                <label for="option2-topping-checkbox3" class="css-label">Thạch option</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="pro-option3">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option3-topping-checkbox1" class="css-checkbox" />
+                                                                <label for="topping-checkbox1" class="css-label">Hương option</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option3-topping-checkbox2" class="css-checkbox" />
+                                                                <label for="option3-topping-checkbox2" class="css-label">Hương option</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option3-topping-checkbox3" class="css-checkbox" />
+                                                                <label for="option3-topping-checkbox3" class="css-label">Hương option</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="pro-option4">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option4-topping-checkbox1" class="css-checkbox" />
+                                                                <label for="option4-topping-checkbox1" class="css-label">Flan option</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option4-topping-checkbox2" class="css-checkbox" />
+                                                                <label for="option4-topping-checkbox2" class="css-label">Flan option</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option4-topping-checkbox3" class="css-checkbox" />
+                                                                <label for="option4-topping-checkbox3" class="css-label">Flan option</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="pro-option5">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option5-topping-checkbox1" class="css-checkbox" />
+                                                                <label for="option5-topping-checkbox1" class="css-label">Đặc biệt option</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option5-topping-checkbox2" class="css-checkbox" />
+                                                                <label for="option5-topping-checkbox2" class="css-label">Đặc biệt option</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <div class="topping-checkbox">
+                                                                <input type="checkbox" id="option5-topping-checkbox3" class="css-checkbox" />
+                                                                <label for="option5-topping-checkbox3" class="css-label">Đặc biệt option</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row mgt-15">
+                                <div class="col-md-12">
+                                    <div class="require-checkbox">
+                                        <input type="checkbox" id="require-checkbox" class="css-checkbox" />
+                                        <label for="require-checkbox" class="css-label">YÊU CẦU CHO MÓN</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row hidden require-content mgt-15">
+                                <div class="col-xs-12">
+                                    <textarea class="note" placeholder="Bạn hãy để lại yêu cầu cho món"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="heart-icon"></span>
+                            <ul class="total">
+                                <li>20.000 đ</li>
+                                <li><button class="add-btn"><i class="fa fa-plus"></i></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.quickview-modal -->
 
 <div class="topbar">
     <div class="container">
@@ -537,7 +801,7 @@
                                 </div>
                             </td>
                             <td class="text-center">
-                                <a class="edit-icon"><i class="fa fa-pencil-square-o"></i></a>
+                                <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
                             </td>
                             <td class="text-right">50.000 VNĐ</td>
                         </tr>
@@ -554,7 +818,7 @@
                                 </div>
                             </td>
                             <td class="text-center">
-                                <a class="edit-icon"><i class="fa fa-pencil-square-o"></i></a>
+                                <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
                             </td>
                             <td class="text-right">50.000 VNĐ</td>
                         </tr>
@@ -571,7 +835,7 @@
                                 </div>
                             </td>
                             <td class="text-center">
-                                <a class="edit-icon"><i class="fa fa-pencil-square-o"></i></a>
+                                <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
                             </td>
                             <td class="text-right">50.000 VNĐ</td>
                         </tr>
@@ -593,7 +857,7 @@
                             <td colspan="2" class="text-right">VOUCHER: -50.000 VNĐ</td>
                         </tr>
                         <tr>
-                            <td colspan="5" class="text-right"><strong>TOTAL: 150.000 VNĐ</strong></td>
+                            <td colspan="5" class="text-right total">TOTAL: 150.000 VNĐ</td>
                         </tr>
                     </tbody>
                 </table>

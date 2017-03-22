@@ -7239,6 +7239,12 @@ label.css-label:before {
   padding: 0 10px;
   text-align: center;
 }
+@media (max-width: 350px) {
+  .pagination ul li a,
+  .pagination ul li span {
+    padding: 0 5px;
+  }
+}
 /* ---------------------------------------
     PARALLAX
 ----------------------------------------- */
@@ -10130,11 +10136,16 @@ header.header .top-links li .child-box ul li a.highlight {
   margin-right: 10px;
 }
 .quickview-modal .quickview-inner .content .body .quickview-options .list-size li a {
-  background-color: #02b691;
+  background-color: #fff;
   border-radius: 6px;
-  color: #fff;
+  color: #02b691;
   display: inline-block;
   padding: 8px 14px;
+  border: 1px solid #02b691;
+}
+.quickview-modal .quickview-inner .content .body .quickview-options .list-size li a.active {
+  background-color: #02b691;
+  color: #fff;
 }
 .quickview-modal .quickview-inner .content .body .quickview-options .wrap-quantity {
   float: right;
@@ -10363,6 +10374,9 @@ header.header .top-links li .child-box ul li a.highlight {
   height: 30px;
   padding: 0 10px;
   width: 300px;
+}
+.checkout-table tbody tr .total {
+  font-weight: 700;
 }
 .checkout-table tbody tr td {
   border-top: medium none;
@@ -10787,6 +10801,18 @@ header.header .top-links li .child-box ul li a.highlight {
   font-weight: 900;
   margin: 0;
   text-transform: uppercase;
+}
+.main .wrap-checkout input[type="text"]:-moz-placeholder,
+.main .wrap-checkout textarea:-moz-placeholder {
+  color: #868b8b;
+}
+.main .wrap-checkout input[type="text"]:-ms-input-placeholder,
+.main .wrap-checkout textarea:-ms-input-placeholder {
+  color: #868b8b;
+}
+.main .wrap-checkout input[type="text"]::-webkit-input-placeholder,
+.main .wrap-checkout textarea::-webkit-input-placeholder {
+  color: #868b8b;
 }
 .main .wrap-checkout .wrap-caption-link {
   display: inline-block;
@@ -12170,15 +12196,15 @@ header.header .top-links li .child-box ul li a.highlight {
   padding-right: 20px;
   margin-left: 12px;
 }
-.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .no-review {
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .reviewed {
   width: 20px;
   height: 20px;
   padding-top: 5px;
   padding-right: 20px;
   margin-left: 12px;
-  background: url('../images/no-review.png') no-repeat;
+  background: url('../images/lock.png') no-repeat;
 }
-.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .reviewed {
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .no-review {
   width: 20px;
   height: 20px;
   padding-top: 5px;
@@ -12285,6 +12311,9 @@ header.header .top-links li .child-box ul li a.highlight {
   color: #fff;
   padding: 10px;
   border-bottom: none;
+}
+.main .wrap-schedule .schedule-content .table-responsive .schedule-table thead tr th:nth-child(3) {
+  text-align: center;
 }
 .main .wrap-schedule .schedule-content .table-responsive .schedule-table tbody tr:nth-child(2n) td {
   background-color: #eee;

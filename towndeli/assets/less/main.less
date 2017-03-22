@@ -2859,11 +2859,16 @@ header.header {
                             font-size: 12px;
                             margin-right: 10px;
                             a {
-                                background-color: @main-color;
+                                background-color: #fff;
                                 border-radius: 6px;
-                                color: #fff;
+                                color: @main-color;
                                 display: inline-block;
                                 padding: 8px 14px;
+                                border: 1px solid @main-color;
+                                &.active {
+                                    background-color: @main-color;
+                                    color: #fff;
+                                }
                             }
                         }
                     }
@@ -3114,6 +3119,9 @@ header.header {
                         width: 300px;
                     }
                 }
+            }
+            .total {
+                font-weight: 700;
             }
             td {
                 border-top: medium none;
@@ -3570,6 +3578,17 @@ header.header {
             font-weight: 900;
             margin: 0;
             text-transform: uppercase;
+        }
+        input[type="text"], textarea {
+            &:-moz-placeholder {
+                color: #868b8b;
+            }
+            &:-ms-input-placeholder {
+                color: #868b8b;
+            }
+            &::-webkit-input-placeholder {
+                color: #868b8b;
+            }
         }
         .wrap-caption-link {
             display: inline-block;
@@ -4966,11 +4985,11 @@ header.header {
                                 padding-right: 20px;
                                 margin-left: 12px;
                             }
-                            .no-review {
-                                .btn-action();
-                                background: url('../images/no-review.png') no-repeat;
-                            }
                             .reviewed {
+                                .btn-action();
+                                background: url('../images/lock.png') no-repeat;
+                            }
+                            .no-review {
                                 .btn-action();
                                 background: url('../images/reviewd.png') no-repeat;
                             }
@@ -5066,6 +5085,9 @@ header.header {
                                 color: #fff;
                                 padding: 10px;
                                 border-bottom: none;
+                                &:nth-child(3) {
+                                    text-align: center;
+                                }
                             }
                         }
                     }

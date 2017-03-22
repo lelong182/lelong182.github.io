@@ -397,7 +397,23 @@
         $('.edit-schedule-modal').on('hidden.bs.modal', function(){
             console.log('hidden');
             $('.edit-schedule-modal .custom-select').select2("close");
-        })
+        });
+
+        /* =================================
+         ===  Orther history Page       ====
+         =================================== */
+        $(this).on('click', '.review-order-modal .star-wrapper .star', function () {
+            if ($(this).hasClass('star-yellow')) {
+                $(this).removeClass('star-yellow');
+                $(this).addClass('star-gray');
+            } else {
+                $(this).removeClass('star-gray');
+                $(this).addClass('star-yellow');
+            }
+        });
+        $(this).on('click', '.download-order-modal .btn-send-order', function () {
+            $('.download-order-modal').modal('hide');
+        });
     });
 
 })(window.jQuery);
