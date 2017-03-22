@@ -519,6 +519,7 @@
             .paap-arrow {
                 flex: 1;
                 align-self: center;
+                text-align: center;
                 @media (max-width: @screen-sm-max) {
                     text-align: center;
                 }
@@ -535,7 +536,7 @@
                 }
             }
             .paap-vehicle {
-                flex: 1;
+                flex: 1.5;
                 @media (max-width: @screen-xs-max) {
                     min-width: 50%;
                     padding-top: 6px;
@@ -902,10 +903,20 @@
             font-family: 'CourierNew', sans-serif;
             color: @main-color;
         }
+        input[type="checkbox"] {
+            float: left;
+        }
         label {
             font-size: 18px;
-            color: #0099cc;
+            color: @main-color;
             font-family: 'CourierNew', sans-serif;
+            float: left;
+            width: ~"calc(100% - 21px)";
+            margin-left: 8px;
+            a {
+                color: @main-color;
+                text-decoration: underline;
+            }
         }
     }
     .paap-service {

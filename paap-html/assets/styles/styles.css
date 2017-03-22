@@ -12639,6 +12639,7 @@ label.css-label:before {
 .main .list-paaps .paap-item .paap-arrow {
   flex: 1;
   align-self: center;
+  text-align: center;
 }
 @media (max-width: 1199px) {
   .main .list-paaps .paap-item .paap-arrow {
@@ -12661,7 +12662,7 @@ label.css-label:before {
   }
 }
 .main .list-paaps .paap-item .paap-vehicle {
-  flex: 1;
+  flex: 1.5;
 }
 @media (max-width: 857px) {
   .main .list-paaps .paap-item .paap-vehicle {
@@ -13159,10 +13160,20 @@ label.css-label:before {
   font-family: 'CourierNew', sans-serif;
   color: #0099cc;
 }
+.main .paap-login input[type="checkbox"] {
+  float: left;
+}
 .main .paap-login label {
   font-size: 18px;
   color: #0099cc;
   font-family: 'CourierNew', sans-serif;
+  float: left;
+  width: calc(100% - 21px);
+  margin-left: 8px;
+}
+.main .paap-login label a {
+  color: #0099cc;
+  text-decoration: underline;
 }
 .main .paap-service {
   padding: 50px 0;

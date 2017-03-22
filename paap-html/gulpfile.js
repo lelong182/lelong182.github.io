@@ -76,11 +76,11 @@ gulp.task('watch', function () {
 gulp.task('dev', [
     'css',
     'js',
-    // 'watch'
+    'watch'
 ]);
 
 gulp.task('default', [
     'css',
     'js',
-    'images'
+    // 'images'
 ]);
