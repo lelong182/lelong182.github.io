@@ -1617,12 +1617,14 @@ header.header {
 .edit-schedule-modal {
     text-align: center;
     padding: 0 !important;
-    &:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-right: -4px;
+    @media (min-width: 350px) {
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px;
+        }
     }
     .modal-dialog {
         @media (max-width: 858px) {
@@ -1698,12 +1700,14 @@ header.header {
 .remove-schedule-modal {
     text-align: center;
     padding: 0 !important;
-    &:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-right: -4px;
+    @media (min-width: 350px) {
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px;
+        }
     }
     .modal-dialog {
         @media (max-width: 858px) {
@@ -2809,9 +2813,17 @@ header.header {
             @media (max-width: 860px) {
                 margin-top: 10px;
             }
+            .img {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
             .body {
                 @media (max-width: 860px) {
                     margin-top: 15px;
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
                 }
                 .quickview-header {
                     position: relative;
@@ -4015,34 +4027,27 @@ header.header {
     }
     .wrap-order-successfully {
         background-color: #fedfc0;
-        width: 700px;
+        max-width: 700px;
         margin: 50px auto 100px;
-        padding: 0 30px 20px;
+        padding: 20px;
         overflow: hidden;
-        .img {
-            background: url('../images/order-successfully-bg.png') no-repeat;
-            width: 256px;
-            height: 253px;
-            float: left;
-            margin-right: 30px;
+        img {
+            width: 100%;
+            padding: 15px;
         }
         .text {
-            float: left;
-            width: ~"calc(100% - 286px)";
             text-align: center;
             h2 {
                 color: @main-color;
                 font-size: 29px;
                 font-weight: 700;
                 font-style: italic;
-                margin: 50px 0 20px;
                 text-transform: uppercase;
             }
             h4 {
                 font-size: 16px;
                 font-weight: 700;
                 font-style: italic;
-                margin: 0 0 30px;
                 text-transform: uppercase;
             }
             p {

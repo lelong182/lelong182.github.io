@@ -414,6 +414,19 @@
         $(this).on('click', '.download-order-modal .btn-send-order', function () {
             $('.download-order-modal').modal('hide');
         });
+
+        /* =================================
+         ===  Tracking Page             ====
+         =================================== */
+        $(this).on('click', '.review-modal .star-wrapper .star', function () {
+            if ($(this).hasClass('star-yellow')) {
+                $(this).removeClass('star-yellow');
+                $(this).addClass('star-gray');
+            } else {
+                $(this).removeClass('star-gray');
+                $(this).addClass('star-yellow');
+            }
+        });
     });
 
 })(window.jQuery);
