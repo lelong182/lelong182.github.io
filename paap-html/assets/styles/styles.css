@@ -6629,6 +6629,17 @@ button.close {
   FONTS
 -----------------------------------------*/
 @font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadPro-Regular.eot');
+  src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg'), url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype');
+}
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadPro-Bold.eot');
+  src: url('../fonts/MyriadPro-Bold.woff2') format('woff2'), url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf') format('truetype'), url('../fonts/MyriadPro-Bold.svg#MyriadPro-Bold') format('svg'), url('../fonts/MyriadPro-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+}
+@font-face {
   font-family: 'CourierNew';
   src: url('../fonts/CourierNewPS-BoldMT.eot?#iefix') format('embedded-opentype'), url('../fonts/CourierNewPS-BoldMT.woff') format('woff'), url('../fonts/CourierNewPS-BoldMT.ttf') format('truetype'), url('../fonts/CourierNewPS-BoldMT.svg#CourierNewPS-BoldMT') format('svg');
   font-weight: bold;
@@ -6686,7 +6697,7 @@ body {
   height: 100%;
 }
 body {
-  font-family: 'VNF-ITC', sans-serif;
+  font-family: 'MyriadPro', sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   color: #000;
@@ -11829,9 +11840,9 @@ MAIN STYLES
   border: 1px solid #0099cc;
   border-radius: 5px;
   color: #000;
-  font-size: 18px;
+  font-size: 20px;
   height: 46px;
-  padding: 0 15px;
+  padding: 4px 15px 0;
   transition: all .3s ease 0s;
   width: 100%;
 }
@@ -11845,9 +11856,9 @@ MAIN STYLES
   border: 1px solid #0099cc;
   border-radius: 5px;
   color: #000;
-  font-size: 18px;
+  font-size: 20px;
   height: 200px;
-  padding: 6px 15px;
+  padding: 8px 15px;
   transition: all .3s ease 0s;
   width: 100%;
   resize: none;
@@ -11960,9 +11971,9 @@ label.css-label:before {
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: #000 !important;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 44px !important;
-  padding: 0 42px 0 15px !important;
+  padding: 2px 42px 0 15px !important;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   height: auto !important;
@@ -12333,6 +12344,7 @@ label.css-label:before {
   transition-duration: 0.3s;
   -webkit-transition-property: "box-shadow, transform";
   transition-property: "box-shadow, transform";
+  font-family: 'VNF-ITC', sans-serif;
   background-color: #0099cc;
   border: none;
   height: 45px;
@@ -12364,6 +12376,7 @@ label.css-label:before {
   transition-duration: 0.3s;
   -webkit-transition-property: "box-shadow, transform";
   transition-property: "box-shadow, transform";
+  font-family: 'VNF-ITC', sans-serif;
   background-color: #3cb878;
   border: none;
   height: 45px;
@@ -12503,6 +12516,7 @@ label.css-label:before {
   position: relative;
 }
 .main .list-paaps .paap-header h3 {
+  font-family: 'VNF-ITC', sans-serif;
   color: #0099cc;
   font-size: 18px;
   margin: 0 0 10px;
@@ -12609,7 +12623,7 @@ label.css-label:before {
   display: flex;
   flex-flow: row wrap;
   border-top: 1px solid #959595;
-  padding: 25px 0 40px;
+  padding: 25px 0 35px;
 }
 @media (max-width: 857px) {
   .main .list-paaps .paap-item {
@@ -12630,9 +12644,11 @@ label.css-label:before {
 }
 .main .list-paaps .paap-item .paap-form {
   flex: 2;
+  padding-right: 10px;
 }
 @media (max-width: 857px) {
   .main .list-paaps .paap-item .paap-form {
+    padding-right: 0;
     min-width: 100%;
   }
 }
@@ -12654,9 +12670,11 @@ label.css-label:before {
 }
 .main .list-paaps .paap-item .paap-to {
   flex: 2;
+  padding-right: 10px;
 }
 @media (max-width: 857px) {
   .main .list-paaps .paap-item .paap-to {
+    padding-right: 0;
     min-width: 100%;
     margin-bottom: 15px;
   }
@@ -12708,7 +12726,7 @@ label.css-label:before {
 }
 .main .readmore-paaps {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 .main .readmore-paaps a {
   display: inline-block;
@@ -12722,7 +12740,7 @@ label.css-label:before {
   position: relative;
   overflow: hidden;
   color: #0099cc;
-  font-size: 12px;
+  font-size: 13px;
 }
 .main .readmore-paaps a:before {
   content: "";
@@ -12753,6 +12771,7 @@ label.css-label:before {
   color: #0099cc;
 }
 .main .paap-details h3 {
+  font-family: 'VNF-ITC', sans-serif;
   margin: 0 0 50px;
 }
 .main .paap-details h4 {
@@ -12823,6 +12842,7 @@ label.css-label:before {
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  font-family: 'VNF-ITC', sans-serif;
   display: block;
   text-align: center;
   border: 2px solid #0099cc;
@@ -12877,6 +12897,7 @@ label.css-label:before {
   transition-duration: 0.3s;
   -webkit-transition-property: "box-shadow, transform";
   transition-property: "box-shadow, transform";
+  font-family: 'VNF-ITC', sans-serif;
   display: block;
   text-align: center;
   background-color: #0099cc;
@@ -12910,6 +12931,7 @@ label.css-label:before {
   }
 }
 .main .paap-create h3 {
+  font-family: 'VNF-ITC', sans-serif;
   margin: 0 0 30px;
 }
 .main .paap-create h4 {
@@ -12920,6 +12942,20 @@ label.css-label:before {
   .main .paap-create h4 {
     margin-bottom: 5px;
   }
+}
+.main .paap-create .select2-container--default .select2-selection--single {
+  height: 42px !important;
+}
+.main .paap-create .select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 18px;
+  line-height: 40px !important;
+}
+.main .paap-create .custom-input {
+  font-size: 18px;
+  height: 42px;
+}
+.main .paap-create .custom-textarea {
+  font-size: 18px;
 }
 .main .paap-create .wrap-date {
   width: calc(50% - 5px);
@@ -13084,6 +13120,7 @@ label.css-label:before {
   transition-duration: 0.3s;
   -webkit-transition-property: "box-shadow, transform";
   transition-property: "box-shadow, transform";
+  font-family: 'VNF-ITC', sans-serif;
   background-color: #0099cc;
   border: 1px solid #0099cc;
   color: #fff;
@@ -13104,6 +13141,7 @@ label.css-label:before {
   border-color: #999;
 }
 .main .paap-create .paap-create-footer .cancel-btn {
+  font-family: 'VNF-ITC', sans-serif;
   border: 1px solid #0099cc;
   border-radius: 4px;
   padding: 6px 0;
@@ -13130,7 +13168,7 @@ label.css-label:before {
   border: none;
   color: #fff;
   height: 46px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -13144,7 +13182,7 @@ label.css-label:before {
   border: none;
   width: 100%;
   color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   height: 46px;
   border-radius: 5px;
@@ -13156,8 +13194,6 @@ label.css-label:before {
 }
 .main .paap-login .forget-link {
   font-size: 18px;
-  font-weight: bold;
-  font-family: 'CourierNew', sans-serif;
   color: #0099cc;
 }
 .main .paap-login input[type="checkbox"] {
@@ -13165,8 +13201,8 @@ label.css-label:before {
 }
 .main .paap-login label {
   font-size: 18px;
+  font-weight: normal;
   color: #0099cc;
-  font-family: 'CourierNew', sans-serif;
   float: left;
   width: calc(100% - 21px);
   margin-left: 8px;
@@ -13179,6 +13215,7 @@ label.css-label:before {
   padding: 50px 0;
 }
 .main .paap-service h3 {
+  font-family: 'VNF-ITC', sans-serif;
   margin: 0 0 50px;
 }
 .main .paap-service label[for="service-avatar-input"] {
@@ -13193,6 +13230,7 @@ label.css-label:before {
   visibility: hidden;
 }
 .main .paap-service .add-vehicle-btn {
+  font-family: 'VNF-ITC', sans-serif;
   background-color: #0099cc;
   border: none;
   border-radius: 3px;
@@ -13201,6 +13239,20 @@ label.css-label:before {
 }
 .main .paap-service .add-vehicle-btn[disabled] {
   background-color: #999;
+}
+.main .paap-service .select2-container--default .select2-selection--single {
+  height: 42px !important;
+}
+.main .paap-service .select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 18px;
+  line-height: 40px !important;
+}
+.main .paap-service .custom-input {
+  font-size: 18px;
+  height: 42px;
+}
+.main .paap-service .custom-textarea {
+  font-size: 18px;
 }
 .main .paap-service .form-group {
   display: inline-block;
@@ -13211,13 +13263,15 @@ label.css-label:before {
   min-height: 1px;
   float: left;
 }
+.main .paap-service .form-group .left h4 {
+  margin-top: 12px;
+}
 .main .paap-service .form-group .right {
   float: left;
   width: calc(100% - 200px);
 }
 .main .paap-service .wrap-active-area .wrap-area-chk label {
   font-weight: normal;
-  font-size: 12px;
 }
 .main .paap-service .wrap-active-area .map {
   height: 810px;
@@ -13302,7 +13356,7 @@ footer.footer {
   z-index: 50;
 }
 footer.footer .logo {
-  margin: 2px 0 0;
+  margin: 0;
   float: left;
 }
 @media (max-width: 480px) {

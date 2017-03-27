@@ -274,6 +274,7 @@
         }
         .search-btn {
             .grow-shadow();
+            font-family: 'VNF-ITC', sans-serif;
             background-color: @main-color;
             border: none;
             height: 45px;
@@ -287,6 +288,7 @@
         }
         .create-btn {
             .grow-shadow();
+            font-family: 'VNF-ITC', sans-serif;
             background-color: @second-color;
             border: none;
             height: 45px;
@@ -429,6 +431,7 @@
         .paap-header {
             position: relative;
             h3 {
+                font-family: 'VNF-ITC', sans-serif;
                 color: @main-color;
                 font-size: 18px;
                 margin: 0 0 10px;
@@ -494,7 +497,7 @@
             display: flex;
             flex-flow: row wrap;
             border-top: 1px solid #959595;
-            padding: 25px 0 40px;
+            padding: 25px 0 35px;
             @media (max-width: @screen-xs-max) {
                 padding: 15px 0 20px;
             }
@@ -512,7 +515,9 @@
             }
             .paap-form {
                 flex: 2;
+                padding-right: 10px;
                 @media (max-width: @screen-xs-max) {
+                    padding-right: 0;
                     min-width: 100%;
                 }
             }
@@ -530,7 +535,9 @@
             }
             .paap-to {
                 flex: 2;
+                padding-right: 10px;
                 @media (max-width: @screen-xs-max) {
+                    padding-right: 0;
                     min-width: 100%;
                     margin-bottom: 15px;
                 }
@@ -562,11 +569,11 @@
     }
     .readmore-paaps {
         text-align: center;
-        margin-top: 10px;
+        margin: 10px 0;
         a {
             .underline-from-center(1px, @main-color);
             color: @main-color;
-            font-size: 12px;
+            font-size: 13px;
         }
     }
     .paap-details {
@@ -576,6 +583,7 @@
             color: @main-color;
         }
         h3 {
+            font-family: 'VNF-ITC', sans-serif;
             margin: 0 0 50px;
         }
         h4 {
@@ -631,6 +639,7 @@
             }
             .chat-btn {
                 .rectangle-out(#fff, @main-color, #fff, 2px);
+                font-family: 'VNF-ITC', sans-serif;
                 display: block;
                 text-align: center;
                 border: 2px solid @main-color;
@@ -644,6 +653,7 @@
             }
             .order-btn {
                 .grow-shadow();
+                font-family: 'VNF-ITC', sans-serif;
                 display: block;
                 text-align: center;
                 background-color: @main-color;
@@ -671,6 +681,7 @@
             }
         }
         h3 {
+            font-family: 'VNF-ITC', sans-serif;
             margin: 0 0 30px;
         }
         h4 {
@@ -679,6 +690,22 @@
             @media (max-width: @screen-xs-max) {
                 margin-bottom: 5px;
             }
+        }
+        .select2-container--default {
+            .select2-selection--single {
+                height: 42px !important;
+                .select2-selection__rendered {
+                    font-size: 18px;
+                    line-height: 40px !important;
+                }
+            }
+        }
+        .custom-input {
+            font-size: 18px;
+            height: 42px;
+        }
+        .custom-textarea {
+            font-size: 18px;
         }
         .wrap-date {
             width: ~"calc(50% - 5px)";
@@ -833,6 +860,7 @@
             margin-top: 30px;
             .submit-btn {
                 .grow-shadow();
+                font-family: 'VNF-ITC', sans-serif;
                 background-color: @main-color;
                 border: 1px solid @main-color;
                 color: #fff;
@@ -846,6 +874,7 @@
                 }
             }
             .cancel-btn {
+                font-family: 'VNF-ITC', sans-serif;
                 border: 1px solid @main-color;
                 border-radius: 4px;
                 padding: 6px 0;
@@ -873,7 +902,7 @@
             border: none;
             color: #fff;
             height: 46px;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             border-radius: 5px;
             margin-bottom: 10px;
@@ -887,7 +916,7 @@
             border: none;
             width: 100%;
             color: #fff;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             height: 46px;
             border-radius: 5px;
@@ -899,8 +928,6 @@
         }
         .forget-link {
             font-size: 18px;
-            font-weight: bold;
-            font-family: 'CourierNew', sans-serif;
             color: @main-color;
         }
         input[type="checkbox"] {
@@ -908,8 +935,8 @@
         }
         label {
             font-size: 18px;
+            font-weight: normal;
             color: @main-color;
-            font-family: 'CourierNew', sans-serif;
             float: left;
             width: ~"calc(100% - 21px)";
             margin-left: 8px;
@@ -922,6 +949,7 @@
     .paap-service {
         padding: 50px 0;
         h3 {
+            font-family: 'VNF-ITC', sans-serif;
             margin: 0 0 50px;
         }
         label[for="service-avatar-input"] {
@@ -936,6 +964,7 @@
             visibility: hidden;
         }
         .add-vehicle-btn {
+            font-family: 'VNF-ITC', sans-serif;
             background-color: @main-color;
             border: none;
             border-radius: 3px;
@@ -945,6 +974,22 @@
                 background-color: #999;
             }
         }
+        .select2-container--default {
+            .select2-selection--single {
+                height: 42px !important;
+                .select2-selection__rendered {
+                    font-size: 18px;
+                    line-height: 40px !important;
+                }
+            }
+        }
+        .custom-input {
+            font-size: 18px;
+            height: 42px;
+        }
+        .custom-textarea {
+            font-size: 18px;
+        }
         .form-group {
             display: inline-block;
             width: 100%;
@@ -952,6 +997,9 @@
                 width: 200px;
                 min-height: 1px;
                 float: left;
+                h4 {
+                    margin-top: 12px;
+                }
             }
             .right {
                 float: left;
@@ -962,7 +1010,6 @@
             .wrap-area-chk {
                 label {
                     font-weight: normal;
-                    font-size: 12px;
                 }
             }
             .map {
@@ -1055,7 +1102,7 @@ footer.footer {
     width: 100%;
     z-index: 50;
     .logo {
-        margin: 2px 0 0;
+        margin: 0;
         float: left;
         @media (max-width: @screen-xs-min) {
             float: initial;
