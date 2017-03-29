@@ -504,7 +504,7 @@
             &:nth-child(2n) {
                 background-color: #f3fafc;
             }
-            &:last-of-type {
+            &.last {
                 border-bottom: 1px solid #959595;
             }
             h4 {
@@ -567,13 +567,115 @@
             }
         }
     }
-    .readmore-paaps {
+    .readmore {
         text-align: center;
         margin: 10px 0;
         a {
             .underline-from-center(1px, @main-color);
             color: @main-color;
             font-size: 13px;
+            line-height: 1.1;
+        }
+    }
+    .list-provider-suggestions {
+        margin-bottom: 50px;
+        .provider-header {
+            position: relative;
+            h3 {
+                font-family: 'VNF-ITC', sans-serif;
+                color: @main-color;
+                font-size: 18px;
+                margin: 0 0 10px;
+            }
+        }
+        .provider-item {
+            display: flex;
+            flex-flow: row wrap;
+            border-top: 1px solid #959595;
+            padding: 25px 0 35px;
+            @media (max-width: @screen-xs-max) {
+                padding: 15px 0 20px;
+            }
+            &:nth-child(2n) {
+                background-color: #f3fafc;
+            }
+            &.last {
+                border-bottom: 1px solid #959595;
+            }
+            .highlight {
+                color: @main-color;
+            }
+            h4 {
+                margin: 0 0 10px;
+            }
+            span {
+                color: #646464;
+            }
+            .provider-name {
+                flex: 3;
+                padding-right: 10px;
+                @media (max-width: @screen-xs-max) {
+                    padding-right: 0;
+                    min-width: 100%;
+                }
+            }
+            .provider-route {
+                flex: 1.5;
+                padding-right: 10px;
+                @media (max-width: @screen-xs-max) {
+                    padding-right: 0;
+                    min-width: 100%;
+                    margin-bottom: 15px;
+                }
+            }
+            .provider-discount {
+                flex: 2;
+                @media (max-width: @screen-xs-max) {
+                    min-width: 50%;
+                    padding-top: 6px;
+                }
+                .discount {
+                    background: url('../images/discount-bg.png') no-repeat;
+                    width: 306px;
+                    height: 65px;
+                    position: relative;
+                    .discount-number {
+                        color: #fff;
+                        font-family: "VNF-ITC", sans-serif;
+                        font-size: 22px;
+                        left: 8px;
+                        line-height: 1;
+                        position: absolute;
+                        text-transform: uppercase;
+                        top: 17px;
+                    }
+                    .discount-text {
+                        color: #000;
+                        font-family: "VNF-ITC", sans-serif;
+                        font-size: 12px;
+                        left: 72px;
+                        line-height: 1.1;
+                        position: absolute;
+                        top: 25px;
+                    }
+                }
+            }
+            .provider-details-link {
+                flex: 0.5;
+                min-width: 100px;
+                @media (max-width: @screen-xs-max) {
+                    min-width: 50%;
+                }
+                a {
+                    .grow-shadow();
+                    color: #fff;
+                    background-color: @main-color;
+                    border-radius: 2px;
+                    font-size: 16px;
+                    padding: 5px 15px;
+                    float: right;
+                }
+            }
         }
     }
     .paap-details {
