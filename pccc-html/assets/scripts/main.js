@@ -80,6 +80,9 @@
         mySticky('.left-banner', 160);
         mySticky('.right-banner', 160);
         $('.custom-nav').sticky({topSpacing:0});
+
+        // Main menu
+        $('.main-menu .navbar-collapse .navbar-nav .menu-item-has-children a:not(".sub-menu li a")').append("<span class='caret'></span>");
     });
 
 })(window.jQuery);

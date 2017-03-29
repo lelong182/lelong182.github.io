@@ -84,8 +84,8 @@ gulp.task('dev', [
     'css',
     'js',
     'watch',
-    // 'images',
-    // 'connectDev'
+    'images',
+    'connectDev'
 ]);
 
 gulp.task('default', [
