@@ -7231,7 +7231,7 @@ body p {
   background-color: #F90000 !important;
 }
 .main-menu .custom-nav .container-fluid .navbar-collapse ul li a {
-  padding: 0 6px;
+  padding: 0 5px;
   line-height: 38px;
   font-weight: 600;
   font-size: 11px;
@@ -8355,9 +8355,15 @@ SEARCH RESULT PAGE
   border-color: #dd0000;
   color: #FFF;
 }
+.main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav {
+  float: initial;
+  font-size: 0;
+}
 .main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav li {
   list-style: none;
   position: relative;
+  float: initial;
+  display: inline-block;
 }
 .main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav li a {
   text-transform: uppercase;
