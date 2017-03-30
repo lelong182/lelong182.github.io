@@ -7402,8 +7402,11 @@ body p {
   padding-left: 0;
   padding-right: 0;
 }
+.content-wrapper .main-content .section2 .banner a {
+  width: 100%;
+}
 .content-wrapper .main-content .section2 .banner img {
-  width: inherit;
+  width: 100%;
 }
 .content-wrapper .main-content .section3 {
   padding-top: 10px;
