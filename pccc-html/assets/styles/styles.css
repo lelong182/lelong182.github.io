@@ -7182,6 +7182,12 @@ body p {
 .main-menu {
   position: relative;
 }
+.main-menu .nav .open > a,
+.main-menu .nav .open > a:focus,
+.main-menu .nav .open > a:hover {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
 .main-menu .nav li a:hover {
   background-color: transparent !important;
   color: #fee900 !important;
@@ -7196,6 +7202,16 @@ body p {
   min-height: auto;
   background-color: #F90000;
   z-index: 999 !important;
+}
+@media (min-width: 860px) {
+  .main-menu .custom-nav .container-fluid .navbar-nav {
+    float: initial;
+    font-size: 0;
+  }
+  .main-menu .custom-nav .container-fluid .navbar-nav > li {
+    float: initial;
+    display: inline-block;
+  }
 }
 @media (min-width: 1200px) {
   .main-menu .custom-nav .container-fluid {
@@ -7354,7 +7370,7 @@ body p {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper .main-content .section1 .box .box-content {
   border: 1px solid #ddd;
@@ -7601,7 +7617,7 @@ body p {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper .right-content .box-inform .box .box-content {
   min-height: 362px;
@@ -7660,7 +7676,7 @@ body p {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper .right-content .box-video .box .box-content {
   border: 1px solid #ddd;
@@ -7726,7 +7742,7 @@ body p {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper .right-content .box-link-site .box .box-content {
   border: 1px solid #ddd;
@@ -7754,7 +7770,7 @@ body p {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper .right-content .box-count-viewer .box .box-content {
   border: 1px solid #ddd;
@@ -7781,6 +7797,9 @@ body p {
   padding: 8px;
   font-size: 14px;
   font-weight: 700;
+}
+.main-footer .title a {
+  color: #FFF;
 }
 .main-footer .ms-staff-carousel {
   max-width: 100%;
@@ -7823,7 +7842,7 @@ body p {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper.intro-page .main-content .box .box-content {
   border: 1px solid #ddd;
@@ -7866,7 +7885,7 @@ body p {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper.news-and-events-page .main-content .box .box-content,
 .content-wrapper.knowledge-page .main-content .box .box-content {
@@ -7947,7 +7966,7 @@ body p {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper.documents-page .main-content .box .box-content,
 .content-wrapper.standards-page .main-content .box .box-content {
@@ -8047,7 +8066,7 @@ ADMINISTRATIVE PROCEEDS PAGE
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper.administrative-proceeds-page .main-content .box .box-content {
   border: 1px solid #ddd;
@@ -8125,7 +8144,7 @@ IMAGES GALLERY PAGE
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper.images-gallery-page .main-content .box .box-content {
   border: 1px solid #ddd;
@@ -8141,9 +8160,6 @@ IMAGES GALLERY PAGE
 }
 .content-wrapper.images-gallery-page .main-content .box .box-content .item .title:hover {
   color: red;
-}
-.content-wrapper.images-gallery-page .right-content .box-video {
-  padding-top: 0;
 }
 /* ---------------------------------------
 CONTACT PAGE
@@ -8164,7 +8180,7 @@ CONTACT PAGE
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper.contact-page .main-content .box .box-content {
   border: 1px solid #ddd;
@@ -8209,7 +8225,7 @@ DETAIL PAGE
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper.detail-page .main-content .box .box-content {
   border: 1px solid #ddd;
@@ -8295,7 +8311,7 @@ SEARCH RESULT PAGE
   font-size: 14px;
   line-height: 1.3;
   font-weight: 700;
-  padding-top: 6px;
+  padding: 6px 0;
 }
 .content-wrapper.search-result-page .main-content .box .box-content {
   border: 1px solid #ddd;
@@ -8354,39 +8370,4 @@ SEARCH RESULT PAGE
   background-color: #dd0000;
   border-color: #dd0000;
   color: #FFF;
-}
-.main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav {
-  float: initial;
-  font-size: 0;
-}
-.main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav li {
-  list-style: none;
-  position: relative;
-  float: initial;
-  display: inline-block;
-}
-.main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav li a {
-  text-transform: uppercase;
-  display: block;
-  white-space: nowrap;
-}
-.main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav li.current-menu-item a {
-  color: #fee900;
-}
-.main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav li:hover .sub-menu {
-  top: 100%;
-  display: block;
-  opacity: 1;
-}
-.main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav .sub-menu {
-  position: absolute;
-  top: -100%;
-  left: 0;
-  z-index: 9999;
-  background: red;
-  display: none;
-  opacity: 0;
-}
-.main-menu .custom-nav .container-fluid .navbar-collapse .navbar-nav .sub-menu li a {
-  text-transform: none;
 }

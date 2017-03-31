@@ -160,9 +160,182 @@
                                 <div>levana@gmail.com</div>
                             </div>
                             <a class="chat-btn">CHAT VỚI NGƯỜI TẠO</a>
-                            <a class="order-btn">ĐẶT XE</a>
+                            <a class="order-btn" data-toggle="modal" data-target=".order-modal">ĐẶT XE</a>
                         </div>
                         <!-- /.creator -->
+                    </div>
+                </div>
+                <div class="modal fade order-modal" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-header">
+                            <h3>Đặt Xe</h3>
+                        </div>
+                        <div class="modal-content">
+                            <ul class="nav nav-tabs order-tabs">
+                                <li class="active">
+                                    <a href="#select-providers-tab" data-toggle="tab">
+                                        <span>1</span>
+                                        Chọn nhà xe
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#confirm-info-tab" data-toggle="tab">
+                                        <span>2</span>
+                                        Xác nhận thông tin
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#finish-tab" data-toggle="tab">
+                                        <span>3</span>
+                                        Hoàn tất
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="select-providers-tab">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-6">
+                                            <div class="provider-item">
+                                                <img src="dist/images/provider-img.png" alt="img" />
+                                                <h5>Xe khách ABC</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-6">
+                                            <div class="provider-item">
+                                                <img src="dist/images/provider-img.png" alt="img" />
+                                                <h5>Xe khách ABC</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-6">
+                                            <div class="provider-item">
+                                                <img src="dist/images/provider-img.png" alt="img" />
+                                                <h5>Xe khách ABC</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-6">
+                                            <div class="provider-item">
+                                                <img src="dist/images/provider-img.png" alt="img" />
+                                                <h5>Xe khách ABC</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-6">
+                                            <div class="provider-item">
+                                                <img src="dist/images/provider-img.png" alt="img" />
+                                                <h5>Xe khách ABC</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-6">
+                                            <div class="provider-item">
+                                                <img src="dist/images/provider-img.png" alt="img" />
+                                                <h5>Xe khách ABC</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="confirm-info-tab">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="journey-info">
+                                                <div class="row">
+                                                    <div class="col-sm-3"><h4>Quãng đường</h4></div>
+                                                    <div class="col-sm-9">
+                                                        <span class="highlight">Quận 1, Thành phố Hồ Chí Minh</span>
+                                                        <img class="mgl-10 mgr-10" src="dist/images/arrow-icon-2.png" alt="img" />
+                                                        <span class="highlight">Đà Lạt, Lâm Đồng</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6"><h4>Ngày khởi hành</h4></div>
+                                                            <div class="col-xs-6">04/02/2017</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6"><h4>Thời gian</h4></div>
+                                                            <div class="col-xs-6">4 giờ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6"><h4>Giờ xuất phát</h4></div>
+                                                            <div class="col-xs-6">8:00 SA</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6"><h4>Giờ đến</h4></div>
+                                                            <div class="col-xs-6">12:00 SA</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6"><h4>Phương tiện</h4></div>
+                                                            <div class="col-xs-6">Xe 30 chỗ</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6"><h4>Tình trạng</h4></div>
+                                                            <div class="col-xs-6">Mở</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3"><h4>Mô tả</h4></div>
+                                                    <div class="col-sm-9">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis cumque delectus deleniti deserunt, dignissimos eveniet ex explicabo facere fugit iste maxime possimus quam quis quisquam recusandae repellendus velit voluptatum! Accusantium ad amet commodi consequuntur, corporis cum deserunt dolore eos ipsa minima, optio pariatur placeat quas quibusdam recusandae reprehenderit rerum. Ab ad architecto aut commodi consequuntur delectus eos et ex expedita explicabo incidunt ipsam labore minima molestiae nam optio repellendus saepe sed, totam vero voluptatibus?</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.journey-info -->
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="creator">
+                                                <div class="info-row">
+                                                    <div>Họ tên</div>
+                                                    <div>Nguyễn Văn A</div>
+                                                </div>
+                                                <div class="info-row">
+                                                    <div>Số điện thoại</div>
+                                                    <div>0909090909</div>
+                                                </div>
+                                                <div class="info-row">
+                                                    <div>Email</div>
+                                                    <div>levana@gmail.com</div>
+                                                </div>
+                                                <div class="info-row">
+                                                    <div>Nhà xe</div>
+                                                    <div>Phương Trang - Futabus</div>
+                                                </div>
+                                                <div class="info-row">
+                                                    <div>Mã giảm giá</div>
+                                                    <div>
+                                                        <input class="custom-input" type="text" />
+                                                    </div>
+                                                </div>
+                                                <button class="next-btn mgb-15">Tiếp tục</button>
+                                                <button class="prev-btn">Thay đổi nhà xe</button>
+                                            </div>
+                                            <!-- /.creator -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="finish-tab">
+                                    <div class="wrap-finish">
+                                        <img class="icon" src="dist/images/big-check-icon.png" alt="img" />
+                                        <h4>Đặt xe thành công</h4>
+                                        <h4>Vui lòng theo dõi email và trang cá nhân để xem tình trạng của xe đã đặt</h4>
+                                        <button class="back-btn">Trở về trang chủ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

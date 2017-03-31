@@ -728,16 +728,34 @@
             @media (max-width: @screen-md-max) {
                 padding-left: 0;
             }
+            h4 {
+                font-family: 'VNF-ITC', sans-serif;
+                margin-top: 10px;
+            }
             .media {
                 margin: 0 0 25px;
                 .media-left {
                     padding-right: 30px;
+                    img {
+                        width: 90px;
+                        border-radius: 50%;
+                    }
                 }
             }
             .info-row {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 25px;
+            }
+            .login-btn {
+                .grow-shadow();
+                font-family: 'VNF-ITC', sans-serif;
+                display: block;
+                text-align: center;
+                background-color: @main-color;
+                color: #fff;
+                border-radius: 5px;
+                padding: 4px 0;
             }
             .chat-btn {
                 .rectangle-out(#fff, @main-color, #fff, 2px);
@@ -764,6 +782,152 @@
                 padding: 4px 0;
                 &[disabled] {
                     background-color: #999;
+                }
+            }
+            .next-btn {
+                .grow-shadow();
+                font-family: 'VNF-ITC', sans-serif;
+                width: 100%;
+                border: none;
+                background-color: @main-color;
+                color: #fff;
+                border-radius: 5px;
+                padding: 6px 0;
+                &[disabled] {
+                    background-color: #999;
+                }
+            }
+            .prev-btn {
+                .rectangle-out(#fff, @main-color, #fff, 2px);
+                font-family: 'VNF-ITC', sans-serif;
+                width: 100%;
+                border: none;
+                border: 2px solid @main-color;
+                color: @main-color;
+                border-radius: 5px;
+                padding: 4px 0;
+                &[disabled] {
+                    background-color: #999;
+                }
+            }
+        }
+        .order-modal {
+            &.modal {
+                text-align: center;
+                padding: 0 !important;
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    height: 100%;
+                    vertical-align: middle;
+                    margin-right: -4px;
+                }
+                .modal-dialog {
+                    display: inline-block;
+                    text-align: left;
+                    vertical-align: middle;
+                    .modal-header {
+                        background-color: @main-color;
+                        min-height: initial;
+                        padding: 15px 40px;
+                        h3 {
+                            font-size: 20px;
+                            margin: 0;
+                            color: #fff;
+                        }
+                    }
+                    .modal-content {
+                        border: none;
+                        box-shadow: none;
+                        padding: 15px 40px;
+                        .order-tabs {
+                            border-bottom: none;
+                            font-size: 0;
+                            text-align: center;
+                            margin-bottom: 30px;
+                            li {
+                                display: inline-block;
+                                float: initial;
+                                margin: 0 3px;
+                                &.active {
+                                    a {
+                                        background-color: @main-color;
+                                    }
+                                }
+                                a {
+                                    font-family: 'VNF-ITC', sans-serif;
+                                    background-color: #9d9d9d;
+                                    border: none;
+                                    border-radius: 5px;
+                                    color: #fff;
+                                    font-size: 12px;
+                                    line-height: 1;
+                                    margin-right: 0;
+                                    padding: 20px 0;
+                                    text-transform: uppercase;
+                                    width: 200px;
+                                }
+                            }
+                        }
+                        .provider-item {
+                            margin-bottom: 15px;
+                            padding: 0 20px;
+                            img {
+                                border: 1px solid #09c;
+                                border-radius: 5px;
+                                height: 150px;
+                                object-fit: cover;
+                                width: 100%;
+                                cursor: pointer;
+                            }
+                            h5 {
+                                font-family: 'VNF-ITC', sans-serif;
+                                font-size: 18px;
+                                margin: 13px 0 0;
+                                text-align: center;
+                            }
+                        }
+                        .creator {
+                            padding-left: 0;
+                            .info-row {
+                                display: inline-block;
+                                margin-bottom: 15px;
+                                > div {
+                                    &:nth-child(1) {
+                                        width: 120px;
+                                        float: left;
+                                    }
+                                    &:nth-child(2) {
+                                        width: 200px;
+                                        float: left;
+                                    }
+                                }
+                                .custom-input {
+                                    font-size: 18px;
+                                    height: 34px;
+                                    margin-top: -5px;
+                                    padding: 0 10px;
+                                }
+                            }
+                        }
+                        .wrap-finish {
+                            text-align: center;
+                            h4 {
+                                font-family: 'VNF-ITC', sans-serif;
+                            }
+                            .back-btn {
+                                .grow-shadow();
+                                font-family: 'VNF-ITC', sans-serif;
+                                width: 300px;
+                                border: none;
+                                background-color: @fourth-color;
+                                color: #fff;
+                                border-radius: 5px;
+                                padding: 6px 0;
+                            }
+                        }
+                    }
                 }
             }
         }
