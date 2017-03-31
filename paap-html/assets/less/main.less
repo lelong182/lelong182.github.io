@@ -864,9 +864,25 @@
                                     font-size: 12px;
                                     line-height: 1;
                                     margin-right: 0;
-                                    padding: 20px 0;
+                                    padding: 19px 0 19px 30px;
                                     text-transform: uppercase;
-                                    width: 200px;
+                                    width: 260px;
+                                    span {
+                                        font-size: 24px;
+                                        left: 15px;
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        &:before {
+                                            background: url('../images/order-arrow.png') no-repeat;
+                                            content: "";
+                                            height: 51px;
+                                            left: 25px;
+                                            position: absolute;
+                                            top: -10px;
+                                            width: 14px;
+                                        }
+                                    }
                                 }
                             }
                         }

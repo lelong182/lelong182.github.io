@@ -13223,9 +13223,25 @@ label.css-label:before {
   font-size: 12px;
   line-height: 1;
   margin-right: 0;
-  padding: 20px 0;
+  padding: 19px 0 19px 30px;
   text-transform: uppercase;
-  width: 200px;
+  width: 260px;
+}
+.main .paap-details .order-modal.modal .modal-dialog .modal-content .order-tabs li a span {
+  font-size: 24px;
+  left: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main .paap-details .order-modal.modal .modal-dialog .modal-content .order-tabs li a span:before {
+  background: url('../images/order-arrow.png') no-repeat;
+  content: "";
+  height: 51px;
+  left: 25px;
+  position: absolute;
+  top: -10px;
+  width: 14px;
 }
 .main .paap-details .order-modal.modal .modal-dialog .modal-content .provider-item {
   margin-bottom: 15px;
