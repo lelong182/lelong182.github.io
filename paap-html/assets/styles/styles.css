@@ -13050,6 +13050,15 @@ label.css-label:before {
 .main .paap-details .creator .chat-btn[disabled] {
   background-color: #999;
 }
+.main .paap-details .creator .ordered-btn {
+  font-family: 'VNF-ITC', sans-serif;
+  display: block;
+  text-align: center;
+  background-color: #00a651;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px 0;
+}
 .main .paap-details .creator .order-btn {
   display: inline-block;
   vertical-align: middle;
