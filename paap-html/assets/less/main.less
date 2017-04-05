@@ -1381,6 +1381,33 @@
     }
     .paap-personal {
         padding: 80px 0;
+        .main-tabs {
+            border-color: #898989;
+            margin-bottom: 20px;
+            li {
+                &.active {
+                    a {
+                        border-color: #898989 #898989 transparent;
+                        border-style: solid;
+                        border-width: 1px;
+                        color: #000;
+                    }
+                }
+                a {
+                    border: none;
+                    border-radius: 0;
+                    color: #0099cc;
+                    font-family: "VNF-ITC", sans-serif;
+                    font-size: 18px;
+                    margin-right: 0;
+                    padding: 17px 45px;
+
+                    &:hover {
+                        background-color: #f7f7f7;
+                    }
+                }
+            }
+        }
         .info-box {
             border: 1px solid #898989;
             border-radius: 9px;
@@ -1425,6 +1452,141 @@
                     padding: 17px 0;
                     img {
                         margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .update-profile {
+            padding: 0 50px;
+            .form-group {
+                display: inline-block;
+                width: 100%;
+                .left {
+                    float: left;
+                    min-height: 1px;
+                    width: 250px;
+                }
+                .right {
+                    float: left;
+                    width: ~"calc(100% - 250px)";
+                }
+            }
+            label {
+                font-size: 18px;
+                font-weight: normal;
+                margin: 8px 0 0;
+            }
+            .custom-input {
+                font-size: 16px;
+                height: 40px;
+                padding: 2px 12px 0;
+            }
+            .update-btn {
+                .grow-shadow();
+                background-color: @main-color;
+                border: none;
+                color: #fff;
+                font-size: 18px;
+                text-transform: uppercase;
+                padding: 7px 25px 5px;
+                border-radius: 5px;
+                &[disabled] {
+                    background-color: #999;
+                }
+            }
+        }
+        .list-ordered {
+            .paap-item {
+                display: flex;
+                padding: 18px 50px 15px;
+                &:nth-child(2n - 1) {
+                    background-color: #e5f5fa;
+                }
+                h4 {
+                    margin: 0;
+                    color: @main-color;
+                }
+                span {
+                    color: #646464;
+                }
+                .paap-item-content {
+                    flex: 5;
+                    display: flex;
+                    flex-flow: row wrap;
+                }
+                .paap-item-info {
+                    flex: 1;
+                }
+                .paap-form {
+                    flex: 2;
+                    padding-right: 10px;
+                    margin-bottom: 10px;
+                    @media (max-width: @screen-xs-max) {
+                        padding-right: 0;
+                        min-width: 100%;
+                    }
+                }
+                .paap-arrow {
+                    flex: 1;
+                    align-self: center;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    @media (max-width: @screen-sm-max) {
+                        text-align: center;
+                    }
+                    @media (max-width: @screen-xs-max) {
+                        text-align: left;
+                        margin: 12px 0;
+                    }
+                }
+                .paap-to {
+                    flex: 2;
+                    page-break-after: always;
+                    padding-right: 10px;
+                    margin-bottom: 10px;
+                    @media (max-width: @screen-xs-max) {
+                        padding-right: 0;
+                        min-width: 100%;
+                        margin-bottom: 15px;
+                    }
+                }
+                .paap-more-info {
+                    display: flex;
+                    font-size: 13px;
+                    margin-bottom: 5px;
+                    width: 45%;
+                    &.break {
+                        page-break-after: always;
+                    }
+                    .left {
+                        flex: 1;
+                    }
+                    .right {
+                        flex: 1.5;
+                    }
+                    .open-status {
+                        color: @third-color;
+                    }
+                    .close-status {
+                        color: #ff0000;
+                    }
+                }
+                .paap-time {
+                    font-size: 16px;
+                    color: #000;
+                    line-height: 1.2;
+                }
+                .paap-action {
+                    margin-top: 15px;
+                    text-align: center;
+                    a {
+                        .grow-shadow();
+                        background-color: #f2651c;
+                        border: none;
+                        color: #fff;
+                        font-size: 18px;
+                        border-radius: 3px;
+                        padding: 4px 20px 2px;
                     }
                 }
             }
