@@ -8743,7 +8743,7 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .download-order-modal .modal-header {
   background-color: #ffffff;
-  min-height: 10px !important;
+  min-height: 30px !important;
 }
 .download-order-modal .modal-header .close-icon {
   cursor: pointer;
@@ -8884,7 +8884,7 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .edit-schedule-modal .modal-header {
   background-color: #ffffff;
-  min-height: 10px !important;
+  min-height: 30px !important;
 }
 .edit-schedule-modal .modal-header .modal-title {
   text-transform: none;
@@ -8967,7 +8967,7 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .remove-schedule-modal .modal-header {
   background-color: #ffffff;
-  min-height: 10px !important;
+  min-height: 30px !important;
 }
 .remove-schedule-modal .modal-header .close-icon {
   cursor: pointer;
@@ -9634,6 +9634,7 @@ header.header .top-links li .child-box ul li a.highlight {
 .testimonial p {
   font-size: 24px;
   line-height: 1.2;
+  margin: 0 35px;
 }
 @media (max-width: 1399px) {
   .testimonial p {
@@ -9806,13 +9807,15 @@ header.header .top-links li .child-box ul li a.highlight {
   float: right;
   padding-top: 7px;
 }
+.social-section .get-email .row div {
+  text-align: center;
+}
 @media (max-width: 857px) {
   .social-section .get-email {
     float: initial;
   }
 }
 .social-section .get-email label {
-  float: left;
   font-size: 13px;
   font-weight: normal;
   margin: 6px 10px 0 0;
@@ -9825,18 +9828,16 @@ header.header .top-links li .child-box ul li a.highlight {
 .social-section .get-email input[type="email"] {
   border: 1px solid #ccc;
   border-radius: 4px;
-  float: left;
   font-size: 13px;
   height: 30px;
   margin-right: 10px;
   padding: 0 10px;
-  width: 300px;
+  width: 100%;
 }
 @media (max-width: 857px) {
   .social-section .get-email input[type="email"] {
     height: 30px;
     margin-right: 5px;
-    width: calc(100% - 235px);
   }
 }
 .social-section .get-email .submit-btn {
@@ -9844,11 +9845,10 @@ header.header .top-links li .child-box ul li a.highlight {
   border: none;
   border-radius: 4px;
   color: #fff;
-  float: left;
   font-weight: 700;
   height: 30px;
   letter-spacing: 2px;
-  padding: 0 30px;
+  padding: 7px;
   text-transform: uppercase;
 }
 @media (max-width: 857px) {
@@ -10507,6 +10507,12 @@ header.header .top-links li .child-box ul li a.highlight {
   position: relative;
   padding-top: 20px;
 }
+@media (max-width: 1200px) {
+  .main .wrap-profile .lv-bagde {
+    margin: auto;
+    margin-top: 10px;
+  }
+}
 .main .wrap-profile .lv-bagde strong {
   color: #000;
 }
@@ -10694,19 +10700,8 @@ header.header .top-links li .child-box ul li a.highlight {
 .main .wrap-profile .profile-content .profile-form .wrap-sex {
   width: 150px;
 }
-.main .wrap-profile .profile-content .profile-form .wrap-date {
-  width: 150px;
-  float: left;
-  margin-right: 10px;
-}
-.main .wrap-profile .profile-content .profile-form .wrap-month {
-  width: calc(100% - 320px);
-  float: left;
-  margin-right: 10px;
-}
-.main .wrap-profile .profile-content .profile-form .wrap-year {
-  width: 150px;
-  float: left;
+.main .wrap-profile .profile-content .profile-form .change-password-link {
+  line-height: 36px;
 }
 .main .wrap-profile .profile-content .profile-form .select2-container--default .select2-selection--single {
   border: 2px solid #515252;

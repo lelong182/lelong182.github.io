@@ -364,7 +364,6 @@
             var checkedVal = $(this).val();
 
             if (checkedVal === 'custom') {
-                event.preventDefault();
                 $('.custom-date-select').addClass("open");
                 $('.custom-date-select .text-value').attr("aria-expanded","true");
                 $('.custom-date-select .custom-content').removeClass('hidden');
@@ -379,12 +378,14 @@
             }
         });
 
-        $(this).on('change', '.custom-date-select .date-checkbox input', function () {
+        $(this).on('change', '.custom-date-select .date-checkbox input', function (event) {
+            $('.custom-date-select').addClass("open");
+            $('.custom-date-select .text-value').attr("aria-expanded","true");
             var allCheckboxSelected = $('.custom-date-select .date-checkbox input:checked');
             var selectDate = '';
             for (var i = 0; i < allCheckboxSelected.length; i++) {
                 var dataText = $(allCheckboxSelected[i]).attr('data-text');
-                selectDate = selectDate + dataText + ' ';
+                selectDate = selectDate + dataText + '; ';
             }
 
             $('.custom-date-select .text-value').text(selectDate);
@@ -425,6 +426,19 @@
             } else {
                 $(this).removeClass('star-gray');
                 $(this).addClass('star-yellow');
+            }
+        });
+
+        /* =================================
+         ===  Profile Page             ====
+         =================================== */
+        $(this).on('click', '.wrap-profile .profile-content .change-password-link', function () {
+            var changeProfileElm = $('.wrap-profile .profile-content .change-pass');
+
+            if(changeProfileElm.hasClass("hidden")) {
+                changeProfileElm.removeClass('hidden');
+            } else {
+                changeProfileElm.addClass('hidden');
             }
         });
     });
