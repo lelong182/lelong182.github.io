@@ -558,7 +558,7 @@
                 a {
                     .grow-shadow();
                     color: #fff;
-                    background-color: @third-color;
+                    background-color: @second-color;
                     border-radius: 2px;
                     font-size: 16px;
                     padding: 5px 15px;
@@ -775,7 +775,7 @@
                 font-family: 'VNF-ITC', sans-serif;
                 display: block;
                 text-align: center;
-                background-color: @third-color;
+                background-color: @second-color;
                 color: #fff;
                 border-radius: 5px;
                 padding: 4px 0;
@@ -946,7 +946,7 @@
                                 font-family: 'VNF-ITC', sans-serif;
                                 width: 300px;
                                 border: none;
-                                background-color: @fourth-color;
+                                background-color: @second-color;
                                 color: #fff;
                                 border-radius: 5px;
                                 padding: 6px 0;
@@ -1203,7 +1203,7 @@
             }
         }
         .register-btn {
-            background-color: @third-color;
+            background-color: @second-color;
             border: none;
             width: 100%;
             color: #fff;
@@ -1502,6 +1502,37 @@
                 &:nth-child(2n - 1) {
                     background-color: #e5f5fa;
                 }
+                .paap-location {
+                    flex: 2;
+                    font-size: 0;
+                    h4 {
+                        color: #000;
+                        display: inline-block;
+                        margin: 0;
+                    }
+                    img {
+                        margin: 0 15px;
+                        vertical-align: text-bottom;
+                    }
+                    h5 {
+                        color: @main-color;
+                        font-family: "VNF-ITC",sans-serif;
+                        font-size: 16px;
+                        margin: 10px 0 0;
+                    }
+                }
+                .paap-info {
+                    flex: 1;
+                }
+            }
+        }
+        .list-created {
+            .paap-item {
+                display: flex;
+                padding: 18px 50px 15px;
+                &:nth-child(2n - 1) {
+                    background-color: #e5f5fa;
+                }
                 h4 {
                     margin: 0;
                     color: @main-color;
@@ -1565,10 +1596,10 @@
                         flex: 1.5;
                     }
                     .open-status {
-                        color: @third-color;
+                        color: @second-color;
                     }
                     .close-status {
-                        color: #ff0000;
+                        color: @third-color;
                     }
                 }
                 .paap-time {
@@ -1581,12 +1612,73 @@
                     text-align: center;
                     a {
                         .grow-shadow();
-                        background-color: #f2651c;
+                        background-color: @fourth-color;
                         border: none;
                         color: #fff;
                         font-size: 18px;
                         border-radius: 3px;
                         padding: 4px 20px 2px;
+                    }
+                }
+            }
+        }
+        .list-review {
+            .review-item {
+                padding: 20px 15px 18px;
+                position: relative;
+                &:nth-child(2n-1) {
+                    background-color: #e5f5fa;
+                }
+                .media {
+                    .media-left {
+                        img {
+                            border: 1px solid #ccc;
+                            width: 160px;
+                        }
+                        h5 {
+                            color: #0099cc;
+                            font-family: "VNF-ITC",sans-serif;
+                            margin: 15px 0 0;
+                            text-align: center;
+                        }
+                    }
+                    .media-body {
+                        .review-rating {
+                            color: #e1e1e1;
+                            font-size: 20px;
+                            position: absolute;
+                            right: 15px;
+                            top: 12px;
+                            .active {
+                                color: @main-color;
+                            }
+                        }
+                        .review-location {
+                            font-size: 0;
+                            margin-bottom: 10px;
+                            h4 {
+                                color: #000;
+                                display: inline-block;
+                                margin: 0;
+                            }
+                            img {
+                                margin: 0 15px;
+                                vertical-align: text-bottom;
+                            }
+                        }
+                        .review-content {
+                            font-size: 15px;
+                            line-height: 1.2;
+                            text-align: justify;
+                        }
+                        .review-created {
+                            bottom: 15px;
+                            color: #000;
+                            font-family: "VNF-ITC",sans-serif;
+                            font-size: 13px;
+                            position: absolute;
+                            right: 10px;
+                        }
                     }
                 }
             }

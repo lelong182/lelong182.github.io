@@ -441,6 +441,14 @@
                 changeProfileElm.addClass('hidden');
             }
         });
+
+        $(this).on('click', '.wrap-profile .profile-content .lv-bagde .info-icon', function () {
+            $('.wrap-profile .profile-content .detail-info').css('display', 'block');
+        });
+
+        $(this).on('click', '.wrap-profile .profile-content .detail-info .close-icon', function () {
+            $('.wrap-profile .profile-content .detail-info').css('display', 'none');
+        });
     });
 
 })(window.jQuery);

@@ -12377,7 +12377,7 @@ label.css-label:before {
   -webkit-transition-property: "box-shadow, transform";
   transition-property: "box-shadow, transform";
   font-family: 'VNF-ITC', sans-serif;
-  background-color: #3cb878;
+  background-color: #2ecc71;
   border: none;
   height: 45px;
   width: 100%;
@@ -12711,7 +12711,7 @@ label.css-label:before {
   -webkit-transition-property: "box-shadow, transform";
   transition-property: "box-shadow, transform";
   color: #fff;
-  background-color: #00a651;
+  background-color: #2ecc71;
   border-radius: 2px;
   font-size: 16px;
   padding: 5px 15px;
@@ -13054,7 +13054,7 @@ label.css-label:before {
   font-family: 'VNF-ITC', sans-serif;
   display: block;
   text-align: center;
-  background-color: #00a651;
+  background-color: #2ecc71;
   color: #fff;
   border-radius: 5px;
   padding: 4px 0;
@@ -13313,7 +13313,7 @@ label.css-label:before {
   font-family: 'VNF-ITC', sans-serif;
   width: 300px;
   border: none;
-  background-color: #6ac259;
+  background-color: #2ecc71;
   color: #fff;
   border-radius: 5px;
   padding: 6px 0;
@@ -13588,7 +13588,7 @@ label.css-label:before {
   background-color: #999;
 }
 .main .paap-login .register-btn {
-  background-color: #00a651;
+  background-color: #2ecc71;
   border: none;
   width: 100%;
   color: #fff;
@@ -13890,93 +13890,122 @@ label.css-label:before {
 .main .paap-personal .list-ordered .paap-item:nth-child(2n - 1) {
   background-color: #e5f5fa;
 }
-.main .paap-personal .list-ordered .paap-item h4 {
+.main .paap-personal .list-ordered .paap-item .paap-location {
+  flex: 2;
+  font-size: 0;
+}
+.main .paap-personal .list-ordered .paap-item .paap-location h4 {
+  color: #000;
+  display: inline-block;
+  margin: 0;
+}
+.main .paap-personal .list-ordered .paap-item .paap-location img {
+  margin: 0 15px;
+  vertical-align: text-bottom;
+}
+.main .paap-personal .list-ordered .paap-item .paap-location h5 {
+  color: #0099cc;
+  font-family: "VNF-ITC", sans-serif;
+  font-size: 16px;
+  margin: 10px 0 0;
+}
+.main .paap-personal .list-ordered .paap-item .paap-info {
+  flex: 1;
+}
+.main .paap-personal .list-created .paap-item {
+  display: flex;
+  padding: 18px 50px 15px;
+}
+.main .paap-personal .list-created .paap-item:nth-child(2n - 1) {
+  background-color: #e5f5fa;
+}
+.main .paap-personal .list-created .paap-item h4 {
   margin: 0;
   color: #0099cc;
 }
-.main .paap-personal .list-ordered .paap-item span {
+.main .paap-personal .list-created .paap-item span {
   color: #646464;
 }
-.main .paap-personal .list-ordered .paap-item .paap-item-content {
+.main .paap-personal .list-created .paap-item .paap-item-content {
   flex: 5;
   display: flex;
   flex-flow: row wrap;
 }
-.main .paap-personal .list-ordered .paap-item .paap-item-info {
+.main .paap-personal .list-created .paap-item .paap-item-info {
   flex: 1;
 }
-.main .paap-personal .list-ordered .paap-item .paap-form {
+.main .paap-personal .list-created .paap-item .paap-form {
   flex: 2;
   padding-right: 10px;
   margin-bottom: 10px;
 }
 @media (max-width: 857px) {
-  .main .paap-personal .list-ordered .paap-item .paap-form {
+  .main .paap-personal .list-created .paap-item .paap-form {
     padding-right: 0;
     min-width: 100%;
   }
 }
-.main .paap-personal .list-ordered .paap-item .paap-arrow {
+.main .paap-personal .list-created .paap-item .paap-arrow {
   flex: 1;
   align-self: center;
   text-align: center;
   margin-bottom: 10px;
 }
 @media (max-width: 1199px) {
-  .main .paap-personal .list-ordered .paap-item .paap-arrow {
+  .main .paap-personal .list-created .paap-item .paap-arrow {
     text-align: center;
   }
 }
 @media (max-width: 857px) {
-  .main .paap-personal .list-ordered .paap-item .paap-arrow {
+  .main .paap-personal .list-created .paap-item .paap-arrow {
     text-align: left;
     margin: 12px 0;
   }
 }
-.main .paap-personal .list-ordered .paap-item .paap-to {
+.main .paap-personal .list-created .paap-item .paap-to {
   flex: 2;
   page-break-after: always;
   padding-right: 10px;
   margin-bottom: 10px;
 }
 @media (max-width: 857px) {
-  .main .paap-personal .list-ordered .paap-item .paap-to {
+  .main .paap-personal .list-created .paap-item .paap-to {
     padding-right: 0;
     min-width: 100%;
     margin-bottom: 15px;
   }
 }
-.main .paap-personal .list-ordered .paap-item .paap-more-info {
+.main .paap-personal .list-created .paap-item .paap-more-info {
   display: flex;
   font-size: 13px;
   margin-bottom: 5px;
   width: 45%;
 }
-.main .paap-personal .list-ordered .paap-item .paap-more-info.break {
+.main .paap-personal .list-created .paap-item .paap-more-info.break {
   page-break-after: always;
 }
-.main .paap-personal .list-ordered .paap-item .paap-more-info .left {
+.main .paap-personal .list-created .paap-item .paap-more-info .left {
   flex: 1;
 }
-.main .paap-personal .list-ordered .paap-item .paap-more-info .right {
+.main .paap-personal .list-created .paap-item .paap-more-info .right {
   flex: 1.5;
 }
-.main .paap-personal .list-ordered .paap-item .paap-more-info .open-status {
-  color: #00a651;
+.main .paap-personal .list-created .paap-item .paap-more-info .open-status {
+  color: #2ecc71;
 }
-.main .paap-personal .list-ordered .paap-item .paap-more-info .close-status {
-  color: #ff0000;
+.main .paap-personal .list-created .paap-item .paap-more-info .close-status {
+  color: #e74c3c;
 }
-.main .paap-personal .list-ordered .paap-item .paap-time {
+.main .paap-personal .list-created .paap-item .paap-time {
   font-size: 16px;
   color: #000;
   line-height: 1.2;
 }
-.main .paap-personal .list-ordered .paap-item .paap-action {
+.main .paap-personal .list-created .paap-item .paap-action {
   margin-top: 15px;
   text-align: center;
 }
-.main .paap-personal .list-ordered .paap-item .paap-action a {
+.main .paap-personal .list-created .paap-item .paap-action a {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -13989,19 +14018,72 @@ label.css-label:before {
   transition-duration: 0.3s;
   -webkit-transition-property: "box-shadow, transform";
   transition-property: "box-shadow, transform";
-  background-color: #f2651c;
+  background-color: #e67e22;
   border: none;
   color: #fff;
   font-size: 18px;
   border-radius: 3px;
   padding: 4px 20px 2px;
 }
-.main .paap-personal .list-ordered .paap-item .paap-action a:hover,
-.main .paap-personal .list-ordered .paap-item .paap-action a:focus,
-.main .paap-personal .list-ordered .paap-item .paap-action a:active {
+.main .paap-personal .list-created .paap-item .paap-action a:hover,
+.main .paap-personal .list-created .paap-item .paap-action a:focus,
+.main .paap-personal .list-created .paap-item .paap-action a:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+}
+.main .paap-personal .list-review .review-item {
+  padding: 20px 15px 18px;
+  position: relative;
+}
+.main .paap-personal .list-review .review-item:nth-child(2n-1) {
+  background-color: #e5f5fa;
+}
+.main .paap-personal .list-review .review-item .media .media-left img {
+  border: 1px solid #ccc;
+  width: 160px;
+}
+.main .paap-personal .list-review .review-item .media .media-left h5 {
+  color: #0099cc;
+  font-family: "VNF-ITC", sans-serif;
+  margin: 15px 0 0;
+  text-align: center;
+}
+.main .paap-personal .list-review .review-item .media .media-body .review-rating {
+  color: #e1e1e1;
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 12px;
+}
+.main .paap-personal .list-review .review-item .media .media-body .review-rating .active {
+  color: #0099cc;
+}
+.main .paap-personal .list-review .review-item .media .media-body .review-location {
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.main .paap-personal .list-review .review-item .media .media-body .review-location h4 {
+  color: #000;
+  display: inline-block;
+  margin: 0;
+}
+.main .paap-personal .list-review .review-item .media .media-body .review-location img {
+  margin: 0 15px;
+  vertical-align: text-bottom;
+}
+.main .paap-personal .list-review .review-item .media .media-body .review-content {
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: justify;
+}
+.main .paap-personal .list-review .review-item .media .media-body .review-created {
+  bottom: 15px;
+  color: #000;
+  font-family: "VNF-ITC", sans-serif;
+  font-size: 13px;
+  position: absolute;
+  right: 10px;
 }
 /* ---------------------------------------
     FOOTER

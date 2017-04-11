@@ -3238,7 +3238,8 @@ header.header {
                 margin: auto;
                 margin-top: 10px;
             }
-            width: 260px;
+            // width: 45%;
+            // max-width: 250px;
             background-color: #02b691;
             height: 80px;
             border-radius: 5px;
@@ -3363,6 +3364,12 @@ header.header {
             }
         }
         .profile-content {
+            .content {
+                margin: 10px;
+            }
+            .profile-form-content {
+                margin-top: 10px;
+            }
             border-left: 1px solid #eee;
             padding: 40px 0;
             h3 {
@@ -3380,8 +3387,26 @@ header.header {
                     }
                 }
             }
-            .lv-bagde {
-                margin-bottom: 30px;
+            .detail-info {
+                display: none;
+                padding: 10px;
+                background-color: rgb(245,245,245);
+                @media (max-width: 1200px) {
+                    margin-top: 10px;
+                }
+                .close-icon {
+                    float: right;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                }
+                .header {
+                    color: #02b691;
+                    font-weight: 700;
+                }
+                .row {
+                    margin-bottom: 10px;
+                }
             }
             .wrap-avatar {
                 text-align: center;
