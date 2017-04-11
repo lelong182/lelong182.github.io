@@ -12278,6 +12278,14 @@ label.css-label:before {
     padding-bottom: 20px;
   }
 }
+.hero.style-2 {
+  background-image: url("../images/hero-img-2.jpg");
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.hero.style-2:before {
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .hero.is-search {
   background: none;
   padding: 0;
@@ -12311,6 +12319,12 @@ label.css-label:before {
   .hero .hero-inner {
     margin-left: 0;
   }
+}
+.hero .hero-inner h2 {
+  color: #fff;
+  font-family: "VNF-ITC", sans-serif;
+  margin: 0 0 50px;
+  padding-left: 20px;
 }
 @media (max-width: 480px) {
   .hero .hero-inner .row .col-xs-6 {
@@ -12623,7 +12637,7 @@ label.css-label:before {
   display: flex;
   flex-flow: row wrap;
   border-top: 1px solid #959595;
-  padding: 25px 0 35px;
+  padding: 25px 20px 35px;
 }
 @media (max-width: 857px) {
   .main .list-paaps .paap-item {
@@ -12905,8 +12919,17 @@ label.css-label:before {
   margin: 0 0 50px;
 }
 .main .paap-details h4 {
-  color: #333;
+  color: #444;
   margin: 2px 0 0;
+}
+.main .paap-details .journey-info {
+  color: #000;
+}
+.main .paap-details .journey-info .green-label {
+  color: #27ae60;
+}
+.main .paap-details .journey-info .red-label {
+  color: #e74c3c;
 }
 .main .paap-details .journey-info .row {
   margin-bottom: 30px;
@@ -13232,7 +13255,7 @@ label.css-label:before {
   font-size: 12px;
   line-height: 1;
   margin-right: 0;
-  padding: 19px 0 19px 30px;
+  padding: 18px 0 18px 30px;
   text-transform: uppercase;
   width: 260px;
 }
@@ -13249,7 +13272,7 @@ label.css-label:before {
   height: 51px;
   left: 25px;
   position: absolute;
-  top: -10px;
+  top: -12px;
   width: 14px;
 }
 .main .paap-details .order-modal.modal .modal-dialog .modal-content .provider-item {
@@ -13621,6 +13644,49 @@ label.css-label:before {
   color: #0099cc;
   text-decoration: underline;
 }
+.main .paap-login .privacy-modal.modal {
+  text-align: center;
+  padding: 0 !important;
+}
+.main .paap-login .privacy-modal.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.main .paap-login .privacy-modal.modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.main .paap-login .privacy-modal .modal-header {
+  background-color: #0099cc;
+  min-height: initial;
+  padding: 12px 15px;
+}
+.main .paap-login .privacy-modal .modal-header .close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 7px;
+  top: 7px;
+}
+.main .paap-login .privacy-modal .modal-header h3 {
+  font-family: 'VNF-ITC', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+.main .paap-login .privacy-modal .modal-body {
+  font-size: 16px;
+  color: #000;
+  padding: 10px 15px;
+  max-height: 500px;
+}
+.main .paap-login .privacy-modal .modal-body > h4,
+.main .paap-login .privacy-modal .modal-body > p {
+  margin-bottom: 20px;
+}
 .main .paap-service {
   padding: 50px 0;
 }
@@ -13897,6 +13963,7 @@ label.css-label:before {
 .main .paap-personal .list-ordered .paap-item .paap-location h4 {
   color: #000;
   display: inline-block;
+  font-size: 16px;
   margin: 0;
 }
 .main .paap-personal .list-ordered .paap-item .paap-location img {
@@ -13906,11 +13973,42 @@ label.css-label:before {
 .main .paap-personal .list-ordered .paap-item .paap-location h5 {
   color: #0099cc;
   font-family: "VNF-ITC", sans-serif;
-  font-size: 16px;
-  margin: 10px 0 0;
+  font-size: 18px;
+  margin: 24px 0 0;
 }
 .main .paap-personal .list-ordered .paap-item .paap-info {
   flex: 1;
+  padding: 0 15px;
+}
+.main .paap-personal .list-ordered .paap-item .paap-info .paap-text {
+  font-family: "VNF-ITC", sans-serif;
+  line-height: 1.2;
+  text-align: center;
+  color: #666;
+}
+.main .paap-personal .list-ordered .paap-item .paap-info .paap-status {
+  border-radius: 4px;
+  color: #fff;
+  font-family: "VNF-ITC", sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 3px 0 4px;
+  text-align: center;
+}
+.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.blue-label {
+  background-color: #0099cc;
+}
+.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.green-label {
+  background-color: #2ecc71;
+}
+.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.green-2-label {
+  background-color: #27ae60;
+}
+.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.orange-label {
+  background-color: #e67e22;
+}
+.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.red-label {
+  background-color: #e74c3c;
 }
 .main .paap-personal .list-created .paap-item {
   display: flex;
@@ -14084,6 +14182,223 @@ label.css-label:before {
   font-size: 13px;
   position: absolute;
   right: 10px;
+}
+.main .list-services {
+  padding: 50px 0 40px;
+}
+.main .list-services.style-2 .service-item .service-item-content {
+  margin-left: 400px;
+  padding: 25px 0;
+}
+.main .list-services.style-2 .service-item img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 350px;
+}
+.main .list-services.style-2 .service-item h4 {
+  margin-bottom: 25px;
+  padding-right: 160px;
+}
+.main .list-services.style-2 .service-item .service-rating {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+.main .list-services.style-2 .service-item .desc {
+  height: initial;
+  min-height: 50px;
+  padding-right: 160px;
+  text-align: left;
+}
+.main .list-services.style-2 .service-item .book-btn {
+  position: absolute;
+  right: 30px;
+  top: 100px;
+}
+.main .list-services .service-header {
+  position: relative;
+}
+.main .list-services .service-header h3 {
+  font-family: 'VNF-ITC', sans-serif;
+  color: #000;
+  margin: 0 0 25px;
+  font-size: 24px;
+}
+.main .list-services .service-header .wrap-sort {
+  position: absolute;
+  top: 5px;
+  right: -20px;
+}
+@media (max-width: 1399px) {
+  .main .list-services .service-header .wrap-sort {
+    right: -10px;
+  }
+}
+@media (max-width: 857px) {
+  .main .list-services .service-header .wrap-sort {
+    position: static;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.main .list-services .service-header .wrap-sort h4 {
+  float: left;
+  font-size: 16px;
+  margin: 0 10px;
+  line-height: 20px;
+}
+@media (max-width: 857px) {
+  .main .list-services .service-header .wrap-sort h4 {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .main .list-services .service-header .wrap-sort h4 {
+    float: initial;
+  }
+}
+.main .list-services .service-header .wrap-sort ul {
+  margin-bottom: 0;
+  float: left;
+  font-size: 0;
+  line-height: 1.2;
+}
+@media (max-width: 480px) {
+  .main .list-services .service-header .wrap-sort ul {
+    float: initial;
+  }
+}
+.main .list-services .service-header .wrap-sort ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+@media (max-width: 1399px) {
+  .main .list-services .service-header .wrap-sort ul li {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 480px) {
+  .main .list-services .service-header .wrap-sort ul li:first-child {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .main .list-services .service-header .wrap-sort ul li:last-child {
+    margin-right: 0;
+  }
+}
+.main .list-services .service-header .wrap-sort ul li a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  color: #0099cc;
+}
+.main .list-services .service-header .wrap-sort ul li a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #0099cc;
+  height: 1px;
+  -webkit-transition-property: "left, right";
+  transition-property: "left, right";
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.main .list-services .service-header .wrap-sort ul li a:hover:before,
+.main .list-services .service-header .wrap-sort ul li a:active:before {
+  left: 0;
+  right: 0;
+}
+.main .list-services .service-item {
+  background-color: #fff;
+  border: 1px solid #c5c5c5;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+.main .list-services .service-item:hover {
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.45);
+}
+.main .list-services .service-item .service-item-content {
+  padding: 15px 15px 25px;
+}
+.main .list-services .service-item img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+.main .list-services .service-item h4 {
+  color: #000;
+  font-family: 'VNF-ITC', sans-serif;
+  font-size: 23px;
+  margin: 0 0 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main .list-services .service-item .service-rating {
+  color: #e1e1e1;
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+.main .list-services .service-item .service-rating .active {
+  color: #0099cc;
+}
+.main .list-services .service-item .desc {
+  color: #646464;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 75px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.main .list-services .service-item .book-btn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: "box-shadow, transform";
+  transition-property: "box-shadow, transform";
+  font-family: 'VNF-ITC', sans-serif;
+  background-color: #2ecc71;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 4px 18px 6px;
+}
+.main .list-services .service-item .book-btn:hover,
+.main .list-services .service-item .book-btn:focus,
+.main .list-services .service-item .book-btn:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 /* ---------------------------------------
     FOOTER
