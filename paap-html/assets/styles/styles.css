@@ -12022,6 +12022,58 @@ label.css-label:before {
   background-size: cover;
 }
 /* ---------------------------------------
+    CUSTOM SWEET ALERT 2
+----------------------------------------- */
+.swal2-modal.paap-swal {
+  border-radius: 0;
+  padding-bottom: 20px !important;
+}
+.swal2-modal.paap-swal .swal2-title {
+  background-color: #0099cc;
+  text-align: left;
+  font-size: 20px;
+  font-family: 'VNF-ITC', sans-serif;
+  font-weight: normal;
+  margin: 0;
+  color: #fff;
+  padding: 12px 15px;
+}
+.swal2-modal.paap-swal .swal2-close {
+  background: url('../images/close-icon-3.png') no-repeat;
+  width: 31px;
+  height: 31px;
+  text-indent: -9999px;
+  top: 7px;
+  right: 10px;
+}
+.swal2-modal.paap-swal .swal2-content {
+  padding: 12px 15px;
+  text-align: justify;
+  color: #000;
+  font-weight: normal;
+  line-height: 1.4;
+}
+.swal2-modal.paap-swal .swal2-spacer {
+  margin: 5px 0;
+}
+.swal2-modal.paap-swal .swal2-confirm {
+  background-color: #2ecc71 !important;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 10px;
+  min-width: 100px;
+}
+.swal2-modal.paap-swal .swal2-cancel {
+  background-color: #e74c3c !important;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 10px;
+  min-width: 100px;
+  margin-left: 20px;
+}
+/* ---------------------------------------
     CUSTOM DATEPICKER
 ----------------------------------------- */
 .datepicker.dropdown-menu {
@@ -13761,63 +13813,73 @@ label.css-label:before {
   fill: #0099cc;
 }
 .main .paap-service-details {
-  padding: 50px 0;
+  padding: 80px 0;
+}
+.main .paap-service-details .main-tabs {
+  border-color: #898989;
+  margin-bottom: 20px;
+}
+.main .paap-service-details .main-tabs li.active a {
+  border-color: #898989 #898989 transparent;
+  border-style: solid;
+  border-width: 1px;
+  color: #000;
+}
+.main .paap-service-details .main-tabs li a {
+  border: none;
+  border-radius: 0;
+  color: #0099cc;
+  font-family: "VNF-ITC", sans-serif;
+  font-size: 18px;
+  margin-right: 0;
+  padding: 17px 45px;
+}
+.main .paap-service-details .main-tabs li a:hover {
+  background-color: #f7f7f7;
 }
 .main .paap-service-details .info-box {
-  border-radius: 9px;
   border: 1px solid #898989;
-  text-align: center;
-  color: #2d3e58;
+  border-radius: 9px;
   overflow: hidden;
+  padding: 50px 0 100px;
+  position: relative;
+  text-align: center;
 }
-.main .paap-service-details .info-box .img-container {
-  height: 190px;
-  margin: 50px 0 30px;
+.main .paap-service-details .info-box .avatar {
+  border: 6px solid #c8d5de;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  max-width: 250px;
+  position: relative;
 }
-.main .paap-service-details .info-box .img-container img {
-  height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
-.main .paap-service-details .info-box h4 {
-  font-size: 34px;
+.main .paap-service-details .info-box h3 {
+  color: #2d3e58;
+  font-size: 36px;
   margin: 0 0 15px;
 }
 .main .paap-service-details .info-box p {
-  font-size: 18px;
-  margin-bottom: 0;
-  line-height: 1.1;
-}
-.main .paap-service-details .info-box p.small {
-  font-size: 14px;
   color: #2d3e58;
+  font-family: "VNF-ITC", sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 0;
 }
-.main .paap-service-details .info-box .bottom-box {
+.main .paap-service-details .info-box .footer-box {
   background-color: #2d3e58;
-  padding: 10px 0;
-  margin-top: 15px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
-.main .paap-service-details .service-tabs .nav-tabs {
-  border-color: #898989;
+.main .paap-service-details .info-box .footer-box .review-rating {
+  color: #e1e1e1;
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 12px;
 }
-.main .paap-service-details .service-tabs .nav-tabs li.active a,
-.main .paap-service-details .service-tabs .nav-tabs li:hover a {
-  border-color: #898989 #898989 #fff !important;
-}
-.main .paap-service-details .service-tabs .nav-tabs li a {
-  font-size: 18px;
+.main .paap-service-details .info-box .footer-box .review-rating .active {
   color: #0099cc;
-  border-radius: 0;
-  padding: 15px 50px;
-}
-.main .paap-service-details .service-tabs .nav-tabs li a:hover {
-  background-color: transparent;
-  border-color: transparent;
-}
-.main .paap-service-details .service-tabs .tab-content {
-  color: #646464;
-  font-size: 18px;
-  padding-top: 20px;
 }
 .main .paap-personal {
   padding: 80px 0;
@@ -14034,6 +14096,7 @@ label.css-label:before {
 }
 .main .paap-personal .list-created .paap-item .paap-form {
   flex: 2;
+  min-width: 40%;
   padding-right: 10px;
   margin-bottom: 10px;
 }
@@ -14062,6 +14125,7 @@ label.css-label:before {
 }
 .main .paap-personal .list-created .paap-item .paap-to {
   flex: 2;
+  min-width: 40%;
   page-break-after: always;
   padding-right: 10px;
   margin-bottom: 10px;

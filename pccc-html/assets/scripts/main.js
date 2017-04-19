@@ -30,7 +30,8 @@
              height:500, 
              space:5,
              autoplay: true,
-             fullwidth:true
+             fullwidth:true,
+             loop: true
         });
         slider.control('arrows');
 
@@ -92,7 +93,8 @@
 
         $(window).on('load resize', function() {
             if (Modernizr.mq("screen and (max-width:859px)")) {
-                $('.main-menu .navbar-collapse .navbar-nav > .menu-item > a').click(function(){
+                $('.main-menu .navbar-collapse .navbar-nav > .menu-item-has-children > a').click(function(event){
+                    event.preventDefault();
                     if ($(this).parent().hasClass('open')) {
                         $(this).parent().removeClass('open');
                         $(this).attr('aria-expanded', 'false');
@@ -104,7 +106,7 @@
                 });
             }
             if (Modernizr.mq("screen and (min-width:860px)")) {
-                $('.main-menu .navbar-collapse .navbar-nav > .menu-item > a').click(function(){
+                $('.main-menu .navbar-collapse .navbar-nav > .menu-item-has-children > a').click(function(){
                     return;
                 });
             }
