@@ -138,10 +138,12 @@
     $(this).on('click', '.creator .chat-btn', function () {
       $('.chat-header .up-icon').removeClass().addClass('down-icon');
       $('.popup-chat').addClass('visible open');
+      $('.chat-contents').scrollTop(99999);
     });
     $(this).on('click', '.popup-chat .up-icon', function () {
       $(this).closest('.popup-chat').addClass('open');
       $(this).removeClass().addClass('down-icon');
+      $('.chat-contents').scrollTop(99999);
     });
     $(this).on('click', '.popup-chat .down-icon', function () {
       $(this).closest('.popup-chat').removeClass('open');

@@ -14088,6 +14088,9 @@ label.css-label:before {
   padding: 5px 0 10px;
   text-align: center;
 }
+.main .paap-personal .inbox-clients .inbox-inner {
+  height: 440px;
+}
 .main .paap-personal .inbox-clients .nav-tabs {
   border-bottom: none;
   margin: 0 -10px;
