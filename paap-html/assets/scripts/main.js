@@ -67,28 +67,28 @@
       if (this.checked) {
         switch (id) {
           case 'TBB':
-            handleLand(['VN-01', 'VN-02', 'VN-05', 'VN-06', 'VN-14', 'VN-71'], 'add');
+            handleLand(['VN-36', 'VN-39', 'VN-52', 'VN-63', 'VN-31', 'VN-22'], 'add');
             break;
           case 'DBB':
-            handleLand(['VN-03', 'VN-04', 'VN-07', 'VN-09', 'VN-13', 'VN-53', 'VN-54', 'VN-68', 'VN-69'], 'add');
+            handleLand(['VN-26', 'VN-19', 'VN-60', 'VN-38', 'VN-49', 'VN-10', 'VN-9', 'VN-44', 'VN-55'], 'add');
             break;
           case 'DBSH':
-            handleLand(['VN-15', 'VN-18', 'VN-20', 'VN-56', 'VN-61', 'VN-63', 'VN-66', 'VN-67', 'VN-70', 'VN-HP', 'VN-HN'], 'add');
+            handleLand(['VN-15', 'VN-42', 'VN-54', 'VN-12', 'VN-29', 'VN-27', 'VN-32', 'VN-40', 'VN-62', 'VN-2', 'VN-5'], 'add');
             break;
           case 'BTB':
-            handleLand(['VN-21', 'VN-22', 'VN-23', 'VN-24', 'VN-25', 'VN-26'], 'add');
+            handleLand(['VN-56', 'VN-41', 'VN-28', 'VN-46', 'VN-50', 'VN-57'], 'add');
             break;
           case 'NTB':
-            handleLand(['VN-27', 'VN-29', 'VN-31', 'VN-32', 'VN-34', 'VN-36', 'VN-40', 'VN-DN'], 'add');
+            handleLand(['VN-47', 'VN-48', 'VN-14', 'VN-45', 'VN-33', 'VN-43', 'VN-16', 'VN-4'], 'add');
             break;
           case 'TN':
-            handleLand(['VN-28', 'VN-30', 'VN-33', 'VN-35', 'VN-72'], 'add');
+            handleLand(['VN-35', 'VN-25', 'VN-20', 'VN-37', 'VN-21'], 'add');
             break;
           case 'DNB':
-            handleLand(['VN-37', 'VN-39', 'VN-43', 'VN-57', 'VN-58', 'VN-SG'], 'add');
+            handleLand(['VN-53', 'VN-23', 'VN-7', 'VN-3', 'VN-15', 'VN-1'], 'add');
             break;
           case 'TNB':
-            handleLand(['VN-41', 'VN-44', 'VN-45', 'VN-46', 'VN-47', 'VN-49', 'VN-50', 'VN-51', 'VN-52', 'VN-55', 'VN-59', 'VN-73', 'VN-CT'], 'add');
+            handleLand(['VN-6', 'VN-8', 'VN-24', 'VN-58', 'VN-34', 'VN-61', 'VN-13', 'VN-59', 'VN-51', 'VN-11', 'VN-17', 'VN-30', 'VN-18'], 'add');
             break;
           case 'ALL':
             $(".wrap-active-area .map .land[id^='VN-']").addClass('active');
@@ -99,28 +99,28 @@
       } else {
         switch (id) {
           case 'TBB':
-            handleLand(['VN-01', 'VN-02', 'VN-05', 'VN-06', 'VN-14', 'VN-71'], 'remove');
+            handleLand(['VN-36', 'VN-39', 'VN-52', 'VN-63', 'VN-31', 'VN-22'], 'remove');
             break;
           case 'DBB':
-            handleLand(['VN-03', 'VN-04', 'VN-07', 'VN-09', 'VN-13', 'VN-53', 'VN-54', 'VN-68', 'VN-69'], 'remove');
+            handleLand(['VN-26', 'VN-19', 'VN-60', 'VN-38', 'VN-49', 'VN-10', 'VN-9', 'VN-44', 'VN-55'], 'remove');
             break;
           case 'DBSH':
-            handleLand(['VN-15', 'VN-18', 'VN-20', 'VN-56', 'VN-61', 'VN-63', 'VN-66', 'VN-67', 'VN-70', 'VN-HP', 'VN-HN'], 'remove');
+            handleLand(['VN-15', 'VN-42', 'VN-54', 'VN-12', 'VN-29', 'VN-27', 'VN-32', 'VN-40', 'VN-62', 'VN-2', 'VN-5'], 'remove');
             break;
           case 'BTB':
-            handleLand(['VN-21', 'VN-22', 'VN-23', 'VN-24', 'VN-25', 'VN-26'], 'remove');
+            handleLand(['VN-56', 'VN-41', 'VN-28', 'VN-46', 'VN-50', 'VN-57'], 'remove');
             break;
           case 'NTB':
-            handleLand(['VN-27', 'VN-29', 'VN-31', 'VN-32', 'VN-34', 'VN-36', 'VN-40', 'VN-DN'], 'remove');
+            handleLand(['VN-47', 'VN-48', 'VN-14', 'VN-45', 'VN-33', 'VN-43', 'VN-16', 'VN-4'], 'remove');
             break;
           case 'TN':
-            handleLand(['VN-28', 'VN-30', 'VN-33', 'VN-35', 'VN-72'], 'remove');
+            handleLand(['VN-35', 'VN-25', 'VN-20', 'VN-37', 'VN-21'], 'remove');
             break;
           case 'DNB':
-            handleLand(['VN-37', 'VN-39', 'VN-43', 'VN-57', 'VN-58', 'VN-SG'], 'remove');
+            handleLand(['VN-53', 'VN-23', 'VN-7', 'VN-3', 'VN-15', 'VN-1'], 'remove');
             break;
           case 'TNB':
-            handleLand(['VN-41', 'VN-44', 'VN-45', 'VN-46', 'VN-47', 'VN-49', 'VN-50', 'VN-51', 'VN-52', 'VN-55', 'VN-59', 'VN-73', 'VN-CT'], 'remove');
+            handleLand(['VN-6', 'VN-8', 'VN-24', 'VN-58', 'VN-34', 'VN-61', 'VN-13', 'VN-59', 'VN-51', 'VN-11', 'VN-17', 'VN-30', 'VN-18'], 'remove');
             break;
           case 'ALL':
             $(".wrap-active-area .map .land[id^='VN-']").removeClass('active');

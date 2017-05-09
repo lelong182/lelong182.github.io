@@ -38,6 +38,21 @@
 
 
     /* =================================
+     ===  Create Service - Add more                 ====
+     =================================== */
+    $(this).on('click', '.paap-service .add-coupon-btn', function () {
+      var row_tmp = $('.coupon-row-tmp.hidden').clone();
+      row_tmp.removeClass('hidden');
+      $('.coupon-row-tmp.hidden').after(row_tmp);
+    });
+    $(this).on('click', '.paap-service .add-vehicle-btn', function () {
+      var row_tmp = $('.vehicle-row-tmp.hidden').clone();
+      row_tmp.removeClass('hidden');
+      $('.vehicle-row-tmp.hidden').after(row_tmp);
+    });
+
+
+    /* =================================
      ===  Personal page                 ====
      =================================== */
     $('.paap-personal .main-tabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
