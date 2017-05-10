@@ -96,7 +96,7 @@
         projectGallery2 = $("#gallery-2").unitegallery({
             gallery_theme: "tiles",
             tiles_type: "justified",            //must option for the tiles - justified type
-            tiles_justified_row_height: 500,    //base row height of the justified type
+            tiles_justified_row_height: 300,    //base row height of the justified type
             tiles_justified_space_between: 3,   //space between the tiles justified type
             tiles_set_initial_height: true,     //columns type related only
             tiles_enable_transition: true,      //enable transition when screen width change
