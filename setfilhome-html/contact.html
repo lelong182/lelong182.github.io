@@ -71,13 +71,13 @@
                             <div>
                                 <p>contact@setfilhome.vn</p>
                             </div>
-                            <div>
-                                <img src="dist/images/contact-map.png" alt="">
+                            <div id="map">
+                                
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 right">
                             <div class="input-field col s12">
-                              <input id="name" type="text" class="validate">
+                              <input id="name" type="text" class="">
                               <label for="name">NAME</label>
                             </div>
 
@@ -116,6 +116,20 @@
 <div class="footer">
     <h4 class="copyright">&copy; SETFILHOME. All Rights Reserved</h4>
 </div>
+<script>
+  function initMap() {
+    var uluru = {lat: 10.823099, lng: 106.629664};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+</script>
 <script type="text/javascript" src="dist/scripts/main.js?v=1.1.1"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9YsGjT0YMg7iOHE71N3ZTNDa1SXz54GU&callback=initMap"></script>
 </body>
 </html>

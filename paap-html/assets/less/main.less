@@ -1042,11 +1042,21 @@
       width: 500px;
       z-index: 9999;
       visibility: hidden;
+      @media (max-width:@screen-xs-max) {
+        right: 0;
+      }
+      @media (max-width:@screen-xs-min) {
+        right: -1px;
+        width: ~"calc(100% + 1px)";
+      }
       &.visible {
         visibility: visible;
       }
       &.open {
         bottom: 0;
+        @media (max-width:@screen-xs-min) {
+          bottom: -1px;
+        }
       }
       .chat-header {
         background-color: @main-color;
@@ -2314,6 +2324,17 @@
         border-radius: 4px;
         font-size: 20px;
         padding: 4px 18px 6px;
+      }
+      .edit-btn {
+        .grow-shadow();
+        font-family: 'VNF-ITC', sans-serif;
+        background-color: @main-color;
+        border: none;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 20px;
+        padding: 4px 18px 6px;
+        float: right;
       }
       .order-modal {
         font-size: 18px;

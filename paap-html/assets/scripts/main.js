@@ -33,6 +33,9 @@
           $(this).addClass('opened');
         }
       });
+      $(this).on('click', '.menu > li > a', function () {
+        $('.minimal-menu-button[type="checkbox"]').prop('checked', false);
+      });
     }
 
 
