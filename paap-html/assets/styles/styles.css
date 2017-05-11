@@ -13887,11 +13887,19 @@ label.css-label:before {
   width: 150px;
   height: 150px;
   cursor: pointer;
+  float: left;
 }
 .main .paap-service input[type="file"] {
   position: absolute;
   opacity: 0;
   visibility: hidden;
+}
+.main .paap-service .uploader-review {
+  float: left;
+  width: calc(100% - 165px);
+  margin-left: 15px;
+  padding: 2px;
+  border: 1px solid #bbb;
 }
 .main .paap-service .add-more-btn {
   font-family: 'VNF-ITC', sans-serif;
