@@ -639,6 +639,7 @@
   .readmore {
     text-align: center;
     margin: 10px 0;
+    clear: both;
     a {
       .underline-from-center(1px, @main-color);
       color: @main-color;
@@ -2342,6 +2343,18 @@
         border-radius: 4px;
         font-size: 20px;
         padding: 4px 18px 6px;
+        float: right;
+      }
+      .remove-btn {
+        .grow-shadow();
+        font-family: 'VNF-ITC', sans-serif;
+        background-color: @third-color;
+        border: none;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 20px;
+        padding: 4px 18px 6px;
+        margin-left: 10px;
         float: right;
       }
       .order-modal {

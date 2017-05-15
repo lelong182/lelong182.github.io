@@ -14832,6 +14832,36 @@ label.css-label:before {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
+.main .list-services .service-item .remove-btn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: "box-shadow, transform";
+  transition-property: "box-shadow, transform";
+  font-family: 'VNF-ITC', sans-serif;
+  background-color: #e74c3c;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 4px 18px 6px;
+  margin-left: 10px;
+  float: right;
+}
+.main .list-services .service-item .remove-btn:hover,
+.main .list-services .service-item .remove-btn:focus,
+.main .list-services .service-item .remove-btn:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
 .main .list-services .service-item .order-modal {
   font-size: 18px;
 }
