@@ -12793,6 +12793,7 @@ label.css-label:before {
 .main .readmore {
   text-align: center;
   margin: 10px 0;
+  clear: both;
 }
 .main .readmore a {
   display: inline-block;

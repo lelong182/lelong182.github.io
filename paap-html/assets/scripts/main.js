@@ -201,12 +201,11 @@ function homeClients() {
 
 function handleLand(arr, act) {
   $.each(arr, function (i, val) {
+    $('.wrap-area-chk input[id="' + val + '-chk"]').trigger('click');
     if (act === 'add') {
       $('.wrap-active-area .map .land[id="' + val + '"]').addClass('active');
-      $('.wrap-area-chk input[id="' + val + '-chk"]').prop('checked', true);
     } else if (act === 'remove') {
       $('.wrap-active-area .map .land[id="' + val + '"]').removeClass('active');
-      $('.wrap-area-chk input[id="' + val + '-chk"]').prop('checked', false);
     }
   });
 }
