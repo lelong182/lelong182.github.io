@@ -13913,6 +13913,21 @@ label.css-label:before {
 .main .paap-service .add-more-btn[disabled] {
   background-color: #999;
 }
+.main .paap-service .back-btn {
+  font-family: 'VNF-ITC', sans-serif;
+  background-color: #95a5a6;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 50px;
+}
+.main .paap-service .remove-icon {
+  color: #e74c3c;
+  padding-top: 5px;
+  font-size: 32px;
+  float: left;
+  line-height: 1;
+}
 .main .paap-service .select2-container--default .select2-selection--single {
   height: 42px !important;
 }
