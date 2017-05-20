@@ -95,6 +95,7 @@
             break;
           case 'ALL':
             $(".wrap-active-area .map .land[id^='VN-']").addClass('active');
+            $('.wrap-area-chk input[type="checkbox"]').trigger('click');
             $('.wrap-area-chk input[type="checkbox"]').prop('checked', true);
             break;
         }
