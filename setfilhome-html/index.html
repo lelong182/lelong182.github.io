@@ -34,104 +34,38 @@
 <body>
 <div id="homePage">
     <section class="section-1 section">
-        <!--<div class="slide" id="slide1">-->
-            <!--<div class="logo">-->
-                <!--<img src="dist/images/logo_main.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="scroll-icon">-->
-                <!--<div>-->
-                    <!--<span>scroll</span>-->
-                    <!--<span><i class="material-icons">keyboard_arrow_down</i></span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="slide" id="slide2">-->
-            <!--<div class="logo">-->
-                <!--<img src="dist/images/logo_main.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="scroll-icon">-->
-                <!--<div>-->
-                    <!--<span>scroll</span>-->
-                    <!--<span><i class="material-icons">keyboard_arrow_down</i></span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="slide" id="slide3">-->
-            <!--<div class="logo">-->
-                <!--<img src="dist/images/logo_main.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="scroll-icon">-->
-                <!--<div>-->
-                    <!--<span>scroll</span>-->
-                    <!--<span><i class="material-icons">keyboard_arrow_down</i></span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="slide" id="slide4">-->
-            <!--<div class="logo">-->
-                <!--<img src="dist/images/logo_main.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="scroll-icon">-->
-                <!--<div>-->
-                    <!--<span>scroll</span>-->
-                    <!--<span><i class="material-icons">keyboard_arrow_down</i></span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-
-        <!-- masterslider -->
-        <div class="master-slider ms-skin-default" id="masterslider">
-            <!-- new slide -->
-            <div class="ms-slide">
-                <!-- slide background -->
-                <img src="dist/images/bg1.jpg" data-src="dist/images/bg1.jpg" alt="lorem ipsum dolor sit"/>
-                <div class="logo">
-                    <img src="dist/images/logo.png" alt="">
-                </div>
-                <div class="scroll-icon">
-                    <div>
-                        <span>scroll</span>
-                        <span><i class="material-icons animated slideOutDown infinite">keyboard_arrow_down</i></span>
-                    </div>
-                </div>
-            </div>
-            <!-- end of slide -->
-
-            <!-- new slide -->
-            <div class="ms-slide">
-                <!-- slide background -->
-                <img src="dist/images/bg2.jpg" data-src="dist/images/bg2.jpg" alt="lorem ipsum dolor sit"/>
-                <div class="logo">
-                    <img src="dist/images/logo.png" alt="">
-                </div>
-                <div class="scroll-icon">
-                    <div>
-                        <span>scroll</span>
-                        <span><i class="material-icons animated slideOutDown infinite">keyboard_arrow_down</i></span>
-                    </div>
-                </div>
-            </div>
-            <!-- end of slide -->
-
-            <!-- new slide -->
-            <div class="ms-slide">
-                <!-- slide background -->
-                <img src="dist/images/bg3.jpg" data-src="dist/images/bg3.jpg" alt="lorem ipsum dolor sit"/>
-                <div class="logo">
-                    <img src="dist/images/logo.png" alt="">
-                </div>
-                <div class="scroll-icon">
-                    <div>
-                        <span>scroll</span>
-                        <span><i class="material-icons animated slideOutDown infinite">keyboard_arrow_down</i></span>
-                    </div>
-                </div>
-            </div>
-            <!-- end of slide -->
+        <div class="logo">
+            <img src="dist/images/logo.png" alt="">
         </div>
-        <!-- end of masterslider -->
+        <div class="scroll-icon">
+            <div class="btn-scroll7">
+                <div>
+                    <a>scroll</a>
+                </div>
+                <div class="btn-scroll">
+                    <a><span></span><span></span></a>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 <script type="text/javascript" src="dist/scripts/main.js?v=1.1.1"></script>
+
+<script type="text/javascript">
+    $('#homePage').vegas({
+        delay: 5000,
+        timer: false,
+        // shuffle: true,
+        // firstTransitionDuration: 5000,
+        transition: [ 'fade', 'zoomOut' ],
+        animation: 'kenburns',
+        transitionDuration: '7000',
+        slides: [
+                { src: './dist/images/bg1.jpg' },
+                { src: './dist/images/bg2.jpg' },
+                { src: './dist/images/bg3.jpg' }
+            ]
+    });
+</script>
 </body>
 </html>
