@@ -32,6 +32,10 @@
 
 </head>
 <body>
+<div id="loader-wrapper">
+    <div id="loader"></div>
+</div>
+
 <div id="homePage">
     <section class="section-1 section">
         <div class="logo">
@@ -53,13 +57,14 @@
 
 <script type="text/javascript">
     $('#homePage').vegas({
-        delay: 5000,
+        delay: 7000,
         timer: false,
         // shuffle: true,
-        // firstTransitionDuration: 5000,
-        transition: [ 'fade', 'zoomOut' ],
+         firstTransitionDuration: 5000,
+        transition: ['zoomOut'],
         animation: 'kenburns',
-        transitionDuration: '7000',
+        animationDuration: 9000,
+        transitionDuration: 7000,
         slides: [
                 { src: './dist/images/bg1.jpg' },
                 { src: './dist/images/bg2.jpg' },
