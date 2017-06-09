@@ -53,18 +53,24 @@
 
 <script type="text/javascript">
     $('#homePage').vegas({
-        delay: 7000,
+        delay: 6000,
         timer: false,
         // shuffle: true,
-        firstTransitionDuration: 5000,
-        transition: ['zoomOut'],
-        animation: 'kenburns',
-        animationDuration: 9000,
+//        firstTransitionDuration: 12000,
+//        transition: ['zoomOut'],
+        transitionRegister: [ 'kha'],
+        animationRegister: [ 'kha-ani' ],
+        transition: [ 'kha'],
+        animation: 'kha-ani',
+//        animationDuration: 1000,
         transitionDuration: 7000,
         slides: [
                 { src: './dist/images/bg1.jpg' },
                 { src: './dist/images/bg2.jpg' },
-                { src: './dist/images/bg3.jpg' }
+                { src: './dist/images/bg3.jpg' },
+                { src: './dist/images/bg4.jpg' },
+                { src: './dist/images/bg5.jpg' },
+                { src: './dist/images/bg6.jpg' }
             ]
     });
 </script>
