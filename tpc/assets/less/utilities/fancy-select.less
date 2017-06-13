@@ -1,0 +1,93 @@
+.fancy-select {
+    .trigger {
+        background-color: #fff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: none;
+        color: #58595b;
+        font-size: 16px;
+        font-weight: 300;
+        height: 42px;
+        padding: 10px 30px 0 20px;
+        text-transform: none;
+        width: 100%;
+
+        &.open {
+            &:after {
+                content: "\f0d8";
+                color: #fff;
+            }
+            background-color: @main-color;
+            color: #FFF !important;
+            border-color: @main-color;
+        }
+        &:after {
+            border: none;
+            color: #666;
+            content: "\f0d7";
+            font-family: FontAwesome;
+            font-size: 20px;
+            height: auto;
+            right: 11px;
+            top: 5px;
+            width: auto;
+        }
+    }
+    .options {
+        background-color: #fff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: none;
+        min-width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        &.has-sub {
+            overflow: initial;
+            max-height: none;
+        }
+        &.overflowing.open {
+            bottom: 44px;
+            top: initial;
+        }
+        &.open {
+            top: 44px;
+        }
+        &.has-label {
+            li {
+                cursor: default;
+
+                &.selected, &.hover {
+                    color: #333;
+                }
+            }
+        }
+        li {
+            color: #333;
+            font-size: 15px;
+            font-weight: normal;
+            padding: 7px 12px;
+            text-transform: none;
+
+            &.selected, &.hover {
+                background-color: #fff;
+                color: @main-color;
+            }
+            label {
+                width: 100%;
+
+                &:hover {
+                    color: @main-color;
+                }
+            }
+            .select-icon {
+                float: left;
+                margin-right: 5px;
+
+                img {
+                    width: 16px;
+                }
+            }
+        }
+    }
+}
