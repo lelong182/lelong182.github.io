@@ -7419,9 +7419,7 @@ header.header .top-contact span {
     BOXES
 ----------------------------------------- */
 .boxes {
-  margin: -130px 0 50px;
-  position: relative;
-  z-index: 10;
+  margin-bottom: 50px;
 }
 .boxes .wrap-boxes {
   overflow: hidden;
@@ -7585,7 +7583,9 @@ header.header .top-contact span {
   background: url('../images/register-bg.png') no-repeat center / cover;
   box-shadow: 10px 10px 10px -1px rgba(0, 0, 0, 0.35);
   padding: 90px 140px;
-  margin-bottom: 50px;
+  margin: -130px 0 50px;
+  z-index: 10;
+  position: relative;
   color: #fff;
 }
 @media (max-width: 1199px) {
@@ -7792,6 +7792,11 @@ footer.footer {
 @media (max-width: 991px) {
   footer.footer {
     padding: 25px 20px;
+  }
+}
+@media (max-width: 767px) {
+  footer.footer {
+    margin-bottom: 20px;
   }
 }
 footer.footer p {

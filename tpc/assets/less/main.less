@@ -187,9 +187,7 @@ header.header {
     BOXES
 ----------------------------------------- */
 .boxes {
-  margin: -130px 0 50px;
-  position: relative;
-  z-index: 10;
+  margin-bottom: 50px;
   .wrap-boxes {
     overflow: hidden;
     box-shadow: 10px 10px 10px -1px rgba(0, 0, 0, 0.35);
@@ -336,7 +334,9 @@ header.header {
   background: url('../images/register-bg.png') no-repeat center / cover;
   box-shadow: 10px 10px 10px -1px rgba(0, 0, 0, 0.35);
   padding: 90px 140px;
-  margin-bottom: 50px;
+  margin: -130px 0 50px;
+  z-index: 10;
+  position: relative;
   color: #fff;
   @media (max-width: @screen-md-max) {
     padding: 50px 80px 60px;
@@ -497,6 +497,9 @@ footer.footer {
   }
   @media (max-width: @screen-sm-max) {
     padding: 25px 20px;
+  }
+  @media (max-width: @screen-xs-max) {
+    margin-bottom: 20px;
   }
   p {
     font-size: 21px;
