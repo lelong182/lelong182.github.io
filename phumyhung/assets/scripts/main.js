@@ -24,10 +24,6 @@
 
   $(document).ready(function () {
 
-    $(window).smartresize(function () {
-      window.location.reload(false);
-    });
-
     /* =================================
      ===  Animation with GSAP and ScrollMagic  ====
      =================================== */
@@ -163,6 +159,9 @@ function mobileVersion(ctrl) {
     fieldWorkSectionTL = new TimelineMax({
       yoyo: true
     }),
+    currentPlaceSectionTL = new TimelineMax({
+      yoyo: true
+    }),
     buyReasonSectionContent1TL = new TimelineMax({
       yoyo: true
     }),
@@ -182,6 +181,7 @@ function mobileVersion(ctrl) {
   heroSectionAnimation(heroSectionTL);
   populationSectionAnimationMobile(populationSectionTL);
   fieldWorkSectionAnimationMobile(fieldWorkSectionTL);
+  currentPlaceSectionAnimationMobile(currentPlaceSectionTL);
   buyReasonSectionContent1AnimationMobile(buyReasonSectionContent1TL);
   buyReasonSectionContent2AnimationMobile(buyReasonSectionContent2TL);
   chooseReasonSectionContent1AnimationMobile(chooseReasonSectionContent1TL);
@@ -199,6 +199,12 @@ function mobileVersion(ctrl) {
     triggerHook: 0.8
   })
     .setTween(fieldWorkSectionTL)
+    .addTo(ctrl);
+  new ScrollMagic.Scene({
+    triggerElement: $('.current-place-section')[0],
+    triggerHook: 0.4
+  })
+    .setTween(currentPlaceSectionTL)
     .addTo(ctrl);
   new ScrollMagic.Scene({
     triggerElement: $('.buy-reason-section .content-1')[0],
@@ -673,6 +679,124 @@ function currentPlaceSectionAnimation(currentPlaceSectionTL) {
       }, '-=0.2');
 }
 
+function currentPlaceSectionAnimationMobile(currentPlaceSectionTL) {
+  var $currentPlaceSection_Caption = $('.current-place-section .caption'),
+    $currentPlaceSection_Mapq1q3 = $('.current-place-section .map-q1q3'),
+    $currentPlaceSection_Mapq7 = $('.current-place-section .map-q7'),
+    $currentPlaceSection_Mapq = $('.current-place-section .map-q'),
+    $currentPlaceSection_percentTxt1 = $('.current-place-section .percent-txt-1'),
+    $currentPlaceSection_percentTxt2 = $('.current-place-section .percent-txt-2'),
+    $currentPlaceSection_percentTxt3 = $('.current-place-section .percent-txt-3'),
+    $currentPlaceSection_percentTxt4 = $('.current-place-section .percent-txt-4'),
+    $currentPlaceSection_percentTxt5 = $('.current-place-section .percent-txt-5'),
+    $currentPlaceSection_percentTxt5_detailsBox = $('.current-place-section .percent-txt-5 .details-box');
+
+  currentPlaceSectionTL
+    .fromTo($currentPlaceSection_Caption, 1.5,
+      {
+        x: '-=100',
+        skewX: -30,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        skewX: 0,
+        autoAlpha: 1,
+        ease: Back.easeOut.config(1.5)
+      }, '-=3')
+    .fromTo($currentPlaceSection_Mapq1q3, 1.5,
+      {
+        scale: 0.7,
+        autoAlpha: 0
+      },
+      {
+        scale: 1,
+        autoAlpha: 1,
+        ease: Elastic.easeOut.config(1, 0.75)
+      })
+    .fromTo($currentPlaceSection_percentTxt1, 0.8,
+      {
+        x: '+=100',
+        autoAlpha: 0
+      },
+      {
+        x: 0,
+        autoAlpha: 1,
+        ease: Sine.easeOut
+      })
+    .fromTo($currentPlaceSection_percentTxt2, 0.8,
+      {
+        x: '-=100',
+        autoAlpha: 0
+      },
+      {
+        x: 0,
+        autoAlpha: 1,
+        ease: Sine.easeOut
+      })
+    .fromTo($currentPlaceSection_Mapq7, 1.5,
+      {
+        scale: 0.7,
+        autoAlpha: 0
+      },
+      {
+        scale: 1,
+        autoAlpha: 1,
+        ease: Elastic.easeOut.config(1, 0.75)
+      })
+    .fromTo($currentPlaceSection_percentTxt5, 0.8,
+      {
+        x: '-=100',
+        autoAlpha: 0
+      },
+      {
+        x: 0,
+        autoAlpha: 1,
+        ease: Sine.easeOut
+      })
+    .fromTo($currentPlaceSection_percentTxt5_detailsBox, 0.8,
+      {
+        y: '-=50',
+        scale: 0.8,
+        autoAlpha: 0
+      },
+      {
+        y: 0,
+        scale: 1,
+        autoAlpha: 1,
+        ease: Sine.easeOut
+      })
+    .fromTo($currentPlaceSection_Mapq, 1.5,
+      {
+        scale: 0.7,
+        autoAlpha: 0
+      },
+      {
+        scale: 1,
+        autoAlpha: 1,
+        ease: Elastic.easeOut.config(1, 0.75)
+      })
+    .fromTo($currentPlaceSection_percentTxt4, 0.8,
+      {
+        x: '+=100',
+        autoAlpha: 0
+      },
+      {
+        x: 0,
+        autoAlpha: 1,
+        ease: Sine.easeOut
+      })
+    .fromTo($currentPlaceSection_percentTxt3, 0.8,
+      {
+        x: '-=100',
+        autoAlpha: 0
+      },
+      {
+        x: 0,
+        autoAlpha: 1,
+        ease: Sine.easeOut
+      });
+}
+
 function buyReasonSectionContent1Animation(buyReasonSectionContent1TL) {
   var $buyReasonSection_Content1_Caption = $('.buy-reason-section .content-1 .caption'),
     $buyReasonSection_Content1List_Img = $('.buy-reason-section .content-1-list .img'),
@@ -1035,7 +1159,7 @@ function chooseReasonSectionContent2AnimationMobile(chooseReasonSectionContent2T
     .fromTo($chooseReasonSection_Content2Circles_Circle2, 2,
       {
         rotation: 360,
-        x: '+=250',
+        x: '+=150',
         autoAlpha: 0
       }, {
         rotation: 0,
@@ -1132,32 +1256,3 @@ function chooseReasonSectionContent3AnimationMobile(chooseReasonSectionContent3T
         ease: Power2.easeOut
       }, '-=0.8');
 }
-
-function percentToPixel(_elem, _perc) {
-  return (_elem.parent().outerWidth() / 100) * parseFloat(_perc);
-}
-
-(function ($, sr) {
-  var debounce = function (func, threshold, execAsap) {
-    var timeout;
-    return function debounced() {
-      var obj = this, args = arguments;
-
-      function delayed() {
-        if (!execAsap)
-          func.apply(obj, args);
-        timeout = null;
-      }
-
-      if (timeout)
-        clearTimeout(timeout);
-      else if (execAsap)
-        func.apply(obj, args);
-
-      timeout = setTimeout(delayed, threshold || 100);
-    };
-  };
-  jQuery.fn[sr] = function (fn) {
-    return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
-  };
-})(jQuery, 'smartresize');

@@ -7729,10 +7729,9 @@ iframe[name='google_conversion_frame'] {
   .current-place-section .map-q7 {
     background: url('../images/mb-q7-map.png') no-repeat;
     height: 325px;
-    left: 50%;
+    left: 35px;
     position: absolute;
     top: 175px;
-    transform: translateX(-50%);
     width: 305px;
   }
 }
@@ -7908,7 +7907,7 @@ iframe[name='google_conversion_frame'] {
 @media (max-width: 400px) {
   .buy-reason-section {
     background: url('../images/mb-buy-reason-bg.jpg') no-repeat;
-    height: 1219px;
+    height: 1200px;
     padding: 45px 0 0;
   }
 }
