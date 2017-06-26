@@ -1,0 +1,31 @@
+.custom-input {
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    color: #333;
+    font-size: 18px;
+    height: 44px;
+    padding: 0 15px;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+
+    &:focus {
+        border: 1px solid @main-color;
+    }
+    &.uppercase {
+        text-transform: uppercase;
+    }
+}
+.custom-textarea {
+    border: 1px solid #bbb;
+    color: #999;
+    font-size: 15px;
+    height: 200px;
+    padding: 6px 12px;
+    width: 100%;
+    resize: none;
+
+    &:focus {
+        border: 1px solid @main-color;
+        color: #333;
+    }
+}

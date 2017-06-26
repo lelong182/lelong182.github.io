@@ -1,0 +1,79 @@
+.fancy-select {
+    .mCustomScrollbar {
+        &.mCS_no_scrollbar {
+            .mCustomScrollBox {
+                .mCSB_container {
+                    margin-right: 0;
+                }
+            }
+        }
+        .mCustomScrollBox {
+            &.mCSB_vertical {
+                margin-right: -3px;
+                width: ~"calc(100% + 3px)";
+
+                .mCSB_container {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+.mCustomScrollbar {
+    .mCustomScrollBox {
+        &.mCSB_horizontal {
+            margin-right: 0;
+            max-width: 100%;
+            width: 100%;
+
+            .mCSB_container {
+                margin-bottom: 5px;
+            }
+        }
+        &.mCSB_vertical {
+            margin-right: -15px;
+            max-width: initial;
+            width: ~"calc(100% + 15px)";
+
+            .mCSB_container {
+                margin-right: 18px;
+            }
+        }
+        .mCSB_scrollTools {
+            &.mCSB_scrollTools_vertical {
+                .mCSB_draggerContainer {
+                    .mCSB_dragger {
+                        .mCSB_dragger_bar {
+                            background-color: #59595b !important;
+                            width: 6px;
+                            border-radius: 20px;
+                        }
+                    }
+                    .mCSB_draggerRail {
+                        background-color: #ddd;
+                        width: 6px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+            &.mCSB_scrollTools_horizontal {
+                bottom: -5px;
+
+                .mCSB_draggerContainer {
+                    .mCSB_dragger {
+                        .mCSB_dragger_bar {
+                            background-color: #59595b !important;
+                            height: 5px;
+                            border-radius: 20px;
+                        }
+                    }
+                    .mCSB_draggerRail {
+                        background-color: #ddd;
+                        height: 5px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

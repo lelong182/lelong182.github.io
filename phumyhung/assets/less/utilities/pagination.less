@@ -1,0 +1,42 @@
+.pagination {
+    border-right: 0 none;
+    margin: 0;
+    ul {
+        font-size: 0;
+        margin-bottom: 0;
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            &.active {
+                span {
+                    background-color: @main-color;
+                    border-color: @main-color;
+                    color: #fff;
+                }
+            }
+            &.border {
+                a {
+                    border: 1px solid #515252;
+                }
+            }
+            a {
+                color: #515252;
+                &:hover {
+                    background-color: @main-color;
+                    border-color: @main-color;
+                    color: #fff;
+                }
+            }
+            a, span {
+                border: 1px solid #fff;
+                display: inline-block;
+                font-size: 12px;
+                height: 30px;
+                line-height: 28px;
+                min-width: 30px;
+                padding: 0 10px;
+                text-align: center;
+            }
+        }
+    }
+}
