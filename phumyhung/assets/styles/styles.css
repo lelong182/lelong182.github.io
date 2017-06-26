@@ -7919,7 +7919,7 @@ iframe[name='google_conversion_frame'] {
 @media (max-width: 400px) {
   .buy-reason-section .content-1 {
     width: initial;
-    margin-bottom: 230px;
+    margin-bottom: 160px;
   }
 }
 .buy-reason-section .content-1 .caption {
@@ -8131,7 +8131,7 @@ iframe[name='google_conversion_frame'] {
 }
 @media (max-width: 400px) {
   .buy-reason-section .content-2 .content-2-details {
-    padding: 25px 30px 0;
+    padding: 15px 30px 0;
     width: initial;
   }
 }
