@@ -613,8 +613,8 @@ function currentPlaceSectionAnimation(currentPlaceSectionTL) {
       {
         scale: 1,
         autoAlpha: 1,
-        ease: Sine.easeIn
-      }, '-=0.8')
+        ease: Elastic.easeOut.config(1, 0.75)
+      }, '-=0.2')
     .fromTo($currentPlaceSection_percentTxt1, 0.8,
       {
         x: '+=150',
