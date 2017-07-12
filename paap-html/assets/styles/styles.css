@@ -6673,6 +6673,7 @@ a:focus {
   color: inherit;
   text-decoration: none;
 }
+ol,
 ul {
   list-style-position: inside;
 }
@@ -12207,6 +12208,15 @@ label.css-label:before {
 .topbar .top-menu ul li.lang-switch a:before {
   content: none;
 }
+.topbar .top-menu ul li.current a:after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
 .topbar .top-menu ul li a {
   display: inline-block;
   vertical-align: middle;
@@ -13126,7 +13136,7 @@ label.css-label:before {
 .main .paap-details .creator .chat-btn[disabled] {
   background-color: #999;
 }
-.main .paap-details .creator .ordered-btn {
+.main .paap-details .creator .booked-btn {
   font-family: 'VNF-ITC', sans-serif;
   display: block;
   text-align: center;
@@ -13135,7 +13145,7 @@ label.css-label:before {
   border-radius: 5px;
   padding: 4px 0;
 }
-.main .paap-details .creator .order-btn {
+.main .paap-details .creator .book-btn {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -13156,14 +13166,14 @@ label.css-label:before {
   border-radius: 5px;
   padding: 4px 0;
 }
-.main .paap-details .creator .order-btn:hover,
-.main .paap-details .creator .order-btn:focus,
-.main .paap-details .creator .order-btn:active {
+.main .paap-details .creator .book-btn:hover,
+.main .paap-details .creator .book-btn:focus,
+.main .paap-details .creator .book-btn:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-.main .paap-details .creator .order-btn[disabled] {
+.main .paap-details .creator .book-btn[disabled] {
   background-color: #999;
 }
 .main .paap-details .creator .next-btn {
@@ -13254,52 +13264,52 @@ label.css-label:before {
 .main .paap-details .creator .prev-btn[disabled] {
   background-color: #999;
 }
-.main .paap-details .order-modal.modal {
+.main .paap-details .book-modal.modal {
   text-align: center;
   padding: 0 !important;
 }
-.main .paap-details .order-modal.modal:before {
+.main .paap-details .book-modal.modal:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
   margin-right: -4px;
 }
-.main .paap-details .order-modal.modal .modal-dialog {
+.main .paap-details .book-modal.modal .modal-dialog {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-header {
+.main .paap-details .book-modal.modal .modal-dialog .modal-header {
   background-color: #0099cc;
   min-height: initial;
   padding: 15px 40px;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-header h3 {
+.main .paap-details .book-modal.modal .modal-dialog .modal-header h3 {
   font-size: 20px;
   margin: 0;
   color: #fff;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content {
   border: none;
   box-shadow: none;
   padding: 15px 40px;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .order-tabs {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .book-tabs {
   border-bottom: none;
   font-size: 0;
   text-align: center;
   margin-bottom: 30px;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .order-tabs li {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .book-tabs li {
   display: inline-block;
   float: initial;
   margin: 0 3px;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .order-tabs li.active a {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .book-tabs li.active a {
   background-color: #0099cc;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .order-tabs li a {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .book-tabs li a {
   font-family: 'VNF-ITC', sans-serif;
   background-color: #9d9d9d;
   border: none;
@@ -13312,14 +13322,14 @@ label.css-label:before {
   text-transform: uppercase;
   width: 260px;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .order-tabs li a span {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .book-tabs li a span {
   font-size: 24px;
   left: 15px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .order-tabs li a span:before {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .book-tabs li a span:before {
   background: url('../images/order-arrow.png') no-repeat;
   content: "";
   height: 51px;
@@ -13328,11 +13338,11 @@ label.css-label:before {
   top: -12px;
   width: 14px;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .provider-item {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .provider-item {
   margin-bottom: 15px;
   padding: 0 20px;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .provider-item img {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .provider-item img {
   border: 1px solid #09c;
   border-radius: 5px;
   height: 150px;
@@ -13340,40 +13350,40 @@ label.css-label:before {
   width: 100%;
   cursor: pointer;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .provider-item h5 {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .provider-item h5 {
   font-family: 'VNF-ITC', sans-serif;
   font-size: 18px;
   margin: 13px 0 0;
   text-align: center;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .creator {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .creator {
   padding-left: 0;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .creator .info-row {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .creator .info-row {
   display: inline-block;
   margin-bottom: 15px;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(1) {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(1) {
   width: 120px;
   float: left;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(2) {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(2) {
   width: 200px;
   float: left;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .creator .info-row .custom-input {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .creator .info-row .custom-input {
   font-size: 18px;
   height: 34px;
   margin-top: -5px;
   padding: 0 10px;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .wrap-finish {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .wrap-finish {
   text-align: center;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .wrap-finish h4 {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .wrap-finish h4 {
   font-family: 'VNF-ITC', sans-serif;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -13394,9 +13404,9 @@ label.css-label:before {
   border-radius: 5px;
   padding: 6px 0;
 }
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:hover,
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:focus,
-.main .paap-details .order-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:active {
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:hover,
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:focus,
+.main .paap-details .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
@@ -13475,25 +13485,26 @@ label.css-label:before {
   line-height: 1.3;
 }
 .main .paap-details .popup-chat .chat-box .chat-contents .chat-item {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .main .paap-details .popup-chat .chat-box .chat-contents .chat-item.host {
   padding-right: 80px;
 }
+.main .paap-details .popup-chat .chat-box .chat-contents .chat-item.host .media-body .chat-message {
+  background-color: #bbb;
+}
 .main .paap-details .popup-chat .chat-box .chat-contents .chat-item.client {
   padding-left: 80px;
 }
-.main .paap-details .popup-chat .chat-box .chat-contents .chat-item.client .media-body {
+.main .paap-details .popup-chat .chat-box .chat-contents .chat-item.client .media-body .chat-message {
   background-color: #0099cc;
-  border-radius: 10px;
-  color: #fff;
-  padding: 10px 12px;
 }
 .main .paap-details .popup-chat .chat-box .chat-contents .chat-item.client .media-body .time-ago {
-  color: #fff;
-  display: block;
-  opacity: 0.8;
   text-align: right;
+}
+.main .paap-details .popup-chat .chat-box .chat-contents .chat-item .media-left,
+.main .paap-details .popup-chat .chat-box .chat-contents .chat-item .media-right {
+  min-width: 80px;
 }
 .main .paap-details .popup-chat .chat-box .chat-contents .chat-item .media-left img,
 .main .paap-details .popup-chat .chat-box .chat-contents .chat-item .media-right img {
@@ -13507,11 +13518,18 @@ label.css-label:before {
   margin: 5px 0 0;
   text-align: center;
 }
+.main .paap-details .popup-chat .chat-box .chat-contents .chat-item .media-body .chat-message {
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 12px 5px;
+}
 .main .paap-details .popup-chat .chat-box .chat-contents .chat-item .media-body p {
   margin-bottom: 5px;
 }
 .main .paap-details .popup-chat .chat-box .chat-contents .chat-item .media-body .time-ago {
-  color: #999;
+  color: #fff;
+  display: block;
+  opacity: 0.8;
 }
 .main .paap-details .popup-chat .chat-box .chat-input {
   border-top: 1px solid #666;
@@ -14027,6 +14045,10 @@ label.css-label:before {
 .main .paap-service-details .main-tabs {
   border-color: #898989;
   margin-bottom: 20px;
+  font-size: 0;
+}
+.main .paap-service-details .main-tabs li {
+  display: inline-block;
 }
 .main .paap-service-details .main-tabs li.active a {
   border-color: #898989 #898989 transparent;
@@ -14035,16 +14057,22 @@ label.css-label:before {
   color: #000;
 }
 .main .paap-service-details .main-tabs li a {
-  border: none;
-  border-radius: 0;
   color: #0099cc;
-  font-family: "VNF-ITC", sans-serif;
+  display: inline-block;
+  font-family: VNF-ITC, sans-serif;
   font-size: 18px;
-  margin-right: 0;
   padding: 17px 45px;
 }
 .main .paap-service-details .main-tabs li a:hover {
   background-color: #f7f7f7;
+}
+.main .paap-service-details .review-rating {
+  color: #e1e1e1;
+  font-size: 20px;
+  line-height: 1;
+}
+.main .paap-service-details .review-rating .active {
+  color: #0099cc;
 }
 .main .paap-service-details .info-box {
   border: 1px solid #898989;
@@ -14063,15 +14091,16 @@ label.css-label:before {
 }
 .main .paap-service-details .info-box h3 {
   color: #2d3e58;
-  font-size: 36px;
+  font-size: 32px;
   margin: 0 0 15px;
 }
 .main .paap-service-details .info-box p {
   color: #2d3e58;
   font-family: "VNF-ITC", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.3;
   margin-bottom: 0;
+  padding: 0 5px;
 }
 .main .paap-service-details .info-box .footer-box {
   background-color: #2d3e58;
@@ -14079,16 +14108,615 @@ label.css-label:before {
   left: 0;
   position: absolute;
   width: 100%;
+  padding: 15px 0 10px;
 }
 .main .paap-service-details .info-box .footer-box .review-rating {
-  color: #e1e1e1;
-  font-size: 20px;
-  position: absolute;
-  right: 15px;
-  top: 12px;
+  font-size: 38px;
 }
-.main .paap-service-details .info-box .footer-box .review-rating .active {
+.main .paap-service-details .info-box .footer-box .review-rating i {
+  margin: 0 3px;
+}
+.main .paap-service-details .book-btn {
+  background-color: #2ecc71;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-family: "VNF-ITC", sans-serif;
+  font-size: 25px;
+  margin: 10px 0 5px;
+  padding: 6px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+.main .paap-service-details .discount {
+  display: inline-block;
+  font-family: "VNF-ITC", sans-serif;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+}
+.main .paap-service-details .discount .scissors-icon {
+  background: url('../images/scissors-icon.png') no-repeat;
+  height: 20px;
+  left: 3px;
+  position: absolute;
+  top: -16px;
+  width: 24px;
+}
+.main .paap-service-details .discount .discount-number {
+  background-color: #0099cc;
+  color: #fff;
+  float: left;
+  font-size: 22px;
+  height: 56px;
+  line-height: 1;
+  padding-top: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 60px;
+}
+.main .paap-service-details .discount .discount-text {
+  border: 1px dashed #0099cc;
+  color: #000;
+  float: left;
+  font-size: 13px;
+  height: 56px;
+  line-height: 1.2;
+  padding: 11px 0 0 8px;
+  width: calc(100% - 60px);
+}
+.main .paap-service-details .details-content {
+  font-size: 15px;
+}
+.main .paap-service-details .details-content p {
+  margin-bottom: 15px;
+}
+.main .paap-service-details .details-content .list-review .review-item {
+  position: relative;
+  padding: 12px 12px 12px 2px;
+}
+.main .paap-service-details .details-content .list-review .review-item:nth-child(2n+1) {
+  background-color: #e5f5fa;
+}
+.main .paap-service-details .details-content .list-review .review-item:nth-child(2n) {
+  background-color: #f7f7f7;
+}
+.main .paap-service-details .details-content .list-review .review-item .media-left {
+  padding-left: 10px;
+}
+.main .paap-service-details .details-content .list-review .review-item .media-left img {
+  margin: 0 20px;
+  width: 80px;
+  border-radius: 50%;
+}
+.main .paap-service-details .details-content .list-review .review-item .media-left h5 {
   color: #0099cc;
+  margin: 10px 0 0;
+  text-align: center;
+}
+.main .paap-service-details .details-content .list-review .review-item .media-body {
+  padding-top: 10px;
+}
+.main .paap-service-details .details-content .list-review .review-item .review-rating {
+  position: absolute;
+  right: 12px;
+  top: 20px;
+}
+.main .paap-service-details .details-content .list-review .review-item .review-location {
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.main .paap-service-details .details-content .list-review .review-item .review-location h4 {
+  display: inline-block;
+  margin: 0;
+}
+.main .paap-service-details .details-content .list-review .review-item .review-location img {
+  margin: 0 15px;
+  vertical-align: text-bottom;
+}
+.main .paap-service-details .details-content .list-review .review-item .review-content p {
+  margin-bottom: 5px;
+}
+.main .paap-service-details .details-content .list-review .review-item .review-content .reply-btn {
+  background-color: #2ecc71;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-family: "VNF-ITC", sans-serif;
+  font-size: 14px;
+  padding: 4px 15px;
+}
+.main .paap-service-details .details-content .list-review .review-item .review-created {
+  bottom: 12px;
+  color: #999;
+  font-size: 13px;
+  position: absolute;
+  right: 12px;
+}
+.main .paap-service-details .details-content .area-caption {
+  color: #333;
+  margin: 0 0 20px;
+  font-family: "VNF-ITC", sans-serif;
+}
+.main .paap-service-details .details-content .wrap-area-chk label {
+  font-weight: normal;
+}
+.main .paap-service-details .details-content .map {
+  float: right;
+  height: 810px;
+  width: 385px;
+}
+.main .paap-service-details .details-content .map .land.active {
+  fill: #0099cc;
+}
+.main .paap-service-details .details-content .list-booked .booked-item {
+  position: relative;
+  padding: 15px 20px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item:nth-child(2n+1) {
+  background-color: #e5f5fa;
+}
+.main .paap-service-details .details-content .list-booked .booked-item:nth-child(2n) {
+  background-color: #f7f7f7;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-header {
+  margin-bottom: 20px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-header .booked-location {
+  font-size: 0;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-header .booked-location h4 {
+  display: inline-block;
+  margin: 0;
+  color: #0099cc;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-header .booked-location img {
+  margin: 0 15px;
+  vertical-align: text-bottom;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-header .booked-date {
+  color: #999;
+  font-size: 16px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body .booked-info {
+  border-right: 3px solid #0099cc;
+  float: left;
+  margin-right: 20px;
+  padding: 5px 20px 5px 0;
+  width: calc(100% - 270px);
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body .booked-info .text-inline {
+  display: inline-block;
+  margin-right: 30px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body .booked-info .text-block {
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body .booked-info .left-text {
+  color: #666;
+  float: left;
+  width: 140px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body .booked-info .right-text {
+  display: inline-block;
+  width: calc(100% - 140px);
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body .booked-owner {
+  float: left;
+  padding: 5px 0;
+  width: 250px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body .booked-owner img {
+  width: 60px;
+  border-radius: 50%;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body .booked-owner h4 {
+  font-size: 16px;
+  margin: 5px 0 6px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-body .booked-owner h5 {
+  margin: 0 0 2px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-status {
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-family: "VNF-ITC", sans-serif;
+  font-size: 18px;
+  padding: 5px 15px;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-status.pending {
+  background-color: #e67e22;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-status.closed {
+  background-color: #2980b9;
+}
+.main .paap-service-details .details-content .list-booked .booked-item .booked-status.completed {
+  background-color: #27ae60;
+}
+.main .paap-service-details .book-modal {
+  font-size: 18px;
+}
+.main .paap-service-details .book-modal.modal {
+  text-align: center;
+  padding: 0 !important;
+}
+.main .paap-service-details .book-modal.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-header {
+  background-color: #0099cc;
+  min-height: initial;
+  padding: 15px 40px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-header h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #fff;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content {
+  border: none;
+  box-shadow: none;
+  padding: 15px 40px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .book-tabs {
+  border-bottom: none;
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .book-tabs li {
+  display: inline-block;
+  float: initial;
+  margin: 0 3px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .book-tabs li.active a {
+  background-color: #0099cc;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .book-tabs li a {
+  font-family: 'VNF-ITC', sans-serif;
+  background-color: #9d9d9d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  margin-right: 0;
+  padding: 18px 0 18px 30px;
+  text-transform: uppercase;
+  width: 260px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .book-tabs li a span {
+  font-size: 24px;
+  left: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .book-tabs li a span:before {
+  background: url('../images/order-arrow.png') no-repeat;
+  content: "";
+  height: 51px;
+  left: 25px;
+  position: absolute;
+  top: -12px;
+  width: 14px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info h3 {
+  font-family: 'VNF-ITC', sans-serif;
+  margin: 0 0 30px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info h4 {
+  color: #333;
+  margin: 8px 0 0;
+}
+@media (max-width: 857px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info h4 {
+    margin-bottom: 5px;
+  }
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .row {
+  margin-bottom: 10px;
+}
+@media (max-width: 480px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .row .col-xs-6 {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .row .col-xs-6:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 857px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .row .col-sm-3 {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 857px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .row .col-sm-6:last-child .row {
+    margin-bottom: 0;
+  }
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .row .row {
+  margin-bottom: 0;
+}
+@media (max-width: 857px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .row .row {
+    margin-bottom: 20px;
+  }
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .select2-container--default .select2-selection--single {
+  height: 42px !important;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 18px;
+  line-height: 40px !important;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .custom-input {
+  font-size: 18px;
+  height: 34px;
+  padding: 0 10px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .custom-textarea {
+  font-size: 18px;
+  padding: 5px 10px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-date {
+  width: calc(50% - 5px);
+  float: left;
+  margin-right: 5px;
+}
+@media (max-width: 857px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-date {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-date {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-time {
+  width: calc(50% - 5px);
+  float: left;
+  margin-left: 5px;
+}
+@media (max-width: 857px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-time {
+    width: calc(50% - 10px);
+    margin-left: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-time {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-time .wrap-datepicker .date {
+  display: none;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker ::-webkit-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker :-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker ::-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker :-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .form-control {
+  height: 34px;
+  border-radius: 5px;
+  border: 1px solid #0099cc;
+  font-size: 18px;
+  padding: 0 10px;
+  box-shadow: none;
+  color: #000;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .date {
+  width: 100%;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .date .input-group-addon {
+  display: none;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .timepicker {
+  width: 100%;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .timepicker .input-group-addon {
+  display: none;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location {
+  position: relative;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  width: 100%;
+  border: 1px solid #bbb;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location.open {
+  opacity: 1;
+  visibility: visible;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul {
+  max-height: 165px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li {
+  list-style: none;
+  border-bottom: 1px solid #bbb;
+  padding: 9px 15px;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li:hover {
+  background-color: #eee;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li:last-child {
+  border-bottom: none;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li.no-result {
+  cursor: initial;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li.no-result:hover {
+  background-color: #fff;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-select .select2-container--default .select2-selection--single {
+  height: 34px !important;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 34px !important;
+  padding: 0 42px 0 10px !important;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-select .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 12px !important;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator {
+  padding-left: 0;
+}
+@media (max-width: 1399px) {
+  .main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator {
+    padding-left: 0;
+  }
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator h4 {
+  font-family: 'VNF-ITC', sans-serif;
+  margin-top: 10px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .media {
+  margin: 0 0 25px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .media .media-left {
+  padding-right: 30px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .media .media-left img {
+  width: 90px;
+  border-radius: 50%;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .info-row {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(1) {
+  width: 120px;
+  float: left;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(2) {
+  width: 200px;
+  float: left;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .info-row .custom-input {
+  font-size: 18px;
+  height: 34px;
+  margin-top: -5px;
+  padding: 0 10px;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .next-btn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: "box-shadow, transform";
+  transition-property: "box-shadow, transform";
+  font-family: 'VNF-ITC', sans-serif;
+  width: 100%;
+  border: none;
+  background-color: #0099cc;
+  color: #fff;
+  border-radius: 5px;
+  padding: 6px 0;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .next-btn:hover,
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .next-btn:focus,
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .next-btn:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .creator .next-btn[disabled] {
+  background-color: #999;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .wrap-finish {
+  text-align: center;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .wrap-finish h4 {
+  font-family: 'VNF-ITC', sans-serif;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: "box-shadow, transform";
+  transition-property: "box-shadow, transform";
+  font-family: 'VNF-ITC', sans-serif;
+  width: 300px;
+  border: none;
+  background-color: #2ecc71;
+  color: #fff;
+  border-radius: 5px;
+  padding: 6px 0;
+}
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:hover,
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:focus,
+.main .paap-service-details .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 .main .paap-personal {
   padding: 80px 0;
@@ -14096,6 +14724,10 @@ label.css-label:before {
 .main .paap-personal .main-tabs {
   border-color: #898989;
   margin-bottom: 20px;
+  font-size: 0;
+}
+.main .paap-personal .main-tabs li {
+  display: inline-block;
 }
 .main .paap-personal .main-tabs li.active a {
   border-color: #898989 #898989 transparent;
@@ -14110,6 +14742,7 @@ label.css-label:before {
   font-family: "VNF-ITC", sans-serif;
   font-size: 18px;
   margin-right: 0;
+  display: inline-block;
   padding: 17px 45px;
 }
 .main .paap-personal .main-tabs li a:hover {
@@ -14123,12 +14756,29 @@ label.css-label:before {
   position: relative;
   text-align: center;
 }
-.main .paap-personal .info-box .avatar {
+.main .paap-personal .info-box .wrap-avatar {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 0 40px;
+}
+.main .paap-personal .info-box .wrap-avatar .avatar {
   border: 6px solid #c8d5de;
   border-radius: 50%;
-  margin-bottom: 30px;
-  max-width: 250px;
-  position: relative;
+  max-width: 100%;
+}
+.main .paap-personal .info-box .wrap-avatar label {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  bottom: -6px;
+  left: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+.main .paap-personal .info-box .wrap-avatar input {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
 }
 .main .paap-personal .info-box h3 {
   color: #2d3e58;
@@ -14227,7 +14877,7 @@ label.css-label:before {
 .main .paap-personal .inbox-clients .nav-tabs li .media .media-body p {
   margin-bottom: 0;
   overflow: hidden;
-  padding-right: 55px;
+  padding-right: 65px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -14235,7 +14885,8 @@ label.css-label:before {
   color: #999;
   position: absolute;
   right: 0;
-  top: 25px;
+  top: 30px;
+  font-size: 12px;
 }
 .main .paap-personal .update-profile {
   padding: 0 50px;
@@ -14294,44 +14945,44 @@ label.css-label:before {
 .main .paap-personal .update-profile .update-btn[disabled] {
   background-color: #999;
 }
-.main .paap-personal .list-ordered .paap-item {
+.main .paap-personal .list-booked .paap-item {
   display: flex;
   padding: 18px 50px 15px;
 }
-.main .paap-personal .list-ordered .paap-item:nth-child(2n - 1) {
+.main .paap-personal .list-booked .paap-item:nth-child(2n - 1) {
   background-color: #e5f5fa;
 }
-.main .paap-personal .list-ordered .paap-item .paap-location {
+.main .paap-personal .list-booked .paap-item .paap-location {
   flex: 2;
   font-size: 0;
 }
-.main .paap-personal .list-ordered .paap-item .paap-location h4 {
+.main .paap-personal .list-booked .paap-item .paap-location h4 {
   color: #000;
   display: inline-block;
   font-size: 16px;
   margin: 0;
 }
-.main .paap-personal .list-ordered .paap-item .paap-location img {
+.main .paap-personal .list-booked .paap-item .paap-location img {
   margin: 0 15px;
   vertical-align: text-bottom;
 }
-.main .paap-personal .list-ordered .paap-item .paap-location h5 {
+.main .paap-personal .list-booked .paap-item .paap-location h5 {
   color: #0099cc;
   font-family: "VNF-ITC", sans-serif;
   font-size: 18px;
   margin: 24px 0 0;
 }
-.main .paap-personal .list-ordered .paap-item .paap-info {
+.main .paap-personal .list-booked .paap-item .paap-info {
   flex: 1;
   padding: 0 15px;
 }
-.main .paap-personal .list-ordered .paap-item .paap-info .paap-text {
+.main .paap-personal .list-booked .paap-item .paap-info .paap-text {
   font-family: "VNF-ITC", sans-serif;
   line-height: 1.2;
   text-align: center;
   color: #666;
 }
-.main .paap-personal .list-ordered .paap-item .paap-info .paap-status {
+.main .paap-personal .list-booked .paap-item .paap-info .paap-status {
   border-radius: 4px;
   color: #fff;
   font-family: "VNF-ITC", sans-serif;
@@ -14340,19 +14991,19 @@ label.css-label:before {
   padding: 3px 0 4px;
   text-align: center;
 }
-.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.blue-label {
+.main .paap-personal .list-booked .paap-item .paap-info .paap-status.blue-label {
   background-color: #0099cc;
 }
-.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.green-label {
+.main .paap-personal .list-booked .paap-item .paap-info .paap-status.green-label {
   background-color: #2ecc71;
 }
-.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.green-2-label {
+.main .paap-personal .list-booked .paap-item .paap-info .paap-status.green-2-label {
   background-color: #27ae60;
 }
-.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.orange-label {
+.main .paap-personal .list-booked .paap-item .paap-info .paap-status.orange-label {
   background-color: #e67e22;
 }
-.main .paap-personal .list-ordered .paap-item .paap-info .paap-status.red-label {
+.main .paap-personal .list-booked .paap-item .paap-info .paap-status.red-label {
   background-color: #e74c3c;
 }
 .main .paap-personal .list-created .paap-item {
@@ -14878,55 +15529,55 @@ label.css-label:before {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-.main .list-services .service-item .order-modal {
+.main .list-services .service-item .book-modal {
   font-size: 18px;
 }
-.main .list-services .service-item .order-modal.modal {
+.main .list-services .service-item .book-modal.modal {
   text-align: center;
   padding: 0 !important;
 }
-.main .list-services .service-item .order-modal.modal:before {
+.main .list-services .service-item .book-modal.modal:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
   margin-right: -4px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog {
+.main .list-services .service-item .book-modal.modal .modal-dialog {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-header {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-header {
   background-color: #0099cc;
   min-height: initial;
   padding: 15px 40px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-header h3 {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-header h3 {
   font-size: 20px;
   margin: 0;
   color: #fff;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content {
   border: none;
   box-shadow: none;
   padding: 15px 40px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .order-tabs {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .book-tabs {
   border-bottom: none;
   font-size: 0;
   text-align: center;
   margin-bottom: 30px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .order-tabs li {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .book-tabs li {
   display: inline-block;
   float: initial;
   margin: 0 3px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .order-tabs li.active a {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .book-tabs li.active a {
   background-color: #0099cc;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .order-tabs li a {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .book-tabs li a {
   font-family: 'VNF-ITC', sans-serif;
   background-color: #9d9d9d;
   border: none;
@@ -14939,14 +15590,14 @@ label.css-label:before {
   text-transform: uppercase;
   width: 260px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .order-tabs li a span {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .book-tabs li a span {
   font-size: 24px;
   left: 15px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .order-tabs li a span:before {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .book-tabs li a span:before {
   background: url('../images/order-arrow.png') no-repeat;
   content: "";
   height: 51px;
@@ -14955,120 +15606,120 @@ label.css-label:before {
   top: -12px;
   width: 14px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info h3 {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info h3 {
   font-family: 'VNF-ITC', sans-serif;
   margin: 0 0 30px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info h4 {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info h4 {
   color: #333;
   margin: 8px 0 0;
 }
 @media (max-width: 857px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info h4 {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info h4 {
     margin-bottom: 5px;
   }
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .row {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .row {
   margin-bottom: 10px;
 }
 @media (max-width: 480px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .row .col-xs-6 {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .row .col-xs-6 {
     width: 100%;
     margin-bottom: 5px;
   }
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .row .col-xs-6:last-child {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .row .col-xs-6:last-child {
     margin-bottom: 0;
   }
 }
 @media (max-width: 857px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .row .col-sm-3 {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .row .col-sm-3 {
     margin-bottom: 5px;
   }
 }
 @media (max-width: 857px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .row .col-sm-6:last-child .row {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .row .col-sm-6:last-child .row {
     margin-bottom: 0;
   }
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .row .row {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .row .row {
   margin-bottom: 0;
 }
 @media (max-width: 857px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .row .row {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .row .row {
     margin-bottom: 20px;
   }
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .select2-container--default .select2-selection--single {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .select2-container--default .select2-selection--single {
   height: 42px !important;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .select2-container--default .select2-selection--single .select2-selection__rendered {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .select2-container--default .select2-selection--single .select2-selection__rendered {
   font-size: 18px;
   line-height: 40px !important;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .custom-input {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .custom-input {
   font-size: 18px;
   height: 34px;
   padding: 0 10px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .custom-textarea {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .custom-textarea {
   font-size: 18px;
   padding: 5px 10px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-date {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-date {
   width: calc(50% - 5px);
   float: left;
   margin-right: 5px;
 }
 @media (max-width: 857px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-date {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-date {
     width: calc(50% - 10px);
     margin-right: 10px;
   }
 }
 @media (max-width: 480px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-date {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-date {
     width: 100%;
     margin-right: 0;
     margin-bottom: 5px;
   }
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-time {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-time {
   width: calc(50% - 5px);
   float: left;
   margin-left: 5px;
 }
 @media (max-width: 857px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-time {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-time {
     width: calc(50% - 10px);
     margin-left: 10px;
   }
 }
 @media (max-width: 480px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-time {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-time {
     width: 100%;
     margin-left: 0;
   }
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-time .wrap-datepicker .date {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-time .wrap-datepicker .date {
   display: none;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker ::-webkit-input-placeholder {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker ::-webkit-input-placeholder {
   color: #000;
   opacity: 1;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker :-moz-placeholder {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker :-moz-placeholder {
   color: #000;
   opacity: 1;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker ::-moz-placeholder {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker ::-moz-placeholder {
   color: #000;
   opacity: 1;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker :-ms-input-placeholder {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker :-ms-input-placeholder {
   color: #000;
   opacity: 1;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .form-control {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .form-control {
   height: 34px;
   border-radius: 5px;
   border: 1px solid #0099cc;
@@ -15077,22 +15728,22 @@ label.css-label:before {
   box-shadow: none;
   color: #000;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .date {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .date {
   width: 100%;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .date .input-group-addon {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .date .input-group-addon {
   display: none;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .timepicker {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .timepicker {
   width: 100%;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .timepicker .input-group-addon {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-datepicker .timepicker .input-group-addon {
   display: none;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location {
   position: relative;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location {
   position: absolute;
   background-color: #fff;
   border-radius: 5px;
@@ -15104,16 +15755,16 @@ label.css-label:before {
   border: 1px solid #bbb;
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location.open {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location.open {
   opacity: 1;
   visibility: visible;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul {
   max-height: 165px;
   overflow: hidden;
   margin-bottom: 0;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li {
   list-style: none;
   border-bottom: 1px solid #bbb;
   padding: 9px 15px;
@@ -15125,69 +15776,69 @@ label.css-label:before {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li:hover {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li:hover {
   background-color: #eee;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li:last-child {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li:last-child {
   border-bottom: none;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li.no-result {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li.no-result {
   cursor: initial;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li.no-result:hover {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-search-location .list-location ul li.no-result:hover {
   background-color: #fff;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-select .select2-container--default .select2-selection--single {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-select .select2-container--default .select2-selection--single {
   height: 34px !important;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-select .select2-container--default .select2-selection--single .select2-selection__rendered {
   line-height: 34px !important;
-  padding: 0 42px 0 10px!important;
+  padding: 0 42px 0 10px !important;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .journey-info .wrap-select .select2-container--default .select2-selection--single .select2-selection__arrow {
-  top: 12px!important;
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .journey-info .wrap-select .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 12px !important;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator {
   padding-left: 0;
 }
 @media (max-width: 1399px) {
-  .main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator {
+  .main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator {
     padding-left: 0;
   }
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator h4 {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator h4 {
   font-family: 'VNF-ITC', sans-serif;
   margin-top: 10px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .media {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .media {
   margin: 0 0 25px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .media .media-left {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .media .media-left {
   padding-right: 30px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .media .media-left img {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .media .media-left img {
   width: 90px;
   border-radius: 50%;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .info-row {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .info-row {
   display: inline-block;
   margin-bottom: 15px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(1) {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(1) {
   width: 120px;
   float: left;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(2) {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .info-row > div:nth-child(2) {
   width: 200px;
   float: left;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .info-row .custom-input {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .info-row .custom-input {
   font-size: 18px;
   height: 34px;
   margin-top: -5px;
   padding: 0 10px;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .next-btn {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .next-btn {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -15208,23 +15859,23 @@ label.css-label:before {
   border-radius: 5px;
   padding: 6px 0;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .next-btn:hover,
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .next-btn:focus,
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .next-btn:active {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .next-btn:hover,
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .next-btn:focus,
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .next-btn:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .creator .next-btn[disabled] {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .creator .next-btn[disabled] {
   background-color: #999;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .wrap-finish {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .wrap-finish {
   text-align: center;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .wrap-finish h4 {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .wrap-finish h4 {
   font-family: 'VNF-ITC', sans-serif;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -15245,9 +15896,9 @@ label.css-label:before {
   border-radius: 5px;
   padding: 6px 0;
 }
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:hover,
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:focus,
-.main .list-services .service-item .order-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:active {
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:hover,
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:focus,
+.main .list-services .service-item .book-modal.modal .modal-dialog .modal-content .wrap-finish .back-btn:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);

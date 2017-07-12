@@ -56,11 +56,10 @@
       var id = $(this).attr('id');
       if ($(this).hasClass('active')) {
         $(this).removeClass('active');
-        $('.wrap-area-chk input[id="' + id + '-chk"]').prop('checked', false);
       } else {
         $(this).addClass('active');
-        $('.wrap-area-chk input[id="' + id + '-chk"]').prop('checked', true);
       }
+      $('.wrap-area-chk input[id="' + id + '-chk"]').trigger('click');
       return false;
     });
     $(this).on('click', '.wrap-active-area .wrap-area-chk input[type="checkbox"]', function () {

@@ -55,15 +55,15 @@
     /* =================================
      ===  Personal page                 ====
      =================================== */
-    $('.paap-personal .main-tabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-      if($('.paap-personal .main-tabs li.inbox-tab.active').length) {
-        $('.info-box').addClass('hidden');
-        $('.inbox-clients').removeClass('hidden');
-      } else {
-        $('.info-box').removeClass('hidden');
-        $('.inbox-clients').addClass('hidden');
-      }
-    });
+    // $('.paap-personal .main-tabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    //   if($('.paap-personal .main-tabs li.inbox-tab.active').length) {
+    //     $('.info-box').addClass('hidden');
+    //     $('.inbox-clients').removeClass('hidden');
+    //   } else {
+    //     $('.info-box').removeClass('hidden');
+    //     $('.inbox-clients').addClass('hidden');
+    //   }
+    // });
 
   });
 
