@@ -63,6 +63,7 @@
      =================================== */
     TweenMax.to($('.content li.home'), 0.8, {opacity: 1, ease: Power2.easeOut});
     handleHomeAnimation();
+    handleToHome();
     handleToPortfolio();
 
   });
@@ -1357,6 +1358,65 @@ function handleBackToOverview() {
     handlePortfolioAnimation(false, 1.2);
     handlePortfolioMini(true);
     $('.menu li[data-anchor="portfolio"]').attr('data-details', 0);
+    setTimeout(function () {
+      TweenMax.killAll();
+    }, 3000);
+  });
+}
+
+function handleToHome() {
+  $(document).on('click', '.logo a', function () {
+    var currentContent = $('.content li.active').attr("class").split(" ")[0];
+    if(currentContent === 'home') {
+      return false;
+    }
+    $('.content li').removeClass('active');
+    switch (currentContent) {
+      case 'portfolio':
+        handlePortfolioAnimation(true);
+        break;
+      case 'portfolio-1':
+        handlePortfolio1Animation(true);
+        break;
+      case 'portfolio-2':
+        handlePortfolio2Animation(true);
+        break;
+      case 'portfolio-3':
+        handlePortfolio3Animation(true);
+        break;
+      case 'portfolio-4':
+        handlePortfolio4Animation(true);
+        break;
+      case 'portfolio-5':
+        handlePortfolio5Animation(true);
+        break;
+      case 'portfolio-6':
+        handlePortfolio6Animation(true);
+        break;
+      case 'about':
+        handleAboutAnimation(true);
+        break;
+      case 'contact':
+        handleContactAnimation(true);
+        break;
+    }
+    TweenMax.fromTo($('.content .home'), 1,
+      {
+        y: $(window).height(),
+        opacity: 1,
+        zIndex: ++defaultZIndex
+      }, {
+        y: 0,
+        ease: Power3.easeIn,
+        delay: 0.3
+      });
+    handleHomeAnimation(false, 1);
+    handlePortfolioMini(true);
+    setTimeout(function () {
+      TweenMax.set($('.content li'), {zIndex: 0});
+      defaultZIndex = 1;
+      TweenMax.set($('.content .home'), {zIndex: 1});
+    }, 1200);
     setTimeout(function () {
       TweenMax.killAll();
     }, 3000);
