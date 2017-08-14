@@ -1011,15 +1011,6 @@ function handleScroll(event) {
           handleContactAnimation(false, 0.5);
           break;
       }
-      if(nextAnchor === 'contact') {
-        setTimeout(function () {
-          TweenMax.killAll();
-        }, 20000);
-      } else {
-        setTimeout(function () {
-          TweenMax.killAll();
-        }, 3000);
-      }
     } else if (delta > 0) {
       if (prevAnchor === 'portfolio') {
         prevAnchor = 'portfolio-' + portfolioId;
@@ -1112,9 +1103,6 @@ function handleScroll(event) {
           $('.menu li[data-anchor="portfolio"]').attr('data-details', 6);
           break;
       }
-      setTimeout(function () {
-        TweenMax.killAll();
-      }, 3000);
     }
     setTimeout(function () {
       completed = true;
