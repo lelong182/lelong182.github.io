@@ -1370,8 +1370,9 @@ function handleToHome() {
     if(currentContent === 'home') {
       return false;
     }
-    $('.content li').removeClass('active');
+    $('.menu li').removeClass('active');
     $('.menu li[data-anchor="home"]').addClass('active');
+    $('.content li').removeClass('active');
     switch (currentContent) {
       case 'portfolio':
         handlePortfolioAnimation(true);
