@@ -1371,6 +1371,7 @@ function handleToHome() {
       return false;
     }
     $('.content li').removeClass('active');
+    $('.menu li[data-anchor="home"]').addClass('active');
     switch (currentContent) {
       case 'portfolio':
         handlePortfolioAnimation(true);
