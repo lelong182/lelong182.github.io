@@ -81,9 +81,9 @@ function handleHomeAnimation(hide, delay) {
   if (hide) {
     TweenMax.fromTo(homeText1, 1,
       {
-        top: 0
+        scaleY: 1
       }, {
-        top: '+=100',
+        scaleY: 0,
         ease: Power3.easeIn
       });
     TweenMax.fromTo(homeText2, 1,
@@ -113,15 +113,22 @@ function handleHomeAnimation(hide, delay) {
   } else {
     $('.home .group-text').css('visibility', 'visible');
     $('.content .home').addClass('active');
-    var homeTL = new TimelineMax();
+
+    var homeTL = new TimelineMax(),
+      mySplitText = new SplitText(homeText1, {type:"words,chars"}),
+      chars = mySplitText.chars;
+    TweenLite.set(homeText1, {perspective:400, scaleY: 1});
+
     homeTL
-      .fromTo(homeText1, 1,
+      .staggerFrom(chars, 0.8,
         {
-          top: '+=100'
-        }, {
-          top: 0,
-          ease: Power4.easeOut
-        }, '+' + delay)
+          opacity:0,
+          scale:0,
+          y:80,
+          rotationX:180,
+          transformOrigin:"0% 50% -50",
+          ease: Back.easeOut
+        }, 0.01, '+' + delay)
       .fromTo(homeText2, 1.2,
         {
           top: '+=150',
@@ -130,7 +137,7 @@ function handleHomeAnimation(hide, delay) {
           top: 0,
           autoAlpha: 1,
           ease: Power4.easeOut
-        }, '-=.8')
+        }, '-=1.2')
       .fromTo(homeText3, 1.2,
         {
           top: '+=150',
@@ -913,6 +920,7 @@ function handleScroll(event) {
     } else {
       delta = -1 * event.deltaY;
     }
+    TweenMax.killAll();
     if (delta < 0) {
       if (currentAnchor === 'portfolio') {
         var nextPortfolio = 'portfolio-' + ++portfolioId;
@@ -1060,7 +1068,7 @@ function handleScroll(event) {
       }
       switch (prevAnchor) {
         case 'home':
-          handleHomeAnimation(false, 0.8);
+          handleHomeAnimation(false, 1);
           handlePortfolioAnimation(true);
           setTimeout(function () {
             TweenMax.set($('.content li'), {zIndex: 0});
@@ -1113,6 +1121,7 @@ function handleScroll(event) {
 
 function handleMenu() {
   $(document).on('click', '.menu li:not(.active) a', function () {
+    TweenMax.killAll();
     var anchor = $(this).parent().data('anchor');
     var $content = $('.content .' + anchor);
     var type = $content.data('type');
@@ -1201,7 +1210,7 @@ function handleMenu() {
     }
     switch (anchor) {
       case 'home':
-        handleHomeAnimation(false, 1);
+        handleHomeAnimation(false, 1.2);
         handlePortfolioMini(true);
         setTimeout(function () {
           TweenMax.set($('.content li'), {zIndex: 0});
@@ -1223,20 +1232,12 @@ function handleMenu() {
         handlePortfolioMini(true);
         break;
     }
-    if (anchor === 'contact') {
-      setTimeout(function () {
-        TweenMax.killAll();
-      }, 20000);
-    } else {
-      setTimeout(function () {
-        TweenMax.killAll();
-      }, 3000);
-    }
   });
 }
 
 function handleListPortfolio() {
   $(document).on('click', '.list-portfolio .portfolio-item, .list-portfolio-mini .portfolio-item', function () {
+    TweenMax.killAll();
     var anchor = $(this).data('value');
     $('.content li').removeClass('active');
     handlePortfolioAnimation(true);
@@ -1275,9 +1276,6 @@ function handleListPortfolio() {
     if ($('.list-portfolio-mini').css('visibility') == 'hidden') {
       handlePortfolioMini();
     }
-    setTimeout(function () {
-      TweenMax.killAll();
-    }, 3000);
   });
 
   function backgroundAnimation(content) {
@@ -1296,6 +1294,7 @@ function handleListPortfolio() {
 
 function handleToPortfolio() {
   $(document).on('click', '.to-portfolio', function () {
+    TweenMax.killAll();
     $('.menu li').removeClass('active');
     $('.menu li[data-anchor="portfolio"]').addClass('active');
     $('.content li').removeClass('active');
@@ -1312,14 +1311,12 @@ function handleToPortfolio() {
       });
     handlePortfolioAnimation(false, 1.2);
     $('.menu li[data-anchor="portfolio"]').attr('data-details', 0);
-    setTimeout(function () {
-      TweenMax.killAll();
-    }, 3000);
   });
 }
 
 function handleBackToOverview() {
   $(document).on('click', '.back-to-overview', function () {
+    TweenMax.killAll();
     var currentContent = $('.content li.active').attr("class").split(" ")[0];
     $('.content li').removeClass('active');
     switch (currentContent) {
@@ -1358,14 +1355,12 @@ function handleBackToOverview() {
     handlePortfolioAnimation(false, 1.2);
     handlePortfolioMini(true);
     $('.menu li[data-anchor="portfolio"]').attr('data-details', 0);
-    setTimeout(function () {
-      TweenMax.killAll();
-    }, 3000);
   });
 }
 
 function handleToHome() {
   $(document).on('click', '.logo a', function () {
+    TweenMax.killAll();
     var currentContent = $('.content li.active').attr("class").split(" ")[0];
     if(currentContent === 'home') {
       return false;
@@ -1412,15 +1407,12 @@ function handleToHome() {
         ease: Power3.easeIn,
         delay: 0.3
       });
-    handleHomeAnimation(false, 1);
+    handleHomeAnimation(false, 1.2);
     handlePortfolioMini(true);
     setTimeout(function () {
       TweenMax.set($('.content li'), {zIndex: 0});
       defaultZIndex = 1;
       TweenMax.set($('.content .home'), {zIndex: 1});
     }, 1200);
-    setTimeout(function () {
-      TweenMax.killAll();
-    }, 3000);
   });
 }
