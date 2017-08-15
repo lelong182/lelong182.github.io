@@ -114,21 +114,28 @@ function handleHomeAnimation(hide, delay) {
     $('.home .group-text').css('visibility', 'visible');
     $('.content .home').addClass('active');
 
-    var homeTL = new TimelineMax(),
-      mySplitText = new SplitText(homeText1, {type:"words,chars"}),
-      chars = mySplitText.chars;
-    TweenLite.set(homeText1, {perspective:400, scaleY: 1});
+    var homeTL = new TimelineMax();
+    // var mySplitText = new SplitText(homeText1, {type:"words,chars"});
+    // var chars = mySplitText.chars;
+    // TweenLite.set(homeText1, {perspective:400, scaleY: 1});
 
     homeTL
-      .staggerFrom(chars, 0.8,
+      // .staggerFrom(chars, 0.8,
+      //   {
+      //     opacity:0,
+      //     scale:0,
+      //     y:80,
+      //     rotationX:180,
+      //     transformOrigin:"0% 50% -50",
+      //     ease: Back.easeOut
+      //   }, 0.01, '+' + delay)
+      .fromTo(homeText1, 0.8,
         {
-          opacity:0,
-          scale:0,
-          y:80,
-          rotationX:180,
-          transformOrigin:"0% 50% -50",
-          ease: Back.easeOut
-        }, 0.01, '+' + delay)
+          scaleY: 0
+        }, {
+          scaleY: 1,
+          ease: Power4.easeOut
+        }, '+' + delay)
       .fromTo(homeText2, 1.2,
         {
           top: '+=150',
