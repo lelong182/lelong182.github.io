@@ -89,7 +89,7 @@ function getBgUrl(el) {
 }
 
 function backgroundLoaded(content, callback) {
-  var root = location.protocol + "//" + location.host + '/demo1/dist';
+  var root = location + 'dist';
   var listImages = {
     'home': root + '/images/photography-slide-one.jpg',
     'portfolio': root + '/images/portfolio-slide-two.jpg',
@@ -115,18 +115,74 @@ function backgroundLoaded(content, callback) {
     });
   }
   if($('.content .' + content + ' .main-bg').css('background-image') === 'none') {
+    var firstLoad = false;
     $('.content .' + content + ' .main-bg').css('background-image', 'url(' + listImages[content] + ')');
     var image = document.createElement('img');
     image.src = getBgUrl(document.getElementById(content + '-bg'));
     image.onload = function () {
-      activeAnimation(content, callback);
+      if(content === 'home') {
+        TweenMax.to($('.content .' + content), 0.5, {opacity: 1, ease: Power2.easeOut});
+        firstLoad = true;
+      }
+      activeAnimation(content, callback, firstLoad);
     };
   } else {
     activeAnimation(content, callback);
   }
 
-  function activeAnimation(content, callback) {
-    TweenMax.to($('.content li.' + content), 0.5, {opacity: 1, ease: Power2.easeOut});
+  function activeAnimation(content, callback, firstLoad) {
+    firstLoad = firstLoad || false;
+    if(!firstLoad) {
+      var windowWidth = $(window).width();
+      var windowHeight = $(window).height();
+      var $content = $('.content .' + content);
+      var type = $content.data('type');
+      switch (type) {
+        case 'bottom':
+          TweenMax.fromTo($content, 1,
+            {
+              y: windowHeight,
+              opacity: 1,
+              zIndex: ++defaultZIndex
+            }, {
+              y: 0,
+              ease: Power3.easeIn,
+              delay: 0.3
+            });
+          break;
+        case 'right':
+          TweenMax.fromTo($content, 1,
+            {
+              x: windowWidth,
+              opacity: 1,
+              zIndex: ++defaultZIndex
+            }, {
+              x: 0,
+              ease: Power3.easeIn,
+              delay: 0.3
+            });
+          break;
+        case 'scale':
+          TweenMax.fromTo($content, 1,
+            {
+              scale: 1.4,
+              autoAlpha: 0,
+              zIndex: ++defaultZIndex
+            }, {
+              scale: 1.4,
+              autoAlpha: 1,
+              ease: Power3.easeIn
+            });
+          TweenMax.fromTo($content, 20,
+            {
+              scale: 1.2
+            }, {
+              scale: 1,
+              ease: Power0.easeNone
+            });
+          break;
+      }
+    }
     if (typeof callback === "function") {
       callback();
     }
@@ -917,8 +973,10 @@ function handleContactAnimation(hide, delay) {
         }, '-=.8')
       .fromTo(contactText3, 1.5,
         {
+          autoAlpha: 0,
           xPercent: -100
         }, {
+          autoAlpha: 1,
           xPercent: 0,
           ease: Power4.easeOut
         }, '-=.8')
@@ -980,8 +1038,6 @@ function handleScroll(event) {
     var prevAnchor = activeMenu.prev().data('anchor');
     var portfolioMenu = $('.menu li[data-anchor="portfolio"]');
     var portfolioId = parseInt(portfolioMenu.attr('data-details'));
-    var windowWidth = $(window).width();
-    var windowHeight = $(window).height();
     $('.menu li').removeClass('active');
     $('.content li').removeClass('active');
 
@@ -1002,52 +1058,6 @@ function handleScroll(event) {
         }
       } else {
         $('.menu li[data-anchor="' + nextAnchor + '"]').addClass('active');
-      }
-      var type = $('.content .' + nextAnchor).data('type');
-      switch (type) {
-        case 'bottom':
-          TweenMax.fromTo($('.content .' + nextAnchor), 1,
-            {
-              y: windowHeight,
-              opacity: 1,
-              zIndex: ++defaultZIndex
-            }, {
-              y: 0,
-              ease: Power3.easeIn,
-              delay: 0.3
-            });
-          break;
-        case 'right':
-          TweenMax.fromTo($('.content .' + nextAnchor), 1,
-            {
-              x: windowWidth,
-              opacity: 1,
-              zIndex: ++defaultZIndex
-            }, {
-              x: 0,
-              ease: Power3.easeIn,
-              delay: 0.3
-            });
-          break;
-        case 'scale':
-          TweenMax.fromTo($('.content .' + nextAnchor), 1,
-            {
-              scale: 1.4,
-              autoAlpha: 0,
-              zIndex: ++defaultZIndex
-            }, {
-              scale: 1.4,
-              autoAlpha: 1,
-              ease: Power3.easeIn
-            });
-          TweenMax.fromTo($('.content .' + nextAnchor), 20,
-            {
-              scale: 1.2
-            }, {
-              scale: 1,
-              ease: Power0.easeNone
-            });
-          break;
       }
       switch (nextAnchor) {
         case 'portfolio':
@@ -1129,31 +1139,6 @@ function handleScroll(event) {
       } else {
         $('.menu li[data-anchor="' + prevAnchor + '"]').addClass('active');
       }
-      var type = $('.content .' + prevAnchor).data('type');
-      switch (type) {
-        case 'bottom':
-          TweenMax.fromTo($('.content .' + prevAnchor), 1,
-            {
-              y: -windowHeight,
-              opacity: 1,
-              zIndex: ++defaultZIndex
-            }, {
-              y: 0,
-              ease: Power3.easeIn
-            });
-          break;
-        case 'right':
-          TweenMax.fromTo($('.content .' + prevAnchor), 1,
-            {
-              x: -windowWidth,
-              opacity: 1,
-              zIndex: ++defaultZIndex
-            }, {
-              x: 0,
-              ease: Power3.easeIn
-            });
-          break;
-      }
       switch (prevAnchor) {
         case 'home':
           backgroundLoaded('home', function () {
@@ -1228,14 +1213,10 @@ function handleScroll(event) {
 function handleMenu() {
   $(document).on('click', '.menu li:not(.active) a', function () {
     TweenMax.killAll();
-    var anchor = $(this).parent().data('anchor');
-    var $content = $('.content .' + anchor);
-    var type = $content.data('type');
+    var thisParent = $(this).parent();
     var currentContent = $('.content li.active').attr("class").split(" ")[0];
-    var windowWidth = $(window).width();
-    var windowHeight = $(window).height();
     $('.menu li').removeClass('active');
-    $(this).parent().addClass('active');
+    thisParent.addClass('active');
     $('.content li').removeClass('active');
     switch (currentContent) {
       case 'home':
@@ -1269,52 +1250,7 @@ function handleMenu() {
         handleContactAnimation(true);
         break;
     }
-    switch (type) {
-      case 'bottom':
-        TweenMax.fromTo($content, 1,
-          {
-            y: windowHeight,
-            opacity: 1,
-            zIndex: ++defaultZIndex
-          }, {
-            y: 0,
-            ease: Power3.easeIn,
-            delay: 0.3
-          });
-        break;
-      case 'right':
-        TweenMax.fromTo($content, 1,
-          {
-            x: windowWidth,
-            opacity: 1,
-            zIndex: ++defaultZIndex
-          }, {
-            x: 0,
-            ease: Power3.easeIn,
-            delay: 0.3
-          });
-        break;
-      case 'scale':
-        TweenMax.fromTo($content, 1,
-          {
-            scale: 1.4,
-            autoAlpha: 0,
-            zIndex: ++defaultZIndex
-          }, {
-            scale: 1.4,
-            autoAlpha: 1,
-            ease: Power3.easeIn
-          });
-        TweenMax.fromTo($content, 20,
-          {
-            scale: 1.2
-          }, {
-            scale: 1,
-            ease: Power0.easeNone
-          });
-        break;
-    }
-    switch (anchor) {
+    switch (thisParent.data('anchor')) {
       case 'home':
         backgroundLoaded('home', function () {
           handleHomeAnimation(false, 1.2);
@@ -1412,19 +1348,11 @@ function handleToPortfolio() {
     $('.menu li').removeClass('active');
     $('.menu li[data-anchor="portfolio"]').addClass('active');
     $('.content li').removeClass('active');
-    handleHomeAnimation(true);
-    TweenMax.fromTo($('.content .portfolio'), 1,
-      {
-        y: $(window).height(),
-        opacity: 1,
-        zIndex: ++defaultZIndex
-      }, {
-        y: 0,
-        ease: Power3.easeIn,
-        delay: 0.3
-      });
-    handlePortfolioAnimation(false, 1.2);
-    $('.menu li[data-anchor="portfolio"]').attr('data-details', 0);
+    backgroundLoaded('portfolio', function () {
+      handleHomeAnimation(true);
+      handlePortfolioAnimation(false, 1.2);
+      $('.menu li[data-anchor="portfolio"]').attr('data-details', 0);
+    });
   });
 }
 
