@@ -76,6 +76,9 @@
 
 })(window.jQuery);
 
+var completed = true;
+var defaultZIndex = 0;
+
 function getBgUrl(el) {
   var bg = "";
   if (el.currentStyle) { // IE
@@ -102,25 +105,25 @@ function backgroundLoaded(content, callback) {
     'about': root + '/images/ABOUT-SLIDE-IMAGE.jpg',
     'contact': root + '/images/CONTACT-SLIDE-IMAGE.jpg'
   };
-  if(content === 'portfolio') {
-    $('.list-portfolio .portfolio-item').each(function() {
+  if (content === 'portfolio') {
+    $('.list-portfolio .portfolio-item').each(function () {
       var value = $(this).data('value');
       $(this).html('<img src="' + listImages[value] + '" alt="img" />');
     });
   }
-  if(content.indexOf('portfolio-') >= 0) {
-    $('.list-portfolio-mini .portfolio-item').each(function() {
+  if (content.indexOf('portfolio-') >= 0) {
+    $('.list-portfolio-mini .portfolio-item').each(function () {
       var value = $(this).data('value');
       $(this).html('<img src="' + listImages[value] + '" alt="img" />');
     });
   }
-  if($('.content .' + content + ' .main-bg').css('background-image') === 'none') {
+  if ($('.content .' + content + ' .main-bg').css('background-image') === 'none') {
     var firstLoad = false;
     $('.content .' + content + ' .main-bg').css('background-image', 'url(' + listImages[content] + ')');
     var image = document.createElement('img');
     image.src = getBgUrl(document.getElementById(content + '-bg'));
     image.onload = function () {
-      if(content === 'home') {
+      if (content === 'home') {
         TweenMax.to($('.content .' + content), 0.5, {opacity: 1, ease: Power2.easeOut});
         firstLoad = true;
       }
@@ -132,7 +135,7 @@ function backgroundLoaded(content, callback) {
 
   function activeAnimation(content, callback, firstLoad) {
     firstLoad = firstLoad || false;
-    if(!firstLoad) {
+    if (!firstLoad) {
       var windowWidth = $(window).width();
       var windowHeight = $(window).height();
       var $content = $('.content .' + content);
@@ -163,22 +166,31 @@ function backgroundLoaded(content, callback) {
             });
           break;
         case 'scale':
+          // TweenMax.fromTo($content, 1,
+          //   {
+          //     scale: 1.4,
+          //     autoAlpha: 0,
+          //     zIndex: ++defaultZIndex
+          //   }, {
+          //     scale: 1.4,
+          //     autoAlpha: 1,
+          //     ease: Power3.easeIn
+          //   });
           TweenMax.fromTo($content, 1,
             {
-              scale: 1.4,
-              autoAlpha: 0,
+              opacity: 0,
               zIndex: ++defaultZIndex
             }, {
-              scale: 1.4,
-              autoAlpha: 1,
+              opacity: 1,
               ease: Power3.easeIn
             });
-          TweenMax.fromTo($content, 20,
+          TweenMax.fromTo($content.find('.main-bg'), 10,
             {
               scale: 1.2
             }, {
               scale: 1,
-              ease: Power0.easeNone
+              ease: Power0.easeNone,
+              delay: 0.3
             });
           break;
       }
@@ -234,18 +246,18 @@ function handleHomeAnimation(hide, delay) {
     $('.content .home').addClass('active');
 
     var homeTL = new TimelineMax();
-    // var mySplitText = new SplitText(homeText1, {type:"words,chars"});
+    // var mySplitText = new SplitText(homeText1, {type: "words,chars"});
     // var chars = mySplitText.chars;
-    // TweenLite.set(homeText1, {perspective:400, scaleY: 1});
+    // TweenLite.set(homeText1, {perspective: 400, scaleY: 1});
 
     homeTL
       // .staggerFrom(chars, 0.8,
       //   {
-      //     opacity:0,
-      //     scale:0,
-      //     y:80,
-      //     rotationX:180,
-      //     transformOrigin:"0% 50% -50",
+      //     opacity: 0,
+      //     scale: 0,
+      //     y: 80,
+      //     rotationX: 180,
+      //     transformOrigin: "0% 50% -50",
       //     ease: Back.easeOut
       //   }, 0.01, '+' + delay)
       .fromTo(homeText1, 0.8,
@@ -1026,8 +1038,6 @@ function handlePortfolioMini(hide) {
   }
 }
 
-var completed = true;
-var defaultZIndex = 0;
 function handleScroll(event) {
   if (completed) {
     completed = false;
@@ -1040,7 +1050,12 @@ function handleScroll(event) {
     var portfolioId = parseInt(portfolioMenu.attr('data-details'));
     $('.menu li').removeClass('active');
     $('.content li').removeClass('active');
-
+    if (nextAnchor === undefined) {
+      nextAnchor = 'home';
+    }
+    if (prevAnchor === undefined) {
+      prevAnchor = 'contact';
+    }
     if (event.wheelDelta) {
       delta = event.wheelDelta;
     } else {
@@ -1060,6 +1075,17 @@ function handleScroll(event) {
         $('.menu li[data-anchor="' + nextAnchor + '"]').addClass('active');
       }
       switch (nextAnchor) {
+        case 'home':
+          backgroundLoaded('home', function () {
+            handleHomeAnimation(false, 1);
+            handleContactAnimation(true);
+            setTimeout(function () {
+              TweenMax.set($('.content li'), {zIndex: 0});
+              defaultZIndex = 1;
+              TweenMax.set($('.content .home'), {zIndex: 1});
+            }, 1200);
+          });
+          break;
         case 'portfolio':
           backgroundLoaded('portfolio', function () {
             handleHomeAnimation(true);
@@ -1139,6 +1165,7 @@ function handleScroll(event) {
       } else {
         $('.menu li[data-anchor="' + prevAnchor + '"]').addClass('active');
       }
+      console.log(prevAnchor);
       switch (prevAnchor) {
         case 'home':
           backgroundLoaded('home', function () {
@@ -1200,6 +1227,12 @@ function handleScroll(event) {
             handleAboutAnimation(false, 0.8);
             handleContactAnimation(true);
             $('.menu li[data-anchor="portfolio"]').attr('data-details', 6);
+          });
+          break;
+        case 'contact':
+          backgroundLoaded('contact', function () {
+            handleHomeAnimation(true);
+            handleContactAnimation(false, 0.5);
           });
           break;
       }
@@ -1293,53 +1326,46 @@ function handleListPortfolio() {
     handlePortfolioAnimation(true);
     switch (anchor) {
       case 'portfolio-1':
-        backgroundAnimation($('.content .portfolio-1'));
-        handlePortfolio1Animation(false, 1.2);
-        $('.menu li[data-anchor="portfolio"]').attr('data-details', 1);
+        backgroundLoaded('portfolio-1', function () {
+          handlePortfolio1Animation(false, 1.2);
+          $('.menu li[data-anchor="portfolio"]').attr('data-details', 1);
+        });
         break;
       case 'portfolio-2':
-        backgroundAnimation($('.content .portfolio-2'));
-        handlePortfolio2Animation(false, 1.2);
-        $('.menu li[data-anchor="portfolio"]').attr('data-details', 2);
+        backgroundLoaded('portfolio-2', function () {
+          handlePortfolio2Animation(false, 1.2);
+          $('.menu li[data-anchor="portfolio"]').attr('data-details', 2);
+        });
         break;
       case 'portfolio-3':
-        backgroundAnimation($('.content .portfolio-3'));
-        handlePortfolio3Animation(false, 1.2);
-        $('.menu li[data-anchor="portfolio"]').attr('data-details', 3);
+        backgroundLoaded('portfolio-3', function () {
+          handlePortfolio3Animation(false, 1.2);
+          $('.menu li[data-anchor="portfolio"]').attr('data-details', 3);
+        });
         break;
       case 'portfolio-4':
-        backgroundAnimation($('.content .portfolio-4'));
-        handlePortfolio4Animation(false, 1.2);
-        $('.menu li[data-anchor="portfolio"]').attr('data-details', 4);
+        backgroundLoaded('portfolio-4', function () {
+          handlePortfolio4Animation(false, 1.2);
+          $('.menu li[data-anchor="portfolio"]').attr('data-details', 4);
+        });
         break;
       case 'portfolio-5':
-        backgroundAnimation($('.content .portfolio-5'));
-        handlePortfolio5Animation(false, 1.2);
-        $('.menu li[data-anchor="portfolio"]').attr('data-details', 5);
+        backgroundLoaded('portfolio-5', function () {
+          handlePortfolio5Animation(false, 1.2);
+          $('.menu li[data-anchor="portfolio"]').attr('data-details', 5);
+        });
         break;
       case 'portfolio-6':
-        backgroundAnimation($('.content .portfolio-6'));
-        handlePortfolio6Animation(false, 1.2);
-        $('.menu li[data-anchor="portfolio"]').attr('data-details', 6);
+        backgroundLoaded('portfolio-6', function () {
+          handlePortfolio6Animation(false, 1.2);
+          $('.menu li[data-anchor="portfolio"]').attr('data-details', 6);
+        });
         break;
     }
     if ($('.list-portfolio-mini').css('visibility') == 'hidden') {
       handlePortfolioMini();
     }
   });
-
-  function backgroundAnimation(content) {
-    TweenMax.fromTo(content, 1,
-      {
-        x: $(window).width(),
-        opacity: 1,
-        zIndex: ++defaultZIndex
-      }, {
-        x: 0,
-        ease: Power3.easeIn,
-        delay: 0.3
-      });
-  }
 }
 
 function handleToPortfolio() {
@@ -1384,19 +1410,11 @@ function handleBackToOverview() {
         handlePortfolio6Animation(true);
         break;
     }
-    TweenMax.fromTo($('.content .portfolio'), 1,
-      {
-        y: $(window).height(),
-        opacity: 1,
-        zIndex: ++defaultZIndex
-      }, {
-        y: 0,
-        ease: Power3.easeIn,
-        delay: 0.3
-      });
-    handlePortfolioAnimation(false, 1.2);
-    handlePortfolioMini(true);
-    $('.menu li[data-anchor="portfolio"]').attr('data-details', 0);
+    backgroundLoaded('portfolio', function () {
+      handlePortfolioAnimation(false, 1.2);
+      handlePortfolioMini(true);
+      $('.menu li[data-anchor="portfolio"]').attr('data-details', 0);
+    });
   });
 }
 
@@ -1404,7 +1422,7 @@ function handleToHome() {
   $(document).on('click', '.logo a', function () {
     TweenMax.killAll();
     var currentContent = $('.content li.active').attr("class").split(" ")[0];
-    if(currentContent === 'home') {
+    if (currentContent === 'home') {
       return false;
     }
     $('.menu li').removeClass('active');
@@ -1439,22 +1457,14 @@ function handleToHome() {
         handleContactAnimation(true);
         break;
     }
-    TweenMax.fromTo($('.content .home'), 1,
-      {
-        y: $(window).height(),
-        opacity: 1,
-        zIndex: ++defaultZIndex
-      }, {
-        y: 0,
-        ease: Power3.easeIn,
-        delay: 0.3
-      });
-    handleHomeAnimation(false, 1.2);
-    handlePortfolioMini(true);
-    setTimeout(function () {
-      TweenMax.set($('.content li'), {zIndex: 0});
-      defaultZIndex = 1;
-      TweenMax.set($('.content .home'), {zIndex: 1});
-    }, 1200);
+    backgroundLoaded('home', function () {
+      handleHomeAnimation(false, 1.2);
+      handlePortfolioMini(true);
+      setTimeout(function () {
+        TweenMax.set($('.content li'), {zIndex: 0});
+        defaultZIndex = 1;
+        TweenMax.set($('.content .home'), {zIndex: 1});
+      }, 1200);
+    });
   });
 }
