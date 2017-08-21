@@ -24,7 +24,7 @@
   <link rel="shortcut icon" href="dist/images/favicon.png"/>
 
   <link rel="stylesheet" type="text/css" href="dist/styles/font-awesome.min.css"/>
-  <link rel="stylesheet" type="text/css" href="dist/styles/main.css?v=1.0.0"/>
+  <link rel="stylesheet" type="text/css" href="dist/styles/main.css"/>
 
   <!--[if lt IE 9]>
   <script src="dist/scripts/html5shiv.js"></script>
@@ -34,6 +34,11 @@
 
 </head>
 <body>
+
+  <div id="wrap-preloader">
+    <div id="preloader-bar"></div>
+    <div id="preloader">0%</div>
+  </div>
 
   <h1 class="logo" title="Brand Name">
     <a>Brand Name</a>
@@ -280,10 +285,40 @@
   </ul>
   <!-- /.content -->
 
+  <script src="dist/scripts/preloadjs-0.6.2.min.js"></script>
+  <script>
+    var root = location + 'dist';
+    var preloader = new createjs.LoadQueue();
+    preloader.on("progress", function (e) {
+      var perc = Math.round(e.progress * 100);
+      document.getElementById('preloader-bar').style.width = perc + '%';
+      document.getElementById('preloader').innerHTML = perc + '%';
+    }, this);
+    preloader.on("complete", function () {
+      document.getElementById('wrap-preloader').style.opacity = 0;
+      setTimeout(function () {
+        document.body.removeChild(document.getElementById('wrap-preloader'));
+      }, 500);
+    }, this);
+    preloader.loadManifest([
+      root + '/images/photography-slide-one.jpg',
+      root + '/images/slide-portfolio-one.jpg',
+      root + '/images/slide-portfolio-two.jpg',
+      root + '/images/slide-portfolio-three.jpg',
+      root + '/images/slide-portfolio-four.jpg',
+      root + '/images/slide-portfolio-five.jpg',
+      root + '/images/slide-portfolio-six.jpg',
+      root + '/images/logo.png',
+      '//ds.polyad.net/QC/SG/Framework/SplitText.min.01.js',
+      root + '/scripts/TweenMax.min.js',
+      root + '/scripts/jquery.min.js'
+    ]);
+  </script>
+
   <script src="dist/scripts/jquery.min.js"></script>
   <script src="dist/scripts/TweenMax.min.js"></script>
   <!--<script src="//ds.polyad.net/QC/SG/Framework/SplitText.min.01.js"></script>-->
-  <script src="dist/scripts/main.js?v=1.0.0"></script>
+  <script src="dist/scripts/main.js"></script>
 
 </body>
 </html>

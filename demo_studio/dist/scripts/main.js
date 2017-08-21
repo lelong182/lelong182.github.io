@@ -8,9 +8,18 @@
      ===  Preloader  ====
      =================================== */
     // var myAssets = [
-    //   'http://cdn4.webcreations907.com/ninezeroseven/photography-v2/wp-content/uploads/sites/17/revslider/photography-v2-demo/ABOUT-SLIDE-IMAGE.jpg',
-    //   'http://cdn4.webcreations907.com/ninezeroseven/photography-v2/wp-content/uploads/sites/17/revslider/photography-v2-demo/slide-portfolio-four.jpg',
-    //   'http://cdn4.webcreations907.com/ninezeroseven/photography-v2/wp-content/uploads/sites/17/revslider/photography-v2-demo/CONTACT-SLIDE-IMAGE.jpg'
+    //   'http://localhost/demo1/dist/images/photography-slide-one.jpg',
+    //   'http://localhost/demo1/dist/fonts/fontawesome-webfont.woff2',
+    //   'http://localhost/demo1/dist/fonts/noto-sans-v6-latin_vietnamese_latin-ext-regular.woff2',
+    //   'http://localhost/demo1/dist/fonts/noto-sans-v6-latin_vietnamese_latin-ext-700.woff2',
+    //   'http://localhost/demo1/dist/fonts/open-sans-v14-latin_vietnamese_latin-ext-300.woff2',
+    //   'http://localhost/demo1/dist/images/logo.png',
+    //   'http://localhost/demo1/dist/fonts/open-sans-v14-latin_vietnamese_latin-ext-700.woff2',
+    //   'http://localhost/demo1/dist/fonts/open-sans-v14-latin_vietnamese_latin-ext-regular.woff2',
+    //   'http://ds.polyad.net/QC/SG/Framework/SplitText.min.01.js',
+    //   'http://localhost/demo1/dist/scripts/TweenMax.min.js',
+    //   'http://localhost/demo1/dist/scripts/jquery.min.js',
+    //   'http://localhost/demo1/dist/scripts/modernizr.js'
     // ];
     // var preloader = new createjs.LoadQueue();
     // preloader.on("progress", onProgressPreloader, this);    // on progress listener
@@ -18,10 +27,10 @@
     // preloader.loadManifest(myAssets);                       // launch the loading process
     // function onProgressPreloader(e){
     //   var perc = Math.round(e.progress * 100);
-    //   document.getElementById('my-preloader__text').innerHTML = perc + '%';
+    //   document.getElementById('preloader').innerHTML = perc + '%';
     // }
     // function onCompletePreloader(){
-    //   document.getElementById('my-preloader__text').innerHTML = 'DONE';
+    //   document.getElementById('preloader').innerHTML = 'DONE';
     // }
 
 
@@ -29,7 +38,7 @@
      ===  Handle load background  ====
      =================================== */
     backgroundLoaded('home', function () {
-      handleHomeAnimation(false, 0.3);
+      handleHomeAnimation(false, 0.6);
     });
 
 
@@ -166,16 +175,6 @@ function backgroundLoaded(content, callback) {
             });
           break;
         case 'scale':
-          // TweenMax.fromTo($content, 1,
-          //   {
-          //     scale: 1.4,
-          //     autoAlpha: 0,
-          //     zIndex: ++defaultZIndex
-          //   }, {
-          //     scale: 1.4,
-          //     autoAlpha: 1,
-          //     ease: Power3.easeIn
-          //   });
           TweenMax.fromTo($content, 1,
             {
               opacity: 0,
@@ -186,7 +185,7 @@ function backgroundLoaded(content, callback) {
             });
           TweenMax.fromTo($content.find('.main-bg'), 10,
             {
-              scale: 1.2
+              scale: 1.4
             }, {
               scale: 1,
               ease: Power0.easeNone,
@@ -1165,7 +1164,6 @@ function handleScroll(event) {
       } else {
         $('.menu li[data-anchor="' + prevAnchor + '"]').addClass('active');
       }
-      console.log(prevAnchor);
       switch (prevAnchor) {
         case 'home':
           backgroundLoaded('home', function () {
