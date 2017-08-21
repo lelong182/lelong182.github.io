@@ -38,7 +38,7 @@
      ===  Handle load background  ====
      =================================== */
     backgroundLoaded('home', function () {
-      handleHomeAnimation(false, 0.6);
+      handleHomeAnimation(false, 0.4);
     });
 
 
@@ -101,7 +101,6 @@ function getBgUrl(el) {
 }
 
 function backgroundLoaded(content, callback) {
-  var root = location + 'dist';
   var listImages = {
     'home': root + '/images/photography-slide-one.jpg',
     'portfolio': root + '/images/portfolio-slide-two.jpg',

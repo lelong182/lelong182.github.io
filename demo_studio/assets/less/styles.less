@@ -25,6 +25,11 @@ body {
   color: #000;
   line-height: 1;
   overflow: hidden;
+  font-kerning: none;
+  -webkit-text-rendering: optimizeSpeed;
+  text-rendering: optimizeSpeed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 ul {
@@ -34,6 +39,40 @@ ul {
 a {
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+/*---------------------------------------
+  PRELOADER
+-----------------------------------------*/
+#wrap-preloader {
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  #preloader-bar {
+    background-color: #0ba9c2;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease 0s;
+  }
+  #preloader {
+    border-radius: 50%;
+    color: #0ba9c2;
+    font-size: 20px;
+    left: 50%;
+    letter-spacing: 1px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /*---------------------------------------
@@ -212,6 +251,12 @@ a {
       > * {
         position: relative;
       }
+      div {
+        display: inline-block;
+      }
+      &.no-hidden {
+        overflow: visible;
+      }
       .size-1 {
         font-size: 26px;
         letter-spacing: 1px;
@@ -249,9 +294,6 @@ a {
     }
   }
   .home {
-    .main-bg {
-      background-image: url('../images/photography-slide-one.jpg');
-    }
     .size-1 {
       margin-left: 5px;
     }
@@ -263,9 +305,6 @@ a {
     }
   }
   .portfolio {
-    .main-bg {
-      background-image: url('../images/portfolio-slide-two.jpg');
-    }
     .group-text {
       left: 15%;
     }
@@ -297,12 +336,12 @@ a {
     }
   }
   .portfolio-1 {
-    .main-bg {
-      background-image: url('../images/slide-portfolio-one.jpg');
-    }
     .group-text {
       left: 60%;
       top: 40%;
+      @media (max-width: 1600px) {
+        left: 50%;
+      }
     }
     .space-1 {
       margin: 15px 0 25px;
@@ -320,13 +359,13 @@ a {
     }
   }
   .portfolio-2 {
-    .main-bg {
-      background-image: url('../images/slide-portfolio-two.jpg');
-    }
     .group-text {
       left: 5%;
       top: 40%;
       width: 40%;
+      @media (max-width: 1600px) {
+        width: 50%;
+      }
     }
     .space-1 {
       margin: 15px 0 25px;
@@ -344,13 +383,13 @@ a {
     }
   }
   .portfolio-3 {
-    .main-bg {
-      background-image: url('../images/slide-portfolio-three.jpg');
-    }
     .group-text {
       left: 5%;
       top: 60%;
       width: 40%;
+      @media (max-width: 1600px) {
+        width: 50%;
+      }
     }
     .space-1 {
       margin: 15px 0 25px;
@@ -368,12 +407,12 @@ a {
     }
   }
   .portfolio-4 {
-    .main-bg {
-      background-image: url('../images/slide-portfolio-four.jpg');
-    }
     .group-text {
       left: 5%;
       width: 40%;
+      @media (max-width: 1600px) {
+        width: 50%;
+      }
     }
     .space-1 {
       margin: 15px 0 25px;
@@ -391,11 +430,11 @@ a {
     }
   }
   .portfolio-5 {
-    .main-bg {
-      background-image: url('../images/slide-portfolio-five.jpg');
-    }
     .group-text {
       left: 55%;
+      @media (max-width: 1600px) {
+        left: 40%;
+      }
     }
     .space-1 {
       margin: 15px 0 25px;
@@ -413,14 +452,14 @@ a {
     }
   }
   .portfolio-6 {
-    .main-bg {
-      background-image: url('../images/slide-portfolio-six.jpg');
-    }
     .group-text {
       bottom: 8%;
       text-align: center;
       top: initial;
       transform: translateX(-50%);
+      @media (max-width: 1600px) {
+        left: 45%;
+      }
     }
     .space-1 {
       margin: 15px 0 25px;
@@ -438,9 +477,6 @@ a {
     }
   }
   .about {
-    .main-bg {
-      background-image: url('../images/ABOUT-SLIDE-IMAGE.jpg');
-    }
     .size-1 {
       line-height: 1.2;
     }
@@ -456,9 +492,6 @@ a {
     }
   }
   .contact {
-    .main-bg {
-      background-image: url('../images/CONTACT-SLIDE-IMAGE.jpg');
-    }
     .space-1 {
       margin: 12px 0 20px;
     }

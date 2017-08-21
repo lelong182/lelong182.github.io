@@ -438,6 +438,11 @@ body {
   color: #000;
   line-height: 1;
   overflow: hidden;
+  font-kerning: none;
+  -webkit-text-rendering: optimizeSpeed;
+  text-rendering: optimizeSpeed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 ul {
   list-style: none;
@@ -445,6 +450,39 @@ ul {
 a {
   cursor: pointer;
   transition: all 0.3s ease;
+}
+/*---------------------------------------
+  PRELOADER
+-----------------------------------------*/
+#wrap-preloader {
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+#wrap-preloader #preloader-bar {
+  background-color: #0ba9c2;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease 0s;
+}
+#wrap-preloader #preloader {
+  border-radius: 50%;
+  color: #0ba9c2;
+  font-size: 20px;
+  left: 50%;
+  letter-spacing: 1px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 /*---------------------------------------
   LOGO
@@ -614,6 +652,12 @@ a {
 .content .group-text .wrap > * {
   position: relative;
 }
+.content .group-text .wrap div {
+  display: inline-block;
+}
+.content .group-text .wrap.no-hidden {
+  overflow: visible;
+}
 .content .group-text .wrap .size-1 {
   font-size: 26px;
   letter-spacing: 1px;
@@ -648,9 +692,6 @@ a {
   background-color: #fff;
   color: #0ba9c2;
 }
-.content .home .main-bg {
-  background-image: url('../images/photography-slide-one.jpg');
-}
 .content .home .size-1 {
   margin-left: 5px;
 }
@@ -659,9 +700,6 @@ a {
 }
 .content .home .space-2 {
   margin-top: 80px;
-}
-.content .portfolio .main-bg {
-  background-image: url('../images/portfolio-slide-two.jpg');
 }
 .content .portfolio .group-text {
   left: 15%;
@@ -692,12 +730,14 @@ a {
   width: 100%;
   position: relative;
 }
-.content .portfolio-1 .main-bg {
-  background-image: url('../images/slide-portfolio-one.jpg');
-}
 .content .portfolio-1 .group-text {
   left: 60%;
   top: 40%;
+}
+@media (max-width: 1600px) {
+  .content .portfolio-1 .group-text {
+    left: 50%;
+  }
 }
 .content .portfolio-1 .space-1 {
   margin: 15px 0 25px;
@@ -713,13 +753,15 @@ a {
   margin-left: 7px;
   width: 85%;
 }
-.content .portfolio-2 .main-bg {
-  background-image: url('../images/slide-portfolio-two.jpg');
-}
 .content .portfolio-2 .group-text {
   left: 5%;
   top: 40%;
   width: 40%;
+}
+@media (max-width: 1600px) {
+  .content .portfolio-2 .group-text {
+    width: 50%;
+  }
 }
 .content .portfolio-2 .space-1 {
   margin: 15px 0 25px;
@@ -735,13 +777,15 @@ a {
   margin-left: 7px;
   width: 85%;
 }
-.content .portfolio-3 .main-bg {
-  background-image: url('../images/slide-portfolio-three.jpg');
-}
 .content .portfolio-3 .group-text {
   left: 5%;
   top: 60%;
   width: 40%;
+}
+@media (max-width: 1600px) {
+  .content .portfolio-3 .group-text {
+    width: 50%;
+  }
 }
 .content .portfolio-3 .space-1 {
   margin: 15px 0 25px;
@@ -757,12 +801,14 @@ a {
   margin-left: 7px;
   width: 85%;
 }
-.content .portfolio-4 .main-bg {
-  background-image: url('../images/slide-portfolio-four.jpg');
-}
 .content .portfolio-4 .group-text {
   left: 5%;
   width: 40%;
+}
+@media (max-width: 1600px) {
+  .content .portfolio-4 .group-text {
+    width: 50%;
+  }
 }
 .content .portfolio-4 .space-1 {
   margin: 15px 0 25px;
@@ -778,11 +824,13 @@ a {
   margin-left: 7px;
   width: 85%;
 }
-.content .portfolio-5 .main-bg {
-  background-image: url('../images/slide-portfolio-five.jpg');
-}
 .content .portfolio-5 .group-text {
   left: 55%;
+}
+@media (max-width: 1600px) {
+  .content .portfolio-5 .group-text {
+    left: 40%;
+  }
 }
 .content .portfolio-5 .space-1 {
   margin: 15px 0 25px;
@@ -798,14 +846,16 @@ a {
   margin-left: 7px;
   width: 85%;
 }
-.content .portfolio-6 .main-bg {
-  background-image: url('../images/slide-portfolio-six.jpg');
-}
 .content .portfolio-6 .group-text {
   bottom: 8%;
   text-align: center;
   top: initial;
   transform: translateX(-50%);
+}
+@media (max-width: 1600px) {
+  .content .portfolio-6 .group-text {
+    left: 45%;
+  }
 }
 .content .portfolio-6 .space-1 {
   margin: 15px 0 25px;
@@ -821,9 +871,6 @@ a {
   margin-left: 7px;
   width: 50%;
 }
-.content .about .main-bg {
-  background-image: url('../images/ABOUT-SLIDE-IMAGE.jpg');
-}
 .content .about .size-1 {
   line-height: 1.2;
 }
@@ -836,9 +883,6 @@ a {
 }
 .content .about .space-2 {
   margin: 20px 0 60px;
-}
-.content .contact .main-bg {
-  background-image: url('../images/CONTACT-SLIDE-IMAGE.jpg');
 }
 .content .contact .space-1 {
   margin: 12px 0 20px;

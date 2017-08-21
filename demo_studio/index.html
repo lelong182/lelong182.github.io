@@ -296,6 +296,9 @@
     }, this);
     preloader.on("complete", function () {
       document.getElementById('wrap-preloader').style.opacity = 0;
+      var s = document.createElement('script');
+      s.setAttribute('src', root + '/scripts/main.js');
+      document.body.appendChild(s);
       setTimeout(function () {
         document.body.removeChild(document.getElementById('wrap-preloader'));
       }, 500);
@@ -318,7 +321,6 @@
   <script src="dist/scripts/jquery.min.js"></script>
   <script src="dist/scripts/TweenMax.min.js"></script>
   <!--<script src="//ds.polyad.net/QC/SG/Framework/SplitText.min.01.js"></script>-->
-  <script src="dist/scripts/main.js"></script>
 
 </body>
 </html>
