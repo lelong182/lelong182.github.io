@@ -288,7 +288,7 @@
   <script src="dist/scripts/preloadjs-0.6.2.min.js"></script>
   <script>
     var root = location + 'dist';
-    var preloader = new createjs.LoadQueue();
+    var preloader = new createjs.LoadQueue(false);
     preloader.on("progress", function (e) {
       var perc = Math.round(e.progress * 100);
       document.getElementById('preloader-bar').style.width = perc + '%';
@@ -305,17 +305,12 @@
     }, this);
     preloader.loadManifest([
       root + '/images/photography-slide-one.jpg',
-      root + '/images/slide-portfolio-one.jpg',
-      root + '/images/slide-portfolio-two.jpg',
-      root + '/images/slide-portfolio-three.jpg',
-      root + '/images/slide-portfolio-four.jpg',
-      root + '/images/slide-portfolio-five.jpg',
-      root + '/images/slide-portfolio-six.jpg',
       root + '/images/logo.png',
       '//ds.polyad.net/QC/SG/Framework/SplitText.min.01.js',
       root + '/scripts/TweenMax.min.js',
       root + '/scripts/jquery.min.js'
     ]);
+
   </script>
 
   <script src="dist/scripts/jquery.min.js"></script>
