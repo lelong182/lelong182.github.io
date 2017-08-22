@@ -1355,7 +1355,7 @@ function handleToHome() {
     $('.menu li').removeClass('active');
     $('.menu li[data-anchor="home"]').addClass('active');
     backgroundLoaded('home', function () {
-      handleHomeAnimation(false, 1.2);
+      handleHomeAnimation(false, 1.5);
       handlePortfolioMini(true);
       setTimeout(function () {
         TweenMax.set($('.content li'), {zIndex: 0});
