@@ -127,8 +127,42 @@ function backgroundLoaded(content, callback) {
     if (!firstLoad) {
       var windowWidth = $(window).width();
       var windowHeight = $(window).height();
+      var currentContent = $('.content li.active').attr("class").split(" ")[0];
       var $content = $('.content .' + content);
       var type = $content.data('type');
+      $('.content li').removeClass('active');
+      switch (currentContent) {
+        case 'home':
+          handleHomeAnimation(true);
+          break;
+        case 'portfolio':
+          handlePortfolioAnimation(true);
+          break;
+        case 'portfolio-1':
+          handlePortfolio1Animation(true);
+          break;
+        case 'portfolio-2':
+          handlePortfolio2Animation(true);
+          break;
+        case 'portfolio-3':
+          handlePortfolio3Animation(true);
+          break;
+        case 'portfolio-4':
+          handlePortfolio4Animation(true);
+          break;
+        case 'portfolio-5':
+          handlePortfolio5Animation(true);
+          break;
+        case 'portfolio-6':
+          handlePortfolio6Animation(true);
+          break;
+        case 'about':
+          handleAboutAnimation(true);
+          break;
+        case 'contact':
+          handleContactAnimation(true);
+          break;
+      }
       switch (type) {
         case 'bottom':
           TweenMax.fromTo($content, 1,
@@ -1028,7 +1062,6 @@ function handleScroll(event) {
     var portfolioMenu = $('.menu li[data-anchor="portfolio"]');
     var portfolioId = parseInt(portfolioMenu.attr('data-details'));
     $('.menu li').removeClass('active');
-    $('.content li').removeClass('active');
     if (nextAnchor === undefined) {
       nextAnchor = 'home';
     }
@@ -1056,8 +1089,7 @@ function handleScroll(event) {
       switch (nextAnchor) {
         case 'home':
           backgroundLoaded('home', function () {
-            handleHomeAnimation(false, 1);
-            handleContactAnimation(true);
+            handleHomeAnimation(false, 1.5);
             setTimeout(function () {
               TweenMax.set($('.content li'), {zIndex: 0});
               defaultZIndex = 1;
@@ -1067,58 +1099,49 @@ function handleScroll(event) {
           break;
         case 'portfolio':
           backgroundLoaded('portfolio', function () {
-            handleHomeAnimation(true);
             handlePortfolioAnimation(false, 1.2);
             $('.menu li[data-anchor="portfolio"]').attr('data-details', 0);
           });
           break;
         case 'portfolio-1':
           backgroundLoaded('portfolio-1', function () {
-            handlePortfolioAnimation(true);
             handlePortfolio1Animation(false, 1.2);
             handlePortfolioMini();
           });
           break;
         case 'portfolio-2':
           backgroundLoaded('portfolio-2', function () {
-            handlePortfolio1Animation(true);
             handlePortfolio2Animation(false, 1.2);
           });
           break;
         case 'portfolio-3':
           backgroundLoaded('portfolio-3', function () {
-            handlePortfolio2Animation(true);
             handlePortfolio3Animation(false, 1.2);
           });
           break;
         case 'portfolio-4':
           backgroundLoaded('portfolio-4', function () {
-            handlePortfolio3Animation(true);
             handlePortfolio4Animation(false, 1.2);
           });
           break;
         case 'portfolio-5':
           backgroundLoaded('portfolio-5', function () {
-            handlePortfolio4Animation(true);
             handlePortfolio5Animation(false, 1.2);
           });
           break;
         case 'portfolio-6':
           backgroundLoaded('portfolio-6', function () {
-            handlePortfolio5Animation(true);
             handlePortfolio6Animation(false, 1.2);
           });
           break;
         case 'about':
           backgroundLoaded('about', function () {
-            handlePortfolio6Animation(true);
             handleAboutAnimation(false, 1);
             handlePortfolioMini(true);
           });
           break;
         case 'contact':
           backgroundLoaded('contact', function () {
-            handleAboutAnimation(true);
             handleContactAnimation(false, 0.5);
           });
           break;
@@ -1147,8 +1170,7 @@ function handleScroll(event) {
       switch (prevAnchor) {
         case 'home':
           backgroundLoaded('home', function () {
-            handleHomeAnimation(false, 1);
-            handlePortfolioAnimation(true);
+            handleHomeAnimation(false, 1.5);
             setTimeout(function () {
               TweenMax.set($('.content li'), {zIndex: 0});
               defaultZIndex = 1;
@@ -1159,57 +1181,48 @@ function handleScroll(event) {
         case 'portfolio':
           backgroundLoaded('portfolio', function () {
             handlePortfolioAnimation(false, 0.8);
-            handlePortfolio1Animation(true);
             handlePortfolioMini(true);
           });
           break;
         case 'portfolio-1':
           backgroundLoaded('portfolio-1', function () {
             handlePortfolio1Animation(false, 0.8);
-            handlePortfolio2Animation(true);
           });
           break;
         case 'portfolio-2':
           backgroundLoaded('portfolio-2', function () {
             handlePortfolio2Animation(false, 0.8);
-            handlePortfolio3Animation(true);
           });
           break;
         case 'portfolio-3':
           backgroundLoaded('portfolio-3', function () {
             handlePortfolio3Animation(false, 0.8);
-            handlePortfolio4Animation(true);
           });
           break;
         case 'portfolio-4':
           backgroundLoaded('portfolio-4', function () {
             handlePortfolio4Animation(false, 0.8);
-            handlePortfolio5Animation(true);
           });
           break;
         case 'portfolio-5':
           backgroundLoaded('portfolio-5', function () {
             handlePortfolio5Animation(false, 0.8);
-            handlePortfolio6Animation(true);
           });
           break;
         case 'portfolio-6':
           backgroundLoaded('portfolio-6', function () {
             handlePortfolio6Animation(false, 0.8);
-            handleAboutAnimation(true);
             handlePortfolioMini();
           });
           break;
         case 'about':
           backgroundLoaded('about', function () {
             handleAboutAnimation(false, 0.8);
-            handleContactAnimation(true);
             $('.menu li[data-anchor="portfolio"]').attr('data-details', 6);
           });
           break;
         case 'contact':
           backgroundLoaded('contact', function () {
-            handleHomeAnimation(true);
             handleContactAnimation(false, 0.5);
           });
           break;
@@ -1225,46 +1238,12 @@ function handleMenu() {
   $(document).on('click', '.menu li:not(.active) a', function () {
     TweenMax.killAll();
     var thisParent = $(this).parent();
-    var currentContent = $('.content li.active').attr("class").split(" ")[0];
     $('.menu li').removeClass('active');
     thisParent.addClass('active');
-    $('.content li').removeClass('active');
-    switch (currentContent) {
-      case 'home':
-        handleHomeAnimation(true);
-        break;
-      case 'portfolio':
-        handlePortfolioAnimation(true);
-        break;
-      case 'portfolio-1':
-        handlePortfolio1Animation(true);
-        break;
-      case 'portfolio-2':
-        handlePortfolio2Animation(true);
-        break;
-      case 'portfolio-3':
-        handlePortfolio3Animation(true);
-        break;
-      case 'portfolio-4':
-        handlePortfolio4Animation(true);
-        break;
-      case 'portfolio-5':
-        handlePortfolio5Animation(true);
-        break;
-      case 'portfolio-6':
-        handlePortfolio6Animation(true);
-        break;
-      case 'about':
-        handleAboutAnimation(true);
-        break;
-      case 'contact':
-        handleContactAnimation(true);
-        break;
-    }
     switch (thisParent.data('anchor')) {
       case 'home':
         backgroundLoaded('home', function () {
-          handleHomeAnimation(false, 1.2);
+          handleHomeAnimation(false, 1.5);
           handlePortfolioMini(true);
           setTimeout(function () {
             TweenMax.set($('.content li'), {zIndex: 0});
@@ -1300,8 +1279,6 @@ function handleListPortfolio() {
   $(document).on('click', '.list-portfolio .portfolio-item, .list-portfolio-mini .portfolio-item', function () {
     TweenMax.killAll();
     var anchor = $(this).data('value');
-    $('.content li').removeClass('active');
-    handlePortfolioAnimation(true);
     switch (anchor) {
       case 'portfolio-1':
         backgroundLoaded('portfolio-1', function () {
@@ -1351,9 +1328,7 @@ function handleToPortfolio() {
     TweenMax.killAll();
     $('.menu li').removeClass('active');
     $('.menu li[data-anchor="portfolio"]').addClass('active');
-    $('.content li').removeClass('active');
     backgroundLoaded('portfolio', function () {
-      handleHomeAnimation(true);
       handlePortfolioAnimation(false, 1.2);
       $('.menu li[data-anchor="portfolio"]').attr('data-details', 0);
     });
@@ -1363,31 +1338,6 @@ function handleToPortfolio() {
 function handleBackToOverview() {
   $(document).on('click', '.back-to-overview', function () {
     TweenMax.killAll();
-    var currentContent = $('.content li.active').attr("class").split(" ")[0];
-    $('.content li').removeClass('active');
-    switch (currentContent) {
-      case 'portfolio':
-        handlePortfolioAnimation(true);
-        break;
-      case 'portfolio-1':
-        handlePortfolio1Animation(true);
-        break;
-      case 'portfolio-2':
-        handlePortfolio2Animation(true);
-        break;
-      case 'portfolio-3':
-        handlePortfolio3Animation(true);
-        break;
-      case 'portfolio-4':
-        handlePortfolio4Animation(true);
-        break;
-      case 'portfolio-5':
-        handlePortfolio5Animation(true);
-        break;
-      case 'portfolio-6':
-        handlePortfolio6Animation(true);
-        break;
-    }
     backgroundLoaded('portfolio', function () {
       handlePortfolioAnimation(false, 1.2);
       handlePortfolioMini(true);
@@ -1399,42 +1349,11 @@ function handleBackToOverview() {
 function handleToHome() {
   $(document).on('click', '.logo a', function () {
     TweenMax.killAll();
-    var currentContent = $('.content li.active').attr("class").split(" ")[0];
-    if (currentContent === 'home') {
+    if ($('.content li.active').attr("class").split(" ")[0] === 'home') {
       return false;
     }
     $('.menu li').removeClass('active');
     $('.menu li[data-anchor="home"]').addClass('active');
-    $('.content li').removeClass('active');
-    switch (currentContent) {
-      case 'portfolio':
-        handlePortfolioAnimation(true);
-        break;
-      case 'portfolio-1':
-        handlePortfolio1Animation(true);
-        break;
-      case 'portfolio-2':
-        handlePortfolio2Animation(true);
-        break;
-      case 'portfolio-3':
-        handlePortfolio3Animation(true);
-        break;
-      case 'portfolio-4':
-        handlePortfolio4Animation(true);
-        break;
-      case 'portfolio-5':
-        handlePortfolio5Animation(true);
-        break;
-      case 'portfolio-6':
-        handlePortfolio6Animation(true);
-        break;
-      case 'about':
-        handleAboutAnimation(true);
-        break;
-      case 'contact':
-        handleContactAnimation(true);
-        break;
-    }
     backgroundLoaded('home', function () {
       handleHomeAnimation(false, 1.2);
       handlePortfolioMini(true);
