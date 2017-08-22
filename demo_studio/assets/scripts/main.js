@@ -5,33 +5,20 @@
   $(document).ready(function () {
 
     /* =================================
-     ===  Preloader  ====
+     ===  Load Profolio Items  ====
      =================================== */
-    // var myAssets = [
-    //   'http://localhost/demo1/dist/images/photography-slide-one.jpg',
-    //   'http://localhost/demo1/dist/fonts/fontawesome-webfont.woff2',
-    //   'http://localhost/demo1/dist/fonts/noto-sans-v6-latin_vietnamese_latin-ext-regular.woff2',
-    //   'http://localhost/demo1/dist/fonts/noto-sans-v6-latin_vietnamese_latin-ext-700.woff2',
-    //   'http://localhost/demo1/dist/fonts/open-sans-v14-latin_vietnamese_latin-ext-300.woff2',
-    //   'http://localhost/demo1/dist/images/logo.png',
-    //   'http://localhost/demo1/dist/fonts/open-sans-v14-latin_vietnamese_latin-ext-700.woff2',
-    //   'http://localhost/demo1/dist/fonts/open-sans-v14-latin_vietnamese_latin-ext-regular.woff2',
-    //   'http://ds.polyad.net/QC/SG/Framework/SplitText.min.01.js',
-    //   'http://localhost/demo1/dist/scripts/TweenMax.min.js',
-    //   'http://localhost/demo1/dist/scripts/jquery.min.js',
-    //   'http://localhost/demo1/dist/scripts/modernizr.js'
-    // ];
-    // var preloader = new createjs.LoadQueue();
-    // preloader.on("progress", onProgressPreloader, this);    // on progress listener
-    // preloader.on("complete", onCompletePreloader, this);    // on complete listener
-    // preloader.loadManifest(myAssets);                       // launch the loading process
-    // function onProgressPreloader(e){
-    //   var perc = Math.round(e.progress * 100);
-    //   document.getElementById('preloader').innerHTML = perc + '%';
-    // }
-    // function onCompletePreloader(){
-    //   document.getElementById('preloader').innerHTML = 'DONE';
-    // }
+    var listImages = {
+      'portfolio-1': root + '/images/slide-portfolio-one.jpg',
+      'portfolio-2': root + '/images/slide-portfolio-two.jpg',
+      'portfolio-3': root + '/images/slide-portfolio-three.jpg',
+      'portfolio-4': root + '/images/slide-portfolio-four.jpg',
+      'portfolio-5': root + '/images/slide-portfolio-five.jpg',
+      'portfolio-6': root + '/images/slide-portfolio-six.jpg'
+    };
+    $('.list-portfolio .portfolio-item').each(function () {
+      var value = $(this).data('value');
+      $(this).html('<img src="' + listImages[value] + '" alt="img" />');
+    });
 
 
     /* =================================
@@ -113,12 +100,6 @@ function backgroundLoaded(content, callback) {
     'about': root + '/images/ABOUT-SLIDE-IMAGE.jpg',
     'contact': root + '/images/CONTACT-SLIDE-IMAGE.jpg'
   };
-  if (content === 'portfolio') {
-    $('.list-portfolio .portfolio-item').each(function () {
-      var value = $(this).data('value');
-      $(this).html('<img src="' + listImages[value] + '" alt="img" />');
-    });
-  }
   if (content.indexOf('portfolio-') >= 0) {
     $('.list-portfolio-mini .portfolio-item').each(function () {
       var value = $(this).data('value');
