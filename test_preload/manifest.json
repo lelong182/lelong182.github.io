@@ -1,0 +1,15 @@
+{
+  "app.css": "styles.css",
+  "app.js": "app.js",
+  "favicons/logo.png": "favicons/.cache",
+  "fonts/roboto-v16-vietnamese_latin_latin-ext-700.eot": "fonts/7345066add454580ed04765b7bbb31db.eot",
+  "fonts/roboto-v16-vietnamese_latin_latin-ext-700.svg": "fonts/57888be7f3e68a7050452ea3157cf4de.svg",
+  "fonts/roboto-v16-vietnamese_latin_latin-ext-700.ttf": "fonts/ee7b96fa85d8fdb8c126409326ac2d2b.ttf",
+  "fonts/roboto-v16-vietnamese_latin_latin-ext-regular.eot": "fonts/6866c2b6420618fdf5d3b082ca0c10ff.eot",
+  "fonts/roboto-v16-vietnamese_latin_latin-ext-regular.svg": "fonts/8681f434273fd6a267b1a16a035c5f79.svg",
+  "fonts/roboto-v16-vietnamese_latin_latin-ext-regular.ttf": "fonts/3e1af3ef546b9e6ecef9f3ba197bf7d2.ttf",
+  "images/logo.png": "images/d30fcbcc6b6916feef84b64535056976.png",
+  "images/slide-portfolio-five.jpg": "images/ec4b0e0f8571529f27cee7653ee43c02.jpg",
+  "images/slide-portfolio-three.jpg": "images/d1d0177f1c54fc131e8eadd9f71a27ee.jpg",
+  "vendor.js": "vendor.js"
+}
