@@ -9,7 +9,11 @@
 	</head>
 	<body>
 		<a-scene>
-			<a-box color="red" position="0 2 -5" rotation="0 45 45"></a-box>
+			<!-- <a-box color="red" position="0 2 -5" rotation="0 45 45"></a-box> -->
+				<a-assets>
+					<a-asset-item id="long3d" src="long3d.dae"></a-asset-item>
+				</a-assets>
+				<a-entity position="-3 2 -10" collada-model="#long3d"></a-entity>
 		</a-scene>
 	</body>
 </html>
