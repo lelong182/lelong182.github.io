@@ -10,7 +10,10 @@
 	</head>
 	<body>
 		<a-scene>
-			<a-box src="wooden.jpg" position="0 1 -5" rotation="0 45 45"></a-box>
+			<a-assets>
+				<img id="wooden" src="wooden.jpg">
+			</a-assets>
+			<a-box src="#wooden" position="0 1 -5" rotation="0 45 45"></a-box>
 			<!-- <a-sky color="#222"></a-sky> -->
         	<a-entity environment="preset: forest;"></a-entity>
 			<!--
