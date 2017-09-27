@@ -1,0 +1,21 @@
+{
+  "name": "aframe_demo",
+  "description": "A-Frame Demo",
+  "main": "webpack.config.js",
+  "authors": [
+    "lelong182"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "aframe": "^0.7.0",
+    "jquery": "^3.2.1"
+  }
+}
