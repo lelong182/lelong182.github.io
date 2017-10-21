@@ -7512,12 +7512,14 @@ header.header .lang-switch li a {
 .main-content.about .top-content .jarallax {
   background-image: url('../images/top-about.jpg');
 }
-.main-content.about .about-details {
-  padding: 55px 0 30px;
-}
 .main-content.about .about-details .about-1 {
   background-color: #f5f5f5;
   padding-bottom: 15px;
+  padding-top: 55px;
+}
+.main-content.about .about-details .about-2 {
+  padding-top: 55px;
+  padding-bottom: 30px;
 }
 .main-content.about .about-details .caption {
   margin: 0;
