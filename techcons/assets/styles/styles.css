@@ -7033,16 +7033,13 @@ CUSTOM PADDING & MARGIN
 .pdt-0 {
   padding-top: 0px !important;
 }
-@media (min-width: 991px) {
+@media (min-width: 480px) {
   .pdl-10 {
     padding-left: 10px !important;
   }
 }
-.pdl-5 {
-  padding-left: 5px !important;
-}
-@media (max-width: 767px) {
-  .pdl-5-xs {
+@media (min-width: 480px) {
+  .pdl-5 {
     padding-left: 5px !important;
   }
 }
@@ -7056,16 +7053,13 @@ CUSTOM PADDING & MARGIN
     padding-left: 70px !important;
   }
 }
-@media (min-width: 991px) {
+@media (min-width: 480px) {
   .pdr-10 {
     padding-right: 10px !important;
   }
 }
-.pdr-5 {
-  padding-right: 5px !important;
-}
-@media (max-width: 767px) {
-  .pdr-5-xs {
+@media (min-width: 480px) {
+  .pdr-5 {
     padding-right: 5px !important;
   }
 }
@@ -7211,6 +7205,9 @@ label.css-label:before {
   width: 22px;
 }
 /* ---------------------------------------
+    CUSTOM PADDING & MARGIN
+----------------------------------------- */
+/* ---------------------------------------
     PARALLAX
 ----------------------------------------- */
 .parallax {
@@ -7229,6 +7226,7 @@ label.css-label:before {
 header.header {
   background-color: #fff;
   height: 80px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
   /* ---------------------------------------
       LOGO
   ----------------------------------------- */
@@ -7686,6 +7684,143 @@ header.header .lang-switch li a {
 }
 .main-content.consult .consult-details .container {
   position: relative;
+}
+.main-content.contact .contact-details {
+  overflow: hidden;
+}
+.main-content.contact .contact-details .jarallax {
+  position: relative;
+  z-index: 0;
+  min-height: 768px;
+}
+@media (max-width: 991px) {
+  .main-content.contact .contact-details .jarallax {
+    min-height: 820px;
+  }
+}
+@media (max-width: 767px) {
+  .main-content.contact .contact-details .jarallax {
+    display: none;
+  }
+}
+.main-content.contact .contact-details .jarallax:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.main-content.contact .contact-details .contact-bg {
+  background-image: url('../images/home-bg-1.jpg');
+  width: 50%;
+  float: left;
+}
+.main-content.contact .contact-details .contact-content {
+  width: 50%;
+  float: left;
+  padding: 60px 40px;
+}
+@media (max-width: 767px) {
+  .main-content.contact .contact-details .contact-content {
+    width: 100%;
+    float: initial;
+  }
+}
+@media (max-width: 480px) {
+  .main-content.contact .contact-details .contact-content {
+    padding: 40px 35px 25px;
+  }
+}
+.main-content.contact .contact-details .contact-content .contact-info {
+  color: #888;
+  margin-bottom: 75px;
+}
+@media (max-width: 767px) {
+  .main-content.contact .contact-details .contact-content .contact-info {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .main-content.contact .contact-details .contact-content .contact-info {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .main-content.contact .contact-details .contact-content .contact-info br {
+    display: none;
+  }
+}
+.main-content.contact .contact-details .contact-content .contact-info p {
+  line-height: 1.7;
+}
+.main-content.contact .contact-details .contact-content .contact-info .highlight {
+  color: #000;
+}
+.main-content.contact .contact-details .contact-content .contact-form {
+  margin-right: 15%;
+}
+@media (max-width: 1399px) {
+  .main-content.contact .contact-details .contact-content .contact-form {
+    margin-right: 5%;
+  }
+}
+@media (max-width: 991px) {
+  .main-content.contact .contact-details .contact-content .contact-form {
+    margin-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .main-content.contact .contact-details .contact-content .contact-form .input-name {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .main-content.contact .contact-details .contact-content .contact-form .col-xs-6 {
+    width: 100% !important;
+    float: initial;
+  }
+}
+.main-content.contact .contact-details .contact-content .contact-form .form-group {
+  margin-bottom: 20px;
+}
+.main-content.contact .contact-details .contact-content .contact-form input[type="text"],
+.main-content.contact .contact-details .contact-content .contact-form input[type="email"] {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #bdbdbd;
+  color: #757575;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+}
+.main-content.contact .contact-details .contact-content .contact-form input[type="text"]:focus,
+.main-content.contact .contact-details .contact-content .contact-form input[type="email"]:focus {
+  border-color: #326082;
+  color: #000;
+}
+.main-content.contact .contact-details .contact-content .contact-form textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #bdbdbd;
+  color: #757575;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.main-content.contact .contact-details .contact-content .contact-form textarea:focus {
+  border-color: #326082;
+  color: #000;
+}
+.main-content.contact .contact-details .contact-content .contact-form button[type="submit"] {
+  background-color: #326082;
+  height: 40px;
+  border: none;
+  color: #fff;
+  width: 100px;
+  transition: all 0.3s ease;
+}
+.main-content.contact .contact-details .contact-content .contact-form button[type="submit"]:hover,
+.main-content.contact .contact-details .contact-content .contact-form button[type="submit"]:focus {
+  background-color: #EF5350;
 }
 /* ---------------------------------------
     SLIDER
