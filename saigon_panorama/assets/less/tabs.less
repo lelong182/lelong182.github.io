@@ -1,0 +1,68 @@
+ul {
+  overflow: hidden;
+  position: relative;
+  z-index: 200;
+  li {
+    width: 25%;
+    float: left;
+    list-style: none;
+    height: 50px;
+    text-align: center;
+    background-color: rgba(32, 133, 188, 0.7);
+    border-left: 1px solid #28a1ef;
+    &:first-child {
+      border-left: none;
+    }
+    &.active {
+      background: rgba(32, 133, 188, 0.7) url('../images/active-bg.png') no-repeat center / cover;
+      a {
+        color: #005d9e;
+        cursor: default;
+        .light-icon {
+          background-image: url('../images/active-light-icon.png');
+        }
+        .play-icon {
+          background-image: url('../images/active-play-icon.png');
+        }
+        .envelope-icon {
+          background-image: url('../images/active-envelope-icon.png');
+        }
+        .marker-icon {
+          background-image: url('../images/active-marker-icon.png');
+        }
+      }
+    }
+    a {
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      padding-top: 3px;
+      span {
+        display: inline-block;
+        height: 30px;
+        background-position-y: center;
+      }
+      .light-icon {
+        background-image: url('../images/light-icon.png');
+        background-repeat: no-repeat;
+        width: 14px;
+      }
+      .play-icon {
+        background-image: url('../images/play-icon.png');
+        background-repeat: no-repeat;
+        width: 21px;
+      }
+      .envelope-icon {
+        background-image: url('../images/envelope-icon.png');
+        background-repeat: no-repeat;
+        width: 22px;
+      }
+      .marker-icon {
+        background-image: url('../images/marker-icon.png');
+        background-repeat: no-repeat;
+        width: 16px;
+      }
+    }
+  }
+}

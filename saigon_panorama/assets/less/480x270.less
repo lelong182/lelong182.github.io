@@ -1,0 +1,97 @@
+/*---------------------------------------
+  NORMALIZE
+-----------------------------------------*/
+@import "./normalize";
+/*---------------------------------------
+  MIXINS
+-----------------------------------------*/
+@import "./mixins";
+/*---------------------------------------
+  GENERAL
+-----------------------------------------*/
+@import "./general";
+
+/*---------------------------------------
+  MAIN STYLES
+-----------------------------------------*/
+.vne-rmd {
+  font-size: 7px;
+  &.container {
+    .container(480px, 270px);
+  }
+  .action-link {
+    .action-link;
+  }
+  .hidden {
+    display: none;
+  }
+  .section-1 {
+    span {
+      position: absolute;
+    }
+    .logo {
+      background: url('../images/logo.png') no-repeat;
+      width: 96px;
+      height: 57px;
+      top: 15px;
+      left: 60px;
+    }
+    .txt-1 {
+      background: url('../images/txt-1.png') no-repeat;
+      width: 158px;
+      height: 7px;
+      top: 84px;
+      left: 28px;
+    }
+    .txt-2 {
+      background: url('../images/txt-2.png') no-repeat;
+      width: 158px;
+      height: 13px;
+      top: 95px;
+      left: 28px;
+    }
+    .txt-3 {
+      background: url('../images/txt-3.png') no-repeat;
+      width: 158px;
+      height: 9px;
+      top: 113px;
+      left: 28px;
+    }
+  }
+  .section-2 {
+    width: 256px;
+    height: 147px;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 200;
+    div[class^="content"] {
+      .section-2-content;
+    }
+    /*---------------------------------------
+      SLIDESHOW
+    -----------------------------------------*/
+    @import "./slides";
+    .video {
+      .section-2-video(56.645%);
+    }
+    .content-3 {
+      background-color: rgba(255, 255, 255, 0.6);
+      .section-2-form ('480x270');
+    }
+    #map {
+      .section-2-map;
+    }
+  }
+  .section-3 {
+    width: 256px;
+    position: absolute;
+    top: 157px;
+    right: 10px;
+    /*---------------------------------------
+      TABS
+    -----------------------------------------*/
+    @import "./tabs";
+  }
+}

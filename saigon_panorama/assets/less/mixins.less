@@ -1,0 +1,160 @@
+.container(@width, @height) {
+  width: @width;
+  height: @height;
+  background: url('../images/bg.jpg') no-repeat;
+  border: 1px solid #c0c0c0;
+  position: relative;
+}
+
+.action-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.section-2-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.section-2-video(@pdb) {
+  position: relative;
+  padding-bottom: @pdb;
+  height: 0;
+  overflow: hidden;
+  background-color: #000;
+  z-index: 999;
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.section-2-form (@size) when (@size = '300x600') {
+  form {
+    padding: 15px 20px 0;
+    input[type="text"], input[type="email"] {
+      height: 25px;
+      margin-bottom: 8px;
+      font-size: 12px;
+      padding: 0 10px;
+    }
+    button[type="submit"] {
+      height: 27px;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    .note {
+      font-size: 10px;
+    }
+  }
+  .successfully-content {
+    font-size: 11px;
+    padding-top: 30px;
+    h4 {
+      font-size: 13px;
+      margin: 10px 0 5px;
+    }
+  }
+}
+
+.section-2-form (@size) when (@size = '480x270') {
+  form {
+    padding: 12px 20px 0;
+    input[type="text"], input[type="email"] {
+      height: 23px;
+      margin-bottom: 6px;
+      font-size: 10px;
+      padding: 0 8px;
+    }
+    button[type="submit"] {
+      height: 23px;
+      font-size: 10px;
+      margin-bottom: 6px;
+    }
+    .note {
+      font-size: 9px;
+    }
+  }
+  .successfully-content {
+    font-size: 9px;
+    line-height: 1.2;
+    padding-top: 26px;
+    h4 {
+      font-size: 11px;
+      margin: 8px 0 3px;
+    }
+  }
+}
+
+.section-2-form (@size) {
+  form {
+    transition: all 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    &.done {
+      opacity: 0;
+      visibility: hidden;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      border: 1px solid #6bbfe7;
+      border-radius: 3px;
+      color: #333;
+    }
+    button[type="submit"] {
+      background-color: #2a9971;
+      border: none;
+      width: 100%;
+      border-radius: 3px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .note {
+      font-style: italic;
+      text-align: center;
+      color: #666;
+    }
+  }
+  .successfully-content {
+    text-align: center;
+    color: #666;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    h4 {
+      color: #1a2837;
+    }
+  }
+}
+
+.section-2-map {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}

@@ -1,0 +1,94 @@
+/*---------------------------------------
+  NORMALIZE
+-----------------------------------------*/
+@import "./normalize";
+/*---------------------------------------
+  MIXINS
+-----------------------------------------*/
+@import "./mixins";
+/*---------------------------------------
+  GENERAL
+-----------------------------------------*/
+@import "./general";
+
+/*---------------------------------------
+  MAIN STYLES
+-----------------------------------------*/
+.vne-rmd {
+  font-size: 8px;
+  &.container {
+    .container(300px, 600px);
+  }
+  .action-link {
+    .action-link;
+  }
+  .hidden {
+    display: none;
+  }
+  .section-1 {
+    text-align: center;
+    height: 170px;
+    position: relative;
+    span {
+      position: absolute;
+    }
+    .logo {
+      background: url('../images/logo.png') no-repeat;
+      width: 112px;
+      height: 67px;
+      top: 27px;
+      left: 90px;
+    }
+    .txt-1 {
+      background: url('../images/txt-1.png') no-repeat;
+      width: 185px;
+      height: 9px;
+      top: 112px;
+      left: 50px;
+    }
+    .txt-2 {
+      background: url('../images/txt-2.png') no-repeat;
+      width: 185px;
+      height: 16px;
+      top: 125px;
+      left: 50px;
+    }
+    .txt-3 {
+      background: url('../images/txt-3.png') no-repeat;
+      width: 185px;
+      height: 11px;
+      top: 145px;
+      left: 50px;
+    }
+  }
+  .section-2 {
+    height: 172px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    z-index: 200;
+    div[class^="content"] {
+      .section-2-content;
+    }
+    /*---------------------------------------
+      SLIDESHOW
+    -----------------------------------------*/
+    @import "./slides";
+    .video {
+      .section-2-video(57.05%);
+    }
+    .content-3 {
+      position: relative;
+      .section-2-form ('300x600');
+    }
+    #map {
+      .section-2-map;
+    }
+  }
+  .section-3 {
+    /*---------------------------------------
+      TABS
+    -----------------------------------------*/
+    @import "./tabs";
+  }
+}
