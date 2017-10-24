@@ -48,6 +48,7 @@ gulp.task('js', function () {
     'assets/scripts/libs/jquery.nivo.slider.pack.js',
     'assets/scripts/libs/slick.min.js',
     'assets/scripts/libs/jarallax.min.js',
+    'assets/scripts/libs/isotope.pkgd.min.js',
     'assets/scripts/main.js'
   ])
     .pipe(concat('main.js'))
