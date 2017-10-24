@@ -162,6 +162,9 @@ function mobileVersion(ctrl) {
     currentPlaceSectionTL = new TimelineMax({
       yoyo: true
     }),
+    currentPlaceSectionTxtTL = new TimelineMax({
+      yoyo: true
+    }),
     buyReasonSectionContent1TL = new TimelineMax({
       yoyo: true
     }),
@@ -202,9 +205,38 @@ function mobileVersion(ctrl) {
     .addTo(ctrl);
   new ScrollMagic.Scene({
     triggerElement: $('.current-place-section')[0],
-    triggerHook: 0.4
+    triggerHook: 0.6
   })
     .setTween(currentPlaceSectionTL)
+    .addTo(ctrl);
+  var $currentPlaceSection_percentTxt3 = $('.current-place-section .percent-txt-3'),
+    $currentPlaceSection_percentTxt4 = $('.current-place-section .percent-txt-4');
+  currentPlaceSectionTxtTL
+    .fromTo($currentPlaceSection_percentTxt4, 0.8,
+      {
+        x: '+=100',
+        autoAlpha: 0
+      },
+      {
+        x: 0,
+        autoAlpha: 1,
+        ease: Sine.easeOut
+      }, '-=1.5')
+    .fromTo($currentPlaceSection_percentTxt3, 0.8,
+      {
+        x: '-=100',
+        autoAlpha: 0
+      },
+      {
+        x: 0,
+        autoAlpha: 1,
+        ease: Sine.easeOut
+      }, '-=1.2');
+  new ScrollMagic.Scene({
+    triggerElement: $('.current-place-section .percent-txt-4')[0],
+    triggerHook: 1
+  })
+    .setTween(currentPlaceSectionTxtTL)
     .addTo(ctrl);
   new ScrollMagic.Scene({
     triggerElement: $('.buy-reason-section .content-1')[0],
@@ -686,8 +718,6 @@ function currentPlaceSectionAnimationMobile(currentPlaceSectionTL) {
     $currentPlaceSection_Mapq = $('.current-place-section .map-q'),
     $currentPlaceSection_percentTxt1 = $('.current-place-section .percent-txt-1'),
     $currentPlaceSection_percentTxt2 = $('.current-place-section .percent-txt-2'),
-    $currentPlaceSection_percentTxt3 = $('.current-place-section .percent-txt-3'),
-    $currentPlaceSection_percentTxt4 = $('.current-place-section .percent-txt-4'),
     $currentPlaceSection_percentTxt5 = $('.current-place-section .percent-txt-5'),
     $currentPlaceSection_percentTxt5_detailsBox = $('.current-place-section .percent-txt-5 .details-box');
 
@@ -702,7 +732,7 @@ function currentPlaceSectionAnimationMobile(currentPlaceSectionTL) {
         skewX: 0,
         autoAlpha: 1,
         ease: Back.easeOut.config(1.5)
-      }, '-=3')
+      })
     .fromTo($currentPlaceSection_Mapq1q3, 1.5,
       {
         scale: 0.7,
@@ -774,26 +804,6 @@ function currentPlaceSectionAnimationMobile(currentPlaceSectionTL) {
         scale: 1,
         autoAlpha: 1,
         ease: Elastic.easeOut.config(1, 0.75)
-      })
-    .fromTo($currentPlaceSection_percentTxt4, 0.8,
-      {
-        x: '+=100',
-        autoAlpha: 0
-      },
-      {
-        x: 0,
-        autoAlpha: 1,
-        ease: Sine.easeOut
-      })
-    .fromTo($currentPlaceSection_percentTxt3, 0.8,
-      {
-        x: '-=100',
-        autoAlpha: 0
-      },
-      {
-        x: 0,
-        autoAlpha: 1,
-        ease: Sine.easeOut
       });
 }
 

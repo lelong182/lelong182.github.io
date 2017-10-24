@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Demo 300x600</title>
+
+  <link rel="stylesheet" href="dist/300x600/css/styles.css" type="text/css" />
+
+</head>
+<body>
+
+  <div class="container vne-rmd">
+    <a class="action-link" href="http://vnexpress.net" target="_blank"></a>
+    <div class="section-1">
+      <span class="logo"></span>
+      <span class="txt-1"></span>
+      <span class="txt-2"></span>
+      <span class="txt-3"></span>
+    </div>
+    <div class="section-2">
+      <div class="content-1 open">
+        <div class="wrap-slides">
+          <div class="slides-content">
+            <div class="slide">
+              <img src="dist/300x600/images/slide-1.jpg" alt="img" />
+            </div>
+            <div class="slide">
+              <img src="dist/300x600/images/slide-2.jpg" alt="img" />
+            </div>
+            <div class="slide">
+              <img src="dist/300x600/images/slide-3.jpg" alt="img" />
+            </div>
+            <div class="slide">
+              <img src="dist/300x600/images/slide-4.jpg" alt="img" />
+            </div>
+          </div>
+          <div class="slides-control">
+            <a class="prev-btn"><span></span></a>
+            <a class="next-btn"><span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="content-2">
+        <div class="video">
+          <div id="player"></div>
+        </div>
+      </div>
+      <div class="content-3">
+        <form class="register-form">
+          <input name="fullname" type="text" placeholder="Họ tên (*)" required />
+          <input name="email" type="email" placeholder="Email (*)" required />
+          <input name="phone" type="text" placeholder="Số điện thoại (*)" required />
+          <button type="submit">Đăng ký</button>
+          <div class="note">Mọi thông tin của quý khách sẽ được bảo mật.</div>
+        </form>
+        <div class="successfully-content">
+          <img src="dist/300x600/images/check-icon.png" alt="img" />
+          <h4>Đăng ký thành công</h4>
+          <p>Thông tin của bạn đã được tiếp nhận, <br />chúng tôi sẽ gửi thông tin dự án cho bạn <br />trong thời gian sớm nhất.</p>
+        </div>
+      </div>
+      <div class="content-4">
+        <div id="map"></div>
+      </div>
+    </div>
+    <div class="section-3">
+      <ul>
+        <li class="active" data-content="1">
+          <a>
+            <span class="light-icon"></span>
+            <h4>Tiện ích</h4>
+          </a>
+        </li>
+        <li data-content="2">
+          <a>
+            <span class="play-icon"></span>
+            <h4>Video dự án</h4>
+          </a>
+        </li>
+        <li data-content="3">
+          <a>
+            <span class="envelope-icon"></span>
+            <h4>Đăng ký nhận tin</h4>
+          </a>
+        </li>
+        <li data-content="4">
+          <a>
+            <span class="marker-icon"></span>
+            <h4>Bản đồ</h4>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="dist/libs/js/zepto-opt.min.js"></script>
+  <script src="dist/300x600/js/scripts.js"></script>
+
+</body>
+</html>
