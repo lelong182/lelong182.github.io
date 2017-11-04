@@ -88,22 +88,28 @@
   <div class="projects-details">
     <div class="projects-filter">
       <div class="container">
-        <div class="select-filter">
-          <select id="mySelect">
-            <option value="done">Đã thực hiện</option>
-            <option value="doing">Đang thực hiện</option>
-          </select>
-        </div>
-        <div class="list-filter">
-          <div><a data-filter="">Tất cả</a></div>
-          <div><a data-filter=".filter-1">Thiết kế kết cấu</a></div>
-          <div><a data-filter=".filter-2">Tư vấn – Giám sát</a></div>
-          <div><a data-filter=".filter-3">Thẩm tra</a></div>
-          <div><a data-filter=".filter-4">Kiểm định</a></div>
-          <div><a data-filter=".filter-5">Thiết kế & lắp đặt thiết bị bếp</a></div>
-          <div><a data-filter=".filter-6">Thiết kế & trang trí nội thất</a></div>
-          <div><a data-filter=".filter-7">Test 1</a></div>
-          <div><a data-filter=".filter-8">Test 2</a></div>
+        <div class="row">
+          <div class="col-xs-4 col-sm-3 col-md-2 pdr-0">
+            <div class="select-filter">
+              <select class="custom-select" style="width: 100%;">
+                <option value="done">Đã thực hiện</option>
+                <option value="doing">Đang thực hiện</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-8 col-sm-9 col-md-10 pdl-0">
+            <div class="list-filter">
+              <div><a data-filter="" class="active filter-link">Tất cả</a></div>
+              <div><a data-filter=".filter-1" class="filter-link">Thiết kế kết cấu</a></div>
+              <div><a data-filter=".filter-2" class="filter-link">Tư vấn – Giám sát</a></div>
+              <div><a data-filter=".filter-3" class="filter-link">Thẩm tra</a></div>
+              <div><a data-filter=".filter-4" class="filter-link">Kiểm định</a></div>
+              <div><a data-filter=".filter-5" class="filter-link">Thiết kế & lắp đặt thiết bị bếp</a></div>
+              <div><a data-filter=".filter-6" class="filter-link">Thiết kế & trang trí nội thất</a></div>
+              <div><a data-filter=".filter-7" class="filter-link">Test 1</a></div>
+              <div><a data-filter=".filter-8" class="filter-link">Test 2</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -113,76 +119,274 @@
         <div class="grid">
           <div class="grid-sizer"></div>
           <div class="project-item filter-1 filter-5">
-            <div class="project-inner">
+            <div class="project-inner" data-toggle="modal" data-target=".project-item-111">
               <div class="project-img">
                 <img src="dist/images/project-img-1.png" alt="img"/>
               </div>
               <h3 class="project-name">Dự án 1</h3>
               <div class="project-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo inventore neque!</div>
             </div>
+            <div class="modal fade project-modal project-item-111" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="project-details">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="details-slides">
+                          <div><img src="dist/images/project-img-1.png" alt="img"/></div>
+                          <div><img src="dist/images/project-img-2.png" alt="img"/></div>
+                          <div><img src="dist/images/project-img-3.png" alt="img"/></div>
+                          <div><img src="dist/images/project-img-4.png" alt="img"/></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="details-info">
+                          <h3 class="project-name">Dự án 1</h3>
+                          <div class="project-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore dolorem fugiat incidunt quibusdam quidem repellat sit! Alias aliquam blanditiis eligendi expedita id illo porro reprehenderit, sunt! Culpa, impedit non. Modi mollitia quae repellat sed similique! Ab accusantium architecto, beatae dicta, ipsum iste itaque molestiae, necessitatibus nesciunt porro recusandae sapiente.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.project-modal -->
           </div>
           <div class="project-item filter-1 filter-6">
-            <div class="project-inner">
+            <div class="project-inner" data-toggle="modal" data-target=".project-item-222">
               <div class="project-img">
                 <img src="dist/images/project-img-2.png" alt="img"/>
               </div>
               <h3 class="project-name">Dự án 2</h3>
               <div class="project-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque harum quis</div>
             </div>
+            <div class="modal fade project-modal project-item-222" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="project-details">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="details-slides">
+                          <div><img src="dist/images/project-img-1.png" alt="img"/></div>
+                          <div><img src="dist/images/project-img-2.png" alt="img"/></div>
+                          <div><img src="dist/images/project-img-3.png" alt="img"/></div>
+                          <div><img src="dist/images/project-img-4.png" alt="img"/></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="details-info">
+                          <h3 class="project-name">Dự án 2</h3>
+                          <div class="project-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error eveniet inventore ipsum, laborum minima modi molestiae, numquam quibusdam reprehenderit, vel vero. Atque beatae doloribus, eius et fugit id illum incidunt ipsam magnam minima modi nulla officiis placeat quaerat quo, quos recusandae repudiandae sint sunt tenetur vel vitae voluptate voluptates!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.project-modal -->
           </div>
           <div class="project-item filter-2 filter-3">
-            <div class="project-inner">
+            <div class="project-inner" data-toggle="modal" data-target=".project-item-333">
               <div class="project-img">
                 <img src="dist/images/project-img-3.png" alt="img"/>
               </div>
               <h3 class="project-name">Dự án 3</h3>
               <div class="project-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab officia reiciendis sit!</div>
             </div>
+            <div class="modal fade project-modal project-item-333" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="project-details">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="details-slides">
+                          <div><img src="dist/images/project-img-3.png" alt="img"/></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="details-info">
+                          <h3 class="project-name">Dự án 3</h3>
+                          <div class="project-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error eveniet inventore ipsum, laborum minima modi molestiae, numquam quibusdam reprehenderit, vel vero. Atque beatae doloribus, eius et fugit id illum incidunt ipsam magnam minima modi nulla officiis placeat quaerat quo, quos recusandae repudiandae sint sunt tenetur vel vitae voluptate voluptates!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.project-modal -->
           </div>
           <div class="project-item filter-1 filter-6">
-            <div class="project-inner">
+            <div class="project-inner" data-toggle="modal" data-target=".project-item-444">
               <div class="project-img">
                 <img src="dist/images/project-img-4.png" alt="img"/>
               </div>
               <h3 class="project-name">Dự án 4</h3>
               <div class="project-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deleniti mollitia</div>
             </div>
+            <div class="modal fade project-modal project-item-444" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="project-details">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="details-slides">
+                          <div><img src="dist/images/project-img-3.png" alt="img"/></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="details-info">
+                          <h3 class="project-name">Dự án 4</h3>
+                          <div class="project-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error eveniet inventore ipsum, laborum minima modi molestiae, numquam quibusdam reprehenderit, vel vero. Atque beatae doloribus, eius et fugit id illum incidunt ipsam magnam minima modi nulla officiis placeat quaerat quo, quos recusandae repudiandae sint sunt tenetur vel vitae voluptate voluptates!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.project-modal -->
           </div>
           <div class="project-item filter-1 filter-6">
-            <div class="project-inner">
+            <div class="project-inner" data-toggle="modal" data-target=".project-item-555">
               <div class="project-img">
                 <img src="dist/images/project-img-5.png" alt="img"/>
               </div>
               <h3 class="project-name">Dự án 5</h3>
               <div class="project-excerpt">Lorem ipsum dolor sit amet, consectetur elit. Animi enim incidunt placeat!</div>
             </div>
+            <div class="modal fade project-modal project-item-555" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="project-details">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="details-slides">
+                          <div><img src="dist/images/project-img-3.png" alt="img"/></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="details-info">
+                          <h3 class="project-name">Dự án 5</h3>
+                          <div class="project-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error eveniet inventore ipsum, laborum minima modi molestiae, numquam quibusdam reprehenderit, vel vero. Atque beatae doloribus, eius et fugit id illum incidunt ipsam magnam minima modi nulla officiis placeat quaerat quo, quos recusandae repudiandae sint sunt tenetur vel vitae voluptate voluptates!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.project-modal -->
           </div>
           <div class="project-item filter-1 filter-5">
-            <div class="project-inner">
+            <div class="project-inner" data-toggle="modal" data-target=".project-item-666">
               <div class="project-img">
                 <img src="dist/images/project-img-6.png" alt="img"/>
               </div>
               <h3 class="project-name">Dự án 6</h3>
               <div class="project-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quos ut velit!</div>
             </div>
+            <div class="modal fade project-modal project-item-666" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="project-details">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="details-slides">
+                          <div><img src="dist/images/project-img-3.png" alt="img"/></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="details-info">
+                          <h3 class="project-name">Dự án 6</h3>
+                          <div class="project-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error eveniet inventore ipsum, laborum minima modi molestiae, numquam quibusdam reprehenderit, vel vero. Atque beatae doloribus, eius et fugit id illum incidunt ipsam magnam minima modi nulla officiis placeat quaerat quo, quos recusandae repudiandae sint sunt tenetur vel vitae voluptate voluptates!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.project-modal -->
           </div>
           <div class="project-item filter-2 filter-4">
-            <div class="project-inner">
+            <div class="project-inner" data-toggle="modal" data-target=".project-item-777">
               <div class="project-img">
                 <img src="dist/images/project-img-7.png" alt="img"/>
               </div>
               <h3 class="project-name">Dự án 7</h3>
               <div class="project-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dicta eaque expedita.</div>
             </div>
+            <div class="modal fade project-modal project-item-777" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="project-details">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="details-slides">
+                          <div><img src="dist/images/project-img-3.png" alt="img"/></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="details-info">
+                          <h3 class="project-name">Dự án 7</h3>
+                          <div class="project-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error eveniet inventore ipsum, laborum minima modi molestiae, numquam quibusdam reprehenderit, vel vero. Atque beatae doloribus, eius et fugit id illum incidunt ipsam magnam minima modi nulla officiis placeat quaerat quo, quos recusandae repudiandae sint sunt tenetur vel vitae voluptate voluptates!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.project-modal -->
           </div>
           <div class="project-item filter-1 filter-5">
-            <div class="project-inner">
+            <div class="project-inner" data-toggle="modal" data-target=".project-item-888">
               <div class="project-img">
                 <img src="dist/images/project-img-8.png" alt="img"/>
               </div>
               <h3 class="project-name">Dự án 8</h3>
               <div class="project-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A excepturi magni quo?</div>
             </div>
+            <div class="modal fade project-modal project-item-888" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="project-details">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="details-slides">
+                          <div><img src="dist/images/project-img-3.png" alt="img"/></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="details-info">
+                          <h3 class="project-name">Dự án 8</h3>
+                          <div class="project-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error eveniet inventore ipsum, laborum minima modi molestiae, numquam quibusdam reprehenderit, vel vero. Atque beatae doloribus, eius et fugit id illum incidunt ipsam magnam minima modi nulla officiis placeat quaerat quo, quos recusandae repudiandae sint sunt tenetur vel vitae voluptate voluptates!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.project-modal -->
           </div>
         </div>
       </div>

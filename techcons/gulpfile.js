@@ -26,6 +26,7 @@ gulp.task('css', ['less'], function () {
     'assets/styles/nivo-slider.css',
     'assets/styles/slick.css',
     'assets/styles/slick-theme.css',
+    'assets/styles/select2.min.css',
     'assets/styles/styles.css'
   ])
     .pipe(concatCss('main.css'))
@@ -47,6 +48,7 @@ gulp.task('js', function () {
     'assets/scripts/libs/jquery.waypoints.min.js',
     'assets/scripts/libs/jquery.nivo.slider.pack.js',
     'assets/scripts/libs/slick.min.js',
+    'assets/scripts/libs/select2.full.min.js',
     'assets/scripts/libs/jarallax.min.js',
     'assets/scripts/libs/isotope.pkgd.min.js',
     'assets/scripts/main.js'

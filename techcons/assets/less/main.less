@@ -474,21 +474,59 @@ header.header {
         border-bottom: 1px solid #bbb;
         margin-bottom: 40px;
         .select-filter {
-          width: 220px;
-          float: left;
+          .select2-container--default {
+            .select2-selection--single {
+              border: none;
+              background-color: transparent;
+              border-radius: 0;
+              height: 58px;
+              .select2-selection__rendered {
+                color: #000;
+                line-height: 58px;
+              }
+              .select2-selection__arrow {
+                height: initial;
+                width: initial;
+                right: 10px;
+                top: 14px;
+                &:before {
+                  content: "\f107";
+                  font-family: FontAwesome;
+                  font-size: 26px;
+                }
+                b {
+                  display: none;
+                }
+              }
+            }
+          }
         }
         .list-filter {
-          width: ~"calc(100% - 220px)";
-          float: left;
           border-left: 1px solid #bbb;
-          padding: 20px;
+          padding: 20px 50px;
+          height: 58px;
           .slick-slide {
             padding: 0 15px;
-            a {
+            .filter-link {
               color: #9e9e9e;
               &:hover {
                 color: @second-color;
               }
+              &.active {
+                color: @second-color;
+                font-weight: 500;
+              }
+            }
+          }
+          .slick-prev {
+            left: 10px;
+          }
+          .slick-next {
+            right: 0;
+          }
+          .slick-next, .slick-prev {
+            &:before {
+              color: @second-color;
             }
           }
         }
@@ -516,6 +554,7 @@ header.header {
           .project-inner {
             box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
+            cursor: pointer;
             &:hover, &:focus {
               box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
             }
@@ -541,6 +580,80 @@ header.header {
             font-size: 14px;
             padding: 0 20px 20px;
             line-height: 1.5;
+          }
+          @media (min-width: @screen-sm-min) {
+            .project-modal {
+              &.modal {
+                text-align: center;
+                padding: 0 !important;
+                &:before {
+                  content: '';
+                  display: inline-block;
+                  height: 100%;
+                  vertical-align: middle;
+                  margin-right: -4px;
+                }
+                .modal-dialog {
+                  display: inline-block;
+                  text-align: left;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+          .project-details {
+            .details-slides {
+              width: 100%;
+              height: 80vh;
+              overflow: hidden;
+              opacity: 0;
+              transition: all 0.3s ease;
+              @media (max-width: @screen-sm-max) {
+                height: 45vh;
+              }
+              &.open {
+                opacity: 1;
+              }
+              .slick-slide {
+                img {
+                  width: 100%;
+                  height: 80vh;
+                  object-fit: cover;
+                  @media (max-width: @screen-sm-max) {
+                    height: 45vh;
+                  }
+                }
+              }
+              .slick-prev {
+                left: 10px;
+              }
+              .slick-next {
+                right: 10px;
+              }
+              .slick-next, .slick-prev {
+                z-index: 100;
+                &:before {
+                  font-size: 26px;
+                  color: @second-color;
+                }
+              }
+            }
+            .details-info {
+              padding: 30px 30px 0 0;
+              @media (max-width: @screen-sm-max) {
+                padding: 20px 25px 22px 25px;
+              }
+              .project-name {
+                font-size: 20px;
+                margin: 0 0 10px;
+                padding: 0;
+              }
+              .project-desc {
+                font-size: 14px;
+                line-height: 1.8;
+                text-align: justify;
+              }
+            }
           }
         }
       }
