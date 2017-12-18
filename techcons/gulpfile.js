@@ -79,5 +79,5 @@ gulp.task('dev', [
 gulp.task('default', [
   'css',
   'js',
-  'images'
+  // 'images'
 ]);
