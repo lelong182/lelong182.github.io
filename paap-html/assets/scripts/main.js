@@ -47,6 +47,11 @@
       $('.paap-login .login-form').addClass('hidden');
       return false;
     });
+    $(this).on('click', '.paap-login .register-form .back-link', function () {
+      $('.paap-login .register-form').addClass('hidden');
+      $('.paap-login .login-form').removeClass('hidden');
+      return false;
+    });
 
 
     /* =================================
