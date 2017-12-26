@@ -347,6 +347,29 @@ input, button, .slick-slide, a {
     .ms-layer {
         width: 100%;
     }
+    .ms-bullets {
+        right: 1.5rem;
+        bottom: 40px;
+        @media (max-width: $desktop) {
+            right: 0;
+            bottom: 15px;
+        }
+        .ms-bullets-count {
+            right: 0;
+        }
+        .ms-bullet {
+            width: 9px;
+            height: 9px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            transition: all 0.3s ease;
+            margin: 0 12px !important;
+            &.ms-bullet-selected {
+                background-color: transparent;
+            }
+        }
+    }
     .text-1 {
         color: #fff;
         font-family: "Gotham", sans-serif;
@@ -358,6 +381,11 @@ input, button, .slick-slide, a {
             font-size: 30px;
             line-height: 40px;
             top: 120px;
+        }
+        br {
+            @media (max-width: $tablet) {
+                display: none;
+            }
         }
     }
     .text-2 {

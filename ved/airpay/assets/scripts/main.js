@@ -151,7 +151,10 @@ function landingSlider(width, height) {
         loop: true,
         controls: {
             arrows: {},
-            bullets: {}
+            bullets: {
+                autohide: false,
+                margin: 0
+            }
         }
     });
 }
