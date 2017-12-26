@@ -54,7 +54,7 @@ module.exports = {
             use: {
                 loader: 'html-loader',
                 options: {
-                    attrs: ['img:src', 'img:data-src', 'link:href'],
+                    attrs: ['img:src', 'img:data-src', 'img:data-srcset', 'link:href'],
                     removeComments: false,
                     collapseWhitespace: false
                 }
