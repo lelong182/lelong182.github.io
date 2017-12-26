@@ -142,22 +142,11 @@ input, button, .slick-slide {
     .navbar-menu {
         @media (max-width: $desktop) {
             position: fixed;
+            background-color: rgba(72,140,241,0.90);
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-        }
-        &:before {
-            @media (max-width: $desktop) {
-                width: 100vw;
-                height: 100vh;
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                background: url('../images/menu-bg-mobile.png') no-repeat center;
-                background-size: cover;
-            }
         }
         .navbar-start {
             .navbar-item {

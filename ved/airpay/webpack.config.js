@@ -38,11 +38,11 @@ module.exports = {
             use: extractScss.extract({
                 use: [{
                     loader: 'css-loader',
-                    // options: {
-                    //     minimize: true || {
-                    //         autoprefixer: true
-                    //     }
-                    // }
+                    options: {
+                        minimize: true || {
+                            autoprefixer: true
+                        }
+                    }
                 }, {
                     loader: 'sass-loader'
                 }],
