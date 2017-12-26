@@ -250,9 +250,6 @@ input, button, .slick-slide {
     .ms-layer {
         width: 100%;
     }
-    .blue-text {
-        color: #488CF1 !important;
-    }
     .text-1 {
         color: #fff;
         font-family: "Gotham", sans-serif;
@@ -309,15 +306,6 @@ input, button, .slick-slide {
     }
     .text-5 {
         top: 620px;
-        &.blue-text {
-            .download-link {
-                color: #488CF1;
-                border-color: #488CF1;
-                &:hover {
-                    color: #488CF1;
-                }
-            }
-        }
         .download-link {
             color: #fff;
             font-size: 18px;

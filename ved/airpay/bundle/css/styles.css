@@ -10995,8 +10995,6 @@ input, button, .slick-slide {
   overflow: hidden; }
   .landing-slider-wrapper .ms-layer {
     width: 100%; }
-  .landing-slider-wrapper .blue-text {
-    color: #488CF1 !important; }
   .landing-slider-wrapper .text-1 {
     color: #fff;
     font-family: "Gotham", sans-serif;
@@ -11043,11 +11041,6 @@ input, button, .slick-slide {
         margin: 2px 12px 0 0; }
   .landing-slider-wrapper .text-5 {
     top: 620px; }
-    .landing-slider-wrapper .text-5.blue-text .download-link {
-      color: #488CF1;
-      border-color: #488CF1; }
-      .landing-slider-wrapper .text-5.blue-text .download-link:hover {
-        color: #488CF1; }
     .landing-slider-wrapper .text-5 .download-link {
       color: #fff;
       font-size: 18px;
