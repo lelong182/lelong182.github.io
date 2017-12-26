@@ -1,0 +1,75 @@
+/*!
+ * Import fonts
+ */
+@import "./fonts";
+
+
+/*!
+ * Customize Bulma
+ * Version - 0.6.1
+ */
+$fa-font-path: "../../libs/font-awesome/fonts";
+@import "../../libs/font-awesome/scss/font-awesome";
+
+
+/*!
+ * Customize Bulma
+ * Version - 0.6.1
+ */
+// 1. Import the initial variables
+@import "../../libs/bulma/sass/utilities/initial-variables";
+@import "../../libs/bulma/sass/utilities/functions";
+
+$fullhd: 1240px + (2 * $gap);
+
+// 2. Set your own initial variables
+// Add a serif family
+$family-serif: 'Gotham Book', Arial, sans-serif;
+
+// 3. Set the derived variables
+// Use the new serif family
+$family-primary: $family-serif;
+
+// 4. Setup your Custom Colors
+$linkedin: #0077b5;
+$linkedin-invert: findColorInvert($linkedin);
+$twitter: #55acee;
+$twitter-invert: findColorInvert($twitter);
+$github: #333;
+$github-invert: findColorInvert($github);
+
+// 5. Add new color variables to the color map.
+@import "../../libs/bulma/sass/utilities/derived-variables.sass";
+$addColors: (
+    "twitter":($twitter, $twitter-invert),
+    "linkedin": ($linkedin, $linkedin-invert),
+    "github": ($github, $github-invert)
+);
+$colors: map-merge($colors, $addColors);
+
+// 6. My custom.
+$footer-background-color: $primary;
+
+// 7. Import the rest of Bulma
+@import "../../libs/bulma/bulma";
+
+
+/*!
+ * Animation on scroll
+ * Version - 2.2.0
+ */
+@import "../../node_modules/aos/src/sass/aos";
+
+
+/*!
+ * Master Slider
+ * Version - 2.51.2
+ */
+@import "../masterslider/style/masterslider.css";
+
+
+/*!
+ * Slick Carousel
+ * Version - 1.8.1
+ */
+@import "../../libs/slick-carousel/slick/slick";

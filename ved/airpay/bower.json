@@ -1,0 +1,28 @@
+{
+  "name": "airpay",
+  "description": "Airpay",
+  "main": "webpack.config.js",
+  "authors": [
+    "lelong182"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gsap": "^1.20.3",
+    "modernizer": "^2.8.2",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2",
+    "scrollmagic": "^2.0.5",
+    "bulma": "^0.6.1",
+    "slick-carousel": "^1.8.1",
+    "font-awesome": "^4.7.0",
+    "waypoints": "^4.0.1"
+  }
+}

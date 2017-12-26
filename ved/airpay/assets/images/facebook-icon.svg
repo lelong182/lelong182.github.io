@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>home_footer_ic_facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Landing_Page_image" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-110.000000, -4087.000000)">
+        <g id="footer" transform="translate(110.000000, 3881.000000)" fill-rule="nonzero">
+            <g id="home_footer_ic_facebook" transform="translate(0.000000, 206.000000)">
+                <g id="Group">
+                    <ellipse id="Oval" fill-opacity="0.2" fill="#2C3942" cx="16" cy="15.9623529" rx="16" ry="15.9623529"></ellipse>
+                    <path d="M18.85,9.42776471 C19.825,9.42776471 21.11875,9.42776471 21.11875,9.42776471 L21.11875,6.04823529 C21.11875,6.04823529 19.75625,6.04823529 17.90625,6.04823529 C16.05625,6.04823529 13.65,7.23294118 13.65,10.6748235 C13.65,11.3170588 13.65,12.2585882 13.65,13.356 L10.58125,13.356 L10.58125,16.854 L13.65,16.854 C13.65,21.2124706 13.65,25.9575294 13.65,25.9575294 L15.0125,25.9575294 L16.09375,25.9575294 L17.3125,25.9575294 C17.3125,25.9575294 17.3125,21.0441176 17.3125,16.854 L20.3625,16.854 L20.86875,13.356 L17.3125,13.356 C17.3125,12.2087059 17.3125,11.3731765 17.3125,11.13 C17.3125,9.98270588 17.875,9.42776471 18.85,9.42776471 Z" id="Shape" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
