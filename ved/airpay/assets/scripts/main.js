@@ -180,7 +180,7 @@ function landingSlider(width, height) {
         width: width,
         height: height,
         view: 'fade',
-        speed: 20,
+        speed: 30,
         autoplay: true,
         instantStartLayers: true,
         layout: 'fullwidth',

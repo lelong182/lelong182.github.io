@@ -91,10 +91,10 @@ module.exports = {
             filename: 'index.html',
             template: 'index.html'
         }),
-        new HtmlWebpackPlugin({
-            filename: 'features.html',
-            template: 'features.html'
-        }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'features.html',
+        //     template: 'features.html'
+        // }),
         // new HtmlWebpackPlugin({
         //     filename: 'bank-link.html',
         //     template: 'bank-link.html'
