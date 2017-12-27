@@ -14,6 +14,8 @@ $.fn.customAnimate = function (effect, callback) {
 $(window).on('load', function () {
     AOS.init();
     $('body').css('opacity', 1);
+
+    $('.ms-bullets').wrap( "<div class='container'></div>" );
 });
 
 $(document).ready(function () {
@@ -29,28 +31,40 @@ $(document).ready(function () {
      =================================== */
     var topNav = document.getElementById('top-nav');
     var headroom = new Headroom(topNav, {
-        'tolerance': 5,
-        'onPin': function () {
-            $(topNav).addClass('change-style');
-        },
-        'onUnpin': function () {
-            setTimeout(function () {
-                $(topNav).removeClass('change-style');
-            }, 400);
-        },
+        // 'tolerance': 5,
+        // 'onPin': function () {
+        //     $(topNav).addClass('change-style');
+        // },
+        // 'onUnpin': function () {
+        //     setTimeout(function () {
+        //         $(topNav).removeClass('change-style');
+        //     }, 400);
+        // },
         'onTop': function () {
             $(topNav).removeClass('change-style');
         },
-        'onBottom': function () {
+        'onNotTop': function () {
             $(topNav).addClass('change-style');
         },
-        'onNotBottom': function () {
-            if (!$(topNav).hasClass('headroom--top')) {
-                $(topNav).addClass('change-style');
-            }
-        }
+        // 'onBottom': function () {
+        //     $(topNav).addClass('change-style');
+        // },
+        // 'onNotBottom': function () {
+        //     if (!$(topNav).hasClass('headroom--top')) {
+        //         $(topNav).addClass('change-style');
+        //     }
+        // }
     });
     headroom.init();
+
+    // var tmp = $('.ms-slide > img').data('src');
+    // var tmpArr = tmp.split('.');
+    // var ext = tmpArr.pop(-1);
+    // tmpArr.push('-mobile', '.' + ext);
+    // var str = tmpArr.join('');
+    // console.log(tmpArr);
+    // console.log(str);
+    // $('.ms-slide > img').data('src', str);
 
 
     /* =================================
@@ -82,9 +96,11 @@ $(document).ready(function () {
      =================================== */
     var windowWidth = $(window).width();
     if (windowWidth < 1024) {
+        $('.ms-slide .desktop').remove();
         landingSlider(windowWidth - 50, 498);
     } else {
-        landingSlider(1440, 768);
+        $('.ms-slide .mobile').remove();
+        landingSlider(1440, 850);
     }
 
 
@@ -137,6 +153,26 @@ $(document).ready(function () {
         $('.promotion-item__image').css('height', $('.promotion-item__image').width());
     });
 
+
+    /* =================================
+     ===  Modal box                 ====
+     =================================== */
+    $(this).on('click', '.modal-background', function () {
+        $('.modal').fadeOut(400, function () {
+            $(this).removeClass('is-active');
+        });
+    });
+    $(this).on('click', '.download-link', function () {
+        $('.download-link-modal').addClass('is-active').hide().fadeIn(600);
+    });
+    $(this).on('click', '.download-link-modal button[type="submit"]', function () {
+        $('.download-link-modal').fadeOut(400, function () {
+            $(this).removeClass('is-active');
+            $('.link-sent-modal').addClass('is-active').hide().fadeIn(600);
+        });
+        return false;
+    });
+
 });
 
 function landingSlider(width, height) {
@@ -144,8 +180,8 @@ function landingSlider(width, height) {
         width: width,
         height: height,
         view: 'parallaxMask',
-        speed: 9,
-        autoplay: true,
+        speed: 18,
+        autoplay: false,
         instantStartLayers: true,
         layout: 'fullwidth',
         loop: true,

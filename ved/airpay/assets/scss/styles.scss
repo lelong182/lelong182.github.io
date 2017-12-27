@@ -16,7 +16,7 @@ input, button, .slick-slide, a {
 }
 
 .is-transparent {
-        background-color: transparent !important;
+    background-color: transparent !important;
 }
 
 .video-responsive {
@@ -24,6 +24,7 @@ input, button, .slick-slide, a {
     padding-bottom: 56.25%;
     position: relative;
     height: 0;
+    box-shadow: 0 5px 10px 0 rgba(44, 57, 66, 0.3);
     iframe {
         left: 0;
         top: 0;
@@ -49,6 +50,8 @@ input, button, .slick-slide, a {
 
 .custom-button {
     display: inline-block;
+    font-family: "Gotham", sans-serif;
+    font-weight: 500;
     border-radius: 24px;
     background-color: #488CF1;
     color: #fff;
@@ -59,8 +62,6 @@ input, button, .slick-slide, a {
         font-size: 14px;
     }
     &:hover {
-        box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.6);
-        transform: translateY(-2px);
         color: #fff;
     }
 }
@@ -77,12 +78,12 @@ input, button, .slick-slide, a {
     &.is-fixed-top {
         transition: all 0.4s ease;
         &.headroom {
-            &--pinned {
-                transform: translateY(0);
-            }
-            &--unpinned {
-                transform: translateY(-100%);
-            }
+            //&--pinned {
+            //    transform: translateY(0);
+            //}
+            //&--unpinned {
+            //    transform: translateY(-100%);
+            //}
             &.change-style {
                 background-color: #fff !important;
                 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
@@ -155,6 +156,10 @@ input, button, .slick-slide, a {
         }
     }
     .navbar-menu {
+        padding-left: 100px;
+        @media (max-width: $widescreen) {
+            padding-left: 0;
+        }
         @media (max-width: $desktop) {
             position: fixed;
             background-color: rgba(72, 140, 241, 0.8);
@@ -201,6 +206,10 @@ input, button, .slick-slide, a {
             margin-right: 10px;
             align-self: center;
             padding: 1rem;
+            @media (max-width: $widescreen) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
             @media (max-width: $desktop) {
                 font-size: 20px;
                 text-align: center;
@@ -325,7 +334,7 @@ input, button, .slick-slide, a {
                 color: #fff;
             }
             .privacy {
-                border-bottom: 1px solid rgba(255,255,255,0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
                 margin-bottom: 20px;
                 padding-bottom: 20px;
                 display: flex;
@@ -347,26 +356,71 @@ input, button, .slick-slide, a {
     .ms-layer {
         width: 100%;
     }
+    .ms-slide {
+        font-size: 0;
+        .ms-slide-bgcont {
+            line-height: 1;
+            &:before {
+                background: url('../images/dark-layer.png') no-repeat left top / cover;
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                @media (max-width: $desktop) {
+                    background-image: url('../images/dark-layer-mobile.png');
+                }
+            }
+        }
+    }
     .ms-bullets {
-        right: 1.5rem;
+        right: -12px;
         bottom: 40px;
         @media (max-width: $desktop) {
-            right: 0;
-            bottom: 15px;
+            right: 50%;
+            bottom: 20px;
+            transform: translateX(50%);
         }
         .ms-bullets-count {
             right: 0;
         }
         .ms-bullet {
-            width: 9px;
-            height: 9px;
-            background-color: #fff;
-            border-radius: 50%;
-            border: 1px solid #fff;
-            transition: all 0.3s ease;
+            width: 10px;
+            height: 10px;
             margin: 0 12px !important;
+            position: relative;
+            @media (max-width: $desktop) {
+                margin: 0 7px !important;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 9px;
+                height: 9px;
+                border: 1px solid #fff;
+                background-color: #fff;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+                @media (max-width: $desktop) {
+                    width: 5px;
+                    height: 5px;
+                }
+            }
             &.ms-bullet-selected {
-                background-color: transparent;
+                &:before {
+                    width: 13px;
+                    height: 13px;
+                    background-color: transparent;
+                    transform: translate(-2px, -2px);
+                    @media (max-width: $desktop) {
+                        width: 7px;
+                        height: 7px;
+                        transform: translate(-1px, -1px);
+                    }
+                }
             }
         }
     }
@@ -376,7 +430,7 @@ input, button, .slick-slide, a {
         font-weight: 700;
         font-size: 55px;
         line-height: 72px;
-        top: 150px;
+        top: 230px;
         @media (max-width: $desktop) {
             font-size: 30px;
             line-height: 40px;
@@ -392,7 +446,7 @@ input, button, .slick-slide, a {
         color: #fff;
         font-size: 18px;
         line-height: 30px;
-        top: 320px;
+        top: 405px;
         @media (max-width: $desktop) {
             font-size: 14px;
             line-height: 22px;
@@ -403,33 +457,39 @@ input, button, .slick-slide, a {
         color: #fff;
         font-size: 18px;
         line-height: 30px;
-        top: 320px;
+        top: 405px;
         @media (max-width: $desktop) {
             font-size: 14px;
             line-height: 22px;
             top: 250px;
         }
     }
-    .text-3 {
-        color: #fff;
-        font-family: "Gotham", sans-serif;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 24px;
-        top: 480px;
+    .download-content {
+        position: absolute;
+        bottom: 130px;
+        left: 0;
+        right: 0;
         @media (max-width: $desktop) {
-            font-size: 14px;
-            top: 375px;
+            left: 25px;
+            right: 25px;
+            bottom: 50px;
         }
-    }
-    .text-4 {
-        top: 530px;
-        @media (max-width: $desktop) {
-            top: 410px;
+        .title {
+            color: #fff;
+            font-family: "Gotham", sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            @media (max-width: $desktop) {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
         }
         .store-buttons {
+            margin-bottom: 40px;
             @media (max-width: $desktop) {
                 display: flex;
+                margin-bottom: 0;
             }
             a {
                 display: inline-block;
@@ -451,10 +511,6 @@ input, button, .slick-slide, a {
                     margin-right: 10px;
                     width: 157px;
                 }
-                &:hover {
-                    box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.6);
-                    transform: translateY(-2px);
-                }
                 &.blue-button {
                     color: #fff;
                     background-color: #229CFF;
@@ -466,12 +522,6 @@ input, button, .slick-slide, a {
                 }
             }
         }
-    }
-    .text-5 {
-        top: 620px;
-        @media (max-width: $desktop) {
-            display: none;
-        }
         .download-link {
             color: #fff;
             font-size: 18px;
@@ -480,23 +530,26 @@ input, button, .slick-slide, a {
             display: inline-block;
             padding-bottom: 2px;
             border-bottom: 1px solid #fff;
+            @media (max-width: $desktop) {
+                display: none;
+            }
             &:hover {
                 color: #fff;
             }
         }
-    }
-    .app-store-icon {
-        background: url('../images/appstore-icon.svg') no-repeat;
-        height: 24px;
-        @media (max-width: $desktop) {
-            margin: -2px 10px 0 0;
+        .app-store-icon {
+            background: url('../images/appstore-icon.svg') no-repeat;
+            height: 24px;
+            @media (max-width: $desktop) {
+                margin: -2px 10px 0 0;
+            }
         }
-    }
-    .google-play-icon {
-        background: url('../images/googleplay-icon.svg') no-repeat;
-        height: 21px;
-        @media (max-width: $desktop) {
-            margin: 1px 10px 0 0;
+        .google-play-icon {
+            background: url('../images/googleplay-icon.svg') no-repeat;
+            height: 21px;
+            @media (max-width: $desktop) {
+                margin: 1px 10px 0 0;
+            }
         }
     }
     .scroll-icon {
@@ -623,6 +676,18 @@ input, button, .slick-slide, a {
         left: 0;
         right: 0;
         z-index: -1;
+        &:before {
+            content: "";
+            background: url('../images/landing-video-bg-1.jpg') no-repeat left top / cover;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @media (max-width: $desktop) {
+                background-image: url('../images/landing-video-bg-1-mobile.jpg');
+            }
+        }
     }
     .home-video-bg-2 {
         height: 35%;
@@ -631,6 +696,10 @@ input, button, .slick-slide, a {
         left: 0;
         right: 0;
         z-index: -1;
+        background-image: url('../images/landing-video-bg-2.jpg');
+        @media (max-width: $desktop) {
+            background-image: url('../images/landing-video-bg-2-mobile.jpg');
+        }
     }
 }
 
@@ -652,7 +721,7 @@ input, button, .slick-slide, a {
         margin-bottom: 50px;
         @media (max-width: $desktop) {
             font-size: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         small {
             font-size: 18px;
@@ -802,10 +871,10 @@ input, button, .slick-slide, a {
         font-size: 30px;
         font-family: "Gotham", sans-serif;
         font-weight: 500;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         @media (max-width: $desktop) {
             font-size: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
     }
     .partner-item {
@@ -827,7 +896,7 @@ input, button, .slick-slide, a {
         padding-bottom: 10px;
     }
     .container {
-        border-top: 1px solid rgba(44, 57, 66, 0.1);
+        border-top: 1px solid rgba(44, 57, 66, 0.15);
         padding-top: 100px;
         @media (max-width: $desktop) {
             padding-top: 40px;
@@ -883,8 +952,6 @@ input, button, .slick-slide, a {
             padding: 12px 22px;
         }
         &:hover {
-            box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.65);
-            transform: translateY(-2px);
             color: #fff;
         }
         .headphone-icon {
@@ -1003,7 +1070,7 @@ footer.footer {
         font-size: 14px;
     }
     .container {
-        border-top: 2px solid rgba(44, 57, 66, 0.1);
+        border-top: 1px solid rgba(44, 57, 66, 0.15);
         padding-top: 30px;
     }
     .level {
@@ -1054,5 +1121,100 @@ footer.footer {
             background-color: rgb(44, 57, 66);
             height: 1px;
         }
+    }
+}
+
+// *** Download link modal ***
+.download-link-modal {
+    .modal-background {
+        background-color: rgba(44, 57, 66, 0.35);
+    }
+    .modal-content {
+        width: 494px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        padding: 50px 40px;
+    }
+    .title {
+        font-family: "Gotham", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: rgba(44, 57, 66, 0.80);
+        margin-bottom: 30px;
+    }
+    form {
+        text-align: left;
+        .wrap-input {
+            position: relative;
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 84px;
+                height: 48px;
+                background-color: rgba(44, 57, 66, 0.80);
+                border-radius: 5px 0 0 5px;
+                color: #fff;
+                text-align: center;
+                padding-top: 13px;
+            }
+            input[type="text"] {
+                border: 1px solid rgba(44, 57, 66, 0.30);
+                height: 48px;
+                width: 100%;
+                border-radius: 5px;
+                padding: 0 15px 0 105px;
+            }
+        }
+        button[type="submit"] {
+            background: #488cf1;
+            box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .1);
+            border-radius: 24px;
+            width: 187px;
+            height: 48px;
+            border: none;
+            margin: 40px auto 20px;
+            display: block;
+            cursor: pointer;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+    }
+    .another-way-link {
+        font-size: 14px;
+        color: #229CFF;
+        line-height: 24px;
+    }
+}
+
+// *** Link was sent modal ***
+.link-sent-modal {
+    .modal-background {
+        background-color: rgba(44, 57, 66, 0.35);
+    }
+    .modal-content {
+        width: 494px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        padding: 50px 40px;
+    }
+    .link-sent-img {
+        background: url('../images/link-sent-img.png') no-repeat;
+        width: 187px;
+        height: 130px;
+        display: inline-block;
+    }
+    .title {
+        font-family: "Gotham", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #488CF1;
+        line-height: 24px;
+        margin-top: 15px;
     }
 }
