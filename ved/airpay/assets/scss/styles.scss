@@ -362,6 +362,7 @@ input, button, .slick-slide, a {
             line-height: 1;
             &:before {
                 background: url('../images/dark-layer.png') no-repeat left top / cover;
+                mix-blend-mode: multiply;
                 content: "";
                 position: absolute;
                 top: 0;

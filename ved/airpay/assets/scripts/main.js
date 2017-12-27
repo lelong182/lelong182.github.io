@@ -114,7 +114,7 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 5000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -180,8 +180,8 @@ function landingSlider(width, height) {
         width: width,
         height: height,
         view: 'parallaxMask',
-        speed: 18,
-        autoplay: false,
+        speed: 20,
+        autoplay: true,
         instantStartLayers: true,
         layout: 'fullwidth',
         loop: true,
