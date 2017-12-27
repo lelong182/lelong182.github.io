@@ -230,6 +230,8 @@ input, button, .slick-slide, a {
             }
             &:hover, &:focus, &.active {
                 color: #fff;
+                font-family: "Gotham", sans-serif;
+                font-weight: 500;
                 &:before {
                     left: 0;
                     right: 0;
@@ -362,7 +364,6 @@ input, button, .slick-slide, a {
             line-height: 1;
             &:before {
                 background: url('../images/dark-layer.png') no-repeat left top / cover;
-                mix-blend-mode: multiply;
                 content: "";
                 position: absolute;
                 top: 0;
@@ -432,6 +433,10 @@ input, button, .slick-slide, a {
         font-size: 55px;
         line-height: 72px;
         top: 230px;
+        @media (max-width: $widescreen) {
+            font-size: 48px;
+            line-height: 60px;
+        }
         @media (max-width: $desktop) {
             font-size: 30px;
             line-height: 40px;
@@ -470,6 +475,9 @@ input, button, .slick-slide, a {
         bottom: 130px;
         left: 0;
         right: 0;
+        @media (max-width: $widescreen) {
+            bottom: 70px;
+        }
         @media (max-width: $desktop) {
             left: 25px;
             right: 25px;
@@ -1026,7 +1034,7 @@ input, button, .slick-slide, a {
                     background: url('../images/app-store-btn.png') no-repeat;
                     width: 187px;
                     height: 62px;
-                    @media (max-width: $desktop) {
+                    @media (max-width: $widescreen) {
                         background-image: url('../images/app-store-mobile-btn.png');
                         width: 139px;
                         height: 46px;
@@ -1036,7 +1044,7 @@ input, button, .slick-slide, a {
                     background: url('../images/google-play-btn.png') no-repeat;
                     width: 211px;
                     height: 62px;
-                    @media (max-width: $desktop) {
+                    @media (max-width: $widescreen) {
                         background-image: url('../images/google-play-mobile-btn.png');
                         width: 157px;
                         height: 46px;

@@ -179,7 +179,7 @@ function landingSlider(width, height) {
     $('#landing-slider').masterslider({
         width: width,
         height: height,
-        view: 'parallaxMask',
+        view: 'fade',
         speed: 20,
         autoplay: true,
         instantStartLayers: true,
