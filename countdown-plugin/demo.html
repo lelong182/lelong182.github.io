@@ -1,15 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]>
-<html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>
-<html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>
-<html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>
-<html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Pragma" content="no-cache">
@@ -18,44 +8,24 @@
   <![endif]-->
   <title>Countdown Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      position: relative;
-      overflow: hidden;
-      width: 100vw;
-      height: 100vh;
-    }
-
-    .container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-
 </head>
 <body>
 
 <div style="height: 100px;background-color: red;"></div>
+<!--https://lelong182.github.io/countdown-plugin/?end=1532576301&bg=242424&color=ffffff&highlight=fdd835&title=test-->
+<!--onLoad="(function(e, obj){obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px'})(event, this)"-->
 
-<iframe style="width: 100%; display: block"
-        onLoad="calcHeight(this);"
-        src="index.html?end=1532576301&bg=242424&color=ffffff&highlight=fdd835&title=chương trình sẽ bắt đầu sau"
-        allowfullscreen frameborder="0"></iframe>
-<script type="text/javascript">
-  function calcHeight (iframeElement) {
-    var the_height = iframeElement.contentWindow.document.body.scrollHeight
-    iframeElement.style.height = the_height + 'px'
-  }
-</script>
+<!--<script type="text/javascript">-->
+  <!--function calcHeight (iframeElement) {-->
+    <!--iframeElement.style.height = iframeElement.contentWindow.document.body.scrollHeight + 'px'-->
+  <!--}-->
+<!--</script>-->
+<!--<iframe style="width: 100%; display: block"-->
+        <!--onLoad="calcHeight(this)"-->
+        <!--src="https://lelong182.github.io/countdown-plugin/?end=1532576301&bg=242424&color=ffffff&highlight=fdd835&title=test"-->
+        <!--allowfullscreen frameborder="0"></iframe>-->
+<script src="dist/scripts/main.js"></script>
+<div id="countdown-ll" data-end="1532576301" data-bg="242424" data-color="ffffff" data-highlight="fdd835" data-title="test"></div>
 
 <div style="height: 100px;background-color: blue;"></div>
 

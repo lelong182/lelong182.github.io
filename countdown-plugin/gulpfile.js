@@ -29,7 +29,7 @@ gulp.task('css', ['sass'], function () {
 
 gulp.task('js', function () {
   gulp.src([
-    'assets/scripts/libs/jquery.slim.min.js',
+    'assets/scripts/libs/jquery.min.js',
     'assets/scripts/libs/jquery.countdown.min.js',
     'assets/scripts/main.js'
   ])
