@@ -3,7 +3,7 @@
   'use strict'
 
   $(document).ready(function () {
-    
+
     var $countdown = $('#countdown-ll')
     var html = '<div class="wrap-countdown"><span class="title"></span>:<span class="days time">00</span> <span class="days_text time_text">Ngày</span><span class="hours time">00</span> <span class="hours_text time_text">Giờ</span><span class="minutes time">00</span> <span class="minutes_text time_text">Phút</span><span class="seconds time">00</span> <span class="seconds_text time_text">Giây</span></div>'
 
