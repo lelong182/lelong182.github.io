@@ -44,9 +44,20 @@
 </head>
 <body>
 
-<div class="container">
-  <iframe src="index.html?end=1532576301&bg=242424&color=ffffff&highlight=fdd835&title=chương trình sẽ bắt đầu sau" width="800" height="400" allowfullscreen="" frameborder="0"></iframe>
-</div>
+<div style="height: 100px;background-color: red;"></div>
+
+<iframe style="width: 100%; display: block"
+        onLoad="calcHeight(this);"
+        src="index.html?end=1532576301&bg=242424&color=ffffff&highlight=fdd835&title=chương trình sẽ bắt đầu sau"
+        allowfullscreen frameborder="0"></iframe>
+<script type="text/javascript">
+  function calcHeight (iframeElement) {
+    var the_height = iframeElement.contentWindow.document.body.scrollHeight
+    iframeElement.style.height = the_height + 'px'
+  }
+</script>
+
+<div style="height: 100px;background-color: blue;"></div>
 
 </body>
 </html>

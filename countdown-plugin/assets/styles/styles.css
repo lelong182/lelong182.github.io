@@ -13,6 +13,10 @@
   src: url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.eot");
   src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.woff2") format("woff2"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.woff") format("woff"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.ttf") format("truetype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.svg#Roboto") format("svg"); }
 
+html, body {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: "Roboto", sans-serif; }
 
