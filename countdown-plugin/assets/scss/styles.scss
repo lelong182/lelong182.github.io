@@ -6,7 +6,8 @@ html, body {
 }
 
 body {
-    font-family: inherit;
+    font-family: $main-font;
+    //font-family: inherit;
 }
 
 a {
