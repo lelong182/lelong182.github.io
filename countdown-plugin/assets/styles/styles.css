@@ -26,12 +26,9 @@ a, input, textarea, button {
 .wrap-countdown {
   font-size: 24px;
   text-align: center;
-  background: #242424;
-  color: #fff;
   font-weight: 300;
   padding: 12px 16px; }
   .wrap-countdown .time {
-    color: #fdd835;
     font-weight: 700;
     letter-spacing: 4px;
     font-size: 28px; }

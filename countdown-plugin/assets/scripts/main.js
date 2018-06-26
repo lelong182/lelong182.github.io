@@ -4,6 +4,19 @@
 
   $(document).ready(function () {
 
+    var title = getAllUrlParams().title ? decodeURIComponent(getAllUrlParams().title) : 'Chương trình sẽ bắt đầu sau'
+    var updatedTitle = title.charAt(0).toUpperCase() + title.substr(1)
+    $('.title').text(updatedTitle)
+
+    var bg = getAllUrlParams().bg ? getAllUrlParams().bg : 242424
+    $('.wrap-countdown').css('background-color', '#' + bg)
+
+    var color = getAllUrlParams().color ? getAllUrlParams().color : 'ffffff'
+    $('.wrap-countdown').css('color', '#' + color)
+
+    var highlight = getAllUrlParams().highlight ? getAllUrlParams().highlight : 'fdd835'
+    $('.wrap-countdown .time').css('color', '#' + highlight)
+
     var end = getAllUrlParams().end
     var now = end ? new Date(end * 1000) : new Date()
     var day = now.getDate()
