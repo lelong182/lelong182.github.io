@@ -32,14 +32,31 @@ a, input, textarea, button {
   text-align: center;
   font-weight: 300;
   padding: 12px 16px; }
+  @media (max-width: 768px) {
+    .wrap-countdown {
+      font-size: 19px; } }
+  @media (min-width: 769px) {
+    .wrap-countdown br {
+      display: none; } }
+  @media (max-width: 768px) {
+    .wrap-countdown .title {
+      margin-bottom: 3px;
+      display: inline-block; } }
   .wrap-countdown .time {
     font-weight: 700;
     letter-spacing: 4px;
     font-size: 28px; }
+    @media (max-width: 768px) {
+      .wrap-countdown .time {
+        letter-spacing: 2px;
+        font-size: 21px; } }
     .wrap-countdown .time.days {
       margin-left: 10px; }
   .wrap-countdown .time_text {
     font-size: 27px;
     margin-right: 8px; }
+    @media (max-width: 768px) {
+      .wrap-countdown .time_text {
+        font-size: 19px; } }
     .wrap-countdown .time_text.seconds_text {
       margin-right: 0; }

@@ -24,10 +24,28 @@ a, input, textarea, button {
     text-align: center;
     font-weight: 300;
     padding: 12px 16px;
+    @media (max-width: 768px) {
+        font-size: 19px;
+    }
+    br {
+        @media (min-width: 769px) {
+            display: none;
+        }
+    }
+    .title {
+        @media (max-width: 768px) {
+            margin-bottom: 3px;
+            display: inline-block;
+        }
+    }
     .time {
         font-weight: 700;
         letter-spacing: 4px;
         font-size: 28px;
+        @media (max-width: 768px) {
+            letter-spacing: 2px;
+            font-size: 21px;
+        }
         &.days {
             margin-left: 10px;
         }
@@ -35,6 +53,9 @@ a, input, textarea, button {
     .time_text {
         font-size: 27px;
         margin-right: 8px;
+        @media (max-width: 768px) {
+            font-size: 19px;
+        }
         &.seconds_text {
             margin-right: 0;
         }
