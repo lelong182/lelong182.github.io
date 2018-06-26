@@ -1,0 +1,39 @@
+@import "mystyles";
+
+body {
+    font-family: $main-font;
+}
+
+a {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+a, input, textarea, button {
+    outline: none;
+}
+
+.wrap-countdown {
+    font-size: 24px;
+    text-align: center;
+    background: #242424;
+    color: #fff;
+    font-weight: 300;
+    padding: 12px 16px;
+    .time {
+        color: #fdd835;
+        font-weight: 700;
+        letter-spacing: 4px;
+        font-size: 28px;
+        &.days {
+            margin-left: 10px;
+        }
+    }
+    .time_text {
+        font-size: 27px;
+        margin-right: 8px;
+        &.seconds_text {
+            margin-right: 0;
+        }
+    }
+}
