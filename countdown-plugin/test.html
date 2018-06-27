@@ -11,33 +11,53 @@
 </head>
 <body>
 
-<button type="button" onclick="loadData()">Request data</button>
+<button type="button" onclick="makeCorsRequest()">Request data</button>
 
 <script>
-  function loadData () {
-    var xmlHttp = new XMLHttpRequest()
+  function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+      // XHR for Chrome/Firefox/Opera/Safari.
+      xhr.open(method, url, true);
+    } else if (typeof XDomainRequest != "undefined") {
+      // XDomainRequest for IE.
+      xhr = new XDomainRequest();
+      xhr.open(method, url);
+    } else {
+      // CORS not supported.
+      xhr = null;
+    }
+    return xhr;
+  }
 
-    xmlHttp.open('GET', 'https://shopee.vn/api/v2/user/login_status', true)
+  // Helper method to parse the title tag from the response.
+  function getTitle(text) {
+    return text.match('<title>(.*)?</title>')[1];
+  }
 
-    xmlHttp.setRequestHeader('Access-Control-Allow-Headers', '*')
-    xmlHttp.setRequestHeader('Content-type', 'application/ecmascript')
-    xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*')
+  // Make the actual CORS request.
+  function makeCorsRequest() {
+    // This is a sample server that supports CORS.
+    var url = 'https://shopee.vn/api/v2/user/login_status';
 
-    xmlHttp.onreadystatechange = function () {
-      if (xmlHttp.readyState == XMLHttpRequest.DONE) {
-        if (xmlHttp.status == 200) {
-          console.log(xmlHttp.responseText)
-        }
-        else if (xmlHttp.status == 400) {
-          alert('There was an error 400')
-        }
-        else {
-          alert('something else other than 200 was returned')
-        }
-      }
+    var xhr = createCORSRequest('GET', url);
+    if (!xhr) {
+      alert('CORS not supported');
+      return;
     }
 
-    xmlHttp.send()
+    // Response handlers.
+    xhr.onload = function() {
+      var text = xhr.responseText;
+      var title = getTitle(text);
+      alert('Response from CORS request to ' + url + ': ' + title);
+    };
+
+    xhr.onerror = function() {
+      alert('Woops, there was an error making the request.');
+    };
+
+    xhr.send();
   }
 </script>
 
