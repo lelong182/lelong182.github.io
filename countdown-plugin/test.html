@@ -15,14 +15,18 @@
 
 <script>
   function loadData () {
-    var xmlhttp = new XMLHttpRequest()
+    var xmlHttp = new XMLHttpRequest()
 
-    xmlhttp.onreadystatechange = function () {
-      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
-        if (xmlhttp.status == 200) {
-          console.log(xmlhttp.responseText)
+    xmlHttp.setRequestHeader('Access-Control-Allow-Headers', '*')
+    xmlHttp.setRequestHeader('Content-type', 'application/ecmascript')
+    xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*')
+
+    xmlHttp.onreadystatechange = function () {
+      if (xmlHttp.readyState == XMLHttpRequest.DONE) {
+        if (xmlHttp.status == 200) {
+          console.log(xmlHttp.responseText)
         }
-        else if (xmlhttp.status == 400) {
+        else if (xmlHttp.status == 400) {
           alert('There was an error 400')
         }
         else {
@@ -31,8 +35,8 @@
       }
     }
 
-    xmlhttp.open('GET', 'https://shopee.vn/api/v2/user/login_status', true)
-    xmlhttp.send()
+    xmlHttp.open('GET', 'https://shopee.vn/api/v2/user/login_status', true)
+    xmlHttp.send()
   }
 </script>
 
