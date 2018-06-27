@@ -17,6 +17,8 @@
   function loadData () {
     var xmlHttp = new XMLHttpRequest()
 
+    xmlHttp.open('GET', 'https://shopee.vn/api/v2/user/login_status', true)
+
     xmlHttp.setRequestHeader('Access-Control-Allow-Headers', '*')
     xmlHttp.setRequestHeader('Content-type', 'application/ecmascript')
     xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*')
@@ -35,7 +37,6 @@
       }
     }
 
-    xmlHttp.open('GET', 'https://shopee.vn/api/v2/user/login_status', true)
     xmlHttp.send()
   }
 </script>
