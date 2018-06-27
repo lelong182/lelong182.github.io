@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <![endif]-->
+  <title>Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<script>
+  function loadDoc () {
+    var xmlhttp = new XMLHttpRequest()
+
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        if (xmlhttp.status == 200) {
+          console.log(xmlhttp.responseText)
+        }
+        else if (xmlhttp.status == 400) {
+          alert('There was an error 400')
+        }
+        else {
+          alert('something else other than 200 was returned')
+        }
+      }
+    }
+
+    xmlhttp.open('GET', 'http://shopee.vn/api/v2/user/login_status', true)
+    xmlhttp.send()
+  }
+</script>
+
+</body>
+</html>
