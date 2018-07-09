@@ -11,55 +11,97 @@
 </head>
 <body>
 
-<button type="button" onclick="makeCorsRequest()">Request data</button>
-
-<script>
-  function createCORSRequest(method, url) {
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr) {
-      // XHR for Chrome/Firefox/Opera/Safari.
-      xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined") {
-      // XDomainRequest for IE.
-      xhr = new XDomainRequest();
-      xhr.open(method, url);
-    } else {
-      // CORS not supported.
-      xhr = null;
+<style>
+  #register-btn {
+    background-color: #FF5520;
+    border: none;
+    color: #fff;
+    padding: 12px 30px 10px;
+    border-radius: 40px;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5);
+    outline: none;
+    animation: pulse 2s infinite;
+  }
+  #register-btn:hover {
+    animation: none;
+  }
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 85, 32, 0.3);
     }
-    return xhr;
-  }
-
-  // Helper method to parse the title tag from the response.
-  function getTitle(text) {
-    return text.match('<title>(.*)?</title>')[1];
-  }
-
-  // Make the actual CORS request.
-  function makeCorsRequest() {
-    // This is a sample server that supports CORS.
-    var url = 'https://shopee.vn/api/v2/user/login_status';
-
-    var xhr = createCORSRequest('GET', url);
-    if (!xhr) {
-      alert('CORS not supported');
-      return;
+    70% {
+      -webkit-box-shadow: 0 0 0 15px rgba(255, 85, 32, 0);
     }
-
-    // Response handlers.
-    xhr.onload = function() {
-      var text = xhr.responseText;
-      var title = getTitle(text);
-      alert('Response from CORS request to ' + url + ': ' + title);
-    };
-
-    xhr.onerror = function() {
-      alert('Woops, there was an error making the request.');
-    };
-
-    xhr.send();
+    100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 85, 32, 0);
+    }
   }
-</script>
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 85, 32, 0.3);
+      box-shadow: 0 0 0 0 rgba(255, 85, 32, 0.3);
+    }
+    50% {
+      -moz-box-shadow: 0 0 0 15px rgba(255, 85, 32, 0);
+      box-shadow: 0 0 0 15px rgba(255, 85, 32, 0);
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 85, 32, 0);
+      box-shadow: 0 0 0 0 rgba(255, 85, 32, 0);
+    }
+  }
+</style>
+<div style="margin: -233px 0 0 63px;">
+  <button id="register-btn" type="button" onclick="(function(){
+  var xmlhttp = new XMLHttpRequest();
+  var xmlhttpPOST = new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+           if (xmlhttp.status == 200) {
+               var res = JSON.parse(xmlhttp.responseText)
+               if (res['data']) {
+                 var params = 'user_id=' + res['data']['userid'];
+                 xmlhttpPOST.open('POST', 'https://api.vn-ops.shopee.io/api/subscribe/subscribe_mom_kid_baby/', true);
+                 xmlhttpPOST.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                 xmlhttpPOST.onreadystatechange = function() {
+                    if (xmlhttpPOST.readyState == XMLHttpRequest.DONE) {
+                       if (xmlhttpPOST.status == 200) {
+                           var res2 = JSON.parse(xmlhttpPOST.responseText);
+                           if (res2['code'] === 0) {
+                             alert('Cảm ơn bạn đã đăng ký, mã voucher sẽ được gửi vào mục Thông báo của bạn từ 5-7 ngày sau')
+                           }
+                       }
+                    }
+                 };
+                 xmlhttpPOST.send(params);
+               } else {
+                 alert('Vui lòng đăng nhập tài khoản Shopee!')
+               }
+
+           } else if (xmlhttp.status == 400) {
+              alert('There was an error 400');
+           } else {
+               alert('something else other than 200 was returned');
+           }
+        }
+  };
+  xmlhttp.open('GET', 'https://shopee.vn/api/v2/user/login_status', true);
+  xmlhttp.send();
+  return false;
+})();return false;">Đăng ký ngay<span style="
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    text-transform: none;
+">Tôi cam kết con tôi đã trên 2 tuổi</span></button>
+</div>
 
 </body>
 </html>

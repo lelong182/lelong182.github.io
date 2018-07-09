@@ -31,10 +31,11 @@ gulp.task('js', function () {
   gulp.src([
     'assets/scripts/libs/jquery.min.js',
     'assets/scripts/libs/jquery.countdown.min.js',
+    'assets/scripts/libs/jquery.time-to.min.js',
     'assets/scripts/main.js'
   ])
     .pipe(concat('main.js'))
-    // .pipe(stripDebug())
+    .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest('dist/scripts'))
 })

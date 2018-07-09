@@ -60,4 +60,62 @@ a, input, textarea, button {
             margin-right: 0;
         }
     }
+    &.style-2 {
+        figure, figcaption {
+            display: block;
+        }
+        figure {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        figcaption {
+            text-align: center;
+            line-height: 80%;
+            font-weight: normal;
+            color: #888;
+        }
+        .transition {
+            transition: top 400ms linear;
+        }
+        .timeTo {
+            display: inline-block;
+            line-height: 108%;
+            font-weight: bold;
+            height: 32px;
+            transform: translateY(15%);
+            span {
+                vertical-align: top;
+            }
+            div {
+                position: relative;
+                display: inline-block;
+                width: 25px;
+                height: 30px;
+                overflow: hidden;
+                margin-right: 10px;
+                border-radius: 0 5px 5px 0;
+                &.first {
+                    border-right: none;
+                    margin-right: 0;
+                    border-radius: 5px 0 0 5px;
+                    ul {
+                        margin-left: 3px;
+                    }
+                }
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                left: 3px;
+                li {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                }
+            }
+        }
+    }
 }

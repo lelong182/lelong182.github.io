@@ -60,3 +60,48 @@ a, input, textarea, button {
         font-size: 19px; } }
     .wrap-countdown .time_text.seconds_text {
       margin-right: 0; }
+  .wrap-countdown.style-2 figure, .wrap-countdown.style-2 figcaption {
+    display: block; }
+  .wrap-countdown.style-2 figure {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+  .wrap-countdown.style-2 figcaption {
+    text-align: center;
+    line-height: 80%;
+    font-weight: normal;
+    color: #888; }
+  .wrap-countdown.style-2 .transition {
+    transition: top 400ms linear; }
+  .wrap-countdown.style-2 .timeTo {
+    display: inline-block;
+    line-height: 108%;
+    font-weight: bold;
+    height: 32px;
+    transform: translateY(15%); }
+    .wrap-countdown.style-2 .timeTo span {
+      vertical-align: top; }
+    .wrap-countdown.style-2 .timeTo div {
+      position: relative;
+      display: inline-block;
+      width: 25px;
+      height: 30px;
+      overflow: hidden;
+      margin-right: 10px;
+      border-radius: 0 5px 5px 0; }
+      .wrap-countdown.style-2 .timeTo div.first {
+        border-right: none;
+        margin-right: 0;
+        border-radius: 5px 0 0 5px; }
+        .wrap-countdown.style-2 .timeTo div.first ul {
+          margin-left: 3px; }
+    .wrap-countdown.style-2 .timeTo ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 3px; }
+      .wrap-countdown.style-2 .timeTo ul li {
+        margin: 0;
+        padding: 0;
+        list-style: none; }

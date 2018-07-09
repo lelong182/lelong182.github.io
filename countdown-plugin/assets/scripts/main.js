@@ -4,33 +4,26 @@
 
   $(document).ready(function () {
 
-    // var $countdown = $('#countdown-ll')
-    // var html = '<div class="wrap-countdown"><span class="title"></span>:<span class="days time">00</span> <span class="days_text time_text">Ngày</span><span class="hours time">00</span> <span class="hours_text time_text">Giờ</span><span class="minutes time">00</span> <span class="minutes_text time_text">Phút</span><span class="seconds time">00</span> <span class="seconds_text time_text">Giây</span></div>'
-    // $.when($.get('https://lelong182.github.io/countdown-plugin/dist/styles/main.css')).done(function (response) {
-    //   var $countdownStyle = $('<style />').text(response)
-    //   $countdown.before($countdownStyle)
-    // })
-    // $countdown.html(html)
+    var countdown = getAllUrlParams().countdown ? getAllUrlParams().countdown : 1
 
     var title = getAllUrlParams().title ? decodeURIComponent(getAllUrlParams().title) : 'Chương trình sẽ bắt đầu sau'
-    // var title = $countdown.data('title') ? $countdown.data('title') : 'Chương trình sẽ bắt đầu sau'
     var updatedTitle = title.charAt(0).toUpperCase() + title.substr(1)
     $('.title').text(updatedTitle)
 
-    var bg = getAllUrlParams().bg ? getAllUrlParams().bg : 242424
-    // var bg = $countdown.data('bg') ? $countdown.data('bg') : 242424
-    $('.wrap-countdown').css('background-color', '#' + bg)
+    var bg = getAllUrlParams().bg ? getAllUrlParams().bg : '242424'
+    if (bg === 'none') {
+      $('.wrap-countdown').css('background-color', 'transparent')
+    } else {
+      $('.wrap-countdown').css('background-color', '#' + bg)
+    }
 
     var color = getAllUrlParams().color ? getAllUrlParams().color : 'ffffff'
-    // var color = $countdown.data('color') ? $countdown.data('color') : 'ffffff'
     $('.wrap-countdown').css('color', '#' + color)
 
     var highlight = getAllUrlParams().highlight ? getAllUrlParams().highlight : 'fdd835'
-    // var highlight = $countdown.data('highlight') ? $countdown.data('highlight') : 'fdd835'
     $('.wrap-countdown .time').css('color', '#' + highlight)
 
     var end = getAllUrlParams().end
-    // var end = $countdown.data('end')
     var now = end ? new Date(end * 1000) : new Date()
     var day = now.getDate()
     var month = now.getMonth() + 1
@@ -40,18 +33,39 @@
     var second = now.getSeconds()
     var endTime = month + '/' + day + '/' + year + ' ' + hour + ':' + minute + ':' + second
 
-    $('.wrap-countdown').countdown({
-      date: endTime,
-      offset: +7,
-      day: 'Ngày',
-      days: 'Ngày',
-      hour: 'Giờ',
-      hours: 'Giờ',
-      minute: 'Phút',
-      minutes: 'Phút',
-      second: 'Giây',
-      seconds: 'Giây',
-    })
+
+    if (countdown == 1) {
+      $('.wrap-countdown').countdown({
+        date: endTime,
+        offset: +7,
+        day: 'Ngày',
+        days: 'Ngày',
+        hour: 'Giờ',
+        hours: 'Giờ',
+        minute: 'Phút',
+        minutes: 'Phút',
+        second: 'Giây',
+        seconds: 'Giây',
+      })
+    }
+    if (countdown == 2) {
+      $('.countdown').timeTo({
+        fontFamily: null,
+        fontSize: 26,
+        timeTo: new Date(now),
+        displayDays: 0,
+        captionSize: 14
+      })
+      var bg2 = getAllUrlParams().bg2 ? getAllUrlParams().bg2 : '45484d'
+      if (bg2 === 'none') {
+        $('.wrap-countdown.style-2 .timeTo div').css('background-color', 'transparent')
+      } else {
+        $('.wrap-countdown.style-2 .timeTo div').css('background-color', '#' + bg2)
+      }
+
+      var color2 = getAllUrlParams().color2 ? getAllUrlParams().color2 : 'fdd835'
+      $('.wrap-countdown.style-2 .timeTo div').css('color', '#' + color2)
+    }
 
   })
 
