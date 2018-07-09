@@ -24,15 +24,15 @@
     $('.wrap-countdown .time').css('color', '#' + highlight)
 
     var end = getAllUrlParams().end
-    var now = end ? new Date(end * 1000) : new Date()
-    var day = now.getDate()
-    var month = now.getMonth() + 1
-    var year = now.getFullYear()
-    var hour = now.getHours()
-    var minute = now.getMinutes()
-    var second = now.getSeconds()
-    var endTime = month + '/' + day + '/' + year + ' ' + hour + ':' + minute + ':' + second
+    var endDate = end ? new Date(end * 1000) : new Date()
 
+    var day = endDate.getDate()
+    var month = endDate.getMonth() + 1
+    var year = endDate.getFullYear()
+    var hour = endDate.getHours()
+    var minute = endDate.getMinutes()
+    var second = endDate.getSeconds()
+    var endTime = month + '/' + day + '/' + year + ' ' + hour + ':' + minute + ':' + second
 
     if (countdown == 1) {
       $('.wrap-countdown').countdown({
@@ -52,10 +52,11 @@
       $('.countdown').timeTo({
         fontFamily: null,
         fontSize: 26,
-        timeTo: new Date(now),
+        timeTo: endDate,
         displayDays: 0,
         captionSize: 14
       })
+
       var bg2 = getAllUrlParams().bg2 ? getAllUrlParams().bg2 : '45484d'
       if (bg2 === 'none') {
         $('.wrap-countdown.style-2 .timeTo div').css('background-color', 'transparent')

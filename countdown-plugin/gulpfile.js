@@ -35,7 +35,7 @@ gulp.task('js', function () {
     'assets/scripts/main.js'
   ])
     .pipe(concat('main.js'))
-    // .pipe(stripDebug())
+    .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest('dist/scripts'))
 })
