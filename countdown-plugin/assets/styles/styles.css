@@ -74,11 +74,13 @@ a, input, textarea, button {
   .wrap-countdown.style-2 .transition {
     transition: top 400ms linear; }
   .wrap-countdown.style-2 .timeTo {
-    display: inline-block;
     line-height: 108%;
     font-weight: bold;
     height: 32px;
     transform: translateY(15%); }
+    @media (min-width: 769px) {
+      .wrap-countdown.style-2 .timeTo {
+        display: inline-block; } }
     .wrap-countdown.style-2 .timeTo span {
       vertical-align: top; }
     .wrap-countdown.style-2 .timeTo div {

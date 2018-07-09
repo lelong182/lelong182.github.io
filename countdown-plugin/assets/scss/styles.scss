@@ -79,11 +79,13 @@ a, input, textarea, button {
             transition: top 400ms linear;
         }
         .timeTo {
-            display: inline-block;
             line-height: 108%;
             font-weight: bold;
             height: 32px;
             transform: translateY(15%);
+            @media (min-width: 769px) {
+                display: inline-block;
+            }
             span {
                 vertical-align: top;
             }
