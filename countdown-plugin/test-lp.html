@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <![endif]-->
+  <title>Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<button type="button" onclick="(function(){
+  var xmlhttpPOST = new XMLHttpRequest();
+  var userid = localStorage.getItem('userid');
+  var username = localStorage.getItem('username');
+  var csrftoken = '';
+  var match = document.cookie.match(new RegExp('(^| )csrftoken=([^;]+)'));
+  if (match) {
+    csrftoken = match[2];
+  }
+  xmlhttpPOST.open('POST', 'https://shopee.vn/api/v0/buyer/cart/add_to_cart/', true);
+  xmlhttpPOST.setRequestHeader('x-csrftoken', csrftoken);
+  var formData = new FormData();
+  formData.append('shopid', 6074305);
+  formData.append('itemid', 567157512);
+  formData.append('quantity', 1);
+  formData.append('donot_add_quantity', false);
+  formData.append('update_checkout_only', false);
+  formData.append('checkout', true);
+  formData.append('source', JSON.stringify({'refer_urls':['','']}));
+  xmlhttpPOST.onreadystatechange = function() {
+    if (xmlhttpPOST.readyState == XMLHttpRequest.DONE) {
+      if (xmlhttpPOST.status == 200) {
+        console.log(JSON.parse(xmlhttpPOST.responseText));
+      }
+    }
+  };
+  xmlhttpPOST.send(formData);
+  return false;
+})();return false;">Test</button>
+
+</body>
+</html>
