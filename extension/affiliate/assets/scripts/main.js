@@ -6,7 +6,7 @@
 
     var appIdWrapper = '#shopee-aff-ext '
 
-    $('.list-promotions').niceScroll({
+    $('.promotions-inner').niceScroll({
       cursorcolor: '#ff531d',
       cursorwidth: '3px',
       background: '#cccccc',
@@ -21,7 +21,10 @@
         $(this).addClass('active')
         $('.main .tab-content.' + type).removeClass('hidden')
         if (type === 'promotions') {
-          $('.list-promotions').getNiceScroll().resize()
+          $('.promotions-inner').getNiceScroll().resize()
+        }
+        if (type === 'tracking-links') {
+          $('.created-links').addClass('hidden')
         }
       }
     })
@@ -53,8 +56,9 @@
     })
 
     $(this).on('click', appIdWrapper + '.list-promotions .item .create-btn', function () {
+      $('.created-links').addClass('hidden')
       $(this).closest('.item').find('.created-links').removeClass('hidden')
-      $('.list-promotions').getNiceScroll().resize()
+      $('.promotions-inner').getNiceScroll().resize()
     })
 
     $(this).on('click', appIdWrapper + '.tracking-links-table .add-src-link', function () {

@@ -68,7 +68,7 @@ html, body {
         border: 1px solid #ff3823;
         border-radius: 4px;
         color: #fff;
-        font-size: 12px;
+        font-size: 15px;
         box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.7);
         margin-bottom: 20px; }
         .wrapper .main .tab-content .generate-btn:hover {
@@ -120,6 +120,10 @@ html, body {
           font-size: 12px; }
           .wrapper .main .tab-content .list-src-inputs li input[type="text"]:focus {
             border-color: #ff531d; }
+      .wrapper .main .tab-content .promotions-inner {
+        width: calc(100% + 10px);
+        padding-right: 10px;
+        box-sizing: border-box; }
       .wrapper .main .tab-content .top-promotions {
         display: flex;
         justify-content: space-between;
@@ -163,14 +167,12 @@ html, body {
           .wrapper .main .tab-content .top-promotions button:hover {
             box-shadow: 0 1px 10px -1px rgba(0, 0, 0, 0.8); }
       .wrapper .main .tab-content .list-promotions {
-        height: 340px;
-        width: calc(100% + 10px); }
+        height: 340px; }
         .wrapper .main .tab-content .list-promotions .item {
           background-color: #fff;
           padding: 10px 10px 0;
           font-size: 12px;
           box-sizing: border-box;
-          margin-right: 10px;
           margin-bottom: 15px;
           border-radius: 5px 5px 0 0;
           border-bottom: 2px solid;
@@ -213,7 +215,8 @@ html, body {
             margin-bottom: 10px; }
           .wrapper .main .tab-content .list-promotions .item .item-name {
             margin: 0 0 5px;
-            font-size: 12px; }
+            font-size: 12px;
+            text-transform: uppercase; }
           .wrapper .main .tab-content .list-promotions .item .item-label {
             font-weight: bold;
             font-style: italic;
@@ -376,12 +379,29 @@ html, body {
               box-shadow: 0 1px 10px -1px rgba(0, 0, 0, 0.8); }
         .options-wrapper .main .tab-content .left-my-account .how-to li {
           margin-bottom: 10px;
-          padding-left: 15px; }
+          padding-left: 15px;
+          position: relative; }
+          .options-wrapper .main .tab-content .left-my-account .how-to li:before {
+            content: "";
+            background-color: #ff531d;
+            position: absolute;
+            top: 5px;
+            left: 3px;
+            width: 6px;
+            height: 6px; }
       .options-wrapper .main .tab-content .right-my-account {
         width: 50%;
         float: left;
         padding-left: 40px;
         box-sizing: border-box; }
+        .options-wrapper .main .tab-content .right-my-account .list-preferred-cat {
+          margin-bottom: 20px; }
+          .options-wrapper .main .tab-content .right-my-account .list-preferred-cat li {
+            list-style: none;
+            margin-bottom: 5px; }
+        .options-wrapper .main .tab-content .right-my-account .custom-checkbox {
+          margin-left: 0;
+          transform: translateY(2px); }
       .options-wrapper .main .tab-content .wrap-table {
         padding: 0 20px; }
       .options-wrapper .main .tab-content .tracking-links-table {
