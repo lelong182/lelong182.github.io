@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <![endif]-->
+  <title>Affiliate Extension</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="dist/styles/main.css" />
+
+</head>
+<body>
+
+<div id="shopee-aff-ext" class="options-wrapper">
+  <div class="options-inner">
+    <div class="header">
+      <ul class="tabs">
+        <li class="active" data-type="my-account">My Account</li>
+        <li data-type="tracking-links">Tracking Links</li>
+      </ul>
+      <!-- /.tabs -->
+    </div>
+    <!-- /.header -->
+
+    <div class="main">
+      <div class="tab-content my-account active">
+        <div class="left-my-account">
+          <h3 class="caption">1-time log into your account</h3>
+          <form class="my-account-form">
+            <div class="form-wrap">
+              <label for="email">Email</label>
+              <input id="email" type="email" />
+            </div>
+            <div class="form-wrap">
+              <label for="api-key">API Key</label>
+              <input id="api-key" type="text" />
+            </div>
+            <div class="text-right">
+              <button type="submit">Login</button>
+            </div>
+          </form>
+          <hr />
+          <h3 class="caption">How to get Your API Key</h3>
+          <ul class="how-to">
+            <li>Login your Shopee Affiliates Dashboard</li>
+            <li>Choose <strong>Tools -> APIs</strong> from the left Menu</li>
+            <li>Copy your <strong>API Key</strong> from the screen</li>
+          </ul>
+          <hr />
+        </div>
+        <!-- /.left-my-account -->
+        <div class="right-my-account">
+          <h3 class="caption">Extension Preference</h3>
+          <h5 class="sub-caption">Preferred Category</h5>
+          <h5 class="sub-caption">Campaigns with Banner First</h5>
+        </div>
+        <!-- /.right-my-account -->
+      </div>
+      <!-- /.tab-content -->
+
+      <div class="tab-content tracking-links hidden">
+        <div class="wrap-table">
+          <table class="tracking-links-table">
+            <thead>
+            <tr>
+              <th style="width: 25%">Original URLs</th>
+              <th style="width: 30%">Website/Desktop Tracking Links</th>
+              <th style="width: 30%">App Tracking Links</th>
+              <th style="width: 15%"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                <input type="text" />
+              </td>
+              <td>
+                <div class="input-wrapper">
+                  <input type="text" />
+                  <button class="copy-btn" type="button">Copy</button>
+                </div>
+              </td>
+              <td>
+                <div class="input-wrapper">
+                  <input type="text" />
+                  <button class="copy-btn" type="button">Copy</button>
+                </div>
+              </td>
+              <td>
+                <a class="add-src-link" data-key="123">+ Source & Sub IDs</a>
+              </td>
+            </tr>
+            <tr class="hidden src-link-row" data-key="123">
+              <td colspan="3">
+                <div class="src-link-wrapper">
+                  <input type="text" />
+                  <input type="text" />
+                  <input type="text" />
+                  <input type="text" />
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" />
+              </td>
+              <td>
+                <div class="input-wrapper">
+                  <input type="text" />
+                  <button class="copy-btn" type="button">Copy</button>
+                </div>
+              </td>
+              <td>
+                <div class="input-wrapper">
+                  <input type="text" />
+                  <button class="copy-btn" type="button">Copy</button>
+                </div>
+              </td>
+              <td>
+                <a class="add-src-link" data-key="456">+ Source & Sub IDs</a>
+              </td>
+            </tr>
+            <tr class="hidden src-link-row" data-key="456">
+              <td colspan="3">
+                <div class="src-link-wrapper">
+                  <input type="text" />
+                  <input type="text" />
+                  <input type="text" />
+                  <input type="text" />
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" />
+              </td>
+              <td>
+                <div class="input-wrapper">
+                  <input type="text" />
+                  <button class="copy-btn" type="button">Copy</button>
+                </div>
+              </td>
+              <td>
+                <div class="input-wrapper">
+                  <input type="text" />
+                  <button class="copy-btn" type="button">Copy</button>
+                </div>
+              </td>
+              <td>
+                <a class="add-src-link" data-key="789">+ Source & Sub IDs</a>
+              </td>
+            </tr>
+            <tr class="hidden src-link-row" data-key="789">
+              <td colspan="3">
+                <div class="src-link-wrapper">
+                  <input type="text" />
+                  <input type="text" />
+                  <input type="text" />
+                  <input type="text" />
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- /.tab-content -->
+    </div>
+    <!-- /.main -->
+  </div>
+  <!-- /.options-inner -->
+</div>
+<!-- /.options-wrapper -->
+
+<script src="dist/scripts/main.js"></script>
+
+</body>
+</html>

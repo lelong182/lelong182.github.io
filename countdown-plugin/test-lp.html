@@ -13,33 +13,46 @@
 
 <button type="button" onclick="(function(){
   var xmlhttpPOST = new XMLHttpRequest();
-  var userid = localStorage.getItem('userid');
-  var username = localStorage.getItem('username');
   var csrftoken = '';
   var match = document.cookie.match(new RegExp('(^| )csrftoken=([^;]+)'));
   if (match) {
     csrftoken = match[2];
   }
+  var formData = new FormData();
   xmlhttpPOST.open('POST', 'https://shopee.vn/api/v0/buyer/cart/add_to_cart/', true);
   xmlhttpPOST.setRequestHeader('x-csrftoken', csrftoken);
-  var formData = new FormData();
-  formData.append('shopid', 6074305);
-  formData.append('itemid', 567157512);
-  formData.append('quantity', 1);
-  formData.append('donot_add_quantity', false);
-  formData.append('update_checkout_only', false);
-  formData.append('checkout', true);
-  formData.append('source', JSON.stringify({'refer_urls':['','']}));
   xmlhttpPOST.onreadystatechange = function() {
     if (xmlhttpPOST.readyState == XMLHttpRequest.DONE) {
       if (xmlhttpPOST.status == 200) {
-        console.log(JSON.parse(xmlhttpPOST.responseText));
+        var resAdd = JSON.parse(xmlhttpPOST.responseText);
+        if (resAdd['error'] === 0) {
+          window.location.replace('https://shopee.vn/cart/');
+        }
       }
     }
   };
-  xmlhttpPOST.send(formData);
+
+  var exampleSocket = new WebSocket('wss://api.vn-ops.shopee.io/ws/returntracker/retry_be/1531444037_771A54/');
+  exampleSocket.onmessage = function (event) {
+    var res = JSON.parse(event.data);
+    if (res['data']['status'] === 'Finished') {
+      formData.append('shopid', 6074305);
+      formData.append('itemid', 567157512);
+      formData.append('quantity', 1);
+      formData.append('donot_add_quantity', false);
+      formData.append('update_checkout_only', false);
+      formData.append('checkout', true);
+      formData.append('source', JSON.stringify({'refer_urls':['','']}));
+      xmlhttpPOST.send(formData);
+      console.log(123);
+    }
+  }
   return false;
 })();return false;">Test</button>
+<img style="visibility: hidden; position: absolute;" width="0" height="0" src="" onerror="(function(){
+  console.log(999);
+  return false;
+})();return false;" />
 
 </body>
 </html>
