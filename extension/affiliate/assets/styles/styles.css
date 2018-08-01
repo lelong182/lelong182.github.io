@@ -120,18 +120,18 @@ html, body {
           font-size: 12px; }
           .wrapper .main .tab-content .list-src-inputs li input[type="text"]:focus {
             border-color: #ff531d; }
-      .wrapper .main .tab-content .promotions-inner {
+      .wrapper .main .tab-content .list-wrapper {
         width: calc(100% + 10px);
         padding-right: 10px;
         box-sizing: border-box; }
-      .wrapper .main .tab-content .top-promotions {
+      .wrapper .main .tab-content .top-list {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px; }
-        .wrapper .main .tab-content .top-promotions .cat-wrapper {
+        .wrapper .main .tab-content .top-list .cat-wrapper {
           position: relative;
           z-index: 2; }
-          .wrapper .main .tab-content .top-promotions .cat-wrapper .list-cat {
+          .wrapper .main .tab-content .top-list .cat-wrapper .list-cat {
             position: absolute;
             top: 49px;
             left: 0;
@@ -145,18 +145,18 @@ html, body {
             transition: all 0.3s ease;
             opacity: 0;
             visibility: hidden; }
-            .wrapper .main .tab-content .top-promotions .cat-wrapper .list-cat.open {
+            .wrapper .main .tab-content .top-list .cat-wrapper .list-cat.open {
               top: 29px;
               opacity: 1;
               visibility: visible; }
-            .wrapper .main .tab-content .top-promotions .cat-wrapper .list-cat li {
+            .wrapper .main .tab-content .top-list .cat-wrapper .list-cat li {
               list-style: none; }
-              .wrapper .main .tab-content .top-promotions .cat-wrapper .list-cat li a {
+              .wrapper .main .tab-content .top-list .cat-wrapper .list-cat li a {
                 display: block;
                 padding: 5px; }
-                .wrapper .main .tab-content .top-promotions .cat-wrapper .list-cat li a:hover {
+                .wrapper .main .tab-content .top-list .cat-wrapper .list-cat li a:hover {
                   background-color: #f2f2f2; }
-        .wrapper .main .tab-content .top-promotions button {
+        .wrapper .main .tab-content .top-list button {
           width: 150px;
           height: 28px;
           background-color: #fff;
@@ -164,11 +164,11 @@ html, body {
           border-radius: 4px;
           font-size: 12px;
           box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.7); }
-          .wrapper .main .tab-content .top-promotions button:hover {
+          .wrapper .main .tab-content .top-list button:hover {
             box-shadow: 0 1px 10px -1px rgba(0, 0, 0, 0.8); }
-      .wrapper .main .tab-content .list-promotions {
+      .wrapper .main .tab-content .list-items {
         height: 340px; }
-        .wrapper .main .tab-content .list-promotions .item {
+        .wrapper .main .tab-content .list-items .item {
           background-color: #fff;
           padding: 10px 10px 0;
           font-size: 12px;
@@ -178,76 +178,82 @@ html, body {
           border-bottom: 2px solid;
           display: flex;
           flex-wrap: wrap; }
-          .wrapper .main .tab-content .list-promotions .item:last-child {
+          .wrapper .main .tab-content .list-items .item:last-child {
             margin-bottom: 0; }
-          .wrapper .main .tab-content .list-promotions .item.live {
+          .wrapper .main .tab-content .list-items .item.live {
             border-color: #ff531d; }
-            .wrapper .main .tab-content .list-promotions .item.live .item-label {
+            .wrapper .main .tab-content .list-items .item.live .highlight {
               color: #ff531d; }
-            .wrapper .main .tab-content .list-promotions .item.live .create-btn {
+            .wrapper .main .tab-content .list-items .item.live .item-label {
+              color: #ff531d; }
+            .wrapper .main .tab-content .list-items .item.live .create-btn {
               background-color: #ff531d;
               border: 1px solid #ff3823; }
-            .wrapper .main .tab-content .list-promotions .item.live .created-links {
+            .wrapper .main .tab-content .list-items .item.live .created-links {
               background-color: #ff531d; }
-              .wrapper .main .tab-content .list-promotions .item.live .created-links button {
+              .wrapper .main .tab-content .list-items .item.live .created-links button {
                 color: #ff531d; }
-          .wrapper .main .tab-content .list-promotions .item.coming {
+          .wrapper .main .tab-content .list-items .item.coming {
             border-color: #27ae60; }
-            .wrapper .main .tab-content .list-promotions .item.coming .item-label {
+            .wrapper .main .tab-content .list-items .item.coming .highlight {
               color: #27ae60; }
-            .wrapper .main .tab-content .list-promotions .item.coming .create-btn {
+            .wrapper .main .tab-content .list-items .item.coming .item-label {
+              color: #27ae60; }
+            .wrapper .main .tab-content .list-items .item.coming .create-btn {
               background-color: #27ae60;
               border: 1px solid #2ecc71; }
-            .wrapper .main .tab-content .list-promotions .item.coming .created-links {
+            .wrapper .main .tab-content .list-items .item.coming .created-links {
               background-color: #27ae60; }
-              .wrapper .main .tab-content .list-promotions .item.coming .created-links button {
+              .wrapper .main .tab-content .list-items .item.coming .created-links button {
                 color: #27ae60; }
-              .wrapper .main .tab-content .list-promotions .item.coming .created-links input[type=text], .wrapper .main .tab-content .list-promotions .item.coming .created-links button {
+              .wrapper .main .tab-content .list-items .item.coming .created-links input[type=text], .wrapper .main .tab-content .list-items .item.coming .created-links button {
                 border-color: #2ecc71; }
-          .wrapper .main .tab-content .list-promotions .item .left-item {
+          .wrapper .main .tab-content .list-items .item .left-item {
             flex: 2;
             margin-bottom: 10px; }
-          .wrapper .main .tab-content .list-promotions .item .right-item {
+          .wrapper .main .tab-content .list-items .item .right-item {
             flex: 1;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-end;
             margin-bottom: 10px; }
-          .wrapper .main .tab-content .list-promotions .item .item-name {
+          .wrapper .main .tab-content .list-items .item .highlight {
+            font-weight: bold; }
+          .wrapper .main .tab-content .list-items .item .item-name {
             margin: 0 0 5px;
             font-size: 12px;
             text-transform: uppercase; }
-          .wrapper .main .tab-content .list-promotions .item .item-label {
+          .wrapper .main .tab-content .list-items .item .item-label {
             font-weight: bold;
             font-style: italic;
             min-width: 100%;
             text-align: right; }
-          .wrapper .main .tab-content .list-promotions .item p {
+          .wrapper .main .tab-content .list-items .item p {
             margin: 0 0 5px; }
-          .wrapper .main .tab-content .list-promotions .item .item-code {
+          .wrapper .main .tab-content .list-items .item .item-code {
             border: 1px dashed #1a1a1a;
             display: inline-block;
             padding: 5px;
             margin-bottom: 0; }
-          .wrapper .main .tab-content .list-promotions .item .create-btn {
+          .wrapper .main .tab-content .list-items .item .create-btn {
             width: 80px;
             height: 26px;
             border-radius: 4px;
             color: #fff;
             font-size: 12px;
             align-self: flex-end; }
-            .wrapper .main .tab-content .list-promotions .item .create-btn:hover {
+            .wrapper .main .tab-content .list-items .item .create-btn:hover {
               box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.7); }
-          .wrapper .main .tab-content .list-promotions .item .created-links {
+          .wrapper .main .tab-content .list-items .item .created-links {
             width: 100%;
             padding: 10px;
             margin: 0 -10px; }
-            .wrapper .main .tab-content .list-promotions .item .created-links .caption {
+            .wrapper .main .tab-content .list-items .item .created-links .caption {
               font-size: 12px;
               margin-bottom: 5px; }
-            .wrapper .main .tab-content .list-promotions .item .created-links .input-wrapper {
+            .wrapper .main .tab-content .list-items .item .created-links .input-wrapper {
               margin-bottom: 10px; }
-              .wrapper .main .tab-content .list-promotions .item .created-links .input-wrapper button {
+              .wrapper .main .tab-content .list-items .item .created-links .input-wrapper button {
                 background-color: #fff;
                 color: #000;
                 font-weight: bold; }

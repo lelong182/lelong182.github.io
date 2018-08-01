@@ -6,7 +6,7 @@
 
     var appIdWrapper = '#shopee-aff-ext '
 
-    $('.promotions-inner').niceScroll({
+    $('.list-wrapper').niceScroll({
       cursorcolor: '#ff531d',
       cursorwidth: '3px',
       background: '#cccccc',
@@ -20,8 +20,8 @@
       if (!$(this).hasClass('active')) {
         $(this).addClass('active')
         $('.main .tab-content.' + type).removeClass('hidden')
-        if (type === 'promotions') {
-          $('.promotions-inner').getNiceScroll().resize()
+        if (type === 'promotions' || type === 'bonus') {
+          $('.list-wrapper').getNiceScroll().resize()
         }
         if (type === 'tracking-links') {
           $('.created-links').addClass('hidden')
@@ -39,26 +39,26 @@
       return false
     })
 
-    $(this).on('click', appIdWrapper + '.top-promotions .cat-btn', function () {
-      if (!$('.top-promotions .list-cat').hasClass('open')) {
+    $(this).on('click', appIdWrapper + '.top-list .cat-btn', function () {
+      if (!$('.top-list .list-cat').hasClass('open')) {
         $('.wrapper').append('<div class="dark-overlay"></div>')
         $('.dark-overlay').hide().fadeIn()
-        $('.top-promotions .list-cat').addClass('open')
+        $('.top-list .list-cat').addClass('open')
       }
       return false
     })
 
     $(this).on('click', appIdWrapper + '.dark-overlay', function () {
-      $('.top-promotions .list-cat').removeClass('open')
+      $('.top-list .list-cat').removeClass('open')
       $('.dark-overlay').fadeOut(200, function () {
         $(this).remove()
       })
     })
 
-    $(this).on('click', appIdWrapper + '.list-promotions .item .create-btn', function () {
+    $(this).on('click', appIdWrapper + '.list-items .item .create-btn', function () {
       $('.created-links').addClass('hidden')
       $(this).closest('.item').find('.created-links').removeClass('hidden')
-      $('.promotions-inner').getNiceScroll().resize()
+      $('.list-wrapper').getNiceScroll().resize()
     })
 
     $(this).on('click', appIdWrapper + '.tracking-links-table .add-src-link', function () {
