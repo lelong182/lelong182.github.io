@@ -25,31 +25,51 @@ a {
   transition: all 0.3s ease;
   cursor: pointer; }
 
-a, input, textarea, button {
+div, li, a, input, textarea, button {
   outline: none; }
 
 .wrap-slider {
   margin: 30px auto; }
-  .wrap-slider .slick-center .slide-item {
+  .wrap-slider .style-1 .slick-center .slide-item {
     transform: scale(1); }
-  .wrap-slider .slide-item {
+  .wrap-slider .style-1 .slide-item {
     transition: transform 0.3s ease;
     transform: scale(0.8); }
-    .wrap-slider .slide-item img {
+    .wrap-slider .style-1 .slide-item img {
       max-width: 300px;
       border-radius: 5px; }
       @media (max-width: 768px) {
-        .wrap-slider .slide-item img {
+        .wrap-slider .style-1 .slide-item img {
           max-width: 200px; } }
       @media (max-width: 480px) {
-        .wrap-slider .slide-item img {
+        .wrap-slider .style-1 .slide-item img {
           max-width: 100px; } }
       @media (max-width: 380px) {
-        .wrap-slider .slide-item img {
+        .wrap-slider .style-1 .slide-item img {
           max-width: 80px; } }
       @media (max-width: 320px) {
-        .wrap-slider .slide-item img {
+        .wrap-slider .style-1 .slide-item img {
           max-width: 60px; } }
+  .wrap-slider .style-2 .slick-current .slide-item {
+    transform: scale(1); }
+  .wrap-slider .style-2 .slide-item {
+    transition: transform 0.3s ease;
+    transform: scale(0.8); }
+    .wrap-slider .style-2 .slide-item img {
+      max-width: 600px;
+      border-radius: 5px; }
+      @media (max-width: 768px) {
+        .wrap-slider .style-2 .slide-item img {
+          max-width: 450px; } }
+      @media (max-width: 480px) {
+        .wrap-slider .style-2 .slide-item img {
+          max-width: 300px; } }
+      @media (max-width: 380px) {
+        .wrap-slider .style-2 .slide-item img {
+          max-width: 200px; } }
+      @media (max-width: 320px) {
+        .wrap-slider .style-2 .slide-item img {
+          max-width: 150px; } }
   .wrap-slider .slick-dots {
     text-align: center;
     margin: 5px 0 0;

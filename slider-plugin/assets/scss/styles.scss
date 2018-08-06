@@ -15,34 +15,63 @@ a {
     cursor: pointer;
 }
 
-a, input, textarea, button {
+div, li, a, input, textarea, button {
     outline: none;
 }
 
 .wrap-slider {
     margin: 30px auto;
-    .slick-center {
+    .style-1 {
+        .slick-center {
+            .slide-item {
+                transform: scale(1);
+            }
+        }
         .slide-item {
-            transform: scale(1);
+            transition: transform 0.3s ease;
+            transform: scale(0.8);
+            img {
+                max-width: 300px;
+                border-radius: 5px;
+                @media (max-width: 768px) {
+                    max-width: 200px;
+                }
+                @media (max-width: 480px) {
+                    max-width: 100px;
+                }
+                @media (max-width: 380px) {
+                    max-width: 80px;
+                }
+                @media (max-width: 320px) {
+                    max-width: 60px;
+                }
+            }
         }
     }
-    .slide-item {
-        transition: transform 0.3s ease;
-        transform: scale(0.8);
-        img {
-            max-width: 300px;
-            border-radius: 5px;
-            @media (max-width: 768px) {
-                max-width: 200px;
+    .style-2 {
+        .slick-current {
+            .slide-item {
+                transform: scale(1);
             }
-            @media (max-width: 480px) {
-                max-width: 100px;
-            }
-            @media (max-width: 380px) {
-                max-width: 80px;
-            }
-            @media (max-width: 320px) {
-                max-width: 60px;
+        }
+        .slide-item {
+            transition: transform 0.3s ease;
+            transform: scale(0.8);
+            img {
+                max-width: 600px;
+                border-radius: 5px;
+                @media (max-width: 768px) {
+                    max-width: 450px;
+                }
+                @media (max-width: 480px) {
+                    max-width: 300px;
+                }
+                @media (max-width: 380px) {
+                    max-width: 200px;
+                }
+                @media (max-width: 320px) {
+                    max-width: 150px;
+                }
             }
         }
     }
