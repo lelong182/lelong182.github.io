@@ -1,0 +1,72 @@
+/*!
+ * Import fonts
+ */
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  src: url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.eot");
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.woff2") format("woff2"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.woff") format("woff"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.ttf") format("truetype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.svg#Roboto") format("svg"); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.eot");
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.woff2") format("woff2"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.woff") format("woff"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.ttf") format("truetype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.svg#Roboto") format("svg"); }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: silver; }
+
+a {
+  transition: all 0.3s ease;
+  cursor: pointer; }
+
+a, input, textarea, button {
+  outline: none; }
+
+.wrap-slider {
+  margin: 30px auto; }
+  .wrap-slider .slick-center .slide-item {
+    transform: scale(1); }
+  .wrap-slider .slide-item {
+    transition: transform 0.3s ease;
+    transform: scale(0.8); }
+    .wrap-slider .slide-item img {
+      max-width: 300px;
+      border-radius: 5px; }
+      @media (max-width: 768px) {
+        .wrap-slider .slide-item img {
+          max-width: 200px; } }
+      @media (max-width: 480px) {
+        .wrap-slider .slide-item img {
+          max-width: 100px; } }
+      @media (max-width: 380px) {
+        .wrap-slider .slide-item img {
+          max-width: 80px; } }
+      @media (max-width: 320px) {
+        .wrap-slider .slide-item img {
+          max-width: 60px; } }
+  .wrap-slider .slick-dots {
+    text-align: center;
+    margin: 5px 0 0;
+    padding: 0; }
+    .wrap-slider .slick-dots li {
+      display: inline-block;
+      margin: 0 5px; }
+      .wrap-slider .slick-dots li.slick-active button {
+        background-color: #fff;
+        transform: scale(1.2);
+        box-shadow: 0 0 5px 1px white; }
+      .wrap-slider .slick-dots li button {
+        background-color: rgba(0, 0, 0, 0.4);
+        border: none;
+        text-indent: -9999px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        padding: 0;
+        transition: all 0.3s ease; }
