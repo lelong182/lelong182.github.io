@@ -25,6 +25,8 @@ div, li, a, input, textarea, button {
     &.hidden {
         opacity: 0;
         visibility: hidden;
+        height: 0;
+        overflow: hidden;
     }
     .style-1 {
         .slick-center {

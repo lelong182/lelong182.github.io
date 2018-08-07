@@ -33,7 +33,9 @@ div, li, a, input, textarea, button {
   transition: all 0.3s ease; }
   .wrap-slider.hidden {
     opacity: 0;
-    visibility: hidden; }
+    visibility: hidden;
+    height: 0;
+    overflow: hidden; }
   .wrap-slider .style-1 .slick-center .slide-item {
     transform: scale(1); }
   .wrap-slider .style-1 .slide-item {
