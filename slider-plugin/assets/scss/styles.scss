@@ -20,6 +20,7 @@ div, li, a, input, textarea, button {
 }
 
 .wrap-slider {
+    margin: 10px;
     transition: all 0.3s ease;
     &.hidden {
         opacity: 0;

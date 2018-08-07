@@ -29,6 +29,7 @@ div, li, a, input, textarea, button {
   outline: none; }
 
 .wrap-slider {
+  margin: 10px;
   transition: all 0.3s ease; }
   .wrap-slider.hidden {
     opacity: 0;
