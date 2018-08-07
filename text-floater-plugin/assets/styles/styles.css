@@ -1,0 +1,71 @@
+/*!
+ * Import fonts
+ */
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  src: url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.eot");
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.woff2") format("woff2"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.woff") format("woff"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.ttf") format("truetype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-300.svg#Roboto") format("svg"); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.eot");
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.woff2") format("woff2"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.woff") format("woff"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.ttf") format("truetype"), url("../fonts/roboto-v18-latin-ext_vietnamese_latin-700.svg#Roboto") format("svg"); }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: silver; }
+
+a {
+  transition: all 0.3s ease;
+  cursor: pointer; }
+
+div, li, a, input, textarea, button {
+  outline: none; }
+
+.wrap-floater {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 1em;
+  display: flex;
+  transition: all 0.3s ease; }
+  .wrap-floater.hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden; }
+  .wrap-floater .content {
+    margin: 0 0 0 10px;
+    padding: 0;
+    position: relative;
+    flex: 1;
+    overflow: hidden; }
+    .wrap-floater .content li {
+      list-style: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateY(100%);
+      transition: all 0.5s ease;
+      opacity: 0; }
+      .wrap-floater .content li.active {
+        transform: translateY(0);
+        opacity: 1; }
+        .wrap-floater .content li.active.close {
+          transform: translateY(-100%);
+          opacity: 0; }
+      .wrap-floater .content li a {
+        color: #000;
+        text-decoration: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block; }

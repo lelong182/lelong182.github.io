@@ -4,6 +4,8 @@
 
   $(document).ready(function () {
 
+    var countItem2 = 0
+
     setTimeout(function () {
       $('.wrap-slider .style-1').slick({
         variableWidth: true,
@@ -18,6 +20,8 @@
         arrows: false,
         slidesToShow: 3
       })
+
+      countItem2 = $('.wrap-slider .style-2 .slick-slide:not(.slick-cloned)').length
     }, 100)
 
     setTimeout(function () {
@@ -31,7 +35,7 @@
           $nextClone.addClass('slick-current')
         })
       }
-      if (nextSlide === 4) {
+      if (nextSlide === countItem2 - 1) {
         var $prevClone = $('.slick-current').prev('.slick-cloned')
         setTimeout(function () {
           $prevClone.addClass('slick-current')
