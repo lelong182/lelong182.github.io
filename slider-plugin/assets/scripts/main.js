@@ -6,7 +6,25 @@
 
     var countItem2 = 0
 
-    setTimeout(function () {
+    // setTimeout(function () {
+    //   $('.wrap-slider .style-1').slick({
+    //     variableWidth: true,
+    //     arrows: false,
+    //     dots: true,
+    //     centerMode: true,
+    //     slidesToShow: 3
+    //   })
+    //
+    //   $('.wrap-slider .style-2').slick({
+    //     variableWidth: true,
+    //     arrows: false,
+    //     slidesToShow: 3
+    //   })
+    //
+    //   countItem2 = $('.wrap-slider .style-2 .slick-slide:not(.slick-cloned)').length
+    // }, 100)
+
+    $(window).on('load', function () {
       $('.wrap-slider .style-1').slick({
         variableWidth: true,
         arrows: false,
@@ -22,7 +40,7 @@
       })
 
       countItem2 = $('.wrap-slider .style-2 .slick-slide:not(.slick-cloned)').length
-    }, 100)
+    })
 
     setTimeout(function () {
       $('.wrap-slider').removeClass('hidden')
