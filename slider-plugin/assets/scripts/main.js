@@ -37,8 +37,6 @@
           })
         }
       })
-
-      alert(222)
     }, 100)
 
     setTimeout(function () {
