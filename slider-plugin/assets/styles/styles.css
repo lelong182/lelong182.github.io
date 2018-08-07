@@ -29,7 +29,11 @@ div, li, a, input, textarea, button {
   outline: none; }
 
 .wrap-slider {
-  margin: 30px auto; }
+  margin: 30px auto;
+  transition: all 0.3s ease; }
+  .wrap-slider.hidden {
+    opacity: 0;
+    visibility: hidden; }
   .wrap-slider .style-1 .slick-center .slide-item {
     transform: scale(1); }
   .wrap-slider .style-1 .slide-item {

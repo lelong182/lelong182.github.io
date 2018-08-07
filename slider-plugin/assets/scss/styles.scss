@@ -21,6 +21,11 @@ div, li, a, input, textarea, button {
 
 .wrap-slider {
     margin: 30px auto;
+    transition: all 0.3s ease;
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
     .style-1 {
         .slick-center {
             .slide-item {
