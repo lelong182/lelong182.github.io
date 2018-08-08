@@ -32,12 +32,14 @@ function textFloater () {
   var $current = $('.content li.active')
   var $next = $current.next()
   $current.addClass('close')
-  $next.addClass('active')
+  setTimeout(function () {
+    $next.addClass('active')
+  }, 100)
   if ($next.index() === -1) {
     $('.content li:first').addClass('active')
   }
 
   setTimeout(function () {
     $('.content li.close').removeClass()
-  }, 500)
+  }, 700)
 }

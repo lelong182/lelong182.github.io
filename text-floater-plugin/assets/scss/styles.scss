@@ -29,7 +29,7 @@ div, li, a, input, textarea, button {
     @media (max-width: 480px) {
         padding: 5px 7px;
         border-radius: 4px;
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     &.hidden {
         opacity: 0;
@@ -37,15 +37,24 @@ div, li, a, input, textarea, button {
         height: 0;
         overflow: hidden;
     }
+    &.style-2 {
+        background-color: transparent;
+        color: #002F81;
+        font-weight: bold;
+        .content {
+            li {
+                span, a {
+                    color: #002F81;
+                }
+            }
+        }
+    }
     .content {
-        margin: 0 0 0 10px;
+        margin: 0 0 0 5px;
         padding: 0;
         position: relative;
         flex: 1;
         overflow: hidden;
-        @media (max-width: 480px) {
-            margin-left: 5px;
-        }
         li {
             list-style: none;
             position: absolute;
@@ -53,7 +62,7 @@ div, li, a, input, textarea, button {
             left: 0;
             width: 100%;
             transform: translateY(100%);
-            transition: all 0.5s ease;
+            transition: all 0.6s ease;
             opacity: 0;
             &.active {
                 transform: translateY(0);
@@ -63,13 +72,15 @@ div, li, a, input, textarea, button {
                     opacity: 0;
                 }
             }
-            a {
+            span, a {
                 color: #000;
-                text-decoration: none;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 display: block;
+            }
+            a {
+                text-decoration: none;
             }
         }
     }
