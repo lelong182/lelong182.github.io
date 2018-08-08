@@ -26,6 +26,11 @@ div, li, a, input, textarea, button {
     font-size: 1em;
     display: flex;
     transition: all 0.3s ease;
+    @media (max-width: 480px) {
+        padding: 5px 7px;
+        border-radius: 4px;
+        font-size: 0.8em;
+    }
     &.hidden {
         opacity: 0;
         visibility: hidden;
@@ -38,6 +43,9 @@ div, li, a, input, textarea, button {
         position: relative;
         flex: 1;
         overflow: hidden;
+        @media (max-width: 480px) {
+            margin-left: 5px;
+        }
         li {
             list-style: none;
             position: absolute;
