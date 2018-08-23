@@ -42,20 +42,20 @@ div, li, a, input, textarea, button {
     transition: transform 0.3s ease;
     transform: scale(0.8); }
     .wrap-slider .style-1 .slide-item img {
-      max-width: 300px;
+      max-width: 500px;
       border-radius: 5px; }
       @media (max-width: 768px) {
         .wrap-slider .style-1 .slide-item img {
-          max-width: 200px; } }
+          max-width: 380px; } }
       @media (max-width: 480px) {
         .wrap-slider .style-1 .slide-item img {
-          max-width: 100px; } }
+          max-width: 260px; } }
       @media (max-width: 380px) {
         .wrap-slider .style-1 .slide-item img {
-          max-width: 80px; } }
+          max-width: 200px; } }
       @media (max-width: 320px) {
         .wrap-slider .style-1 .slide-item img {
-          max-width: 60px; } }
+          max-width: 170px; } }
   .wrap-slider .style-2 .slick-current .slide-item {
     transform: scale(1); }
   .wrap-slider .style-2 .slide-item {

